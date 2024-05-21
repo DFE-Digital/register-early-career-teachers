@@ -1,0 +1,743 @@
+---
+title: Induction for early career teachers (England)
+---
+
+:sectnums!:
+
+== The Education (Induction Arrangements for School Teachers) (England) Regulations 2012
+
+[cols="1,1"]
+|===
+|Made| 18th April 2012
+|Laid before Parliament| 20th April 2012
+|===
+
+
+The Secretary of State for Education makes the following Regulations in exercise of the powers
+conferred by sections 135A, 135B, 141C(1)(b), 210(4) and (7) and 214(1) and (2)(b) of the
+Education Act 2002(a).
+
+
+Citation, commencement and application
+
+[arabian]
+. *Citation, commencement and application*
+[arabian]
+.. These Regulations may be cited as the Education (Induction Arrangements for School
+   Teachers) (England) Regulations 2012 and, subject to paragraph (2), come into force on 1st
+   September 2012.
+.. Regulation 16(b) comes into force on 1st September 2013.
+.. These Regulations apply in relation to England.
+. *Revocations and transitional provision*
+[arabian]
+.. Subject to paragraph (2), the 2008 Induction Regulations are revoked.
+.. The 2008 Induction Regulations continue to apply to any person who completed an
+   induction period within the meaning of those Regulations before 1st September 2012, and these
+   Regulations do not apply to any such person.
+.. In paragraph (2) the reference to a person who has completed an induction period includes a
+   person—
+[loweralpha]
+... whose induction period is extended under regulation 16(3)(b), 19(3)(c) or 19(4)(c) of the
+    2008 Induction Regulations; and
+... who immediately before 1st September 2012 has not completed the induction period as
+    extended.
+. *Interpretation*
+[arabian]
+.. In these Regulations — “appropriate body” means the appropriate body under regulation 4;
+* “authority” means a local authority;
+* “institution” means a school or institution in which an induction period may be served under
+* these Regulations;
+* “teaching school” means a school designated as such by the National College for School
+* Leadership or the Secretary of State;
+* “the 1998 Act” means the School Standards and Framework Act 1998(a);
+* “the 2003 Qualifications Regulations” means the Education (School Teachers’ Qualifications)
+* (England) Regulations 2003(b);
+* “the 2008 Induction Regulations” means the Education (Induction Arrangements for School
+* Teachers) (England) Regulations 2008(c);
+* “the Welsh Induction Regulations” means the Education (Induction Arrangements for School
+* Teachers) (Wales) Regulations 2005(d).
+.. For the purposes of these Regulations, “head teacher” includes the principal of an institution.
+
+. *Appropriate body*
+[arabic]
+.. For the purposes of these Regulations the appropriate body —
+[loweralpha]
+... in relation to a relevant school(e) is a body mentioned in paragraph (2) which has agreed
+    to act as the appropriate body in relation to the school;
+... in relation to an independent school, a 16 to 19 Academy(f), an alternative provision
+    Academy(g) or a non-maintained nursery school is a body mentioned in paragraph (2)
+    which has agreed to act as the appropriate body in relation to the school or Academy (as
+    the case may be); and
+... in relation to a further education institution is a body mentioned in paragraph (2) (b) or
+    which has agreed to act as the appropriate body in relation to the institution.
+.. A body referred to in paragraph (1) is —
+[loweralpha]
+... any body of persons (corporate or unincorporate) whom the Secretary of State has
+    determined may act as the appropriate body in relation to such institutions;
+... an authority; or
+... subject to paragraph (3), a teaching school.
+.. A teaching school may not act as the appropriate body in relation to an institution in respect
+   of any teacher—
+[loweralpha]
+... who has been assessed by that teaching school as meeting the specified standards for the
+    purposes of the award of qualified teacher status; or
+... who is serving any part of their induction period at that school.
+... For the purposes of this regulation, “specified standards” means the standards set out in
+    “Teachers’ Standards” published by the Secretary of State in July 2011(h).
+
+. *Requirement to serve an induction period*
++
+Subject to the exceptions in Schedule 1, no qualified teacher(a) is to be employed or engaged
+as a teacher at a relevant school unless that person has satisfactorily completed an induction period
+in accordance with these Regulations.
+
+. *Institutions in which an induction period may be served*
+[arabic]
+.. Subject to paragraphs (3) and (4), an induction period may be served in—
+[loweralpha]
+... a relevant school;
+... a nursery school that—
+[lowerroman]
+.... is not maintained by an authority; and
+.... is not a special school;
+... an independent school in England;
+... an independent school overseas, provided that—
+[lowerroman]
+.... such a school is a member of an organisation which the Secretary of State has
+     determined may represent independent schools overseas; and
+.... an inspection within the previous six years by an inspectorate accredited by the
+     Secretary of State has confirmed that the school complies with the standards(b)
+     issued by the Secretary of State for such schools;
+... a 16 to 19 Academy and an alternative provision Academy; or
+... a further education institution.
+.. Subject to paragraph (3), an induction period may also be served in a school or a further
+   education institution in Wales in which an induction period may be served under the Welsh
+   Induction Regulations.
+.. An induction period may not be served in—
+... a school which is eligible for intervention by virtue of section 62 of the 2006 Act,
+    unless—
+[lowerroman]
+.... such a school is a member of an organisation which the Secretary of State has
+.... the person in question first worked as a qualified teacher, or was employed on an
+     employment-based teacher training scheme, at the school at a time when the school
+     was not eligible for intervention by virtue of section 62 of the 2006 Act or at a time
+     when the circumstances described in section 15(6) of the 1998 Act did not apply; or
+.... the Chief Inspector has certified in writing that the Chief Inspector is satisfied that
+     the school, or the part of such a school in which the person in question teaches, is fit
+     for the purpose of providing supervision and training during an induction period; or
+... a further education institution where the most recent report made pursuant to section
+    124(4)(a) of the 2006 Act stated that the Chief Inspector considered that the education or
+    training inspected was not of an adequate quality, unless—
+.... the person in question first worked as a qualified teacher in that institution at a time
+     when the most recent of such reports did not state that the Chief Inspector considered
+     that the education or training inspected was not of an adequate quality; or
+.... the Chief Inspector has certified in writing that the institution, or the part of such an
+     institution in which the person in question teaches, is fit for the purpose of providing
+     supervision and training during an induction period.
+.. An induction period may not be served unless, before the start of the induction period, it has
+   been agreed that an appropriate body is to act as such.
+.. For the purposes of this regulation—
+[loweralpha]
+... “the 2006 Act” means the Education and Inspections Act 2006(a);
+... “employment-based teacher training scheme” means a scheme established, or having
+    effect as if established, by the Secretary of State for the purposes of paragraph 10 of
+    Schedule 2 to the 2003 Qualifications Regulations(b);
+... “Chief Inspector” means Her Majesty’s Chief Inspector of Education, Children’s Services
+    and Skills.
+
+. *Length of an induction period*
+[arabic]
+.. Subject to the following provisions of this regulation, the length of the induction period
+   is a period equivalent to three school terms of the institution in which induction is begun, based on
+   a school year of three terms.
+.. A period of continuous employment as a qualified teacher of at least the equivalent of one
+   school term, based on a school year of three terms, counts towards an induction period.
+.. The appropriate body may, with the consent of the teacher concerned, reduce the induction
+   period which the teacher is required to serve to a minimum of one school term if they are satisfied
+   that the teacher has met the standards referred to in regulation 10(5).
+.. Unless, before the start of the induction period, the head teacher of the institution agrees, no
+   period of engagement as a supply teacher counts towards an induction period.
+
+. *Extension of an induction period before completion*
+[arabic]
+.. Subject to paragraph (2), where a person serving an induction period is absent from work
+   on 30 or more days, that person’s induction period is to be extended by the aggregate period of
+   that person’s absences.
+.. Paragraph (1) does not apply where a person is absent from work for more than 30 days only
+   by reason of the maternity leave period specified in regulation 7(1) of the Maternity and Parental
+   Leave etc Regulations 1999(c) unless she requests her induction period to be so extended.
+.. Where an induction period is extended under regulation 10 of the Welsh Induction
+   Regulations and the person serving the induction period becomes employed at an institution in
+   England, the induction period is to be treated as having been extended under this regulation.
+.. Except as provided for in this regulation an induction period may not be extended before its
+   completion.
+
+. *Service of more than one induction period*
++
+No person may serve more than one induction period.
+
+. *Supervision, training and assessment*
+[arabic]
+.. The head teacher of an institution in which a person is serving an induction period and
+   the appropriate body are responsible for that person’s supervision and training during that
+   induction period.
+.. Where a person serving an induction period is employed in two or more institutions
+   simultaneously, the head teachers of those institutions must agree which of them, and which
+   appropriate body, is to be responsible for that person’s supervision and training.
+.. The duties assigned to a person serving an induction period, that person’s supervision and
+   the conditions under which that person works are to be such as to facilitate a fair and effective
+   assessment of that person’s conduct and efficiency as a teacher.
+.. A person serving an induction period in a relevant school must not teach for more than 90
+   per cent of the time that a teacher at the school would be expected to teach.
+.. The Secretary of State may determine the standards against which a person is to be assessed
+   for the purpose of deciding whether the person has satisfactorily completed an induction period.
+
+. *Completion of an induction period*
+[arabic]
+.. A person (“P”) has completed an induction period for the purposes of this regulation
+where that person has served an induction period of the length specified in regulation 7 and any
+extension to that period provided for by these Regulations.
+.. This regulation is subject to Schedule 2.
+.. The head teacher of the institution at which P is employed at the completion of the induction
+period must within 10 working days beginning with the date on which the induction period was
+completed make a written recommendation to the appropriate body as to whether P—
+[loweralpha]
+... has achieved the standards mentioned in regulation 10(5); or
+... should have the induction period extended by such period as the head teacher
+    recommends, and at the same time send a copy of the recommendation to P.
+.. P may make written representations to the appropriate body with regard to the head teacher’s
+   recommendation under paragraph (3) within 10 working days beginning with the date on which
+   the recommendation is received.
+.. The appropriate body must within 20 working days beginning with the date on which they
+   received the head teacher’s recommendation under paragraph (3), decide whether P—
+[loweralpha]
+... has achieved the standards mentioned in regulation 10(5) and has accordingly
+    satisfactorily completed the induction period;
+... should have the induction period extended by such period as they determine; or
+... has failed satisfactorily to complete the induction period.
+.. Before making a decision under paragraph (5) the appropriate body must have regard to any
+   written representations made in accordance with paragraph (4).
+.. The appropriate body must, within 3 working days (or as soon as practicable in the case of
+   the Secretary of State) beginning with the date on which the decision was made under paragraph
+   (5), give written notice of the decision to—
+[loweralpha]
+... P;
+... the head teacher of the institution at which P was employed at the completion of the
+    induction period;
+... if P is not employed by the appropriate body, P’s employer at the completion of the
+    induction period; and
+... the Secretary of State.
+[arabic]
+.. Where the appropriate body made a decision falling within paragraph (5)(b) or (c), the
+    appropriate body must also give P written notice of—
+[loweralpha]
+... P’s right to appeal pursuant to regulation 14 against the decision;
+... the address to which an appeal should be sent; and
+... the time period for making an appeal.
+[arabic]
+.. In this regulation “appropriate body” means the appropriate body for the institution at which
+   the person is employed at the completion of the induction period.
+
+. *Termination of employment following failure satisfactorily to complete an induction period*
+[arabic]
+.. This paragraph applies to a person employed as a teacher at a relevant school in
+   England when the decision is made under regulation 11(5)(c) of these Regulations, or regulation
+   14(3)(c) of the Welsh Induction Regulations, that the person has failed satisfactorily to complete
+   their induction period.
+.. The employer of a person to whom paragraph (1) applies must secure the termination of the
+   person’s employment as a teacher if—
+[loweralpha]
+... no appeal is made to the Secretary of State or the General Teaching Council for Wales
+    against the decision of the appropriate body; or
+... such an appeal is dismissed.
+.. An employer must take the steps necessary to secure the termination of the person’s
+   employment in the circumstances mentioned in paragraph (2)(a) so that the termination takes
+   effect within 10 working days beginning with the date on which—
+[loweralpha]
+... the employer received written notification from the person that they did not intend to
+    appeal to the Secretary of State; or
+... the time limit for appeal imposed by paragraph 2 of Schedule 3 or by paragraph 2(1) of
+    Schedule 2 to the Welsh Induction Regulations expired, as the case may be.
+.. The employer must take the steps necessary to secure the termination of the person’s
+   employment in the circumstances mentioned in paragraph (2)(b) so that the termination takes
+   effect within 10 working days beginning with the date on which the employer received written
+   notice of the outcome of the appeal hearing.
+
+. *Inclusion on the list of persons who have failed satisfactorily to complete an induction period*
+[arabic]
+.. Subject to paragraph (2), the name of any person in respect of whom a decision is made
+under regulation 11(5)(c) that the person has failed satisfactorily to complete an induction period
+which the person is required to serve must be included on the list kept by the Secretary of State
+under section 141C(1)(b) of the Education Act 2002(a).
+.. The name of the person shall not be included on the list until—
+[loweralpha]
+... the time within which an appeal may be made against the decision has expired; or
+... any such appeal is dismissed.
+
+. *Appeals*
+[arabic]
+.. Where the appropriate body makes a decision under regulation 11(5) that a person —
+[loweralpha]
+... should have the induction period extended; or
+... has failed satisfactorily to complete the induction period,
+that person may appeal to the Secretary of State against the decision.
+[arabic]
+.. Schedule 3 has effect in relation to appeals under this regulation.
+.. Where a person appeals against a decision to extend the induction period, the Secretary of
+State may—
+[loweralpha]
+... allow the appeal;
+... dismiss the appeal; or
+... substitute a different period of extension.
+[arabic]
+.. Where a person appeals against a decision that they have failed satisfactorily to complete the
+induction period, the Secretary of State may—
+[loweralpha]
+... allow the appeal;
+... dismiss the appeal; or
+... extend the induction for such period as the Secretary of State thinks fit.
+
+. *Other functions of the appropriate body*
++
+The appropriate body may provide—
+[loweralpha]
+.. guidance, support and assistance to institutions; and
+.. training for teachers,
++
+in connection with providing training, supervision and assessment under these Regulations.
+
+. *Charges*
++
+Where an appropriate body exercises a function under these Regulations, they may make a
+reasonable charge not exceeding the cost of exercising that function—
+[loweralpha]
+.. to the proprietor of an independent school, 16 to 19 Academy, alternative provision
+   Academy or nursery school, or to the governing body of a further education institution; or
+.. to the governing body of a relevant school.
+
+. *Guidance given by the Secretary of State*
++
+A person or body exercising a function under these Regulations must have regard to any
+guidance given by the Secretary of State from time to time as to the exercise of that function.
+. *Notice under these Regulations*
++
+Notice under these Regulations may be given to a person by facsimile, electronic mail or
+other similar means which are capable of producing a document containing the text of the
+communication, in which case the notice will be deemed to have been received on the second day
+after the day on which it was transmitted.
+
+
+== Schedule 1 (regulation 5)
+
+18th April 2012
+
+Nick Gibb, Minister of State, Department for Education
+
+=== Cases in which a person may be employed as a qualified teacher in a relevant school without having satisfactorily completed an induction period under these Regulations
+
+. A person who on 7th May 1999 was a qualified teacher.
+. A person who—
+.. is serving an induction period (including an extended induction period); or
+.. has completed such an induction period and is being employed to work as a teacher
+   pending a decision of the appropriate body pursuant to regulation 11(5) of these
+   Regulations or regulation 14(3) of the Welsh Induction Regulations.
+. A person who has failed satisfactorily to complete an induction period who continues to be
+  employed pending the outcome of that person’s appeal.
+. A person who is employed for one or more periods of less than one school term as a supply
+  teacher during the period of five years starting on the date on which that person becomes a
+  qualified teacher.
+. A person who can no longer be employed under paragraph 4 of this Schedule but who is
+  employed for a period as a supply teacher while serving an induction period in part-time service.
+. A person who has satisfactorily completed an induction period under regulations made from
+time to time under section 19 of the Teaching and Higher Education Act 1998(a) in relation to
+teachers in Wales.
+. A person—
+.. who qualified as a teacher in England on or after 7th May 1999 but on or before 1st April
+   2003;
+.. whose first post as a teacher (including as a supply teacher) following that person’s
+   qualification was in a school in Wales; and
+.. who on or before 1st April 2003 has completed not less than two school terms’ service in
+   such a post
+. A person who has, or is eligible for, full registration as a teacher of primary or secondary
+  education with the General Teaching Council for Scotland.
+. A person who—
+.. has successfully completed the induction stage of teacher education in Northern Ireland;
+   or
+.. was employed as a teacher in Northern Ireland at any time prior to the introduction of the
+   induction stage of teacher training in Northern Ireland.
+. A person who is, as respects the profession of school teacher, entitled to practice pursuant to
+  Part 2 and Chapters 1, 2 and 4 of Part 3 of the European Communities (Recognition of
+  Professional Qualifications) Regulations 2007(b).
+. A person who has successfully completed a probationary period for teachers under
+  arrangements approved and supervised by the Director of Education of Gibraltar.
+. A person who has successfully completed the States of Jersey Induction Programme for
+  Newly Qualified Teachers.
+. A person who has been approved by the States of Guernsey Education Department as having
+  successfully completed an induction period for teachers.
+. A person who has successfully completed an induction period for teachers under
+  arrangements approved and supervised by the Isle of Man Department of Education and Children.
+. A person who on or before 7th May 1999—
+.. was employed as a teacher at a relevant school in England or Wales; and
+.. either—
+... had successfully completed a course of initial training for teachers in schools at an
+    educational institution in Scotland; or
+... was registered as a teacher of primary or secondary education with the General
+    Teaching Council for Scotland.
+. A person who on or before 7th May 1999—
+.. was employed as a teacher at a relevant school in England or Wales; and
+.. either—
+... had successfully completed a course of initial training for teachers in schools at an
+    educational institution in Northern Ireland; or
+... had been awarded confirmation of recognition as a teacher in schools in Northern
+    Ireland by the Northern Ireland Department of Education, that confirmation not
+    having been withdrawn at any time subsequent to the award.
+
+. A person who is a qualified teacher and who became so qualified by virtue of regulation 5
+  of, and paragraph 12 of Schedule 2 to, the 2003 Qualifications Regulations.
+. A person who—
+.. has successfully completed a programme of professional training for teachers in any
+   country outside the United Kingdom and which is recognised as such by the competent
+   authority in that country;
+.. has not less than two years’ full-time teaching experience, or its equivalent, in the United
+   Kingdom or elsewhere;
+.. is a qualified teacher who became so qualified on or after 26th April 2001 by virtue of
+   regulation 5 of, and paragraph 9 or 10 of Schedule 2 to, the 2003 Qualifications
+   Regulations; and
+.. has been assessed by a person approved by the Secretary of State as meeting the standards
+   mentioned in regulation 10(5).
+. A person who is a qualified teacher who became so qualified by virtue of regulation 5 of,
+  and paragraph 13 of Schedule 2 to, the 2003 Qualifications Regulations.
+. A person who has successfully completed the Service Children’s Education Schools
+  Induction Programme in Germany or Cyprus.
+. A person who on or before 1st September 2003 has successfully completed a course of
+  initial teacher training in an educational institution in Wales.
+. A person who is a qualified teacher and became so qualified by virtue of regulation 5 of, and
+  paragraph 13A of Schedule 2 to, the 2003 Qualifications Regulations.
+. A person who is a qualified teacher and became so qualified by virtue of regulation 5 of, and
+  paragraph 13B of Schedule 2 to, the 2003 Qualifications Regulations.
+. &ZeroWidthSpace;
+[arabic]
+.. A person —
+[loweralpha]
+... who has been informed in error by the General Teaching Council for England or the
+   Secretary of State that they are exempt from the requirement to complete an induction
+   period; or
+... who has satisfactorily completed an induction period but is unable to produce verifying
+   data,
+   and in relation to whom the appropriate body are satisfied, on the basis of the information referred
+   to in sub-paragraph (2), that they have met the standards referred to in regulation 10(5).
+.. The information referred to is the person’s most recent available appraisal report, covering a
+period of one year within the previous five years, from an institution referred to in regulation 6.
+.. For the purposes of this paragraph, an appraisal report means a report of an appraisal or its
+equivalent carried out under the School Teacher Appraisal (Wales) Regulations 2002(a), the
+Education (School Teacher Performance Management) (England) Regulations 2006(b) or the
+Education (School Teachers’ Appraisal) (England) Regulations 2012(c).
+
+== Schedule 2 (regulation 11)
+
+=== Special provisions applying to a qualified teacher who has not passed the numeracy skills test on completion of the induction period
+
+. &ZeroWidthSpace;
+.. In this Schedule “the numeracy skills test” means the numeracy test for the time being
+   determined by the Secretary of State as an induction standard under regulation 10(5) in relation to
+   persons who qualified between 1st May 2000 and 30th April 2001.
+.. This Schedule applies in the case of a person who—
+... qualified as a teacher between 1st May 2000 and 30th April 2001; and
+... has completed an induction period but has not passed the numeracy skills
+    test on the date when the induction period is completed.
+
+. The head teacher of the institution at which the person is employed at the completion of the
+  induction period must within 10 working days beginning with the date when the induction period
+  is completed—
+.. make a written recommendation to the appropriate body as to whether the person has
+achieved the standards mentioned in regulation 10(5) except for passing the numeracy
+skills test, and
+.. at the same time send a copy of that written recommendation to the person.
+
+. The appropriate body must—
+.. not take any decision pursuant to regulation 11(5) in respect of such a person;
+.. notify the Secretary of State that they have received a recommendation in respect of such
+   a person, and at the same time send a copy of that notification to the person; and
+.. notify the employer of the person where that employer is not the appropriate body.
+. The employer of the person must take the steps necessary to secure the termination of the
+  person’s employment as a teacher so that the termination takes effect as soon as practicable at the
+  end of the induction period.
+. A person to whom this Schedule applies but who subsequently passes the numeracy skills test
+  must give written notification of that fact to—
+.. the appropriate body; and
+.. the Secretary of State.
+. The appropriate body, within 20 working days beginning with the date on which they receive
+   such notification, must take a decision pursuant to regulation 11(5).
+
+== Schedule 3 (regulation 14)
+
+=== Procedure for appeal against a decision of the appropriate body
+
+
+==== Interpretation
+
+. In this Schedule—
+  * “appellant” means a person who appeals to the Secretary of State under regulation 14(1);
+  * “the parties” means the appellant and the respondent and a “party” means the appellant or the
+    respondent, or either of the parties, as the context requires;
+  * “respondent” means the appropriate body which took the decision which is the subject of the
+    appeal.
+
+==== Time for appeal
+
+[start=2]
+. An appeal to the Secretary of State must be made by notice served on the Secretary of State
+within 20 working days beginning with the day on which the appellant is deemed to have received
+the notice under regulation 11(7).
+
+==== Notice of appeal
+
+[start=3]
+. A notice of appeal must—
+.. contain—
+... the name and contact details of the appellant;
+... the name and contact details of the institution at which the appellant was employed
+at the completion of the induction period;
+... if the appellant is employed in a teaching capacity at the date the appellant makes the
+appeal, the name and contact details of the appellant’s employer;
+... the name and contact details of any person representing the appellant in respect of
+the appeal;
+... the grounds on which the appellant appeals;
+... a statement as to whether or not the appellant requests an oral hearing;
+.. be signed by or on behalf of the appellant;
+.. be accompanied by a copy of—
+... the notice given under regulation 11(7);
+... any reasons given by the respondent in support of such notice;
+... any other information on which the appellant seeks to rely for the purposes of the
+    appeal.
+
+. &ZeroWidthSpace;
+
+.. The appellant may serve an amended notice of appeal on the Secretary of State at any
+   time and, subject to sub-paragraph (2), the Secretary of State must send a copy to the respondent.
+.. The Secretary of State need not comply with sub-paragraph (1) if the amended notice of
+   appeal is received after the Secretary of State has—
+... determined to decide the appeal without a hearing; or
+... (as the case may be) notified the parties in accordance with paragraph 13(1).
+.. Paragraph 3(a)(i) and (v), (b) and (c)(iii) apply in relation to an amended notice of appeal as
+   they apply to a notice of appeal.
+
+==== Acknowledgment of notice of appeal
+
+[start=5]
+. The Secretary of State must—
+.. send the appellant an acknowledgement of the notice of appeal;
+.. send a copy of the notice of appeal and accompanying documents to the respondent;
+.. send a copy of the notice of appeal to—
+... the head teacher of the institution at which the appellant was employed at the
+    completion of the induction period;
+... any person named in the notice of appeal as the appellant’s employer.
+
+==== Reply from appropriate body etc.
+
+[start=6]
+. &ZeroWidthSpace;
+[arabic]
+.. The respondent must reply to the Secretary of State within 20 working days beginning
+   with the day on which the respondent receives the copy of the notice of appeal.
+.. The reply must state whether the respondent seeks to defend the decision which is the
+   subject of the appeal.
+.. Where the respondent seeks to defend the decision which is the subject of the appeal the
+reply must—
+... contain—
+.... the respondent’s response to the grounds on which the appellant appeals;
+.... a statement as to whether or not the respondent requests an oral hearing;
+... be accompanied by—
+.... any document or information on which the respondent wishes to rely in seeking to
+     uphold the decision which is the subject of the appeal;
+.... the respondent’s reasons for giving notice under regulation 11(7), if not already
+     provided to the appellant.
+.. The respondent may serve an amended reply on the Secretary of State at any time and,
+   subject to sub-paragraph (5), the Secretary of State must send a copy to the appellant.
+.. The Secretary of State need not comply with sub-paragraph (4) if the amended reply is
+   received after the Secretary of State has—
+... determined to decide the appeal without a hearing; or
+... (as the case may be) notified the parties in accordance with paragraph 13(1).
+.. Sub-paragraph (3) applies in relation to an amended reply as it applies to a reply.
+
+==== Acknowledgment of reply etc.
+
+[start=7]
+. The Secretary of State must acknowledge the reply and send a copy of the reply and any
+accompanying documents and information to the appellant.
+
+==== Information: further provision
+
+[start=8]
+. &ZeroWidthSpace;
+[arabic]
+.. The Secretary of State may require the appellant or the respondent to provide the
+Secretary of State with such further documents or information as the Secretary of State considers
+appropriate by the date specified in the request.
+.. The Secretary of State must inform the appellant or the respondent (as the case may be) of
+any request made under sub-paragraph (1).
+.. The appellant or the respondent may provide further documents or information to the
+Secretary of State at any time.
+.. Subject to sub-paragraph (5), the Secretary of State must send a copy of any document or
+information provided by one of the parties to the other party.
+.. The Secretary of State need not comply with sub-paragraph (4) where the further document
+or information is received after the Secretary of State has—
+[loweralpha]
+... determined to decide the appeal without a hearing; or
+... (as the case may be) notified the parties in accordance with paragraph 13(1).
+
+==== Withdrawal of appeal or reply
+
+[start=9]
+. &ZeroWidthSpace;
+[arabic]
+.. The appellant may withdraw the appeal at any time by notice served on the Secretary of
+   State.
+.. The respondent may withdraw the reply at any time by notice served on the Secretary of
+   State.
+.. The Secretary of State must notify the respondent if the appellant withdraws the appeal and
+   the appellant if the respondent withdraws the reply.
+
+==== Determination of appeal on failure to defend the appeal or withdrawal of appeal or reply
+
+[start=10]
+. &ZeroWidthSpace;
+[arabic]
+.. The Secretary of State must allow the appeal where—
+... the respondent’s reply states that the respondent does not seek to defend the decision
+    which is the subject of the appeal; or
+... the respondent withdraws the reply.
+.. The Secretary of State must notify the appellant if the appeal is allowed under sub-paragraph (1).
+
+==== Determination of appeal without a hearing
+[start=11]
+. At any time after the expiry of the period in paragraph 6(1) if neither of the parties has
+  requested a hearing the Secretary of State may decide the appeal without a hearing.
+
+==== Appeal panels
+
+[start=12]
+. &ZeroWidthSpace;
+.. Where there is to be a hearing the Secretary of State must appoint a panel in
+   accordance with sub-paragraph (2) to consider the appeal.
+.. A panel must include at least three persons, comprising—
+... one or more teachers or persons who have been teachers in the past five years; and
+... one or more other persons.
+
+==== Notification of hearing date etc.
+
+[start=13]
+. &ZeroWidthSpace;
+
+.. Where there is to be a hearing the Secretary of State must—
+... notify the parties of the time and date of the hearing (which must be at least 15 working
+    days after the date of the notice of the hearing), and its location;
+... offer the parties the opportunity to submit written representations instead of attending the
+    hearing;
+... advise the parties of the possible consequences of failing to attend the hearing without
+    having submitted written representations.
+.. The Secretary of State must notify the parties of any change of date, time or location of a
+    hearing.
+
+==== Preparations for hearing
+
+[start=14]
+. Each of the parties must, no later than 10 working days before the date of the hearing,
+inform the Secretary of State—
+.. whether or not the party intends to appear or be represented at the hearing;
+.. of the name of any witness the party intends to call at the hearing.
+
+==== Written representations
+
+[start=15]
+. &ZeroWidthSpace;
+[arabic]
+.. A party choosing to submit written representations instead of appearing or being
+   represented at a hearing must do so no later than 10 working days before the date of the hearing.
+.. The Secretary of State must send a copy of any written representations to the other party to
+   the appeal.
+
+=== Procedure at the hearing
+
+[start=16]
+. &ZeroWidthSpace;
+[arabic]
+.. A hearing must be in public except so far as the Secretary of State determines the
+   hearing is to be in private.
+.. The procedure at the hearing is to be determined by the Secretary of State, and the panel
+   appointed under paragraph 12 must consider cases referred to it by the Secretary of State in
+   accordance with such procedure.
+.. The panel must make a recommendation to the Secretary of State as to whether the appeal
+   should be allowed.
+.. The Secretary of State may adjourn a hearing.
+
+==== Notification of decision on an appeal
+
+[start=17]
+. &ZeroWidthSpace;
+[arabic]
+.. The Secretary of State must notify in writing the persons specified in sub-paragraph (2)
+   of the decision on an appeal and the reasons for that decision.
+.. The persons referred to in sub-paragraph (1) are—
+... the parties; and
+... the head teacher of the institution at which the appellant was employed at the completion
+    of the appellant’s induction period.
+.. The Secretary of State must notify in writing any person named in the notice of appeal as the
+   appellant’s employer of the decision.
+
+==== Time limits and irregularities
+[start=18]
+. &ZeroWidthSpace;
+.. The Secretary of State may extend any time limit imposed on the appellant or the
+   respondent by this Schedule (whether before or after the expiry of the time limit) if the Secretary
+   of State considers it appropriate to do so.
+.. An irregularity in the procedure for an appeal does not of itself invalidate the decision on
+   appeal.
+
+
+== Explanatory note
+
+_(This note is not part of the Regulations)_
+
+These Regulations revoke and replace the Education (Induction Arrangements for School
+Teachers) (England) Regulations 2008.
+
+Subject to the exceptions set out in Schedule 1, no qualified teacher may be employed in a
+maintained school or a non-maintained special school unless they have satisfactorily completed an
+induction period in accordance with these Regulations (regulation 5).
+
+The Regulations provide for the institutions in which induction may be served, and the conditions
+which apply in relation to those (regulation 6). The length of an induction period will normally be
+the equivalent to three school terms of the institution in which induction is begun, although this
+may be reduced in certain circumstances (regulation 7) and may also be extended before its
+completion (regulation 8).
+
+Regulation 10 makes provision for a person’s supervision, training and assessment when serving
+induction. It provides that a person serving induction in a relevant school must not teach for more
+than 90 per cent of the time that a teacher at the school would be expected to teach.
+
+The Secretary of State sets standards which must be met in order for a person to complete the
+induction period satisfactorily (regulation 10). On completion of that period, the head teacher or
+principal of the institution where induction is completed must make a recommendation to the
+appropriate body as to whether those standards have been met (regulation 11). The appropriate
+body in respect of each institution where induction may be served is specified in regulation 4. The
+appropriate body must then decide whether (i) the person has achieved the standards and
+satisfactorily completed induction, (ii) the induction period should be extended, or (iii) the person
+has failed satisfactorily to complete induction.
+
+A person whose induction period is extended, or who has failed to complete induction
+satisfactorily, may appeal that decision to the Secretary of State (regulation 14). Schedule 3 sets
+out the procedure for such appeals.
+
+Section 141C(1)(b) of the Education Act 2002 (inserted by the Education Act 2011) provides that
+the Secretary of State must keep a list containing the names of persons who have begun, but who
+have failed satisfactorily to complete, an induction period in prescribed circumstances. Regulation
+13 provides that the name of any person who has failed satisfactorily to complete an induction
+period must be included on that list. The name cannot be added until the time for appeal has
+expired or the appeal has been dismissed.
+
+Any person exercising functions under these Regulations must have regard to any guidance given
+by the Secretary of State.
+
+An impact assessment has not been prepared for these Regulations as no impact on businesses or
+civil society organisations is foreseen. The impact on the public sector is minimal.
