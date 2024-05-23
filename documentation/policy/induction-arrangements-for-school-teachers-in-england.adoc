@@ -415,7 +415,7 @@ teachers in Wales.
   paragraph 13A of Schedule 2 to, the 2003 Qualifications Regulations.
 . A person who is a qualified teacher and became so qualified by virtue of regulation 5 of, and
   paragraph 13B of Schedule 2 to, the 2003 Qualifications Regulations.
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. A person —
 [loweralpha]
@@ -437,7 +437,7 @@ Education (School Teachers’ Appraisal) (England) Regulations 2012(c).
 
 === Special provisions applying to a qualified teacher who has not passed the numeracy skills test on completion of the induction period
 
-. &ZeroWidthSpace;
+. {empty}
 .. In this Schedule “the numeracy skills test” means the numeracy test for the time being
    determined by the Secretary of State as an induction standard under regulation 10(5) in relation to
    persons who qualified between 1st May 2000 and 30th April 2001.
@@ -511,7 +511,7 @@ the appeal;
 ... any other information on which the appellant seeks to rely for the purposes of the
     appeal.
 
-. &ZeroWidthSpace;
+. {empty}
 
 .. The appellant may serve an amended notice of appeal on the Secretary of State at any
    time and, subject to sub-paragraph (2), the Secretary of State must send a copy to the respondent.
@@ -536,7 +536,7 @@ the appeal;
 ==== Reply from appropriate body etc.
 
 [start=6]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. The respondent must reply to the Secretary of State within 20 working days beginning
    with the day on which the respondent receives the copy of the notice of appeal.
@@ -569,7 +569,7 @@ accompanying documents and information to the appellant.
 ==== Information: further provision
 
 [start=8]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. The Secretary of State may require the appellant or the respondent to provide the
 Secretary of State with such further documents or information as the Secretary of State considers
@@ -589,7 +589,7 @@ or information is received after the Secretary of State has—
 ==== Withdrawal of appeal or reply
 
 [start=9]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. The appellant may withdraw the appeal at any time by notice served on the Secretary of
    State.
@@ -601,7 +601,7 @@ or information is received after the Secretary of State has—
 ==== Determination of appeal on failure to defend the appeal or withdrawal of appeal or reply
 
 [start=10]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. The Secretary of State must allow the appeal where—
 ... the respondent’s reply states that the respondent does not seek to defend the decision
@@ -617,7 +617,7 @@ or information is received after the Secretary of State has—
 ==== Appeal panels
 
 [start=12]
-. &ZeroWidthSpace;
+. {empty}
 .. Where there is to be a hearing the Secretary of State must appoint a panel in
    accordance with sub-paragraph (2) to consider the appeal.
 .. A panel must include at least three persons, comprising—
@@ -627,7 +627,7 @@ or information is received after the Secretary of State has—
 ==== Notification of hearing date etc.
 
 [start=13]
-. &ZeroWidthSpace;
+. {empty}
 
 .. Where there is to be a hearing the Secretary of State must—
 ... notify the parties of the time and date of the hearing (which must be at least 15 working
@@ -650,7 +650,7 @@ inform the Secretary of State—
 ==== Written representations
 
 [start=15]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. A party choosing to submit written representations instead of appearing or being
    represented at a hearing must do so no later than 10 working days before the date of the hearing.
@@ -660,7 +660,7 @@ inform the Secretary of State—
 === Procedure at the hearing
 
 [start=16]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. A hearing must be in public except so far as the Secretary of State determines the
    hearing is to be in private.
@@ -674,7 +674,7 @@ inform the Secretary of State—
 ==== Notification of decision on an appeal
 
 [start=17]
-. &ZeroWidthSpace;
+. {empty}
 [arabic]
 .. The Secretary of State must notify in writing the persons specified in sub-paragraph (2)
    of the decision on an appeal and the reasons for that decision.
@@ -687,7 +687,7 @@ inform the Secretary of State—
 
 ==== Time limits and irregularities
 [start=18]
-. &ZeroWidthSpace;
+. {empty}
 .. The Secretary of State may extend any time limit imposed on the appellant or the
    respondent by this Schedule (whether before or after the expiry of the time limit) if the Secretary
    of State considers it appropriate to do so.
