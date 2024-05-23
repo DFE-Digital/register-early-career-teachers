@@ -20,16 +20,20 @@ Education Act 2002(a).
 
 Citation, commencement and application
 
-[arabian]
-. *Citation, commencement and application*
-[arabian]
+=== Citation, commencement and application
+[arabic, start=1]
+. {empty}
+[arabic]
 .. These Regulations may be cited as the Education (Induction Arrangements for School
    Teachers) (England) Regulations 2012 and, subject to paragraph (2), come into force on 1st
    September 2012.
 .. Regulation 16(b) comes into force on 1st September 2013.
 .. These Regulations apply in relation to England.
-. *Revocations and transitional provision*
-[arabian]
+
+=== Revocations and transitional provision
+[arabic, start=2]
+. {empty}
+[arabic]
 .. Subject to paragraph (2), the 2008 Induction Regulations are revoked.
 .. The 2008 Induction Regulations continue to apply to any person who completed an
    induction period within the meaning of those Regulations before 1st September 2012, and these
@@ -41,8 +45,11 @@ Citation, commencement and application
     2008 Induction Regulations; and
 ... who immediately before 1st September 2012 has not completed the induction period as
     extended.
-. *Interpretation*
-[arabian]
+
+=== Interpretation
+[arabic, start=3]
+. {empty}
+[arabic]
 .. In these Regulations — “appropriate body” means the appropriate body under regulation 4;
 * “authority” means a local authority;
 * “institution” means a school or institution in which an induction period may be served under
@@ -58,7 +65,9 @@ Citation, commencement and application
 * Teachers) (Wales) Regulations 2005(d).
 .. For the purposes of these Regulations, “head teacher” includes the principal of an institution.
 
-. *Appropriate body*
+=== Appropriate body
+[arabic, start=4]
+. {empty}
 [arabic]
 .. For the purposes of these Regulations the appropriate body —
 [loweralpha]
@@ -85,13 +94,16 @@ Citation, commencement and application
 ... For the purposes of this regulation, “specified standards” means the standards set out in
     “Teachers’ Standards” published by the Secretary of State in July 2011(h).
 
-. *Requirement to serve an induction period*
-+
-Subject to the exceptions in Schedule 1, no qualified teacher(a) is to be employed or engaged
-as a teacher at a relevant school unless that person has satisfactorily completed an induction period
-in accordance with these Regulations.
+=== Requirement to serve an induction period
 
-. *Institutions in which an induction period may be served*
+[arabic, start=5]
+. Subject to the exceptions in Schedule 1, no qualified teacher(a) is to be employed or engaged
+  as a teacher at a relevant school unless that person has satisfactorily completed an induction period
+  in accordance with these Regulations.
+
+=== Institutions in which an induction period may be served
+[arabic, start=6]
+. {empty}
 [arabic]
 .. Subject to paragraphs (3) and (4), an induction period may be served in—
 [loweralpha]
@@ -145,7 +157,9 @@ in accordance with these Regulations.
 ... “Chief Inspector” means Her Majesty’s Chief Inspector of Education, Children’s Services
     and Skills.
 
-. *Length of an induction period*
+=== Length of an induction period
+[arabic, start=7]
+. {empty}
 [arabic]
 .. Subject to the following provisions of this regulation, the length of the induction period
    is a period equivalent to three school terms of the institution in which induction is begun, based on
@@ -158,7 +172,9 @@ in accordance with these Regulations.
 .. Unless, before the start of the induction period, the head teacher of the institution agrees, no
    period of engagement as a supply teacher counts towards an induction period.
 
-. *Extension of an induction period before completion*
+=== Extension of an induction period before completion
+[arabic, start=8]
+. {empty}
 [arabic]
 .. Subject to paragraph (2), where a person serving an induction period is absent from work
    on 30 or more days, that person’s induction period is to be extended by the aggregate period of
@@ -172,11 +188,13 @@ in accordance with these Regulations.
 .. Except as provided for in this regulation an induction period may not be extended before its
    completion.
 
-. *Service of more than one induction period*
-+
-No person may serve more than one induction period.
+=== Service of more than one induction period
+[arabic, start=9]
+. No person may serve more than one induction period.
 
-. *Supervision, training and assessment*
+=== Supervision, training and assessment
+[arabic, start=10]
+. {empty}
 [arabic]
 .. The head teacher of an institution in which a person is serving an induction period and
    the appropriate body are responsible for that person’s supervision and training during that
@@ -192,7 +210,9 @@ No person may serve more than one induction period.
 .. The Secretary of State may determine the standards against which a person is to be assessed
    for the purpose of deciding whether the person has satisfactorily completed an induction period.
 
-. *Completion of an induction period*
+=== Completion of an induction period
+[arabic, start=11]
+. {empty}
 [arabic]
 .. A person (“P”) has completed an induction period for the purposes of this regulation
 where that person has served an induction period of the length specified in regulation 7 and any
@@ -238,7 +258,9 @@ completed make a written recommendation to the appropriate body as to whether P�
 .. In this regulation “appropriate body” means the appropriate body for the institution at which
    the person is employed at the completion of the induction period.
 
-. *Termination of employment following failure satisfactorily to complete an induction period*
+=== Termination of employment following failure satisfactorily to complete an induction period
+[arabic, start=12]
+. {empty}
 [arabic]
 .. This paragraph applies to a person employed as a teacher at a relevant school in
    England when the decision is made under regulation 11(5)(c) of these Regulations, or regulation
@@ -263,7 +285,9 @@ completed make a written recommendation to the appropriate body as to whether P�
    effect within 10 working days beginning with the date on which the employer received written
    notice of the outcome of the appeal hearing.
 
-. *Inclusion on the list of persons who have failed satisfactorily to complete an induction period*
+=== Inclusion on the list of persons who have failed satisfactorily to complete an induction period
+[arabic, start=13]
+. {empty}
 [arabic]
 .. Subject to paragraph (2), the name of any person in respect of whom a decision is made
 under regulation 11(5)(c) that the person has failed satisfactorily to complete an induction period
@@ -274,7 +298,9 @@ under section 141C(1)(b) of the Education Act 2002(a).
 ... the time within which an appeal may be made against the decision has expired; or
 ... any such appeal is dismissed.
 
-. *Appeals*
+=== Appeals
+[arabic, start=14]
+. {empty}
 [arabic]
 .. Where the appropriate body makes a decision under regulation 11(5) that a person —
 [loweralpha]
@@ -297,7 +323,9 @@ induction period, the Secretary of State may—
 ... dismiss the appeal; or
 ... extend the induction for such period as the Secretary of State thinks fit.
 
-. *Other functions of the appropriate body*
+=== Other functions of the appropriate body
+[arabic, start=15]
+. {empty}
 +
 The appropriate body may provide—
 [loweralpha]
@@ -306,7 +334,9 @@ The appropriate body may provide—
 +
 in connection with providing training, supervision and assessment under these Regulations.
 
-. *Charges*
+=== Charges
+[arabic, start=16]
+. {empty}
 +
 Where an appropriate body exercises a function under these Regulations, they may make a
 reasonable charge not exceeding the cost of exercising that function—
