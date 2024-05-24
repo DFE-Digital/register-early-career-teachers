@@ -10,6 +10,17 @@ date: April 2024
 Statutory guidance for appropriate bodies, headteachers, school staff
 and governing bodies.
 
+== Contents
+
+* <<Summary>>
+* <<Section 1: Introduction>>
+* <<Section 2: The induction process>>
+* <<Section 3: Special circumstances>>
+* <<Section 4: Unsatisfactory progress and appeals>>
+* <<Section 5: Roles and responsibilities>>
+* <<Annex A: Exemptions>>
+* <<Index>>
+
 == Summary
 
 This is statutory guidance from the Department for Education. This means
