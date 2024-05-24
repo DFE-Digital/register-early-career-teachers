@@ -3,10 +3,12 @@ title: Induction for early career teachers (England)
 date: April 2024
 ---
 
+= Induction for early career teachers (England)
+
 :sectnums!:
 
 Statutory guidance for appropriate bodies, headteachers, school staff
-and governing bodies
+and governing bodies.
 
 == Summary
 
@@ -20,16 +22,19 @@ year of induction.
 
 === Legislation this publication refers to
 
-Sections 135A, 135B and 141C(1)(b), of the Education Act 2002 and The
-Education (Induction Arrangements for School Teachers) (England)
-Regulations 2012 as amended.
+Sections https://www.legislation.gov.uk/ukpga/2002/32/section/135A[135A],
+https://www.legislation.gov.uk/ukpga/2002/32/section/135B[135B] and
+https://www.legislation.gov.uk/ukpga/2002/32/section/141C[141C(1)(b)],
+of the
+https://www.legislation.gov.uk/ukpga/2002/32/contents[Education Act 2002] and
+https://www.legislation.gov.uk/uksi/2012/1115/contents/made[The Education (Induction Arrangements for School Teachers) (England) Regulations 2012] as amended.
 
 === Who this publication is for
 
 This guidance is for:
 
 * appropriate bodies – teaching school hubs; local authorities (subject
-to para 2.24); and other organisations determined by the Secretary of
+to <<para-2-24,2.24>>); and other organisations determined by the Secretary of
 State who can act in this role;
 * headteachers/principals, teachers and governing bodies in all
 maintained schools, independent schools, academiesfootnote:[Throughout
@@ -42,9 +47,9 @@ education (FE) colleges; sixth-form colleges; British schools overseas
 === Main points
 
 * All qualified teachers who are employed in a relevant
-schoolfootnote:[See para 2.1 for a list of relevant schools.] in England
+schoolfootnote:[See <<para-2-1,para <<para-2-1,2.1>>>> for a list of relevant schools.] in England
 must, by law, have completed an induction period satisfactorily, subject
-to specified exemptions (see Annex A).
+to specified exemptions (see <<_annex_a_exemptions,Annex A>>).
 * Statutory induction is not a legal requirement to teach in FE or the
 independent sector, academies, free schools and BSOs, but may be served
 in these settings.
@@ -70,28 +75,28 @@ introducing an ECF-based induction. The following key changes were made:
 * The term early career teacher (ECT) replaced the term newly qualified
 teacher (NQT).
 * The standard length of induction increased from one school year to two
-school years (see para 2.30).
+school years (see para <<para-2-30,2.30>>).
 * In addition to the 10% timetable reduction that ECTs receive in their
 first year of induction, ECTs also receive a 5% timetable reduction in
-their second year of induction (see para 2.20).
+their second year of induction (see para <<para-2-20,2.20>>).
 * Schools are expected to deliver an induction period that is
-underpinned by the ECF (see para 2.40). Appropriate bodies have a role
-in checking that an ECF-based induction is in place (see para 5.11).
-* The role of the mentor was introduced (see para 2.43). The mentor has
+underpinned by the ECF (see para <<para-2-40,2.40>>). Appropriate bodies have a role
+in checking that an ECF-based induction is in place (see para <<para-5-11,5.11>>).
+* The role of the mentor was introduced (see para <<para-2-43,2.43>>). The mentor has
 a key role in supporting the ECT during induction and is separate to the
-role of the induction tutor (see para 2.45).
+role of the induction tutor (see para <<para-2-45,2.45>>).
 * There are two formal assessment points, one midway through induction,
-and one at the end of the induction period (see para 2.55). These are
+and one at the end of the induction period (see para <<para-2-55,2.55>>). These are
 supported by regular progress reviews to monitor progress, to take place
-in each term where a formal assessment is not scheduled (see para 2.48).
+in each term where a formal assessment is not scheduled (see para <<para-2-48,2.48>>).
 * ECTs working part-time may, on completion of a minimum period covering
 but not equivalent to two full years, be able to have their induction
 period reduced. It is for the appropriate body to consider whether to
 grant a reduction and bring forward the final assessment point. This
 decision is only to be made in agreement with the ECT and on the basis
-that the ECT has met the Teachers’ Standards (see para 3.5).
+that the ECT has met the Teachers’ Standards (see para <<para-3-5,3.5>>).
 * The number of ad-hoc absences permitted was extended, in line with the
-extended length of induction (see para 3.6).
+extended length of induction (see para <<para-3-6,3.6>>).
 
 === April 2023 updates
 
@@ -109,7 +114,7 @@ being able to act as appropriate bodies.
 in a limited capacity where the local authority was acting as an
 appropriate body for an institution immediately before 1 September 2023
 for an ECT who was serving an induction period in that same institution
-immediately before 1 September 2023 (see para 2.24).
+immediately before 1 September 2023 (see para <<para-2-24,2.24>>).
 
 * The exemptions to a qualified teacher having satisfactorily completed
 an induction period to be able to be employed in a relevant school in
@@ -121,43 +126,43 @@ after 1 February 2023, are required to complete induction if they have
 less than two years’ full-time experience when they are awarded QTS. We
 have also updated the exemptions for teachers who complete an induction
 or probation period in the other parts of the United Kingdom and certain
-overseas territories and Crown Dependencies (see Annex A).
+overseas territories and Crown Dependencies (see <<_annex_a_exemptions,Annex A>>).
 * Schools are expected to provide appropriate bodies with copies of all
-progress reviews (see paras 2.54 and 5.3).
+progress reviews (see paras <<para-2-54,2.54>> and <<para-5-3,5.3>>).
 * Where necessary the appropriate body is expected to ensure that the
 headteacher/principal has contacted the ECT’s previous appropriate body
 and has obtained the necessary reports to ensure induction can be
 continued effectively. Where agreed with the headteacher/principal the
 appropriate body may contact the ECT’s previous appropriate body to
-obtain the necessary reports (see paras 2.75 and 5.11-5.12).
+obtain the necessary reports (see paras <<para-2-75,2.75>> and <<para-5-11,5.11>>-<<para-5-12,5.12>>).
 
 In addition, the following clarifications to existing guidance have been
 made:
 
-* Pre-September 2021 cohort ECTs (see paras 1.4-1.5) that on 1 September
+* Pre-September 2021 cohort ECTs (see paras <<para-1-4,1.4>>-<<para-1-5,1.5>>) that on 1 September
 2023 are serving an extension of their induction period decided by the
 appropriate body, will only need to complete the agreed extension period
-(see para 1.6). This will only apply to pre-September 2021 cohort ECTs
+(see para <<para-1-6,1.6>>). This will only apply to pre-September 2021 cohort ECTs
 who completed their three term induction before 1 September 2023, and
 where following their final formal assessment the appropriate body
 decides that an extension period is required in order to evidence
-meeting the Teachers’ Standards (see paras 3.8-3.10).
+meeting the Teachers’ Standards (see paras <<para-3-8,3.8>>-<<para-3-10,3.10>>).
 * ECT and mentor sessions are expected to be timetabled during teaching
 hours. In exceptional circumstances however where schools require
 flexibility due to timetabling constraints, mentoring may take place
 outside of teaching hours but should always be scheduled within
-contracted time (see para 2.44).
+contracted time (see para <<para-2-44,2.44>>).
 * When scheduling or requesting progress reviews, induction tutors and
 appropriate bodies are expected to consider when in the term an ECT
 started their induction, if there are overlaps with a formal assessment
 for part-time ECTs and if an ECT is absent at the point of a progress
-review (see paras 2.48 and 2.49).
+review (see paras <<para-2-48,2.48>> and <<para-2-49,2.49>>).
 * In exceptional circumstances where an interim assessment cannot be
 completed before the ECT leaves post (for example in situations where an
 absent ECT subsequently leaves their post without returning) the
 induction tutor or headteacher/principal is still expected to complete
 an interim assessment report and provide a copy to the ECT and
-appropriate body (see para 2.63).
+appropriate body (see para <<para-2-63,2.63>>).
 * Where the appropriate body chooses to work with partners, the
 appropriate body itself must retain full responsibility for regulatory
 duties and powers including; overseeing induction; making direct
@@ -165,7 +170,7 @@ decisions in every case concerning the suitability of post and
 institutions, taking appropriate action where schools are not complying
 with requirements or actions taken to support the ECT’s progress and;
 maintaining oversight of and accountability for all activities
-undertaken by third parties (see para 5.9).
+undertaken by third parties (see para <<para-5-9,5.9>>).
 
 === What’s new from April 2024
 
@@ -175,42 +180,42 @@ This guidance has been updated since the previous version (issued April
 * Educational Success Partners (ESP) has been added to the list of
 organisations as determined by the Secretary of State to act as an
 appropriate body, to support ECTs serving induction in British Schools
-Overseas (paragraph 2.24)
+Overseas (paragraph <<para-2-24,2.24>>)
 * Carer’s leave has been added to the list of types of absences which
-are exempt from counting towards an automatic extension (paragraph 3.7)
+are exempt from counting towards an automatic extension (paragraph <<para-3-7,3.7>>)
 
 In addition the following clarifications to existing guidance have been
 made on:
 
 * How to calculate induction served for full and part time ECTs who
-leave a contract of employment mid-term (paragraphs 2.33 to 2.34)
+leave a contract of employment mid-term (paragraphs <<para-2-33,2.33>> to <<para-2-34,2.34>>)
 * Removal of Secure Children’s Homes and Secure Training Centres from
 the list of institutions where induction may not be served (legal
-correction) (paragraph 2.4)
-* Considerations for appointing a suitable mentor (paragraph 2.43)
+correction) (paragraph <<para-2-4,2.4>>)
+* Considerations for appointing a suitable mentor (paragraph <<para-2-43,2.43>>)
 * ECTs completing induction in England after having served part of their
 induction in Wales, aligning English guidance with similar processes in
 Wales recognising the appropriate body’s role and discretion in granting
-a reduction on time served (paragraph 3.2)
+a reduction on time served (paragraph <<para-3-2,3.2>>)
 * The role of induction and appropriate bodies in relation to
 performance management, reference to the existing exemption from
-appraisal during induction has been added to paragraphs 2.48 and 4.1,
+appraisal during induction has been added to paragraphs <<para-2-48,2.48>> and <<para-4-1,4.1>>,
 with links to the capability procedures guidance included at paragraph
-4.7 and clarification of the boundaries of appropriate body’s role where
-HR processes run alongside induction set out in paragraph 4.8
+<<para-4-7,4.7>> and clarification of the boundaries of appropriate body’s role where
+HR processes run alongside induction set out in paragraph <<para-4-8,4.8>>
 * How the appropriate body must work with any third parties to ensure
-they retain responsibility for their decisions (paragraph 5.9)
+they retain responsibility for their decisions (paragraph <<para-5-9,5.9>>)
 
 == Section 1: Introduction
 
 === Purpose of induction
 
 [arabic]
-. Statutory induction is the bridge between initial teacher training and
+. [[para-1-1]] Statutory induction is the bridge between initial teacher training and
 a career in teaching. It combines a structured programme of development,
 support and professional dialogue, underpinned by the Early Career
 Framework, with monitoring and an assessment of performance against the
-Teachers’ Standards (see para 1.9). The programme should support the
+Teachers’ Standards (see para <<para-1-9,1.9>>). The programme should support the
 early career teacher and provide them with the necessary training to
 ensure that they can demonstrate that their performance against the
 Teachers’ Standards is satisfactory by the end of the period. Induction
@@ -220,11 +225,11 @@ an effective and successful teacher.
 === The statutory framework
 
 [arabic, start=2]
-. The statutory provisions which underpin this guidance are sections
+. [[para-1-2]] The statutory provisions which underpin this guidance are sections
 135A-C and 141C(1)(b) of the Education Act 2002, and the Education
 (Induction Arrangements for School Teachers) (England) Regulations 2012,
 as amended, (hereafter referred to as ‘the 2012 Regulations’).
-. This guidance explains the provisions and helps individuals to comply
+. [[para-1-3]] This guidance explains the provisions and helps individuals to comply
 with the 2012 Regulations, which came into effect on 1 September 2012,
 and which have been amended on a number of occasions since. The guidance
 is not a complete and authoritative statement of the law, but anyone
@@ -234,29 +239,29 @@ guidance.
 === Transitional arrangements
 
 [arabic, start=4]
-. The 2012 Regulations, as amended with effect from 1 September 2021,
+. [[para-1-4]] The 2012 Regulations, as amended with effect from 1 September 2021,
 extend induction from one year to two years. This will apply to ECTs who
 start their induction on or after 1 September 2021.
-. ECTs who, on 1 September 2021, had started but not completed their
+. [[para-1-5]] ECTs who, on 1 September 2021, had started but not completed their
 induction, hereafter referred to as ‘the pre-September 2021 cohort’ had
 until 1 September 2023 to complete induction within three
 terms[multiblock footnote omitted].
-. If an ECT in the pre-September 2021 cohort had concluded their
+. [[para-1-6]] If an ECT in the pre-September 2021 cohort had concluded their
 three-term induction before 1 September 2023 but the appropriate body
 decided that an extension period was required in order to evidence
 meeting the Teachers’ Standards which took the ECT past 1 September
 2023, they will only have needed to complete the agreed period of
-extension (see paras 3.8 - 3.10).
-. Where possible, schools should have regard to this amended statutory
+extension (see paras <<para-3-8,3.8>> - <<para-3-10,3.10>>).
+. [[para-1-7]] Where possible, schools should have regard to this amended statutory
 guidance in relation to ECTs who began their statutory induction before
 1 September 2021. For example, where possible these ECTs should have an
 ECF-based induction and a mentor for the remainder of their one-year
 induction. This is to be decided by the headteacher and appropriate body
 given what is most appropriate in the circumstances and considering what
 proportion of the induction period remains to be served.
-. After 1 September 2023, when the transition period ends, all ECTs
+. [[para-1-8]] After 1 September 2023, when the transition period ends, all ECTs
 (with the exception of those in the pre-September 2021 cohort who have
-already concluded their three-term induction, as set out in para 1.6)
+already concluded their three-term induction, as set out in para <<para-1-6,1.6>>)
 will be required to complete a two-year induction period. These ECTs
 should not restart induction, but rather complete the remaining period
 of a two-year induction. It is expected that they will be able to access
@@ -265,7 +270,7 @@ ECF support and entitlements for the remainder of their induction.
 === The relevant standards
 
 [arabic, start=9]
-. The Teachers’ Standards will be used to assess an ECT’s performance at
+. [[para-1-9]] The Teachers’ Standards will be used to assess an ECT’s performance at
 the end of their induction period. The decision about whether an ECT’s
 performance against the relevant standards is satisfactory upon
 completion of induction should take into account the ECT’s work context
@@ -280,7 +285,7 @@ be used as an assessment tool.
 === Requirement to complete an induction period
 
 [arabic, start=10]
-. Subject to the exemptions listed in Annex A (see Schedule 1 of the
+. [[para-1-10]] Subject to the exemptions listed in <<_annex_a_exemptions,Annex A>> (see Schedule 1 of the
 2012 Regulations), a qualified teacher cannot be employed as a teacher
 in a relevant school in England unless they have satisfactorily
 completed an induction period in accordance with the 2012 Regulations
@@ -289,7 +294,7 @@ soon as possible after gaining qualified teacher status (QTS), there is
 no set time limit for starting or completing an induction period. An
 ECT’s QTS cannot be lost or affected by the length of time it takes them
 to complete induction.
-. There is no legal requirement to satisfactorily complete an induction
+. [[para-1-11]] There is no legal requirement to satisfactorily complete an induction
 period if an ECT intends to work solely in the independent sector, an
 academy, a free school, a BSO, an independent nursery school or an FE
 institution. However, it may be possible for an ECT to serve a statutory
@@ -298,7 +303,7 @@ induction period in such settings as set out in this guidance.
 === Exemptions to the requirement to serve an induction period
 
 [arabic, start=12]
-. Annex A provides information on those categories of qualified teachers
+. [[para-1-12]] <<_annex_a_exemptions,Annex A>> provides information on those categories of qualified teachers
 who are exempt from the requirement to satisfactorily complete a
 statutory induction period in order to be employed as a teacher in a
 relevant school.
@@ -306,11 +311,11 @@ relevant school.
 === Early career teachers may only serve one induction period
 
 [arabic, start=13]
-. An ECT has only one chance to complete statutory induction. An ECT who
+. [[para-1-13]] An ECT has only one chance to complete statutory induction. An ECT who
 has completed induction and is judged to have failed to meet the
 Teachers’ Standards at the end of their induction period, is not
 permitted to repeat induction (although they may appeal against the
-decision: see paras 4.9–4.10). While such an ECT does not lose their
+decision: see paras <<para-4-9,4.9>>–<<para-4-10,4.10>>). While such an ECT does not lose their
 QTS, they cannot be employed lawfully as a teacher in a relevant school,
 including any post where they would carry out specified work. Their name
 is included on the list of persons, held by the Teaching Regulation
@@ -321,7 +326,7 @@ Agency, who have failed to satisfactorily complete an induction period.
 === Institutions in which induction may be served
 
 [arabic]
-. The 2012 Regulations specify that induction can be served in the
+. [[para-2-1]] The 2012 Regulations specify that induction can be served in the
 following institutions:
 
 * a relevant school in England – this includes: a maintained school; a
@@ -332,12 +337,12 @@ maintained children’s centre; and a pupil referral unit (PRU)
 * an independent school in England; academies; free schools; 16–19
 academies; alternative provision academies; and city technology colleges
 or an independent nursery school subject to the circumstances set out in
-para 2.4footnote:[Independent schools, academies, free schools, and
+para <<para-2-4,2.4>>footnote:[Independent schools, academies, free schools, and
 British schools overseas are not required to offer statutory induction
 to their ECTs, but if they choose to do so must adhere to the 2012
 Regulations and have regard to the statutory guidance.]
 * a further education (FE) institution, including a sixth-form college,
-in the circumstances set out in para 2.3
+in the circumstances set out in para <<para-2-3,2.3>>
 * an independent school overseas which:
 ** has been inspected by a DfE-accredited inspectorate within the last
 six years against the Standards for Inspection of British Schools
@@ -351,17 +356,17 @@ be served under Welsh regulations.
 === Induction in a maintained, non-maintained or independent nursery school, or maintained children’s centre
 
 [arabic, start=2]
-. ECTs employed and completing a period or part-period of statutory
+. [[para-2-2]] ECTs employed and completing a period or part-period of statutory
 induction in these settings must have a headteacher/principal who can
 make the recommendation against the Teachers’ Standards and should teach
 classes of pupils predominantly aged three and over. The
 headteacher/principal should ensure that the ECT’s post is suitable for
-induction (see paras 2.18–2.19).
+induction (see paras <<para-2-18,2.18>>–<<para-2-19,2.19>>).
 
 === Induction in further education institutions (including sixth-form colleges and 16-19 academies)
 
 [arabic, start=3]
-. An FE institution, sixth-form college or 16–19 academy wishing to
+. [[para-2-3]] An FE institution, sixth-form college or 16–19 academy wishing to
 offer an ECT a post in which to serve a statutory induction period is
 expected to:
 
@@ -378,32 +383,32 @@ experience in a school setting.
 === Institutions where induction cannot be served
 
 [arabic, start=4]
-. Workplaces which cannot offer statutory induction are:
+. [[para-2-4]] Workplaces which cannot offer statutory induction are:
 
 * a school requiring special measures (i.e. one which is eligible for
 intervention under section 62 of the Education and Inspections Act
 2006), except in cases where Ofsted have judged a school, or part of a
-school, to be suitable to host induction (see paras 2.5–2.6)
+school, to be suitable to host induction (see paras <<para-2-5,2.5>>–<<para-2-6,2.6>>)
 * an FE institution where, following an Ofsted inspection, it is
 reported that the overall effectiveness of the institution, or part of
 its education or training, has been judged to be inadequate (category 4)
 except in cases where Ofsted has judged the institution or part of the
-institution to be suitable to host induction (see para 2.7)
+institution to be suitable to host induction (see para <<para-2-7,2.7>>)
 
 === Where induction may be served or continued in a maintained school in special measures or an FE institution which has been judged inadequate
 
 [arabic, start=5]
-. Relevant schools and academies can continue to host induction where a
+. [[para-2-5]] Relevant schools and academies can continue to host induction where a
 teacher was employed on an employment-based initial teacher training
 scheme in the school prior to gaining QTS, or had already started an
 induction period in the setting, before it entered special measures.
-. Generally, once a setting has entered special measures it is not
+. [[para-2-6]] Generally, once a setting has entered special measures it is not
 permitted to recruit any new ECTs. However, an Ofsted Inspector may make
 a judgement on whether the setting is suitable for the purposes of
 induction. In some cases, particularly with larger schools, Ofsted may
 give permission for ECT appointments within specific departments or
 subject departments of the school.
-. ECTs already serving induction in an FE institution where the overall
+. [[para-2-7]] ECTs already serving induction in an FE institution where the overall
 effectiveness of the institution, or part of its education and training,
 have been judged to be inadequate (category 4) at the time of
 inspection, can continue to serve induction. FE institutions judged as
@@ -412,21 +417,21 @@ should have a certification in writing from the Chief Inspector that the
 institution, or the part of such an institution in which the person in
 question teaches, is fit for the purpose of providing supervision and
 training during an induction period.
-. In all cases, the appropriate body should be satisfied that such
+. [[para-2-8]] In all cases, the appropriate body should be satisfied that such
 circumstances will not unfairly compromise the ECT’s ability to complete
 induction successfully.
 
 === Checking a teacher is eligible to start an induction period
 
 [arabic, start=9]
-. Before the ECT takes up post the headteacher/principal must undertake
+. [[para-2-9]] Before the ECT takes up post the headteacher/principal must undertake
 pre-employment checks, which must be verified by the appropriate body
-upon registration (see para 2.10).
+upon registration (see para <<para-2-10,2.10>>).
 
 === Qualified teacher status
 
 [arabic, start=10]
-. An ECT cannot undertake statutory induction (or a period of employment
+. [[para-2-10]] An ECT cannot undertake statutory induction (or a period of employment
 counting towards induction) unless they have been awarded QTS.
 Headteachers/principals and appropriate bodies must check with the
 Teaching Regulation Agency that the individual holds QTS.
@@ -434,19 +439,19 @@ Teaching Regulation Agency that the individual holds QTS.
 === Start date for induction
 
 [arabic, start=11]
-. The ECT must be registered with an appropriate body before the start
-of the induction (see para 2.27).
-. The start date for induction will be determined by the appropriate
+. [[para-2-11]] The ECT must be registered with an appropriate body before the start
+of the induction (see para <<para-2-27,2.27>>).
+. [[para-2-12]] The start date for induction will be determined by the appropriate
 body and should be agreed in advance with the headteacher/principal and
 ECT.
-. The start date for induction should be the date when the ECT’s
+. [[para-2-13]] The start date for induction should be the date when the ECT’s
 induction programme formally commences. This may be a different date
 from when the ECT’s contract starts.
 
 === Eligibility to carry out short-term (less than one term) supply teaching
 
 [arabic, start=14]
-. A qualified teacher who gained QTS and who has not completed an
+. [[para-2-14]] A qualified teacher who gained QTS and who has not completed an
 induction period, can undertake short-term supply work of less than one
 term in a relevant school for a maximum period of 5 years from the point
 of award of QTS. This is a fixed time limit with no discretion to
@@ -454,16 +459,16 @@ extend. Short-term supply placements of less than one term, or
 equivalent, cannot count towards induction, as such posts will not
 provide an ECT with the breadth of experience, support, and assessment
 necessary to enable them to demonstrate that their performance against
-the Teachers’ Standards is satisfactory (see paras 1.9 and 2.18–2.19).
-. The headteacher/principal or supply agency is responsible for ensuring
+the Teachers’ Standards is satisfactory (see paras <<para-1-9,1.9>> and <<para-2-18,2.18>>–<<para-2-19,2.19>>).
+. [[para-2-15]] The headteacher/principal or supply agency is responsible for ensuring
 that a teacher who has not satisfactorily completed an induction period
 is eligible to carry out short-term supply work.
-. It is not possible to backdate the start of an induction period if a
+. [[para-2-16]] It is not possible to backdate the start of an induction period if a
 short-term supply contract is extended so that it lasts for one term or
 longer. However, an induction programme must be put in place immediately
 if it becomes clear that the extended contract will continue for at
 least a term.
-. An ECT can work part-time as a short-term supply teacher, while
+. [[para-2-17]] An ECT can work part-time as a short-term supply teacher, while
 concurrently serving induction in another part-time post after the
 five-year limit has expired. However, the short-term supply post will
 not count towards induction.
@@ -471,7 +476,7 @@ not count towards induction.
 === A suitable post for induction
 
 [arabic, start=18]
-. In order for the ECT to serve induction the headteacher/principal and
+. [[para-2-18]] In order for the ECT to serve induction the headteacher/principal and
 appropriate body must first agree that the post is suitable for this
 purpose. The headteacher/principal of the institution in which an ECT is
 serving an induction period, and the appropriate body, are jointly
@@ -496,7 +501,7 @@ QTS;
 * include the appointment of a designated mentor who is expected to hold
 QTS;
 * provide the ECT with a reduced timetable to enable them to undertake
-activities in their induction programme (see paras 2.20-2.21);
+activities in their induction programme (see paras <<para-2-20,2.20>>-<<para-2-21,2.21>>);
 * not make unreasonable demands upon the ECT;
 * not normally demand teaching outside the age range and/or subject(s)
 for which the ECT has been employed to teach;
@@ -507,16 +512,16 @@ that are unreasonably demanding for the setting;
 in which other teachers working in similar substantive posts in the
 institution are engaged in; and
 * not involve additional non-teaching responsibilities without the
-provision of appropriate preparation and support (see para 2.39).
+provision of appropriate preparation and support (see para <<para-2-39,2.39>>).
 
-. In addition, the governing body must be satisfied that the institution
+. [[para-2-19]] In addition, the governing body must be satisfied that the institution
 has the capacity to support the ECT and that the headteacher/principal
 is fulfilling their responsibilities.
 
 === Ensuring a reduced timetable 
 
 [arabic, start=20]
-. In a relevant school, the headteacher/principal must ensure that the
+. [[para-2-20]] In a relevant school, the headteacher/principal must ensure that the
 ECT has a reduced timetable. In the first year (terms 1-3, or equivalent
 for part-time ECTs) of induction an ECT must not teach more than 90% of
 the timetable of the school’s existing teachers on the main pay range
@@ -524,7 +529,7 @@ and in the second year (terms 4-6, or equivalent for part-time ECTs) of
 induction must not teach more than 95%. This time off timetable should
 be used to specifically enable ECTs to undertake activities in their
 induction programme.
-. This is in addition to the timetable reduction in respect of planning,
+. [[para-2-21]] This is in addition to the timetable reduction in respect of planning,
 preparation and assessment time (PPA) that all teachers receive. ECTs in
 independent schools, academies and free schools, BSOs, independent
 nursery schools and FE colleges must also have a reduced timetable on a
@@ -533,17 +538,17 @@ comparable basis.
 === Determining the appropriate body
 
 [arabic, start=22]
-. Independent quality assurance of statutory induction, through the role
+. [[para-2-22]] Independent quality assurance of statutory induction, through the role
 of the appropriate body, is important both for ensuring that schools
 provide adequate support for their ECTs, and that their assessment is
 fair and consistent across all institutions.
-. An ECT cannot start their induction until their appropriate body has
+. [[para-2-23]] An ECT cannot start their induction until their appropriate body has
 been agreed. In the absence of another body acting as appropriate body
 for a school, the teaching school hub for the area in which the school
 is situated should be asked to be the appropriate body for that school.
-. The following organisations can act as the appropriate body:
+. [[para-2-24]] The following organisations can act as the appropriate body:
 
-* A teaching school hub (subject to the conditions outlined in para 2.25
+* A teaching school hub (subject to the conditions outlined in para <<para-2-25,2.25>>
 below)
 * A local authority with which the school reaches agreement (From 1
 September 2023 local authorities will no longer be listed as an
@@ -560,15 +565,15 @@ These organisations currently are:
 
 * National Teacher Accreditation (NTA) (From 1 September 2024 NTA will
 no longer operate as an appropriate body)
-* The Independent Schools Teacher Induction Panel (ISTIP) (for their
+* The Independent https://istip.co.uk/:[Schools Teacher Induction Panel] (ISTIP) (for their
 members and associate or additional members only)
-* Educational Success Partners (ESP) (From August 2024, for British
-Schools Overseas (BSOs) eligible to offer induction under paragraph 2.1)
+* https://www.espeducation.co.uk/:[Educational Success Partners] (ESP) (From August 2024, for British
+Schools Overseas (BSOs) eligible to offer induction under paragraph <<para-2-1,2.1>>)
 
 === Conditions for teaching school hubs carrying out the appropriate body role
 
 [arabic, start=25]
-. Teaching school hubs acting as appropriate bodies are subject to the
+. [[para-2-25]] Teaching school hubs acting as appropriate bodies are subject to the
 following conditions:
 
 * A teaching school hub that is an accredited ITT provider cannot be the
@@ -581,7 +586,7 @@ school.
 === Charging by the appropriate body
 
 [arabic, start=26]
-. The appropriate body may make reasonable charges (agreed in advance),
+. [[para-2-26]] The appropriate body may make reasonable charges (agreed in advance),
 not exceeding the cost of supplying the service as follows:
 
 * To any maintained school or institution
@@ -592,14 +597,14 @@ institution to which it is supplying the service
 === Registering the ECT with the appropriate body
 
 [arabic, start=27]
-. Once an ECT has been appointed, the headteacher/principal must notify
+. [[para-2-27]] Once an ECT has been appointed, the headteacher/principal must notify
 the appropriate body in advance of the ECT taking up post. Failure to do
 so may delay the start of the induction period.
 
 === Named contact at the appropriate body 
 
 [arabic, start=28]
-. At registration, the appropriate body should provide the ECT with a
+. [[para-2-28]] At registration, the appropriate body should provide the ECT with a
 named contact with whom they may raise any concerns about their
 induction programme that they are unable to resolve. This person should
 not be directly involved in monitoring or supporting the ECT or in
@@ -608,29 +613,28 @@ making decisions about satisfactory completion of induction.
 === Informing the Teaching Regulation Agency of ECT appointments
 
 [arabic, start=29]
-. Appropriate bodies should inform the Teaching Regulation Agency of any
+. [[para-2-29]] Appropriate bodies should inform the Teaching Regulation Agency of any
 ECTs who start an induction period or who have taken up a post in which
 to continue their induction.
 
 === Determining the length of the induction period
 
-[arabic, start=29]
-. The length of the induction period an ECT is required to serve,
+[arabic, start=30]
+. [[para-2-30]] The length of the induction period an ECT is required to serve,
 whether the teaching post in which they are doing so is part-time or
 full-time, is the full-time equivalent of two school years. This usually
 consists of six school terms, divided into two periods each consisting
-of three school terms (see para 2.36).
-. The appropriate body makes the final decision about the equivalence to
+of three school terms (see para <<para-2-36,2.36>>).
+. [[para-2-31]] The appropriate body makes the final decision about the equivalence to
 two school years in cases where the ECT serves induction in more than
 one setting or in non-standard settings such as those in the FE sector.
-. In some exceptional circumstances the length of an induction period
-may be reduced. For further details see Section 3: Special
-Circumstances.
+. [[para-2-32]] In some exceptional circumstances the length of an induction period
+may be reduced. For further details see <<_section_3_special_circumstances,Section 3: Special Circumstances>>.
 
 === Minimum period of continuous employment that can count towards induction 
 
-[arabic, start=30]
-. The minimum period that will need to be counted towards completion of
+[arabic, start=33]
+. [[para-2-33]] The minimum period that will need to be counted towards completion of
 the induction period (for both full-time and part-time ECTs) is
 continuous employment equivalent to one term (based on an institution
 that operates three terms in a school year). This applies to both
@@ -638,7 +642,7 @@ permanent and long-term supply teaching posts. So for part time ECTs the
 minimum period of one term only requires the ECT to be in employment for
 one term. They do not have to undertake induction equivalent to one full
 term to fulfil the minimum period over a longer period of time.
-. The minimum period of one term reflects the need for each ECT to work
+. [[para-2-34]] The minimum period of one term reflects the need for each ECT to work
 in a stable environment and receive a supported and pre-planned
 induction programme. In addition, it is important that the ECT is in
 post long enough to be able to receive sufficient monitoring and
@@ -648,44 +652,44 @@ Teachers’ Standards over a period of less than one term. After the
 minimum period has been served, any continuous employment of any length
 of time will count towards the 2 year induction period on the ECT’s
 records. Therefore if a full time ECT ends a contract of employment
-after serving 2.5 terms, their recordsfootnote:[Please note that TRA
+after serving <<para-2-5,2.5>> terms, their recordsfootnote:[Please note that TRA
 records only record full terms. Local records held by the ECT’s
 school/institution and the appropriate body should record the exact
 length of induction served.] (and interim assessment) should show that
-they have completed 2.5 terms and they will be expected to complete a
-further 3.5 terms when they resume induction. And if a part time ECT
-working 0.5FTE ends a contract of employment after 2.5 terms, their
+they have completed <<para-2-5,2.5>> terms and they will be expected to complete a
+further <<para-3-5,3.5>> terms when they resume induction. And if a part time ECT
+working <<para-0-5,0.5>>FTE ends a contract of employment after <<para-2-5,2.5>> terms, their
 records (and interim assessment) would show that they have completed
-1.25 terms and would be expected to resume induction from that point
+<<para-1-25,1.25>> terms and would be expected to resume induction from that point
 (although this should be read in conjunction with guidance around
 reductions to induction periods available for part time ECTs – please
-see Section 3).
-. For ECTs who are not employed to work within a term structure (for
+see <<_section_3_special_circumstances,Section 3>>).
+. [[para-2-35]] For ECTs who are not employed to work within a term structure (for
 example those teaching certain apprenticeship courses in an FE
 institution) the appropriate body should decide the minimum period of
 employment that can count towards induction, taking into account para
-2.33 above.
+<<para-2-33,2.33>> above.
 
 === Length of the induction period for an ECT who works part-time
 
 [arabic, start=36]
-. ECTs serving induction on a part-time basis at any point will need to
+. [[para-2-36]] ECTs serving induction on a part-time basis at any point will need to
 serve the full-time equivalent (FTE) of two full school years (based on
 a school year of three terms). Therefore, an ECT working part-time as a
-0.5 FTE will need to serve induction for four school years.
-. It is for the headteacher/principal and appropriate body to decide in
+<<para-0-5,0.5>> FTE will need to serve induction for four school years.
+. [[para-2-37]] It is for the headteacher/principal and appropriate body to decide in
 each individual case the length of the induction period required which
 is fair and takes full account of the ECT’s working pattern.
-. In cases where part-time ECTs have completed a period covering but not
+. [[para-2-38]] In cases where part-time ECTs have completed a period covering but not
 equivalent to a minimum of two full school years and can demonstrate
 that they meet the Teachers’ Standards they may, taking into account
-para 2.37 above, be able to have their induction period reduced (see
-para 3.5 on reductions).
+para <<para-2-37,2.37>> above, be able to have their induction period reduced (see
+para <<para-3-5,3.5>> on reductions).
 
 === Monitoring, support and assessment during induction
 
 [arabic, start=39]
-. A suitable monitoring and support programme must be put in place for
+. [[para-2-39]] A suitable monitoring and support programme must be put in place for
 the ECT, structured to meet their professional development needs
 (including the development needs of part-time ECTs). This is expected to
 include:
@@ -710,13 +714,13 @@ identified.
 === Early Career Framework based training
 
 [arabic, start=40]
-. The headteacher is expected to ensure that ECTs receive a programme of
+. [[para-2-40]] The headteacher is expected to ensure that ECTs receive a programme of
 training that enables the ECT to understand and apply the knowledge and
 skills set out in each of the ECF evidence (‘learn that’) statements and
 practice (‘learn how to’) statements. Early Career Framework-based
 training is expected to be embedded as a central aspect of induction; it
 is not an additional training programme.
-. There are three approaches schools can choose from to enable the
+. [[para-2-41]] There are three approaches schools can choose from to enable the
 delivery of an ECF based induction. It is up to the headteacher to
 choose the approach that best suits the needs of their ECTs and mentors.
 The three approaches are:
@@ -739,7 +743,7 @@ ECTs based on the ECF.*
 === Appointment of an Induction Tutor
 
 [arabic, start=42]
-. The headteacher/principal should identify a person to act as the ECT’s
+. [[para-2-42]] The headteacher/principal should identify a person to act as the ECT’s
 induction tutor, to provide regular monitoring and support, and
 coordination of assessment. The induction tutor is expected to hold QTS
 and have the necessary skills and knowledge to work successfully in this
@@ -752,12 +756,12 @@ progress in relation to the Teachers’ Standards. They will need to be
 able to recognise when early action is needed in the case of an ECT who
 is experiencing difficulties. It may, in some circumstances, be
 appropriate for the headteacher/principal to be the induction tutor. The
-induction tutor is a separate role to that of mentor (see para 2.45).
+induction tutor is a separate role to that of mentor (see para <<para-2-45,2.45>>).
 
 === Appointment of a mentor 
 
 [arabic, start=43]
-. The headteacher/principal should identify a person to act as the ECT’s
+. [[para-2-43]] The headteacher/principal should identify a person to act as the ECT’s
 mentor, to provide regular mentoring. The mentor is expected to hold QTS
 and have the necessary skills and knowledge to work successfully in this
 role. Where possible, this includes having the skills and experience to
@@ -766,7 +770,7 @@ Mentoring is a very important element of the induction process and the
 mentor is expected to be given adequate time to carry out the role
 effectively and to meet the needs of the ECT. This includes attending
 regular mentoring sessions and mentor training where appropriate.
-. ECT and mentor sessions are expected to be timetabled during teaching
+. [[para-2-44]] ECT and mentor sessions are expected to be timetabled during teaching
 hours as schools are funded to cover the time off timetable. The
 headteacher/principal and appropriate body are expected to ensure that
 mentors are given sufficient time to carry out the role effectively and
@@ -774,7 +778,7 @@ meet the needs of their ECTs. In exceptional circumstances where schools
 require flexibility due to timetabling constraints, mentoring may take
 place outside of teaching hours but should always be scheduled within
 contracted time.
-. The mentor and the induction tutor are two discrete roles with
+. [[para-2-45]] The mentor and the induction tutor are two discrete roles with
 differing responsibilities and it is expected that these roles should be
 held by different individuals. In exceptional circumstances it may be
 necessary for the headteacher to designate a single teacher to fulfil
@@ -788,13 +792,13 @@ against the Teachers’ Standards.
 === Observation of the ECT’s teaching practice
 
 [arabic, start=46]
-. An ECT’s teaching is expected to be observed at regular intervals
+. [[para-2-46]] An ECT’s teaching is expected to be observed at regular intervals
 throughout their induction period to facilitate a fair and effective
 assessment of the ECT’s teaching practice, conduct and efficiency
 against the Teachers’ Standards. Observations of the ECT may be
 undertaken by the induction tutor or another suitable person from inside
 or outside the institution.
-. It is also expected that:
+. [[para-2-47]] It is also expected that:
 
 * the observer holds QTS;
 * the ECT and the observer meet to review any teaching that has been
@@ -808,21 +812,21 @@ identified.
 === Professional progress reviews of the ECT
 
 [arabic, start=48]
-. ECTs undertaking induction are exempt from appraisalfootnote:[As set
+. [[para-2-48]] ECTs undertaking induction are exempt from appraisalfootnote:[As set
 out in regulation
 https://www.legislation.gov.uk/uksi/2012/115/regulation/1/made[1(4)(a)]
 of the Education (School Teachers’ Appraisal) (England) Regulations 2012
 (the Appraisal Regulations)].The induction tutor is expected to review
 the ECT’s progress against the Teachers’ Standards throughout the
 induction period, with progress reviews taking place in each term where
-a formal assessment (see paras 2.55–2.61) is not scheduled. For ECTs
+a formal assessment (see paras <<para-2-55,2.55>>–<<para-2-61,2.61>>) is not scheduled. For ECTs
 serving induction on a part-time basis this means progress reviews are
 also expected to take place each term (based on an institution that
 operates three terms in a school year), regardless of their working
 patterns. This is to ensure that part time ECTs on low FTE still receive
 regular reviews of their progress against the standards and that support
 is put in place early where unsatisfactory progress occurs.
-. When scheduling or requesting progress reviews, induction tutors and
+. [[para-2-49]] When scheduling or requesting progress reviews, induction tutors and
 appropriate bodies are expected to consider:
 
 * When in the term an ECT started their induction. An ECT who joined
@@ -837,29 +841,29 @@ assessment.
 these circumstances, any outstanding progress review is expected to be
 rescheduled when the ECT returns.
 [arabic]
-. Progress reviews are expected to be informed by existing evidence of
+. [[para-2-50]] Progress reviews are expected to be informed by existing evidence of
 the ECT’s teaching and to be conducted with sufficient detail to ensure
 that there is nothing unexpected for the ECT when it comes to their
 formal assessment.
-. Progress reviews are not formal assessments and there is no
+. [[para-2-51]] Progress reviews are not formal assessments and there is no
 requirement for ECTs to create evidence specifically to inform a
 progress review. ECTs are expected, nonetheless, to engage with the
 process and provide copies of existing evidence as agreed with the
 induction tutor.
-. A written record of each progress review is expected to be retained
+. [[para-2-52]] A written record of each progress review is expected to be retained
 and provided to the ECT after each meeting, with the record clearly
 stating whether the ECT is on track to successfully complete induction,
 briefly summarising evidence collected by the induction tutor and
 stating the agreed development targets. It is also expected that
 objectives are reviewed and revised in relation to the Teachers’
 Standards and the needs and strengths of the individual ECT.
-. Where the induction tutor is not the headteacher, it is expected that
+. [[para-2-53]] Where the induction tutor is not the headteacher, it is expected that
 they also update the headteacher on the ECT’s progress after each
 progress review.
-. It is expected that the induction tutor notifies the appropriate body
+. [[para-2-54]] It is expected that the induction tutor notifies the appropriate body
 and ECT after each progress review stating whether the ECT is making
 satisfactory progress. Where the induction tutor believes the ECT is not
-making satisfactory progress (see para 4.1) it is expected they outline
+making satisfactory progress (see para <<para-4-1,4.1>>) it is expected they outline
 the plan they have put in place to assist the ECT in getting back on
 track. It is expected that schools maintain regular contact with the
 appropriate body throughout induction, keeping them apprised of the
@@ -868,10 +872,10 @@ ECT’s progress and providing them with copies of all progress reviews.
 === Formal assessments
 
 [arabic, start=55]
-. ECTs should have formal assessments carried out by either the
+. [[para-2-55]] ECTs should have formal assessments carried out by either the
 headteacher/principal or the induction tutor. Mentors should not carry
 out formal assessments unless they are also acting as the induction
-tutor (see Section 5 for further information about roles and
+tutor (see <<_section_5_roles_and_responsibilities,Section 5>> for further information about roles and
 responsibilities). ECTs should receive an assessment in the final term
 of the first year (term 3 or equivalent for part-time ECTs) and in the
 final term of the second year of induction (term 6 or equivalent for
@@ -879,10 +883,10 @@ part-time ECTs). It is for institutions and ECTs to agree exactly when
 the assessment dates are set. Evidence used in assessments should be
 clear and transparent and copies of the assessment reports should be
 provided to the ECT and appropriate body.
-. Where an ECT is absent at the point a formal assessment is scheduled,
+. [[para-2-56]] Where an ECT is absent at the point a formal assessment is scheduled,
 any outstanding formal assessment should not be made until the ECT
 returns.
-. Evidence for assessments must be drawn from the ECT’s work as a
+. [[para-2-57]] Evidence for assessments must be drawn from the ECT’s work as a
 teacher during their induction. To ensure evidence gathering is not
 burdensome for the ECT, formal assessment meetings should be informed by
 evidence gathered during progress reviews and assessment periods leading
@@ -891,21 +895,21 @@ working documents. There is no need for the ECT to create anything new
 for the formal assessment, they should draw from their work as a teacher
 and from their induction programme. Judgements made during the induction
 period should relate directly to the Teachers’ Standards and should not
-be made against the ECF (see para 1.9).
-. ECTs should be kept up to date on their progress. *There should be
+be made against the ECF (see para <<para-1-9,1.9>>).
+. [[para-2-58]] ECTs should be kept up to date on their progress. *There should be
 nothing unexpected.*
-. Formal assessment reports should be completed for both formal
+. [[para-2-59]] Formal assessment reports should be completed for both formal
 assessments. These reports should clearly show assessment of the ECT’s
 performance against the Teachers’ Standards at the time of the
 assessment.
-. The final assessment meeting is at the end of the induction period,
+. [[para-2-60]] The final assessment meeting is at the end of the induction period,
 and will form the basis of the headteacher’s/principal’s recommendation
 to the appropriate body as to whether, having completed their induction
 period, the ECT’s performance against the Teachers’ Standards is
 satisfactory, unsatisfactory, or whether or not an extension should be
 considered. This recommendation should be recorded on the final
 assessment report.
-. Once assessment reports have been completed, the ECT should add their
+. [[para-2-61]] Once assessment reports have been completed, the ECT should add their
 comments. They should then be signed by the induction tutor,
 headteacher/principal and the ECT. Once signed, the ECT should be given
 the original and a copy sent to the appropriate body shortly after each
@@ -915,7 +919,7 @@ These may be submitted electronically.
 === Interim assessments
 
 [arabic, start=62]
-. When an ECT leaves a post after completing one term or more in an
+. [[para-2-62]] When an ECT leaves a post after completing one term or more in an
 institution but before the next formal assessment would take place, the
 induction tutor or headteacher/principal is expected to complete an
 interim assessment. This is expected to take place before the ECT leaves
@@ -926,7 +930,7 @@ about progress may have arisen. The information recorded on the interim
 assessment report will help to ensure that induction can be continued
 effectively in any subsequent post. This is also required if the ECT
 leaves during their final term of induction.
-. In exceptional circumstances where an interim assessment cannot be
+. [[para-2-63]] In exceptional circumstances where an interim assessment cannot be
 completed before the ECT leaves post (for example, in situations where
 an absent ECT subsequently leaves their post without returning) the
 induction tutor or headteacher/principal is still expected to complete
@@ -936,32 +940,32 @@ and the ECT.
 === Raising concerns
 
 [arabic, start=64]
-. An ECT is normally expected to raise any concerns about their
+. [[para-2-64]] An ECT is normally expected to raise any concerns about their
 induction programme with their induction tutor in the first instance. If
 the matter is not resolved, the ECT may notify the named contact at the
-appropriate body (see para 2.28) who should, as soon as possible,
+appropriate body (see para <<para-2-28,2.28>>) who should, as soon as possible,
 investigate the issues raised.
 
 === Completing the induction period 
 
 [arabic, start=65]
-. An ECT completes their induction period when they have served:
+. [[para-2-65]] An ECT completes their induction period when they have served:
 
 * the full-time equivalent of two standard school years (usually six
 terms, based on a school year of three terms); or
 * a reduced period of a minimum of one term (as agreed with the
-appropriate body) based on previous teaching experience (see paras 3.2–
-3.4); or
+appropriate body) based on previous teaching experience (see paras <<para-3-2,3.2>>–
+<<para-3-4,3.4>>); or
 * a reduced period of induction for part time teachers covering but not
 equivalent to a minimum of two years (as agreed with the appropriate
-body) (see para 3.5); or
+body) (see para <<para-3-5,3.5>>); or
 * an extension to that period, as a consequence of absences occurring
 during the period.
 [arabic]
-. The appropriate body makes the final decision as to whether an ECT’s
+. [[para-2-66]] The appropriate body makes the final decision as to whether an ECT’s
 performance against the Teachers’ Standards is satisfactory, drawing on
 the recommendation of the headteacher/principal.
-. Within 20 working days of receiving the headteacher’s/principal’s
+. [[para-2-67]] Within 20 working days of receiving the headteacher’s/principal’s
 recommendation, the appropriate body must decide whether the ECT:
 
 * has performed satisfactorily against the Teachers’ Standards and
@@ -969,10 +973,10 @@ thereby satisfactorily completed their induction period;
 * requires an extension of the induction period; or
 * has failed to satisfactorily complete the induction period.
 [arabic]
-. In making this decision the appropriate body must take into account
+. [[para-2-68]] In making this decision the appropriate body must take into account
 the headteacher’s/principal’s recommendation and all available evidence
 including any written representations from the ECT.
-. The appropriate body must, within three working days of making the
+. [[para-2-69]] The appropriate body must, within three working days of making the
 decision, make written notification of the decision to: the ECT; the
 headteacher/principal (in whose institution the ECT was working at the
 end of their induction); and the employer (if other than the appropriate
@@ -980,7 +984,7 @@ body itself). They must also notify the Teaching Regulation Agency and
 should do so within three working days in the case of decisions to fail
 or extend the ECT’s induction, and via the termly return for other
 notifications.
-. If the appropriate body decides to extend the period of induction or
+. [[para-2-70]] If the appropriate body decides to extend the period of induction or
 that the ECT has failed to complete their induction period
 satisfactorily, they must inform the ECT of their right to appeal
 against this decision, with the name and address of the Appeals Body
@@ -988,19 +992,19 @@ against this decision, with the name and address of the Appeals Body
 appeal. The ECT must notify the Teaching Regulation Agency that they
 wish to appeal the decision within 20 working days, after which the
 right of appeal expires except in exceptional circumstances.
-. Failure to complete the induction period satisfactorily means that the
+. [[para-2-71]] Failure to complete the induction period satisfactorily means that the
 ECT is no longer eligible to be employed as a teacher in a maintained
 school, a maintained nursery school, a non-maintained special school or
 a pupil referral unit. However, this does not prevent them from teaching
 in other settings where statutory induction is not mandatory.
-. An ECT working in a relevant school who has failed induction must be
+. [[para-2-72]] An ECT working in a relevant school who has failed induction must be
 dismissed within ten working days of them giving notice that they do not
 intend to exercise their right to appeal, or from when the time limit
 for making an appeal expires without an appeal being brought. If the
 ECT’s appeal is heard, and they have been judged as having failed
 induction, the employer should dismiss the ECT within ten working days
 of being told of the outcome of the hearing.
-. The Teaching Regulation Agency must ensure that the name of the person
+. [[para-2-73]] The Teaching Regulation Agency must ensure that the name of the person
 who has failed induction is included on the list of persons who have
 failed to satisfactorily complete an induction period and notify them of
 their inclusion. This must only be done once the time limit for making
@@ -1010,7 +1014,7 @@ such an appeal.
 === Record keeping/retention
 
 [arabic, start=74]
-. The appropriate body is responsible for keeping a record of each ECT
+. [[para-2-74]] The appropriate body is responsible for keeping a record of each ECT
 it has registered for induction. It should also monitor the return of
 progress review outcomes and assessment reports and contact the
 institution concerned when these documents have not been submitted or
@@ -1018,11 +1022,11 @@ signed on time. Records should state the date an ECT starts a period of
 employment counting towards induction, how much of the period has been
 completed, changes in working patterns and any absences. These should be
 noted when submitting progress review records and on assessment reports
-at the end of each formal assessment period (see paras 2.48-2.61). The
+at the end of each formal assessment period (see paras <<para-2-48,2.48>>-<<para-2-61,2.61>>). The
 headteacher/principal should notify the appropriate body if an ECT
 leaves the institution before completing the period. The appropriate
 body will then notify the Teaching Regulation Agency.
-. Where an ECT has already completed part of their induction period in
+. [[para-2-75]] Where an ECT has already completed part of their induction period in
 another institution, the headteacher/principal should contact the ECT’s
 previous appropriate body to obtain copies of any progress review
 records or assessment reports (including any interim assessments). They
@@ -1034,13 +1038,13 @@ the ECT’s previous appropriate body and has obtained the necessary
 reports to ensure induction can be continued effectively. Where agreed
 with the headteacher/principal the current appropriate body may contact
 the ECT’s previous appropriate body to obtain the necessary reports.
-. The Teaching Regulation Agency keeps records of teachers who have
+. [[para-2-76]] The Teaching Regulation Agency keeps records of teachers who have
 completed or part-completed induction. Details of teachers who have
 passed or failed induction are available to employers through the
 https://www.gov.uk/guidance/teacher-status-checks-information-for-employers[Employer
 Access Online service.] As the Appeals Body, the Teaching Regulation
 Agency also keeps records of all appeals.
-. It is recommended that assessment reports are retained by both the
+. [[para-2-77]] It is recommended that assessment reports are retained by both the
 institution and the appropriate body for a minimum of six years. If
 there are reasons for the institution and the appropriate body to retain
 records for longer than six years, they may do so as long as they comply
@@ -1050,16 +1054,16 @@ copies of their own assessment reports.
 === Confidentiality and data protection 
 
 [arabic, start=78]
-. Headteachers/principals, induction tutors, appropriate bodies and the
+. [[para-2-78]] Headteachers/principals, induction tutors, appropriate bodies and the
 Teaching Regulation Agency should ensure that arrangements are in place
 to facilitate the effective protection and secure transfer of data.
-. The induction process and the assessments generated from it should be
+. [[para-2-79]] The induction process and the assessments generated from it should be
 treated with confidentiality at all times and should not be shared with
 anyone not directly involved in the induction process. It should be made
 clear to anyone viewing such documents that they are confidential and
 ECTs must be made aware of who has been granted access to their
 assessments.
-. The governing body can request general reports on the progress of an
+. [[para-2-80]] The governing body can request general reports on the progress of an
 ECT on a termly basis but are not automatically entitled to have access
 to an individual’s assessment reports. The exception to this would be
 when an ECT has raised concerns about a particular issue/assessment via
@@ -1073,7 +1077,7 @@ appropriate body.
 == Section 3: Special circumstances
 
 [arabic]
-. This section explains the regulations that apply on a less regular
+. [[para-3-1]] This section explains the regulations that apply on a less regular
 basis. It covers:
 
 * reducing an induction period in recognition of previous teaching
@@ -1090,7 +1094,7 @@ the numeracy skills test on completion of the induction period (Cohort
 === Reducing the induction period 
 
 [arabic, start=2]
-. Even though some teachers already have significant teaching experience
+. [[para-3-2]] Even though some teachers already have significant teaching experience
 when they enter the maintained sector for the first time, they are still
 required to serve statutory induction. In such cases, appropriate bodies
 have discretion to reduce the length of the induction period to a
@@ -1105,7 +1109,7 @@ regulationsfootnote:[the https://www.legislation.gov.uk/wsi/2015/484/contents/m
 the https://www.legislation.gov.uk/wsi/2022/1058/contents/made[[.underline]#Education
 (Induction Arrangements for School Teachers) (Wales) (Amendment)
 Regulations 2022#]] subject to evidence of induction records.
-. In making such a decision they should take account of advice from the
+. [[para-3-3]] In making such a decision they should take account of advice from the
 headteacher/principal and must gain the agreement of the teacher
 concerned. If a teacher wishes to serve the full induction period they
 must be permitted to do so. The appropriate body may wish to consider
@@ -1125,13 +1129,13 @@ induction is considered appropriate when determining the length by which
 the induction is to be reduced appropriate bodies are expected to
 consider the remaining progress that is to be made against the Teachers’
 Standards.
-. Where the length of induction is reduced to one term, only the final
-assessment meeting and report (see paras 2.60–2.61) will be required
+. [[para-3-4]] Where the length of induction is reduced to one term, only the final
+assessment meeting and report (see paras <<para-2-60,2.60>>–<<para-2-61,2.61>>) will be required
 with the headteacher’s/principal’s recommendation on whether the
 teacher’s performance against the Teachers’ Standards is satisfactory or
 if an extension would be appropriate. The appropriate body will then
-follow the induction process in the normal way (see paras 2.65–2.73).
-. Separately, ECTs serving induction on a part-time basis may, on
+follow the induction process in the normal way (see paras <<para-2-65,2.65>>–<<para-2-73,2.73>>).
+. [[para-3-5]] Separately, ECTs serving induction on a part-time basis may, on
 completion of a minimum period covering but not equivalent to two full
 years, be able to have their induction period reduced. After the minimum
 period, at the point when enough evidence has been gathered that the
@@ -1148,12 +1152,12 @@ the basis that the ECT has met the Teachers’ Standards.
 === Extending the induction period prior to completion to account for ad hoc absences
 
 [arabic, start=6]
-. The induction period is automatically extended prior to completion
+. [[para-3-6]] The induction period is automatically extended prior to completion
 when an ECT’s absences per year of induction (or equivalent for
 part-time teachers) total 30 days or more (with the exception of
 statutory maternity leave, statutory paternity leave, shared parental
 leave, statutory adoption leave, parental bereavement leave, or carer’s
-leave (see para 3.7). In these circumstances the relevant year of
+leave (see para <<para-3-7,3.7>>). In these circumstances the relevant year of
 induction must be extended by the aggregate total of days absent. If the
 ECT is unable to serve the extension in the same school/institution, the
 minimum period of employment of one term or equivalent must be served in
@@ -1162,7 +1166,7 @@ a new school/institution.
 === Extension of the induction period prior to completion due to statutory maternity, paternity, adoption, shared parental, parental bereavement or carer’s leave
 
 [arabic, start=7]
-. ECTs who take statutory maternity leave, statutory paternity leave,
+. [[para-3-7]] ECTs who take statutory maternity leave, statutory paternity leave,
 statutory adoption leave, shared parental leave, parental bereavement
 leave or carer’s leavefootnote:[As defined under the Carer’s Leave Act
 2023, guidance: https://www.gov.uk/carers-leave[Unpaid carer’s leave -
@@ -1181,8 +1185,8 @@ decision.
 === Extension of the induction period after induction has concluded 
 
 [arabic, start=8]
-. The appropriate body has the option, when making its decision at the
-end of the induction period (see paras 2.66–2.70), to extend the period
+. [[para-3-8]] The appropriate body has the option, when making its decision at the
+end of the induction period (see paras <<para-2-66,2.66>>–<<para-2-70,2.70>>), to extend the period
 where this can be justified. It determines the length of the extension,
 the procedure for assessments during it, and the recommendation at its
 end. The appropriate body may decide to extend where there is
@@ -1199,36 +1203,36 @@ might include:
 for a decision to be made about whether the ECT’s performance against
 the standards is satisfactory.
 [arabic]
-. An ECT may be unable to, or choose not to, serve an extension in the
+. [[para-3-9]] An ECT may be unable to, or choose not to, serve an extension in the
 same school/institution in which they completed their original induction
 period. They will then need to find another post in which to complete
 the extension to their induction period. In these circumstances the
 minimum period of employment, of one term, must still be served as the
 ECT will be working in a new institution.
-. If an ECT leaves an institution having started but before completing
+. [[para-3-10]] If an ECT leaves an institution having started but before completing
 their extension, the headteacher/principal should complete an interim
 assessment report and notify the appropriate body.
 
 === Induction periods extended in Wales (before or after completion)
 
 [arabic, start=11]
-. When an extension is granted under Welsh regulations and the ECT is
+. [[para-3-11]] When an extension is granted under Welsh regulations and the ECT is
 subsequently employed at an institution in England, the period is
 treated as having been extended under English regulations. These ECTs
 will be expected to complete the remainder of a two-year statutory
 induction, unless they are eligible under transitional arrangements to
-complete the remainder of their one-year induction (see paras 1.4–1.8).
+complete the remainder of their one-year induction (see paras <<para-1-4,1.4>>–<<para-1-8,1.8>>).
 
 === Data loss/error – determining whether induction has been satisfactorily completed
 
 [arabic, start=12]
-. In exceptional circumstances, where records have either been lost or
+. [[para-3-12]] In exceptional circumstances, where records have either been lost or
 are in error through no fault of the teacher concerned, the appropriate
 body will decide whether the teacher can be deemed to be exempt from
 induction on the basis that the teachers has met the Teachers’ Standards
 (see para 24 of Schedule 1 of the 2012 Regulations). Each case must be
 considered on its own merits.
-. The appropriate body will want to ensure that every avenue has been
+. [[para-3-13]] The appropriate body will want to ensure that every avenue has been
 explored to recover the missing data or identify an audit trail before
 making such a decision. The appropriate body, in reaching its decision,
 should consider the strength of evidence that an error has occurred or
@@ -1243,12 +1247,12 @@ such as a full or reduced period of induction.
 === ECTs completing induction in more than one institution simultaneously
 
 [arabic, start=14]
-. In all cases where induction is served in more than one institution
+. [[para-3-14]] In all cases where induction is served in more than one institution
 simultaneously, one headteacher/principal acts as the lead
 headteacher/principal. The lead headteacher/principal:
 
 * Is expected to ensure that they are satisfied that all posts are
-suitable for induction (see paras 2.18–2.19), and provide a fair
+suitable for induction (see paras <<para-2-18,2.18>>–<<para-2-19,2.19>>), and provide a fair
 opportunity for the ECT to demonstrate that they have performed
 satisfactorily against all of the Teachers’ Standards by the end of the
 induction period;
@@ -1266,25 +1270,25 @@ gathering evidence for progress reviews, classroom observation and
 formal assessments should be clear to all those involved in the process,
 including the ECT.
 [arabic]
-. In all cases where induction is served in more than one institution
+. [[para-3-15]] In all cases where induction is served in more than one institution
 simultaneously, it is essential that one appropriate body takes the lead
 in making the decision, following the recommendation from the lead
 headteacher/principal.
-. For ECTs serving induction in more than one institution
+. [[para-3-16]] For ECTs serving induction in more than one institution
 simultaneously, the separate contracts are added together to calculate
 the number of days in which induction must be served, and recorded by
 the lead headteacher/principal. Each separate contract of employment
-must meet the minimum period criteria (see paras 2.33–2.35).
+must meet the minimum period criteria (see paras <<para-2-33,2.33>>–<<para-2-35,2.35>>).
 
 === Special provisions applying to teachers who gained QTS between 1 May 2000 and 30 April 2001 (Cohort 1)
 
 [arabic, start=17]
-. Teachers who gained QTS in England between 1 May 2000 and 30 April
+. [[para-3-17]] Teachers who gained QTS in England between 1 May 2000 and 30 April
 2001 are known as Cohort 1 teachers. Previously these teachers had to
 additionally pass the numeracy skills test before they could complete
 induction satisfactorily and be employed as a teacher in a relevant
 school. This requirement was removed on 25 June 2020.
-. Cohort 1 teachers who have completed induction but did not pass a
+. [[para-3-18]] Cohort 1 teachers who have completed induction but did not pass a
 numeracy skills test before 25 June 2020 may contact the appropriate
 body, with any written representations or other evidence, who can decide
 if they have satisfactorily completed other elements of their induction.
@@ -1297,7 +1301,7 @@ test.
 === Putting in place additional monitoring and support
 
 [arabic]
-. ECTs undertaking induction are exempt from appraisalfootnote:[As set
+. [[para-4-1]] ECTs undertaking induction are exempt from appraisalfootnote:[As set
 out in regulation
 https://www.legislation.gov.uk/uksi/2012/115/regulation/1/made[1(4)(a)]
 of the Education (School Teachers’ Appraisal) (England) Regulations 2012
@@ -1309,7 +1313,7 @@ they have put in place to assist the ECT in getting back on track. The
 induction tutor is expected to notify the appropriate body of this
 determination and share both the progress review record and support plan
 for the appropriate body to review.
-. If it becomes apparent that an ECT is not making satisfactory progress
+. [[para-4-2]] If it becomes apparent that an ECT is not making satisfactory progress
 in the first formal assessment, the appropriate body should be informed,
 and the headteacher/principal should ensure that additional monitoring
 and support measures are put in place immediately. It is important that
@@ -1323,7 +1327,7 @@ satisfactory performance against the Teachers’ Standards; and
 * an effective support programme is in place to help the ECT improve
 their performance.
 [arabic]
-. If the ECT’s progress is still unsatisfactory in subsequent progress
+. [[para-4-3]] If the ECT’s progress is still unsatisfactory in subsequent progress
 reviews following the first assessment point, induction tutors should
 continue to deliver progress reviews as set out above, including
 reviewing and revising the ECT’s objectives and support plan, linking
@@ -1333,7 +1337,7 @@ and appropriate body.
 === Action if performance is still unsatisfactory
 
 [arabic, start=4]
-. Where there are still concerns about the ECT’s progress between formal
+. [[para-4-4]] Where there are still concerns about the ECT’s progress between formal
 assessment one and two the induction tutor should explain to the ECT the
 consequences of failure to complete the induction period satisfactorily
 and discuss fully with the ECT:
@@ -1346,17 +1350,17 @@ necessary;
 * the evidence used to inform the judgement; and
 * details of the improvement plan for the next assessment period.
 [arabic]
-. As with all progress reviews, the progress review record should
+. [[para-4-5]] As with all progress reviews, the progress review record should
 capture the ECT’s unsatisfactory performance against the Teachers’
 Standards and be shared with the appropriate body alongside the
 corresponding support plan.
-. The completion of the assessment report will reflect the current rate
+. [[para-4-6]] The completion of the assessment report will reflect the current rate
 of progress and brief details of the issues discussed.
 
 === Action in the event of serious capability problems
 
 [arabic, start=7]
-. In a few particularly serious cases it may be necessary for an
+. [[para-4-7]] In a few particularly serious cases it may be necessary for an
 employer to instigate capability procedures at a stage before the end of
 the induction period, which may lead to dismissal before the end of the
 induction period. If this is the case, for as long as the ECT remains at
@@ -1366,7 +1370,7 @@ is the employer that has a responsibility to manage its capability
 procedures and decisions relating to the outcome of these. The role of
 the appropriate body relates only to the ECT’s performance in relation
 to induction.
-. Dismissal on the grounds of capability before the end of the induction
+. [[para-4-8]] Dismissal on the grounds of capability before the end of the induction
 period does not prevent the ECT from completing induction at another
 institution, as all ECTs must complete a full induction period before
 they can be judged to have failed induction. Further guidance on
@@ -1377,25 +1381,25 @@ appraisal and capability: model policy - GOV.UK (www.gov.uk)]
 === Making an appeal against a decision by the appropriate body
 
 [arabic, start=9]
-. If an ECT fails induction, or has their induction extended, the
+. [[para-4-9]] If an ECT fails induction, or has their induction extended, the
 appropriate body must advise the ECT of their right to appeal, who to
 appeal to, and the time limit for doing so. In England, the Appeals Body
 is the Teaching Regulation Agency, which acts on behalf of the Secretary
 of State. For induction completed in Wales, the Appeals Body is the
 Education Workforce Council.
-. Further guidance about the appeals process is available at:
+. [[para-4-10]] Further guidance about the appeals process is available at:
 https://www.gov.uk/government/publications/induction-appeals-procedures
 
 == Section 5: Roles and responsibilities 
 
 [arabic]
-. This section summarises the roles and responsibilities of those
+. [[para-5-1]] This section summarises the roles and responsibilities of those
 involved in the induction process.
 
 === The ECT
 
 [arabic, start=2]
-. The ECT is expected to:
+. [[para-5-2]] The ECT is expected to:
 
 * provide evidence that they have QTS and are eligible to start
 induction;
@@ -1405,7 +1409,7 @@ their induction programme and keep these under review;
 timetable allowance and guarantee engagement with their ECF-based
 induction programme;
 * provide evidence of their progress against the Teachers’ Standards
-(see para 1.9);
+(see para <<para-1-9,1.9>>);
 * participate fully in the agreed monitoring and development programme;
 * raise any concerns with their induction tutor as soon as practicable;
 * consult their appropriate body named contact at an early stage if
@@ -1421,7 +1425,7 @@ during any period/part period; and
 === Headteachers and principals
 
 [arabic, start=3]
-. The headteacher/principal is, along with the appropriate body, jointly
+. [[para-5-3]] The headteacher/principal is, along with the appropriate body, jointly
 responsible for the monitoring, support and assessment of the ECT during
 induction, and is expected to:
 
@@ -1458,7 +1462,7 @@ procedures; and
 * retain all relevant documentation/evidence/forms on file for six
 years.
 [arabic]
-. There may also be circumstances where the headteacher/principal is
+. [[para-5-4]] There may also be circumstances where the headteacher/principal is
 expected to:
 
 * obtain interim assessments, any formal assessment and progress reviews
@@ -1483,7 +1487,7 @@ formal assessment periods; and
 * notify the appropriate body when an ECT serving induction leaves the
 institution.
 [arabic]
-. In addition to the above, headteachers/principals of FE institutions,
+. [[para-5-5]] In addition to the above, headteachers/principals of FE institutions,
 independent schools, academies and free schools, BSOs and nursery
 schools should also ensure the ECT’s post and responsibilities comply
 with the specific requirements for statutory induction in these
@@ -1492,7 +1496,7 @@ settings.
 === Induction tutors
 
 [arabic, start=6]
-. The induction tutor (or the headteacher/principal if carrying out this
+. [[para-5-6]] The induction tutor (or the headteacher/principal if carrying out this
 role) is expected to:
 
 * provide, or coordinate, guidance for the ECT’s professional
@@ -1524,7 +1528,7 @@ documents.
 === Mentors
 
 [arabic, start=7]
-. The mentor (or the induction tutor if carrying out this role) is
+. [[para-5-7]] The mentor (or the induction tutor if carrying out this role) is
 expected to:
 
 * regularly meet with the ECT for structured mentor sessions to provide
@@ -1540,7 +1544,7 @@ difficulties.
 === Appropriate bodies
 
 [arabic, start=8]
-. The appropriate body has the main quality assurance role within the
+. [[para-5-8]] The appropriate body has the main quality assurance role within the
 induction process. Through quality assurance, the appropriate body
 should assure itself that:
 
@@ -1552,7 +1556,7 @@ and mentor, and the reduced timetable; and
 * the monitoring, support, assessment and guidance procedures in place
 are fair and appropriate.
 [arabic]
-. Only those organisations set out in Section 4(2) of the 2012
+. [[para-5-9]] Only those organisations set out in Section 4(2) of the 2012
 Regulations can act as appropriate bodies and their functions must not
 be delegated. Within Teaching School Hubs (TSHs) the appropriate body is
 the designated lead school. For every ECT that is claimed by a TSH in
@@ -1577,12 +1581,12 @@ by third parties, and ensure services are conducted according to the
 agreed operating policies and processes of the appropriate body and this
 statutory guidance.
 [arabic]
-. The appropriate body should, on a regular basis, consult with
+. [[para-5-10]] The appropriate body should, on a regular basis, consult with
 headteachers/principals on the nature and extent of the quality
 assurance procedures it operates, or wishes to introduce. Institutions
 are required to work with the appropriate body to enable it to discharge
 its responsibilities effectively.
-. The appropriate body is expected to take steps to ensure that:
+. [[para-5-11]] The appropriate body is expected to take steps to ensure that:
 
 * headteachers/principals have put in place an ECF-based induction
 programme for the ECT and that their programme of support is clearly
@@ -1636,12 +1640,12 @@ relevant parties are notified; and
 * they provide the Teaching Regulation Agency with details of ECTs who
 have started; completed (satisfactorily or not); require an extension
 to; or left school partway through an induction period; together with
-details of the type of induction an ECT is accessing (see para 2.41).
+details of the type of induction an ECT is accessing (see para <<para-2-41,2.41>>).
 
 * retain all relevant documentation/evidence/forms on file for six
 years.
 [arabic]
-. The appropriate body should also (as local capacity, resources and
+. [[para-5-12]] The appropriate body should also (as local capacity, resources and
 agreements allow):
 
 * respond to requests from headteachers/principal to obtain interim
@@ -1657,7 +1661,7 @@ induction tutors and mentors.
 === The governing body 
 
 [arabic, start=13]
-. The governing body:
+. [[para-5-13]] The governing body:
 
 * should ensure compliance with the requirement to have regard to this
 guidance;
@@ -1676,7 +1680,7 @@ of staff involved in the process; and
 === Teaching Regulation Agency
 
 [arabic, start=14]
-. The Teaching Regulation Agency will carry out specific duties on
+. [[para-5-14]] The Teaching Regulation Agency will carry out specific duties on
 behalf of the Secretary of State, including:
 
 ** Statutory 
@@ -1699,7 +1703,7 @@ Column 1 of the table below shows the relevant paragraph reference in
 Schedule 1 of The Education (Induction Arrangements for School Teachers)
 (England) Regulations 2012 for each exemption.
 
-[width="100%",cols="20%,38%,42%",options="header",]
+[options="header"]
 |===
 |References in Schedule 1 |Exemption |Explanation
 |Para 1 |A person who was already a qualified teacher on 7 May 1999. |A
@@ -1915,7 +1919,7 @@ qualification to teach outside the United Kingdom; and,
 a|
 An overseas-trained teacher with at least two years’ experience, who has
 obtained QTS through recognition of their qualification on or after 1
-February 2023.This exemption only applies to people who have acquired
+February 2023. This exemption only applies to people who have acquired
 QTS via schedule 2, para 8 or 8A or 13E of the
 http://www.legislation.gov.uk/uksi/2003/1662/pdfs/uksi_20031662_en.pdf[School
 Teachers’ Qualifications Regulations 2003] – essentially, teachers
@@ -1929,68 +1933,68 @@ experience.
 
 == Index
 
-[width="100%",cols="60%,40%",options="header",]
+[options="header"]
 |===
-|*Subject* |*Paragraphs*
-|Absences |3.6
-|Academies, induction in |2.1
-|Appeals Body, process |4.9–4.10
-|Appeals Body, roles and responsibilities |5.14
-|Appropriate body, determining |2.22–2.24
-|Appropriate body, roles and responsibilities |5.8–5.12
-|Assessment reports, formal including final |2.55–2.61
-|Capability |4.7–4.8
-|Charging |2.26
-|Children’s centres |2.2
-|City technology colleges |2.1
-|Classroom observation |2.46–2.47
-|Cohort 1 |3.17–3.18
-|Concerns, raising |2.64
-|Confidentiality |2.78–2.80
-|ECF based training |2.40–2.41
-|Eligibility for induction |2.9
-|Eligibility, short-term supply |2.14–2.17
-|Evidence for assessment |2.57
-|Exemptions from requirement to serve induction |Annex A
-|Extensions |3.6–3.7
-|Extensions, appropriate body decisions |3.8–3.10
-|Failure to complete induction satisfactorily |2.71–2.73
-|Further education institutions, induction in |2.3
-|Governing body |2.80, 5.13
-|Headteacher/principal, roles and responsibilities |5.3–5.5
-|Independent schools, induction in |2.1
-|Induction, minimum period of employment |2.33–2.35
-|Induction period, length of |2.30–2.32
-|Induction period, length of (part-time) |2.36–2.38
-|Induction period, reduction |3.2–3.5
-|Induction tutor |2.42, 5.6
-|Institution, completing induction in more than one|3.14–3.16
-|Institutions where induction may/may not be served |2.1, 2.4
-|Mentor|2.43-2.44, 5.7
-|Monitoring|2.39
-|Named contact in appropriate body|2.28
-|Notifying the Teaching Regulation Agency of ECT appointment|2.29
-|ECT, roles and responsibilities|5.2
-|Nursery schools, induction in|2.1–2.2
-|Part-time induction|2.36–2.38
-|PPA time and induction|2.19–2.20
-|Principal, roles and responsibilities|5.3–5.5
-|Professional progress reviews|2.48–2.54
-|Progress, unsatisfactory|Section 4
-|QTS|2.10
-|Quality assurance|2.22
-|Recommendation|2.66–2.68
-|Record keeping|2.74–2.77
-|Reduced timetable|2.20–2.21
-|Registering ECT with appropriate body|2.27
-|Relevant schools|2.1
-|Requirement to complete induction|1.10–1.11
-|Sixth-form colleges, induction in|2.3
-|Special measures|2.4–2.8
-|Standards|1.9
-|Suitable post for induction|2.18
-|Supply teaching, short-term posts prior to induction|2.14–2.17
-|Teaching Regulation Agency, roles and responsibilities|5.14
+|Subject |Paragraphs
+|Absences |<<para-3-6,3.6>>
+|Academies, induction in |<<para-2-1,2.1>>
+|Appeals Body, process |<<para-4-9,4.9>>–<<para-4-10,4.10>>
+|Appeals Body, roles and responsibilities |<<para-5-14,5.14>>
+|Appropriate body, determining |<<para-2-22,2.22>>–<<para-2-24,2.24>>
+|Appropriate body, roles and responsibilities |<<para-5-8,5.8>>–<<para-5-12,5.12>>
+|Assessment reports, formal including final |<<para-2-55,2.55>>–<<para-2-61,2.61>>
+|Capability |<<para-4-7,4.7>>–<<para-4-8,4.8>>
+|Charging |<<para-2-26,2.26>>
+|Children’s centres |<<para-2-2,2.2>>
+|City technology colleges |<<para-2-1,2.1>>
+|Classroom observation |<<para-2-46,2.46>>–<<para-2-47,2.47>>
+|Cohort 1 |<<para-3-17,3.17>>–<<para-3-18,3.18>>
+|Concerns, raising |<<para-2-64,2.64>>
+|Confidentiality |<<para-2-78,2.78>>–<<para-2-80,2.80>>
+|ECF based training |<<para-2-40,2.40>>–<<para-2-41,2.41>>
+|Eligibility for induction |<<para-2-9,2.9>>
+|Eligibility, short-term supply |<<para-2-14,2.14>>–<<para-2-17,2.17>>
+|Evidence for assessment |<<para-2-57,2.57>>
+|Exemptions from requirement to serve induction |<<_annex_a_exemptions,Annex A>>
+|Extensions |<<para-3-6,3.6>>–<<para-3-7,3.7>>
+|Extensions, appropriate body decisions |<<para-3-8,3.8>>–<<para-3-10,3.10>>
+|Failure to complete induction satisfactorily |<<para-2-71,2.71>>–<<para-2-73,2.73>>
+|Further education institutions, induction in |<<para-2-3,2.3>>
+|Governing body |<<para-2-80,2.80>>, <<para-5-13,5.13>>
+|Headteacher/principal, roles and responsibilities |<<para-5-3,5.3>>–<<para-5-5,5.5>>
+|Independent schools, induction in |<<para-2-1,2.1>>
+|Induction, minimum period of employment |<<para-2-33,2.33>>–<<para-2-35,2.35>>
+|Induction period, length of |<<para-2-30,2.30>>–<<para-2-32,2.32>>
+|Induction period, length of (part-time) |<<para-2-36,2.36>>–<<para-2-38,2.38>>
+|Induction period, reduction |<<para-3-2,3.2>>–<<para-3-5,3.5>>
+|Induction tutor |<<para-2-42,2.42>>, <<para-5-6,5.6>>
+|Institution, completing induction in more than one|<<para-3-14,3.14>>–<<para-3-16,3.16>>
+|Institutions where induction may/may not be served |<<para-2-1,2.1>>, <<para-2-4,2.4>>
+|Mentor|<<para-2-43,2.43>>-<<para-2-44,2.44>>, <<para-5-7,5.7>>
+|Monitoring|<<para-2-39,2.39>>
+|Named contact in appropriate body|<<para-2-28,2.28>>
+|Notifying the Teaching Regulation Agency of ECT appointment|<<para-2-29,2.29>>
+|ECT, roles and responsibilities|<<para-5-2,5.2>>
+|Nursery schools, induction in|<<para-2-1,2.1>>–<<para-2-2,2.2>>
+|Part-time induction|<<para-2-36,2.36>>–<<para-2-38,2.38>>
+|PPA time and induction|<<para-2-19,2.19>>–<<para-2-20,2.20>>
+|Principal, roles and responsibilities|<<para-5-3,5.3>>–<<para-5-5,5.5>>
+|Professional progress reviews|<<para-2-48,2.48>>–<<para-2-54,2.54>>
+|Progress, unsatisfactory|<<_section_4_unsatisfactory_progress_and_appeals,Section 4>>
+|QTS|<<para-2-10,2.10>>
+|Quality assurance|<<para-2-22,2.22>>
+|Recommendation|<<para-2-66,2.66>>–<<para-2-68,2.68>>
+|Record keeping|<<para-2-74,2.74>>–<<para-2-77,2.77>>
+|Reduced timetable|<<para-2-20,2.20>>–<<para-2-21,2.21>>
+|Registering ECT with appropriate body|<<para-2-27,2.27>>
+|Relevant schools|<<para-2-1,2.1>>
+|Requirement to complete induction|<<para-1-10,1.10>>–<<para-1-11,1.11>>
+|Sixth-form colleges, induction in|<<para-2-3,2.3>>
+|Special measures|<<para-2-4,2.4>>–<<para-2-8,2.8>>
+|Standards|<<para-1-9,1.9>>
+|Suitable post for induction|<<para-2-18,2.18>>
+|Supply teaching, short-term posts prior to induction|<<para-2-14,2.14>>–<<para-2-17,2.17>>
+|Teaching Regulation Agency, roles and responsibilities|<<para-5-14,5.14>>
 
 |===
 
