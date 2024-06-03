@@ -1,0 +1,583 @@
+---
+title: Payment guidance for providers who are supporting participants via the ECF Full Induction Programme. (For academic year 2021/2022 only).
+---
+
+== Payment guidance for providers who are supporting participants via the ECF Full Induction Programme
+
+For academic year 2021/2022 only
+
+=== Purpose
+
+The purpose of this paper is to provide clarity on how the Department
+will make output payments to providers for participants starting the ECF
+Full Induction Programme in academic year 2021/2022.
+
+=== What information is included
+
+The paper provides information on:
+
+* A summary of the payment structure adopted for the NRO of the ECF
+contracts.
+* Those following a standard 2 year induction with varying start dates
+during the academic year.
+* Those following a reduced induction (anything less than the normal 6
+terms that someone following a standard induction would follow).
+* Those following an extended induction as a result of not being signed
+off as having met the teacher standards within the agreed timeframe.
+* Those part time teachers who are entitled to the full time equivalent
+(FTE) of two full school years (based on a school year of three terms).
+* Replacement Mentors.
+* Participant Transfers.
+* Participant Withdrawals.
+* Participant deferrals.
+* Payment bands and how this impacts payments to providers.
+
+=== Summary of the payment structure
+
+Payments made to the provider in this contract are made up of 40% fixed
+cost and 60% variable.
+
+The 40% fixed cost are based upon the agreed contracted number of
+participants. Any additional participants agreed after the call-off are
+paid on a full output payment basis and are included within the 60%
+variable payments.
+
+The 60% variable costs will be payable upon the provider reporting
+acceptable evidence of engagement during each milestone of the contract.
+
+For those participants following a standard induction, payments will be
+made over 6 milestones which is the equivalent to 1 payment for each of
+the 6 terms (3 in each academic year) it will take them to complete
+their induction.
+
+The payment model developed for the National Roll-out of the Early
+Career Framework ensures that providers are paid a proportionate sum of
+money relative to the amount of time they will be supporting their
+participants.
+
+Although not directly aligned to the term dates the Department will pay
+the provider the equivalent of 1 milestone payment for each term they
+support a participant (Subject to satisfactory evidence being provided
+as set out in the contract).
+
+A declaration for payment should only be made where there is evidence of
+engagement in the specific milestone period. Where engagement has not
+taken place in a milestone then a payment will not be made.
+
+For each start point for output 1 (September, January and April) we have
+extended the deadline by 1 month after the milestone date.
+
+All declarations should be submitted by the milestone date. However,
+where evidence of engagement is collated after the milestone date and
+the activity took place during the previous milestone window then a
+backdated declaration can be submitted and payment will be made at the
+next milestone.
+
+In some cases the engagement period could pre date the anticipated start
+date. This is to allow you to take into account those participants that
+didn’t start at the previous milestone and have engaged with the
+programme slightly ahead of schedule start date.
+
+We recognise that in very limited circumstances there may be a need to
+pay the same milestone to more than one provider. For example a
+participant transferring from Provider A to Provider B or a replacement
+mentor starting the programme within the same milestone that the
+previous mentor withdrew from the programme. This will only ever be
+relevant for 1 milestone. In circumstances where this arises the
+provider should speak with the contract manager to agree whether payment
+is appropriate. In all these circumstances the engagement criteria must
+be met in order for the Department to be liable for payment.
+
+Further details on the payments due for each scenario can be found
+below.
+
+=== Standard induction rules
+
+A normal 2 year induction covers 6 terms (3 in each academic year). Our
+payment model for those following a standard induction is therefore
+equal to 1 milestone payment for each of the 6 terms you are supporting
+a participant.
+
+Detailed below are examples of how that is intended to work for
+September, January and April starters.
+
+=== Standard induction starting in September
+
+:standard-induction-starting-in-september-april: footnote:[This is the deadline for Milestone 6 declarations in order for payments to be made by the 31st May 2023.]
+:standard-induction-starting-in-september-july: footnote:[This is the extended deadline for Milestone 6 that has been introduced in recognition that the milestone date does not align with term dates. This extension will allow lead providers a period of time after the initial deadline to submit any declarations for participants that have engaged after the original milestone deadline. Lead providers who want to take advantage of this extension will need to use a dummy date of the 30th April when submitting declarations.]
+
+[options="header"]
+|===
+ | Retention Point                         | Engagement period                | Milestone Date        | Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ September – 31^st^ October | 31^st^ October 2021   | 30^th^ November 2021
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ November – 31^st^ January  | 31^st^ January 2022   | 28^th^ February 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ February – 30^th^ April    | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ May – 30^th^ September     | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ October – 31^st^ January   | 31^st^ January 2023   | 28^th^ February 2023
+.2+h| Output 6 – Participant Completion (20%)
+.2+| 1^st^ February – 31^st^ July
+| 30^th^ April 2023{standard-induction-starting-in-september-april}  | 31^st^ May 2023
+| 31^st^ July 2023{standard-induction-starting-in-september-july} | 31^st^ August 2023
+|===
+
+
+
+=== Standard induction starting in January
+
+The table shows the same number of payments made to the provider but
+over a different period of time to reflect the date the participant
+started the programme.
+
+:standard-induction-starting-in-january-septmeber: footnote:[This is the deadline for Milestone 6 declarations in order for payments to be made by the 31st October 2023.]
+:standard-induction-starting-in-january-january: footnote:[This is the extended deadline for Milestone 6 that has been introduced in recognition that the milestone date does not align with term dates. This extension will allow lead providers a period of time after the initial deadline to submit any declarations for participants that have engaged after the original milestone deadline. Lead providers who want to take advantage of this extension will need to use a dummy date of the 30th September when submitting declarations.]
+
+[options="header"]
+|===
+ | Retention Point                         | Engagement period               | Milestone Date          | Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ November – 31^st^ January | 31^st^ January 2022     | 28^th^ February 2022
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ February – 30^th^ April   | 30^th^ April 2022       | 31^st^ May 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ May – 30^th^ September    | 30^th^ September 2022   | 31^st^ October 2022
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ October – 31^st^ January  | 31^st^ January 2023     | 28^th^ February 2023
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ February – 30^th^ April   | 30^th^ April 2023       | 31^st^ May 2023
+.2+h| Output 6 – Participant Completion (20%)
+.2+| 1^st^ May – 31^st^ January
+| 30^th^ September 2023{standard-induction-starting-in-january-septmeber} | 31^st^ October 2023
+| 31^st^ January 2024{standard-induction-starting-in-january-january} | 29^th^ February 2024
+|===
+
+=== Standard induction starting in April
+
+The table shows the same number of payments made to the provider but
+over a different period of time to reflect the date the participant
+started the programme.
+
+:standard-induction-starting-in-april-january: footnote:[This is the deadline for Milestone 6 declarations in order for payments to be made by the 29th February 2024.]
+:standard-induction-starting-in-april-april: footnote:[This is the extended deadline for Milestone 6 that has been introduced in recognition that the milestone date does not align with term dates. This extension will allow lead providers a period of time after the initial deadline to submit any declarations for participants that have engaged after the original milestone deadline. Lead providers who want to take advantage of this extension will need to use a dummy date of the 31st January when submitting declarations.]
+
+[options="header"]
+|===
+ | Retention Point                         | Engagement period                 | Milestone Date        | Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ February – 30^th^ April     | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ May – 30^th^ September      | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ October – 31^st^ January    | 31^st^ January 2023   | 28^th^ February 2023
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ February – 30^th^ April     | 30^th^ April 2023     | 31^st^ May 2023
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ May – 30^th^ September      | 30^th^ September 2023 | 31^st^ October 2023
+.2+h| Output 6 – Participant Completion (20%)
+.2+| 1^st^ October – 30^th^ April 2024
+| 31^st^ January 2024{standard-induction-starting-in-april-january} | 29^th^ February 2024
+| 30^th^ April 2024{standard-induction-starting-in-april-april} |31^st^ May 2024
+|===
+
+
+=== Reduced induction
+
+These are participants who will be following a reduced induction
+(anything less than 6 terms) which will have been agreed upfront by the
+school and the appropriate body. Our expectation is that participants
+will receive the quantity of training proportionate to the length of
+their induction period. For example, a participant whose induction
+period has been reduced to 3 terms should receive 3 terms worth of
+training.
+
+Reflecting the workload burden on participants and that the agreement to
+reduce the period of induction is granted on the basis that they require
+less support, Lead Providers are not expected to condense the training
+they provide. For example, a Lead Provider should not deliver 3 terms
+worth of training over 2 terms to the participant.
+
+Following the same principals of those on a standard induction,
+providers will be paid the equivalent of 1 milestone payment for each of
+the terms they are supporting a participant.
+
+The same evidence of engagement criteria applies to reduced inductions
+which will take into account the number of terms a participant is
+engaging with the programme. The Department will take a pragmatic
+approach to reviewing engagement for these participants.
+
+The table below sets out the differing lengths of reduced induction and
+at a high level the payments the Department would make to the provider
+in order accurately reflect the time the provider has been supporting
+each participant.
+
+[options="header"]
+|===
+ | Period of Induction | Payment Made To The Provider | What declaration should be made
+h| 1 Term              | 1 Milestone                  | Completion
+h| 2 Terms             | 2 Milestones                 | Start & Completion
+h| 3 Terms             | 3 Milestones                 | Start, Retention & Completion
+h| 4 Terms             | 4 Milestones                 | Start, Retention ×2 & Completion
+h| 5 Terms             | 5 Milestones                 | Start, Retention ×3 & Completion
+|===
+
+Included below are 3 examples of how this might look for participants
+completing their reduced inductions over different start dates and a
+varying length of induction.
+
+==== Example 1
+
+A participant completing their induction (Starting in September) over 1 term
+would be paid the equivalent of 1 milestone.
+
+[options="header"]
+|===
+ | Retention Point                         | Engagement period                | Milestone Date      | Payment Made
+h| Output 1 - Participant Completion (20%) | 1^st^ September – 31^st^ October | 31^st^ October 2021 | 30^th^ November 2021
+|===
+
+==== Example 2
+
+A participant completing their induction (Starting in January) over 2 terms
+would be paid the equivalent of 2 milestones.
+
+[options="header"]
+|===
+ | Retention Point                    | Engagement period               | Milestone Date      | Payment Made
+h| Output 1 - Participant Start (20%) | 1^st^ November – 31^st^ January | 31^st^ January 2022 | 28^th^ February 2022
+h| Output 2 – Completion (20%)        | 1^st^ February – 30^th^ April   | 30^th^ April 2022   | 31^st^ May 2022
+|===
+
+==== Example 3
+
+A participant completing their induction (starting in April) over 3 terms would
+be paid the equivalent of 3 milestones.
+
+[options="header"]
+|===
+ | Retention Point                    | Engagement period              | Milestone Date        | Payment Made
+h| Output 1 - Participant Start (20%) | 1^st^ February – 30^th^ April  | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 2 – Retention 1 (15%)       | 1^st^ May – 30^th^ September   | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 3 – Completion (20%)        | 1^st^ October – 31^st^ January | 31^st^ January 2023   | 28^th^ February 2023
+|===
+
+The timeline for when payments will be made to the provider will be
+dependent on when the participant joins the programme but will be
+aligned to the standard induction milestone payment points in the
+contract.
+
+=== Extended induction:
+
+These are ECTs who will have had their induction extended as a result of
+having not yet met the teacher standards at their final formal
+assessment. This specifically relates to someone that will have
+undertaken the equivalent of their 2 year induction and needs additional
+support to meet the Teacher standards.
+
+In these circumstances the Department will pay the provider an
+additional milestone payment for each term they continue to support the
+participant.
+
+The Department will make a maximum of 6 milestone payments to a provider
+supporting a Mentor. After this point the Mentor will have completed
+their training and will continue to support the ECT in a mentor capacity
+only. All payments will be subject to the provider showing evidence of
+engagement in each milestone period.
+
+Please note that where an extension to the induction has been confirmed
+the ECT should be moved onto the extended payment schedule. Extended
+declarations should be submitted (subject to meeting the engagement
+criteria) until the ECT has completed their induction, at which point a
+completion declaration should be submitted.
+
+If a provider submits a completion declaration and subsequently finds
+out that an ECT’s induction has been extended due to not having yet met
+the teacher standards, this completion declaration should be voided. In
+these circumstances an extended declaration should be submitted as a
+replacement where the provider is satisfied that the participant has met
+the engagement criteria in the contract.
+
+The tables below provide examples of how this would look for someone who
+started their induction at one of the 3 start points and has had their
+induction period extended between 1-3 terms. [.mark]#In these examples
+all additional output payments will be aligned with future milestone
+payments under this contract.#
+
+=== September Start
+
+[options="header"]
+|===
+ | Retention Point                         | Engagement period                | Milestone Date        | Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ September – 31^st^ October | 31^st^ October 2021   | 30^th^ November 2021
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ November – 31^st^ January  | 31^st^ January 2022   | 28^th^ February 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ February – 30^th^ April    | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ May – 30^th^ September     | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ October – 31^st^ January   | 31^st^ January 2023   | 28^th^ February 2023
+h| Output 6 – Extension Point 1 (15%)      | 1^st^ February – 30^th^ April    | 30^th^ April 2023     | 31^st^ May 2023
+h| Output 7 – Participant Completion (20%) | 1^st^ May – 30^th^ September     | 30^th^ September 2023 | 31^st^ October 2023
+|===
+
+=== January Start
+
+[options="header"]
+|===
+ |Retention Point                          |Engagement period                |Milestone Date         |Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ November – 31^st^ January | 31^st^ January 2022   | 28^th^ February 2022
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ February – 30^th^ April   | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ May – 30^th^ September    | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ October – 31^st^ January  | 31^st^ January 2023   | 28^th^ February 2023
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ February – 30^th^ April   | 30^th^ April 2023     | 31^st^ May 2023
+h| Output 6 – Extension Point 1 (15%)      | 1^st^ May – 30^th^ September    | 30^th^ September 2023 | 31^st^ October 2023
+h| Output 7 – Extension Point 2 (15%)      | 1^st^ October – 31^st^ January  | 31^st^ January 2024   | 29^th^ February 2024
+h| Output 8 – Participant Completion (20%) | 1^st^ February – 30^th^ April   | 30^th^ April 2024     | 31^st^ May 2024
+|===
+
+=== April Start
+
+[options="header"]
+|===
+ |Retention Point                          |Engagement period               |Milestone Date         |Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ February – 30^th^ April  | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ May – 30^th^ September   | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ October – 31^st^ January | 31^st^ January 2023   | 28^th^ February 2023
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ February – 30^th^ April  | 30^th^ April 2023     | 31^st^ May 2023
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ May – 30^th^ September   | 30^th^ September 2023 | 31^st^ October 2023
+h| Output 6 – Extension Point 1 (15%)      | 1^st^ October – 31^st^ January | 31^st^ January 2024   | 29^th^ February 2024
+h| Output 7 – Extension Point 2 (15%)      | 1^st^ February – 30^th^ April  | 30^th^ April 2024     | 31^st^ May 2024
+h| Output 8 – Extension Point 3 (15%)      | 1^st^ May – 30^th^ September   | 30^th^ September 2024 | 31^st^ October 2024
+h| Output 9 – Participant Completion (20%) | 1^st^ October – 31^st^ January | 31^st^ January 2025   | 28^th^ February 2025
+|===
+
+=== Part time inductions
+
+Providers will be paid over an extended period of time for those
+participants who are part time and therefore entitled to serve the full
+time equivalent (FTE) of two full school years (based on a school year
+of three terms). For example, an ECT working part-time as a 0.5 FTE will
+be entitled to serve their induction over four school years.
+
+All providers will still be paid the maximum per participant cost
+relative to the full per participant costs over a longer period as set
+out in the table below to reflect the longer period of time needed to
+support these participants. The payment schedule outlined in the table
+below will remain the same irrespective of whether the induction period
+continues beyond that point.
+
+Declarations for part time participants should not be submitted more
+than 3 months prior to the milestone date.
+
+Please note, where a school and participant has jointly agreed that a
+part time ECT will follow the FIP on a full time basis, these
+participants should be allocated to a standard schedule.
+
+=== September Start
+
+[options="header"]
+|===
+ |Retention Point                          |Engagement period                 |Milestone Date         |Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ September – 31^st^ October | 31^st^ October 2021   | 30^th^ November 2021
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ November – 30^th^ April    | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ May – 30^th^ September     | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ October – 30^th^ April     | 30^th^ April 2023     | 31^st^ May 2023
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ May – 30^th^ September     | 30^th^ September 2023 | 31^st^ October 2023
+h| Output 6 – Participant Completion (20%) | 1^st^ October – 30^th^ April     | 30^th^ April 2024     | 31^st^ May 2024
+|===
+
+=== January Start
+
+[options="header"]
+|===
+ |Retention Point                          |Engagement period                  |Milestone Date         |Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ November – 31^st^ January   | 31^st^ January 2022   | 28^th^ February 2022
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ February – 30^th^ September | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ October – 31^st^ January    | 31^st^ January 2023   | 28^th^ February 2023
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ February – 30^th^ September | 30^th^ September 2023 | 31^st^ October 2023
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ October – 31^st^ January    | 31^st^ January 2024   | 29^th^ February 2024
+h| Output 6 – Participant Completion (20%) | 1^st^ February 30^th^ September   | 30^th^ September 2024 | 31^st^ October 2024
+|===
+
+=== April Start
+
+[options="header"]
+|===
+ |Retention Point                          |Engagement period              |Milestone Date       |Payment Made
+h| Output 1 - Participant Start (20%)      | 1^st^ February – 30^th^ April | 30^th^ April 2022   | 31^st^ May 2022
+h| Output 2 – Retention Point 1 (15%)      | 1^st^ May – 31^st^ January    | 31^st^ January 2023 | 28^th^ February 2023
+h| Output 3 – Retention Point 2 (15%)      | 1^st^ February – 30^th^ April | 30^th^ April 2023   | 31^st^ May 2023
+h| Output 4 – Retention Point 3 (15%)      | 1^st^ May – 31^st^ January    | 31^st^ January 2024 | 29^th^ February 2024
+h| Output 5 – Retention Point 4 (15%)      | 1^st^ February – 30^th^ April | 30^th^ April 2024   | 31^st^ May 2024
+h| Output 6 – Participant Completion (20%) | 1^st^ May – 31^st^ January    | 31^st^ January 2025 | 28^th^ February 2025
+|===
+
+=== Replacement Mentors and Replacing Mentors
+
+[.mark]#A mentor *joining* the ECF mentor training programme
+to replace an existing mentor in support of an ECT, will be classed as a
+‘replacement mentor’. A mentor who is *already on the programme*
+who starts to support an ECT (new or existing), is likely to
+be ‘replacing’ a previous mentor, and for the purposes of the contract
+is not considered a ‘replacement mentor’.#
+
+All mentors should be correctly linked to the ECT they are supporting,
+however, only replacement mentors should be placed on a replacement
+mentor schedule on the DfE digital service.
+
+As a replacing mentor is already supporting another ECT on the programme
+no additional output payments will be due for this participant as they
+are already being funded by the Department. [.mark]#These participants
+will remain on their existing payment schedule.#
+
+Where the replacement mentor is a new mentor joining the programme we
+will pay for valid declarations from the point they meet the engagement
+criteria. In most cases this is expected to be payable from the next
+relevant milestone after the previous mentor has left the programme
+(example A below).
+
+The Department will make a maximum of 6 milestone payments to a provider
+supporting a Mentor. After this point the Mentor will have completed
+their training and will continue to support the ECT in a mentor capacity
+only. All payments will be subject to the provider showing evidence of
+engagement in each milestone period.
+
+Where a replacement mentor is joining a provider from another provider’s
+programme, the new provider will only be able to submit a declaration
+for that replacement mentor for the remaining milestones. For example,
+if the replacement mentor had supported an ECT for 2 milestones with
+provider A and then joined provider B as a replacement mentor, the new
+provider would be able to submit declarations from milestone 3 onwards
+(subject to satisfactory evidence of engagement). Example B below.
+
+==== Example A
+
+A replacement mentor that joins the programme due to the previous mentor
+withdrawing from the programme.
+
+==== Example B
+
+A replacement mentor that continues their training with a new provider
+“Provider B” having initially started their training with Provider A.
+
+[options="header"]
+|===
+ | ECT 1 Milestones | ECT 1 Declarations      | Mentor 1 Provider A Milestones | Mentor 1 Provider A Declarations    | Mentor 1 Provider B Milestones | Mentor 1 Provider B Declarations
+s| Output 1         | `started`              s| Output 1                       | `started`                           | n/a                            | n/a
+s| Output 2         | `retained-1`           s| Output 2                       | `retained-1`                        | n/a                            | n/a
+s| Output 3         | `retained-2`            | n/a                            | n/a                                s| Output 3                       | `retained-2`
+s| Output 4         | `retained-3`            | n/a                            | n/a                                s| Output 4                       | `retained-3`
+s| Output 5         | `retained-4`            | n/a                            | n/a                                s| Output 5                       | `retained-4`
+s| Output 6         | `completed`             | n/a                            | n/a                                s| Output 6                       | `completed`
+|===
+
+=== Participant Transfers
+
+Where a participant transfers from one provider to another during the
+programme the Department will pay the new lead provider any milestones
+due from the point that they join their programme. An example is
+included below for a participant starting in September who has engaged
+over 2 milestones with provider A before moving to Provider B for the
+remaining 4 milestones of their induction. All payments are subject to
+the provider showing evidence of engagement between each milestone
+period.
+
+[options="header"]
+|===
+ | Retention Point                         | Provider | Engagement period                | Milestone Date        | Payment Made
+h| Output 1 - Participant Start (20%)      | A        | 1^st^ September – 31^st^ October | 31^st^ October 2021   | 30^th^ November 2021
+h| Output 2 – Retention Point 1 (15%)      | A        | 1^st^ November – 31^st^ January  | 31^st^ January 2022   | 28^th^ February 2022
+h| Output 3 – Retention Point 2 (15%)      | B        | 1^st^ February – 30^th^ April    | 30^th^ April 2022     | 31^st^ May 2022
+h| Output 4 – Retention Point 3 (15%)      | B        | 1^st^ May – 30^th^ September     | 30^th^ September 2022 | 31^st^ October 2022
+h| Output 5 – Retention Point 4 (15%)      | B        | 1^st^ October – 31^st^ January   | 31^st^ January 2023   | 28^th^ February 2023
+h| Output 6 – Participant Completion (20%) | B        | 1^st^ February – 30^th^ April    | 30^th^ April 2023     | 31^st^ May 2023
+|===
+
+=== Participant Withdrawals
+
+The Department will only be liable to pay a provider output payments for
+the period in which a participant has engaged with the programme. For
+example, if a participant starting in September provides evidence of
+engagement for the first 2 milestones and then withdraws from the
+programme having not engaged during milestone 3 the provider will not be
+eligible for any payments beyond milestone 2.
+
+The final declaration confirming evidence of engagement prior to the
+withdrawal of the participant needs to be submitted before the
+withdrawal is confirmed on the digital service or payment will not be
+made.
+
+[.mark]#Please refer to the Withdrawal and Transfer guidance for more
+information on the process.#
+
+=== Participant Deferrals
+
+Where a participant defers their training part way through the programme
+the Department will pay the provider any milestone payments due up to
+the point of their deferral. The provider will then be eligible to claim
+all remaining milestones up to the maximum 6 milestones (excluding any
+agreed extensions where an ECT hasn’t yet met the teacher standards).
+All milestone payments will be subject to the provider submitting
+satisfactory evidence of engagement within each milestone period.
+
+An example is provided below to show how this would work for a September
+starter who defers their training after engaging for the first 3
+milestones and returns and completes the training at a later point.
+
+A provider should only defer an ECTs training when [.mark]#the induction
+tutor confirms that as a result of long-term absence e.g., maternity
+leave or long-term sickness the ECT will no longer be able to engage
+with the ECF training for the duration of their leave.#
+
+[.mark]#Any participant that defers their training as a result of a
+long-term absence should be allocated onto an extended schedule as soon
+as it is clear the participant will complete training over 7 or more
+calendar terms. Declarations of engagement should be submitted in the
+regular sequence.#
+
+[.mark]#Where a mentor decides not to continue their training having
+lost an ECT the participant should be withdrawn from the programme and
+not deferred.#
+
+[options="header"]
+|===
+ | Retention Point                    | Engagement period                | Milestone Date        | Payment Made
+s| Output 1 - Participant Start (20%) | 1^st^ September – 31^st^ October | 31^st^ October 2021   | 30^th^ November 2021
+s| Output 2 – Retention Point 1 (15%) | 1^st^ November – 31^st^ January  | 31^st^ January 2022   | 28^th^ February 2022
+s| Output 3 – Retention Point 2 (15%) | 1^st^ February – 30^th^ April    | 30^th^ April 2022     | 31^st^ May 2022
+ | Participant Deferred               | 1^st^ May – 30^th^ September     | 30^th^ September 2022 | N/A
+ | Participant Deferred               | 1^st^ October – 31^st^ January   | 31^st^ January 2023   | N/A
+ | Participant Deferred               | 1^st^ February – 30^th^ April    | 30^th^ April 2023     | N/A
+s| Output 4 – Extension Point 3 (15%) | 1^st^ May – 30^th^ September     | 30^th^ September 2023 | 31^st^ October 2023
+s| Output 5 – Extension Point 4 (15%) | 1^st^ October – 31^st^ January   | 31^st^ January 2024   | 29^th^ February 2024
+s| Output 6 – Completion (20%)        | 1^st^ February – 30^th^ April    | 30^th^ April 2024     | 31^st^ May 2024
+|===
+
+=== Payment Bands
+
+Payments will be determined by calculating the total number of
+participants (evidenced and validated) on the programme prior to each
+output payment milestone and then applying the payment bands model to
+calculate the invoice amount.
+
+Example based on a provider awarded a call-off contract for 6,000
+participants with 500 participants withdrawing between each retention
+point:
+
+[options="header"]
+|===
+ | Retention Point                    | Participants | Band A (0 – 2,000) 60% Output | Band B (2,001 – 4,000) 60% Output | Band C (4,001+) 60% output
+h| Output 1 – Participant Start      s| 6,000        | 2,000                         | 2,000                             | 2,000
+h| Output 2 – Retention Point 1      s| 5,500        | 2,000                         | 2,000                             | 1,500
+h| Output 3 – Retention Point 2      s| 5,000        | 2,000                         | 2,000                             | 1,000
+h| Output 4 – Retention Point 3      s| 4,500        | 2,000                         | 2,000                             | 500
+h| Output 5 – Retention Point 4      s| 4,000        | 2,000                         | 2,000                             | 0
+h| Output 6 – Participant Completion s| 3,500        | 2,000                         | 1,500                             | 0
+|===
+
+Example based on a provider awarded a call-off contract for 6,000
+participants, which was later increased to 7,000 upon agreement with the
+Department, and 500 participants withdrawing between each retention
+point:
+
+[options="header"]
+|===
+ | Retention Point                    | Participants | Band A (0 – 2,000) 60% Output | Band B (2,001 – 4,000) 60% Output | Band C (4,001 – 6,000) 60% Output | Band D (6,001+) 100% Output
+h| Output 1 – Participant Start      s| 7,000        | 2,000                         | 2,000                             | 2,000                             | 1,000
+h| Output 2 – Retention Point 1      s| 6,500        | 2,000                         | 2,000                             | 2,000                             | 500
+h| Output 3 – Retention Point 2      s| 6,000        | 2,000                         | 2,000                             | 2,000                             | 0
+h| Output 4 – Retention Point 3      s| 5,500        | 2,000                         | 2,000                             | 1,500                             | 0
+h| Output 5 – Retention Point 4      s| 5,000        | 2,000                         | 2,000                             | 1,000                             | 0
+h| Output 6 – Participant Completion s| 4,500        | 2,000                         | 2,000                             | 500                               | 0
+|===
+
+Please note: the above is purely a simplistic example to demonstrate the
+application of the payment bands. Providers will be paid the milestone
+following a participant’s withdrawal and therefore the pattern in the
+above examples are not truly representative of how participant numbers
+will vary across the retention points.
