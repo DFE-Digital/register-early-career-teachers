@@ -1,0 +1,807 @@
+== Schedule 2: Part 2 – Performance
+
+In this section the words below have the following meaning:
+
+DfE Reporting Template:: means the Department’s spreadsheet that
+will be shared with Contractors post award which will need to submitted
+by the 25^th^ of each month detailing the schools and Participants
+recruited onto the programme.
+
+Improvement Plan:: means a plan for improvement that the Department
+can request from the Contractor within ten (10) Working Days in the
+event of failure.
+
+KPI:: means the Key Performance Indicators as set out in table 2 of
+this schedule.
+
+Performance Management:: means how the Department will measure the
+Contractor’s performance and progress against the Service Specification
+(Schedule 1: Part 1), the Contractors Solution (Schedule 1: Part 2), the
+Implementation Plan (Schedule 7), and Pricing (Annex 1 of Schedule 2:
+Part 1).
+
+Performance Manager:: means the person the Contractor will appoint
+to ensure that the Contract is delivered as specified in the Contract
+and that Service Levels, Minimum Targets and KPIs are achieved.
+
+Quality Assurance:: means how the Department or its agents will
+measure the Contractor’s performance in developing and delivering the
+training programme.
+
+Reporting Period:: means the reporting period that occurs monthly
+during the lifetime of the contract.
+
+Service Credits:: means the service credits as set out in table 3 of
+this Schedule.
+
+Service Improvements:: means the recommendations made by the Quality
+Assurance function as specified in this schedule.
+
+Service Level:: means the Service Levels as set out in table 1 of
+this Schedule by which the Contractor’s performance will be measured.
+
+'''
+
+[arabic]
+. Service levels and KPIs.
+[arabic]
+.. This section sets out the Service Levels and Key Performance
+Indicators (KPIs) against which the Parties shall measure the
+Contractor’s performance.
+
+.. The objective of the Service Levels and KPIs is to:
+[arabic]
+... ensure that the Services are of a consistently high quality and
+meet the requirements of the Department;
+
+... provide a mechanism whereby the Department can attain meaningful
+recognition of inconvenience and/or loss resulting from the Contractor's
+failure to deliver the Services; and
+
+... incentivise the Contractor to meet the performance standards and
+to remedy any failure to meet the required standards expeditiously.
+
+=== Service Levels
+
+[arabic, start=3]
+.. The Contractor shall ensure compliance with the Service Levels
+listed in Table 1 (Service Levels).
+
+.. The Contractor and the Department shall monitor the Contractor’s
+performance against each of the Service Levels listed in Table 1
+(Service Levels).
+
+.. The Contractor shall complete and return the monthly DfE Reporting
+Template outlining performance against the Service Levels to date and
+confirm whether they have been achieved.
+
+.. If the Contractor fails to meet one (1) or more Service Levels in
+any Reporting Period, or fails to meet any one Service Level in
+consecutive reporting periods, the Department will require the
+Contractor to provide the Department with a plan for addressing and
+resolving the Service Level failures and issue a suspended Service
+Credit in line with paragraph 1.6.1.
+[arabic]
+... If the failure is resolved and the Contractor meets the failed
+Service Levels by the end of the next reporting period then the Service
+Credit will be avoided. If one or more of the failed Service Levels are
+failed in the next reporting period then the Service Credit will be
+upheld.
+
+.. If the Contractor fails the Service Levels as detailed in paragraph
+1.6 for three (3) consecutive reporting periods, or on four (4) separate
+occasions, then it will be considered a ‘Service Failure’ and the
+Department reserves the right to take action in line with paragraphs
+2.11 to 2.13 (Consequence of Service Failure).
+
+.. Table 1: Service Levels
+
+[width="100%",cols="18%,11%,41%,30%",options="header",]
+|===
+|Subject |Ref |Service Level | Reporting Period
+
+.5+|Reporting and Meetings |RM1 |Submit to the Department a completed
+monthly contract management report by the twenty-fifth (25th) of the
+following month using the template provided by the Department. | Monthly
+
+| RM2 |Attend monthly contract management meetings. | Monthly
+
+| RM3 |Attend any ad hoc development and operational meetings as
+required by the Department. | Ad-hoc.
+
+A minimum 10 working days notice will be provided to the supplier
+requesting their attendance to a meeting.
+
+| RM4 |Attend annual review meetings. At least 7 days prior to the
+meeting a summary report should be submitted to the Department for
+review that outlines progress against all key milestones set out in this
+schedule. |
+Annual
+
+Times and dates to be agreed by both parties in advance of meetings
+being set.
+
+| RM5 |Engage with Department facilitated opportunities for strategic
+framework collaboration, including attending scheduled events,
+identifying opportunities for collaboration, and progressing actions in
+line with agreed timescales.|
+Ad-hoc.
+
+A minimum 20 working days notice will be provided.
+
+|Administration / Communication |C1 |Provide a meaningful response to
+one hundred per cent (100%) of queries raised by the Department or
+Service Users and correspondence within three (3) Working Days from the
+date of receipt or within such other timescales for response as provided
+specifically for within the terms of the contract. In the event the
+query raised is complex the Contractor can request an extension of time,
+which must be agreed by the Department. |
+Ad-hoc.
+
+A minimum 3 working days notice will be provided and an extension can be
+requested if the query raised is of a particularly complex nature.
+
+.2+|Management Information |MI1 |Submit quality data on teacher and school
+participation to the Department by the twenty-fifth (25th) of each month
+using the template provided by the Department. Ensuring the data
+submitted to the Department on this date is reflective of the number of
+schools/Participants recruited onto the programme at this point in time.
+| Monthly
+
+| MI2 |Ensure that all data discrepancies identified by the Department
+are 100% accurately addressed ahead of the next submission of data.|
+Monthly
+
+.4+|Finance |F1 |Ensure that Valid Invoices are submitted to the Department
+by the twenty-fifth (25th) of the month for the relevant reporting
+period. | Monthly
+
+| F2 |Comply and respond to any requests for Open Book or financial
+validation data within ten (10) working days. |
+Ad-hoc.
+
+A minimum 10 working days notice will be provided.
+
+| F3 |Engage with any framework level commercial incentives by
+attending any scheduled meetings and progressing any resulting actions
+of follow-up work within the agreed timescales. |
+Ad-hoc.
+
+A minimum 10 working days notice will be provided to the supplier
+requesting their attendance to a meeting. Timescales for completion of
+any follow up work will be discussed and agreed in advance by both
+parties.
+
+| F4 |Ensure that all financial discrepancies identified by the
+Department are 100% accurately reconciled ahead of the next invoice
+period and any variances to invoicing values offset. |
+Monthly
+
+.2+|Complaints |COMPL1 |The Contractor’s Contract Manager must report all
+complaints from Service Users about the Services orally by telephone or
+in person, as well as in writing, to Department within three (3) Working
+Days from the date of the complaint. | Ongoing throughout the contracting cycle
+
+| COMPL2 |The Contractor’s Contract Manager must provide a meaningful
+response to all complaints from Service Users orally by telephone or in
+person, as well as in writing, copying in Department, within five (5)
+Working Days from the date of the complaint. | Ad-hoc.
+
+A minimum 5 working days notice will be provided.
+
+|Records and questionnaires |RQ1 |All satisfaction questionnaires shall
+be completed in full and returned to the Department within ten (10)
+working days from the date of completion, and any information requested
+by the Department shall be provided by the Contractor to the Department
+within five (5) Working days from the date of the request. |
+Evidence to be submitted within 5 working days upon request by the
+Department. Key measures July 2022 and July 2023.
+
+.2+|Delivery |D1 |Delivery of the Programme against the dates and
+milestones identified in Schedule 7 (Implementation Plan). | Monthly
+
+| D2 |Iteratively developing the training programme responding
+constructively to feedback from the Department and meeting deadlines for
+returning drafts. |
+Deadlines for completion will provided by the Department or its Quality
+Assurance Agent as required throughout the contracting cycle.
+
+.2+|Service Improvement |SI1 |Develop a full Continuous Improvement Plan in
+line with Schedule 2; Part 1 and report progress to the Department
+against agreed milestones. | Deadline for development of the plan will be
+agreed with the supplier as and when an issue materialises. The deadline for
+submission will depend upon the amount of work required to address the problem.
+
+| SI2 |Cooperate with the requirements of the QA function by supplying
+information, facilitating visits, and otherwise supporting the
+implementation and ongoing work of the QA function. | Deadlines for completion
+will provided by the Department or its Quality Assurance Agent as required
+throughout the contracting cycle.
+
+|===
+
+=== KPIs
+
+[arabic, start=9]
+.. The Parties shall monitor the Contractor’s performance against each
+of the KPIs listed in Table 2 (KPIs) at the agreed intervals.
+
+.. If at the agreed reporting milestone the Contractor:
+[arabic]
+... achieves a KPI rating of ‘Good’ then the performance measure will
+be achieved, and no further action will be required;
+
+... achieves a KPI rating of ‘Approaching Target’ then the
+performance measure will not be achieved, but no further action will be
+required;
+
+... achieves a KPI rating of ‘Requires Improvement’ or ‘Inadequate’,
+then the performance measure will not be achieved and it will be
+declared a ‘Service Failure’. The Department reserves the right to take
+action in line with paragraphs 2.11 to 2.13 (Consequence of Service
+Failure) and issue a Service Credit in accordance with Paragraph 4 of
+this Schedule.
+
+.. *Table 2a – KPI Criteria*
++
+[width="100%",cols="27%,73%",options="header",]
+|===
+|*Rating* |*Criteria*
+|Good |The supplier is meeting or exceeding the KPI target
+
+|Approaching Target |The supplier is close to meeting the KPI target
+
+|Requires Improvement |The performance of the supplier is below that of
+the KPI target
+
+|Inadequate |The performance of the supplier is significantly below that
+of the KPI target
+|===
+
+.. *Table 2b – Key Performance Indicators*
++
+[width="100%",cols="57%,27%,16%",options="header",]
+|===
+|*KPI;* 2+|*Measure* 
+.5+a|
+*1. Recruitment*
+
+Recruit the target number of ECTs and their assigned Mentors onto the
+programme by the end of the recruitment window.
+
+Performance against the Contractors recruitment trajectory will be
+reviewed at the following milestones:
+
+*[.underline]#2023 Cohort#*
+
+* 31 October 2023
+* 31 December 2023
+* 31 March 2024
+
+The final KPI measure will be reported on 31 July 2023.
+
+*[.underline]#2024 Cohort#*
+
+* 31 October 2024
+* 31 December 2024
+* 31 March 2025
+
+The final KPI measure will be reported on 31 July 2025.
+
+2+|*Recruitment % against target:* 
+
+| *Good* |96% +
+
+| *Approaching Target* |90% - 95%
+
+| *Requires Improvement* |75% - 89%
+
+| *Inadequate* |Below 75%
+
+.5+a|
+*2. Recruitment (Pupil Premium and Sparsity)*
+
+The number of ECTs and their assigned Mentors recruited onto the
+programme from either; schools with at least 40% of their pupils
+eligible for PP; or Local Department Districts identified as in the top
+20% most sparse in terms of schools per hectare.
+
+Performance reviewed monthly and reported at closure of recruitment
+window.
+
+2+|*Number of eligible ECTs:* 
+
+| *Good* |660 +
+
+| *Approaching Target* |600 - 659
+
+| *Requires Improvement* |540 - 599
+
+| *Inadequate* |Below 540
+
+.5+a|
+*3. Retention*
+
+The number of Participants that start the training retained at the end
+of year 2 of delivery.
+
+Performance reviewed monthly and reported at end of years 1 and 2 of the
+programme.
+
+Applies only to participants beginning the programme in September of
+each year. The Department reserves the right to measure the retention of
+participants who begin the programme at other points during the academic
+year.
+
+2+|*Retention rate:*
+
+| *Good* |75% +
+
+| *Approaching Target* |70% - 74%
+
+| *Requires Improvement* |65% - 69%
+
+| *Inadequate* |Below 65%
+
+.5+a|
+*4. Satisfaction*
+
+The number of participants who rate the FIP experience as ‘Good’ or
+better.
+
+The DfE will design a survey to be issued to participants via the Lead
+Provider. Minimum response rate of 40% required.
+
+Surveys will be issued and performance measured at the end of years 1
+and 2 of the programme.
+
+2+|*Rate of participants rating the experience as ‘Good’ or better:*
+
+| *Good* |80% +
+
+| *Approaching Target* |75% - 79%
+
+| *Requires Improvement* |70% - 74%
+
+| *Inadequate* |Below 70%
+|===
+
+.. In line with the cross-government transparency agenda the
+Department reserves the right to make the Contractors performance
+against the KPIs in table 2b available in the public domain, which may
+include publishing them on gov.uk and including them in any related
+transparency reporting.
+
+[arabic, start=2]
+. Performance management
+[arabic]
+.. The Department shall monitor the Contractor’s performance and
+progress against the Service Specification (Schedule 1: Part 1), the
+Contractor’s Solution (Schedule 1: Part 2), the Implementation Plan
+(Schedule 7), and Pricing (Annex 1 of Schedule 2: Part 1) on a monthly
+basis and during performance review meetings. The Contractor shall
+cooperate with the Department in this regard and provide any information
+and evidence reasonably required by the Department within five (5)
+Working Days of a request being received.
+
+.. The Contractor shall appoint a named Performance Manager who will
+cooperate with the Department to ensure that the Services are delivered
+as specified in the Contract and that Service Levels, Minimum Targets
+and KPIs are achieved.
+
+.. The purpose of the performance review meetings is to encourage an
+open and regular dialogue between the Parties. The Parties shall review
+performance, discuss opportunities for continuous improvement, and
+address any complaints or persistent problems encountered.
+
+.. Performance reviews shall be documented. The Contractor shall
+provide any information and data requested by the Department to
+facilitate the reviews and arrange, where necessary, access to any of
+Contractor Premises or delivery locations, including those operated by
+Sub-Contractors.
+
+.. The Department may instruct the Contractor to take appropriate
+remedial action where the Department reasonably considers that the
+Implementation Plan and/or an Performance Improvement Plan is not being
+complied with, and the Contractor shall take such remedial action.
+
+.. 2.6 If there is a failure to achieve a Service Level, Minimum Target or
+KPI, the Contractor shall use all reasonable endeavours to immediately
+minimise the impact of any failure and to prevent such a failure from
+recurring.
+
+.. The Contractor shall ensure that all systems and processes used for
+the monitoring and recording of performance are robust.
+
+==== Contractor Management Information (MI) Requirements
+
+[arabic, start=8]
+.. The Department intends, wherever it can, to capture and collate
+information through its IT system(s) (please refer to the management
+information and digital requirements as set out in the Service
+Specification for more detail). However, the Department does reserve the
+right to make reasonable requests for information (at no additional
+charge) from the Contractor including ad-hoc requests for information
+from time to time.
+
+.. The Contractor shall supply Management Information and Data relevant
+to the delivery of the Services to the Department, using formats and to
+timescales as detailed in the Specification or as are otherwise notified
+to the Contractor by the Department.
+
+.. The Department shall be entitled to amend the reporting frequency
+and format in respect of any or all Management Information or waive the
+requirement for any aspect of the Management Information to be reported
+upon by giving the Contractor not less than one (1) Months’ notice in
+writing.
+
+==== Consequence of Service Failure
+
+[arabic, start=11]
+.. Without prejudice to any other rights or remedies arising under
+this Contract, including under Clause 10 (Termination) for material
+breach, if the Contractor incurs a Service Failure in any Relevant
+Period, the Contractor acknowledges and agrees that the Department shall
+have the right to exercise (in its absolute and sole discretion) all or
+any of the following remedial actions:
+[arabic]
+... The Department shall be entitled to require the Contractor, and
+the Contractor agrees to prepare and provide to the Department, a plan
+for improvement (an *“Improvement Plan”*) within ten (10) Working Days
+of a written request by the Department for such Improvement Plan. Such
+Improvement Plan shall be subject to the Department’s prior approval and
+the Contractor will be required to implement any approved Improvement
+Plan, as soon as reasonably practicable;
+
+... The Department shall be entitled to require the Contractor, and
+the Contractor agrees to attend, within a reasonable time one (1) or
+more meetings at the request of the Department in order to resolve the
+issues raised by the Department in its notice to the Contractor
+requesting such meetings;
+
+... The Department shall be entitled to serve a notice of improvement
+(“Improvement Notice”) on the Contractor and the Contractor shall
+implement such requirements for improvement as set out in the
+Improvement Notice;
+
+... The Department shall be entitled to issue interim performance
+measures and/or milestones in order to monitor the Contractors
+implementation of any Improvement Plan or Improvement Notice;
+
+... If not already applied to the Service Failure prior to this
+point, apply a Service Credit.
+
+.. In the event that the Department has, in its absolute and sole
+discretion, invoked one or more of the remedies set in paragraph 2.11
+above the Department may suspend the Contractor from further call-off
+opportunities under the Framework Agreement pending the Department being
+satisfied that the Contractor has;
+[arabic]
+... implemented the requirements for improvement set out in the
+Improvement Notice; and/or
+
+... implemented an Improvement Plan approved by the Department;
+and/or
+
+... met the interim performance measures and/or milestones.
+
+.. Whether or not the Department has exercised its rights pursuant to
+paragraph 2.12 in the event that the Department has, in its absolute and
+sole discretions invoked one or more of the remedies set out in
+paragraph 2.11 above, and allowed the Contractor reasonable opportunity
+to remedy the Service Failure, and the Contractor either;
+[arabic]
+... fails to implement such requirements for improvement as set out
+in the Improvement Notice; and/or
+
+... fails to implement an Improvement Plan approved by the
+Department; and/or
+
+... fails to meet the interim performance measures and/or milestones,
+
++
+then (without prejudice to any other rights and remedies of termination
+provided for in this Contract), the Department shall be entitled to
+terminate this Contract and with immediate effect by notice in writing
+in accordance with Clause 10.4.1. Termination of the Contract will be
+considered a Material Default and the Department may at its absolute
+discretion terminate the Framework Agreement as per paragraph 7.4 of the
+Framework Agreement.
+
+[arabic, start=3]
+==== Quality assurance
+[arabic]
+.. The Department will monitor the quality of content and delivery across
+the Framework and the Contractor shall support this process and take the
+necessary actions as recommended by the Department or Ofsted, its
+appointed QA Agent.
+.. The Department will quality assure the Contractor and its Delivery
+Partners in the following areas:
+[arabic]
+... Content Development – Reviewing and signing off all content and
+training materials by EEF and the Department.
+... Ongoing Contractual Requirements – The Contractor will work with the
+Department to submit data that supports ongoing monitoring of Contractor
+performance.
+... Training Delivery – Ofsted and/or the Department will attend training
+sessions where relevant and engage with Delivery Partners and
+Participants where it deems it relevant.
+.. The Contractor shall cooperate with the ongoing Quality Assurance
+requirements in supplying information and event schedules, facilitating
+visits to the Contractor and its Delivery Partners and Participants, and
+otherwise supporting the work of the Department and/or Ofsted to make
+assessments of quality according to the ECF Inspection Framework (Early
+career framework and national professional qualification inspection
+framework and handbook - GOV.UK (http://www.gov.uk[www.gov.uk]).
+.. The Contractor shall engage with the Department and/or Ofsted as
+required, typically providing data as required on a termly or annual
+basis and supporting inspection visits between every 1-2 years. This
+will include facilitating contact with Delivery Partners through the
+timely provision of relevant data required by Ofsted to plan visits in
+advance. Subject to the outcome of inspections, the Department reserves
+the right to vary the frequency of future inspections i.e. shorter
+turnaround where issues or failures were identified and longer
+turnaround for positive outcomes.
+.. The Department may make recommendations that the Contractor will be
+required to action in relation to;
+[arabic]
+... Service Improvements – Framework wide improvements that arise out of
+continuous improvements, lessons learnt, user feedback and best practice
+or any other action that at the Department’s discretion would benefit
+from being adopted across the Framework; and
+... Quality and Performance – Contractors will be subject to inspection
+by Ofsted who as the Departments Quality Assurance Agent will publish a
+judgement and report against the ECF Inspection Framework that will
+inform the Departments management of quality and performance. The
+Department will agree with the Contractor an Improvement Plan in
+response to the inspection judgement and/or to address specific issues
+where either a failure to adhere to the Inspection Framework, instances
+of poor practice, breaches of the Framework Agreement or any other
+action that at the Department’s discretion (acting reasonably) needs to
+be addressed to ensure the desired quality thresholds are maintained.
+
+==== Service Improvements
+[arabic, start=6]
+.. Where the Department issues service improvement recommendations, they
+shall be under one of the following categories:
+[arabic]
+... Continuous Improvement – service development and improvement activity
+that is considered to be within the Contractors requirement to apply
+continuous improvement, respond to feedback and adopt best practice in
+regard to content and delivery for both ongoing and future cohorts.
+... Service Development – activity that requires the Contractor to make
+considerable revisions to their content and/or delivery to a level
+whereby it is not possible to implement mid-cohort and therefore will
+only be required for future cohorts. In this instance the Contractor
+should attempt to implement any such aspects of the recommendation that
+can be made under paragraph 3.6.1 but will not be required to implement
+the full recommendation until the next cohort Call Off.
+... Urgent Service Development – activity that requires the Contractor to
+make immediate and significant revisions to their content and/or
+delivery in regard to ongoing cohorts that will result in additional
+cost to the Contractor. In this instance the Contractor may charge the
+Department for any reasonable development costs, subject to agreement by
+the Department.
+.. If the Contractor fails to implement a Service Improvement
+recommendation to the required standard as set out by the Department
+within the specified timescale then the Department may, at its sole
+discretion take action in line with paragraphs 2.11 to 2.13 (Consequence
+of Service Failure) and issue a Service Credit.
+
+==== Quality and Performance
+
+[arabic, start=8]
+.. The Department will use the inspection reports and judgements
+published by Ofsted to inform its wider quality and performance
+management procedures but will take the following actions in direct
+response to the judgement made against Ofsted’s four-point grading
+system:
++
+*Table 3a – Ofsted Judgement Actions*
++
+[width="100%",cols="18%,82%",options="header",]
+|===
+a|
+Judgement
+
+|*Action*
+a|
+Outstanding
+
+a|
+[.underline]#Response#
+
+No formal action required – any recommendations identified can be
+incorporated within existing continuous improvement plans.
+
+[.underline]#Service Credits#
+
+None
+
+[.underline]#Contractual Implications#
+
+None
+
+[.underline]#Inspection Timescales#
+
+The Contractor will be inspected again within 2 years. Ofsted may take
+into account any known concerns or complaints when determining the
+schedule for the next full inspection.
+
+|Good a|
+[.underline]#Response#
+
+Where there are recommendations identified the Department reserves the
+right to request the Contractor to develop an Improvement Plan to
+resolve the issues within a timely manner.
+
+[.underline]#Service Credits#
+
+None
+
+[.underline]#Contractual Implications#
+
+None
+
+[.underline]#Inspection Timescales#
+
+The Contractor will be inspected again within 2 years. Ofsted may take
+into account any known concerns or complaints when determining the
+schedule for the next full inspection.
+
+a|
+Requires Improvement
+
+a|
+[.underline]#Response#
+
+The Contractor will be required to develop an Improvement Plan to
+resolve the recommendations within a timely manner, identify lessons
+learnt for future inspections, manage stakeholders, and set out
+proposals to manage any reputational damage to the provision.
+
+[.underline]#Service Credits#
+
+The Department reserves the right to issue a suspended Service Credit as
+per paragraph 3.11.
+
+[.underline]#Contractual Implications#
+
+If the Contractor does not receive a judgement of ‘Outstanding’ or
+‘Good’ at the subsequent inspection, then it will be considered a
+Service Failure and the Department reserves the right to take action in
+line with paragraphs 2.11 to 2.15 (Consequence of Service Failure) and
+issue a Service Credit.
+
+[.underline]#Inspection Timescales#
+
+Where a Lead Provider receives a Requires Improvement judgement, Ofsted
+will determine whether it is appropriate or proportionate to carry out
+an LPMV or full inspection within the following 12 months. This will
+depend on the concerns identified during the inspection and other risk
+assessment information available at the time.
+
+a|
+Inadequate
+
+a|
+[.underline]#Response#
+
+The Contractor will be required to develop a remedial action plan, to be
+enacted prior to the publishing of the inspection report, to identify
+the most urgent issues/concerns to enable service delivery to continue,
+manage direct stakeholders, and mitigate reputational damage to the
+Contractor, Department and ECF programme.
+
+The Contractor will be required to develop an Improvement Plan to
+resolve the recommendations within a timely manner, identify lessons
+learnt for future inspections, ongoing management of stakeholders, and
+set out proposals to manage any ongoing reputational damage to the
+provision.
+
+[.underline]#Service Credits#
+
+The Department reserves the right to issue a suspended Service Credit as
+per paragraph 3.11.
+
+[.underline]#Contractual Implications#
+
+A judgement of ‘Inadequate’ will be considered a Service Failure and the
+Department reserves the right to take action in line with paragraphs
+2.11 to 2.15 (Consequence of Service Failure).
+
+If the Contractor does not receive a judgement of ‘Outstanding’ or
+‘Good’ at the subsequent inspection, then it will be considered a
+Service Failure and the Department reserves the right to take action in
+line with paragraphs 2.11 to 2.15 (Consequence of Service Failure) and
+issue a Service Credit.
+
+If the Contractor receives multiple ‘Inadequate’ judgements, then it
+will be considered a Service Failure and the Department reserves the
+right to suspend the Contractor from future call-off opportunities as
+per clause 7.10 & 7.12 of the Framework Agreement.
+
+[.underline]#Inspection Timescales#
+
+Where a Lead Provider receives an Inadequate judgement, Ofsted will
+determine whether it is appropriate or proportionate to carry out an
+LPMV or full inspection within the following 12 months. This will depend
+on the concerns identified during the inspection and other risk
+assessment information available at the time.
+
+|===
+
+.. Where an Improvement Plan is required, it should include clear
+actions and mitigations to address the recommendations including,
+timelines, milestones and any interim performance measures to enable
+management of progress against the plan. Improvement Plans will need to
+be agreed with the Department in line with the following schedule:
+[arabic]
+... Draft version issued to the Department no less than 1 week prior
+to the publication of the Inspection Report; and
+
+... Final plan agreed no later than 2 weeks after the publishing of
+the report.
+
+.. The Department will use the Ofsted inspection reports as part of
+the wider performance management procedures and in addition to the
+direct response’s outlined in table 3a, if in the Departments opinion,
+concerns are identified that have, or are considered likely to have, a
+negative impact on service quality, governance or participant
+satisfaction then the department reserves the right to take action in
+line with paragraphs 2.11 to 2.13 (Consequence of Service Failure).
+
+.. If the Contractor is issued a suspended Service Credit and the
+Improvement Plan is resolved to the required standard and within the
+specified timescale then the Service Credit will be avoided. If, in the
+opinion of the Department, the Improvement Plan has not been resolved in
+full within the timescales then it will be considered a ‘Service
+Failure’, and the Service Credit will be upheld.
+
+.. The Department reserves the right to use the information presented in
+the Ofsted inspection reports as evidence in applying any other terms
+within this Call-off Contract or the Framework Agreement.
+
+==== QA Reporting
+
+[arabic, start=13]
+.. The Department reserves the right to use, which may include publishing
+under government transparency policy, reporting data on Contractors
+performance against the QA Function requirements as a means of
+demonstrating the ‘quality’ performance of the Framework. The reporting
+metrics are likely to be, but are not limited to:
+[arabic]
+... Service Improvements – % of recommendations adopted within
+timescales.
+... Quality and Performance – number of recommendations and Service
+Failures.
+.. Ofsted will publish all inspection reports in full at
+https://reports.ofsted.gov.uk/.
+
+[arabic, start=4]
+. Service credits
+[arabic]
+.. Accrual of Service Credits shall entitle the Department to a
+reduction in the Charges.
+.. Financial consequences of Service Credits will be calculated against
+the Total Contract Value. The Contractor shall off-set the value of any
+Service Credits against the Charges for the Contract up to a maximum of
+4% of the Total Contract Value.
+.. The Contractor confirms that it has taken Service Credits and the
+potential financial consequences into account in calculating the
+Charges. Both Parties agree that the Service Credits are a reasonable
+method of adjusting the Charges to reflect failure to meet minimum
+performance standards.
+.. The financial consequences that will be applied in the event of a
+Service Credit are broken down in Table 3 below.
+.. *Table 3: Service Credits*
++
+[width="100%",cols="43%,57%",options="header",]
+|===
+|*Service Credits accrued:* |*Financial consequence equivalent to:*
+|1 Service Credit |1% of Call-off Contract Value
+|2 Service Credits |2% of Call-off Contract Value
+|3 Service Credits |3% of Call-off Contract Value
+|4 or more Service Credits |4% of Call-off Contract Value
+|===
+

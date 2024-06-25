@@ -1,0 +1,1302 @@
+== Schedule 1: Part 1 – The services
+
+The 2023 Cohort Service Specification is attached as Appendix 1
+
+
+== Schedule 1: Part 2 – The contractor’s solution
+
+The Cohort Brief and Contractors solution is attached as Appendix 2 to
+this Call-off Contract.
+
+SCHEDULE 2: PART 1 – PRICING
+
+=== Definitions
+
+In this Schedule, the following terms shall have the meanings set out
+below:
+
+Operating Surplus::  means any sum identified as the Operating Surplus in the Pricing
+Schedule;
+Output::  means the successful completion of specific deliverables per Participant
+as set out in Table 2 at paragraph 1.4.4.
+Output Payment::  means the price the Department will pay the Contractor per Output
+achieved in accordance with Paragraph 1.5.2.
+Paragraph::  means a paragraph of this Schedule 2: Part 1 unless expressly indicated
+to the contrary.
+Participant::  means an early careers teacher (ECT) or their Mentor.
+Per Participant Price::  means the price set per Participant in the Pricing Template.
+Pricing Schedule::  means the pricing breakdown submitted by the Contractor with its
+framework Tender (included at Annex 1 of Schedule 7 of the Framework
+Agreement) and revised in response to the requirements for the Call-off
+Contract.
+Profit Margin::  means any sum identified as the Profit Margin in the Pricing Schedule.
+Service Fee::  means a monthly fee paid with effect from the Service Commencement Date
+calculated in accordance with Paragraph 1.3.3.
+Total Contract Value::  means the total value of the Services to be delivered under this
+Call-Off Contract. The Total Contract Value is stated in the table at
+Annex 2 and detailed in the Contractors Pricing Schedule included at
+Annex 2.
+
+---
+
+[arabic]
+. The Department shall pay the Contractor the Charges as set out
+in Annex 2 for delivery of the Services, based on costs as agreed in
+line with the submitted Pricing Schedule, subject to satisfying the
+Department’s payment conditions for the delivery of Services.
+
+. The Department shall pay the Contractor the Charges in arrears
+for costs relating to the Services in line with the costs submitted in
+the Pricing Schedule and satisfactorily meeting the KPIs, Service Levels
+and Performance Management, as set out in Part 2 of this Schedule 2
+(Performance).
+
+. The Charges are inclusive of all expenses incurred by the
+Contractor in relation to its provision of the Services and unless
+agreed otherwise in writing between the Contractor and the Department,
+the Contractor shall not be entitled to claim any expenses in addition
+to the Charges.
+
+. Indexation shall not apply to the Charges.
+
+. Invoices shall be submitted on the 25^th^ of each month of the
+relevant invoice period. For variable output payments, the Contractor
+must provide supporting evidence that the output has been completed in
+the form of a valid Declaration for each participant. The Declarations
+provided will be validated and verified by the Department and subject to
+audit.
+
+. At any time during the Contract Period (including, for the
+avoidance of doubt, at any time before and/or after payment by the
+Department to the Contractor) the Department shall be entitled to
+validate any claim for payment made by the Contractor. At all times the
+Contractor shall provide all necessary assistance as requested by the
+Department (including without limitation, procuring the consent of
+Service Users) to enable the Department to validate any claim for
+payment made by the Contractor.
+
+=== Charges on Service Users
+
+[start=7]
+. Neither the Contractor nor its agents or Sub-Contractors shall
+levy any charge on Service Users in respect of the Services
+
+=== Charges to Schools (School Contribution)
+
+[start=8]
+. Neither the Contractor nor its agents or Sub-Contractors shall
+levy any charge on schools in respect of the Services.
+
+=== Recovery of Sums Due
+
+[start=9]
+. Whenever under the Contract any sum of money is recoverable
+from the Contractor, or payable by the Contractor (including any sum
+which the Contractor is liable to pay to the Department in respect of
+any breach of the Contract), the Department may unilaterally deduct the
+sum from any sum due, or which at any later time may become due under
+any other agreement or contract with the Department.
+
+. Any overpayment by either Party, whether of the Charges or of
+VAT or otherwise shall be the sum of money recoverable by the Party who
+made the overpayment from the Party in receipt of the overpayment.
+
+. The Contactor shall make any payments due to the Department
+without any deductions whether by way of offset, counterclaim, discount,
+abatement or otherwise unless the Contractor has a valid court order
+requiring an amount equal to such deduction to be paid by Department to
+the Contractor.
+
+. All payments due shall be made within a reasonable time
+unless otherwise specified in the Contract, in cleared funds, to such
+bank or building society as the recipient Party may from time to time
+direct.
+
+=== Disputed Claims
+
+[start=13]
+. Notwithstanding paragraph 5 of this Schedule 2, payment by
+the Department of all or any part of any Charges rendered on an invoice
+or other claim for payment by the Contractor shall not signify approval.
+The Department reserves the right to verify Charges after the date of
+payment and subsequently to recover any sums, which have been overpaid.
+
+. If any part of a claim rendered by the Contractor is disputed
+or subject to question by the Department either before or after payment
+then, upon request, the Contractor shall provide such further
+documentary and oral evidence as the Department may reasonably require
+to verify its liability to pay the amount which is disputed or subject
+to question and the Contractor shall promptly provide such evidence in a
+form satisfactory to the Department.
+
+. If any part of a claim rendered by the Contractor is disputed
+or subject to question by the Department, the Department shall not
+withhold payment of the remainder.
+
+. If any Charge rendered by the Contractor is paid but any part
+of it is disputed or subject to question by the Department and such part
+is subsequently agreed or determined not to have been properly payable
+then the Contractor shall forthwith repay such part to the Department.
+
+. The Department shall be entitled to deduct from sums due to
+the Contractor by way of offset any amounts owed to it or which are in
+dispute or subject to question either in respect of the fee for which
+payment is being made or any previous fee.
+
+=== Continuous Improvement
+
+[start=18]
+. The Contractor shall adopt a policy of continuous improvement
+in relation to the Services pursuant to which it will regularly review
+with the Department the Services and the manner in which it is providing
+the Services with a view to reducing the Department’s costs, and/or
+improving the quality and efficiency of the Services. The Contractor and
+the Department will provide to each other any information, which may be
+relevant to assisting the objectives of continuous improvement and in
+particular reducing costs.
+
+. Without limiting Paragraph 21 of this Schedule 2: Part 1,
+upon a request from the Department, the Contractor shall produce a plan
+for improving the provision of Services and/or reducing the Charges
+(without adversely affecting the performance of the Contract) during
+that year of the Contract (an *"Continuous Improvement Plan"*) for the
+approval of the Department. The Continuous Improvement Plan shall
+include, as a minimum, proposals in respect of the following:
+[arabic]
+.. identifying the emergence of new and evolving technologies, which
+could improve the Services;
+
+.. identifying changes in behaviour by the Department that could/would
+result in a cost saving and a reduction in the Charges;
+
+.. identifying and implementing efficiencies in the Contractor’s
+internal processes and administration that may lead to cost savings and
+reductions in the Charges;
+
+.. identifying and implementing efficiencies in the way the Department
+interacts with the Contractor that may lead to cost savings and
+reductions in the Charges;
+
+.. identifying and implementing efficiencies in the Contractor’s
+supply chain that may lead to cost savings and reductions in the
+Charges;
+
+.. identifying and implementing efficiencies generated from other
+Government contracts or funding arrangements that may lead to cost
+savings and reductions in the Charges;
+
+.. identifying opportunities for savings or efficiencies as a result
+of the Contractors financial benefit from commercial use of the service
+Improvement Plan.
+
+.. baselining the quality of the Contractor’s Services and its cost
+structure and demonstrating the efficacy of its Continuous Improvement
+Plan on each element during the Term; and
+
+.. measuring and reducing the sustainability impacts of the
+Contractor’s operations and supply-chains pertaining to the Services and
+identifying opportunities to assist the Department in meeting its
+sustainability objectives.
+
+. Where requested, a Continuous Improvement Plan shall be
+submitted by the Contractor to the Department for approval within ninety
+(90) Working Days of the Effective Date.
+
+. The Department shall notify the Contractor of its approval or
+rejection of the proposed Continuous Improvement Plan or any updates to
+it within twenty (20) Working Days of receipt. Within ten (10) Working
+Days of receipt of the Department’s notice of rejection and of the
+deficiencies of the proposed Improvement Plan, the Contractor shall
+submit to the Department a revised Continuous Improvement Plan
+reflecting the changes required. Once approved by the Department.
+
+. Once any Improvement Plan has been approved by the
+Department, it shall be agreed as a Contract Change Notice in accordance
+with Schedule 5 (Contract Change Procedure) and:
+[arabic]
+.. the Contractor shall use all reasonable endeavours to provide the
+Services in accordance with the Continuous Improvement Plan; and
+
+.. the Parties agree to meet as soon as reasonably possible following
+the start of each quarter (or as otherwise agreed between the Department
+and the Contractor) to review progress against the Continuous
+Improvement Plan.
+
+. Should the Contractor’s costs in providing the Services to
+the Department be reduced as a result of any changes implemented as a
+result of a Continuous Improvement plan, all of the cost savings shall
+be passed on to the Department by way of a reduction in the Charges for
+the Services agreed in accordance with Schedule 5 (Contract Change
+Procedure).
+
+=== Adjustment of the Charges
+
+[start=24]
+. The Charges may only be varied by means of a Contract Change Notice,
+and in accordance with the provisions of this Contract.
+. Should the Contractor fail to recruit at least 75% of the recruitment
+target (based on eligible Start Declarations) as set out at Annex 2 to
+Schedule 2: Part 1, by 31 October 2023, 31 December 2023 and/or 31 March
+2024 for the 2023 cohort and 31 October 2024, 31 December 2024 and/or 31
+March 2025 for the 2024 cohort, then both parties agree that the Charges
+shall not be considered to represent an accurate reflection of the costs
+incurred by the Contractor and using open book costing methodology the
+Department shall be entitled to validate the costs incurred by the
+Contractor and adjust the Charges as set out in paragraph 1.3.6 in Annex
+1 of this Schedule.
+
+=== Financial Reporting and Audit
+
+[start=26]
+. The Contractor shall keep or cause to be kept full and proper books of
+account in relation to the provision of the Services, and the entries
+made therein, shall be kept up-to-date at all times and shall include
+all such matters and things which are usually entered in books of
+account in the United Kingdom kept by persons or companies engaged in
+concerns of a similar nature in accordance with best accountancy
+practices.
+. Such books of account, invoices, charge out rates, time sheets, or
+other time recording documents kept by the Contractor in connection with
+the provision of the Services and all receipts, invoices, orders,
+contractual documentation and other documentation relating to the
+Services to which the Supplier is a party (“*Open Book Data*”) shall be
+open to inspection by the Authority or any persons appointed to act on
+the Authority's behalf at any reasonable time having made prior
+appointment with the Contractor. The Authority shall be entitled to ask
+for a copy of the Open Book Data or any part thereof which (subject to
+the prior payment of the Contractor's reasonable copying and
+administrative charges) the Contractor shall provide within 10 Workings
+Days of the Authority's written request.
+. If the Authority reasonably considers the Open Book Data does not
+accurately represent and detail sums relating to this Agreement and the
+Services then the Supplier shall provide the Authority with documentary
+evidence relating to such sums and contractual obligations.
+. During the Term, and for a period of 7 years following the end of the
+Term, the Contractor shall:
+[loweralpha]
+.. maintain and retain the Open Book Data; and
+.. disclose and allow the Authority and/or the auditor (whether internal
+or external) of the Authority access to the Open Book Data.
+. The Contractor shall provide, during the Contract Period, two updates
+to the cohort Pricing Schedule that compares the forecast to the actuals
+at Month 12 and at the conclusion of the Cohort at Month 24. The
+Contractor will also supply a monthly profile of deployed FTE for the
+Cohort duration, which is updated for actuals every month and submitted
+to the Department.
+. The Contractor shall co-operate fully and in a timely manner with any
+reasonable request from time to time of the Department or any Audit
+Agents and at the expense of the Contractor to provide documents, or to
+procure the provision of documents, relating to this Contract, and to
+provide, or to procure the provision of, any oral or written explanation
+relating to the same.
+. The Contractor shall instruct its external auditor to provide
+reasonable co-operation with the Audit Agents for the purposes of
+verifying financial information.
+. The Department shall during each audit comply with those security,
+sites, systems and facilities operating procedures of the Contractor
+that the Department deems reasonable and use its reasonable endeavours
+to ensure that the conduct of each audit does not unreasonably disrupt
+the Contractor or delay the provision of the Services.
+
+
+== Annex 1a to Schedule 2: Part 1 – Payment Process for the 2023 Cohort
+
+_Drafting Note: Contractors should refer to the Payment Guidance for
+Academic Year 2022/23 for supplementary information in relation to
+payments for inductions that do not align to the standard process as set
+out in this annex._
+
+. General
+[arabic]
+.. The Charges payable to the Contractor by the Department shall
+consist of:
+[arabic]
+... The Monthly Service Fee;
+... The Output Payments, consisting of;
+[lowerroman]
+.... Participant Start Payments
+.... Participant Retention Payments
+.... Participant Completion Payments
+... Uplift Payment.
+
++
+All subject to and in accordance with the provisions of this Contract.
+
+[arabic,start=2]
+.. Volume Banded Per Participant Prices
+[arabic]
+... The Contractor shall provide the Services in accordance with the
+Volume Banded per Participant Pricing List below in Table 1.
+
+... Table 1 – Volume Banded Per Participant Pricing
++
+[width="100%",cols="25%,17%,17%,41%",options="header",]
+|===
+| |*Lower Limit* |*Upper Limit* |*Per Participant Price*
+|*Volume Band A* |0 |2,000 |[REDACTED]
+|*Volume Band B* |2,001 |4,000 |[REDACTED]
+|*Volume Band C* |4,001+ |N/A |[REDACTED]
+|===
+
+... The Contractor shall deliver the Services in accordance with their
+service proposal at Schedule 1: Part 2, based upon a recruitment target
+of [REDACTED]ECTs and [REDACTED]Mentors, and the relative Per
+Participant Pricing based on the payment bands in Table 1.
+
+.. Service Fee
+[arabic]
+... Subject to the terms of the Contract, the Service Fee will be paid
+to the Contractor on a monthly basis, with effect from the Service
+Commencement Date on the basis set out in Paragraphs 1.3.2, 1.3.3, and
+until the expiry of the Call-off Contract.
+
+... The Service Fee is capped at 40% of the Total Contract Value. Any
+additional Participants enrolled on the programme will be paid as
+follows:
+[arabic]
+.... For additional participants up to 115% of the recruitment
+target, the Department will adjust the Service Fee at the end of the
+recruitment window (31 July 2023) to align to actual Start Declarations
+and backpay any Service Fee payments.
+
+.... Additional participants in excess of 115% of actual Start
+Declarations, and no more than 150%, will only be eligible for payment
+with prior agreement from the Department and will be paid the full
+Volume Banded Per Participant Price in line with the Output Payment
+milestones.
+
+... The Service Fee will be a fixed amount per month, based on the
+total Service Fee sum in the Pricing Schedule, divided by the period
+stated in Paragraph 1.3.1.
+
+... The Contractor must submit invoices by the 25^th^ of every month,
+with the first invoice to be submitted by the 25^th^ June 2023.
+
+... If by 31^st^ December 2023, the staffing headcount profile of the
+Contractor is less than 75% of what was specified in the Pricing
+Template at the point of tender, the Department reserves the right to
+adjust the monthly Service Fee until the staff in post hits the target
+profile.
+
+... As per paragraph 25 of Part 1 of Schedule 2, if by 31st October
+2023, 31 December 2023 or 31 March 2024, the Contractor fails to recruit
+75% of the recruitment target as set out in Annex 2 to Schedule 2: Part
+1, then the Department reserves the right to validate the actual costs
+incurred by the Contractor and may adjust the monthly Service Fee as
+follows:
+[arabic]
+.... If the Contractor has not submitted eligible Start Declarations
+equivalent to 75% of the recruitment target on 31^st^ October 2023, or
+31^st^ December 2023, reduce the Service Fee payments to 75% of the
+current value; and
+
+.... If the Contractor has not submitted eligible Start Declarations
+equivalent to 75% of the recruitment target on 31 March 2024, reduce the
+Service Fee to a value equivalent to the actual number of participants
+recruited.
+
+... Where a Service Fee reduction is triggered, as per paragraph
+1.3.6, then the Contractor shall invoice at the reduced value from the
+month following the recruitment milestone.
+
+.. Output Payments
+[arabic]
+... Subject to the terms of the Contract, the Department shall pay the
+Contractor the applicable Output Payment for each Output that is
+achieved in accordance with the requirements of the Contract. The
+applicable Output Price shall be ascertained by reference to Table 3
+below.
+
+... In order to trigger payment for Output 1 – Participant Start, each
+Participant must start on the programme by 31^st^ December 2023. If a
+Participant that was signed up prior to 31^st^ December does not intend
+on starting the programme, the Contractor may replace them with another
+Participant by 31^st^ December 2023.
+
+... If a Participant withdraws prior to the start of the programme and
+an Output Payment is made for that Participant due to incorrect
+information being supplied by the Contractor or school, the Department
+will be eligible to claw back this payment as per paragraph 1.4.11.
+
+... In order to trigger payment for Outputs Retention Point 1 –
+Retention Point 4, the Participant must remain enrolled and engaged on
+the course until the Milestone Date specified in the table below. If a
+Participant drops off in between two retention points, an output payment
+will be paid for the period between retention points but no output
+payments will be made past that point as the Contractor is no longer
+delivering to that Participant. Contractors will need to have a policy
+on what happens if a Participant drops off the programme.
+
+... Table 2 – Retention Points
++
+[width="100%",cols="44%,28%,28%",options="header",]
+|===
+|*Retention Point* |*Milestone Date* |*Payment Made*
+|*Output 1 - Participant Start* |31^st^ December 2023 |31^st^ January 2024 footnote:[An
+interim payment will be made by the 30^th^ November 2023 for any valid
+declaration submitted by the 31^st^ October 2023. Any valid start
+declaration submitted after this date and prior to the 31^st^ December
+will be paid by the 31st January. The interim payment run will be made
+without an audit and any declarations submitted will be subject to audit
+at the 31^st^ December 2023 audit milestone point.] 
+
+|*Output 2 – Retention Point 1* |31^st^ March 2024 |30^th^ April 2024
+
+|*Output 3 – Retention Point 2* |31^st^ July 2024 |31^st^ August 2024
+
+|*Output 4 – Retention Point 3* |31^st^ December 2024 |31^st^ January
+2025
+
+|*Output 5 – Retention Point 4* |31^st^ March 2025 |30^th^ April 2025
+
+|*Output 6 – Participant Completion* |31^st^ July 2025 |31^st^ August
+2025
+|===
+
+... In order to trigger payment for Output 6 – Participant Completion,
+each Participant must remain enrolled and engaged on the programme, as
+per paragraph 1.4.9, by 31st July 2025 and be on track to complete the
+programme.
+
+... If a Participant is not on track to complete the programme by 31st
+July 2025 due to going on maternity leave, sabbatical leave, working
+part-time or due to illness, but the Participant will continue the
+programme, the Contractor can invoice over a tailored timeframe which
+would need to be agreed with Department, subject to variation of the
+Contract to extend the Contract Period in accordance with Clause 2.2 of
+this Call-off Contract. Output Payments made cannot exceed the total
+amount of Output Payments eligible per Participant in the Pricing
+Schedule. Contractors must have a policy on Participants undertaking a
+reduced term of induction of at least 1 academic year and for the above
+scenarios.
+
+... The Department will pay the Contractor Output Payments based on
+accurate MI returns, including the details below:
+[arabic]
+.... The School’s URN, contact details of the Induction Co-ordinator
+(including name, telephone number and email address), date school signed
+up, date school withdrew/reason for withdrawal when appropriate and
+reason for school not signing up with the Contractor.
+
+.... The Participant’s TRN, role, name, Date of Birth, working
+pattern, email address, date Participant signed up, confirmation of
+Participants continued involvement and reason for withdrawal/deferral
+where applicable.
+
+... The Contractor must submit to the Department evidence that each
+Participant remains engaged on the programme before Output Payments 2 to
+6 are made. Examples of acceptable evidence of a participant remaining
+engaged with the programme include, but are not limited to, confirmation
+of a participant attending a training event or confirmation of a
+Participant completing a minimum of 50% of the self-directed study.
+
+... In the event that the Contractor is unable to evidence a
+Participants ongoing engagement as per clause 1.4.9, they may provide
+alternative evidence, such as confirmation from the School that the
+Participant remains engaged in the programme. Where the Department is
+not satisfied with the evidence submitted, it reserves the right to
+request further information in order to validate a claim made by the
+Contractor and withhold the Output Payment until satisfactory evidence
+of continued engagement is submitted. The Department may also conduct
+spot checks to verify the data is accurate by cross-referencing with
+other MI returns or contacting Schools to validate participation
+engagement data.
+
+... If an MI return or evidence submitted by the Contractor of
+continued engagement is not accurate, and when the Department validates
+and verifies the data provided it emerges that payments have been made
+for Participants who did not start or remain on the course, the
+Department will clawback payments made.
+
+.. Charges for Volume Banded Output Payments
+[arabic]
+... Payment will be made based upon the successful delivery of each
+individual output as set out in Table 3.
+
+... Table 3 - Output Payments
+The following volume based Output Payments shall apply during the
+Contract:
++
+[width="100%",cols="37%,21%,21%,21%",]
+|===
+|*Output Number* a|
+*Output Payment by Outcome (£)*
+
+0 - 2,000 Participants
+
+a|
+*Output Payment by Outcome (£)*
+
+2,001 - 4000 Participants
+
+a|
+*Output Payment by Outcome (£)*
+
+4000+ Participants
+
+a|
+*Output 1*
+
+*Participant Start (20%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 2*
+
+*Retention Point 1 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 3*
+
+*Retention Point 2 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 4*
+
+*Retention Point 3 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 5*
+
+*Retention Point 4 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 6*
+
+*Participant Completion (20%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+|===
+
+... The relevant Volume Bands applicable to each Output Payment will
+be re-calculated at the milestone date and will be based on the number
+of active participants in the cohort at that point.
+
+.. Uplift Payment
+[arabic]
+... The Department will make an Uplift Payment to the Contractor for
+each Participant when they start on the programme at Output 1 –
+Participant Start, if they fulfil the criteria in Paragraph 1.6.2.
+
+... To be eligible for the Uplift Payment, the Participant must be in
+a school that is either in one of the 20% most sparse LADs nationally or
+has at least 40% of pupils eligible for pupil premium. The Department
+will issue a list of schools and Local Department Districts that are
+eligible for Uplift Payments prior to each Annual Cohort Competition.
+
+... If the Participant is at a school that is both in one of the 20%
+most sparse LADS nationally and has at least 40% of pupils eligible for
+pupil premium, the Department will pay the Contractor the same Uplift
+Payment as a Participant who meets one of the specified criteria.
+
+... If, in accordance with Paragraphs 1.6.1 and 1.6.2, the Uplift
+Payment is payable, it shall be calculated on the basis of it being £100
+per Participant.
+
+... The Contractor must invoice for the Uplift Payment when submitting
+all invoices in relation to Output 1. The Department will validate that
+the Participant meets the criteria and retains the right to clawback
+funds in relation to the Uplift Payment if after payment it emerges that
+the Participant does not meet the criteria.
+
+.. Replacement Mentors
+[arabic]
+... If an ECT loses a mentor during the course of the programme, then
+a new mentor can replace the originally allocated mentor. If this
+replacement mentor is new to the programme, they will be considered a
+‘replacement mentor’ for the purposes of this contract. A replacement
+mentor should be offered Part 1 and Part 2 of the Mentor Training
+Programme at the earliest opportunity, while joining Part 3 of the
+training at a point that aligns with their ECT. A replacement mentor is
+entitled to undertake the full Mentor Training Programme, with a
+separate per participant fee being payable to that of the original
+mentor. A replacement mentor should be placed on a replacement mentor
+schedule, this will enable Lead Providers to submit the appropriate
+declarations for that mentor. Further information on the payment
+structure for replacement mentors can be found in the payment guidance.
+
+[arabic, start=2]
+. Pricing of Variations
+[arabic]
+.. The provisions of this Paragraph 2 shall apply to the pricing of any
+Variation (or proposed Variation) and the calculation of any change to
+the Charges consequent upon a Variation (or proposed Variation).
+
+.. The Parties acknowledge that a Variation or proposed Variation may
+have an impact on the Charges in one or more of the following ways –
+[arabic]
+... One-off cost, in which case Paragraph 2.5 shall apply;
+
+... Subject to the Contractor’s obligation to mitigate increases in
+the Charges, a Process Variation may result in an amendment to the
+Output Prices on which the Charges are based, in which case Paragraph
+2.6 shall apply;
+
+... The cost of any up-front investment by the Contractor in order to
+achieve a Variation as set out in Paragraph 2.2.2, in which case
+Paragraph 2.7 shall apply.
+
+.. In any of the cases referred to in Paragraphs 2.2.1 to 2.2.3 above,
+and without prejudice to Paragraph 2, the Contractor shall use the
+Pricing Schedule at Annex 2 of this schedule to demonstrate and justify
+any claim for additional or reduced Charges and/or proposed revisions to
+the Output Payment on which the Charges are based arising as a result of
+any proposed Variation.
+
+.. Where a Variation is requested by either Party under the Change
+Control Procedure then, subject to the terms of the Change Control
+Procedure, the Contractor shall at its own cost prepare, populate and
+submit for the Department’s approval a specific version of the Pricing
+Schedule demonstrating the impact of the proposed Variation which shall:
+[arabic]
+... Be based on and reflect the principles of the Pricing Model having
+regard to any assumptions stated in the Pricing Model which affect the
+Charges;
+
+... Include estimated volumes of each type of resource to be employed
+and the applicable average annual salary for resource employed specified
+in the Pricing Model;
+
+... Include full disclosure of any assumptions underlying such a
+quotation. The Department reserves the right to request further clarity
+around these assumptions and the underlying calculations until it is
+satisfied as to their validity; and
+
+... Include evidence of the cost of any assets required for the
+Variation.
+
+.. Where Paragraph 2.2.1 applies:
+[arabic]
+... The Contractor shall be paid in full upon completion, or by an
+agreed schedule of milestone payments (both payment options subject to
+meeting specified acceptance criteria agreed at the outset).
+
+... The Department shall issue a separate purchase order and the
+Contractor shall raise a separate invoice or credit note in respect of
+the one-off cost.
+
+.. Where Paragraph 2.2.2 applies:
+[arabic]
+... Any necessary changes to the Output Prices for any or all of the
+volume bandings shall be effected by means of changes to the relevant
+Output Prices set out in Table 3.
+
+... Any necessary changes to the Output Prices will be in accordance
+with the original requirements for the completion of the Pricing
+Schedule as set out in the Invitation to Tender, for example the maximum
+cap on Service Fee will still apply.
+
+... The Output Prices shall not be adjusted more than once a quarter.
+The date any Output Price adjustment (“Price Adjustment Effective Date”)
+takes effect shall be at the start of the quarter immediately following
+implementation of the Variation in question. For example, where a
+Process Variation is implemented during the month of September in a
+Contract Year; the relevant Output Prices shall be adjusted with effect
+from 1 October in that Contract Year. If there are several adjustments
+in one quarter, these will be aggregated to make one adjustment at the
+start of the next quarter.
+
+... The Department shall provide the Contractor with a revised Table 3
+of this Schedule by the date any such Variation takes effect (1 January,
+1 April, 1 July, 1 October).
+
+... A Process Variation shall be implemented timeously, and such
+implementation shall not await the Price Adjustment Effective Date.
+
+... If a Process Variation is implemented and there is a demonstrable
+financial loss to a Party due to the relevant Output Payment(s) not
+being adjusted until the Price Adjustment Effective Date (first day of
+next quarter), then the Party impacted in this way can seek recovery of
+the amount due in the following manner:
+[loweralpha]
+.... If it is the Contractor, by submitting a separate invoice and
+supporting documentation; or
+.... If it is the Department, by issuing a credit note request and
+supporting documentation.
++
+Any request to seek recovery of such an amount must be submitted within
+3 Months of the Price Adjustment Effective Date.
+
+.. Where Paragraph 2.2.3 applies, the Process Variation element shall
+be dealt with in accordance with Paragraph 2.6 above and any up-front
+investment required to implement such a Process Variation shall itself
+be dealt with through an adjustment to the relevant Output Price(s)
+under Paragraph 2.6 above or treated as a one-off cost in accordance
+with Paragraph 2.5 above.
+
+.. Following implementation of a Variation, the Department shall make
+any necessary consequential changes and/or updates to Table 3 of this
+Schedule 2: Part 1.
+
+== Annex 1b to Schedule 2: Part 1 – Payment Process for the 2024 Cohort
+
+_Drafting Note: Contractors should refer to the Payment Guidance for
+Academic Year 2022/23 for supplementary information in relation to
+payments for inductions that do not align to the standard process as set
+out in this annex._
+
+_[.mark]#Drafting Note: This Annex is subject to completion via a change
+control note following the 2024 Cohort Review Process.#_
+
+. General
+[arabic]
+.. The Charges payable to the Contractor by the Department shall
+consist of:
+[arabic]
+... The Monthly Service Fee;
++
+... The Output Payments, consisting of;
+    +
+    - Participant Start Payments
+    - Participant Retention Payments
+    - Participant Completion Payments
+
+... Uplift Payment.
++
+All subject to and in accordance with the provisions of this Contract.
+
+[arabic, start=2]
+.. {empty}
+... Volume Banded Per Participant Prices
+
+... The Contractor shall provide the Services in accordance with the
+Volume Banded per Participant Pricing List below in Table 1.
++
+Table 1 – Volume Banded Per Participant Pricing
++
+[width="100%",cols="25%,17%,17%,41%",options="header",]
+|===
+| |*Lower Limit* |*Upper Limit* |*Per Participant Price*
+|*Volume Band A* |0 |2,000 |[REDACTED]
+|*Volume Band B* |2,001 |4,000 |[REDACTED]
+|*Volume Band C* |4,001+ |N/A |[REDACTED]
+|===
+
+... The Contractor shall deliver the Services in accordance with their
+service proposal at Schedule 1: Part 2, based upon a recruitment target
+of [REDACTED] ECTs and their Mentors, and the relative Per Participant
+Pricing based on the payment bands in Table 1.
+
+.. Service Fee
+[arabic]
+... Subject to the terms of the Contract, the Service Fee will be paid
+to the Contractor on a monthly basis, with effect from the Service
+Commencement Date on the basis set out in Paragraphs 1.3.2, 1.3.3, and
+1.3.7 until the expiry of the Call-off Contract.
+
+... The Service Fee is capped at 40% of the Total Contract Value. Any
+additional Participants enrolled on the programme will be paid as
+follows:
+[arabic]
+.... For additional participants up to 115% of the recruitment
+target, the Department will adjust the Service Fee at the end of the
+recruitment window (31 July 2025) to align to actual Start Declarations
+and backpay any Service Fee payments.
+
+.... Additional participants in excess of 115% of actual Start
+Declarations, and no more than 150%, will only be eligible for payment
+with prior agreement from the Department and will be paid the full
+Volume Banded Per Participant Price in line with the Output Payment
+milestones.
+
+... The Service Fee will be a fixed amount per month, based on the
+total Service Fee sum in the Pricing Schedule, divided by the period
+stated in Paragraph 1.3.1.
+
+... The Contractor must submit invoices by the 25^th^ of every month,
+with the first invoice to be submitted by the 25^th^ June 2024.
+
+... If by 31^st^ December 2024, the staffing headcount profile of the
+Contractor is less than 75% of what was specified in the Pricing
+Template at the point of tender, the Department reserves the right to
+adjust the monthly Service Fee until the staff in post hits the target
+profile.
+
+... As per paragraph 25 of Part 1 of Schedule 2, if by 31st October
+2024, 31 December 2024 or 31 March 2025, the Contractor fails to recruit
+75% of the recruitment target as set out in Annex 2 to Schedule 2: Part
+1, then the Department reserves the right to validate the actual costs
+incurred by the Contractor and may adjust the monthly Service Fee as
+follows:
+[arabic]
+.... If the Contractor has not submitted eligible Start Declarations
+equivalent to 75% of the recruitment target on 31^st^ October 2024, or
+31^st^ December 2024, reduce the Service Fee payments to 75% of the
+current value; and
+
+.... If the Contractor has not submitted eligible Start Declarations
+equivalent to 75% of the recruitment target on 31 March 2025, reduce the
+Service Fee to a value equivalent to the actual number of participants
+recruited.
+
+... Where a Service Fee reduction is triggered, as per paragraph
+1.3.6, then the Contractor shall invoice at the reduced value from the
+month following the recruitment milestone.
+
+.. Output Payments
+[arabic]
+... Subject to the terms of the Contract, the Department shall pay the
+Contractor the applicable Output Payment for each Output that is
+achieved in accordance with the requirements of the Contract. The
+applicable Output Price shall be ascertained by reference to Table 3
+below.
+
+... In order to trigger payment for Output 1 – Participant Start, each
+Participant must start on the programme by 31^st^ December 2024. If a
+Participant that was signed up prior to 31^st^ December does not intend
+on starting the programme, the Contractor may replace them with another
+Participant by 31^st^ December 2024.
+
+... If a Participant withdraws prior to the start of the programme and
+an Output Payment is made for that Participant due to incorrect
+information being supplied by the Contractor or school, the Department
+will be eligible to claw back this payment as per paragraph 1.4.11.
+
+... In order to trigger payment for Outputs Retention Point 1 –
+Retention Point 4, the Participant must remain enrolled and engaged on
+the course until the Milestone Date specified in the table below. If a
+Participant drops off in between two retention points, an output payment
+will be paid for the period between retention points but no output
+payments will be made past that point as the Contractor is no longer
+delivering to that Participant. Contractors will need to have a policy
+on what happens if a Participant drops off the programme.
+
+... Table 2 – Retention Points
++
+[width="100%",cols="44%,28%,28%",options="header",]
+|===
+|*Retention Point* |*Milestone Date* |*Payment Made*
+|*Output 1 - Participant Start* |31^st^ December 2024
+|[multiblock footnote omitted]31^st^ January 2025
+
+|*Output 2 – Retention Point 1* |31^st^ March 2025 |30^th^ April 2025
+
+|*Output 3 – Retention Point 2* |31^st^ July 2025 |31^st^ August 2025
+
+|*Output 4 – Retention Point 3* |31^st^ December 2025 |31^st^ January
+2026
+
+|*Output 5 – Retention Point 4* |31^st^ March 2026 |30^th^ April 2026
+
+|*Output 6 – Participant Completion* |31^st^ July 2026 |31^st^ August
+2026
+|===
+
+... In order to trigger payment for Output 6 – Participant Completion,
+each Participant must remain enrolled and engaged on the programme, as
+per paragraph 1.4.9, by 31st July 2026 and be on track to complete the
+programme.
+
+... If a Participant is not on track to complete the programme by 31st
+July 2026 due to going on maternity leave, sabbatical leave, working
+part-time or due to illness, but the Participant will continue the
+programme, the Contractor can invoice over a tailored timeframe which
+would need to be agreed with Department, subject to variation of the
+Contract to extend the Contract Period in accordance with Clause 2.2 of
+this Call-off Contract. Output Payments made cannot exceed the total
+amount of Output Payments eligible per Participant in the Pricing
+Schedule. Contractors must have a policy on Participants undertaking a
+reduced term of induction of at least 1 academic year and for the above
+scenarios.
+
+... The Department will pay the Contractor Output Payments based on
+accurate MI returns, including the details below:
+[arabic]
+.... The School’s URN, contact details of the Induction Co-ordinator
+(including name, telephone number and email address), date school signed
+up, date school withdrew/reason for withdrawal when appropriate and
+reason for school not signing up with the Contractor.
+
+.... The Participant’s TRN, role, name, Date of Birth, working
+pattern, email address, date Participant signed up, confirmation of
+Participants continued involvement and reason for withdrawal/deferral
+where applicable.
+
+... The Contractor must submit to the Department evidence that each
+Participant remains engaged on the programme before Output Payments 2 to
+6 are made. Examples of acceptable evidence of a participant remaining
+engaged with the programme include, but are not limited to, confirmation
+of a participant attending a training event or confirmation of a
+Participant completing a minimum of 50% of the self-directed study.
+
+... In the event that the Contractor is unable to evidence a
+Participants ongoing engagement as per clause 1.4.9, they may provide
+alternative evidence, such as confirmation from the School that the
+Participant remains engaged in the programme. Where the Department is
+not satisfied with the evidence submitted, it reserves the right to
+request further information in order to validate a claim made by the
+Contractor and withhold the Output Payment until satisfactory evidence
+of continued engagement is submitted. The Department may also conduct
+spot checks to verify the data is accurate by cross-referencing with
+other MI returns or contacting Schools to validate participation
+engagement data.
+
+... If an MI return or evidence submitted by the Contractor of
+continued engagement is not accurate, and when the Department validates
+and verifies the data provided it emerges that payments have been made
+for Participants who did not start or remain on the course, the
+Department will clawback payments made.
+
+.. Charges for Volume Banded Output Payments
+[arabic]
+... Payment will be made based upon the successful delivery of each
+individual output as set out in Table 3.
+
+... Table 3 - Output Payments
++
+The following volume based Output Payments shall apply during the
+Contract:
++
+[width="100%",cols="37%,21%,21%,21%",]
+|===
+|*Output Number* a|
+*Output Payment*
+
+*by Outcome (£)*
+
+0 - 2,000 Participants
+
+a|
+*Output Payment*
+
+*by Outcome (£)*
+
+2,001 - 4000 Participants
+
+a|
+*Output Payment*
+
+*by Outcome (£)*
+
+4000+ Participants
+
+a|
+*Output 1*
+
+*Participant Start (20%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 2*
+
+*Retention Point 1 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 3*
+
+*Retention Point 2 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 4*
+
+*Retention Point 3 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 5*
+
+*Retention Point 4 (15%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+a|
+*Output 6*
+
+*Participant Completion (20%)*
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+|===
+
+... The relevant Volume Bands applicable to each Output Payment will
+be re-calculated at the milestone date and will be based on the number
+of active participants in the cohort at that point.
+
+.. Uplift Payment
+[arabic]
+... The Department will make an Uplift Payment to the Contractor for
+each Participant when they start on the programme at Output 1 –
+Participant Start, if they fulfil the criteria in Paragraph 1.6.2.
+
+... To be eligible for the Uplift Payment, the Participant must be in
+a school that is either in one of the 20% most sparse LADs nationally or
+has at least 40% of pupils eligible for pupil premium. The Department
+will issue a list of schools and Local Department Districts that are
+eligible for Uplift Payments prior to each Annual Cohort Competition.
+
+... If the Participant is at a school that is both in one of the 20%
+most sparse LADS nationally and has at least 40% of pupils eligible for
+pupil premium, the Department will pay the Contractor the same Uplift
+Payment as a Participant who meets one of the specified criteria.
+
+... If, in accordance with Paragraphs 1.6.1 and 1.6.2, the Uplift
+Payment is payable, it shall be calculated on the basis of it being £100
+per Participant.
+
+... The Contractor must invoice for the Uplift Payment when submitting
+all invoices in relation to Output 1. The Department will validate that
+the Participant meets the criteria and retains the right to clawback
+funds in relation to the Uplift Payment if after payment it emerges that
+the Participant does not meet the criteria.
+
+.. Replacement Mentors
+[arabic]
+... If an ECT loses a mentor during the course of the programme, then
+a new mentor can replace the originally allocated mentor. If this
+replacement mentor is new to the programme, they will be considered a
+‘replacement mentor’ for the purposes of this contract. A replacement
+mentor should be offered Part 1 and Part 2 of the Mentor Training
+Programme at the earliest opportunity, while joining Part 3 of the
+training at a point that aligns with their ECT. A replacement mentor is
+entitled to undertake the full Mentor Training Programme, with a
+separate per participant fee being payable to that of the original
+mentor. A replacement mentor should be placed on a replacement mentor
+schedule, this will enable Lead Providers to submit the appropriate
+declarations for that mentor. Further information on the payment
+structure for replacement mentors can be found in the payment guidance.
+
+[arabic, start=2]
+. Pricing of variations
+[arabic]
+.. The provisions of this Paragraph 2 shall apply to the pricing of any
+Variation (or proposed Variation) and the calculation of any change to
+the Charges consequent upon a Variation (or proposed Variation).
+
+.. The Parties acknowledge that a Variation or proposed Variation may
+have an impact on the Charges in one or more of the following ways –
+[arabic]
+... One-off cost, in which case Paragraph 2.5 shall apply;
+
+... Subject to the Contractor’s obligation to mitigate increases in
+the Charges, a Process Variation may result in an amendment to the
+Output Prices on which the Charges are based, in which case Paragraph
+2.6 shall apply;
+
+... The cost of any up-front investment by the Contractor in order to
+achieve a Variation as set out in Paragraph 2.2.2, in which case
+Paragraph 2.7 shall apply.
+
+.. In any of the cases referred to in Paragraphs 2.2.1 to 2.2.3 above,
+and without prejudice to Paragraph 2, the Contractor shall use the
+Pricing Schedule at Annex 2 of this schedule to demonstrate and justify
+any claim for additional or reduced Charges and/or proposed revisions to
+the Output Payment on which the Charges are based arising as a result of
+any proposed Variation.
+
+.. Where a Variation is requested by either Party under the Change
+Control Procedure then, subject to the terms of the Change Control
+Procedure, the Contractor shall at its own cost prepare, populate and
+submit for the Department’s approval a specific version of the Pricing
+Schedule demonstrating the impact of the proposed Variation which shall:
+[arabic]
+... Be based on and reflect the principles of the Pricing Model having
+regard to any assumptions stated in the Pricing Model which affect the
+Charges;
+
+... Include estimated volumes of each type of resource to be employed
+and the applicable average annual salary for resource employed specified
+in the Pricing Model;
+
+... Include full disclosure of any assumptions underlying such a
+quotation. The Department reserves the right to request further clarity
+around these assumptions and the underlying calculations until it is
+satisfied as to their validity; and
+
+... Include evidence of the cost of any assets required for the
+Variation.
+
+.. Where Paragraph 2.2.1 applies:
+[arabic]
+... The Contractor shall be paid in full upon completion, or by an
+agreed schedule of milestone payments (both payment options subject to
+meeting specified acceptance criteria agreed at the outset).
+
+... The Department shall issue a separate purchase order and the
+Contractor shall raise a separate invoice or credit note in respect of
+the one-off cost.
+
+.. Where Paragraph 2.2.2 applies:
+[arabic]
+... Any necessary changes to the Output Prices for any or all of the
+volume bandings shall be effected by means of changes to the relevant
+Output Prices set out in Table 3.
+
+... Any necessary changes to the Output Prices will be in accordance
+with the original requirements for the completion of the Pricing
+Schedule as set out in the Invitation to Tender, for example the maximum
+cap on Service Fee will still apply.
+
+... The Output Prices shall not be adjusted more than once a quarter.
+The date any Output Price adjustment (“Price Adjustment Effective Date”)
+takes effect shall be at the start of the quarter immediately following
+implementation of the Variation in question. For example, where a
+Process Variation is implemented during the month of September in a
+Contract Year; the relevant Output Prices shall be adjusted with effect
+from 1 October in that Contract Year. If there are several adjustments
+in one quarter, these will be aggregated to make one adjustment at the
+start of the next quarter.
+
+... The Department shall provide the Contractor with a revised Table 3
+of this Schedule by the date any such Variation takes effect (1 January,
+1 April, 1 July, 1 October).
+
+... A Process Variation shall be implemented timeously, and such
+implementation shall not await the Price Adjustment Effective Date.
+
+... If a Process Variation is implemented and there is a demonstrable
+financial loss to a Party due to the relevant Output Payment(s) not
+being adjusted until the Price Adjustment Effective Date (first day of
+next quarter), then the Party impacted in this way can seek recovery of
+the amount due in the following manner:
+[loweralpha,start=3]
+.... If it is the Contractor, by submitting a separate invoice and
+supporting documentation; or
+.... If it is the Department, by issuing a credit note request and
+supporting documentation.
++
+Any request to seek recovery of such an amount must be submitted within
+3 Months of the Price Adjustment Effective Date.
+
+.. Where Paragraph 2.2.3 applies, the Process Variation element shall
+be dealt with in accordance with Paragraph 2.6 above and any up-front
+investment required to implement such a Process Variation shall itself
+be dealt with through an adjustment to the relevant Output Price(s)
+under Paragraph 2.6 above or treated as a one-off cost in accordance
+with Paragraph 2.5 above.
+
+.. Following implementation of a Variation, the Department shall make
+any necessary consequential changes and/or updates to Table 3 of this
+Schedule 2: Part 1.
+
+== Annex 2 to Schedule 2: Part 1 – Contract Pricing Information
+
+_[.mark]#Drafting Note: The 2024 cohort specific pricing information in
+this Annex is subject to completion via a change control note following
+the 2024 Cohort Review Process.#_
+
+[arabic]
+. {empty}
+[arabic]
+.. The Contractor shall provide the Services in accordance with the
+Pricing Schedule as set out below:
+.. Recruitment Targets:
++
+[width="100%",cols="32%,17%,17%,17%,17%"]
+|===
+|*2023 Cohort* |*Recruitment Milestone* | | |
+| |*31 Oct 23* |*31 Dec 23* |*31 Mar 24* |*31 Jul 24*
+
+|*Recruitment Target* |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*Service Fee Baseline (75%)* |[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED]
+
+|*Maximum Target (115%)* |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*2024 Cohort* |*Recruitment Milestone* | | |
+
+| |*31 Oct 24* |*31 Dec 24* |*31 Mar 25* |*31 Jul 25*
+
+|*Recruitment Target* |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*Service Fee Baseline (75%)* |[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED]
+
+|*Maximum Target (115%)* |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+|===
+[arabic]
+... Performance against the recruitment targets in the above table will be
+based on eligible Start Declarations submitted via the DfE Digital
+Platform.
+
+[arabic, start=3]
+.. Contract Value:
++
+[width="100%",cols="28%,24%,24%,24%"]
+|===
+|*2023 Cohort Value* (1) (2) |*2023 Service Fee (total)* |*2023 Service
+Fee (monthly)* |*2023 Output Payments* (3)
+|[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*2024 Cohort Value* (1) (2) |*2024 Service Fee (total)* |*2024 Service
+Fee (monthly)* |*2024 Output Payments* (3)
+
+|[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*Total Contract Value* (1) (2) | |[REDACTED] |
+|===
+[arabic]
+... This value does not account for any uplift payments which will be made
+in addition to the Total Contract Value as per paragraph 1.6 of Schedule
+2: Part 1. The Total Contract Value may be increased by up to 5% to
+incorporate uplift payments.
+... The contract value can be increased by up to an additional 50% where
+approval has been granted by the Department.
+... The Output Payment value is the maximum amount payable and actual
+payments are subject to successful achievement of the performance
+milestones in paragraph 1.5 of Schedule 2: Part 1.
+
+.. The detailed Pricing Schedules are attached as a separate Schedule
+to this Call-Off Contract.
++
+2023 Cohort
++
+[width="100%",cols="36%,16%,16%,16%,16%",options="header",]
+|===
+|*Cost* |*Year 1* |*Year 2* |*Year 3* |*Total*
+|Staff Costs |[REDACTED] | | |
+
+|Delivery Partner Costs |[REDACTED] | | |
+
+|Other Costs |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|Risk Premium |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|Profit / Surplus |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*SERVICE PROPOSAL COSTS* |[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED]
+|===
++
+2024 Cohort
++
+[width="99%",cols="36%,16%,16%,16%,16%",options="header",]
+|===
+|*Cost* |*Year 1* |*Year 2* |*Year 3* |*Total*
+|Staff Costs |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|Delivery Partner Costs |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|Other Costs |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|Risk Premium |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|Profit / Surplus |[REDACTED] |[REDACTED] |[REDACTED] |[REDACTED]
+
+|*SERVICE PROPOSAL COSTS* |[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED]
+|===
+
+.. The Department reserves the right to increase the value of this Call
+Off Contract, or any individual cohort, up to an additional 50% to
+accommodate any agreed over recruitment. The Department will only make
+payment for any Participants in addition to the total in Paragraph 1.1
+where a request has been submitted in writing and agreed via a Change
+Control Notice. Any agreement for additional Participant is at the
+Departments absolute discretion and will be dependent on available
+budget, demand, and Contractor capacity. Payment for additional
+Participants will be made at the relevant Par Participant Price but paid
+fully in line with the Output Payment Milestones and % breakdowns. For
+the avoidance of doubt, Service Fee payments will remain as per Table 5.
+
+.. The Department will apply a tolerance of 15% to the recruitment
+targets at clause 1.2.2 of Annexes 1a and 1b to Schedule 2: Part 1 –
+Payment Process. This will allow flexibility for an additional 1,020
+ECTs and their assigned Mentors for the 2023 cohort, and [REDACTED] ECTs
+and their assigned Mentors for the 2024 cohort, to be funded without the
+need to seek formal approval from the Department.
+

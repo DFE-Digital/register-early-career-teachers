@@ -1,0 +1,318 @@
+== Schedule 3: Additional clauses
+
+[arabic]
+. Departmental Security Standards
++
+BPSS (Baseline Personnel Security Standard):: level of security clearance described as pre-employment checks in the
+National Vetting Policy. Further information can be found at:
+https://www.gov.uk/government/publications/government-baseline-personnel-security-standard
+
+CCSC (Certified Cyber Security Consultancy):: is NCSC's approach to assessing the services provided by consultancies
+and confirming that they meet NCSC's standards. This approach builds on
+the strength of CLAS and certifies the competence of Contractors to
+deliver a wide and complex range of cyber security consultancy services
+to both the public and private sectors. See website:
++
+https://www.ncsc.gov.uk/scheme/certified-cyber-consultancy
+
+CCP (Certified Professional):: is a NCSC scheme in consultation with government, industry and academia
+to address the growing need for specialists in the cyber security
+profession and are building a community of recognised professionals in
+both the UK public and private sectors. See website:
++
+https://www.ncsc.gov.uk/scheme/certified-professional[[.underline]#https://www.ncsc.gov.uk/scheme/certified-professional#]
+
+CC (Common Criteria):: the Common Criteria scheme provides assurance that a developer’s claims
+about the security features of their product are valid and have been
+independently tested against recognised criteria.
+
+CPA (Commercial Product Assurance, formerly called CESG Product Assurance)::
+is an ‘information assurance scheme’ which evaluates commercial off the
+shelf (COTS) products and their developers against published security
+and development standards. These CPA certified products can be used by
+government, the wider public sector and industry. See website:
+https://www.ncsc.gov.uk/scheme/commercial-product-assurance-cpa[[.underline]#https://www.ncsc.gov.uk/scheme/commercial-product-assurance-cpa#]
+
+Cyber Essentials, Cyber Essentials Plus:: Cyber Essentials is the government backed, industry supported scheme to
+help organisations protect themselves against common cyber-attacks.
+Cyber Essentials and Cyber Essentials Plus are levels within the scheme.
++
+There are a number of certification bodies that can be approached for
+further advice on the scheme; the link below points to one of these
+providers:
++
+https://www.iasme.co.uk/apply-for-self-assessment/
+
+Data, Data Controller, Data Processor, Personal Data, Sensitive Personal Data, Data Subject, Process and Processing:: shall have the meanings given to those terms by the Data Protection Act
+1998
+
+Department’s Data, Department’s Information:: is any data or information owned or retained in order to meet departmental business objectives and tasks, including:
++
+--
+[loweralpha]
+. any data, text, drawings, diagrams, images or sounds
+(together with any repository or database made up of any of these
+components) which are embodied in any electronic, magnetic, optical or
+tangible media, and which are:
+[lowerroman]
+.. supplied to the Contractor by or on behalf of the Department; or
+
+.. which the Contractor is required to generate, process, store
+or transmit pursuant to this Contract; or
+
+. any Personal Data for which the Department is the Data
+Controller;
+--
+
+DfE, Department:: means the Department for Education
++
+--
+Departmental Security Standards |means the Department’s security
+policy or any standards, procedures, process or specification for
+security that the Contractor is required to deliver.
+
+Digital Marketplace / GCloud |the Digital Marketplace is the online
+framework for identifying and procuring cloud technology and people for
+digital projects. Cloud services (e.g. web hosting or IT health checks)
+are on the G-Cloud framework.
+
+FIPS 140-2 |this is the Federal Information Processing Standard
+(FIPS) Publication 140-2, (FIPS PUB 140-2), entitled ‘Security
+Requirements for Cryptographic Modules’. This document is the de facto
+security standard used for the accreditation of cryptographic modules.
+
+General Data Protection Regulation (GDPR) |Replaces Data Protection Act
+clauses for use in contracts that are live on or after 25^th^ May 2018.
+--
+
+
+
+Good Industry Practice, Industry Good Practice:: means the exercise of that degree of skill, care, prudence, efficiency,
+foresight and timeliness as would be expected from a leading company
+within the relevant industry or business sector.
+
+Good Industry Standard, Industry Good Standard:: means the implementation of products and solutions, and the exercise of
+that degree of skill, care, prudence, efficiency, foresight and
+timeliness as would be expected from a leading company within the
+relevant industry or business sector.
+
+GSC, GSCP:: means the Government Security Classification Policy which establishes
+the rules for classifying HMG information. The policy is available at:
+https://www.gov.uk/government/publications/government-security-classifications
+
+HMG:: means His Majesty’s Government
+
+ICT:: means Information and Communications Technology (ICT) is used as
+an extended synonym for information technology (IT), used to describe
+the bringing together of enabling technologies used to deliver the
+end-to-end solution
+
+ISO/IEC 27001 ISO 27001:: is the International Standard for
+Information Security Management Systems Requirements
+
+ISO/IEC 27002 ISO 27002:: is the International Standard describing
+the Code of Practice for Information Security Controls.
+
+ISO 22301:: is the International Standard describing for Business
+Continuity
+
+IT Security Health Check (ITSHC), IT Health Check (ITHC), Penetration Testing:: means an assessment to identify risks and vulnerabilities in systems,
+applications and networks which may compromise the confidentiality,
+integrity or availability of information held on that IT system.
+
+Need-to-Know:: the Need-to-Know principle is employed within HMG to
+limit the distribution of classified information to those people with a
+clear ‘need to know’ in order to carry out their duties.
+
+NCSC:: The National Cyber Security Centre (NCSC) formerly CESG is the
+UK government’s National Technical Department for Information Assurance.
+The NCSC website is
+https://www.ncsc.gov.uk
+
+
+OFFICIAL, OFFICIAL-SENSITIVE::
++
+--
+the term ‘OFFICIAL’ is used to describe the baseline level of ‘security
+classification’ described within the Government Security Classification
+Policy (GSCP) which details the level of protection to be afforded to
+information by HMG, for all routine public sector business, operations
+and services.
+
+the ‘OFFICIAL–SENSITIVE’ caveat is used to identify a limited subset of
+OFFICIAL information that could have more damaging consequences (for
+individuals, an organisation or government generally) if it were lost,
+stolen or published in the media, as described in the Government
+Security Classification Policy.
+--
+
+Secure Sanitisation:: Secure sanitisation is the process of treating data held on storage
+media to reduce the likelihood of retrieval and reconstruction to an
+acceptable level. Some forms of sanitisation will allow you to re-use
+the media, while others are destructive in nature and render the media
+unusable. Secure sanitisation was previously covered by Information
+Assurance Standard No. 5 - Secure Sanitisation (IS5) issued by the
+former CESG. Guidance can now be found at:
+https://www.ncsc.gov.uk/guidance/secure-sanitisation-storage-media
++
+The disposal of physical documents and hardcopy materials advice can be
+found at:
+https://www.cpni.gov.uk/secure-destruction
+
+Security and Information Risk Advisor, CCP SIRA, SIRA:: the Security and Information Risk Advisor (SIRA) is a role defined under
+the NCSC Certified Professional (CCP) Scheme. See also:
++
+https://www.ncsc.gov.uk/articles/about-certified-professional-scheme[[.underline]#https://www.ncsc.gov.uk/articles/about-certified-professional-scheme#]
+
+SPF, HMG Security Policy Framework:: This is the definitive HMG Security Policy which describes the
+expectations of the Cabinet Secretary and Government’s Official
+Committee on Security on how HMG organisations and third parties
+handling HMG information and other assets will apply protective security
+to ensure HMG can function effectively, efficiently and securely.
+https://www.gov.uk/government/publications/security-policy-framework[[.underline]#https://www.gov.uk/government/publications/security-policy-framework#]
+
+Tailored Assurance (formerly called CTAS, or, CESG Tailored Assurance):: is an ‘information assurance scheme’ which provides assurance for a
+wide range of HMG, MOD, Critical National Infrastructure (CNI) and
+public sector customers procuring IT systems, products and services,
+ranging from simple software components to national infrastructure
+networks.
+https://www.ncsc.gov.uk/documents/ctas-principles-and-methodology[[.underline]#https://www.ncsc.gov.uk/documents/ctas-principles-and-methodology#]
+
+[arabic]
+. The Contractor shall comply with Departmental Security Standards for
+Contractors, which include but are not constrained to the following
+clauses;
+. The Contractor shall be able to demonstrate conformance to, and show
+evidence of such conformance to the ISO/IEC 27001 (Information Security
+Management Systems Requirements) standard, including the application of
+controls from ISO/IEC 27002 (Code of Practice for Information Security
+Controls).
+. The Contractor shall follow the UK Government Security Classification
+Policy (GSCP) in respect of any Departmental Data being handled in the
+course of providing this service, and will handle this data in
+accordance with its security classification. (In the event where the
+Contractor has an existing Protective Marking Scheme then the Contractor
+may continue to use this but must map the HMG security classifications
+against it to ensure the correct controls are applied to the
+Departmental Data).
+. The Contractor shall have in place and shall maintain procedural,
+personnel, physical and technical safeguards to protect Departmental
+Data, including but not limited to: physical security controls; good
+industry standard policies and process; anti-virus and firewalls;
+security updates and up-to-date patching regimes for anti-virus
+solutions; operating systems, network devices, and application software,
+user access controls and the creation and retention of audit logs of
+system use.
+. Any data in transit using either physical or electronic transfer
+methods across public space or cyberspace, including mail and couriers
+systems, or third party provider networks must be protected via
+encryption which has been certified to FIPS 140-2 standard or a similar
+method approved by the Department prior to being used for the transfer
+of any Departmental Data.
+. Storage of Departmental Data on any portable devices or media shall be
+limited to the absolute minimum required to deliver the stated business
+requirement and shall be subject to Clause 1.9 and 1.10 below.
+. Any portable removable media (including but not constrained to pen
+drives, flash drives, memory sticks, CDs, DVDs, or other devices) which
+handle, store or process Departmental Data to deliver and support the
+service, shall be under the control and configuration management of the
+contractor or (sub-)contractors providing the service, shall be both
+necessary to deliver the service and shall be encrypted using a product
+which has been certified to FIPS140-2 standard or another encryption
+standard that is acceptable to the Department.
+. All portable ICT devices, including but not limited to laptops,
+tablets, smartphones or other devices, such as smart watches, which
+handle, store or process Departmental Data to deliver and support the
+service, shall be under the control and configuration management of the
+contractor or sub-contractors providing the service, and shall be
+necessary to deliver the service. These devices shall be full-disk
+encrypted using a product which has been certified to FIPS140-2 standard
+or another encryption standard that is acceptable to the Department.
+. Whilst in the Contractor’s care all removable media and hardcopy paper
+documents containing Departmental Data must be handled securely and
+secured under lock and key when not in use and shall be securely
+destroyed when no longer required, using either a cross-cut shredder or
+a professional secure disposal organisation.
+. When necessary to hand carry removable media and/or hardcopy paper
+documents containing Departmental Data, the media or documents being
+carried shall be kept under cover and transported in such a way as to
+ensure that no unauthorised person has either visual or physical access
+to the material being carried. This clause shall apply equally
+regardless of whether the material is being carried inside or outside of
+company premises.
+. At the end of the contract or in the event of equipment failure or
+obsolescence, all Departmental information and data, in either hardcopy
+or electronic format, that is physically held or logically stored on the
+Contractor’s ICT infrastructure must be securely sanitised or destroyed
+and accounted for in accordance with the current HMG policy using a NCSC
+approved product or method. Where sanitisation or destruction is not
+possible for legal, regulatory or technical reasons, such as a Storage
+Area Network (SAN) or shared backup tapes, then the Contractor or
+sub-contractor shall protect the Department’s information and data until
+the time, which may be long after the end of the contract, when it can
+be securely cleansed or destroyed.
+. Access by Contractor or sub-contractor staff to Departmental Data
+shall be confined to those individuals who have a “need-to-know” in
+order to carry out their role; and have undergone mandatory
+pre-employment screening, to a minimum of HMG Baseline Personnel
+Security Standard (BPSS); or hold an appropriate National Security
+Vetting clearance as required by the Department. All Contractor or
+sub-contractor staff must complete this process before access to
+Departmental Data is permitted.
+. All Contractor or sub-contractor employees who handle Departmental
+Data must have annual awareness training in protecting information.
+. The Contractor shall, as a minimum, have in place robust Business
+Continuity arrangements and processes including IT disaster recovery
+plans and procedures that conform to ISO 22301 to ensure that the
+delivery of the contract is not adversely affected in the event of an
+incident. An incident shall be defined as any situation that might, or
+could lead to, a disruption, loss, emergency or crisis to the services
+delivered. If a ISO 22301 certificate is not available the Contractor
+will provide evidence of the effectiveness of their ISO 22301 conformant
+Business Continuity arrangements and processes including IT disaster
+recovery plans and procedures. This should include evidence that the
+Contractor has tested or exercised these plans within the last 12 months
+and produced a written report of the outcome, including required
+actions.
+. Any suspected or actual breach of the confidentiality, integrity or
+availability of Departmental Data being handled in the course of
+providing this service, or any non-compliance with these Departmental
+Security Standards for Contractors, or other Security Standards
+pertaining to the solution, shall be investigated immediately and
+escalated to the Department by a method agreed by both parties.
+. The Contractor shall ensure that any IT systems and hosting
+environments that are used to handle, store or process Departmental Data
+shall be subject to independent IT Health Checks (ITHC) using a NCSC
+approved ITHC provider before go-live and periodically (at least
+annually) thereafter. The findings of the ITHC relevant to the service
+being provided are to be shared with the Department and all necessary
+remedial work carried out. In the event of significant security issues
+being identified, a follow up remediation test may be required.
+. The Contractor or sub-contractors providing the service will provide
+the Department with full details of any storage of Departmental Data
+outside of the UK or any future intention to host Departmental Data
+outside the UK or to perform any form of ICT management, support or
+development function from outside the UK. The Contractor or
+sub-contractor will not go ahead with any such proposal without the
+prior written agreement from the Department.
+. The Department reserves the right to audit the Contractor or
+Sub-Contractors providing the Services within a mutually agreed
+timeframe but always within seven days of notice of a request to audit
+being given. The audit shall cover the overall scope of the service
+being supplied and the Contractor’s, and any sub-contractors, compliance
+with the clauses contained in this Section.
+. The Contractor shall contractually enforce all these Departmental
+Security Standards for Contractors onto any third-party Contractors,
+sub-contractors or partners who could potentially access Departmental
+Data in the course of providing this service.
+. The Contractor and sub-contractors shall undergo appropriate security
+assurance activities as determined by the Department. Contractor and
+sub-contractors shall support the provision of appropriate evidence of
+assurance and the production of the necessary security documentation
+such as completing the DfE Security Assurance Model (DSAM) process or
+the Business Service Assurance Model (BSAM). This will include obtaining
+any necessary professional security resources required to support the
+Contractor and sub-contractor’s security assurance activities such as: a
+NCSC Certified Cyber Security Consultancy (CCSC) or NCSC Certified
+Professional (CCP) Security and Information Risk Advisor (SIRA)
+

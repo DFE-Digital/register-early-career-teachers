@@ -1,0 +1,151 @@
+=== Schedule 4: financial distress
+
+. Defintions
++
+--
+In this Schedule, the following definitions shall apply:
+
+Guarantee Criteria:: In respect of the latest statutory accounts shall demonstrate that the
+Contractor or Guarantor has:
++
+--
+* a current ratio (being current assets divided by current liabilities)
+of one or more; and
+* an acid test ratio (being current assets less stock divided by current
+liabilities) of one or more; and
+* a tangible net worth (being total assets less total intangible fixed
+assets less total liabilities) of more than zero.
+--
+--
+
+
+[arabic, start=2]
+. Financial standing
+[arabic]
+.. If during the Term the Contractor does not meet any of the Guarantee
+Criteria, at the Departments discretion, the Contractor shall procure
+that:
+[loweralpha]
+... an Affiliate of the Contractor which at the relevant time and
+thereafter meets all the Guarantee Criteria shall become a Guarantor and
+shall provide a Guarantee in the form set out in Framework Agreement,
+Schedule 9 (Guarantee): or
+... in the event that a Group Company is not able to meet the Guarantee
+Criteria the Contractor shall provide suitable alternative security in
+the form of:
+[lowerroman]
+.... an ABI Model Form of Guarantee Bond or equivalent bond to a value of
+£2,000,000 (Two Million Pounds); or
+.... an alternative guarantee, the provision of funds or reserves by a third
+party under guarantee, cash, deposit or escrow account as the Department
+may approve (such approval not to be unreasonably withheld or delayed).
+
+.. The Contractor shall:
+[loweralpha]
+... regularly monitor compliance with the Guarantee Criteria; and
+... promptly notify the Department in writing following the occurrence
+of a Financial Distress Event or Key Sub-contractor Financial Distress
+Event or any fact, circumstance or matter which could cause a Financial
+Distress Event or a Key Sub-contractor Financial Distress Event (and in
+any event, ensure that such notification is made within 10 Working Days
+of the date on which the Contractor first becomes aware of the Financial
+Distress Event, the Key Sub-contractor Financial Distress Event or the
+fact, circumstance or matter which could cause a Financial Distress
+Event or a Key Sub-contractor Financial Distress Event).
+
+. Consequences of a financial distress event
+[arabic]
+.. In the event of:
+[loweralpha]
+... the Contractor not meeting the Guarantee Criteria or providing a
+Guarantor that meets the Guarantee Criteria, or providing alternative
+security as set out in paragraph 2.1(b);
+... there being a public investigation into improper financial
+accounting and reporting, suspected fraud or any other impropriety of
+the Contractor, or the Guarantor or any Key Sub-contractor;
+... the Contractor, the Guarantor or any Key Sub-contractor committing a
+material breach of covenant to its lenders;
+... a Key Subcontractor notifying the Department that the Contractor has
+not satisfied any material sums properly due under a specified invoice
+and not subject to a genuine dispute; or
+... any of the following:
+[lowerroman]
+.... commencement of any litigation against the Contractor, the Guarantor or
+any Key Sub-contractor with respect to financial indebtedness greater
+than £5,000,000 million (Five Million Pounds) or obligations under a
+service contract with a total contract value greater than £5,000,000
+million (Five Million Pounds) and which is reasonably likely to be
+adversely determined;
+.... non-payment by the Contractor, the Guarantor or any Key Sub-contractor
+of any material financial indebtedness;
+.... any material financial indebtedness of the Contractor, the Guarantor or
+any Key Sub-contractor becoming due as a result of an event of default;
+or
+.... the cancellation or suspension of any material financial indebtedness in
+respect of the Contractor, the Guarantor or any Key Sub-contractor,
++
+in each case which the Department reasonably believes (or would be
+likely reasonably to believe) could directly impact on the continued
+performance and delivery of the Services in accordance with this
+Agreement;
++
+then, immediately upon notification of the Financial Distress Event (or
+if the Department becomes aware of the Financial Distress Event without
+notification and brings the event to the attention of the Contractor),
+the Contractor shall have the obligations and the Department shall have
+the rights and remedies as set out in Paragraphs 3.2 to 3.3.
+
+.. The Contractor shall (and shall procure that the Guarantor and/or any
+relevant Key Sub-contractor shall):
+[loweralpha]
+... at the request of the Department, meet the Department as soon as
+reasonably practicable (and in any event within 3 Working Days of the
+initial notification (or awareness) of the Financial Distress Event or
+such other period as the Department may permit and notify to the
+Contractor in writing) to review the effect of the Financial Distress
+Event on the continued performance and delivery of the Services in
+accordance with this Agreement; and
+... where the Department reasonably believes (taking into account the
+discussions and any representations made under Paragraph 3.3) that the
+Financial Distress Event could impact on the continued performance and
+delivery of the Services in accordance with this Agreement:
+[lowerroman]
+.... submit to the Department a draft Financial Distress Service Continuity
+Plan as soon as reasonably practicable (and in any event, within
+10 Working Days of the initial notification (or awareness) of the
+Financial Distress Event or such other period as the Department may
+permit and notify to the Contractor in writing); and
+.... provide such financial information relating to the Contractor or the
+Guarantor as the Department may reasonably require.
+
+.. The Contractor shall:
+[loweralpha]
+... on a regular basis (which shall not be less than monthly), review the
+Financial Distress Service Continuity Plan and assess whether it remains
+adequate and up to date to ensure the continued performance and delivery
+of the Services in accordance with this Agreement;
+... where the Financial Distress Service Continuity Plan is not adequate
+or up to date in accordance with Paragraph 3.3(a), submit an updated
+Financial Distress Service Continuity Plan to the Department; and
+... comply with the Financial Distress Service Continuity Plan (including
+any updated Financial Distress Service Continuity Plan).
+
+.. Where the Contractor reasonably believes that the relevant Financial
+Distress Event under Paragraph 3.1 (or the circumstance or matter which
+has caused or otherwise led to it) no longer exists, it shall notify the
+Department and the Parties may agree that the Contractor shall be
+relieved of its obligations under Paragraph 3.3.
+
+. Termination rights
++
+The Department shall notify the Contractor in writing of its intention
+to terminate this Contract under Clause 7.4, following a period of 30
+days to allow the Contractor an opportunity to remedy the default to the
+Department’s satisfaction and at no cost to the Department, if:
+[loweralpha]
+.. the Contractor fails to notify the Department of a Financial Distress
+Event in accordance with Paragraph 2.3(b);
+.. the Contractor fails to comply with the terms of the Financial
+Distress Service Continuity Plan (or any updated Financial Distress
+Service Continuity Plan) in accordance with Paragraph 3.3(c).
+

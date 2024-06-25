@@ -1,0 +1,139 @@
+== Schedule 5: Change control procedure
+
+. Introduction
+[arabic]
+.. This Schedule 5 sets out the Change Control Procedure to be used by
+the Department and the Contractor to effect changes to this Contract.
+
+. Principles
+[arabic]
+.. The Department and the Contractor shall conduct discussions
+relating to proposed changes to this Contract in good faith. Neither
+party shall unreasonably withhold or delay consent to the other party’s
+proposed changes.
+
+.. Until such time as a Change Control Notice (CCN) has been signed by
+both parties, the Contractor shall continue to provide the Services in
+accordance with this Contract.
+
+.. Any work undertaken in connection with any proposed change to this
+Contract by the Contractor, its Sub-Contractors or agents (other than
+that which has previously been agreed in accordance with the provisions
+of paragraph 2.2 of this Schedule 5) shall be undertaken entirely at the
+expense and liability of the Contractor unless otherwise agreed between
+the Department and the Contractor in advance.
+
+.. Any discussions, negotiations or other communications which may
+take place between the parties in connection with any proposed change to
+this Contract, including but not limited to the submission of any
+written communications, prior to the signing by both parties of the
+relevant CCN, shall be without prejudice to the rights of either party.
+
+. Procedure
+[arabic]
+.. Should either party wish to amend this Contract, that party’s
+Contract Manager shall submit a draft CCN in the format at Annex 1 to
+this Schedule 5 for discussion detailing the proposed change to the
+other party’s Contract Manager.
+
+.. Discussion between the parties following the submission of a draft
+CCN shall result in either:
+[arabic]
+... no further action being taken on that draft CCN; or
+
+... agreement between the parties on the changes to be made to
+Contract (including agreement on the date upon which the changes are to
+take effect (the “effective date”)), such agreement to be expressed in
+the form of proposed revisions to the text of the relevant parts of this
+Contract.
+
+.. Where agreement is reached in accordance with paragraph 3.2.2, the
+party submitting the draft CCN shall prepare the final CCN for execution
+by both parties. The final CCN, the content of which has been agreed
+between the parties in accordance with paragraph 3.2.2 of this Schedule
+5, shall be uniquely identified by a sequential number allocated by the
+Department.
+
+.. Two (2) copies of each CCN shall be signed by the Contractor and
+submitted to the Department not less than ten (10) Working Days prior to
+the effective date agreed in accordance with paragraph 3.2.2 of this
+Schedule 5.
+
+.. Subject to the agreement reached in accordance with paragraph 3.2.2
+of this Schedule 5 remaining valid, the Department shall sign both
+copies of the approved CCN within five (5) Working Days of receipt by
+the Department. Following signature by the Department, one (1) copy of
+the signed CCN shall be returned to the Consultant by the Department.
+
+.. A CCN signed by both parties shall constitute a valid variation or
+amendment to the Contract for the purposes of Clause 18.2 of the
+Contract.
+
+== Annex 1 to schedule 5 - contract change note pro forma
+
+=== Contract Change Note for the Contract Change Procedure
+
+[width="100%",cols="33%,66%,options=""]
+|===
+| Contract Reference Number | [unique reference number]
+| Sequential number | [to be allocated by the Department’s Framework Manager]
+| Title | [CCN title]
+| Originator | [the Department / the Contractor]
+| Date change first proposed | [to btee allocated by the Department’s Framework Manager]
+| Number of pages attached | [pages]
+|===
+
+WHEREAS the Contractor and the Department entered into a Call-off
+Contract for the provision of National Roll-Out of the Early Career
+Framework services dated [date] and now wish to amend that
+Contract;
+
+*Reason for proposed change*
+
+{empty}[_[.mark]#Party proposing change to complete#_]
+
+*Full details of proposed change*
+
+{empty}[_[.mark]#Party proposing change to complete#_]
+
+*Details of likely impact, if any, of proposed change on other aspects
+of the Call-off Contract*
+
+{empty}[_[.mark]#Party proposing change to complete#_]
+
+*IT IS AGREED* as follows:
+
+. With effect from [date] it is proposed that the
+Call-off Contract shall be amended as set out below:
++
+Details of the amendments to the Call-off Contract to
+be inserted here – to include the explicit changes required to the text
+in order to effect the change, i.e. Clause/Schedule/paragraph number,
+required deletions and insertions etc.
+
+. Save as herein amended, all other terms and conditions of the
+Call-off Contract inclusive of any previous CCNs shall remain in full
+force and effect.
+
+. The amendments shall be made by way of a Deed of Variation in
+accordance with Clause 18 of this Call-off Contract.
+
+*Signed for and on behalf of the Contractor*
+
+|===
+|Name: |
+|Title: |
+|Date: |
+|Signature: |
+|===
+
+
+*Signed for and on behalf of the Department*
+
+|===
+|Name: |
+|Title: |
+|Date: |
+|Signature: |
+|===
+

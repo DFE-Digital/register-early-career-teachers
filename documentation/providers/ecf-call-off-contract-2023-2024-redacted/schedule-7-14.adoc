@@ -1,0 +1,1645 @@
+== Schedules 7-14
+
+These are omitted as they don't look relevant to the running of ECF and cover things like SLAs, breakages,
+continunity, data safety, certifications, hosting and maintenance.
+
+////
+
+== Schedule 7: not used
+
+
+== Schedule 8: staff transfer
+
+Where applicable refer to the attached Schedule 8
+
+SCHEDULE 9: KEY PERSONNEL AND SUB-CONTRACTORS
+
+*Key Personnel*
+
+The individuals listed in the table below are Key Personnel:
+
+[width="99%",cols="34%,33%,33%",options="header",]
+|===
+|*Name* |*Role* |*Period of Involvement*
+|[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED] |[REDACTED]
+|===
+
+*Key Sub-Contractors*
+
+The Contractor may sub-contract its obligations under the Contract to
+the Sub-Contractors listed in the table below:
+
+[width="100%",cols="39%,25%,36%",options="header",]
+|===
+|*Key Sub-Contractor Name and Address (if not the same as the registered
+office)* |*Registered Office and Company Number* |*Role in delivery of
+the Services*
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] a|
+===== [REDACTED]
+
+|[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] a|
+===== [REDACTED]
+
+|[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] a|
+===== [REDACTED]
+
+|[REDACTED]
+
+|[REDACTED] |[REDACTED] |[REDACTED]
+
+|[REDACTED] a|
+===== [REDACTED]
+
+|[REDACTED]
+|===
+
+* +
+*
+
+SCHEDULE 10: COMMERCIALLY SENSITIVE INFORMATION
+
+1 The Department acknowledges that the Contractor has requested that the
+following information be treated as Commercially Sensitive Information;
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Commercially Sensitive Information* |*Duration of Sensitivity*
+|[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED]
+|[REDACTED] |[REDACTED]
+|===
+
+2 The Department will consult with the Contractor on any request for
+information, identified as Commercially Sensitive, under the FOIA.
+
+3 The Department reserves the right to disclose any Commercially
+Sensitive Information held within this Contract in response to a request
+under the FOIA as set out at clause 13 of this Contract.
+
+4 The Department will automatically publish all information provided by
+the Contractor not identified in this Schedule as constituting
+Commercially Sensitive Information provided that it satisfies the
+requirements of the FOIA.
+
+5 The Department reserves the right to determine whether any information
+provided in this Schedule does constitute Commercially Sensitive
+Information prior to publication.
+
+SCHEDULE 11 - sERVICE CONTINUITY PLAN
+
+[arabic]
+. DEFINITIONS
+. In this Schedule, the following definitions shall apply:
+
+[width="100%",cols="36%,64%",options="header",]
+|===
+|“Business Continuity Plan” |has the meaning given in Paragraph
+2.2(a)(ii);
+|“Business Continuity Services” |has the meaning given in Paragraph
+4.2(b);
+
+|“Department” a|
+a body listed in one of the following sub-categories of the Central
+Government classification of the Public Sector Classification Guide, as
+published and amended from time to time by the Office for National
+Statistics:
+
+[loweralpha]
+. Government Department; or
+. Non-Ministerial Department.
+
+|“Disaster” |the occurrence of one or more events which, either
+separately or cumulatively, mean that the Services, or a material part
+of the Services will be unavailable for a period of 3 months or which is
+reasonably anticipated will mean that the Services or a material part of
+the Services will be unavailable for that period;
+
+|“Disaster Recovery Plan” |has the meaning given in Paragraph
+2.2(a)(iii);
+
+|“Disaster Recovery Services” |the services embodied in the processes
+and procedures for restoring the Services following the occurrence of a
+Disaster;
+
+|“Disaster Recovery System” |the system identified by the Contractor in
+the Contractor Solution which shall be used for the purpose of
+delivering the Disaster Recovery Services;
+
+|“Insolvency Continuity Plan” |has the meaning given in Paragraph
+2.2(a)(iv).
+
+|“Related Service Provider” |any person who provides services to the
+Department in relation to this Agreement from time to time;
+
+|“Review Report” |has the meaning given in Paragraphs 7.2(a) to 7.2(c);
+
+|“Service Continuity Plan” |means the plan prepared pursuant to
+Paragraph 2 of this Schedule which incorporates the Business Continuity
+Plan, Disaster Recovery Plan and the Insolvency Continuity Plan;
+|===
+
+[arabic, start=3]
+. SERVICE CONTINUITY PLAN
+. Within 40 Working Days from the Contract Date the Contractor shall
+prepare and deliver to the Department for the Department’s written
+approval a plan, which shall detail the processes and arrangements that
+the Contractor shall follow to:
+[loweralpha]
+.. ensure continuity of the business processes and operations supported
+by the Services following any failure or disruption of any element of
+the Services (including where caused by an Insolvency Event of the
+Contractor, any Key Sub-contractor and/or any Contractor Group member);
+and
+.. the recovery of the Services in the event of a Disaster.
+. The Service Continuity Plan shall:
+[loweralpha]
+.. be divided into four parts:
+[lowerroman]
+... {blank}
++
+____
+Part A which shall set out general principles applicable to the Service
+Continuity Plan;
+____
+... {blank}
++
+____
+Part B which shall relate to business continuity (the “*Business*
+*Continuity Plan*”);
+____
+... {blank}
++
+____
+Part C which shall relate to disaster recovery (the “*Disaster*
+*Recovery Plan*”);
+____
+... {blank}
++
+____
+Part D which shall relate to an Insolvency Event of the Contractor, any
+Key Sub-contractors and/or any Contractor Group member (the “*Insolvency
+Continuity Plan*”); and
+____
+.. unless otherwise required by the Department in writing, be based upon
+and be consistent with the provisions of Paragraphs 3, 4, 5 and 6.
+. Following receipt of the draft Service Continuity Plan from the
+Contractor, the Department shall:
+[loweralpha]
+.. review and comment on the draft Service Continuity Plan as soon as
+reasonably practicable; and
+.. notify the Contractor in writing that it approves or rejects the
+draft Service Continuity Plan no later than 20 Working Days after the
+date on which the draft Service Continuity Plan is first delivered to
+the Department.
+. If the Department rejects the draft Service Continuity Plan:
+[loweralpha]
+.. the Department shall inform the Contractor in writing of its reasons
+for its rejection; and
+.. the Contractor shall then revise the draft Service Continuity Plan
+(taking reasonable account of the Department's comments) and shall
+re-submit a revised draft Service Continuity Plan to the Department for
+the Department's approval within 20 Working Days of the date of the
+Department's notice of rejection. The provisions of Paragraph 2.3 and
+this Paragraph 2.4 shall apply again to any resubmitted draft Service
+Continuity Plan, provided that either Party may refer any disputed
+matters for resolution by the Dispute Resolution Procedure at any time.
+. SERVICE CONTINUITY PLAN: PART A – GENERAL PRINCIPLES AND REQUIREMENTS
+. Part A of the Service Continuity Plan shall:
+[loweralpha]
+.. set out how the business continuity, disaster recovery and insolvency
+continuity elements of the plan link to each other;
+.. provide details of how the invocation of any element of the Service
+Continuity Plan may impact upon the operation of the Services and any
+services provided to the Department by a Related Service Provider;
+.. contain an obligation upon the Contractor to liaise with the
+Department and (at the Department's request) any Related Service
+Provider with respect to issues concerning business continuity, disaster
+recovery and insolvency continuity where applicable;
+.. detail how the Service Continuity Plan links and interoperates with
+any overarching and/or connected disaster recovery, business continuity
+and/or insolvency continuity plan of the Department and any of its other
+Related Service Providers in each case as notified to the Contractor by
+the Department from time to time;
+.. contain a communication strategy including details of an incident and
+problem management service and advice and help desk facility which can
+be accessed via multi-channels (including but without limitation a
+web-site (with FAQs), e-mail, phone and fax) for both portable and desk
+top configurations, where required by the Department;
+.. contain a risk analysis, including:
+[lowerroman]
+... {blank}
++
+____
+failure or disruption scenarios and assessments and estimates of
+frequency of occurrence;
+____
+... {blank}
++
+____
+identification of any single points of failure within the Services and
+processes for managing the risks arising therefrom;
+____
+... {blank}
++
+____
+identification of risks arising from the interaction of the Services
+with the services provided by a Related Service Provider;
+____
+... {blank}
++
+____
+identification of risks arising from an Insolvency Event of the
+Contractor, any Key Sub-contractors and/or Contractor Group member; and
+____
+... {blank}
++
+____
+a business impact analysis (detailing the impact on business processes
+and operations) of different anticipated failures or disruptions;
+____
+.. provide for documentation of processes, including business processes,
+and procedures;
+.. set out key contact details (including roles and responsibilities)
+for the Contractor (and any Sub-contractors) and for the Department;
+.. identify the procedures for reverting to “normal service”;
+.. set out method(s) of recovering or updating data collected (or which
+ought to have been collected) during a failure or disruption to ensure
+that there is no more than the accepted amount of data loss and to
+preserve data integrity;
+.. identify the responsibilities (if any) that the Department has agreed
+it will assume in the event of the invocation of the Service Continuity
+Plan; and
+.. provide for the provision of technical advice and assistance to key
+contacts at the Department as notified by the Department from time to
+time to inform decisions in support of the Department’s business
+continuity plans.
+. The Service Continuity Plan shall be designed so as to ensure that:
+[loweralpha]
+.. the Services are provided in accordance with this Agreement at all
+times during and after the invocation of the Service Continuity Plan;
+.. the adverse impact of any Disaster; service failure; an Insolvency
+Event of the Contractor, any Key Sub-contractor and/or any Contractor
+Group member; or disruption on the operations of the Department, is
+minimal as far as reasonably possible;
+.. it complies with the relevant provisions of ISO/IEC 22301 and all
+other industry standards from time to time in force; and
+.. there is a process for the management of disaster recovery testing
+detailed in the Service Continuity Plan.
+. The Service Continuity Plan shall be upgradeable and sufficiently
+flexible to support any changes to the Services, to the business
+processes facilitated by and the business operations supported by the
+Services, and/or changes to the Contractor Group structure.
+. The Contractor shall not be entitled to any relief from its
+obligations under the Performance Indicators or to any increase in the
+Charges to the extent that a Disaster occurs as a consequence of any
+breach by the Contractor of this Agreement.
+. SERVICE CONTINUITY PLAN: PART B – BUSINESS CONTINUITY
+
+*PRINCIPLES AND* *CONTENTS*
+
+[arabic, start=14]
+. The Business Continuity Plan shall set out the arrangements that are
+to be invoked to ensure that the business processes and operations
+facilitated by the Services remain supported and to ensure continuity of
+the business operations supported by the Services including, unless the
+Department expressly states otherwise in writing:
+[loweralpha]
+.. the alternative processes (including business processes), options and
+responsibilities that may be adopted in the event of a failure in or
+disruption to the Services; and
+.. the steps to be taken by the Contractor upon resumption of the
+Services in order to address any prevailing effect of the failure or
+disruption including a root cause analysis of the failure or disruption.
+. The Business Continuity Plan shall:
+[loweralpha]
+.. address the various possible levels of failures of or disruptions to
+the Services;
+.. set out the services to be provided and the steps to be taken to
+remedy the different levels of failures of and disruption to the
+Services (such services and steps, the “*Business Continuity*
+*Services*”);
+.. specify any applicable Performance Indicators with respect to the
+provision of the Business Continuity Services and details of any agreed
+relaxation to the Performance Indicators in respect of other Services
+during any period of invocation of the Business Continuity Plan; and
+.. clearly set out the conditions and/or circumstances under which the
+Business Continuity Plan is invoked.
+. SERVICE CONTINUITY PLAN: PART C – DISASTER RECOVERY
+
+*PRINCIPLES AND* *CONTENTS*
+
+[arabic, start=17]
+. The Disaster Recovery Plan shall be designed so as to ensure that upon
+the occurrence of a Disaster the Contractor ensures continuity of the
+business operations of the Department supported by the Services
+following any Disaster or during any period of service failure or
+disruption with, as far as reasonably possible, minimal adverse impact.
+. The Disaster Recovery Plan shall be invoked only upon the occurrence
+of a Disaster.
+. The Disaster Recovery Plan shall include the following:
+[loweralpha]
+.. the technical design and build specification of the Disaster Recovery
+System;
+.. details of the procedures and processes to be put in place by the
+Contractor in relation to the Disaster Recovery System and the provision
+of the Disaster Recovery Services and any testing of the same including
+but not limited to the following:
+[lowerroman]
+... {blank}
++
+____
+data centre and disaster recovery site audits;
+____
+... {blank}
++
+____
+backup methodology and details of the Contractor's approach to data
+back-up and data verification;
+____
+... {blank}
++
+____
+identification of all potential disaster scenarios;
+____
+... {blank}
++
+____
+risk analysis;
+____
+... {blank}
++
+____
+documentation of processes and procedures;
+____
+... {blank}
++
+____
+hardware configuration details;
+____
+... {blank}
++
+____
+network planning including details of all relevant data networks and
+communication links;
+____
+... {blank}
++
+____
+invocation rules;
+____
+... {blank}
++
+____
+Service recovery procedures; and
+____
+... {blank}
++
+____
+steps to be taken upon resumption of the Services to address any
+prevailing effect of the failure or disruption of the Services;
+____
+.. any applicable Performance Indicators with respect to the provision
+of the Disaster Recovery Services and details of any agreed relaxation
+to the Performance Indicators in respect of other Services during any
+period of invocation of the Disaster Recovery Plan;
+.. details of how the Contractor shall ensure compliance with security
+standards ensuring that compliance is maintained for any period during
+which the Disaster Recovery Plan is invoked;
+.. access controls to any disaster recovery sites used by the Contractor
+in relation to its obligations pursuant to this Schedule; and
+.. testing and management arrangements.
+. SERVICE CONTINUITY PLAN: PART D – INSOLVENCY CONTINUITY PLAN
+
+*PRINCIPLES AND* *CONTENTS*
+
+[arabic, start=21]
+. The Insolvency Continuity Plan shall be designed by the Contractor to
+permit continuity of the business operations of the Department supported
+by the Services through continued provision of the Services following an
+Insolvency Event of the Contractor, any Key Sub-contractor and/or any
+Contractor Group member with, as far as reasonably possible, minimal
+adverse impact.
+. The Insolvency Continuity Plan shall include the following:
+[loweralpha]
+.. communication strategies which are designed to minimise the potential
+disruption to the provision of the Services, including key contact
+details in respect of the supply chain and key contact details for
+operational and contract Contractor Personnel, Key Sub-contractor
+personnel and Contractor Group member personnel;
+.. identification, explanation, assessment and an impact analysis of
+risks in respect of dependencies between the Contractor, Key
+Sub-contractors and Contractor Group members where failure of those
+dependencies could reasonably have an adverse impact on the Services;
+.. plans to manage and mitigate identified risks;
+.. details of the roles and responsibilities of the Contractor, Key
+Sub-contractors and/or Contractor Group members to minimise and mitigate
+the effects of an Insolvency Event of such persons on the Services;
+.. details of the recovery team to be put in place by the Contractor
+(which may include representatives of the Contractor, Key
+Sub-contractors and Contractor Group members); and
+.. sufficient detail to enable an appointed insolvency practitioner to
+invoke the plan in the event of an Insolvency Event of the Contractor.
+. REVIEW AND AMENDMENT OF THE SERVICE CONTINUITY PLAN
+. The Contractor shall review and update the Service Continuity Plan
+(and the risk analysis on which it is based):
+[loweralpha]
+.. on a regular basis and as a minimum once every 6 months;
+.. within three calendar months of the Service Continuity Plan (or any
+part) having been invoked pursuant to Paragraph 9;
+.. within 14 days of a Financial Distress Event;
+.. within 30 days of a Corporate Change Event; and
+.. where the Department requests any additional reviews (over and above
+those provided for in Paragraphs 7.1(a) to 7.1(d)) by notifying the
+Contractor to such effect in writing, whereupon the Contractor shall
+conduct such reviews in accordance with the Department's written
+requirements. Prior to starting its review, the Contractor shall provide
+an accurate written estimate of the total costs payable by the
+Department for the Department’s approval. The costs of both Parties of
+any such additional reviews shall be met by the Department except that
+the Contractor shall not be entitled to charge the Department for any
+costs that it may incur above any estimate without the Department’s
+prior written approval.
+. Each review of the Service Continuity Plan pursuant to Paragraph 7.1
+shall be a review of the procedures and methodologies set out in the
+Service Continuity Plan and shall assess their suitability having regard
+to any change to the Services or any underlying business processes and
+operations facilitated by or supported by the Services which have taken
+place since the later of the original approval of the Service Continuity
+Plan or the last review of the Service Continuity Plan and shall also
+have regard to any occurrence of any event since that date (or the
+likelihood of any such event taking place in the foreseeable future)
+which may increase the likelihood of the need to invoke the Service
+Continuity Plan. The review shall be completed by the Contractor within
+the period required by the Service Continuity Plan or, if no such period
+is required, within such period as the Department shall reasonably
+require. The Contractor shall, within 20 Working Days of the conclusion
+of each such review of the Service Continuity Plan, provide to the
+Department a report (a “*Review* *Report*”) setting out:
+[loweralpha]
+.. the findings of the review;
+.. any changes in the risk profile associated with the Services; and
+.. the Contractor's proposals (the “*Contractor's Proposals*”) for
+addressing any changes in the risk profile and its proposals for
+amendments to the Service Continuity Plan following the review detailing
+the impact (if any and to the extent that the Contractor can reasonably
+be expected to be aware of the same) that the implementation of such
+proposals may have on any services or systems provided by a third party.
+. Following receipt of the Review Report and the Contractor’s Proposals,
+the Department shall:
+[loweralpha]
+.. review and comment on the Review Report and the Contractor’s
+Proposals as soon as reasonably practicable; and
+.. notify the Contractor in writing that it approves or rejects the
+Review Report and the Contractor’s Proposals no later than 20 Working
+Days after the date on which they are first delivered to the Department.
+. If the Department rejects the Review Report and/or the Contractor’s
+Proposals:
+[loweralpha]
+.. the Department shall inform the Contractor in writing of its reasons
+for its rejection; and
+.. the Contractor shall then revise the Review Report and/or the
+Contractor’s Proposals as the case may be (taking reasonable account of
+the Department's comments and carrying out any necessary actions in
+connection with the revision) and shall re-submit a revised Review
+Report and/or revised Contractor’s Proposals to the Department for the
+Department's approval within 20 Working Days of the date of the
+Department's notice of rejection. The provisions of Paragraph 7.3 and
+this Paragraph 7.4 shall apply again to any resubmitted Review Report
+and Contractor’s Proposals, provided that either Party may refer any
+disputed matters for resolution by the Dispute Resolution Procedure at
+any time.
+. The Contractor shall as soon as is reasonably practicable after
+receiving the Department's approval of the Contractor's Proposals
+(having regard to the significance of any risks highlighted in the
+Review Report) effect any change in its practices or procedures
+necessary so as to give effect to the Contractor's Proposals. Any such
+change shall be at the Contractor’s expense unless it can be reasonably
+shown that the changes are required because of a material change to the
+risk profile of the Services.
+. TESTING OF THE SERVICE CONTINUITY PLAN
+. The Contractor shall test the Service Continuity Plan on a regular
+basis (and in any event not less than once in every Contract Year).
+Subject to Paragraph 8.2, the Department may require the Contractor to
+conduct additional tests of some or all aspects of the Service
+Continuity Plan at any time where the Department considers it necessary,
+including where there has been any change to the Services or any
+underlying business processes, or on the occurrence of any event which
+may increase the likelihood of the need to implement the Service
+Continuity Plan.
+. If the Department requires an additional test of the Service
+Continuity Plan, it shall give the Contractor written notice and the
+Contractor shall conduct the test in accordance with the Department's
+requirements and the relevant provisions of the Service Continuity Plan.
+The Contractor's costs of the additional test shall be borne by the
+Department unless the Service Continuity Plan fails the additional test
+in which case the Contractor's costs of that failed test shall be borne
+by the Contractor.
+. The Contractor shall undertake and manage testing of the Service
+Continuity Plan in full consultation with the Department and shall
+liaise with the Department in respect of the planning, performance, and
+review, of each test, and shall comply with the reasonable requirements
+of the Department in this regard. Each test shall be carried out under
+the supervision of the Department or its nominee.
+. The Contractor shall ensure that any use by it or any Sub-contractor
+of “live” data in such testing is first approved with the Department.
+Copies of live test data used in any such testing shall be (if so
+required by the Department) destroyed or returned to the Department on
+completion of the test.
+. The Contractor shall, within 20 Working Days of the conclusion of each
+test, provide to the Department a report setting out:
+[loweralpha]
+.. the outcome of the test;
+.. any failures in the Service Continuity Plan (including the Service
+Continuity Plan's procedures) revealed by the test; and
+.. the Contractor's proposals for remedying any such failures.
+. Following each test, the Contractor shall take all measures requested
+by the Department, (including requests for the re-testing of the Service
+Continuity Plan) to remedy any failures in the Service Continuity Plan
+and such remedial activity and re-testing shall be completed by the
+Contractor, at no additional cost to the Department, by the date
+reasonably required by the Department and set out in such notice.
+. For the avoidance of doubt, the carrying out of a test of the Service
+Continuity Plan (including a test of the Service Continuity Plan’s
+procedures) shall not relieve the Contractor of any of its obligations
+under this Agreement.
+. The Contractor shall also perform a test of the Service Continuity
+Plan in the event of any major reconfiguration of the Services or as
+otherwise reasonably requested by the Department.
+. INVOCATION OF THE SERVICE CONTINUITY PLAN
+. In the event of a loss of any critical part of the Service or a
+Disaster, the Contractor shall immediately invoke the business
+continuity and disaster recovery provisions in the Service Continuity
+Plan, including any linked elements in other parts of the Service
+Continuity Plan, and shall inform the Department promptly of such
+invocation. In all other instances the Contractor shall invoke the
+business continuity and disaster recovery plan elements only with the
+prior consent of the Department.
+. The Insolvency Continuity Plan element of the Service Continuity
+Plans, including any linked elements in other parts of the Service
+Continuity Plan, shall be invoked by the Contractor:
+[loweralpha]
+.. where an Insolvency Event of a Key Sub-contractor and/or Contractor
+Group member (other than the Contractor) could reasonably be expected to
+adversely affect delivery of the Services; and/or
+.. where there is an Insolvency Event of the Contractor and the
+insolvency arrangements enable the Contractor to invoke the plan;
++
+SCHEDULE 12 – BREAKAGE COSTS
+
+== *DEFINITIONS*
+
+=== In this Schedule, the following definitions shall apply:
+
+[width="100%",cols="31%,69%",options="header",]
+|===
+|*“Applicable Contractor Personnel”* a|
+any Contractor Personnel who:
+
+[lowerroman]
+. {blank}
++
+____
+at the Termination Date:
+____
+
+[loweralpha]
+. {blank}
++
+____
+are employees of the Contractor;
+____
+. {blank}
++
+____
+are Dedicated Contractor Personnel;
+____
+. {blank}
++
+____
+have not transferred (and are not in scope to transfer at a later date)
+to the Department or the Replacement Contractor as a result of the
+operation of TUPE; and
+____
+
+[lowerroman, start=2]
+. {blank}
++
+____
+are dismissed or given notice of dismissal by the Contractor within:
+____
+
+[loweralpha, start=4]
+. {blank}
++
+____
+40 Business Days of the Termination Date; or
+____
+. {blank}
++
+____
+such longer period required by Law, their employment contract (as at the
+Termination Date) or an applicable collective agreement; and
+____
++
+{empty}(iii) have not resigned or given notice of resignation prior to
+the date of their dismissal by the Contractor; and
+
+{empty}(iv) the Contractor can demonstrate to the satisfaction of the
+Department__:__
+
+[loweralpha]
+. {blank}
++
+____
+are surplus to the Contractor's requirements after the Termination Date
+notwithstanding its obligation to provide services to its other
+customers;
+____
+. {blank}
++
+____
+are genuinely being dismissed for reasons of redundancy; and
+____
+. {blank}
++
+____
+have been selected for redundancy by the Contractor on objective grounds
+other than the fact that the Contractor is entitled to reimbursement
+under this provision in respect of such employees;
+____
+
+|*“Assets”* |means all assets and rights used by the Contractor to
+provide the Services in accordance with this Contract but excluding any
+assets belonging to the Department;
+
+|*“Breakage Costs Payment”* |an amount equal to the Redundancy Costs and
+the Contract Breakage Costs as at the Termination Date as determined in
+accordance with Paragraph 2;
+
+|*“Contract Breakage Costs”* |the amounts payable by the Contractor to
+its Key Sub-Contractors or other third parties (as applicable) for
+terminating all relevant Key Sub-Contracts as a direct result of the
+early termination of this Contract;
+
+|*“Dedicated Contractor Personnel”* |all Contractor Personnel then
+assigned to the Services or any part of the Services. If the Contractor
+is unsure as to whether Contractor Personnel are or should be regarded
+as so assigned, it shall consult with the Department whose view shall be
+determinative provided that the employee has been materially involved in
+the provision of the Services or any part of the Services;
+
+|*“Former Contractor”* |a contractor supplying services to the
+Department before the Relevant Transfer Date that are the same as or
+substantially similar to the Services (or any part of the Services) and
+shall include any Sub-Contractor of such contractor
+
+|*“Redundancy Costs”* a|
+the total sum of any of the following sums paid to Applicable Contractor
+Personnel, each amount apportioned between the Contractor and the
+Department based on the time spent by such employee on the Services as a
+proportion of the total Service duration:
+
+[loweralpha]
+. any statutory redundancy payment; and
+. in respect of an employee who was a Transferring Former Contractor
+Employee any contractual redundancy payment (or where such a contractual
+benefit on redundancy is a benefit payable from a pension scheme, the
+increase in cost to the Contractor as a net present value compared to
+the benefit payable on termination of employment without redundancy),
+provided that such employee was entitled to such contractual redundancy
+payment immediately prior to his or her transfer to the Contractor as a
+result of the operation of TUPE;
+
+|*“Relevant Transfer”* |a transfer of employment to which TUPE applies.
+
+|*“Relevant Transfer Date”* |in relation to a Relevant Transfer, the
+date upon which the Relevant Transfer takes place.
+
+|*“Request for Estimate”* |a written request sent by the Department to
+the Contractor, requiring that the Contractor provide it with an
+accurate estimate of the Breakage Costs Payment that would be payable if
+the Department exercised its right under Clause 25.11 (Termination) to
+terminate this Contract for convenience on a specified Termination Date;
+
+|*“Termination Estimate”* |has the meaning given in Paragraph 8.2;
+
+|“Transferring Former Contractor Employees” |in relation to a Former
+Contractor, those employees of the Former Contractor to whom TUPE will
+apply on the Relevant Transfer Date; and
+|===
+
+== *BREAKAGE COSTS PAYMENT*
+
+=== The Contractor may recover through the Breakage Costs Payment only those costs incurred by the Contractor directly as a result of the termination of this Contract which:
+
+==== would not have been incurred had this Contract continued until expiry of the Initial Contract Period, or in the event that the Term has been extended, the expiry of the Extension Period; 
+
+==== are unavoidable, proven, reasonable, and not capable of recovery;
+
+==== are incurred under arrangements or agreements that are directly associated with this Contract;
+
+==== are not Contract Breakage Costs relating to contracts or Sub‑Contracts with Affiliates of the Contractor; and
+
+==== relate directly to the termination of the Services. 
+
+*Limitation on Breakage Costs Payment*
+
+=== The Breakage Costs Payment shall not exceed the lower of:
+
+==== the relevant limit set out in Annex 1 (Maximum Breakage Costs); and
+
+==== 120% of the estimate for the Breakage Costs Payment set out in any relevant Termination Estimate.
+
+*Redundancy Costs*
+
+=== The Department shall not be liable under this Schedule for any costs associated with Contractor Personnel (whether relating to redundancy, redeployment or otherwise) other than the Redundancy Costs.
+
+=== Where the Contractor can demonstrate that a member of Contractor Personnel will be made redundant following termination of this Contract, but redeployment of such person is possible and would offer value for money to the Department when compared with redundancy, then the Department shall pay the Contractor the actual direct costs incurred by the Contractor or its Sub-contractor arising out of the redeployment of such person (including retraining and relocation costs) subject to a maximum amount of £30,000 per relevant member of the Contractor Personnel. 
+
+*Contract Breakage Costs*
+
+=== The Contractor shall be entitled to Contract Breakage Costs only in respect of Sub-Contracts which:
+
+==== are not assigned or novated to a Replacement Contractor at the request of the Department); and
+
+==== the Contractor can demonstrate:
+
+===== are surplus to the Contractor’s requirements after the Termination Date, whether in relation to use internally within its business or in providing services to any of its other customers; and
+
+===== have been entered into by it in the ordinary course of business. 
+
+=== The Contractor shall seek to negotiate termination of any Sub-Contracts with the relevant Sub-Contractor (as the case may be) using all reasonable endeavours to minimise the cancellation or termination charges.
+
+=== Except with the prior written agreement of the Department, the Department shall not be liable for any costs (including cancellation or termination charges) that the Contractor is obliged to pay in respect of:
+
+==== the termination of any contractual arrangements for occupation of, support of and/or services provided for Contractor premises which may arise as a consequence of the termination of this Contract; and/or
+
+==== Assets not yet installed at the Termination Date.
+
+== *MITIGATION OF CONTRACT BREAKAGE COSTS AND REDUNDANCY COSTS AND UNRECOVERED COSTS*
+
+=== The Contractor agrees to use all reasonable endeavours to minimise and mitigate Contract Breakage Costs and Redundancy Costs by:
+
+==== the appropriation of Assets, employees and resources for other purposes; 
+
+==== at the Department’s request, assigning any Sub-contracts to the Department or a third party acting on behalf of the Department; and
+
+==== in relation to Sub-Contracts that are not to be assigned to the Department or to another third party, terminating those contracts at the earliest possible date without breach or where contractually permitted.
+
+=== If Assets, employees and resources can be used by the Contractor for other purposes, then there shall be an equitable reduction in the Contract Breakage Costs, and Redundancy Costs payable by the Department or a third party to the Contractor. In the event of any dispute arising over whether the Contractor can use any Assets, employees and/or resources for other purposes and/or over the amount of the relevant equitable reduction, the dispute shall be determined in accordance with the procedure set out in Clause 39 (Dispute Resolution).
+
+== *FULL AND FINAL SETTLEMENT*
+
+4.1 Any Breakage Costs paid under this Schedule shall be in full and
+final settlement of any claim, demand and/or proceedings of the
+Contractor in relation to any termination by the Department pursuant to
+Clause 25.11 (Termination) and the Contractor shall be excluded from all
+other rights and remedies it would otherwise have been entitled to in
+respect of any such termination.
+
+== *INVOICING FOR THE PAYMENTS ON TERMINATION*
+
+5.1 All sums due under this Schedule shall be payable by the Department
+to the Contractor in accordance with the payment terms set out in
+Schedule 3 (Financials).
+
+== *SET OFF*
+
+6.1 The Department shall be entitled to set off any outstanding
+liabilities of the Contractor against any amounts that are payable by it
+pursuant to this Schedule.
+
+== *NO DOUBLE RECOVERY*
+
+=== If any amount payable under this Schedule (in whole or in part) relates to or arises from any Assets that are to transfer to the Department then, to the extent that the Department makes any payments pursuant to the Exit Plan that the Contractor shall draft in accordance with Clause 27.2 of the Contract in respect of such Assets, such payments shall be deducted from the amount payable pursuant to this Schedule.
+
+=== The value of the Breakage Costs Payment shall be reduced or extinguished to the extent that the Contractor has already received the Charges or the financial benefit of any other rights or remedy given under this Contract so that there is no double counting in calculating the relevant payment.
+
+=== Any payments that are due in respect of Assets that are to transfer to the Department shall be calculated in accordance with provisions agreed between the Parties and detailed in the Exit Plan.
+
+== *ESTIMATE OF TERMINATION PAYMENT AND COMPENSATION PAYMENT*
+
+=== The Department may issue a Request for Estimate at any time during the Term provided that no more than 2 Requests for Estimate may be issued in any 6 month period.
+
+=== The Contractor shall within 20 Business Days of receiving the Request for Estimate (or such other timescale agreed between the Parties), provide an accurate written estimate of the Breakage Costs that would be payable by the Department based on a postulated Termination Date specified in the Request for Estimate (such estimate being the “Termination Estimate”). The Termination Estimate shall:
+
+==== be based on the relevant amounts set out in the Financial Model; 
+
+==== include:
+
+===== details of the mechanism by which the Termination Payment is calculated;
+
+===== full particulars of the estimated Contract Breakage Costs in respect of each Sub-Contract and appropriate supporting documentation; and
+
+===== such information as the Department may reasonably require; and
+
+==== state the period for which that Termination Estimate remains valid, which shall be not less than 20 Business Days.
+
+=== The Contractor acknowledges that issue of a Request for Estimate shall not be construed in any way as to represent an intention by the Department to terminate this Contract.
+
+==  +
+ANNEX 1: MAXIMUM BREAKAGE COSTS PAYMENT
+
+The table below sets out, by Contract Year, the maximum amount of
+Breakage Costs that the Department shall be liable to pay to the
+Contractor pursuant to this Contract:
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Termination Date* |*Maximum Breakage Costs Payment*
+|Anytime in the first Contract Year |£350,000.00
+|Anytime in the second Contract Year |£150,000.00
+|===
+
+* +
+*
+
+SCHEDULE 13 – CONDUCT OF CLAIMS
+
+*1. INDEMNITIES*
+
+1.1 This Schedule shall apply to the conduct, by a Party from whom an
+indemnity is sought under this Agreement (the “Indemnifier”), of claims
+made by a third person against a party having (or claiming to have) the
+benefit of the indemnity (the “Beneficiary”).
+
+1.2 If the Beneficiary receives any notice of any claim for which it
+appears that the Beneficiary is, or may become, entitled to
+indemnification under this Agreement (a “Claim”), the Beneficiary shall
+give notice in writing to the Indemnifier as soon as reasonably
+practicable and in any event within 10 Working Days of receipt of the
+same.
+
+1.3 Subject to Paragraph 2, on the giving of a notice by the
+Beneficiary, where it appears that the Beneficiary is or may be entitled
+to indemnification from the Indemnifier in respect of all (but not part
+only) of the liability arising out of the Claim, the Indemnifier shall
+(subject to providing the Beneficiary with a secured indemnity to its
+reasonable satisfaction against all costs and expenses that it may incur
+by reason of such action) be entitled to dispute the Claim in the name
+of the Beneficiary at the Indemnifier’s own expense and take conduct of
+any defence, dispute, compromise or appeal of the Claim and of any
+incidental negotiations relating to the Claim. If the Indemnifier does
+elect to conduct the Claim, the Beneficiary shall give the Indemnifier
+all reasonable cooperation, access and assistance for the purposes of
+such Claim and, subject to Paragraph 2.2, the Beneficiary shall not make
+any admission which could be prejudicial to the defence or settlement of
+the Claim without the prior written consent of the Indemnifier.
+
+1.4 With respect to any Claim conducted by the Indemnifier pursuant to
+Paragraph 1.3:
+
+{empty}(a) the Indemnifier shall keep the Beneficiary fully informed and
+consult with it about material elements of the conduct of the Claim;
+
+{empty}(b) the Indemnifier shall not bring the name of the Beneficiary
+into disrepute;
+
+{empty}(c) the Indemnifier shall not pay or settle such Claim without
+the prior written consent of the Beneficiary, such consent not to be
+unreasonably withheld or delayed; and
+
+{empty}(d) the Indemnifier shall conduct the Claim with all due
+diligence.
+
+1.5 The Beneficiary shall be entitled to have conduct of the Claim and
+shall be free to pay or settle any Claim on such terms as it thinks fit
+and without prejudice to its rights and remedies under this Agreement
+if:
+
+{empty}(a) the Indemnifier is not entitled to take conduct of the Claim
+in accordance with Paragraph 1.3;
+
+{empty}(b) the Indemnifier fails to notify the Beneficiary in writing of
+its intention to take conduct of the relevant Claim within 10 Working
+Days of the notice from the Beneficiary or if the Indemnifier notifies
+the Beneficiary in writing that it does not intend to take conduct of
+the Claim; or
+
+{empty}(c) the Indemnifier fails to comply in any material respect with
+the provisions of Paragraph 1.4.
+
+*2. SENSITIVE CLAIMS*
+
+2.1 With respect to any Claim which the Beneficiary, acting reasonably,
+considers is likely to have an adverse impact on the general public's
+perception of the Beneficiary (a “Sensitive Claim”), the Indemnifier
+shall be entitled to take conduct of any defence, dispute, compromise or
+appeal of the Sensitive Claim only with the Beneficiary's prior written
+consent. If the Beneficiary withholds such consent and elects to conduct
+the defence, dispute, compromise or appeal of the Sensitive Claim
+itself, it shall conduct the Sensitive Claim with all due diligence and
+if it fails to do so, the Indemnifier shall only be liable to indemnify
+the Beneficiary in respect of that amount which would have been
+recoverable by the Beneficiary had it conducted the Sensitive Claim with
+all due diligence.
+
+2.2 The Beneficiary shall be free at any time to give written notice to
+the Indemnifier that it is retaining or taking over (as the case may be)
+the conduct of any Claim, to which Paragraph 1.3 applies if, in the
+reasonable opinion of the Beneficiary, the Claim is, or has become, a
+Sensitive Claim.
+
+*3. RECOVERY OF SUMS*
+
+3.1 If the Indemnifier pays to the Beneficiary an amount in respect of
+an indemnity and the Beneficiary subsequently recovers (whether by
+payment, discount, credit, saving, relief or other benefit or otherwise)
+a sum which is directly referable to the fact, matter, event or
+circumstances giving rise to the Claim, the Beneficiary shall forthwith
+repay to the Indemnifier whichever is the lesser of:
+
+{empty}(a) an amount equal to the sum recovered (or the value of the
+discount, credit, saving, relief, other benefit or amount otherwise
+obtained) less any out-of-pocket costs and expenses properly incurred by
+the Beneficiary in recovering or obtaining the same; and
+
+{empty}(b) the amount paid to the Beneficiary by the Indemnifier in
+respect of the Claim under the relevant indemnity.
+
+*4. MITIGATION*
+
+4.1 Each of the Authority and the Supplier shall at all times take all
+reasonable steps to minimise and mitigate any loss for which the
+relevant Party is entitled to bring a claim against the other Party
+pursuant to the indemnities in this Schedule.
+
+____
+*SCHEDULE 14 - CONTRACTOR’S DIGITAL PLATFORM*
+____
+
+*1. Definitions*
+
+1.1. In this Schedule, the following words shall have the following
+meanings and:
+
+[width="100%",cols="40%,60%",]
+|===
+|*"Department Property"* a|
+____
+the property, other than real property and IPR, including the Department
+System, any equipment issued or made available to the Contractor by the
+Department in connection with this Contract;
+____
+
+|*"Department Software"* a|
+____
+any software which is owned by or licensed to the Department and which
+is or will be used by the Contractor for the purposes of providing the
+Services;
+____
+
+|*"Department System"* a|
+____
+the Department's computing environment (consisting of hardware, software
+and/or telecommunications networks or equipment) used by the Department
+or the Contractor in connection with this Contract which is owned by or
+licensed to the Department by a third party and which interfaces with
+the Contractor System or which is necessary for the Department to
+receive the Services;
+____
+
+|*“Commercial off the shelf Software” or “COTS Software”* a|
+____
+non-customised software where the IPR may be owned and licensed either
+by the Contractor or a third party depending on the context, and which
+is commercially available for purchase and subject to standard licence
+terms
+____
+
+|*"Contractor System"* a|
+____
+means the information and communications technology systems and software
+used by the Contractor in supplying the Services, including the
+Provider’s hosted website or webpages (relevant to the services), mobile
+app, COTS software, the Provider’s equipment, configuration and
+management utilities, calibration and testing tools and related cabling.
+____
+
+|*"Defect"* a|
+____
+any of the following:
+
+{empty}a) any error, damage or defect to the Contractor’s System that
+affects the delivery of the Services; or
+
+{empty}b) any error or failure of code within the software which causes
+any part of the Contractor’s or Department System to malfunction or to
+produce unintelligible or incorrect results; or
+
+{empty}c) any failure to provide the performance, features and
+functionality specified by the Contractor (including any adverse effect
+on response times) regardless of whether or not it prevents the relevant
+part of the Contractor’s System from passing any test required under
+this Contract; or
+
+{empty}d) any failure of any part of the Contractor’s System to operate
+in conjunction with or interface with any other part of the Contractor’s
+or Department System in order to provide the performance, features and
+functionality required to deliver the Services;
+____
+
+{empty}e) any failure to provide the performance, features and
+functionality specified by the Contractor (including any adverse effect
+on response times) regardless of whether or not it prevents the relevant
+part of the Contractor’s System from passing any test required under
+this Contract; or
+
+____
+{empty}f) any failure of any part of the Contractor’s System to operate
+in conjunction with or interface with any other part of the Contractor’s
+or Department System in order to provide the performance, features and
+functionality required to deliver the Services;
+____
+
+|*"Emergency Maintenance"* a|
+____
+ad hoc and unplanned maintenance provided by the Contractor where either
+Party reasonably suspects that the ICT Environment or the Services, or
+any part of the ICT Environment or the Services, has or may have
+developed a fault;
+____
+
+|*"ICT Environment"* a|
+____
+the Department System and the Contractor System;
+____
+
+|*"Licensed Software"* a|
+____
+all and any Software licensed by or through the Contractor, its
+Subcontractors or any third party to the Department for the purposes of
+or pursuant to this Contract, including any COTS Software;
+____
+
+|*"Maintenance Schedule"* a|
+____
+has the meaning given to it in paragraph 5 of this Schedule;
+____
+
+|*"Malicious Software"* a|
+____
+any software program or code intended to destroy, interfere with,
+corrupt, or cause undesired effects on program files, data or other
+information, executable code or application software macros, whether or
+not its operation is immediate or delayed, and whether the malicious
+software is introduced wilfully, negligently or without knowledge of its
+existence;
+____
+
+|*"New Release"* a|
+____
+an item produced primarily to extend, alter or improve the Contractor
+System or any part of it by providing additional functionality or
+performance enhancement (whether or not defects in the Software are also
+corrected) while still retaining the original designated purpose of that
+part of the Contractor’s System;
+____
+
+|*"Open Source Software"* a|
+____
+computer software that has its source code made available subject to an
+open-source licence under which the owner of the copyright and other IPR
+in such software provides the rights to use, study, change and
+distribute the software to any and all persons and for any and all
+purposes free of charge;
+____
+
+|*"Operating Environment"* a|
+____
+means the Department System and any premises (including the Department
+Premises, the Contractor’s premises or third party premises) from, to or
+at which:
+
+{empty}a) the Services are (or are to be) provided; or
+
+{empty}b) the Contractor manages, organises or otherwise directs the
+provision or the use of the Services; or
+
+{empty}c) where any part of the Contractor System is situated;
+____
+
+|*"Permitted Maintenance"* a|
+____
+has the meaning given to it in paragraph 55.2 of this Schedule;
+____
+
+|*"Software"* a|
+____
+Specially Written Software COTS Software and non-COTS Contractor and
+third party Software;
+____
+
+|*"Source Code"* a|
+____
+computer programs and/or data in eye-readable form and in such form that
+it can be compiled or interpreted into equivalent binary code together
+with all related design comments, flow charts, technical information and
+documentation necessary for the use, reproduction, maintenance,
+modification and enhancement of such software;
+____
+
+|*"Specially Written Software"* a|
+____
+any software (including database software, linking instructions, test
+scripts, compilation instructions and test instructions) created by the
+Contractor (or by a Sub-Contractor or other third party on behalf of the
+Contractor) specifically for the purposes of this Contract, including
+any modifications or enhancements to COTS Software. For the avoidance of
+doubt Specially Written Software does not constitute New IPR;
+____
+
+|===
+
+*2. Licensed software warranty*
+
+2.1. The Contractor represents and warrants that:
+
+2.1.1. it has and shall continue to have all necessary rights in and to
+the Licensed Software used by or on behalf of the Contractor (and/or any
+Sub-Contractor) which are necessary for the performance of the
+Contractor’s obligations under this Contract;
+
+2.1.2. all components of the Contractor System (including any Specially
+Written Software) shall:
+
+____
+2.1.2.1. be free from Defects, material design flaws and programming
+errors;
+
+2.1.2.2. perform in all material respects in accordance with the Annex A
+of this Schedule; and
+
+2.1.2.3. not infringe any IPR; and
+
+2.1.2.4. enables changes required to update the Department's operations
+to be started within 4 weeks.
+____
+
+*3. Provision of the Digital Platform*
+
+3.1. The Contractor shall:
+
+3.1.1. ensure that the release of any new COTS Software licensed by the
+Contractor, or upgrade to any Software in which the Contractor owns the
+IPR complies with the interface requirements of the Department and
+(except in relation to new Software or upgrades which are released to
+address Malicious Software) shall notify the Department three (3) Months
+before the release of any new COTS Software or Upgrade that could impact
+the Department's operations when providing the Services;
+
+3.1.2 ensure that any COTS Software licensed by the Contractor, or any
+Software in which the Contractor owns the IPR can integrate with the
+Departments systems via APIs when the Department’s operations require
+it;
+
+3.1.2. ensure that all Software including upgrades, updates and New
+Releases used by or on behalf of the Contractor (and/or any
+Sub-Contractor) are currently supported versions of that Software and
+perform in all material respects in accordance with the relevant
+specification;
+
+3.1.3. ensure that the Contractor System will be free of all
+encumbrances;
+
+3.1.4. ensure that the Contractor System is fully compatible with any
+Contractor Software, Contractor System, or otherwise used by the
+Contractor in connection with this Contract;
+
+3.1.5. minimise any disruption to the Services and the ICT Environment
+and/or the Department's operations when providing the Services;
+
+3.1.6. Correct any Defects and security flaws as soon as practicable;
+
+3.1.7. Non-functional requirements:
+
+3.1.8. ensure that the Digital Platform is fully scalable to meet
+current and future needs, without having any negative impact upon the
+performance (and user experience) of the solution;
+
+3.1.9. have an understanding of non-functional requirements and build
+them into the Digital Platform i.e. volumetrics, usability, security,
+accessibility, interoperability, reliability, maintainability,
+availability, scalability, portability and compatibility;
+
+3.1.10. makes use of Software that complies with Good Industry Practice
+including availability, change, incident, knowledge, problem, release &
+deployment, request fulfilment, service asset and configuration, service
+catalogue, service level and service portfolio management. Software that
+has been assessed under the ITIL Software Scheme must be at least
+compliant to “Bronze Level”, to be deemed acceptable. Accessibility:
+
+3.1.11. ensure its Digital Platform meets industry standards for
+accessibility and is compliant with WCAG V2.1 to ‘AA’ Standard
+https://www.w3.org/TR/WCAG21/[[.underline]#https://www.w3.org/TR/WCAG21/#]
+and ISO 9241-171:2008 (Ergonomics of human-system Interface);
+
+3.1.12. ensure that the Digital Platform is compatible with the
+following ‘Assistive Technologies’: JAWS, Zoomtext, Dragon
+NaturallySpeaking, and Dolphin Supernova or equivalent.
+
+*Hosting*
+
+3.1.13. ensure the Digital Platform is hosted within the UK mainland,
+ensuring all development, management, support, processing and storage of
+Departmental Data remains within the UK and in compliance with domestic
+standards. Hosting within the European Union (EU) is also acceptable,
+provided that the supplier can demonstrate its adherence to the
+Information Commissioner’s Office’s (ICO) regarding preparation for EU
+exit.
+
+3.1.14. Hosting within other non-hostile nations, such as the USA, will
+be considered on a case-by-case basis. The supplier must demonstrate
+that they will quickly respond to any future compliance requirements
+from the information Commissioner's Offices.
+
+*4. Audit*
+
+4.1. The Contractor shall allow any auditor access to the Contractor
+premises to:
+
+4.1.1. inspect the ICT Environment and the wider service delivery
+environment (or any part of them);
+
+4.1.2. review any records created during the design and development of
+the Contractor System and pre-operational environment such as
+information relating to testing;
+
+4.1.3. review the Contractor’s quality management systems relating to
+the Contractor’s System including all relevant quality plans.
+
+*5. Maintenance of the ICT Environment*
+
+5.1. The Contractor shall create and maintain a rolling Schedule of
+planned maintenance to the ICT Environment ("*Maintenance Schedule*")
+and make it available to the Department.
+
+5.2. The Contractor shall only undertake such planned maintenance (which
+shall be known as "*Permitted Maintenance*") in accordance with the
+Maintenance Schedule.
+
+5.3. The Contractor shall give as much notice as is reasonably
+practicable to the Department prior to carrying out any Emergency
+Maintenance.
+
+5.4. The Contractor shall carry out any necessary maintenance (whether
+Permitted Maintenance or Emergency Maintenance) where it reasonably
+suspects that the ICT Environment or any part thereof has or may have
+developed a fault or a security risk has been identified. Any such
+maintenance shall be carried out in such a manner and at such times so
+as to avoid (or where this is not possible so as to minimise) disruption
+to the ICT Environment and the provision of the Services.
+
+*6. Malicious Software*
+
+6.1.1. The Contractor shall, throughout the Term, use the latest
+versions of anti-virus definitions and software available from an
+industry accepted anti-virus software vendor to check for, contain the
+spread of, and minimise the impact of Malicious Software.
+
+6.1.2. If Malicious Software is found, the Parties shall co-operate to
+reduce the effect of the Malicious Software and, particularly if
+Malicious Software causes loss of operational efficiency or loss or
+corruption of Government Data, assist each other to mitigate any losses
+and to restore the provision of the Services to its desired operating
+efficiency.
+
+6.1.3. Any cost arising out of the actions of the Parties taken in
+compliance with the provisions of paragraph 6.1.2 shall be borne by the
+Parties as follows:
+
+____
+6.1.3.1. by the Contractor, where the Malicious Software originates from
+the Contractor Software, the third party Software supplied by the
+Contractor or the Government Data (whilst the Government Data was under
+the control of the Contractor) unless the Contractor can demonstrate
+that such Malicious Software was present and not quarantined or
+otherwise identified by the Department when provided to the Contractor;
+and
+
+6.1.3.2. by the Department, if the Malicious Software originates from
+the Department Software or the Department Data (whilst the Department
+Data was under the control of the Department).
+____
+
+*7. Service Management Software & Standards*
+
+7.1. The Contractor complies with either;
+
+7.1.1. the https://www.gov.uk/service-manual/service-standard[HM Government Service Standard]
+or;
+
+7.1.2 The Contractor complies with relevant industry and HM Government
+standards and best practice guidelines in the management of the
+Services, including the following and/or their equivalents:
+
+____
+{empty}a) ITIL 4;
+
+{empty}b) ISO/IEC 20000-1:2018 “ITSM Specification for Service
+Management”;
+
+{empty}c) ISO/IEC 20000-2:2019 “ITSM Code of Practice for Service
+Management”;
+
+{empty}d) ISO 10007 “Quality management systems – Guidelines for
+configuration management”; and
+
+{empty}e) ISO/IEC27031:2011, ISO 22301 and ISO/IEC 24762:2008 in the
+provision of “IT Service Continuity Strategy” or “Disaster Recovery”
+plans.
+____
+
+*ANNEX TO SCHEDULE 14 - SERVICE LEVELS*
+
+*1. DEFINITIONS*
+
+1.1. In this part, the following words shall have the following
+meanings:
+
+[width="100%",cols="33%,67%",]
+|===
+a|
+____
+*“Critical Service Level Failure”*
+____
+
+|means a failure by the Contractor to meet any Service Level for a
+continuous period of 7 calendar days or a combined period of more than
+14 days in a 28-day period.
+
+a|
+____
+*"Service Levels"*
+____
+
+|means the service levels set out in Table 10 of this Annex to Schedule
+14.
+
+a|
+____
+*"Service Level Failure"*
+____
+
+|means a failure by the Contractor to meet the Service Level Performance
+Measure in respect of a Service Level.
+
+a|
+____
+*"Service Level Performance Measure"*
+____
+
+|shall be as set out against the relevant Service Level in Table 10 of
+this Annex to Schedule 14.
+|===
+
+*2. Service Levels*
+
+2.1. If the level of performance of the Contractor’s System:
+
+2.1.1. is likely to or fails to meet any Service Level Performance
+Measure; or
+
+2.1.2. is likely to cause or causes a Critical Service Level Failure to
+occur, the Contractor shall immediately notify the Department in writing
+and the Department, in its absolute discretion and without limiting any
+other of its rights, may:
+
+2.1.3. require the Contractor to immediately take all remedial action
+that is reasonable to mitigate the impact on the Department and to
+rectify or prevent a Service Level Failure from taking place or
+recurring; or
+
+2.1.4. apply the measures outlined in paragraphs 2.11 to 2.15 of
+Schedule 2: Part 2.
+
+*3. Planned maintenance*
+
+3.1. The current planned maintenance times are as specified in the
+Contractor’s latest Maintenance Schedule
+
+*4. Failure to meet the Service Levels*
+
+4.1. The Contractor shall at all times meet the Service Level
+Performance Measure for each Service Level.
+
+4.2. The Contractor acknowledges that any Service Level Failure shall
+entitle the Department to the rights set out in Paragraph 2 of this
+Annex to Schedule 14.
+
+4.3. The Contractor shall make MI Reports available to the Department
+detailing the level of compliance which was achieved against each
+Service Level Performance Criteria in accordance with the provisions of
+Schedule 2.
+
+[width="100%",cols="21%,14%,43%,22%",]
+|===
+a|
+____
+*Table 10 - Service Levels*
+____
+
+| | |
+
+a|
+____
+*Service Level Performance Criteria*
+____
+
+a|
+____
+*Service Level Reference*
+____
+
+a|
+____
+*Description*
+____
+
+a|
+____
+*Required Compliance (%) (Service Level Performance Measure)*
+____
+
+a|
+____
+Contractor’s System
+____
+
+|CS1 a|
+____
+The Contractor’s System shall be resilient and made available 24 hours
+per day, fifty-two (52) weeks a year, except for agreed downtime and
+maintenance. Plans should be made if the system is to be offline.
+____
+
+|99%
+
+a|
+____
+Maintenance and Upgrades
+____
+
+|MU1 a|
+____
+All essential Scheduled maintenance and/or system upgrades to the
+Contractor’s System shall occur outside the hours of 07:30 to 20:00 GMT
+(or BST as appropriate) Monday to Friday.
+____
+
+|99%
+
+| |MU2 a|
+____
+The Contractor shall provide prior notification of maintenance and/or
+system upgrades to the Department.
+____
+
+|100%
+
+| |MU3 a|
+____
+Where applicable (e.g. on a website or app), a message shall be placed
+on the Contractor’s System at least 2 weeks in advance of any
+maintenance or upgrade taking place, followed by subsequent reminders 48
+and 24 hours prior to the maintenance or upgrade.
+____
+
+|100%
+
+| |MU4 a|
+____
+When required the Contractor and Department shall ensure any system
+maintenance/upgrades are tested prior to the upgraded version release
+going live.
+____
+
+|100%
+
+a|
+____
+Correction of Defects
+____
+
+|D1 a|
+____
+Defects to be corrected within 24hrs of identification.
+____
+
+|99%
+
+a|
+____
+Remediation of Security Risks
+____
+
+|D2 a|
+____
+Security Risks to be remediated within 7 days of identification.
+____
+
+|99%
+
+a|
+____
+Changes to Departments operations
+____
+
+|D3 a|
+____
+The Contractor will attend digital updates hosted by the Department to
+explore delivery consequences of the digital delivery roadmap.
+____
+
+|99%
+
+| |D4 a|
+____
+Where formal notification issued, changes required to facilitate updates
+to the Department’s operations to be started within 4 weeks.
+____
+
+|99%
+|===
+////
