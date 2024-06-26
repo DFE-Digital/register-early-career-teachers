@@ -1,0 +1,99 @@
+=== Schedule 6: processing, personal data and data subjects
+
+[arabic]
+. The contact details of the Department’s Data Protection Officer are:
+
+REDACTED
+
+[arabic, start=2]
+. The contact details of the Contractor’s Data Protection Officer are:
+
+REDACTED
+
+[arabic, start=3]
+. The Contractor shall comply with any further written instructions with
+respect to processing by the Department.
+. Any such further instructions shall be incorporated into this
+Schedule.
++
+[width="100%",cols="33%,67%",]
+|===
+|*Description* |*Details*
+
+|Identity of the Controller and Processor |The Parties acknowledge that
+for the purposes of the Data Protection Legislation, the Department is
+the Controller and the Contractor is the Processor in accordance with
+Clause 17
+
+|Subject matter of the processing |The processing is needed in order to
+ensure that the Contractor can effectively deliver the contract to
+provide the design and delivery of a training programme to improve early
+career teachers’ confidence in teaching and thereby improve the
+provision of education in England’s schools.
+
+|Duration of the processing |The processing will take place throughout
+the lifetime of the contract.
+
+|Nature and purposes of the processing a|
+Nature – collection, recording, organisation, structuring, storage,
+adaptation or alteration, retrieval, consultation, use, disclosure by
+transmission, dissemination or otherwise making available, alignment or
+combination, restriction, erasure or destruction of data (whether or not
+by automated means) related to Participants to enable the recruitment,
+design, delivery, monitoring and evaluation of programme impacts and
+outcomes.
+
+Purpose – the contractor has an obligation to process data in the nature
+outlined above in order to fulfil the contractual requirements.
+
+|Type of Personal Data being Processed a|
+The following Personal Data will be collected:
+
+* Teacher Reference Number (TRN)
+* Full name
+* Email address(es)
+* Date of birth (if available)
+* Job role
+* School (Workplace) URN
+* Programme delivery region
+* Programme name
+* Cohort
+* Confirmation if Participant has been “inactive” or “exited” early from
+the programme and the reason for this.
+* Confirmation if Participant has gained promotion (to include promotion
+date (month/year), role and school)
+
+|Categories of Data Subject a|
+Early career teachers, their mentors, school induction leads and school
+leaders involved in ECTs’ enrolment onto the programme. For school
+leaders in the latter category, the following data will *not* be
+collected:
+
+* Teacher Reference Number (TRN)
+* Gender
+* Ethnicity
+* Home address
+* Date of birth
+* Confirmation if Participant has been “inactive” or “exited” early from
+the programme and the reason for this.
+
+Confirmation if Participant has gained promotion (to include promotion
+date (month/year), role and school)
+
+a|
+Plan for return and destruction of the data once the processing is
+complete
+
+UNLESS requirement under union or member state law to preserve that type
+of data
+
+a|
+Data will be retained for 6 years after the end of the term.
+
+At the end the data retention period, all Departmental information and
+data, in either hardcopy or electronic format, that is physically held
+or logically stored on the Contractor’s ICT infrastructure must be
+securely sanitised or destroyed and accounted for in accordance with the
+current HMG policy using a NCSC approved product or method.
+
+|===

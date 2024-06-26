@@ -1,0 +1,1829 @@
+---
+title: CALL-OFF CONTRACT for the supply of the Full Induction Programme, to support National Roll-Out of the Early Career Framework
+---
+
+*The secretary of state for education AND [REDACTED].*
+
+Drafting Note: this call-off contract is for the delivery of the
+2023 and 2024 cohorts of the Full Induction Programme of the Early
+Career Framework. The call-off contract includes the relevant dates,
+targets and costings for the 2023 cohort with the details of the 2024
+cohort to be added via a change control note following the Spring 2024
+review period.#
+
+The sections that will be amended to reflect the 2024 cohort are
+Annex 1b to Schedule 2: Part 1 – Payment Process for the 2024 Cohort,
+and Annex 2 to Schedule 2: Part 1 – Contract Pricing Information.
+
+*THIS CONTRACT* is made on DD MMMM YYYY
+
+*BETWEEN*
+
+[arabic]
+. *THE SECRETARY OF STATE FOR EDUCATION* of Sanctuary Buildings, Great
+Smith Street, London, SW1P 3BT acting as part of the Crown (“The
+Department”); and
+. [REDACTED] whose registered office is at [REDACTED] (the "Contractor");
+together, the "Parties"
+
+*WHEREAS:*
+
+[loweralpha]
+. By way of an OJEU notice dated 15 September 2020, the Department
+undertook a procurement for service providers to be appointed to a
+Framework Agreement for the supply of the Full Induction Programme, to
+support National Roll-Out of the Early Career Framework.
+. The Contractor was one of the bidders that submitted the most
+economically advantageous tender and has therefore been appointed to the
+framework agreement.
+. This call off contract (“the Contract”) sets out the terms and
+conditions that govern the provision of the services.
+
+*NOW IT IS HEREBY AGREED AS FOLLOWS:-*
+
+== Interpretation
+
+[arabic, start=1]
+. {empty}
+[arabic]
+.. In this Contract the following words shall mean:-
+Affiliate:: in relation to a body corporate, any other entity which
+directly or indirectly Controls, is Controlled by, or is under direct or
+indirect common Control with, that body corporate from time to time;
+Assessed Cost:: means the estimated cost of remedying a failure where
+the Department requires the Contractor to take action in accordance with
+Clause 9.2.2;
+Central Government Body:: means a body listed in one of the following sub-categories of the
+Central Government classification of the Public Sector Classification
+Guide, as published and amended from time to time by the Office for
+National Statistics:
++
+
+[lowerroman]
+... Government Department;
+... Non-Departmental Public Body or Assembly Sponsored Public Body
+(advisory, executive, or tribunal);
+... Non-Ministerial Department; or
+... Executive Agency;
+Charge:: means the charge made by the Contractor to the DfE in
+accordance with the Schedule 2 (Pricing and Performance Measures);
+
+Contract Date:: means the date this Contract is duly executed as
+stated above;
+
+Contractor Personnel:: all employees, agents, Contractors, and
+contractors of the Contractor and/or of any Sub-Contractor;
+
+the Contractor’s Contract Manager:: REDACTED]
+
+Confidential Information:: means confidential information as defined
+in the Framework Agreement and in this Contract includes the
+Department's Confidential Information and/or the Contractor's
+Confidential Information including for the Contractor the information
+set out in Schedule 10 (Commercially Sensitive Information);
+
+Contracting Department:: any contracting Department as defined in
+Regulation 5(2) of the Public Contracts (Works, Services and Supply)
+(Amendment) Regulations 2000 other than the Department;
+
+Contract Period:: shall be the contract duration as set out in Clause
+2;
+
+Contract Year:: {empty}
++
+[loweralpha]
+... period of 12 months commencing on the Contract Date; or
+... thereafter a period of 12 months commencing on each anniversary of the Contract Date;
+
++
+provided that the final Contract Year shall end on the expiry or
+termination of the Contract Period;
+
+Contractor Personnel:: all employees, agents, consultants, and
+contractors of the Contractor and/or of any Sub-Contractor engaged by
+the Contractor;
+
+Control:: means a person that possesses, directly or indirectly, the
+power to direct or cause the direction of the management and policies of
+the other person (whether through the ownership of voting shares, by
+contract or otherwise) and "Controls" and "Controlled" shall be
+interpreted accordingly;
+
+Controller, Processor, Data Subject, Personal Data, Personal Data Breach, Data Protection Officer:: have the meaning given in the
+GDPR;
+
+Correctly Submitted Invoice:: means an invoice that is delivered in
+timing in accordance with the Contract; is for the correct sum; in
+respect of goods/services supplied or delivered to the required quality
+(or are expected to be at the required quality); includes the date,
+Contractor name, contact details and bank details; quotes the relevant
+purchase order/contract reference and has been delivered to the
+nominated address;
+
+Crown Body:: any department, office or agency of the Crown;
+
+Data Loss Event:: any event that results, or may result, in
+unauthorised access to Personal Data held by the Contractor under this
+Contract, and/or actual or potential loss and/or destruction of Personal
+Data in breach of this Contract, including any Personal Data Breach;
+
+Default :: any breach of the obligations of the relevant Party (including
+abandonment of this Agreement in breach of its terms, repudiatory breach
+or breach of a fundamental term) or any other default, act, omission,
+negligence or statement:
++
+... in the case of the Department, of its employees, servants,
+agents; or
+... in the case of the Contractor, of its Subcontractors or any
+Supplier Personnel,
+
++
+in connection with or in relation to the subject matter of this
+Agreement and in respect of which such Party is liable to the other;
+
+Deliverable:: an item or feature delivered or to be delivered by the
+Contractor at any stage during the performance of this Agreement;
+
+the Department:: means the Department of Education and its agencies;
+
+the Department’s Contract Manager:: means [REDACTED]
+
+Department Data:: {empty}
+[loweralpha]
+... the data, text, drawings, diagrams, images or sounds
+(together with any database made up of any of these) which are embodied
+in any electronic, magnetic, optical or tangible media, and which are:
+[lowerroman]
+.... supplied to the Contractor by or on behalf of the Department;
+and/or
+.... which the Contractor is required to generate, process, store
+or transmit pursuant to this Agreement; or
+... any Personal Data for which the Department is the Data
+Controller;
+
+Department's Intellectual Property Rights:: means all Intellectual
+Property Rights comprised in or necessary for or arising from the
+performance of the Services;
+
+Department Premises:: premises owned, controlled or occupied by the
+Department and/or any Central Government Body which are made available
+for use by the Contractor or its Sub-contractors for provision of the
+Services (or any of them);
+
+DPA 2018:: Data Protection Act 2018;
+
+Data Protection Impact Assessment:: an assessment by the Controller of
+the impact of the envisaged processing on the protection of Personal
+Data;
+
+Data Protection Legislation:: {empty}
++
+... the GDPR, the LED and any applicable
+national implementing Laws as amended from time to time
+... the DPA 2018 to the extent that it relates to processing of personal data and
+privacy;
+... all applicable Law about the processing of personal data
+and privacy;
+
+Data Subject Access Request:: a request made by, or on behalf of, a
+Data Subject in accordance with rights granted pursuant to the Data
+Protection Legislation to access their Personal Data;
+
+Declaration:: means a declaration made by the Contractor via the
+Department's digital platform that they have sufficient evidence to
+support a claim for an Output Payment;
+
+Disclosure and Barring Services or DBS:: the Home Office sponsored
+safeguarding services that helps employers make safer recruitment
+decisions and prevent unsuitable people from working with vulnerable
+groups, including children;
+
+Early Roll Out Project:: means the early roll out of the early careers
+framework services through procurement of a framework of early roll out
+suppliers and the resulting call-off contracts, undertaken by the
+Department in 2019.
+
+Employee Transfer Date:: means in respect of any Future Transferring
+Employee the date on which the part of the Services to which they are
+assigned transfers from the Contractor to any Successor Contractor;
+
+Environmental Information Regulations:: the Environmental Information
+Regulations 2004 together with any guidance and/or codes of practice
+issues by the Information Commissioner or relevant Government Department
+in relation to such regulations;
+
+Estimated Year 1 Charges:: the estimated Charges payable by the
+Department during the first Contract Year, as set out in the Payment
+Schedule;
+
+Existing IPR:: any and all IPR that are owned by or licensed to either
+Party which are or have been developed independently of the Contract
+whether prior to the date of the Contract or otherwise. For the
+avoidance of doubt the Department’s Existing IPR includes Products 1 to
+4 that were created under the Early Roll Out Project;
+
+Exit Plan:: the plan prepared by the Contractor in accordance with
+clause 15.17 setting out the Contractor’s methodology for achieving an
+orderly transition of the Services from the contractor to the Department
+or a Successor Contractor on the expiry or termination of this Contract;
+
+Expiry Date:: means 31 July 2026;
+
+Extension Period:: shall have the meaning given to it in Clause 2.2;
+
+External Evaluator:: means the independent evaluator or evaluators
+appointed by the Department further to paragraph 15 of Schedule 1 (Part
+A: The Services);
+
+Final Pay Details:: means the information referred to in Part D of
+Schedule 8;
+
+FOIA:: the Freedom of Information Act 2000 and any subordinate
+legislation made under this Act from time to time together with any
+guidance and/or codes of practice issued by the Information Commissioner
+or relevant Government Department in relation to such legislation;
+
+Force Majeure :: means any event or occurrence which is outside the reasonable
+control of the Party concerned and which is not attributable to any act or
+failure to take reasonable preventative action by that Party, including fire;
+flood; violent storm; pestilence; explosion; malicious damage; armed conflict;
+acts of terrorism; nuclear, biological or chemical warfare; or any other
+catastrophe, natural or man-made, but excluding:
++
+[loweralpha]
+... any industrial action occurring within the Contractor’s or
+any of its Sub-Contractor’s organisation, or otherwise involving the
+Contractor Staff; or
+... the failure by any Sub-Contractor of the Contractor to
+perform its obligations under any sub-contract.
+
+Framework Agreement:: means the Framework Agreement dated 26 February
+2021 between the Department and the Contractor which was awarded under
+Regulation 33 of the Regulations and under which the Services are being
+called off;
+
+Future Transfer Date:: means the date of termination or expiry of this
+Contract;
+
+Future Transferring Employees:: means those employees of the
+Contractor who are at the Future Transfer Date employed under a contract
+of service or apprenticeship or otherwise in the relevant part of the
+undertaking which transfers on the termination or expiry of this
+Contract pursuant to TUPE or the Acquired Rights Directive 187/77/EC or
+otherwise to any Successor Contractor;
+
+Good Industry Practice:: that degree of skill, care, prudence, foresight
+and operating practice which would reasonably and ordinarily be expected
+from time to time of a skilled and experienced operator (engaged in the
+same type of undertaking as that of the Contractor) or any
+Sub-Contractor under the same or similar circumstances;
+
+GDPR:: the General Data Protection Regulation (Regulation (EU)
+2016/679)
+
+His Majesty's Government:: means the duly elected Government for the
+time being during the reign of His Majesty and/or any department,
+committee, office, servant, or officer of such Government
+
+Information:: has the meaning given under section 84 of the Freedom of
+Information Act 2000;
+
+Initial Staff Information:: means the information recorded on the
+template form set out in Part A of Schedule 8 (TUPE);
+
+Intellectual Property Right:: means any copyright, rights in designs,
+database rights, domain names, trademarks, service marks, patents or any
+applications for any of the foregoing, know-how or similar rights or
+obligations (whether registerable or not) including Moral Rights as
+defined in Chapter IV of the Copyright, Designs and Patents Act 1988;
+
+IPR Claim:: any claim against the Department of infringement or
+alleged infringement (including the defence of such infringement or
+alleged infringement) of any IPRs used by or on behalf of the Contractor
+(including by a Sub-Contractor) in relation to the delivery of the
+Services save for any such claim to the extent that it is caused by any
+use by or on behalf of the Department of any IPRs that are relevant to
+this Contract in combination with any item not supplied or recommended
+by the Contractor pursuant to this Contract or for a purpose not
+reasonably to be inferred from the Specification or the provisions of
+this Contract;
+
+LED:: Law Enforcement Directive (Directive (EU) 2016/680);
+
+Losses:: means losses, liabilities, damages, costs and expenses
+(including legal fees on a solicitor/client basis) and disbursements and
+costs of investigation, litigation, settlement, judgment interest and
+penalties whether arising in contract, tort (including negligence),
+breach of statutory duty or otherwise;
+
+New IPR:: IPR in items created by the Contractor (or by a third party
+on behalf of the Contractor) specifically for the purposes of a Call-Off
+Contract and updates and amendments of these items including (but not
+limited to) data base schemes.
+
+Personal Data:: shall have the same meaning as set out in the Data
+Protection Act 1998;
+
+Prescribed Particulars:: means the information prescribed in Part B of
+Schedule 8 (TUPE);
+
+Products 1 -4:: means Product 1 (the Sequence), Product 2
+(Self-Directed Study Materials), Product 3 (Mentor Session Materials)
+and Product 4 (ECT Training Session Outlines) which comprise services
+provided by the appointed suppliers under the Early Roll Out Project;
+
+Property:: means the property, other than real property, issued or
+made available to the Contractor by the Client in connection with the
+Contract.
+
+Protective Measures:: appropriate technical and organisational
+measures which may include: pseudonymising and encrypting Personal Data,
+ensuring confidentiality, integrity, availability and resilience of
+systems and services, ensuring that availability of and access to
+Personal Data can be restored in a timely manner after an incident, and
+regularly assessing and evaluating the effectiveness of the such
+measures adopted by it;
+
+Regulatory Bodies:: those government departments and regulatory,
+statutory and other entities, committees and bodies which, whether under
+statute, rules, regulations, codes of practice or otherwise, are
+entitled to regulate, investigate, or influence the matters dealt with
+in this Contract or any other affairs of the Department and *"Regulatory
+Body"* shall be construed accordingly;
+
+the Regulations:: means the Public Contracts Regulations 2015;
+
+Relevant Legislation:: means any statute or regulations or the EC
+Treaty (or any directives or regulations made under them);
+
+Relevant Personnel Documentation:: means the information in relation
+to Future Transferring Employees as prescribed in Part C of Schedule 8
+(TUPE);
+
+Replacement Supplier:: any third party provider of Replacement
+Services appointed by the Department from time to time (or where the
+Department is providing Replacement Services for its own account, the
+Authority).
+
+Replacement Services:: any services which are the same as or
+substantially similar to any of the Services and which the Department
+receives in substitution for any of the Services following the expiry or
+termination or partial termination of this Contract, whether those
+services are provided by the Department internally or by any third
+party.
+
+Request for Information:: a request for information or an apparent
+request under the Code of Practice on Access to Government Information,
+FOIA or the Environmental Information Regulations;
+
+Required Insurances:: means the insurances as set out in Clause 9.7;
+
+Serious Breach :: means any breach or breaches which adversely, materially, or
+substantially affect the performance or delivery of the Services in part
+or in full, or the provisions of a safe, healthy and supportive learning
+environment. Serious breach includes but is not limited to:
++
+[lowerroman]
+... a breach of security that adversely affects the Personal Data
+or privacy of an individual; and
+... failure to comply with Law, or acts or omissions by the
+Contractor that endanger the health or safety of others;
+
+the Services:: means the services to be performed by the Contractor as
+described in Schedule 1;
+
+Service Commencement Date:: means the date the Contractor commences
+delivering the Services as stated at paragraph 2.1;
+
+Service Credit Cap:: 4% of the Total Contract Value over the term of
+the Contract;
+
+SME:: means a micro, small or medium-sized enterprise defined in
+accordance with the European Commission Recommendation 2003/361/EC and
+any subsequent revisions;
+
+Start Declaration:: means a declaration made by the Contractor via the
+Department's digital platform that a participant has commenced their
+training with the Contractor and which is used by the Contractor as
+evidence to support a claim for an Output Payment;
+
+Sub-Contract:: means a contract between two or more suppliers, at any
+stage of remoteness from the Department in a sub-contracting chain, made
+wholly or substantially for the purpose of performing (or contributing
+to the performance of) the whole or any part of the Contract;
+
+Sub-Contractor:: the third party with whom the Contractor enters into
+a Sub-Contract or its servants or agents and any third party with whom
+that third party enters into a Sub-Contract or its servants or agents;
+
+Sub-processor:: any third Party appointed to process Personal Data on
+behalf of the Contractor related to this Contract;
+
+Successor Contractor:: means the Contractor that delivers services
+that are substantially the same as the Services after the expiry or
+termination of the Contract;
+
+Termination Date:: means the date set out in a termination notice on
+which this Contract (or a part of it as the case may be) is to
+terminate;
+
+Transfer of Undertakings (Protection of Employment) Regulations 2006 or TUPE:: means
+the Transfer of Undertakings (Protection of Employment)
+Regulations 2006, as amended from time to time;
+
+Working Day:: any day other than a Saturday, Sunday or public holiday
+in England and Wales.
+
+[arabic, start=2]
+.. References to “Contract” mean this contract (and include the
+Schedules). References to “Clauses” and “Schedules” mean clauses of and
+schedules to this Contract. The provisions of the Schedules shall be
+binding on the parties as if set out in full in this Contract.
+.. Reference to the singular include the plural and vice versa and
+references to any gender include both genders and the neuter. References
+to a person include any individual, firm, unincorporated association or
+body corporate.
+
+[start=2] 
+. Commencement and Continuation
+[arabic]
+.. The Contractor shall commence the Services on the Contract Date and,
+subject to Clause 10.1 shall complete the Services on or before the
+Expiry Date.
+.. The Department shall have the right to request in writing that the
+Contract Period be extended for one or more period on one or more
+occasions up to a maximum cumulative Extension Period of 6 months.
+.. If the Department exercises its right to request an extension under
+Clause 2.2, the last date of the Extension Period shall be the new
+Expiry Date and references to “Expiry Date” shall be interpreted
+accordingly.
+
+. Contractor's Obligations
+[arabic]
+.. The Contractor shall promptly and efficiently deliver the Services in
+accordance with the provisions set out in Schedule 1: Part 1 (The
+Services), the special conditions set out in Schedule 3 (Additional
+Clauses) and in accordance with the Schedule 1: Part 2 (the Contractor’s
+Solution). Where there is any conflict between the terms of this
+Contract and the special conditions set out in Schedule 3, the special
+conditions shall prevail.
+.. The Contractor shall comply with the accounting and performance
+measures set out in Schedule 2 (Pricing and Performance Measures).
+.. The Contractor shall comply with all statutory provisions including
+all prior and subsequent enactments, amendments and substitutions
+relating to that provision and to any regulations made under it.
+.. In entering into this Contract the Contractor is confirming that:
+[arabic]
+... it has read and understood the Department’s expectations of all services
+Contractors as set out in the Government’s Contractor Code of Conduct at
+https://www.gov.uk/government/publications/supplier-code-of-conduct[https://www.gov.uk/government/publications/Contractor-code-of-conduct]
+and the Contractor will be deliver the Services in accordance with the
+Contractor Code; and
+... it will deliver the Services by reference to the Contractor Code as
+dated February 2019 and thereafter as updated from time to time.
+.. The Contractor shall update the Implementation Plan, as set out at
+Schedule 7 (Implementation Plan) and submit to the Department, for its
+approval, a finalised Implementation Plan within 6 (six) weeks of the
+date of this Contract.
+.. The Contractor shall work co-operatively and in partnership with the
+Department’s independent evaluator as set out in the Schedule 1: Part A
+(the Services) and shall commit to supporting continuous improvement for
+the duration of this Contract by sharing knowledge and experiences with
+the Department, the External Evaluator and the other Contractors on the
+Framework Agreement.
+
+. Department’s Obligations
+[arabic]
+.. The Department will comply with the payment provisions of Schedule 2:
+Part 1 (Pricing) provided that the Department has received full and
+accurate information and documentation as required by Schedule 2 to be
+submitted by the Contractor for work completed to the satisfaction of
+the Department.
+
+[arabic, start=5]
+. Changes to the Department's Requirements
+[arabic]
+.. The Department shall notify the Contractor of any material change to
+the Department's requirement under this Contract.
+.. The provisions of the Change Control Procedure shall apply to changes
+initiated by the Department under clause 5.1.
+
+. Management
+[arabic]
+.. The Contractor shall promptly comply with all reasonable requests or
+directions of the Department’s Contract Manager in respect of the
+Services.
+.. The Contractor shall address any enquiries about procedural or
+contractual matters in writing to the Department’s Contract Manager. Any
+correspondence relating to this Contract shall quote the reference
+number set out in the Recitals to this Contract.
+.. The Contractor’s key-personnel and Sub-Contractor are set out in
+Schedule 9 (Key-Personnel and Sub-Contractors). The Contractor shall
+notify the Department of any changes to its key-personnel or any
+proposed change of Sub-Contractors. In relation to any proposed change
+of sub-contractor the Contractor shall comply with the provisions of
+clause 7.6 - 7.8 and clause 19.
+
+. Contractor's Employees and Sub-Contractors
+[arabic]
+.. The appointment by the Contractor of sub-contractors shall be subject
+always to the requirements of clause 19. Where the Contractor does enter
+into any sub-contract the provisions of Clauses 7.2 to 7.10 shall apply.
+.. Where the Contractor enters into a contract with one or more for the
+purpose of performing its obligations under the Contract (the
+“*Sub-Contractor*”) it shall ensure prompt payment in accordance with
+this Clause 7.1. Unless otherwise agreed by the Department in writing,
+the Contractor shall ensure that any contract requiring payment to a
+Sub-Contractor shall provide for undisputed sums due to the
+Sub-Contractor to be made within 30 days from the receipt of a valid
+invoice.
+[loweralpha]
+... The Contractor shall comply with Clause 7.2 and shall provide, at
+the Department’s request, sufficient evidence to demonstrate compliance.
+.. The Department shall be entitled to withhold payment due under Clause
+7.2 for so long as the Contractor, in the Department’s reasonable
+opinion, has failed to comply with its obligations to pay any
+Sub-Contractors promptly in accordance with Clause 7.2 For the avoidance
+of doubt the Department shall not be liable to pay any interest or
+penalty in withholding such payment.
+.. The Contractor shall take all reasonable steps to satisfy itself that
+the Contractor Personnel it engages are suitable in all respects to
+perform the Services.
+.. The Contractor shall give to the Department if so requested a list of
+all persons who are or may be at any time directly concerned with the
+performance of this Contract specifying the capacity in which they are
+concerned with the provision of the Services and giving such other
+particulars as the Department may reasonably require.
+.. If the Department notifies the Contractor that it reasonably
+considers that a Sub-Contractor is not appropriately qualified or
+trained to provide the Services or otherwise is not providing the
+Services in accordance with this Contract, then the Contractor shall, as
+soon as is reasonably practicable, take all such steps as the Department
+considers necessary to remedy the situation or, if so reasonably
+required by the Department, shall remove the said Sub-Contractor from
+providing the Services and shall provide a suitable replacement (at no
+cost to the Department).
+.. The Contractor shall take all reasonable steps to avoid changes of
+Sub-Contractors assigned to and accepted to provide the Services under
+the Contract except whenever changes are unavoidable or of a temporary
+nature. The Contractor shall give immediate notice in writing to the
+Department’s Contract Manager of proposals to change Sub-Contractors.
+.. The Contractor shall immediately notify the Department if they have
+any concerns regarding the propriety of any of its Sub-Contractors in
+respect of work/services rendered in connection with this Contract.
+.. The Contractor, its employees and Sub-Contractors (or their
+employees), whilst on Departmental premises, shall comply with such
+rules, regulations and requirements (including those relating to
+security arrangements) as may be in force from time to time.
+.. The Contractor shall ensure the security of all the Property whilst
+in its possession, during the supply of the Services, in accordance with
+the Department’s reasonable security requirements as required from time
+to time.
+.. The Parties agree that:
+[arabic]
+... the Contractor shall both during and after the Contract Period indemnify
+the Department against all Employee Liabilities that may arise as a
+result of any claims brought against the Department by any person where
+such claim arises from any act or omission of the Contractor or any
+Contractor Personnel; and
+... the Department shall both during and after the Contract Period indemnify
+the Contractor against all Employee Liabilities that may arise as a
+result of any claims brought against the Contractor by any person where
+such claim arises from any act or omission of the Department or any of
+the Department’s employees, agents, consultants and contractors.
+
+.. *Staff Transfer*. The Parties agree that:
+[arabic]
+... where the commencement of the provision of the Services or any part of
+the Services results in one or more Relevant Transfers, Schedule 8
+(Staff Transfer) shall apply as follows:
+[lowerroman]
+.... where the Relevant Transfer involves the transfer of
+Transferring Authority Employees, Part A and Part D of Schedule 8 (Staff
+Transfer) shall apply;
+
+.... where the Relevant Transfer involves the transfer of
+Transferring Former Supplier Employees, Part B and Part D of Schedule 8
+(Staff Transfer) shall apply;
+
+.... where the Relevant Transfer involves the transfer of
+Transferring Authority Employees and Transferring Former Supplier
+Employees, Parts A, B and D of Schedule 8 (Staff Transfer) shall apply;
+and (iv) Part C of Schedule 8 (Staff Transfer) shall not apply;
+... where commencement of the provision of the Services or a part of the
+Services does not result in a Relevant Transfer, Part C of Schedule 8
+(Staff Transfer) shall apply, Part D of Schedule 8 may apply and Parts A
+and B of Schedule 9.1 (Staff Transfer) shall not apply; and
+... Part E of Schedule 8 (Staff Transfer) shall apply on the expiry or
+termination of the Services or any part of the Services.
+
+
+// numbering sequence changes here so this bit's a block 😣
+----
+7A Safeguarding
+
+7A.1 The Contractor shall make arrangements for ensuring that the
+Provision is provided with a view to safeguarding and promoting the
+welfare of children receiving education or training. In doing so, the
+Contractor shall have regard to any guidance published, from time to
+time, by the Secretary of State for Education, which sets out the
+expectations in relation to safeguarding practice within schools.
+References to ‘must’ in any such guidance shall be treated as ‘should’
+for the purposes of this Agreement, save for any references to legal
+requirements arising from the Safeguarding Vulnerable Groups Act 2006 in
+respect of referrals to the Disclosure and Barring Service. Failure to
+do so may constitute a Serious Breach of this Contract.
+
+7A.2 The Contractor must carry out appropriate disclosure and barring
+service checks on all applicants including those from outside the UK for
+employment where such applicants would be employed to work in regulated
+activity relating to children or vulnerable adults (as defined by the
+Safeguarding Vulnerable Groups Act 2006) if successful, and must seek
+additional information about an applicant’s conduct.
+
+7A.3 The Contractor shall not employ or engage, or continue to employ or
+engage, any person who is subject to a prohibition order made under
+section 141B of the Education Act 2002 to carry out teaching work (as
+defined in regulation 3 of the Teachers’ Disciplinary (England)
+Regulations 2012).
+
+7A.4 The Contractor shall, in circumstances where it sub-contracts the
+management and / or delivery of the Services under this Contract, ensure
+that the content of this Clause 7A is included in its contract with
+sub-contractors.
+
+7A.5 The Contractor and its Sub-Contractors must be able to demonstrate
+that they have robust record-keeping procedures in respect of
+safeguarding through checks on record keeping undertaken.
+
+7A.6 A breach by the Contractor and / or its Sub-Contractors of this
+Clause 7A shall constitute a Serious Breach of the Contract.
+----
+
+[start=8]
+. Intellectual Property Rights (IPR)
+[arabic]
+.. Each Party keeps ownership of its own Existing IPR.
+.. Pursuant to clause 2.1 the Contractor gives the Department a
+non-exclusive, perpetual, royalty-free, irrevocable, transferable UK
+licence to use, change and sub-license the Contractor’s Existing IPR to
+enable it to both:
+[arabic]
+... receive and use the Services;
+... make use of the Services by a Replacement Supplier.
++
+and the Department gives the Contractor and its Sub-Contractors a
+licence to use the Department’s Existing IPR for the purpose of
+fulfilling its obligations during the Contract Period.
+
+.. Any New IPR created under this Contract is owned by the Contractor.
+The Contractor gives the Department a non-exclusive, perpetual,
+royalty-free, irrevocable, transferable UK licence to use, change and
+sub-license the Contractor’s Existing IPR and New IPR to enable it to:
+
+[arabic]
+... Receive the Services under this Contract; and
+... Make use of the Services provided by a Replacement Supplier; and
+... make use of the materials created under this Contract in other services
+related to, but not limited to, the Early Career Framework.
+.. Where a Party acquires ownership of IPR incorrectly under this
+Contract it must do everything reasonably necessary to complete a
+transfer assigning them in writing to the other Party on request and at
+its own cost.
+.. Neither Party has the right to use the other Party’s IPR, including
+any use of the other Party’s names, logos or trademarks, other than as
+set out in this Clause 8 or as agreed in writing.
+.. The Contractor shall indemnify the Department against all IPR Claims,
+demands, actions, costs, expenses (including legal costs and
+disbursements on a solicitor and client basis), losses and damages
+arising from or incurred by reason of any infringement or alleged
+infringement (including the defence of such alleged infringement) of any
+Intellectual Property Right.
+.. The Contractor hereby waives any Moral Rights as defined at Chapter
+IV of the Copyright, Designs and Patents Act 1988.
+.. The Contractor warrants:
+[arabic]
+... that the Contractor’s Intellectual Property Rights comprise its own
+original work including where its Intellectual Property Rights were
+created by or on behalf of the Contractor;
+... that the Department's Intellectual Property Rights have not and will not
+be copied wholly or in part from any other work or material;
+... That the use of or exercise by the Contractor of the Department's
+Intellectual Property Rights and the Background Intellectual Property
+will not infringe the rights of any third party;
+... that the Contractor has not granted or assigned any rights of any nature
+in the Department's Intellectual Property Rights to any third party
+except to its Sub-Contractors as appropriate.
+
+.. The Department shall reserve the right to benefit from its investment
+in developing the Early Careers policy. As detailed in this Clause 8,
+the IPR generated within the Contract shall remain the ownership of the
+Contractor but be licensed to the Department to use at its own
+discretion.
+
+
+[arabic, start=9]
+. Warranty and Indemnity
+[arabic]
+.. The Contractor warrants to the Department that the obligations of the
+Contractor under this Contract will be performed by appropriately
+qualified and trained personnel using Good Industry Practice. The
+Department will be relying upon the Contractor's skill, expertise and
+experience in the performance of the Services and also upon the accuracy
+of all representations or statements made and the advice given by the
+Contractor in connection with the performance of the Services and the
+accuracy of any documents conceived, originated, made or developed by
+the Contractor as part of this Contract. The Contractor warrants that
+any goods supplied by the Contractor forming a part of the Services will
+be of satisfactory quality and fit for their purpose and will be free
+from defects in design, material and workmanship.
+.. Without prejudice to any other remedy, if any part of the Services is
+not performed in accordance with this Contract then the Department shall
+be entitled, where appropriate to:
+[arabic]
+... require the Contractor promptly to re-perform or replace the relevant
+part of the Services without additional charge to the Department; or
+... if the Department considers it would be impracticable or inappropriate
+to require the Contractor to take action in accordance with Clause
+9.2.1, the Department may assess the cost of remedying the failure (“the
+assessed cost”) and deduct from any sums due to the Contractor the
+Assessed Cost for the period that such failure continues.
+
+.. Neither Party limits its liability for:
+[loweralpha]
+... death or personal injury caused by its negligence, or that of its
+employees, agents or sub-contractors (as applicable);
+... fraud or fraudulent misrepresentation by it or its employees;
+... breach of any obligation as to title implied by section 12 of the Sale
+of Goods Act 1979 or section 2 of the Supply of Goods and Services Act
+1982; or
+... any liability to the extent it cannot be limited or excluded by Law.
+
+.. The Contractor’s liability in respect of the indemnities in Clause 16
+(VAT, Income Tax and National Insurance Contributions), Clause 7.11
+(Employment Indemnity), Clause 8.6 (IPRs Indemnity), Schedule 8 (Staff
+Transfer) and the Annexes to Schedule 8 (Staff Transfer) shall be
+unlimited.
+.. The Department’s liability in respect of the indemnities in Clause
+7.11 (Employment Indemnity), Schedule 8 (Staff Transfer) and the Annexes
+to Schedule 8 (Staff Transfer) shall be unlimited.
+.. Subject to Clauses 9.3 and 9.4 (Unlimited Liability) and Clauses 9.9
+(Consequential Losses):
+[loweralpha]
+... the Contractor’s aggregate liability in respect of loss of or damage
+to the Department Premises or other property or assets of the Department
+(including technical infrastructure, assets or equipment but excluding
+any loss or damage to the Department’s Data or any other data) that is
+caused by Defaults of the Contractor occurring in each and any Contract
+Year shall in no event exceed £10 million;
+... the Contractor's aggregate liability in respect of loss of or damage
+to Department Data or breach of the Data Protection Legislation that is
+caused by Default of the Contractor occurring in each and any Contract
+Year shall in no event exceed £10 million;
+... the Contractor’s aggregate liability in respect of all Service Credits
+incurred shall be subject to the Service Credit Cap; and
+... the Contractor's aggregate liability in respect of all other Losses
+incurred by the Department under or in connection with this Contract as
+a result of Defaults by the Contractor shall in no event exceed:
+[lowerroman]
+.... in relation to Defaults occurring in the first Contract Year, an amount
+equal to 150% of the Estimated Year 1 Charges;
+.... in relation to Defaults occurring during any subsequent Contract Year,
+an amount equal to 150% of the Charges paid and/or due to be paid to the
+Contractor under this Contract in the Contract Year immediately
+preceding the occurrence of the Default; and
+.... in relation to Defaults occurring after the end of the Contract Period,
+an amount equal to 150% of the Charges paid and/or due to be paid to the
+Supplier in the 12 month period immediately prior to the last day of the
+Contract Period, provided that where any Losses referred to this Clause 9.6(d) have been
+incurred by the Department as a result of the Contractor's abandonment
+of this Contract or the Contractor’s willful default, willful breach of
+a fundamental term of this Contract or wilful repudiatory breach of this
+Contract, the references in such Clause to 150% shall be deemed to be
+references to 200%.
+[arabic]
+.. Deductions from Charges shall not be taken into consideration when
+calculating the Contractor’s liability under Clause 9.6(c).
+.. Subject to Clauses 9.3 and 9.5 (Unlimited Liability) and Clause 9.9
+(Consequential Losses) and without prejudice to the Department’s
+obligation to pay the Charges as and when they fall due for payments:
+[loweralpha]
+... the Department's total aggregate liability in respect of all Losses
+incurred by the Contractor under or in connection with this Contract as
+a result of early termination of this Contract by the Department
+pursuant to Clause 10.1 shall in no event exceed the amount set out
+Schedule 12 (Breakage Costs); and
+... the Department's aggregate liability in respect of all Losses incurred
+by the Contractor under or in connection with this Contract as a result
+of Defaults of the Department shall in no event exceed:
+[lowerroman]
+.... in relation to Defaults occurring in the first Contract Year, an amount
+equal to the Estimated Year 1 Charges;
+.... in relation to Defaults occurring during any subsequent Contract Year,
+an amount equal to the total Charges paid and/or due to be paid under
+this Contract in the Contract Year immediately preceding the occurrence
+of the Default; and
+.... in relation to Defaults occurring after the end of the Contract Period,
+an amount equal to the total Charges paid and/or due to be paid to the
+Contractor in the 12 month period immediately prior to the last day of
+the Contract Period.
+
+.. Subject to Clauses 9.3, 9.4 and 9.5 (Unlimited Liability) and Clause
+9.10, neither Party shall be liable to the other Party for:
+[loweralpha]
+... any indirect, special or consequential Loss; or
+... any loss of profits, turnover, business opportunities or damage to
+goodwill (in each case whether direct or indirect).
+.. Notwithstanding Clause 9.9 but subject to Clause 9.6, the Contractor
+acknowledges that the Department may, amongst other things, recover from
+the Contractor the following Losses incurred by the Department to the
+extent that they arise as a result of a Default by the Contractor:
+[loweralpha]
+... any additional operational and/or administrative costs and expenses
+incurred by the Department, including costs relating to time spent by or
+on behalf of the Department in dealing with the consequences of the
+Default;
+... any wasted expenditure or charges;
+... the additional cost of procuring Replacement Services for the
+remainder of the Contract Period and/or replacement Deliverables, which
+shall include any incremental costs associated with such Replacement
+Services and/or replacement Deliverables above those which would have
+been payable under this Contract;
+... any compensation or interest paid to a third party by the Department;
+and
+... any fine or penalty incurred by the Department pursuant to Law and
+any costs incurred by the Department in defending any proceedings which
+result in such fine or penalty.
+
+.. Where under this Contract one Party indemnifies the other Party, the
+Parties shall comply with the provisions of Schedule 13 (Conduct of
+Claims) in relation to the conduct of claims made by a third person
+against the Party having (or claiming to have) the benefit of the
+indemnity.
+.. Each Party shall use all reasonable endeavours to mitigate any loss
+or damage suffered arising out of or in connection with this Contract,
+including any Losses for which the relevant Party is entitled to bring a
+claim against the other Party pursuant to the indemnities in this
+Contract.
+.. The Department’s total liability to the Contractor under this
+Contract shall be limited to paying the Charges in accordance with
+Schedule 2 (Pricing) and any other liability or payment as obliged under
+this Contract.
+.. Without prejudice to its liability to indemnify the Department under
+this Contract the Contractor shall take out and maintain in force or
+procure the taking out and maintenance of the Required Insurances and
+any other insurances as may be required by law. The Required Insurances
+shall be effective in each case no later than the date on which the
+relevant risk commences.
+
+.. The Required Insurances referred to in Clause 9.13 shall amount to:
+[arabic]
+... at least five million pounds (£5 million) in respect of public liability
+cover in respect of each and every occurrence;
+... at least five million pounds (£5 million) in respect of employer's
+liability cover in respect of each and every occurrence; and
+... at least two million pounds (£2 million) in respect of professional
+indemnity cover in respect of each and every claim;
+
+.. The Department may review the minimum indemnity limits specified for
+the Required Insurances in Clause 9.14 on an annual basis. Any Change
+that is required to the minimum indemnity limits as a result of the
+Department’s review shall be implemented in accordance with the Change
+Control Procedure.
+.. The Contractor shall provide to the Department by 1 September
+annually during the Contract Period and at other times on request
+evidence confirming that the Required Insurances are and remain in
+place.
+
+// numbering sequence changes here so this bit's a block 😣
+----
+9A Financial Distress
+
+9A.1 The Parties shall comply with the provisions of Schedule 4
+(Financial Distress) in relation to the assessment of financial standing
+of the Contractor and the consequences of a change to that financial
+standing
+
+9A.2 As at the date of the Framework Agreement the Contractor warranted
+to the Department its long term credit ratings as set out in Schedule 4
+(Financial Distress) Annex 3. The Contractor shall comply with the
+requirements set out in paragraph 2 of Schedule 4 (Financial Distress)
+in relation to its credit ratings and in the event that a Financial
+Distress Event occurs the provisions of Schedule 4 (Financial Distress)
+shall apply.
+----
+
+[start=10]
+. Termination
+[arabic]
+.. This Contract may be terminated on notice by the Department giving to
+the Contractor at least 90 days’ notice in writing.
+.. If the Department terminates the Contract under Clause 10 the
+Department shall make no further payments to the Contractor except for a
+Breakage Costs Payment assessed in accordance with Schedule 12 (Breakage
+Costs), Services supplied by the Contractor prior to termination where
+the payment has yet to be made by the Department.
+.. In the event of a Serious Breach of this Contract by either party
+which can be remedied, the other party may serve a notice on the party
+in breach requiring the breach to be remedied within a period specified
+in the notice which shall be reasonable in all the circumstances. If the
+breach has not been remedied by the expiry of the specified period, the
+party not in breach may terminate this Contract with immediate effect by
+notice in writing.
+.. If the Department holds the view, acting reasonably, that the
+Contractor has committed a Serious Breach of the Contract that it would
+pose a risk to the health and safety of children or vulnerable adults to
+permit it to continue to deliver the Services, it may require the
+Contractor to suspend delivery of the Services pending further
+investigations.
+.. This Contract may be terminated by the Department with immediate
+effect by notice in writing if at any time:
+[arabic]
+... the Contractor commits a Serious Breach which cannot be remedied;
+... in England and Wales, a petition is presented for the Contractor's
+bankruptcy or a criminal bankruptcy order is made against the Contractor
+or it makes any composition or arrangement with or for the benefit of
+creditors or makes any conveyance or assignment for the benefit of
+creditors;
+... in Scotland, if the Contractor becomes apparently insolvent within the
+meaning of Section 7 of the Bankruptcy (Scotland) act 1985;
+... where the Contractor is a firm or a number of persons acting together in
+any capacity (including as trustees), any event referred to in
+Sub-Clauses 10.4.1 or 10.4.2 occurs in respect of any partner in the
+firm or any of those persons (including any trustees);
+... the Contractor is convicted (or being a company, any officers or
+representatives of the Contractor are convicted) of a criminal offence
+related to the business or professional conduct;
+... the Contractor commits (or being a company, any officers or
+representatives of the Contractor commit) an act of grave misconduct in
+the course of the business;
+... the Contractor fails (or being a company, any officers or
+representatives of the Contractor fail) to fulfil its obligations
+relating to the payment of Social Security contributions;
+... the Contractor fails (or being a company, any officers or
+representatives of the Contractor fail) to fulfil its obligations
+relating to payment of taxes;
+... the Contractor fails (or being a company, any officers or
+representatives of the Contractor fail) to disclose any serious
+misrepresentation in supplying information required by the Department in
+or pursuant to this Contract.
+... any of the provisions of paragraph 4 of Schedule 4 (Financial Distress)
+have arisen.
+
+// 10.6 is skipped, not sure why
+[arabic, start=7]
+.. Nothing in this Clause 10 shall affect the coming into, or
+continuance in force of any provision of this Contract which is
+expressly or by implication intended to come into force or continue in
+force upon termination of this Contract.
+
+[start=11]
+. Status of Contractor
+[arabic]
+.. In carrying out its obligations under this Contract the Contractor
+agrees that it will be acting as principal and not as the agent of the
+Department.
+.. The Contractor shall not say or do anything that may lead any other
+person to believe that the Contractor is acting as the agent of the
+Department.
+
+. Confidentiality
+[arabic]
+.. Except to the extent set out in this Clause or where disclosure is
+expressly permitted elsewhere in this Contract, each party shall:
+[arabic]
+... treat the other party's Confidential Information as confidential and
+safeguard it accordingly; and
+... not disclose the other party's Confidential Information to any other
+person without the owner's prior written consent.
+.. Clause 12 shall not apply to the extent that:
+[arabic]
+... such disclosure is a requirement of Law placed upon the party making the
+disclosure, including any requirements for disclosure under the FOIA,
+Code of Practice on Access to Government Information or the
+Environmental Information Regulations pursuant to Clause 13 (Freedom of
+Information);
+... such information was in the possession of the party making the
+disclosure without obligation of confidentiality prior to its disclosure
+by the information owner;
+... such information was obtained from a third party without obligation of
+confidentiality;
+... such information was already in the public domain at the time of
+disclosure otherwise than by a breach of this Contract; or
+... it is independently developed without access to the other party's
+Confidential Information.
+
+.. The Contractor may only disclose the Department's Confidential
+Information to the Contractor Personnel who are directly involved in the
+provision of the Project and who need to know the information, and shall
+ensure that such Contractor Personnel are aware of and shall comply with
+these obligations as to confidentiality.
+.. The Contractor shall not, and shall procure that the Contractor
+Personnel do not, use any of the Department's Confidential Information
+received otherwise than for the purposes of this Contract.
+.. The Contractor shall ensure that its employees, servants or such
+professional advisors or consultants are aware of the Contractor’s
+obligations under this Contract.
+.. Nothing in this Contract shall prevent the Department from disclosing
+the Contractor's Confidential Information:
+[arabic]
+... on a confidential basis to any Central Government Body for any proper
+purpose of the Department or of the relevant Central Government Body;
+... to Parliament and Parliamentary Committees or if required by any
+Parliamentary reporting requirement;
+... to the extent that the Department (acting reasonably) deems disclosure
+necessary or appropriate in the course of carrying out its public
+functions;
+... on a confidential basis to a professional adviser, consultant,
+Contractor, or other person engaged by any of the entities described in
+Clause 12.6.1 (including any benchmarking organisation) for any purpose
+relating to or connected with this Contract;
+... on a confidential basis for the purpose of the exercise of its rights
+under this Contract, including audit rights, step-in rights and exit
+management rights; or
+... on a confidential basis to a proposed successor body in connection with
+any assignment, novation or disposal of any of its rights, obligations
+or liabilities under this Contract.
+
+.. The Department shall use all reasonable endeavours to ensure that any
+Central Government Body, Contracting Department, employee, third party
+or Sub-Contractor to whom the Contractor's Confidential Information is
+disclosed pursuant to Clause 12 is made aware of the Department's
+obligations of confidentiality.
+.. Nothing in this Clause 12 shall prevent either party from using any
+techniques, ideas or know-how gained during the performance of the
+Contract in the course of its normal business to the extent that this
+use does not result in a disclosure of the other party's Confidential
+Information or an infringement of Intellectual Property Rights.
+.. The parties acknowledge that, except for any information that is
+exempt from disclosure in accordance with the provisions of the FOIA,
+the content of this Contract is not Confidential Information. The
+Department shall be responsible for determining in its absolute
+discretion whether any of the content of the Contract is exempt from
+disclosure in accordance with the provisions of the FOIA.
+.. Subject to Clause 12.9, the Contractor hereby gives its consent for
+the Department to publish the Contract in its entirety, including from
+time to time agreed changes to the Contract, to the general public.
+.. The Department may consult with the Contractor to inform its decision
+regarding any redactions but the Department shall have the final
+decision in its absolute discretion.
+.. The Contractor shall assist and cooperate with the Department to
+enable the Department to publish this Contract.
+
+. Freedom of Information
+[arabic]
+.. The Contractor acknowledges that the Department is subject to the
+requirements of the FOIA and the Environmental Information Regulations
+and shall assist and cooperate with the Department to enable the
+Department to comply with its information disclosure obligations.
+.. The Contractor shall and shall procure that its Sub-Contractors
+shall:
+[arabic]
+... transfer to the Department all Requests for Information that it receives
+as soon as practicable and in any event within two Working Days of
+receiving a Request for Information;
+... provide the Department with a copy of all Information in its possession,
+or power in the form that the Department requires within five Working
+Days (or such other period as the Department may specify) of the
+Department's request; and
+... provide all necessary assistance as reasonably requested by the
+Department to enable the Department to respond to the Request for
+Information within the time for compliance set out in section 10 of the
+FOIA or regulation 5 of the Environmental Information Regulations.
+.. The Department shall be responsible for determining in its absolute
+discretion and notwithstanding any other provision in this Contract or
+any other agreement whether any Information is exempt from disclosure in
+accordance with the provisions of the FOIA or the Environmental
+Information Regulations.
+.. In no event shall the Contractor respond directly to a Request for
+Information unless expressly authorised to do so by the Department.
+.. The Contractor acknowledges that (notwithstanding the provisions of
+Clause 13) the Department may, acting in accordance with the Ministry of
+Justice’s Code of Practice on the Discharge of the Functions of Public
+Authorities under Part 1 of the Freedom of Information Act 2000 (*“the
+Code”*), be obliged under the FOIA, or the Environmental Information
+Regulations to disclose information concerning the Contractor or the
+Project:
+[arabic]
+... in certain circumstances without consulting the Contractor; or
+... following consultation with the Contractor and having taken their views
+into account;
++
+provided always that where Clause 13.5.1 applies the Department shall,
+in accordance with any recommendations of the Code, take reasonable
+steps, where appropriate, to give the Contractor advanced notice, or
+failing that, to draw the disclosure to the Contractor’s attention after
+any such disclosure.
+
+.. The Contractor shall ensure that all Information is retained for
+disclosure and shall permit the Department to inspect such records as
+requested from time to time.
+
+. Audit and service continuity plan
+
+[arabic]
+.. The Contractor shall provide access at all reasonable times to the
+Department's internal auditors or other duly authorised staff or agents
+to inspect such documents as the Department considers necessary in
+connection with this Contract and where appropriate speak to the
+Contractors employees.
+.. The Contractor shall provide the Department with its Service
+Continuity Plan in accordance with the provisions of Schedule 11
+(Service Continuity Plan).
+
+[arabic, start=15]
+. Transfer of Responsibility on Expiry or Termination
+[arabic]
+.. The Contractor shall, at no cost to the Department, promptly provide
+such assistance and comply with such timetable as the Department may
+reasonably require for the purpose of ensuring an orderly transfer of
+responsibility upon the expiry or other termination of this Contract.
+The Department shall be entitled to require the provision of such
+assistance both prior to and, for a reasonable period of time after the
+expiry or other termination of this Contract.
+.. If, to fulfil the Department’s request under Clause 15,1, the
+Contractor requires resources:
+[loweralpha]
+... not normally accounted for in delivering the Services; or
+... not accounted for in the Charges; or
+... after the expiry of the contract;
++
+then the Parties shall agree a variation to the Charges for direct,
+reasonable and verifiable costs (which in the case of the Contractor
+shall not exceed the time and materials of the resources required).
+
+.. Such assistance may include (without limitation) the delivery of
+documents and data in the possession or control of the Contractor which
+relate to this Contract, including the documents and data, if any,
+referred to in the Schedule.
+.. The Contractor undertakes that it shall not knowingly do or omit to
+do anything which may adversely affect the ability of the Department to
+ensure an orderly transfer of responsibility.
+.. The Department and the Contractor shall act on the basis that TUPE
+applies on expiry or termination of the Contract where the Department is
+proposing to re-procure services which are substantially the same as the
+Services.
+.. During the period of 6 months preceding the Expiry Date or within 21
+days after the Department or the Contractor has given notice to
+terminate the Contract, the Contractor shall disclose to the Department
+and shall permit the Department to disclose to any tenderer for services
+which are substantially the same as the Services, the Initial Staff
+Information provided that prior to so doing any such tenderer shall have
+executed in writing a confidentiality undertaking in favour of the
+Contractor.
+.. During the period of three months preceding the Expiry Date or within
+21 days after the Department or the Contractor has given notice to
+terminate the Contract, the Contractor shall, subject to the provisions
+of the Data Protection Laws, provide and thereafter keep updated at
+monthly intervals, to the Department and to the Successor Contractor
+information equivalent to the Relevant Personnel Documentation and
+Prescribed Particulars in respect of each employee whom the Contractor
+reasonably believes will be a Future Transferring Employee provided that
+prior to so doing the Successor Contractor nominated by the Department
+shall have executed in writing a confidentiality undertaking in favour
+of the Contractor.
+.. The Contractor shall make reasonable endeavours to assist the
+Successor Contractor to communicate with, meet and inform and consult
+with the employees whom the Contractor reasonably believes will be a
+Future Transferring Employee and their trade union or other employee
+representatives for the purposes of complying with the Transfer of
+Undertakings (Protection of Employment) Regulations 2006.
+.. The Contractor shall immediately prior to the Future Transfer Date
+provide to the Department or the Successor Contractor a complete and
+accurate list of the Prescribed Particulars of all employees whom it
+reasonably believes will be Future Transferring Employees.
+.. Within a period of 21 days following the expiry or termination of
+this Contract the Contractor shall provide to the Department or the
+Successor Contractor in writing Final Pay Details of the Future
+Transferring Employees in accordance with Schedule 8 (TUPE).
+.. The Contractor warrants that it shall supply complete and accurate
+information pursuant to Clauses 15.6, 15.7, 15.9 and 15.10 in all
+material respects and the Contractor shall indemnify and keep the
+Department indemnified fully now and in the future in respect of all or
+any costs whether arising in contract or under any Relevant Legislation
+suffered or incurred by the Department or the Successor Contractor
+nominated by the Department by reason of any proceeding, claim or demand
+arising from or in connection with the provision of information and/or
+the failure to provide complete and accurate information under Clauses
+15.6, 15.7, 15.9 and 15.10 and/or the provision of assistance and/or
+failure to provide assistance under Clause 15.8 of this Contract.
+.. After receiving notice of the termination of this Contract and for
+six (6) months preceding the Expiry Date the Contractor shall promptly
+notify the Department or the Successor Contractor:
+[arabic]
+... Of the period of notice given by the Contractor or received from any
+employee whom the Contractor reasonably believes will be a Future
+Transferring Employee regardless of when such notice is to take effect;
+... Of the termination, for whatever reason, of the employment of any
+employee whom the Contractor reasonably believes will be a Future
+Transferring Employee; and
+... Of any other change to any employee whom the Contractor reasonably
+believes will be a Future Transferring Employee and their terms and
+conditions of employment, their Prescribed Particulars and their
+Relevant Personnel Documentation.
+
+.. The Contractor warrants that it shall supply the Required Information
+completely and accurately in all respects at the time of supply and
+shall indemnify and keep the Department and/or any Successor Contractor
+indemnified in respect of all and any costs suffered or incurred by the
+Department or the Successor Contractor by reason of any proceedings,
+claim or demand arising out of or in connection with:
+[arabic]
+... Any claim against the Department or the Successor Contractor by any
+Future Transferring Employee so far as it relates to any act or omission
+of the Contractor after the Employee Transfer Date and prior to the
+Future Transfer Date; and
+... Any claim against the Department or the Successor Contractor by any
+Future Transferring Employee whose name is not included on the list
+provided by the Contractor pursuant to Clause 15.9 so far as it relates
+to the dismissal of such Future Transferring Employee within two Months
+of the Department or Successor Contractor becoming aware of the transfer
+of such Future Transferring Employee.
+
+.. In the event that the Department or the Successor Contractor incurs
+costs, liabilities or expenditure in respect of Future Transferring
+Employees which is greater than would have been the case if the Required
+Information supplied by the Contractor had been accurate and complete,
+then such (net) greater costs, liabilities or expenditure shall be
+deemed to be costs suffered or incurred by the Department or Successor
+Contractor and included within the indemnity provided by the Contractor.
+.. The Department or Successor Contractor shall be entitled to recover
+from the Contractor in full any legal, accountancy and other costs
+actually and reasonably incurred by the Department or Successor
+Contractor in connection with the costs and liabilities indemnified by
+the Contractor.
+.. This Clause 15 shall continue in effect for six months following the
+expiry or termination of this Contract.
+.. Further to the requirements of this Clause 15 and in accordance with
+Schedule 1 Part A (The Services) the Contractor shall, within six months
+of the date of this contract prepare and submit to the Department and
+shall thereafter maintain, an Exit Plan.
+
+. Tax Indemnity
+[arabic]
+.. Where the Contractor is liable to be taxed in the UK in respect of
+consideration received under this contract, it shall at all times comply
+with the Income Tax (Earnings and Pensions) Act 2003 (ITEPA) and all
+other statutes and regulations relating to income tax in respect of that
+consideration. Where the Department has deemed the Contractor to be an
+Off-Payroll Contractor as defined by His Majesty’s Revenue and Customs
+the Department reserves the right to calculate Income Tax and pay it to
+HMRC. The amounts will be deducted from the Contractor’s fee for the
+work provided.
+.. Where the Contractor is liable to National Insurance Contributions
+(NICs) in respect of consideration received under this contract, it
+shall at all times comply with the Social Security Contributions and
+Benefits Act 1992 (SSCBA) and all other statutes and regulations
+relating to NICs in respect of that consideration. Where the Department
+has deemed the Contractor to be an Off-Payroll Contractor as defined by
+His Majesty’s Revenue and Customs the Department reserves the right to
+calculate primary (employee) National Insurance contributions (NICs) and
+pay them to HMRC. The amounts will be deducted from the Contractor’s fee
+for the work provided.
+.. The Department may, at any time during the term of this contract, ask
+the Contractor to provide information which demonstrates how the
+Contractor complies with Clauses 16.1 and 16.2 above or why those
+Clauses do not apply to it.
+.. A request under Clause 16.3 above may specify the information which
+the Contractor must provide and the period within which that information
+must be provided.
+.. The Department may terminate this Contract if-
+[arabic]
+... in the case of a request mentioned in Clause 16.3 above if the
+Contractor:
+[lowerroman]
+.... fails to provide information in response to the request within a
+reasonable time, or
+.... provides information which is inadequate to demonstrate either how the
+Contractor complies with Clauses 16.1 and 16.2 above or why those
+Clauses do not apply to it;
+
+... in the case of a request mentioned in Clause 16.4 above, the Contractor
+fails to provide the specified information within the specified period,
+or
+
+... it receives information which demonstrates that, at any time when
+Clauses 16.1 and 16.2 apply, the Contractor is not complying with those
+Clauses.
+
+
+.. The Department may supply any information which it receives under
+Clause 16.3 to the Commissioners of His Majesty’s Revenue and Customs
+for the purpose of the collection and management of revenue for which
+they are responsible.
+.. The Contractor warrants and represents to the Department that it is an
+independent contractor and, as such, bears sole responsibility for the
+payment of tax and national insurance contributions which may be found
+due from it in relation to any payments or arrangements made under this
+Contract. The Contractor shall promptly and regularly pay all National
+Insurance Contributions due from it as a self-employed person and shall
+account to the HM Revenue and Customs for all taxes due from it in
+respect of the payments made to it under this Contract.
+.. If, notwithstanding Clause 16.7 the HM Revenue and Customs and/or any
+other appropriate agency consider that the Contractor is an employee of
+the Department for the purposes of tax and/or national insurance
+contributions; then the Department shall be entitled to terminate this
+Contract immediately and deduct from the payments payable to the
+Contractor under the terms of this Contract, such sums as the HM Revenue
+and Customs and/or other agencies require in respect of income tax and
+employee national insurance contributions. The deduction of such tax and
+national insurance contributions will not affect the status of the
+Contractor as self-employed for all other purposes.
+.. Without prejudice to the provisions of Clause 16.8 above, the
+Contractor shall indemnify the Department against any liability,
+assessment or claim made by the HM Revenue and Customs or any other
+relevant Department arising out of the performance by the Contractor of
+its obligations under this Contract (other than in respect of employer's
+secondary national insurance contributions) and any costs, expenses,
+penalty fine or interest incurred or payable by the Department in
+connection with any such assessment or claim.
+.. The Contractor authorises the Department to provide the HM Revenue and
+Customs and all other departments or agencies of the Government with any
+information which they may request as to fees and/or expenses paid or
+due to be paid under this Contract whether or not the Department is
+obliged as a matter of law to comply with such request.
+.. The Contractor shall register for value added tax if and when required
+by law and shall promptly notify the Department for Work and Pensions of
+its liability for Class 2 and, where appropriate, Class 4 national
+insurance contributions.
+
+. Data Protection
+[arabic]
+.. The Parties acknowledge that for the purposes of the Data Protection
+Legislation, the Department is the Controller and the Contractor is the
+Processor. The only processing that the Contractor is authorised to do
+is listed in Schedule 6.
+.. The Contractor shall notify the Department immediately if it
+considers that any of the Department's instructions infringe the Data
+Protection Legislation.
+.. The Contractor shall provide all reasonable assistance to the
+Department in the preparation of any Data Protection Impact Assessment
+prior to commencing any processing. Such assistance may, at the
+discretion of the Department, include:
+[arabic]
+... a systematic description of the envisaged processing operations and the
+purpose of the processing;
+... an assessment of the necessity and proportionality of the processing
+operations in relation to the Services;
+... an assessment of the risks to the rights and freedoms of Data Subjects;
+and
+... the measures envisaged to address the risks, including safeguards,
+security measures and mechanisms to ensure the protection of Personal
+Data.
+
+.. The Contractor shall, in relation to any Personal Data processed in
+connection with its obligations under this Contract:
+[arabic]
+... process that Personal Data only in accordance with Schedule 6, unless
+the Contractor is required to do otherwise by Law. If it is so required,
+the Contractor shall promptly notify the Department before processing
+the Personal Data unless prohibited by Law;
+... ensure that it has in place Protective Measures, which have been
+reviewed and approved by the Department as appropriate to protect
+against a Data Loss Event having taken account of the:
+[loweralpha]
+.... nature of the data to be protected;
+.... harm that might result from a Data Loss Event;
+.... state of technological development; and
+.... cost of implementing any measures;
+
+... ensure that:
+[arabic]
+.... the Contractor Personnel do not process Personal Data except in
+accordance with this Contract (and in particular Schedule 6);
+.... it takes all reasonable steps to ensure the reliability and
+integrity of any Contractor Personnel who have access to the Personal
+Data and ensure that they:
+[loweralpha]
+..... are aware of and comply with the Contractor’s duties under
+this Clause;
+
+..... are subject to appropriate confidentiality undertakings with
+the Contractor or any Sub-processor;
+
+..... are informed of the confidential nature of the Personal Data
+and do not publish, disclose or divulge any of the Personal Data to any
+third Party unless directed in writing to do so by the Department or as
+otherwise permitted by this Contract; and
+
+..... have undergone adequate training in the use, care,
+protection, and handling of Personal Data; and
+
+... not transfer Personal Data outside of the EU unless the prior written
+consent of the Department has been obtained and the following conditions
+are fulfilled:
+[loweralpha]
+.... the Department or the Contractor has provided appropriate
+safeguards in relation to the transfer (whether in accordance with GDPR
+Article 46 or LED Article 37) as determined by the Department;
+
+.... the Data Subject has enforceable rights and effective legal
+remedies;
+
+.... the Contractor complies with its obligations under the Data
+Protection Legislation by providing an adequate level of protection to
+any Personal Data that is transferred (or, if it is not so bound, uses
+its best endeavours to assist the Department in meeting its
+obligations); and
+
+.... the Contractor complies with any reasonable instructions
+notified to it in advance by the Department with respect to the
+processing of the Personal Data;
+
+... at the written direction of the Department, delete or return Personal
+Data (and any copies of it) to the Department on termination of the
+Contract unless the Contractor is required by Law to retain the Personal
+Data.
+
+.. Subject to Clause 17.6, the Contractor shall notify the Department
+immediately if it:
+[arabic]
+... receives a Data Subject Access Request (or purported Data Subject Access
+Request);
+... receives a request to rectify, block or erase any Personal Data;
+... receives any other request, complaint or communication relating to
+either Party's obligations under the Data Protection Legislation;
+... receives any communication from the Information Commissioner or any
+other regulatory Department in connection with Personal Data processed
+under this Contract;
+... receives a request from any third Party for disclosure of Personal Data
+where compliance with such request is required or purported to be
+required by Law; or
+... becomes aware of a Data Loss Event.
+
+.. The Contractor’s obligation to notify under Clause 17.5 shall include
+the provision of further information to the Department in phases, as
+details become available.
+.. Taking into account the nature of the processing, the Contractor shall
+provide the Department with full assistance in relation to either
+Party's obligations under Data Protection Legislation and any complaint,
+communication or request made under Clause 1.5 (and insofar as possible
+within the timescales reasonably required by the Department) including
+by promptly providing:
+[arabic]
+... the Department with full details and copies of the complaint,
+communication or request;
+... such assistance as is reasonably requested by the Department to enable
+the Department to comply with a Data Subject Access Request within the
+relevant timescales set out in the Data Protection Legislation;
+... the Department, at its request, with any Personal Data it holds in
+relation to a Data Subject;
+... assistance as requested by the Department following any Data Loss Event;
+... assistance as requested by the Department with respect to any request
+from the Information Commissioner’s Office, or any consultation by the
+Department with the Information Commissioner's Office.
+
+.. The Contractor shall maintain complete and accurate records and
+information to demonstrate its compliance with this Clause. This
+requirement does not apply where the Contractor employs fewer than 250
+staff, unless:
+[arabic]
+... the Department determines that the processing is not occasional;
+... the Department determines the processing includes special categories of
+data as referred to in Article 9(1) of the GDPR or Personal Data
+relating to criminal convictions and offences referred to in Article 10
+of the GDPR; and
+... the Department determines that the processing is likely to result in a
+risk to the rights and freedoms of Data Subjects.
+
+.. The Contractor shall allow for audits of its Data Processing activity
+by the Department or the Department’s designated auditor.
+.. The Contractor shall designate a data protection officer if required
+by the Data Protection Legislation.
+.. Before allowing any Sub-processor to process any Personal Data related
+to this Contract, the Contractor must:
+[arabic]
+... notify the Department in writing of the intended Sub-processor and
+processing;
+... obtain the written consent of the Department;
+... provide the Department with such information regarding the Sub-processor
+as the Department may reasonably require.
+
+.. The Contractor shall remain fully liable for all acts or omissions of
+any Sub-processor.
+.. The Contractor shall indemnify the Department against any liability,
+assessment or claim made by the Information Commissioner’s Office or any
+other relevant Department or Agency arising out of the performance by
+the Contractor of its obligations under this Contract and any costs,
+expenses, penalty fine or interest incurred or payable by the Department
+in connection with any such assessment or claim.
+.. The Contractor may, at any time on not less than 30 Working Days’
+notice, revise this Clause by replacing it with any applicable
+controller to processor standard clauses or similar terms forming part
+of an applicable certification scheme (which shall apply when
+incorporated by attachment to this Contract).
+.. The Parties agree to take account of any guidance issued by the
+Information Commissioner’s Office. The Department may on not less than
+30 Working Days’ notice to the Contractor amend this Contract to ensure
+that it complies with any guidance issued by the Information
+Commissioner’s Office.
+
+. Amendment and variation
+[arabic]
+.. No amendment or variation to this Contract shall be effective unless
+it is in writing and signed by or on behalf of each of the parties
+hereto. The Contractor shall comply with any formal procedures for
+amending or varying contracts which the Department may have in place
+from time to time.
+
+.. In considering any amendment or variation to this Contract, the
+parties shall use the Change Control Procedure as set out in Schedule 3
+(Change Control Procedure).
+
+. Assignment and Sub-Contracting
+[arabic]
+.. The benefit and burden of this Contract may not be assigned or
+sub-contracted in whole or in part by the Contractor without the prior
+written consent of the Department save as expressly set out in clause
+19.2. Such consent may be given subject to any conditions which the
+Department considers necessary. The Department may withdraw its consent
+to any sub-contractor where it no longer has reasonable grounds to
+approve of the sub-contractor or the sub-contracting arrangement and
+where these grounds have been presented in writing to the Contractor.
+.. The Contractor may enter into sub-contracts for the delivery of
+general services that indirectly enable the Contractor to perform the
+Services without the requirement to seek the Department’s prior consent
+as set out in clause 19.
+.. Where the Department has consented to the appointment of a
+Sub-Contractor, pursuant to Clause 19, the Contractor shall, as soon as
+reasonably practicable following a request from the Department provide
+to the Department a copy of the Sub-Contract entered into between the
+Contractor and the Sub-Contractor which should pass down to the
+Sub-Contractor in terms which are the same or substantially similar to
+the provisions in this Contract as is relevant for the delivery of the
+Services under the Sub-Contract.
+.. Where the Department has consented to an assignment pursuant to
+clause 19 the Contractor shall evidence the assignment in writing to the
+Department and provide a copy of the assignment document on request.
+.. The Contractor shall not terminate or materially amend the terms of
+any Sub-contract whose value exceeds £10,000 (ten thousand pounds)
+without obtaining the Department’s prior written consent.
+.. The Department may require the Contractor to terminate a sub-contract
+if the acts or omissions of the Sub-contractor have given rise to the
+Department’s rights of termination pursuant to clause 10 unless the
+sub-contractor can remedy the breach to the Department’s satisfaction
+with 21 days of receipt by the Contractor of written notice from the
+Department requiring the Sub-Contract to be terminated.
+.. The Contractor shall remain responsible for all acts and omissions of
+its Sub-Contractors as if they were its own.
+.. If the Department believes there are:
+[arabic]
+... Grounds for excluding a supplier from being a Sub-Contractor pursuant to
+the minimum requirements set out in the table below: or
++
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Commercial organisations, Charities, HEIs and consultants
+|Schools
+a|
+* Parts 1 & 2 of the Standard Selection Questionnaire.
+* No unmanageable conflicts of interest or reputational risk to the ECF.
+* No unresolved performance issues, as identified by the Quality
+Assurance function.
+
+a|
+* Must be graded Good or Outstanding for overall effectiveness by
+Ofsted.
+* No unmanageable conflicts of interest or reputational risk to the ECF
+and/or the DfE.
+* No unresolved performance issues, as identified by the Quality
+Assurance function and/or by the DfE.
+
+|===
+
+... Compulsory grounds for excluding a Sub-Contractor pursuant to Regulation
+57 of the Regulations; or
+... Non-compulsory grounds for excluding a Sub-Contractor pursuant to
+Regulation 57 of the Regulations;
++
+the Department may require the Contractor to replace or not appoint the
+Sub-Contractor and the Contractor shall comply with such a requirement.
+
+.. The Department reserves the right to undertake due diligence in
+relation to any Sub-Contractor in accordance with Clause 19.8.
+
+. The Contract (Rights of Third Parties) Act 1999
+[arabic]
+.. This Contract shall not create any rights, under the Contracts
+(Rights of Third Parties) Act 1999 or otherwise, that shall be
+enforceable by anyone other than the Department and/or the Contractor.
+
+. Waiver
+[arabic]
+.. No delay by or omission by either Party in exercising any right,
+power, privilege, or remedy under this Contract shall operate to impair
+such right, power, privilege or remedy or be construed as a waiver
+thereof. Any single or partial exercise of any such right, power,
+privilege or remedy shall not preclude any other or further exercise
+thereof or the exercise of any other right, power, privilege, or remedy.
+
+. Force majeure
+
+[arabic]
+.. If either Party is prevented or delayed in the performance of any
+of its obligations under the Contract by Force Majeure, that Party shall
+immediately serve notice in writing on the other Party specifying the
+nature and extent of the circumstances giving rise to Force Majeure, and
+shall subject to service of such notice and to clause 22.3 have no
+liability in respect of the performance of such of its obligations as
+are prevented by the Force Majeure events during the continuation of
+such events, and for such time after they cease as is necessary for that
+Party, using all reasonable endeavours, to recommence its affected
+operations in order for it to perform its obligations.
+
+.. If either Party is prevented from performance of its obligations
+for a continuous period in excess of 3 months, the other Party may
+terminate the Contract forthwith on service of written notice upon the
+Party so prevented, in which case neither Party shall have any liability
+to the other except that rights and liabilities which accrued prior to
+such termination shall continue to subsist.
+
+.. The Party claiming to be prevented or delayed in the performance of
+any of its obligations under the Contract by reason of Force Majeure
+shall use reasonable endeavours to end Force Majeure or to find
+solutions by which the Contract may be performed despite the Force
+Majeure.
+
+[arabic, start=23]
+. Notices
+[arabic]
+.. Any notice, demand or communication in connection with the Contract
+shall be in writing and may be delivered by hand, pre-paid first class
+post or (where being sent to an address in a different country to where
+posted) airmail, or e-mail, addressed to the recipient at its registered
+office or its address (or such other address, or e-mail address as may
+be notified in writing from time to time).
+.. The notice, demand or communication shall be deemed to have been duly
+served:
+[arabic]
+... if delivered by hand, when left at the proper address for service;
+... if given or made by prepaid first-class post 48 hours after being posted
+or in the case of airmail 14 days after being posted;
+... if made by e-mail, at the time of transmission, dispatched as a pdf
+attachment to an e-mail to the correct e-mail address without any error
+message or, in the case of transmission by e-mail where the time of
+transmission is not between 9.00 am and 5.00 pm, service shall be deemed
+to occur at 9.00 am on the next following Working Day (such times being
+local time at the address of the recipient).
+
+. Dispute resolution
+[arabic]
+.. The Parties shall use all reasonable endeavours to negotiate in good
+faith and settle amicably any dispute that arises during the continuance
+of this Contract. This shall include escalating the dispute to a more
+senior level within both the Department and the Contractor with a view
+to reaching a settlement.
+.. Any dispute not capable of resolution by the parties in accordance
+with the terms of Clause 24 shall be settled as far as possible by
+mediation in accordance with the Centre for Dispute Resolution (CEDR)
+Model Mediation Procedure.
+.. No party may commence any court proceedings/arbitration in relation
+to any dispute arising out of this Contract until they have attempted to
+settle it by mediation, but any such mediation may be terminated by
+either party at any time of such party wishing to commence court
+proceedings/arbitration.
+
+. Discrimination
+[arabic]
+.. The Contractor shall not unlawfully discriminate within the meaning
+and scope of any law, enactment, order, or regulation relating to
+discrimination (whether in race, gender, religion, disability, sexual
+orientation or otherwise) in employment.
+.. The Contractor shall take all reasonable steps to secure the
+observance of Clause 25.1 by all servants, employees or agents of the
+Contractor and all Contractors and sub-contractors employed in the
+execution of the Contract.
+
+. Law and Jurisdiction
+[arabic]
+.. This Contract shall be governed by and interpreted in accordance with
+English Law and the parties submit to the jurisdiction of the English
+courts.
+
+. Payments and invoicing
+[arabic]
+.. Except where otherwise expressly stated in the Contract the only
+payments to be paid by the Department for the performance by the
+Contractor of its obligations under the Contract shall be the Charges
+which shall be inclusive of all costs and expenses incurred by the
+Contractor in the performance of its obligations.
+.. In consideration for the provision of the Services the Department
+shall pay the Charges in accordance with the Schedule 2 subject to the
+receipt of correct invoices pursuant to Clause 27.11 being issued by the
+Contractor.
+.. Invoices in relation to Output Payments will be paid once the
+Department has verified that Outputs have been completed, subject to
+accurate Declarations, MI returns and/or satisfactory evidence being
+submitted where required, as set out in Annex 1 to Schedule 2: Part 1 –
+Payment Process. If Output Payments are made based on inaccurate
+Declarations, MI returns or evidence being submitted, and it later
+emerges that Output Payments were incorrectly made for Participants who
+did not start or remain engaged on the programme, the Department will be
+eligible to clawback those payments made.
+.. The Contractor shall submit the first invoice by 25^th^ June 2023 and
+subsequent invoices shall be submitted by the 25th of the month
+following the month in respect to which the invoice relates, unless
+otherwise stated in the contract.
+.. The Department shall accept and process for payment an electronic
+invoice submitted for payment by the Contractor where the invoice is
+undisputed and where it complies with the standard on electronic
+invoicing. For the purposes of this paragraph, an electronic invoice
+complies with the standard on electronic invoicing where it complies
+with the European standard and any of the syntaxes published in
+Commission Implementing Decision (EU) 2017/1870.
+.. Except where otherwise expressly stated in Schedule 2 the Contractor
+shall not be entitled to increase the Charges or any rates identified in
+Schedule 2 throughout the Contract Period.
+.. The Charges are exclusive of Value Added Tax (“VAT”) and all other
+taxes, duties and levies, but shall be inclusive of all charges, costs
+and expenses of whatever nature the Contractor incurs in providing the
+Services, and performing all other obligations of the Contractor, under
+the Contract (unless expressly stated otherwise in the Contract). The
+Contractor should notify the Department of any direct VAT charges for
+the delivery of the Contract. The Contractor shall identify VAT and
+other applicable taxes, duties and levies separately on invoices,
+including identifying the elements of the Charges that are subject to
+VAT at the standard rate or at any other rates and that are zero rated
+or exempt from VAT.
+.. Payment of the Charges by the Department shall be without prejudice
+to any rights the Department may have by reason of any Services, or any
+part thereof, failing to comply with any provision of the Contract and
+any breach by the Contractor of the Contract shall not be deemed to be
+accepted or waived by the Department by reason of such payment.
+.. Invoices shall be submitted electronically by email to
+ecf.delivery@education.gov.uk and the Department’s Contract Manager by
+the relevant date as specified in Clause 27.4.
+.. There is no postal address. Paper invoices or supporting documents
+will not be accepted. All supporting documents must be sent digitally
+along with the invoice to the email addresses at Clause 27.9.
+.. An invoice is a Correctly Submitted Invoice if it is legible and
+includes:
+[arabic]
+... the date of the invoice
+... Contractor’s full name and address;
+... Contract reference number;
+... Purchase Order number
+... the charging period;
+... a detailed breakdown of the appropriate Charges including deliverables,
+milestones achieved and Service Credits (if applicable);
+... days and times worked (if applicable);
+... Service Credits (if applicable); and
+... VAT if applicable.
+
+
+.. The Department shall not pay an invoice which is not a Correctly
+Submitted Invoice.
+.. The Department intends to pay Correctly Submitted Invoices within 5
+days of receipt. Correctly Submitted Invoices not paid within 30 days
+are subject to interest at the rate of 2% above the base rate from time
+to time of Barclays Bank. This Clause 27.12 is a substantial remedy for
+late payment of any sum payable under the Contract in accordance with
+section 8(2) Late Payment of Commercial Debts (Interest) Act 1998.
+.. The Department shall not be responsible for any delay in payment
+caused by receipt of invoices which are not a Correctly Submitted
+Invoice and shall, within 10 Business Days of receipt, return to the
+Contractor for correction invoices that are not Correctly Submitted
+Invoices together with an explanation of the need for correction.
+.. At the end of the Contract Period the Contractor shall promptly
+draw-up a final invoice which shall cover all Services provided up to
+the end of the Contract Period which have not already been invoiced to
+the Department. The final invoice shall be submitted not later than 30
+days after the end of the Contract Period.
+.. The Department shall not be obliged to pay the final invoice until
+the Contractor has carried out all of the Services.
+.. The Contractor shall ensure that a term is included in all
+Sub-Contracts which requires payment to be made of all sums due to
+Sub-Contractors within 30 days from the receipt of a valid invoice.
+.. If the Department disputes any amount specified in a Correctly
+Submitted Invoice it shall pay such amount of the invoice as is not in
+dispute and within 10 Business Days notify the Contractor of the reasons
+for disputing the invoice. The Department may withhold the disputed
+amount pending resolution of the dispute.
+.. The Parties shall use all reasonable endeavours to resolve any
+dispute over invoices within 10 Business Days of the dispute being
+raised, after which period either Party may refer the matter for
+resolution in accordance with clause 24.
+
+*AS WITNESS* the hands of the parties:
+
+Authorised to sign for and on behalf of [REDACTED]
+
+|===
+|Signature: |
+|Name in CAPITALS: |
+|Position in Organisation: |
+|Address in full: |
+|Date: |
+|===
+
+Authorised to sign for and on behalf of the Secretary of State for Education
+
+|===
+|Signature: |
+|Name in CAPITALS: |
+|Position in Organisation: |
+|Address in full: |
+|Date: |
+|===
+
+
