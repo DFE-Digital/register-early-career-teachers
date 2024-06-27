@@ -26,69 +26,80 @@ register. This functionality is used both for schools who are using the
 service for the first time as well as schools that can no longer access
 the service via their existing SIT email (e.g. SIT has left).
 
+---
+
 To register, the user must identify the school in our [GIAS register
-subset](https://github.com/DFE-Digital/earl
-y-careers-framework/blob/main/app/models/concerns/gias_helpers.rb#L8)
+subset](https://github.com/DFE-Digital/early-careers-framework/blob/main/app/models/concerns/gias_helpers.rb#L8)
 using local authority (LA) and school name. The school must be open
 and either an eligible establishment type and/or in England. If
 school can't be found in the GIAS list, they can't request a link to
 access the service.
 
-*📊 The GIAS register is used in order to check that the school is
+* 📊 The GIAS register is used in order to check that the school is
 real. This is the most up to date list of schools available, with
 most of the details we need to check schools' eligibility to have
-ECTs serve induction.*
+ECTs serve induction.
 
-*📜 School eligibility requirements for accessing the service come
-from the [statutory
-guidance](https://github.c
-om/DFE-Digital/ecf2/blob/main/documentation/policy/induction-for-earl
-y-career-teachers.adoc#institutions-in-which-induction-may-be-served)
-which details the schools where ECTs can serve induction.*
+* 📜 School eligibility requirements for accessing the service come
+  from the [statutory guidance](https://github.com/DFE-Digital/ecf2/blob/main/documentation/policy/induction-for-early-career-teachers.adoc#institutions-in-which-induction-may-be-served)
+  which details the schools where ECTs can serve induction.
+
+---
 
 School URN and address are shown for the user to confirm the correct
 school.
 
-*📊 These are publicly available, unique school details to help the
-user confirm we have identified the correct school.*
+* 📊 These are publicly available, unique school details to help the
+  user confirm we have identified the correct school.
+
+---
+
 GIAS email is shown in redacted form, including the first and last
-letter of the username and the full domain name (i.e.
-<X****X@domain.com>).
+letter of the username and the full domain name (i.e. <X****X@domain.com>).
 
-*🙋* *Redacted email is shown to help schools identify where the GIAS
-email has been sent.*
+* 🙋 Redacted email is shown to help schools identify where the GIAS
+  email has been sent.
 
-*🔒 The email is redacted because GIAS email is not publicly
-available information.*
+* 🔒 The email is redacted because GIAS email is not publicly
+  available information.
+
+---
+
 GIAS email can't be changed within the service - if the GIAS email is
 incorrect/out of date, school needs to update it using [DfE sign
 in](https://services.signin.education.gov.uk/).
 
-*📊 GIAS is the source of truth for the school email and* *can be
-updated via DfE Sign-in.*
+📊 GIAS is the source of truth for the school email and can be
+updated via DfE Sign-in.
 An email is sent to the school GIAS email on confirmation.
 
-*💻* *This is to confirm that the person trying to access the service
+* 💻 This is to confirm that the person trying to access the service
 legitimately works at the selected school if they can (indirectly)
-access their school's GIAS email.*
+access their school's GIAS email.
 
-*📊 GIAS email is the most direct and up to date contact we have for
-schools (until SIT details are provided).*
+* 📊 GIAS email is the most direct and up to date contact we have for
+schools (until SIT details are provided).
+
+---
+
 Anyone can trigger the link being sent to a school's GIAS email and
 there is no limit on the number of times access can be requested.
 
-*💻 We don't know who specifically will need to access the service
+* 💻 We don't know who specifically will need to access the service
 before we are told by the school and the current process means we
 don't / can't limit access for requesting the link to particular
 people. There is no specific need to limit the number of times access
-can be requested.*
+can be requested.
+
+---
+
 The link can be requested regardless of whether the school already
 has a SIT nominated or not.
 
-*🙋 This is to account for schools where the existing SIT account can
-no longer be accessed (see [design
-history](https://teacher-cpd.desig
-n-history.education.gov.uk/manage-training/re-nomination-journey/)).*
+🙋 This is to account for schools where the existing SIT account can
+no longer be accessed (see [design history](https://teacher-cpd.design-history.education.gov.uk/manage-training/re-nomination-journey/)).
+
+---
 
 ## **Nominate a school induction tutor (SIT)**
 
@@ -99,49 +110,62 @@ induction. Part of this role is to use the manage ECTs service to give
 details of their school's mentors, ECTs and training option to DfE to
 enable delivery and funding for ECTP training.
 
+---
+
 Schools that say they are not expecting ECTs for the upcoming/current
 (depending on when they access the service) academic year are not
 asked to nominate a SIT or use the service to report any further
 information.
 
-*💻 The data collected in the Manage ECTs service is not applicable
-to schools that aren't expecting ECTs, so we don't need the school to
-nominate a SIT user or sign into the service.*
+* 💻 The data collected in the Manage ECTs service is not applicable
+  to schools that aren't expecting ECTs, so we don't need the school to
+  nominate a SIT user or sign into the service.
+
+---
 
 Schools that say they are expecting ECTs or are not sure yet must
 nominate a SIT.
 
-*📜 This comes from the requirements in the [DfE
-guidance](https://
-www.gov.uk/guidance/how-to-set-up-training-for-early-career-teachers)
-that it is a SIT responsibility to use the service.*
-Only one SIT can be nominated per school.
+* 📜 This comes from the requirements in the [DfE guidance](https://www.gov.uk/guidance/how-to-set-up-training-for-early-career-teachers)
+  that it is a SIT responsibility to use the service.
+  Only one SIT can be nominated per school.
 
-*💻 UI for multiple user access is supported but not built. There is
-an assumption that only one person at the school will need to use the
-service.*
+* 💻 UI for multiple user access is supported but not built. There is
+  an assumption that only one person at the school will need to use the
+  service.
+
+---
+
 Name and email address are provided to nominate the SIT.
 
-*💻 The email allows the nominated SIT to sign into the service. We
-also use their name and email as the contact for DfE comms.*
+* 💻 The email allows the nominated SIT to sign into the service. We
+  also use their name and email as the contact for DfE comms.
+
+---
+
 There is a uniqueness validation on email address across all profiles
 (SITs, ECTs and mentors). However, if both name and email address
 match an existing record, this person can be registered as the SIT
 for multiple schools.
 
-*💻 The uniqueness validation is to avoid the same email address
-being used for different people. The combined name and email match is
-to account for SIT who work across multiple schools (e.g. in a MAT).*
+* 💻 The uniqueness validation is to avoid the same email address
+  being used for different people. The combined name and email match is
+  to account for SIT who work across multiple schools (e.g. in a MAT).
+
+---
+
 An email is sent to the nominated SIT on confirmation.
 
-*💻 The user nominating the SIT may not be the SIT themselves, so the
-email notifies the nominated SIT and provides instructions for
-signing into the service.*
+* 💻 The user nominating the SIT may not be the SIT themselves, so the
+  email notifies the nominated SIT and provides instructions for
+  signing into the service.
+
+---
 Nominated SIT will be the email used for all further comms.
 
-*💻 Once nominated, the SIT becomes DfE's most direct point of
-contact with the school and is responsible for reporting ECTP
-training details.*
+* 💻 Once nominated, the SIT becomes DfE's most direct point of
+  contact with the school and is responsible for reporting ECTP
+  training details.
 
 ## **Log in with an email address once nominated as SIT**
 
