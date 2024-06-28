@@ -42,7 +42,7 @@ the lead provider they work with.
 Those users will then receive an email notification that they can sign
 in.
 
-* 💻The email notification is used to alert users they can use the
+* 💻 The email notification is used to alert users they can use the
 service.
 
 ---
