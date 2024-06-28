@@ -13,7 +13,7 @@
 
 ## TRA's appropriate body portal
 
-### **Get access to the TRA's appropriate body sign in**
+### Get access to the TRA's appropriate body sign in
 
 Access to the AB portal, and user management, is administered via DfE
 sign-in.
