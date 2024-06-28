@@ -38,12 +38,11 @@ They can view historical records for ECTs they have claimed in a list on
 their Appropriate body account homepage.
 
 They can also view their appropriate body ID. This is referred to later
-as an employer ID.\
+as an employer ID.
 📊
 
-### 
 ---
-### **Individually claim an ECT for their induction status with the TRA**
+### Individually claim an ECT for their induction status with the TRA
 
 The process of 'claiming' an ECT refers to an AB telling the TRA which
 ECTs are currently training at their schools.
@@ -157,7 +156,7 @@ ECT has a previous appropriate body(s) than their current one.
 
 * 🙋 This section is so that ABs can track where their ECTs have been
 and how much induction they have served elsewhere.
-----
+---
 The table shows the following:
 
 -   Previous appropriate bodies
