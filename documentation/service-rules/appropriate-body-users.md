@@ -32,7 +32,7 @@ appropriate bodies. Policy outlining who can be an appropriate body:
 [Appropriate bodies guidance - section
 3:1](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
 ---
-### **View records for early career teachers that are already registered**
+### View records for early career teachers that are already registered
 
 They can view historical records for ECTs they have claimed in a list on
 their Appropriate body account homepage.
