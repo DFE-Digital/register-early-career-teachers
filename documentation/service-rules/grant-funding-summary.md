@@ -23,7 +23,7 @@ There are 2 types of grant funding -- for induction and for training.
 
 ## Training grant funding. Year 1 & 2 Lead Provider Funding. 
 
-**What does it consist of?**
+### What does it consist of?
 
 DfE pays Lead Providers to train ECTs and mentors in the full induction
 programme. Lead Providers have to give proof that they are in fact
@@ -32,7 +32,7 @@ Declarations are statements of work. They are meant to provide 3
 declarations per year, 6 for both years. They do this through the API
 'service' DfE supports.
 
-**How are the payments structured?**
+### How are the payments structured?
 
 To manage payments, DfE has ongoing contracts (also called 'call off
 contracts') with LPs that cover the 2 years of training a group of ECTs
@@ -40,29 +40,33 @@ and mentors receive. Each academic year there is a new 'call off
 contract' to cover the new group of participants that comes in. Each new
 group of participants is often called a 'cohort'.
 
-**So it's just a one-off payment?**
+
+### So it's just a one-off payment?
 
 No. There are 3 types of payments to LPs.
 
--   **Service fees**. **These are fixed.** They are an amount that
+-   #### Service fees.
+    These are fixed. They are an amount that
     providers will be paid regularly regardless of things like
     participant numbers. These are just a set payment for providing the
     service. They are paid monthly for a set time. Once passed,
     statements have £0 service fees.
 
--   **Output fees. These are flexible.** DfE pays providers an \'output
-    fee\', whose value depends on a range of factors, when providers
+-   #### Output fees. 
+    These are flexible. DfE pays providers an output
+    fee, whose value depends on a range of factors, when providers
     train a participant up to a set milestone. Providers report this via
     the API (subject to validation) using \'declarations\'.
 
--   **Uplift fees.** DfE pays an additional \'uplift fee\' for
+-   #### Uplift fees.
+    DfE pays an additional \'uplift fee\' for
     participants in specific courses and circumstances e.g. schools with
     [high pupil
     premium](https://www.gov.uk/government/publications/pupil-premium/pupil-premium)
     (pupils who are recorded as eligible for free school meals, looked
     after by a social worker, etc).
 
-**What is the journey?**
+### What is the journey?
 
 Internal DfE staff can access providers\' financial statements via the
 finance tool. When a milestone period is hit, DfE staff conduct
@@ -74,7 +78,7 @@ Throughout the process DfE also conducts audits, where they will select
 a sample of LP data and ask for evidence of training, to reduce the risk
 of any fraudulent payments.
 
-**What is the eligibility policy?**
+### What is the eligibility policy?
 
 All lead providers must declare their subcontracting arrangements (with
 delivery partners) for the period 1 August to 31 July through the
@@ -122,25 +126,25 @@ contact LPs to provide the link separately.
 
 ## Training grant funding. Backfill mentor funding. 
 
-**What does it consist of?**
+### What does it consist of?
 
 DfE pays schools to cover the time mentors need to train to be a mentor
 during both years of induction. It is paid to the latest school the
 mentor has been registered. This school is responsible for breaking up
 the grant and dividing it between previous schools the mentor was at.
 
-**From a funding standpoint**, there are 2 types of mentors.
+#### From a funding standpoint, there are 2 types of mentors.
 
--   Replace**ment** mentor. A **new** mentor joining the **ECF mentor
-    training programme** to replace an existing mentor. These have
+-   Replacement mentor. A new mentor joining the ECF mentor
+    training programme to replace an existing mentor. These have
     different schedules on CPD. This mentor needs new funding allocated
     to them.
 
--   Repla*cing* mentor. A mentor who is already on the programme who
+-   Replacing mentor. A mentor who is already on the programme who
     starts to support an ECT (new or existing). This mentor does not
     need new funding as they have already had this allocated.
 
-**How are the payments structured?**
+### How are the payments structured?
 
 There are 2 payments made to schools at two different moments. If the
 mentor has transferred, it is paid to the latest school the mentor has
@@ -187,7 +191,7 @@ team need to check if:
     mentor can also receive the same instalment if they are linked to a
     second ECT
 
-**What is the journey for** **Beneficiaries?**
+### What is the journey for Beneficiaries?
 
 1.  School induction tutors register mentors with DfE using manage
     training for ECTs 
@@ -206,7 +210,7 @@ team need to check if:
 4.  SIT logs into manage training to check the status of these
     eligibility checks and get confirmation the mentor is ready to go.
 
-**What is the eligibility policy?**
+### What is the eligibility policy?
 
 To be eligible as a school for this type of funding, you need to be
 
@@ -223,7 +227,7 @@ For the mentor to be eligible they need to
 
 -   Have an active email
 
--   
+  
 
 Sign into manage training service and tell DfE their teacher reference
 number (TRN) or National Insurance number, name and date of birth
@@ -248,7 +252,7 @@ schools, by
 
 ## Induction grant funding. Year 2 Time off Timetable.
 
-**What does it consist of?**
+### What does it consist of?
 
 This funding is meant to cover time off an ECT's school timetable to do
 induction (5% of their scheduled time) and a mentor's time off timetable
@@ -260,7 +264,7 @@ data, specifically, declarations. This is because our ways to track an
 ECTs induction time are messy, but the data provided for training
 declarations is as validated as it gets.
 
-**How are the payments structured?**
+### How are the payments structured?
 
 The grant funding team need to firstly figure out which ECTs and mentor
 and in their year 2 of their induction. This is a surprisingly difficult
@@ -269,7 +273,7 @@ doing training. ECTs pause, stop, defer, change schools often and track
 these changes is at the core of many issues in the data collection
 system.
 
-[How \'Are they in their 2nd year?' is calculated.]{.underline}
+How 'Are they in their 2nd year?' is calculated.
 
 -   For FIP -- if they have 4 declarations, we can safely assume they
     are in their second year of training.
@@ -282,7 +286,7 @@ system.
 -   For DIY -- We have to check against DQT, SWO and call ABs directly
     and ask for ECT details.
 
-Getting this data right is difficult because
+Getting this data right is difficult because:
 
 -   Tracking the movements of an ECT (pause, stop, defer, changing
     schools\...) is dependent on AB and SIT updates. There are delays in
@@ -291,11 +295,11 @@ Getting this data right is difficult because
 -   Once the data does come through, the data gathered for each
     programme type is different.
 
-[\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--]{.underline}
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 
-**[NEED TO CHECK THIS WITH GRANT FUNDING TEAM]{.underline}**
+### NEED TO CHECK THIS WITH GRANT FUNDING TEAM
 
-[Once we have it, we need to organize those ECTs by cohort.]{.underline}
+Once we have it, we need to organize those ECTs by cohort
 
 -   Cohorts are determined by the data point call_off_contract_year.
     Just FYI, a 'call-off contract' is (by definition) a contract
@@ -322,9 +326,9 @@ Getting this data right is difficult because
     \'Ambition\' there are 2 call_of_contract data points, one for the
     academic year 2021-2022 and another for the academic year 2022-2023.
 
-![](media/image2.png){width="5.666666666666667in" height="4.675in"}
 
-[We also need to organize mentors by cohort.]{.underline}
+
+We also need to organize mentors by cohort.
 
 -   We use the mentor training date to assign the mentor a cohort.
 
@@ -337,11 +341,11 @@ Getting this data right is difficult because
 -   DfE will correct this cohort, if the provider identifies that the
     mentor has started their training at a different time.
 
-**So it's just a one-off payment?**
+#### So it's just a one-off payment?
 
-**What is the journey?**
+#### What is the journey?
 
-**What is the eligibility policy?**
+#### What is the eligibility policy?
 
 From a policy standpoint, ECTs need to be the following to be eligible
 for Y2TOT funding.

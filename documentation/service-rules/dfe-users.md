@@ -11,18 +11,18 @@
     participants etc - and what training programme they\'ve
     selected]{.mark}
 
--   [If the ECT doesn't have an induction start date recorded, they are
+-   If the ECT doesn't have an induction start date recorded, they are
     assigned a temporary cohort to enable access training while the AB
     has not yet recorded their induction start date]{.mark}
 
--   [Replacement mentors]{.mark}
+-   Replacement mentors
 
--   [Cohort allocation]{.mark}
+-   Cohort allocation
 
--   [Eligibility for funding :
-    <https://teacher-cpd.design-history.education.gov.uk/manage-training/iterations-to-eligibility-checks/>]{.mark}
-
-Syncing our school list with GIAS
+-   Eligibility for funding :
+    <https://teacher-cpd.design-history.education.gov.uk/manage-training/iterations-to-eligibility-checks/>
+    
+    Syncing our school list with GIAS
 
 Sending out reminder emails -- manual / scheduled comms
 
@@ -97,10 +97,8 @@ statement has been authorised for payment It also places a tag on the
 relevant financial statement showing the time and day the statement was
 authorised 'e.g. Authorised for payment at 10:30am on 5 Aug 2023'
 
-Statement can have different types of declarations -- payable \> paid,
-awaited clawback \> clawed back\
-![](/media/image4.png){width="4.475275590551181in"
-height="4.802083333333333in"}
+Statement can have different types of declarations: payable > paid
+
 
 Audit trail -- not visible but exists
 
