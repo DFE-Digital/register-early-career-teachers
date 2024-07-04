@@ -19,7 +19,7 @@ School admins are also known as:
 | 📊    | data                          |
 | 🔒    | security / GDPR               |
 
-## **Request access to the Manage ECTs service via school GIAS email**
+## Request access to the Manage ECTs service via school GIAS email
 
 Context: For schools to use the Manage ECTs service, they first need to
 register. This functionality is used both for schools who are using the
@@ -101,7 +101,7 @@ no longer be accessed (see [design history](https://teacher-cpd.design-history.e
 
 ---
 
-## **Nominate a school induction tutor (SIT)**
+## Nominate a school induction tutor (SIT)
 
 Context: Schools are asked to nominate an individual as the 'induction
 tutor' who will oversee the induction and training process to ensure
@@ -211,7 +211,7 @@ school one at a time.
 
 * 💻 The service was not built with this use case in mind.
 
-## **Change the SIT**
+## Change the SIT
 
 Context: Only one SIT user per school can use the service at a time, and
 this person can be changed and replaced by someone ese at the school if
@@ -330,7 +330,7 @@ registered.
 * 🙋 This is to reflect how things work on the ground. The majority
 of schools with multiple ECTs will be doing the same programme.
 
-## 
+
 
 ## Appoint and change Appropriate Body for a cohort or individual ECT
 
@@ -634,7 +634,7 @@ with at previous school.
 * 💻 We assume that the ECT will no longer be mentored by the mentor
 at their previous school, so remove the pairing.
 
-## 
+
 
 ## Change an existing ECT's details (from ECT profile)
 
@@ -745,7 +745,7 @@ without showing cohorts as this was found to be confusing (see
 [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/sorting-by-induction-start-date/)).
 
-## 
+
 
 ## Add a mentor
 
@@ -899,9 +899,9 @@ registered
 expectations about hearing from the provider.
 It might also email the provider 
 
-* 🙋 
 
-## 
+
+
 
 ## Change an existing mentor's details (from mentor profile)
 
@@ -957,7 +957,7 @@ participant needs to be re-validated when changing these details. A
 way to re-validate participants automatically in the service hasn't
 been built so is done manually via support.
 
-## 
+
 
 ## View mentor mentoring status / training completion status
 
@@ -1028,7 +1028,6 @@ User can change mentorship following the same rules above, and:
 
 * 📜 [???]{.mark}
 
-## 
 
 ## Report ECT is transferring out
 
@@ -1067,7 +1066,7 @@ reason other than transferring to another school.
 points for this journey (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/teachers-leaving-schools/)).
 
-## 
+
 
 ## Report mentor is transferring out
 
@@ -1107,7 +1106,7 @@ reason other than transferring to another school.
 
 * 💻 
 
-## 
+
 
 ## Remove an ECT
 
