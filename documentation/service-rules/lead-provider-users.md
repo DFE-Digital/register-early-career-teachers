@@ -10,7 +10,7 @@
 | 💻    | digital service               |
 | 📊    | data                          |
 | 🔒    | security / GDPR               |
-
+---
 ### Find schools delivering ECF-based training in a given cohort and view details of a specific school
 
 Context:
@@ -27,34 +27,33 @@ that are ineligible for funding in a given cohort. If a school's
 eligibility changes from one cohort to the next, results will default
 according to the latest school eligibility.
 
-*This ensures providers can see up to date information on whether a
+This ensures providers can see up to date information on whether a
 school is eligible for FIP and a potential partnership, and prevents
 LPs being able to see details of schools that are ineligible for
-funding.*
+funding.
 Can filter results by school URN.
 Can use school ID to find and view details for a specific school in a
 cohort.
 
 Reasons:
 
+---
 ### Find delivery partner IDs and view details for a specific delivery partner
 
 Context:
 
-  -----------------------------------------------------------------------
   Successful request will show DP details including DP ID, name, and
   cohort(s) they are registered for.
-  -----------------------------------------------------------------------
+  
   Can filter results by cohort.
 
   Can use DP ID to find and view details for a specific DP.
-  -----------------------------------------------------------------------
+  
 
+---
 ### Confirm a partnership with a school and delivery partner
 
-Context:
-
-Must specify cohort, school ID and DP ID in the request.
+Context: Must specify cohort, school ID and DP ID in the request.
 
 Successful requests will return a response body with updates
 included.
@@ -71,6 +70,7 @@ providers for the upcoming cohort. Until induction tutors have done
 this, any new partnerships with new providers will be rejected by the
 API.
 
+---
 ### View all details for all existing partnerships or a specific existing partnership
 
 Context:
@@ -92,27 +92,23 @@ Can filter results by cohort.
 Can use ID to find and view details of a specific existing
 partnership.
 
+---
 ### Update a partnership with a new delivery partner
 
-Context:
-
-  -----------------------------------------------------------------------
-  Use DP ID to update
-  -----------------------------------------------------------------------
+Context: Use DP ID to update
+  
   Partnerships can only be updated when the status is active (not
   challenged by the school).
 
-  -----------------------------------------------------------------------
-
+  
+---
 ### View all participant data or a specific participant's data
 
 Context:
 
-  -----------------------------------------------------------------------
-  Successful requests will show participant details including name, TRN,
-  training record ID, email, mentor ID, school URN, participant type,
-  cohort, training status, participant status,
-  -----------------------------------------------------------------------
+  
+  Successful requests will show participant details including name, TRN, training record ID, email, mentor ID, school URN, participant type, cohort, training status, participant status,
+
   Can filter results by cohort and updated since a date/time.
 
   API will not present any data for participants whose details have not
@@ -125,91 +121,64 @@ Context:
   participant.
 
   Doesn't show unfunded mentors?
-  -----------------------------------------------------------------------
-
+  
+---
 ### View all unfunded mentor details (API v3 onwards)
 
 Context:
 
-  -----------------------------------------------------------------------
-  A single mentor can be assigned to multiple ECTs, including ECTs who
-  are training with other providers. 'Unfunded mentors' are mentors who
-  are registered with other providers. These mentors may need access to
-  the learning platforms used by their ECTs.
-  -----------------------------------------------------------------------
-  Successful requests will return a response body with mentor details of
-  unfunded mentors who are currently assigned to ECTs, including the
-  mentor's participant ID, name, email and TRN.
+  
+  A single mentor can be assigned to multiple ECTs, including ECTs who are training with other providers. 'Unfunded mentors' are mentors who are registered with other providers. These mentors may need access to the learning platforms used by their ECTs.
+  
+  Successful requests will return a response body with mentor details of unfunded mentors who are currently assigned to ECTs, including the mentor's participant ID, name, email and TRN.
 
-  Can use participant ID to find and view details of a specific unfunded
-  mentor.
-  -----------------------------------------------------------------------
-
+  Can use participant ID to find and view details of a specific unfunded mentor.
+  
+---
 ### Notify DfE a participant has taken a break (deferred) from training
 
-Context:
-
-  -----------------------------------------------------------------------
-  Participant can take a break from training (with intention to return)
-  at any time, and LP must notify DfE in response.
-  -----------------------------------------------------------------------
+Context: Participant can take a break from training (with intention to return) at any time, and LP must notify DfE in response.
+  
   Use participant ID to update training status to deferred.
 
   Report reason for deferral.
-  -----------------------------------------------------------------------
-
+  
+---
 ### Notify DfE a participant has resumed training
 
 Context:
-
-  -----------------------------------------------------------------------
   Deferred participants can resume training at any time, and LP must
   notify DfE in response.
-  -----------------------------------------------------------------------
+  
   Use participant ID to update training status to active.
 
-  -----------------------------------------------------------------------
-
+---
 ### Notify DfE a participant has withdrawn from training
 
-Context:
-
-  -----------------------------------------------------------------------
-  Participant can withdraw from training at any time and LP must notify
-  DfE in response.
-  -----------------------------------------------------------------------
+Context: Participant can withdraw from training at any time and LP must notify DfE in response.
   Use participant ID to update training status to withdrawn.
 
-  Submitted declarations will only be paid if declaration_date is before
+  Submitted declarations will only be paid if declaration date is before
   the date of the withdrawal.
-  -----------------------------------------------------------------------
+
+---
 
 ### Notify DfE of a participant's training schedule
 
-Context:
-
-  -----------------------------------------------------------------------
-  All participants are registered by default to a standard schedule
+Context: All participants are registered by default to a standard schedule
   starting in September.
-  -----------------------------------------------------------------------
+  
   LPs must notify DfE if a different schedule is needed using the
   participant ID.
 
-  Schedule can't be changed if the participant has any previously
-  submitted eligible, payable or paid declarations with a
-  declaration_date which does not align with the new schedule's milestone
-  dates. In this case the LP can void the relevant declarations, then
-  change the schedule and resubmit backdated declarations.
-  -----------------------------------------------------------------------
-
+   Schedule can't be changed if the participant has any previously submitted eligible, payable or paid declarations with a declaration_date which does not align with the new schedule's milestone
+  dates. In this case the LP can void the relevant declarations, then change the schedule and resubmit backdated declarations.
+  
+--- 
 ### View data for all participants who have transferred or a specific participant (API v3 onwards)
 
-Context:
-
-  -----------------------------------------------------------------------
-  When school reports a transfer, LP can view data for participants who
-  have transferred to or from a school they are partnered with.
-  -----------------------------------------------------------------------
+Context: When school reports a transfer, LP can view data for participants who have transferred to or from a school they are partnered with.
+  
   When a participant is leaving them and this has been reported by the
   old school and/or new school, LP can see an updated participant status
   of leaving and the details of the end / start date depending on what
@@ -224,87 +193,71 @@ Context:
   participant as withdrawn from training to DfE.
 
   Can find and view a specific participant who has transferred.
-  -----------------------------------------------------------------------
-
+  
+---
 ### Update a replacement mentor's schedule
 
 Context:
 
-  -----------------------------------------------------------------------
   A new mentor can be assigned to an ECT part way through training,
   replacing the ECT's original mentor.
-  -----------------------------------------------------------------------
-  Providers must notify the DfE of replacement mentors by updating their
-  training schedule.
+  
+  Providers must notify the DfE of replacement mentors by updating their training schedule.
 
   If a replacement mentor is already mentoring another ECT and they
-  replace a mentor for a second ECT, the first ECT takes precedence. In
-  this instance, the provider should not change the mentor's schedule.
-
-  XXX
+  replace a mentor for a second ECT, the first ECT takes precedence. In this instance, the provider should not change the mentor's schedule.
 
   For API v3 onwards, a replacement mentor's schedule, and any associated
-  declaration submissions, do not need to align with the ECT they are
-  mentoring.
+  declaration submissions, do not need to align with the ECT they are mentoring.
 
-  -----------------------------------------------------------------------
-
+---
 ### Test the ability to submit declarations in sandbox ahead of time
 
 Context:
 
-  -----------------------------------------------------------------------
   Use the service to do the same tasks with the same rules as above with
   test data.
-  -----------------------------------------------------------------------
+  
 
-  -----------------------------------------------------------------------
-
+  
+---
 ### Submit a declaration to notify DfE a participant has started, been retained, or completed training
 
 Context:
 
-  -----------------------------------------------------------------------
+  
 
-  -----------------------------------------------------------------------
-
+  
+---
 ### View all previously submitted declarations
 
 Context:
 
-  -----------------------------------------------------------------------
+  
 
-  -----------------------------------------------------------------------
 
-### 
-
+---
 ### View a specific previously submitted declaration
 
 Context:
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
+  
+---
 ### 
 
 ### Void or clawback a declaration
 
 Context:
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
+  
+---
 ### View specific statement payment dates or all statement payment dates
 
 Context:
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-## **CSV upload service**
+  
+---
+## CSV upload service
 
 CSV upload:
 <https://manage-training-for-early-career-teachers.education.gov.uk/lead-providers/partnership-guide>
@@ -313,15 +266,14 @@ CSV upload:
 
 Context:
 
-  -----------------------------------------------------------------------
   Individual nominated to access the service
-  -----------------------------------------------------------------------
+  
   When user enters the registered email into the service login page, an
   email is sent to their email with a magic sign in link to sign into the
   service.
 
-  -----------------------------------------------------------------------
 
+---
 ### Confirm partnerships with schools
 
 Context:
@@ -366,9 +318,8 @@ school in a CSV again.
 
 Context:
 
-  -----------------------------------------------------------------------
   Can view list of schools LP has a confirmed partnership with.
-  -----------------------------------------------------------------------
+  
   Can view total number of schools recruited.
 
   Can view details of partnered schools, including school name, URN and
@@ -377,7 +328,7 @@ Context:
   Can search for a school in a specific cohort?
 
   Can see total number of ECTs and mentors added by each school
-  -----------------------------------------------------------------------
+  
 
 ### Contact support or provide feedback on the service
 
@@ -387,30 +338,27 @@ Can email
 <continuing-professional-development@digital.education.gov.uk> or can
 use Slack channels.
 
-*🙋 This is to allow users to access support for any issue or query
-they may have with the service.*
+* 🙋 This is to allow users to access support for any issue or query
+they may have with the service.
 
 Can complete [feedback
-form](https://for
-ms.office.com.mcas.ms/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC
--YkKKgAihPhLr_Bqhw1DVMZUMjlKMU4xRlNCTUk0WEVTVTdOVDNMUDFWWCQlQCN0PWcu)
+form](https://forms.office.com.mcas.ms/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-YkKKgAihPhLr_Bqhw1DVMZUMjlKMU4xRlNCTUk0WEVTVTdOVDNMUDFWWCQlQCN0PWcu)
 (same form as for school users) in the CSV upload service.
 
-*💻 This follows the [Gov.uk service manual for measuring user
-satisfaction](https://www.g
-ov.uk/service-manual/measuring-success/measuring-user-satisfaction).*
+* 💻 This follows the [Gov.uk service manual for measuring user
+satisfaction](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction).
 
 ### View API guidance
 
 Context: LPs can view guidance on how to use the API for managing ECF
 training.
 
-*User can view guidance on how to use the API.*\
-*🙋 This is to provide an overview of how LPs can use the API and
-what they need to report.*
+User can view guidance on how to use the API.
+* 🙋 This is to provide an overview of how LPs can use the API and
+what they need to report.
 
 User can view details of updates to the API.
 
-*🙋 This is to ensure LPs are informed of any changes that happen
-with how the API works.*
+* 🙋 This is to ensure LPs are informed of any changes that happen
+with how the API works.
 
