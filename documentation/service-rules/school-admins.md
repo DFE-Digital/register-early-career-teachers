@@ -1016,7 +1016,7 @@ mentor an ECT.
 Assigned mentor for an ECT can be changed to a different registered
 mentor at any time, but cannot be removed.
 
-* 📜 [???]{.mark} We didn't build this option. Policy that every ECT
+* 📜 We didn't build this option. Policy that every ECT
 must have a mentor
 User can change mentorship following the same rules above, and:
 
