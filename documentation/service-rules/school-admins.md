@@ -1104,7 +1104,6 @@ have left.
 * 💻 User cannot report through the service if mentor is leaving for any
 reason other than transferring to another school.
 
-* 💻 
 
 
 
