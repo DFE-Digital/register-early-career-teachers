@@ -225,7 +225,7 @@ There are some discrepancies in the rules on the portal. Future dates
 aren't allowed in the web update, but can get through the bulk
 import upload.
 
-The end date must be before a start date for an induction period.
+The end date of an induction period must be after the start date for an induction period.
 
 When this data is submitted, the appropriate body user would see the
 employer ID and employer address. This is the same as the appropriate
