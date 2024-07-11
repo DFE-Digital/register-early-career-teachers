@@ -94,7 +94,6 @@ ECTs with what schools have submitted in Manage ECTs. There is nothing
 they can submit or do to the data, this would have to go via their lead
 provider.
 
-
 Some delivery partners reported it is also the main way they know how
 many ECTs they are getting registered with them, and if they're
 correctly registered. It was hoped it would reduce workload for
