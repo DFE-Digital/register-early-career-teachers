@@ -68,6 +68,12 @@ again.
 reapplying to practice teaching. [AB
 guidance details this here.](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)
 
+If an early career teacher did their initial teacher training (ITT) through an accredited ITT provider who is also an AB, the school cannot appoint that appropriate body for that teacher.
+
+ECTs may be serving their induction at an AB. For example, they may work at a teaching school hub that is also an AB. If this is the case, the school cannot appoint that AB for that teacher.
+
+[Find out more in section 2 of the statutory guidance on induction for early career teachers.](https://www.gov.uk/government/publications/induction-for-early-career-teachers-england?)
+
 ---
 
 If an AB tries to claim an ECT who is exempt from the web UI, or via a
