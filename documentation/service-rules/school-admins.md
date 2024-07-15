@@ -1128,8 +1128,7 @@ including before logging into the service.
 satisfaction](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction).
 
 User can email
-continuing.professional-develop[ment@digital.education.gov.uk]
-(mailto:continuing-professional-development@digital.education.gov.uk)
+continuing-professional-development@digital.education.gov.uk
 
 * 💻 This is to allow users to access support for any issue or query
 they may have with the service.
