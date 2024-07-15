@@ -4,22 +4,23 @@
 
 There are 2 types of grant funding -- for induction and for training.
 
--   Induction grant funding includes
+Induction grant funding includes:
 
-    -   Year 1 Core Funding.
+- Year 1 Core funding
 
-    -   Year 2 Time of Timetable Funding. Covers both:
+- Year 2 Time off timetable funding
+    
+Year 2 Time off timetable funding is comprised of:
 
-        -   5% off timetable in year 2 of induction
+-  5% off timetable in year 2 of induction
 
-        -   20 hours of mentor support in year 2 of induction
+-  20 hours of mentor support in year 2 of induction
 
--   This funding is dedicated only for schools on the FIP programme.
-    Training grant funding includes:
+Training grant funding is dedicated only for schools on the FIP programme. This includes:
 
-    -   Year 1 & 2 Lead Provider Funding.
+- Year 1 & 2 Lead Provider funding
 
-    -   Backfill mentor Funding.
+- Backfill mentor funding
 
 ## Training grant funding. Year 1 & 2 Lead Provider (LP)  Funding. 
 
