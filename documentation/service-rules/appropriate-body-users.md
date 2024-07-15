@@ -15,8 +15,7 @@
 
 ### Get access to the TRA's appropriate body sign in
 
-Access to the AB portal, and user management, is administered via DfE
-sign-in.
+Access to the AB portal, and user management, is administered via DfE sign-in.
 
 * 🔒 Within DfE Sign-In, each organisation has a nominated approver,
 and that person (rather than DfE personnel) is responsible for
@@ -34,44 +33,39 @@ appropriate bodies. Policy outlining who can be an appropriate body:
 ---
 ### View records for early career teachers that are already registered
 
-They (Appropriate Bodies) can view historical records for ECTs they have claimed in a list on
-their Appropriate body account homepage.
+They (Appropriate Bodies) can view historical records for ECTs they have claimed in a list on their Appropriate body account homepage.
 
-They can also view their appropriate body ID. This is referred to later
-as an employer ID.
+They can also view their appropriate body ID. This is referred to later as an employer ID.
 
 ---
 ### Individually claim an ECT for their induction status with the TRA
 
-The process of 'claiming' an ECT refers to an AB telling the TRA which
-ECTs they are quality assuring the induction of. 
+The process of 'claiming' an ECT refers to an AB telling the TRA which ECTs they are quality assuring the induction of. 
 
-The appropriate body needs to enter both the date of birth and the TRN
-number for the ECT record to show up and be claimed.
+The appropriate body needs to enter both the date of birth and the TRN number for the ECT record to show up and be claimed.
 
-* 🔒 The AB needs both the TRN and DOB as a data privacy measure to
-ensure that the AB is only searching for ECTs they already have links
-with. This search locates the record in the database of qualified
-teachers (DQT).
+* 🔒 The AB needs both the TRN and DOB as a data privacy measure to ensure that the AB is only searching for ECTs they already have links with. This search locates the record in the database of qualified teachers (DQT).
 
-If there is no TRN and DOB match, then an error message appears. The AB
-would then liaise with our induction data collections team or the teacher themselves
+---
 
-The record will still show but have a blank field in the QTS date
-section if they don't have QTS yet.
+If there is no TRN and DOB match, then an error message appears. The AB would then liaise with our induction data collections team or the teacher themselves
 
-If the ECT has previously failed induction, they cannot do induction
-again.
+The record will still show but have a blank field in the QTS date section if they don't have QTS yet.
 
-* 📜 This is due to policy restricting those who have failed from
-reapplying to practice teaching. [AB
+---
+
+If the ECT has previously failed induction, they cannot do induction again.
+
+* 📜 This is due to policy restricting those who have failed from reapplying to practice teaching. [AB
 guidance details this here.](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)
+
+--
 
 If an early career teacher did their initial teacher training (ITT) through an accredited ITT provider who is also an AB, the school cannot appoint that appropriate body for that teacher.
 
 ECTs may be serving their induction at an AB. For example, they may work at a teaching school hub that is also an AB. If this is the case, the school cannot appoint that AB for that teacher.
 
-[Find out more in section 2 of the statutory guidance on induction for early career teachers.](https://www.gov.uk/government/publications/induction-for-early-career-teachers-england?)
+* 📜 [Find out more in section 2 of the statutory guidance on induction for early career teachers.](https://www.gov.uk/government/publications/induction-for-early-career-teachers-england?)
 
 ---
 
@@ -80,7 +74,9 @@ bulk upload, it gives a message saying they are exempt.
 
 * 📜 Those who are exempt cannot be claimed as they don't need to be inducted
 in order to teach
+
 ---
+
 When the portal pulls up the record for the ECT, it would show:
 
 #### Status
@@ -89,10 +85,10 @@ When the portal pulls up the record for the ECT, it would show:
 
 -   The date they achieved QTS
 
--   Induction, which is the current status of their induction. This
-    status would be one of the following: in progress, pass, fail, 
-    extended, not yet completed (when they have stopped induction with
-    their current appropriate body but not finished their induction)
+-   Induction, which is the current status of their induction. 
+
+This status would be one of the following: in progress, pass, fail, extended, not yet completed (when they have stopped induction with 
+their current appropriate body but not finished their induction)
 
 #### Teacher details
 
@@ -189,6 +185,8 @@ Below the induction history are 2 more subheadings:
 -   Induction status completion date (if passed, this will be the pass
     date, if failed, it will be the fail date)
 
+---
+
 The appropriate body user can claim the ECT for induction if they are
 not already claimed by another appropriate body. If they are claimed by
 another appropriate body, they would not be able to do this.
@@ -197,6 +195,7 @@ another appropriate body, they would not be able to do this.
 how many ECTs under an AB without overlaps in data.
 
 ---
+
 ### Claiming an induction that is already claimed by another appropriate body
 
 When an appropriate body user tries to view an ECT record to claim them,
@@ -292,8 +291,9 @@ The following data points are given, updated or confirmed for this:
 * 📊📜 This is the data that's needed by the DQT to be on the record when giving
 an ECT an outcome
 
-The relevant date validations would apply here, no future dates or end
-date before start date.
+---
+
+There is validation to not allow future dates or induction end date before the induction start date.
 
 This is not the case when done in a mass upload as the DQT processes
 mass upload data overnight.
@@ -371,6 +371,7 @@ teams. Appropriate bodies are often delivery partners too. The Appropriate
 bodies and regulation team gives information to the policy team on who
 is serving as an appropriate body. 
 
+---
 Those users will then receive an email notification that they can sign
 in.
 
@@ -402,6 +403,8 @@ them a 'magic link' in an email to enable sign in.
 * 💻 Magic link approach was decided to be the best sign in option at the
 time.
 
+---
+
 If the appropriate body user is also granted access to the check data
 for delivery partner service or any other related services, they will be
 required to state which role they need to carry out for that session.
@@ -428,20 +431,18 @@ their own data and information on ECTs with what schools had submitted
 in Manage ECTs. This could be useful when submitting other data to the
 Teaching Regulation Agency as well.
 
+--- 
+
 It also meant that appropriate bodies could follow up when necessary
 with schools, for example when:
-
--   a school has indicated they are using the appropriate body on
+* a school has indicated they are using the appropriate body on
     Manage ECTs, but has not registered the ECT's details directly with
     them
-
--   a school has registered an ECT's details directly with them but has
+* a school has registered an ECT's details directly with them but has
     not registered the ECT correctly on Manage ECTs
-
--   an appropriate body has concerns that fidelity checks (needed for
+* an appropriate body has concerns that fidelity checks (needed for
     both CIP and DIY) may be required for an ECT's induction
-
--   an appropriate body may need to use this to double-check they have
+* an appropriate body may need to use this to double-check they have
     successfully registered for induction any ECTs on the TRA AB portal
     
 ---
@@ -457,6 +458,8 @@ Appropriate bodies cannot see any data about mentors.
 teachers. They are not responsible for any training mentors receive and
 do not need to see their data.
 
+---
+
 If there are users allocated to multiple appropriate bodies, they can
 choose from a list of appropriate bodies which one they want to view the
 data for.
@@ -465,6 +468,8 @@ data for.
 check what they needed to for their role as a particularly appropriate
 body. It's unlikely or unheard of for someone to work for multiple
 appropriate bodies.
+
+---
 
 It only shows data for the current academic year.
 
@@ -537,13 +542,10 @@ make sure they've registered them for induction in the TRA AB portal.
 -   Filter by status
 
 * 🙋 This helps appropriate bodies filter to ECTs they are interested in
-finding out about. For example, filtering by status allows them to see ECTs where they do
-not have induction registered on the TRA's AB portal. They could then
+finding out about. For example, filtering by status allows them to see ECTs where they do not have induction registered on the TRA's AB portal. They could then
 follow up these queries with the school induction tutor or school. Equally, filtering by school can allow them to check that the school
 has registered on Manage ECTs correctly all the ECTs they are
 responsible for the induction of.
-
-It can help them find mistakes for particularly schools.
 
 ---
 
