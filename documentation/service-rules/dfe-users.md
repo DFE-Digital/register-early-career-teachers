@@ -11,7 +11,7 @@ made available via the admin interface in ECF 2:
   the DfE identifies duplicates, it will fix the error by 'retiring'
   one of the participant IDs, then associating all records and data
   under the remaining ID.
-- Manual process for merging/closing/opening schools and greatly
+- Manual process for merging, closing or opening schools which greatly
   depends on things like whether the school has a successor,
   participants etc - and what training programme they've
   selected
@@ -22,11 +22,11 @@ made available via the admin interface in ECF 2:
 - Cohort allocation
 - [Eligibility for funding](https://teacher-cpd.design-history.education.gov.uk/manage-training/iterations-to-eligibility-checks/)
 - Syncing our school list with GIAS
-- Sending out reminder emails -- manual/scheduled comms
+- Sending out reminder emails -- manual or scheduled comms
 - Checking eligibility
 - Setting up cohorts & schedules
-- Assigning participants to a cohort temporarily/permanently
-- Setting/updating participant statuses
+- Assigning participants to a cohort temporarily or permanently
+- Setting or updating participant statuses
 - Calculating grant funding
 
 ## Key
@@ -45,7 +45,7 @@ made available via the admin interface in ECF 2:
 What is referred to as the 'payment engine' is a piece of code in the
 same ECF application that calculates payments for LPs.
 
-Provider payments are made up of:
+Provider payments are made up of a:
 
 - set-up fee
 - service fee
@@ -80,7 +80,7 @@ providers from being able to void those declarations. If a void does
 happen after this point it is clawed back, rather than voided. Once the
 statement has been authorised for payment It also places a tag on the
 relevant financial statement showing the time and day the statement was
-authorised 'e.g. Authorised for payment at 10:30am on 5 Aug 2023'
+authorised 'e.g. Authorised for payment at 10:30am on 5 Aug 2023'.
 
 A Statement can have different types of declarations:
 
@@ -185,7 +185,6 @@ standard schedule).
   by the participants per band, multiplied by the milestone weighting.
 - Started and completed milestones are weighted at 20%, the 4 retained
   milestones at 15% each.
-
 
 When a provider submits a declaration for a participant, there is
 validation to check that:
