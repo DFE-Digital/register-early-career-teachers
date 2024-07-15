@@ -300,6 +300,7 @@ Partnership will not be confirmed if:
     the service to confirm if they will deliver training using a
     DfE-funded training provider this year and/or will continue with
     their current provider.
+
 Can continue with any schools that don't have errors, or can update
 the CSV and reupload.
 School sent an email on confirmation, which includes a link to

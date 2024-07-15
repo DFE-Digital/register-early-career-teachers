@@ -25,7 +25,7 @@ safe from people within organisations that should not have access to
 it.
 ---
 ABs as an organization are added or removed as needed through liaising
-with the induction data collections team in the TRA via email.
+with the induction data collections team in the TRA (Teaching Regulation Agency) via email.
 
 * 🔒 This means organisations can only get access that are legitimately
 appropriate bodies. Policy outlining who can be an appropriate body:
@@ -34,7 +34,7 @@ appropriate bodies. Policy outlining who can be an appropriate body:
 ---
 ### View records for early career teachers that are already registered
 
-They can view historical records for ECTs they have claimed in a list on
+They (Appropriate Bodies) can view historical records for ECTs they have claimed in a list on
 their Appropriate body account homepage.
 
 They can also view their appropriate body ID. This is referred to later
@@ -56,7 +56,6 @@ teachers (DQT).
 
 If there is no TRN and DOB match, then an error message appears. The AB
 would then liaise with our induction data collections team or the teacher themselves
-as needed to verify data.
 
 The record will still show but have a blank field in the QTS date
 section if they don't have QTS yet.

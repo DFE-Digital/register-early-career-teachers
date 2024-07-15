@@ -21,7 +21,7 @@ There are 2 types of grant funding -- for induction and for training.
 
     -   Backfill mentor Funding.
 
-## Training grant funding. Year 1 & 2 Lead Provider Funding. 
+## Training grant funding. Year 1 & 2 Lead Provider (LP)  Funding. 
 
 ### What does it consist of?
 
@@ -36,7 +36,7 @@ declarations per year, 6 for both years. They do this through the API
 
 To manage payments, DfE has ongoing contracts (also called 'call off
 contracts') with LPs that cover the 2 years of training a group of ECTs
-and mentors receive. Each academic year there is a new 'call off
+and mentors receive. In each academic year there is a new 'call off
 contract' to cover the new group of participants that comes in. Each new
 group of participants is often called a 'cohort'.
 
@@ -48,18 +48,16 @@ No. There are 3 types of payments to LPs.
 -   #### Service fees.
     These are fixed. They are an amount that
     providers will be paid regularly regardless of things like
-    participant numbers. These are just a set payment for providing the
+    participant numbers. These are a set payment for providing the
     service. They are paid monthly for a set time. Once passed,
     statements have £0 service fees.
 
 -   #### Output fees. 
-    These are flexible. DfE pays providers an output
-    fee, whose value depends on a range of factors, when providers
-    train a participant up to a set milestone. Providers report this via
-    the API (subject to validation) using \'declarations\'.
+    These are flexible. When providers train a participant to a set milestone DfE pays them an output fee. The value of this fee depends on a range of factors. Providers report this via
+    the API (subject to validation) using 'declarations'.
 
 -   #### Uplift fees.
-    DfE pays an additional \'uplift fee\' for
+    DfE pays an additional 'uplift fee' for
     participants in specific courses and circumstances e.g. schools with
     [high pupil
     premium](https://www.gov.uk/government/publications/pupil-premium/pupil-premium)
@@ -68,12 +66,12 @@ No. There are 3 types of payments to LPs.
 
 ### What is the journey?
 
-Internal DfE staff can access providers\' financial statements via the
+Internal DfE staff can access provider financial statements via the
 finance tool. When a milestone period is hit, DfE staff conduct
 assurance and then send out a copy of the financial statement to Lead
 Providers, along with a CSV of the declarations that make up the
 statement. Lead Providers check this against what they expected and then
-invoice DfE. EFSA then makes the payment.\
+invoice DfE. EFSA then makes the payment.
 Throughout the process DfE also conducts audits, where they will select
 a sample of LP data and ask for evidence of training, to reduce the risk
 of any fraudulent payments.
@@ -167,7 +165,7 @@ To release payment for year 2, the grant funding team needs to do the
 following checks.
 
 -   Make sure the mentor's Lead Provider has submitted at least one
-    'engagement declaration' (either declaration 4, 5 or \'completion\')
+    'engagement declaration' (either declaration 4, 5 out of 6 or the last completion declaration)
 
 -   The mentor has not previously have been paid for an 'instalment 2'
     payment.
@@ -189,9 +187,9 @@ team need to check if:
 
 -   If the replacement mentor did receive an instalment, the replacement
     mentor can also receive the same instalment if they are linked to a
-    second ECT
+    second ECT (to cover for the mentoring of both ECTs).
 
-### What is the journey for Beneficiaries?
+### What is the journey for Beneficiaries (mentors, school induction tutors and ECTs)?
 
 1.  School induction tutors register mentors with DfE using manage
     training for ECTs 
@@ -210,7 +208,7 @@ team need to check if:
 4.  SIT logs into manage training to check the status of these
     eligibility checks and get confirmation the mentor is ready to go.
 
-### What is the eligibility policy?
+### What is the eligibility policy for schools?
 
 To be eligible as a school for this type of funding, you need to be
 
@@ -227,9 +225,7 @@ For the mentor to be eligible they need to
 
 -   Have an active email
 
-  
-
-Sign into manage training service and tell DfE their teacher reference
+- Sign into manage training service and tell DfE their teacher reference
 number (TRN) or National Insurance number, name and date of birth
 
 -   Not have any (serious) prohibitions, sanctions or restrictions on
@@ -259,10 +255,7 @@ induction (5% of their scheduled time) and a mentor's time off timetable
 to support the ECT through induction (20 hours). This funding is for all
 schools regardless of programme.
 
-To calculate this grant, the funding team need to know about training
-data, specifically, declarations. This is because our ways to track an
-ECTs induction time are messy, but the data provided for training
-declarations is as validated as it gets.
+To calculate this grant, the funding team need to know which ECTs and mentors are on their second year of induction. However our existing data model was not originally created with this task in mind. Hence we can't rely on induction data, we have to rely on training data, specifically, lead provider declarations as they are the 'cleanest' form of ECT data we have. 
 
 ### How are the payments structured?
 
@@ -289,7 +282,7 @@ How 'Are they in their 2nd year?' is calculated.
 Getting this data right is difficult because:
 
 -   Tracking the movements of an ECT (pause, stop, defer, changing
-    schools\...) is dependent on AB and SIT updates. There are delays in
+    schools) is dependent on AB and SIT updates. There are delays in
     this data coming through.
 
 -   Once the data does come through, the data gathered for each

@@ -137,7 +137,7 @@ participants:
 - We adjust the service fee for Band A participants so that it
   reflects service fee + set-up fee combined.
 
-Note, in some cases where LPs are underperforming the target no. Of
+Note, in some cases where LPs are underperforming the target number of
 participants may be updated, which impacts the set up fee.
 
 ### Service fees
@@ -186,14 +186,6 @@ standard schedule).
 - Started and completed milestones are weighted at 20%, the 4 retained
   milestones at 15% each.
 
-<!-- questions copied from original doc:
-
-How do 'Extended' declarations work??? How do replacement mentors fit
-in?
-
-Ask from contract managers to add 3 additional declarations for ppts on
-extended schedules -- on top of the standard 6
--->
 
 When a provider submits a declaration for a participant, there is
 validation to check that:
@@ -237,13 +229,3 @@ the amount to be paid on the financial statement. Clawbacks cover the
 different declaration types (e.g. started, retained 1 etc) and uplift.
 
 
-<!-- more notes from original doc:
-
-Need details - speak to Colin
-
-Usually provider submits in error
-
-Participants moving cohorts -- need to void declarations first. In this case
-provider would have to resubmit the declarations that have been
-voided
--->
