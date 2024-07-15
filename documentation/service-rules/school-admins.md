@@ -199,17 +199,23 @@ Context: Some SITs may work across multiple schools (e.g. in a Multi Academy Tru
 they can manage their multiple schools using the same email login for
 the service.
 
+---
+
 Multiple schools can nominate the same induction tutor if both name
 and email address match an existing record.
 
 * 💻 This is to account for SITs that may work across multiple schools
 (e.g. in a MAT).
 
+---
+
 When signed into the service, the user can select between which of
 their schools they would like to manage. They can only manage a
 school one at a time.
 
 * 💻 The service was not built with this use case in mind.
+
+---
 
 ## Change the SIT
 
@@ -392,7 +398,8 @@ changes](https://educationgovuk.sharepoint.com/:w:/r/sites/TeacherServices/Share
 
 All schools can appoint a teaching school hub from the hardcoded list in the service.
 
-Independent schools only can also appoint Independent Schools Teacher Induction Panel (ISTIP).
+Independent schools only can also appoint [Independent Schools Teacher Induction Panel](https://istip.co.uk/)
+(ISTIP).
 
 British schools overseas only can also appoint Educational Success Partners (ESP).
 
@@ -430,10 +437,12 @@ When LP has reported a partnership with a school, LP and DP name are shown in th
 
 * 💻 The provider reporting the partnership journey (rather than
 schools) was easier to build originally.
+
+---
+
 Partnership can only be challenged during the first two weeks after
 it has been reported (if at another time of year), or in the first 3
-months of the academic year. This
-voids the partnership.
+months of the academic year. This voids the partnership.
 
 * 💻 This is to allow schools to correct provider errors. For example
 in some cases a provider can jump the gun and report a partnership
@@ -442,6 +451,9 @@ forming a partnership still.
 
 * 💻 The challenge window is limited because schools can cause
 problems and impact declarations when they challenge a partnership.
+
+---
+
 There can only be one 'default' partnership for an academic year. LP
 can't claim a school if they already have a partnership -- school
 needs to challenge the existing partnership first.
@@ -451,17 +463,25 @@ same thing -- exceptions added later (smaller numbers). Choices for
 each year are now less relevant -- we know schools' preference is to
 shift all participants, including those mid training, when a LP/DP
 pairing changes.
-After, LP / DP cannot be changed without contacting
-support.
+
+---
+
+<!-- FIXME: check this, how long is the challenge window? -->
+After, the lead provider and delivery partner cannot be changed without
+contacting support.
 
 * 💻 The challenge window is limited because schools can cause
 problems and impact declarations when they challenge a partnership.
+
+---
 
 ## Add an ECT
 
 Context: SITs are asked to register any new ECTs each year and provide
 details to enable DfE to check their eligibility for funding and pass
 details of ECTs to LPs to facilitate access to training.
+
+---
 
 Schools must have selected a default programme choice for an academic
 year to be able to add an ECT for that year.
@@ -471,6 +491,8 @@ particular year (with exceptions for things like transfers), so we
 ask schools to choose a 'default' which is used for any new ECTs
 rather than asking the user to select the same thing for each of
 their ECTs individually.
+
+---
 
 Identify the teacher in TRA using their TRN and DOB and confirm the
 match by comparing their name. If there are no matches try
@@ -483,6 +505,9 @@ section below).
 confusion and delays when previously entered by the ECTs themselves
 (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/validation-information/)).
+
+---
+
 If we can identify the participant in TRA, we check first name
 matches. If name doesn't match, we ask if they are known by a
 different name until there is a match.
@@ -492,12 +517,18 @@ statutory induction.
 
 * 📚 This is to enable DfE to check eligibility for funding (see
 section below).
+
+---
+
 If a teacher can't be found in the DQT, they cannot be added as an
 ECT.
 
 * 💻 This prevents ECTs being added with incorrect details that may
 never be validated. This was previously allowed and required lots of
 manual checks.
+
+---
+
 Name and email address is also provided when an ECT is added.
 
 * 🙋 This is to pass the details onto the LPs for onboarding to their
@@ -511,16 +542,16 @@ being used for different people.
 
 * 💻 Identity records were brought in to allow multiple emails and to
 help with deduping.
-If school has a default AB recorded, we ask SIT to confirm the ECT's
-AB. SIT can confirm the AB is the same as the default, or select a
-different AB.
 
--   SIT can select a teaching school hub from the hardcoded list in
-    the service
+---
 
--   Independent schools only can also appoint ISTIP
+When the school has a default AB recorded, we ask SIT to confirm the ECT's
+AB. SIT can confirm the AB is the same as the default, or select a different
+AB.
 
--   British schools overseas only can also appoint ESP
+The SIT can select a teaching school hub from the hardcoded list in the
+service. Independent schools only can also appoint the [Independent Schools Teacher Induction Panel](https://istip.co.uk/)
+(ISTIP). British schools overseas only can also appoint [Educational Success Partners](https://www.espeducation.co.uk/) (ESP).
 
 * 📜 Schools that will deliver any form of ECF-based training (FIP,
 CIP or DIY) must appoint an AB for each of their ECTs. Schools can
@@ -531,8 +562,7 @@ or different ones.
 ECTs from a defined list of organisations that can act as an AB for
 each cohort.
 
-* 📜 [DfE
-guidance](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
+* 📜 [DfE guidance](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
 sets out the organisations that can or cannot act as an AB. We get
 the list for the service from policy -- there are 3 lists on gov.uk
 so policy give us the exact names.
@@ -543,6 +573,8 @@ history](https://teacher-cpd.design-history.education.gov.uk/manage-training/imp
 ECTs for an academic year can be added once registrations open for
 that academic year, and then anytime throughout the year afterwards.
 
+---
+
 * 📚 Participants must be added to a cohort, and can't be registered
 until that cohort is set up in the service, because they have to be
 associated with a contract / funding pot.
@@ -550,6 +582,9 @@ associated with a contract / funding pot.
 * 🙋 Schools may already know in summer which ECTs will be joining for
 the following year, and then participants may join at any time
 throughout the academic year.
+
+---
+
 An email is sent to the participant informing them they've been
 registered.
 
@@ -561,6 +596,9 @@ expectations about hearing from the provider.
 When the teacher is added, they're checked against the DQT for if
 they have QTS (or other relevant qualification) and an induction
 start date that has been provided from the appropriate body portal.
+
+---
+
 ECTs can be added even if they don't yet have QTS, but they won't
 appear as eligible to LPs.
 
@@ -570,6 +608,9 @@ allocation.
 
 * 🙋 School may want to register their incoming ECTs before they have
 finished their ITT.
+
+---
+
 If a teacher is registered as a mentor in the service, they cannot be
 added as an ECT.
 
@@ -581,12 +622,16 @@ SIT is sent an email reminder.
 * 💻 This is to ensure schools that are expecting ECTs have registered
 their participants to enable access to training.
 
+---
+
 ## Transfer in an ECT
 
 Context: Some ECTs transfer schools during induction, which may also
 involve changing their training option/LP/AB. We ask SITs to reflect
 these changes in the Manage ECTs service to ensure the correct payments
 are made.
+
+---
 
 Schools must have selected a default programme choice for an academic
 year to be able to transfer in an ECT for that year.
@@ -597,25 +642,30 @@ ask schools to choose a 'default' which is used for any new ECTs
 rather than asking the user to select the same thing for each of
 their ECTs individually.
 
+---
+
 If ECT identified in TRA is already registered at another school in
 the service during ECT registration, user asked to confirm that they
 are transferring the ECT into their school.
 
 * 💻 This allows us to retain the ECT's participant profile so we know
 what training they have completed, which is captured in the history
-of declarations received (see [design
-history
-](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
+of declarations received (see [design history](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
 
 * 📚 This ensures we only pay providers what they are owed for the
 training they delivered to the participant based on the payment
 milestones.
+
+---
+
 Specify date ECT will be transferring in, which can be in the past or
 future.
 
 * 💻 This is used to trigger a change in status for the ECT in the SIT
 dashboard. The date will also trigger the ECT to show as no longer
 training at the old school.
+
+---
 User can choose to continue with ECT's LP/DP from previous school or
 switch to new LP/DP (either the school's default LP or other).
 
@@ -624,6 +674,9 @@ interest to continue with the same provider. This was previously a
 DfE recommendation, but now watered down and schools tend to have a
 stronger preference to have all their participants with the same
 provider, including transfers.
+
+---
+
 User can change ECT's email address as part of transfer in. In this
 case both email addresses are associated with the participant.
 
@@ -631,11 +684,17 @@ case both email addresses are associated with the participant.
 new school. We need up to date emails because we pass this over for
 external evaluations (this is in the privacy policy) and give emails
 to LPs.
+
+---
+
 If a teacher is registered as a mentor in the service, they cannot be
 added as an ECT.
 
 * 📜 DfE only fund one set of training at a time - this was agreed at
 ECF working group.
+
+---
+
 An email is sent to the participant informing them they've been
 registered.
 
@@ -646,35 +705,43 @@ LPs is emailed on reporting of transfer.
 * 🙋 Before API v3, it was more difficult to see the details around
 transfers, so provider emails were sent to notify them of transfers.
 These may no longer be needed now.
+
+---
+
 On the joining date, ECT is shown as 'left' at their previous school.
 
 * 💻 We assume that the ECT is no longer working at their previous
 school if a new school has claimed them. We don't support ECTs
 working across multiple schools.
+
+---
+
 On the joining date, ECT is unpaired from any mentor they were paired
 with at previous school.
 
 * 💻 We assume that the ECT will no longer be mentored by the mentor
 at their previous school, so remove the pairing.
 
-
+---
 
 ## Change an existing ECT's details (from ECT profile)
 
 Context: SITs are able to change certain details of registered ECTs to
 account for errors and genuine changes in details.
 
+---
+
 User can change ECT name.
 
 SIT can change name if it's due to the ECT having changed their
-    name (marriage, divorce etc) or their name was entered
-    incorrectly. SIT blocked from changing name if they say the ECT
-    shouldn't have been registered or they want to replace them with
-    a different person.
+name (marriage, divorce etc) or their name was entered
+incorrectly. SIT blocked from changing name if they say the ECT
+shouldn't have been registered or they want to replace them with
+a different person.
 
 ECT must not have completed induction and must not have left the
-    school for the SIT to be able to change name. There is an option
-    to contact support if the ECT has completed or left.
+school for the SIT to be able to change name. There is an option
+to contact support if the ECT has completed or left.
 
 We allow changing the whole name.
 
@@ -688,13 +755,15 @@ existing ECT with a different person in the service.
 still overwrite a record with a different person as we don't
 revalidate.
 
+---
+
 SIT can change ECT email.
 
--   ECT must not have completed induction and must not have left the
-    school for the SIT to be able to change email. There is an option
-    to contact support if the ECT has completed or left.
+ECT must not have completed induction and must not have left the
+school for the SIT to be able to change email. There is an option
+to contact support if the ECT has completed or left.
 
--   There is a uniqueness validation on email addresses.
+There is a uniqueness validation on email addresses.
 
 * 📚 ECT may have a change to their email address -- we need up to
 date emails because we pass this over for external evaluations (this
@@ -705,21 +774,24 @@ they don't have a school email yet, so need to change it later.
 
 * 💻 The uniqueness validation is to avoid the same email address
 being used for different people.
+
+---
+
 User can change AB.
 
--   ECT must not have completed induction and must not have left the
-    school for the SIT to be able to change AB.
+ECT must not have completed induction and must not have left the
+school for the SIT to be able to change AB.
 
--   SITs can add/change the AB for an individual ECT -- the AB for
-    individual can be the same or different to the default for their
-    cohort.
+SITs can add/change the AB for an individual ECT -- the AB for
+individual can be the same or different to the default for their
+cohort.
 
--   All schools can appoint a teaching school hub from the hardcoded
-    list in the service
+All schools can appoint a teaching school hub from the hardcoded
+list in the service
 
--   Independent schools only can also appoint ISTIP
+Independent schools only can also appoint ISTIP
 
--   British schools overseas only can also appoint ESP
+British schools overseas only can also appoint ESP
 
 * 🙋 This is to let users correct details where they may have
 initially entered the wrong one / struggled with the journey.
@@ -729,8 +801,7 @@ CIP or DIY) must appoint an AB for each of their ECTs. Schools can
 choose whether to appoint one appropriate body for all of their ECTs,
 or different ones.
 
-* 📜 [DfE
-guidance](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
+* 📜 [DfE guidance](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
 sets out the organisations that can or cannot act as an AB. We get
 the list for the service from policy -- there are 3 lists on gov.uk
 so policy give us the exact names.
@@ -739,9 +810,12 @@ so policy give us the exact names.
 ECTs from a defined list of organisations that can act as an AB for
 each cohort.
 
-*📊 Presenting only the eligible options to different types of
+* 📊 Presenting only the eligible options to different types of
 schools in the service aims to improve data accuracy ([design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/improving-how-we-capture-appropriate-body-information/)).
+
+---
+
 User cannot change TRN, DoB, or LP without contacting support.
 
 * 💻 TRN and DOB are used to validate the participant, so the
@@ -754,12 +828,16 @@ been built so is done manually via support.
 Context: Registered ECTs are shown to SITs in the Manage ECTs service to
 allow them to view details and manage any changes.
 
+---
+
 SITs can view and filter ECTs who are currently training, completed induction
 and no longer training.
 
 * 🙋 This is to allow users to easily find the ECTs their looking for
 (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/filtering-early-career-teachers/))
+
+---
 
 SITs can view ECT induction start date. We do not show ECT cohorts.
 
@@ -768,7 +846,7 @@ without showing cohorts as this was found to be confusing (see
 [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/sorting-by-induction-start-date/)).
 
-
+---
 
 ## Add a mentor
 
@@ -779,6 +857,8 @@ provide mentors access to their ECT's materials. FIP mentors are also
 entitled to mentor training and associated funding for schools and
 providers.
 
+---
+
 Schools must have selected a default programme choice for an academic
 year to be able to add a mentor for that year.
 
@@ -788,6 +868,8 @@ we ask schools to choose a 'default' which is used for any new
 mentors rather than asking the user to select the same thing for each
 of their mentors individually.
 
+---
+
 Mentor must have a TRN to be registered. If mentor doesn't already
 have a TRN, they can request one outside the service:
 <https://www.gov.uk/guidance/teacher-reference-number-trn>
@@ -796,6 +878,9 @@ have a TRN, they can request one outside the service:
 mentor does not have any prohibitions, sanctions or restrictions on
 their record, and to check eligibility for funding (see section
 below).
+
+---
+
 Identify the teacher in TRA using their TRN and DOB and confirm the
 match by comparing their name. If there are no matches try
 re-matching with the inclusion of National Insurance Number.
@@ -809,6 +894,9 @@ below).
 confusion and delays when previously entered by the mentors
 themselves (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/validation-information/)).
+
+---
+
 If a teacher can't be found in the DQT, they cannot be added as a
 mentor.
 
@@ -816,6 +904,9 @@ mentor.
 mentor does not have any prohibitions, sanctions or restrictions on
 their record, and we can't check eligibility for funding (see section
 below).
+
+---
+
 If we can identify the participant in TRA, we check first name
 matches. If name doesn't match, we ask if they are known by a
 different name until there is a match.
@@ -835,6 +926,9 @@ guidance](https://www.gov.uk/guidance/how-to-set-up-training-for-early-career-te
 encourages schools to separate the roles of SIT and mentor, but they
 can still add themselves if needed (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/changing-how-induction-tutors-add-themselves-as-a-mentor/)).
+
+---
+
 If school has a default provider recorded, we ask SIT to confirm the
 mentor's provider for mentor training.
 
@@ -843,6 +937,9 @@ were ~1100 cases where because the mentor was set to the default
 provider, they were training with a different provider to their ECT
 (where there were different providers for different cohorts). We had
 to check this was correct via providers.
+
+---
+
 Mentors for an academic year can be added once registrations open for
 that academic year, and then anytime throughout the year afterwards.
 
@@ -853,11 +950,17 @@ associated with a contract / funding pot.
 * 🙋 Schools may already know in summer who will be acting as a mentor
 for the following year, and then new mentors may start mentoring at
 any time throughout the academic year.
+
+---
+
 An email is sent to the participant informing them they've been
 registered. This isn't sent if the mentor is also a registered SIT.
 
 * 🔒 This is to provide participants with the privacy policy, and set
 expectations about hearing from the provider.
+
+---
+
 Mentor may or may not be doing mentor training.
 
 * 📜 FIP mentors can complete 2 years of funded mentor training.
@@ -869,6 +972,8 @@ Context: Some mentors transfer schools each year. We ask SITs to reflect
 these changes in the Manage ECTs service to ensure the correct payments
 are made.
 
+---
+
 Schools must have selected a default programme choice for an academic
 year to be able to transfer in a mentor for that year.
 
@@ -877,6 +982,8 @@ in a particular year (with exceptions for things like transfers), so
 we ask schools to choose a 'default' which is used for any new
 mentors rather than asking the user to select the same thing for each
 of their mentors individually.
+
+---
 
 If mentor identified in TRA is already registered at another school
 in the service during mentor registration, user is asked to confirm
@@ -890,11 +997,17 @@ history](https://teacher-cpd.design-history.education.gov.uk/manage-training/fac
 * 📚 This ensures we only pay providers what they are owed for the
 training they delivered to the participant based on the payment
 milestones.
+
+---
+
 Specify date mentor will be transferring in, which can be in the past
 or future.
 
 * 💻 This is used to trigger a change in status for the mentor in the
 SIT dashboard.
+
+---
+
 On the leaving date, mentorship links with ECTs at the previous
 school are removed and the mentor is no longer shown in the pool of
 mentors.
@@ -902,19 +1015,31 @@ mentors.
 * 💻 Unless the mentor is working across multiple schools, they are no
 longer available to mentor ECTs at the school so are not shown in the
 dashboard.
+
+---
+
 SIT is asked if the mentor is mentoring across multiple schools. If
 yes, they must contact support to complete this. The mentor will show
 in the list of mentors at both schools.
 
 * 💻 The service wasn't built to account for this use case.
+
+---
+
 User can choose to continue with mentor's LP/DP from previous school
 or switch to new LP/DP (either the school's default LP or other).
 
 * 📜 Mentor can choose to continue mentor training without ECT.
+
+---
+
 User can change mentor's email address as part of transfer in.
 
 * 🙋 Participants usually get a new email address when they move to a
 new school.
+
+---
+
 An email is sent to the participant informing them they've been
 registered
 
@@ -922,26 +1047,26 @@ registered
 expectations about hearing from the provider.
 It might also email the provider 
 
-
-
-
+---
 
 ## Change an existing mentor's details (from mentor profile)
 
 Context: SITs are able to change certain details of registered mentors
 to account for errors and genuine changes in details.
 
+---
+
 User can change mentor name.
 
 Mentor must not have left the school for the user to be able to
-    change their name. There is an option to contact support if the
-    mentor has left.
+change their name. There is an option to contact support if the
+mentor has left.
 
 SIT can change name if it's due to the mentor having changed
-    their name (marriage, divorce etc) or their name was entered
-    incorrectly. SIT blocked from changing name if they say the
-    mentor shouldn't have been registered or they want to replace
-    them with a different person.
+their name (marriage, divorce etc) or their name was entered
+incorrectly. SIT blocked from changing name if they say the
+mentor shouldn't have been registered or they want to replace
+them with a different person.
 
 We allow changing the whole name.
 
@@ -956,13 +1081,15 @@ existing ECT with a different person in the service.
 still overwrite a record with a different person as we don't
 revalidate.
 
+---
+
 User can change mentor email.
 
--   Mentor must not have left the school for the SIT to be able to
-    change email. There is an option to contact support if the mentor
-    has left.
+Mentor must not have left the school for the SIT to be able to
+change email. There is an option to contact support if the mentor
+has left.
 
--   There is a uniqueness validation on email addresses.
+There is a uniqueness validation on email addresses.
 
 * 📚 Mentor may have a change to their email address -- we need up to
 date emails because we pass this over for external evaluations (this
@@ -973,6 +1100,9 @@ they don't have a school email yet, so need to change it later.
 
 * 💻 The uniqueness validation is to avoid the same email address
 being used for different people.
+
+---
+
 User cannot change TRN, DoB, or LP without contacting support.
 
 * 💻 TRN and DOB are used to validate the participant, so the
@@ -980,35 +1110,41 @@ participant needs to be re-validated when changing these details. A
 way to re-validate participants automatically in the service hasn't
 been built so is done manually via support.
 
-
+---
 
 ## View mentor mentoring status / training completion status
 
 Context: Registered mentors are shown to SITs in the Manage ECTs service
 to allow them to view details and manage any changes.
 
+---
+
 View mentors who are currently mentoring and not mentoring.
 
 * 🙋 This is to allow users to more easily find the mentors their
 looking for.
 
+---
 
 ## Create and change mentorship links between ECTs and mentors
 
 Context: All ECTs must be assigned a mentor to support them during their
 induction.
 
+---
+
 User can assign a mentor to an ECT in the ECT registration journey,
 the mentor registration journey or after an ECT and mentor are
 registered in the SIT dashboard.
 
 * 📜 All ECTs must be assigned a mentor during their induction (see
-[statutory
-guidance](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)).
+[statutory guidance](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)).
 
 * 🙋 The design aims to encourage users to assign a mentor to any ECTs
 who do not yet have one assigned (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/assigning-ects-to-mentors/)).
+
+---
 
 Mentor must be registered in the service in the same school as the
 ECT to be available as a mentor for an ECT. Note, mentors may be in
@@ -1016,6 +1152,9 @@ the mentor pool at more than one school.
 
 * 💻 The service was built on the assumption that a mentor would
 always be at the same school as their assigned ECT.
+
+---
+
 Any registered mentor at the same school can be assigned to any ECT
 who doesn't already have a mentor assigned. ECT can only be assigned
 one mentor at a time.
@@ -1025,6 +1164,9 @@ having other additional mentors.
 
 * 📚 DfE commercial decision not to pay for time off timetable for
 additional mentors.
+
+---
+
 There is no limit on the number of ECTs a mentor can be assigned to.
 
 * 📜 Whilst there is no specific limit, [DfE statutory
@@ -1036,20 +1178,24 @@ Mentor may or may not be doing mentor training.
 * 📜 Mentors can complete 2 years of funded mentor training. Mentors
 don't need to be in training or have completed training to be able to
 mentor an ECT.
+
+---
+
 Assigned mentor for an ECT can be changed to a different registered
 mentor at any time, but cannot be removed.
 
 * 📜 We didn't build this option. Policy that every ECT
 must have a mentor
+
+---
+
 User can change mentorship following the same rules above, and:
 
--   ECT must not have completed induction and must not have left the
-    school for the SIT to be able to change mentor.
+- ECT must not have completed induction and must not have left the
+  school for the SIT to be able to change mentor.
 
--   Mentor must not have left the school for the SIT to be able to
-    change the ECT they are assigned to or add others.
-
-* 📜 [???]{.mark}
+- Mentor must not have left the school for the SIT to be able to
+  change the ECT they are assigned to or add others.
 
 
 ## Report ECT is transferring out
@@ -1058,13 +1204,16 @@ Context: Schools can report that an ECT is leaving their school and
 transferring to a different school. LPs can view this data via the API
 but we otherwise do not use this data.
 
+---
+
 User can report that an ECT is transferring to another school. This
 is not mandatory.
 
 * 🙋 This is to allow SITs to tidy their dashboard and move ECTs who
 are leaving / have left to a different section ("no longer training")
-of their school's dashboard if they want to (see [design
-history](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
+of their school's dashboard if they want to (see [design history](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
+
+---
 
 Specify leaving date, which can be in the past or future (no
 constraints?).
@@ -1072,30 +1221,37 @@ constraints?).
 * 💻 The leaving date triggers the move of that ECT in the SIT
 dashboard. Email is sent to the ppt on confirmation?
 
-* 🙋 ECT is shown in SIT dashboard as leaving or no longer being trained.
+---
+
+ECT is shown in SIT dashboard as leaving or no longer being trained.
 
 * 💻 Leaving date not shown in the service once it has been submitted, and
 can't be changed.
 
-* 💻 ECT cannot be re-added once they have been reported as leaving / have
+---
+
+ECT cannot be re-added once they have been reported as leaving / have
 left.
 
-* 💻 User cannot report through the service if ECT is leaving for any
+---
+
+User cannot report through the service if ECT is leaving for any
 reason other than transferring to another school.
 
-* 💻 [??? Moving school was most common option -- not built]{.mark}*
+* 💻 Moving school was the most common option and other journeys were not built
+for MVP.
 
 * 🙋 We do not yet have a clear understanding of user needs and pain
 points for this journey (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/teachers-leaving-schools/)).
-
-
 
 ## Report mentor is transferring out
 
 Context: Schools can report that a mentor is leaving their school and
 transferring to a different school. LPs can view this data via the API
 but we otherwise do not use this data.
+
+---
 
 User can report that a mentor is transferring to another school. This
 is not mandatory.
@@ -1104,71 +1260,86 @@ is not mandatory.
 who are leaving / have left if they want to (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
 
+---
+
 Specify leaving date, which can be in the past or future (no
 constraints?)
 
 * 💻 This date becomes the trigger for removing the mentor from the
-school's mentor pool. [Also removes mentorship links?]{.mark}
+school's mentor pool. [Also removes mentorship links?]
+
+---
+
 Leaving date not shown in the service once it has been submitted, and
 can't be changed.
 
-* 💻 Email is sent to the ppt on confirmation?
+<!-- TODO: do we do this or not?
+* 💻 Email is sent to the participant on confirmation?
 
 * 🙋 Email is sent to the LP?
+-->
 
-* 🙋 On the leaving date, mentor is removed from the school's mentor pool.
+---
+
+On the leaving date, mentor is removed from the school's mentor pool.
 
 * 💻 Unless the mentor is working across multiple schools, they are no
 longer available to mentor ECTs at the school so are not shown in the
 dashboard.
 
+---
+
 Mentor cannot be re-added once they have been reported as leaving /
 have left.
+
+---
 
 * 💻 User cannot report through the service if mentor is leaving for any
 reason other than transferring to another school.
 
-
-
-
 ## Remove an ECT
 
-
-
+<!-- TODO: fix this -->
 Only if the ECT is 'Exempt' from statutory induction?
-
-[??? Previously a remove journey for unvalidated ppts]{.mark}
-
+Previously a remove journey for unvalidated ppts?
 
 ## Contact support or provide feedback on the service
 
 Context: Users may need to access support whilst using the Manage ECTs
 service. We also want to encourage them to provide service feedback.
 
+---
+
 User can provide feedback via the feedback form at any point,
 including before logging into the service.
 
-* 💻 This follows the [Gov.uk service manual for measuring user
+* 💻 This follows the [GOV.UK Service Manual for measuring user
 satisfaction](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction).
 
-User can email
-continuing-professional-development@digital.education.gov.uk
+---
+
+User can email continuing-professional-development@digital.education.gov.uk
 
 * 💻 This is to allow users to access support for any issue or query
-they may have with the service.
-There is no limit on how many times a user can submit feedback or
-contact support.
+they may have with the service. contact support.
+
+---
+
+There is no limit on how many times a user can submit feedback or contact support
 
 * 💻 There is no reason to limit feedback or support per user - users
 may experience multiple issues that they need support with, and
 feedback is anonymous so we have no way of limiting feedback per
 user.
 
+---
 
 ## View guidance on how to set up and manage ECF training
 
 Context: Schools can find links from the service to gov.uk guidance for
 managing ECF training.
+
+---
 
 User can navigate to guidance on [how to set up training for
 ECTs](https://www.gov.uk/guidance/how-to-set-up-training-for-early-career-teachers).
@@ -1176,3 +1347,4 @@ ECTs](https://www.gov.uk/guidance/how-to-set-up-training-for-early-career-teache
 * 🙋 This is to provide an overview of what registration involves in
 the Manage ECTs service.
 
+---
