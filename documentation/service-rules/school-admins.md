@@ -164,14 +164,14 @@ An email is sent to the nominated SIT on confirmation.
 Nominated SIT will be the email used for all further comms.
 
 * 💻 Once nominated, the SIT becomes DfE's most direct point of
-  contact with the school and is responsible for reporting ECTP
+  contact with the school and is responsible for reporting early career teacher
   training details.
 
 ## Log in with an email address once nominated as SIT
 
 Context: Once nominated, the SIT becomes the school's user for the
-Manage ECTs service and must log in to use the service and report ECTP
-training details for their school.
+Manage ECTs service and must log in to use the service and report
+early career teacher training details for their school.
 
 If user enters a registered email address on the sign in page, they
 are sent a magic sign in link via email which they can use to
@@ -214,7 +214,7 @@ school one at a time.
 ## Change the SIT
 
 Context: Only one SIT user per school can use the service at a time, and
-this person can be changed and replaced by someone ese at the school if
+this person can be changed and replaced by someone else at the school if
 needed (e.g. if they leave the school, change role).
 
 User can change the nominated SIT and replace themselves with a
@@ -226,7 +226,7 @@ role or the existing SIT leaves.
 User can change their own registered email by entering the same name
 and changing the email only.
 
-* 💻 There isn't an explicit journey built to change details of the
+There isn't an explicit journey built to change details of the
 existing SIT (existing functionality is used as a hack).
 There is a uniqueness validation on email address across all SITs,
 ECTs and mentors. However, if both name and email address match an
@@ -237,21 +237,22 @@ multiple schools.
 being used for different people. The combined name and email match is
 to account for SITs who work across multiple schools (e.g. in a
 MAT).
-User cannot change their own name whilst keeping their existing
+
+The user cannot change their own name whilst keeping their existing
 email.
 
-* 💻 There isn't an explicit journey built to change details of the
-existing SIT.
-When user changes SIT details, they immediately lose access to the
+When a user changes the SIT details, they immediately lose access to the
 SIT dashboard.
 
 * 💻 UI for multiple user access is supported but not built. There is
 an assumption that only one person at the school will need to use the
 service.
+
 An email is sent to the new nominated SIT on confirmation.
 
 * 💻 This email is to notify the new nominated SIT and provides
 instructions for signing into the service.
+
 New nominated SIT will be the email used for all further comms.
 
 * 💻 Once nominated, the SIT becomes DfE's most direct point of
@@ -272,6 +273,8 @@ ask schools to choose a 'default' which is used for any new ECTs
 rather than asking the user to select the same thing for each of
 their ECTs individually.
 
+---
+
 If a school induction tutor chose FIP and had a partnership reported in the directly
 previous academic year, they are shown the names of the LP and DP
 they were working with and can rollover their previous programme and
@@ -279,19 +282,29 @@ partnership choice.
 
 * 📜 The policy intent is for schools to continue with the FIP
 programme and the same LP/DP where possible.
+
+---
+
 If user chose FIP in the previous academic year and LP/DP pairing has
 changed, they must re-select programme choice for the new academic
 year.
+
 
 * 📚 Some LP/DP contracts change year to year which means schools may
 not be able to continue working with the same pairing for the
 following year (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/supporting-schools-in-lp-dp-transition/)).
+
+--- 
+
 If user chose FIP but didn't have a partnership reported in the
 directly previous academic year, they must re-select programme choice
 for the new academic year.
 
 * 💻 There is no pairing to rollover.
+
+---
+
 LP is emailed if school is not able to automatically rollover their
 previous partnership due to a change in LP/DP pairing.
 
@@ -299,14 +312,20 @@ previous partnership due to a change in LP/DP pairing.
 treats it as a rejection of the partnership and triggers an email to
 the LP. This flags to the LP that if they are still working with the
 school with a new DP then they need to let us know which DP.
+
+--- 
+
 If user chose CIP, DIY, or didn't have a programme choice in the
-previous academic year, they must select programme choice for the new
+previous academic year, they must select their programme choice for the new
 academic year.
 
 * 🙋 The rollover mechanism was built for FIP as this was relevant to
 the majority of schools and helped speed up the registration journey
 for these schools. It was not an active choice to not let CIP and DIY
 schools rollover.
+
+---
+
 Once user has submitted their programme choice for an academic year,
 they must contact support to change the choice.
 
@@ -314,6 +333,9 @@ they must contact support to change the choice.
 reason. Note, LP can override the programme choice by reporting a
 partnership. As long as the school has a cohort set up for that year,
 this sets the programme choice to FIP for that school.
+
+---
+
 If school is CIP only, they can only select CIP or DIY options.
 
 * 📜 Only state-funded schools, colleges, sixth forms, children's
@@ -323,6 +345,9 @@ eligible for DfE funded training (see [DfE
 guidance](https://www.gov.uk/guidance/funding-and-eligibility-for-ecf-based-training)).
 Other schools can access the service for CIP materials, or
 self-funded FIP.
+
+---
+
 Once default programme choice is selected for an academic year, new
 ECTs and mentors in that year will be set to use this programme when
 registered.
@@ -330,7 +355,7 @@ registered.
 * 🙋 This is to reflect how things work on the ground. The majority
 of schools with multiple ECTs will be doing the same programme.
 
-
+---
 
 ## Appoint and change Appropriate Body for a cohort or individual ECT
 
@@ -343,6 +368,8 @@ where schools have registered ECTs for training without registering for
 induction. On their records they can also see the other way round --
 might mean they've not filled in the AB or not registered the ECT at
 all.
+
+--- 
 
 SITs can report who they have appointed as their AB for an academic
 year, but they don't have to.
@@ -357,53 +384,49 @@ ECTs from a defined list of organisations that can act as an AB for
 each cohort. This is to enable ABs to cross check that ECTs have been
 registered for both induction and training.
 
-The list of ABs that can be appointed is updated each year. Some ABs
-can no longer be appointed going forwards or be used for existing
+---
+
+The list of ABs that can be appointed is updated each year. Some ABs can no longer be appointed going forwards or be used for existing
 cohorts / participants (see [2024
 changes](https://educationgovuk.sharepoint.com/:w:/r/sites/TeacherServices/Shared%20Documents/Teacher%20Continuing%20Professional%20Development/Teacher%20CPD%20Team/11.%20Provider%20Engagement%20%26%20Policy/ECF/2024%20cohort/AB%20list%20for%202024/AB%20changes%20to%20reflect%20before%202024%20registration%20opens.docx?d=w201a5f2247b541b3a401112eba53c099&csf=1&web=1&e=yrSkid)).
 
--   All schools can appoint a teaching school hub from the hardcoded
-    list in the service.
+All schools can appoint a teaching school hub from the hardcoded list in the service.
 
--   Independent schools only can also appoint Independent Schools
-    Teacher Induction Panel (ISTIP).
+Independent schools only can also appoint Independent Schools Teacher Induction Panel (ISTIP).
 
--   British schools overseas only can also appoint Educational
-    Success Partners (ESP).
+British schools overseas only can also appoint Educational Success Partners (ESP).
 
 * 📜 [DfE
 guidance](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
-sets out the organisations that can or cannot act as an AB. From
-September 2024, Teaching school hubs will become the main appropriate
+sets out the organisations that can or cannot act as an AB. From September 2024, Teaching school hubs will become the main appropriate
 body providers -- details can be found on
-[gov.uk](https://www.gov.uk/guidance/teaching-school-hubs). We get
-the list for the service from policy -- there are 3 lists on gov.uk
+[gov.uk](https://www.gov.uk/guidance/teaching-school-hubs). We get the list for the service from policy -- there are 3 lists on gov.uk
 so policy give us the exact names.
 
 * 📊 Presenting only the eligible options to different types of
 schools in the service aims to improve data accuracy ([design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/improving-how-we-capture-appropriate-body-information/)).
 
-## View and challenge LP / DP partnership for an academic year
+---
 
-Context: FIP schools choose a LP and DP to deliver training for their
-ECTs. Once this agreement between the school and LP has been made
-outside of the Manage ECTs service, LPs report this partnership via the
+## View and challenge partnerships for an academic year
+
+Context: FIP schools choose a lead provider and delivery partner to deliver training for their
+ECTs. Once this agreement between the school and LP has been made outside of the Manage ECTs service, LPs report this partnership via the
 API.
 
-The nominated SIT email is used to log into the service. When a SIT enters
-the registered email into the service login page, an email is sent to
+--- 
+
+The nominated SIT email is used to log into the service. When a SIT enters the registered email into the service login page, an email is sent to
 their email with a magic sign in link to sign into the service.
 
-* 💻 Magic link approach was decided to be the best sign in option at
-the time.
+* 💻 Magic link approach was decided to be the best sign in option at the time.
 
-When LP has reported a partnership with a school, LP and DP name are
-shown in the SIT dashboard.
+---
 
-* 📚 As schools do not report partnerships themselves, showing the
-partnership as reported by the LP allows schools to see if the
-details are as expected.
+When LP has reported a partnership with a school, LP and DP name are shown in the SIT dashboard.
+
+* 📚 As schools do not report partnerships themselves, showing the partnership as reported by the LP allows schools to see if the details are as expected.
 
 * 💻 The provider reporting the partnership journey (rather than
 schools) was easier to build originally.
