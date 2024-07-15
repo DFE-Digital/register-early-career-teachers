@@ -130,7 +130,7 @@ TRA.
 -   Status (Gives information on if the ECT does not have QTS or has a
     prior induction registered against them in the DQT)
 
-Statuses for a participant
+#### Statuses for a participant
 
 -   Contacted for information
 
