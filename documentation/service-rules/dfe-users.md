@@ -4,7 +4,7 @@ The goal for ECF 2 is that the application will be self-sustainable. That means
 developers shouldn't be needed in the everyday operation of the application.
 
 This list contains the responsibilities developers have now, but should be
-made available via the admin interface in ECF2:
+made available via the admin interface in ECF 2:
 
 - The DfE has previously advised of the possibility that participants
   may be registered as duplicates with multiple `participant_ids`. Where
