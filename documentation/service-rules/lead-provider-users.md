@@ -21,6 +21,7 @@ Successful request will show school details including school name,
 URN, cohort, type of training programme they have chosen to deliver,
 and whether they have confirmed partnerships in place for the
 cohort/academic year.
+
 API will only show schools that are eligible for funded ECF-based
 training programmes within a given cohort. API will not show schools
 that are ineligible for funding in a given cohort. If a school's
@@ -35,7 +36,6 @@ Can filter results by school URN.
 Can use school ID to find and view details for a specific school in a
 cohort.
 
-Reasons:
 
 ---
 ### Find delivery partner IDs and view details for a specific delivery partner
@@ -63,6 +63,7 @@ consecutive cohorts. If a school user confirms existing partnership
 with provider will continue into the upcoming cohort, providers do
 not need take any action to continue existing partnerships from one
 cohort to the next.
+
 In order for new providers to confirm partnerships with schools for
 an upcoming cohort, school users must first notify DfE that their
 schools will not continue their former partnerships with existing
