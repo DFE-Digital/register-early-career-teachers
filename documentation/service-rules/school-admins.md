@@ -195,7 +195,7 @@ their data.
 
 ## Manage multiple schools with one email address
 
-Context: Some SITs may work across multiple schools (e.g. in a MAT), and
+Context: Some SITs may work across multiple schools (e.g. in a Multi Academy Trust or MAT), and
 they can manage their multiple schools using the same email login for
 the service.
 
@@ -272,7 +272,7 @@ ask schools to choose a 'default' which is used for any new ECTs
 rather than asking the user to select the same thing for each of
 their ECTs individually.
 
-If user chose FIP and had a partnership reported in the directly
+If a school induction tutor chose FIP and had a partnership reported in the directly
 previous academic year, they are shown the names of the LP and DP
 they were working with and can rollover their previous programme and
 partnership choice.
@@ -336,8 +336,8 @@ of schools with multiple ECTs will be doing the same programme.
 
 Context: Schools must appoint an appropriate body (outside of the Manage
 ECTs service) for their ECTs. We ask SITs to report their AB choice(s)
-to DfE via the Manage ECTs service. Not a statutory need to report
-within the service -- needs to be reported outside of the service. Use
+to DfE via the Manage ECTs service. It is not a statutory need to report
+within the service -- in fact it needs to be reported outside of the service. Use
 the info to play the details back to the ABs -- to cross reference check
 where schools have registered ECTs for training without registering for
 induction. On their records they can also see the other way round --
@@ -391,7 +391,7 @@ ECTs. Once this agreement between the school and LP has been made
 outside of the Manage ECTs service, LPs report this partnership via the
 API.
 
-Nominated SIT email is used to log into the service. When user enters
+The nominated SIT email is used to log into the service. When a SIT enters
 the registered email into the service login page, an email is sent to
 their email with a magic sign in link to sign into the service.
 
@@ -643,17 +643,17 @@ account for errors and genuine changes in details.
 
 User can change ECT name.
 
--   SIT can change name if it's due to the ECT having changed their
+SIT can change name if it's due to the ECT having changed their
     name (marriage, divorce etc) or their name was entered
     incorrectly. SIT blocked from changing name if they say the ECT
     shouldn't have been registered or they want to replace them with
     a different person.
 
--   ECT must not have completed induction and must not have left the
+ECT must not have completed induction and must not have left the
     school for the SIT to be able to change name. There is an option
     to contact support if the ECT has completed or left.
 
--   We allow changing the whole name.
+We allow changing the whole name.
 
 * 🙋 ECT may have a name change or have an error in the entered name.
 
@@ -665,7 +665,7 @@ existing ECT with a different person in the service.
 still overwrite a record with a different person as we don't
 revalidate.
 
-User can change ECT email.
+SIT can change ECT email.
 
 -   ECT must not have completed induction and must not have left the
     school for the SIT to be able to change email. There is an option
@@ -731,14 +731,14 @@ been built so is done manually via support.
 Context: Registered ECTs are shown to SITs in the Manage ECTs service to
 allow them to view details and manage any changes.
 
-View and filter ECTs who are currently training, completed induction
+SITs can view and filter ECTs who are currently training, completed induction
 and no longer training.
 
 * 🙋 This is to allow users to easily find the ECTs their looking for
 (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/filtering-early-career-teachers/))
 
-View ECT induction start date. We do not show ECT cohorts.
+SITs can view ECT induction start date. We do not show ECT cohorts.
 
 * 🙋 This is to allow users to easily see which stage an ECT is at
 without showing cohorts as this was found to be confusing (see
@@ -879,7 +879,7 @@ mentors.
 * 💻 Unless the mentor is working across multiple schools, they are no
 longer available to mentor ECTs at the school so are not shown in the
 dashboard.
-User is asked if the mentor is mentoring across multiple schools. If
+SIT is asked if the mentor is mentoring across multiple schools. If
 yes, they must contact support to complete this. The mentor will show
 in the list of mentors at both schools.
 
@@ -910,17 +910,17 @@ to account for errors and genuine changes in details.
 
 User can change mentor name.
 
--   Mentor must not have left the school for the user to be able to
+Mentor must not have left the school for the user to be able to
     change their name. There is an option to contact support if the
     mentor has left.
 
--   SIT can change name if it's due to the mentor having changed
+SIT can change name if it's due to the mentor having changed
     their name (marriage, divorce etc) or their name was entered
     incorrectly. SIT blocked from changing name if they say the
     mentor shouldn't have been registered or they want to replace
     them with a different person.
 
--   We allow changing the whole name.
+We allow changing the whole name.
 
 * 🙋 Mentor may have a name change or have an error in the entered
 name.
@@ -1081,7 +1081,7 @@ is not mandatory.
 who are leaving / have left if they want to (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
 
-Specify leaving date, which can be in the past or future [(no
+Specify leaving date, which can be in the past or future (no
 constraints?)
 
 * 💻 This date becomes the trigger for removing the mentor from the
