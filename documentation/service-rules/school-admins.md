@@ -1082,7 +1082,7 @@ who are leaving / have left if they want to (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/facilitating-participants-moving-schools-during-their-induction/)).
 
 Specify leaving date, which can be in the past or future [(no
-constraints?)]{.mark}
+constraints?)
 
 * 💻 This date becomes the trigger for removing the mentor from the
 school's mentor pool. [Also removes mentorship links?]{.mark}
