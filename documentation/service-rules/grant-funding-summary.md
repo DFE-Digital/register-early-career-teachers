@@ -1,26 +1,20 @@
 # Grant funding summary
 
-## Grant funding for induction and training
+## Grant funding for training and induction
 
-There are 2 types of grant funding -- for induction and for training.
-
-Induction grant funding includes:
-
-- Year 1 Core funding
-
-- Year 2 Time off timetable funding
-    
-Year 2 Time off timetable funding is comprised of:
-
--  5% off timetable in year 2 of induction
-
--  20 hours of mentor support in year 2 of induction
+There are 2 types of grant funding - for training and for induction.
 
 Training grant funding is dedicated only for schools on the FIP programme. This includes:
 
 - Year 1 & 2 lead provider funding
 
 - Backfill mentor funding
+
+Induction grant funding includes:
+
+- Year 1 Core funding
+
+- Year 2 Time off timetable funding, such as 5% off timetable in year 2 of induction and 20 hours of mentor support in year 2 of induction
 
 ## Training grant funding
 
@@ -50,20 +44,14 @@ These are fixed. They are an amount that providers will be paid regularly regard
 ##### Output fees 
 These are flexible. When providers train a participant to a set milestone DfE pays them an output fee. The value of this fee depends on a range of factors. Providers report this via the API (subject to validation) using 'declarations'.
 
-##### Uplift fees.
+##### Uplift fees
 DfE pays an additional 'uplift fee' for participants in specific courses and circumstances e.g. schools with [high pupil premium](https://www.gov.uk/government/publications/pupil-premium/pupil-premium) (pupils who are recorded as eligible for free school meals, looked after by a social worker, etc).
 
 #### What is the journey?
 
-Internal DfE staff can access provider financial statements via the
-finance tool. When a milestone period is hit, DfE staff conduct
-assurance and then send out a copy of the financial statement to Lead
-Providers, along with a CSV of the declarations that make up the
-statement. Lead Providers check this against what they expected and then
-invoice DfE. EFSA then makes the payment.
-Throughout the process DfE also conducts audits, where they will select
-a sample of LP data and ask for evidence of training, to reduce the risk
-of any fraudulent payments.
+Internal DfE staff can access provider financial statements via the finance tool. When a milestone period is hit, DfE staff conduct
+assurance and then send out a copy of the financial statement to Lead Providers, along with a CSV of the declarations that make up the statement. Lead Providers check this against what they expected and then invoice DfE. EFSA then makes the payment.
+Throughout the process DfE also conducts audits, where they will select a sample of LP data and ask for evidence of training, to reduce the risk of any fraudulent payments.
 
 #### What is the eligibility policy?
 
@@ -86,9 +74,7 @@ At the start of the period, Lead Providers must:
 At the end of the period, Lead Providers should submit their actual
 delivery.
 
-If Lead Providers do not subcontract but receive direct funding, they
-need to make a 'nil declaration'. To do this, Lead Providers will need
-to know:
+To do this, Lead Providers will need to know:
 
 -   The names of their subcontractors
 
@@ -110,6 +96,9 @@ Lead providers who subcontract also need to:
 
 If DfE does not receive this as part of their declaration, we will
 contact LPs to provide the link separately.
+
+If Lead Providers do not subcontract but receive direct funding, they
+need to make a 'nil declaration'. 
 
 ### Backfill mentor funding
 
@@ -218,60 +207,53 @@ schools, by
 [EFSA](https://www.gov.uk/government/organisations/education-and-skills-funding-agency)
 (funding institution).
 
-### Year 2 Time off Timetable.
+### Year 2 time off timetable funding
 
 #### What does it consist of?
 
-This funding is meant to cover time off an ECT's school timetable to do
-induction (5% of their scheduled time) and a mentor's time off timetable
-to support the ECT through induction (20 hours). This funding is for all
-schools regardless of programme.
+This funding is meant to cover time off an ECT's school timetable to do induction (5% of their scheduled time) and a mentor's time off timetable to support the ECT through induction (20 hours). This funding is for all schools regardless of programme.
 
 To calculate this grant, the funding team need to know which ECTs and mentors are on their second year of induction. However our existing data model was not originally created with this task in mind. Hence we can't rely on induction data, we have to rely on training data, specifically, lead provider declarations as they are the 'cleanest' form of ECT data we have. 
 
 #### How are the payments structured?
 
-The grant funding team need to firstly figure out which ECTs
-are in the second half of their induction. This is a surprisingly difficult
-thing to calculate as years doing induction is NOT the same as years
-doing training. ECTs pause, stop, defer, change schools often and track
-these changes is at the core of many issues in the data collection
-system.
+The grant funding team need to firstly figure out which ECTs and mentor and in their year 2 of their induction. This is a surprisingly difficult thing to calculate as years doing induction is NOT the same as years doing training. ECTs pause, stop, defer, change schools often and track these changes is at the core of many issues in the data collection system.
 
-They calculate if ECTs are in the second half of their induction by:
+#### How they calculate if an ECT is in their second year
 
--   For FIP - if they have 4 declarations, we can safely assume they
-    are in their second year of training.
+For FIP – if they have 4 declarations, we can safely assume they are in their second year of training.
 
--   For CIP - CIP don't have declarations, so instead of trying to get
-    who IS in the 2nd year, they calculate who is NOT -- who has NOT
-    completed their first year based on their training registration
-    date.
+For CIP – CIP don’t have declarations, so instead of trying to get who IS in the 2nd year, they calculate who is NOT – who has NOT completed their first year based on their training registration date.
 
--   For DIY - We have to check against DQT, SWO and call ABs directly
-    and ask for ECT details.
+For DIY – We have to check against DQT, SWO and call ABs directly and ask for ECT details.
 
-Getting this data right is difficult because:
+Getting this data right is difficult because tracking the movements of an ECT (pause, stop, defer, changing schools) is dependent on AB and SIT updates. There are delays in this data coming through.
 
--   Tracking the movements of an ECT (pause, stop, defer, changing
-    schools) is dependent on AB and SIT updates. There are delays in
-    this data coming through.
-
--   Once the data does come through, the data gathered for each
-    programme type is different.
+Once the data does come through, the data gathered for each programme type is different.
 
 #### What is the eligibility policy?
+From a policy standpoint, ECTs need to be the following to be eligible for year 2 time off timetable funding:
 
-From a policy standpoint, ECTs need to be the following to be eligible
-for year 2 time off timetable funding:
+* work in one of the schools and establishments serving induction
+* hold qualified teacher status (QTS)
+* be registered as being in their second year of their induction after 1 September 2021
+* schools and establishments who employ ECTs with qualified teacher learning and skills status (QTLS) are not eligible for DfE funding, because they are exempt from statutory induction
 
--   Work in one of the schools and establishments that are eligible to host induction
+## 2024 to 2025 changes to grant funding
 
--   Hold qualified teacher status (QTS)
+#### Backfill mentor funding changes
 
--   Be registered as being in their second year of their induction after
-    1 September 2021
+Previously grant funding team were paying just on a start declaration at the beginning of the term and then the completed declaration at the end of year 2. However, the constant transfers, contract changes, AB changes, etc of mentors were causing a great deal of data errors (specifically 12% payment error, above the KPI mark). 
 
-Schools and establishments who employ ECTs with qualified teacher
-learning and skills status (QTLS) are not eligible for DfE funding,
-because they are exempt from statutory induction.
+For this reason, from 2024 backfill mentor payments will be calculated pro rata based on the declarations for each mentor and will be paid to each school individually, instead of only the last school the mentor was placed at. 
+
+For example - Mentor A starts at School A and only does 1 term. Then Mentor A leaves, Mentor B takes over and does mentor training on School A for two more terms. Grant funding will pay School A the three terms in total. However, if Mentor A leaves and no one takes over, grant funding team would only pay the school 1/3 of that payment allowance.
+
+ This data still deeply depends on the declaration data from LPs.
+
+Mentor training will be only 1 year. So backfill mentor grant funding payment will be less (number pending). But, Y2TOT mentor hours will increase, so the ECT will have more mentor hour support.
+
+#### Timing of payments
+
+In 2024 the payments will be done in November instead of August to match up with the time LPs have to (under contract) finalize their declarations
+
