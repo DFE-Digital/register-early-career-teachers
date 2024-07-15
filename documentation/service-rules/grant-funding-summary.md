@@ -30,8 +30,7 @@ DfE pays Lead Providers to train ECTs and mentors in the full induction
 programme. Lead Providers have to give proof that they are in fact
 training mentors and ECTs, they do this through 'declarations'.
 Declarations are statements of work. They are meant to provide 3
-declarations per year, 6 for both years. They do this through the API
-'service' DfE supports.
+declarations per year, 6 for both years. They do this through the Lead provider API.
 
 ### How are the payments structured?
 
