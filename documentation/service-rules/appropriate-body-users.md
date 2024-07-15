@@ -22,7 +22,9 @@ and that person (rather than DfE personnel) is responsible for
 adminstering user requests for their organisation. This keeps the data
 safe from people within organisations that should not have access to
 it.
+
 ---
+
 ABs as an organization are added or removed as needed through liaising
 with the induction data collections team in the TRA (Teaching Regulation Agency) via email.
 
@@ -30,7 +32,9 @@ with the induction data collections team in the TRA (Teaching Regulation Agency)
 appropriate bodies. Policy outlining who can be an appropriate body:
 [Appropriate bodies guidance - section
 3:1](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
+
 ---
+
 ### View records for early career teachers that are already registered
 
 They (Appropriate Bodies) can view historical records for ECTs they have claimed in a list on their Appropriate body account homepage.
@@ -59,7 +63,7 @@ If the ECT has previously failed induction, they cannot do induction again.
 * 📜 This is due to policy restricting those who have failed from reapplying to practice teaching. [AB
 guidance details this here.](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)
 
---
+--- 
 
 If an early career teacher did their initial teacher training (ITT) through an accredited ITT provider who is also an AB, the school cannot appoint that appropriate body for that teacher.
 
@@ -145,6 +149,7 @@ induction, they had until 31 August 2023 to complete induction under the
 cannot edit it. The transition period is over, so this is now a 'no' for everyone.
 
 ---
+
 ### Viewing induction history
 
 There are provisions in the regulations for ABs to offer a reduced
