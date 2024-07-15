@@ -1097,7 +1097,8 @@ can't be changed.
 
 * 💻 Unless the mentor is working across multiple schools, they are no
 longer available to mentor ECTs at the school so are not shown in the
-dashboard.*
+dashboard.
+
 Mentor cannot be re-added once they have been reported as leaving /
 have left.
 
