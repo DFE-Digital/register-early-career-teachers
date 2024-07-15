@@ -1,6 +1,6 @@
 # Department for Education users
 
-The goal for ECF2 is that the application will be self-sustainable. That means
+The goal for ECF 2 is that the application will be self-sustainable. That means
 developers shouldn't be needed in the everyday operation of the application.
 
 This list contains the responsibilities developers have now, but should be
