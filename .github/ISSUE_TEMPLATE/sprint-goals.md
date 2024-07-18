@@ -29,10 +29,9 @@ Test with lead providers our ideas for solutions and get their feedback :cloud:
 
 *Content design* - 
 
-*Service design* - Create proposal for how the services should be separated and represented in ECF2
+*Service design* - 
 
-*Interaction design* - Start to prototype front pages for the new services, for schools, appropriate bodies and internal users
-
+*Interaction design* - 
 *User research* -
 
 *Analysis* - 
