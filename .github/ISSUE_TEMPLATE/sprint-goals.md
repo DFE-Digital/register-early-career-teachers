@@ -2,7 +2,7 @@
 name: Sprint goals
 about: A template for our sprint goals.
 title: Sprint x goals
-labels: ''
+labels: 'Sprint goals 🏆'
 assignees: ''
 
 ---
