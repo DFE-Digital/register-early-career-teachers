@@ -17,6 +17,19 @@ postprocess do
   print "Rebuilding SCSS"
   `npx sass --quiet content/stylesheet.scss output/stylesheet.css`
   puts " ✅"
+
+  print "Copying JavaScript"
+  `mkdir output/javascript`
+  `cp ../../node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js output/javascript`
+  puts " ✅"
+
+  print "Copying fonts"
+  `cp -R ../../node_modules/govuk-frontend/dist/govuk/assets/fonts output/fonts`
+  puts " ✅"
+
+  print "Copying images"
+  `cp -R ../../node_modules/govuk-frontend/dist/govuk/assets/images output/images`
+  puts " ✅"
 end
 
 passthrough '/**/*'
