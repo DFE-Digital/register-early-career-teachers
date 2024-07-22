@@ -2,7 +2,7 @@
 name: Sprint goals
 about: A template for our sprint goals.
 title: Sprint x goals
-labels: 'Sprint goals 🏆'
+labels: ''
 assignees: ''
 
 ---
@@ -41,4 +41,4 @@ Test with lead providers our ideas for solutions and get their feedback :cloud:
 
 *Delivery* - 
 
-*Development* - 
+*Development* -
