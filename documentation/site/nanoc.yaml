@@ -1,0 +1,8 @@
+text_extensions: ['adoc', 'asciidoc', 'css', 'erb', 'html', 'js', 'markdown', 'md', 'rb', 'sass', 'scss', 'txt']
+
+prune:
+  auto_prune: true
+
+data_sources:
+  - type: filesystem
+    encoding: utf-8

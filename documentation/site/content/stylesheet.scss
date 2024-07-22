@@ -1,0 +1,5 @@
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+$govuk-assets-path: "/";
+
+@import "../node_modules/govuk-frontend/dist/govuk/all";

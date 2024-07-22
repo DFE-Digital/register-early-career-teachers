@@ -31,7 +31,7 @@ group :test do
   gem "capybara"
 end
 
-group :documentation, optional: true do
+group :documentation do
   gem "asciidoctor"
   gem "nanoc"
 end
