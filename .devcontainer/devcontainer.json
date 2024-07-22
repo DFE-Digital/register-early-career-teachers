@@ -31,7 +31,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "Shopify.ruby-lsp",
         "esbenp.prettier-vscode",
         "ms-vscode.vscode-typescript-tslint-plugin",
         "ms-vscode.vscode-types"
