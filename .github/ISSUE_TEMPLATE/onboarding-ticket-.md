@@ -44,6 +44,7 @@ These are documents or websites to have a read through to learn more about early
 - [ ] The [other services in Teacher Services](https://becoming-a-teacher.design-history.education.gov.uk/service-map/)
 - [ ] The existing [API documentation](https://manage-training-for-early-career-teachers.education.gov.uk/api-reference/reference-v3.html#api-v3-partnerships-ecf-id-put-request_body)
 - [ ]  The [retro rota](https://ukgovernmentdfe.slack.com/archives/C06V31R0Z17/p1715776635714569) and mention if you're willing to be added
+- [ ]  The [final presentation for the ECF2 discovery](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B03C73EEB-C2FA-43C4-A864-27A1379CDBF3%7D&file=ECF%20digital%20services%20-%20playback%20deck.pptx&action=edit&mobileredirect=true)
 
 
 ## Demos and introchats
