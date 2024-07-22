@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ecf2_development
+
+test:
+  <<: *default
+  database: ecf2_test
+
+production:
+  <<: *default
+  database: ecf2_production
+  username: ecf2
+  password: <%= ENV["ECF2_DATABASE_PASSWORD"] %>
