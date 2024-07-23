@@ -36,6 +36,12 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
+  # GOVUK Notify
+  config.action_mailer.delivery_method = :notify
+  config.action_mailer.notify_settings = {
+    api_key: ENV.fetch("GOVUK_NOTIFY_API_KEY"),
+  }
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

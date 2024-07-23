@@ -65,6 +65,12 @@ Rails.application.configure do
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "ecf2_production"
 
+  # GOVUK Notify
+  config.action_mailer.delivery_method = :notify
+  config.action_mailer.notify_settings = {
+    api_key: ENV.fetch("GOVUK_NOTIFY_API_KEY"),
+  }
+
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
