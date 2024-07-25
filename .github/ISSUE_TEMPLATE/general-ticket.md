@@ -1,7 +1,7 @@
 ---
 name: General ticket
 about: A simple template for most tickets.
-title: Insert title for ticket
+title: ''
 labels: ''
 assignees: ''
 
