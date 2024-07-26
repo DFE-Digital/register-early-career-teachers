@@ -17,5 +17,6 @@ module Ecf2
     config.autoload_lib(ignore: %w[assets tasks])
     config.assets.paths << Rails.root.join('node_modules/govuk-frontend/dist/govuk/assets')
     config.exceptions_app = routes
+    config.active_record.belongs_to_required_by_default = false
   end
 end
