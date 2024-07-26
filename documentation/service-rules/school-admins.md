@@ -1,4 +1,6 @@
-# Service rules for school admins
+---
+title: Service rules for school admins
+---
 
 This document currently covers the service rules for school admins.
 

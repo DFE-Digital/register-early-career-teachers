@@ -1,4 +1,6 @@
-# Grant funding summary
+---
+title: Grant funding summary
+---
 
 ## Grant funding for training and induction
 

@@ -1,4 +1,6 @@
-# Delivery partners
+---
+title: Delivery partners
+---
 
 ## Key
 

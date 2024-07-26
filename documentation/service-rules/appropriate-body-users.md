@@ -1,4 +1,6 @@
-# Appropriate body users
+---
+title: Appropriate body users
+---
 
 ## Key
 
