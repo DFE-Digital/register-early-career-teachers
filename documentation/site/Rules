@@ -13,6 +13,12 @@ compile '/**/*.md' do
   write(item.identifier.without_ext + '/index.html')
 end
 
+compile '/**/*.adoc' do
+  filter(:asciidoctor)
+  layout('/default.*')
+  write(item.identifier.without_ext + '/index.html')
+end
+
 postprocess do
   print "Rebuilding SCSS"
   `npx sass --quiet content/stylesheet.scss output/stylesheet.css`
