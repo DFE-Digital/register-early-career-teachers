@@ -7,6 +7,12 @@ compile '/**/*.html.erb' do
   write(item.identifier.without_ext)
 end
 
+compile '/service-rules/*.md' do
+  filter(:govuk_markdown)
+  layout('/service-rules.*')
+  write(item.identifier.without_ext + '/index.html')
+end
+
 compile '/**/*.md' do
   filter(:govuk_markdown)
   layout('/default.*')
