@@ -31,17 +31,6 @@ made available via the admin interface in ECF 2:
 - Setting or updating participant statuses
 - Calculating grant funding
 
-## Key
-
-| Emoji | Meaning                       |
-| ----- | -------                       |
-| 🙋    | user need                     |
-| 📜    | policy (explicit or intended) |
-| 📚    | contracts & funding           |
-| 💻    | digital service               |
-| 📊    | data                          |
-| 🔒    | security / GDPR               |
-
 ## Calculating payments for providers
 
 What is referred to as the 'payment engine' is a piece of code in the
@@ -228,5 +217,3 @@ in error and declarations are voided, rather than DfE expecting LPs to
 pay the money back in a separate process - we deduct the amount due from
 the amount to be paid on the financial statement. Clawbacks cover the
 different declaration types (e.g. started, retained 1 etc) and uplift.
-
-

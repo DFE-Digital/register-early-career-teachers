@@ -12,10 +12,12 @@
             <h1 class="govuk-heading-xl"><%= item[:title] %></h1>
             <%= yield %>
           </div>
+          <div class="govuk-grid-column-one-third">
+            <%= render '/partials/key.*' %>
+          </div>
         </div>
       </main>
     </div>
-
     <%= render '/partials/footer.*' %>
   </body>
 </html>

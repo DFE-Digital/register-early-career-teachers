@@ -2,19 +2,6 @@
 title: Delivery partners
 ---
 
-## Key
-
-| Emoji | Meaning                       |
-| ----- | -------                       |
-| 🙋    | user need                     |
-| 📜    | policy (explicit or intended) |
-| 📚    | contracts & funding           |
-| 💻    | digital service               |
-| 📊    | data                          |
-| 🔒    | security / GDPR               |
-
----
-
 ## Check data for delivery partners
 
 ### Access to the service

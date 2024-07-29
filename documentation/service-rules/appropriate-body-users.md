@@ -2,17 +2,6 @@
 title: Appropriate body users
 ---
 
-## Key
-
-| Emoji | Meaning                       |
-| ----- | -------                       |
-| 🙋    | user need                     |
-| 📜    | policy (explicit or intended) |
-| 📚    | contracts & funding           |
-| 💻    | digital service               |
-| 📊    | data                          |
-| 🔒    | security / GDPR               |
-
 ## TRA's appropriate body portal
 
 ### Get access to the TRA's appropriate body sign in
