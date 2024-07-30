@@ -11,7 +11,6 @@ gem "pg", "~> 1.1"
 gem "propshaft"
 gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[windows jruby]
-gem "dotenv-rails"
 
 gem "govuk-components"
 gem "govuk_design_system_formbuilder"
