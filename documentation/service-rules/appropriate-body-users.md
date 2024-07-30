@@ -1,5 +1,5 @@
 ---
-title: Appropriate body users
+title: Appropriate bodies
 ---
 
 ## TRA's appropriate body portal

@@ -1,5 +1,5 @@
 ---
-title: Department for Education users
+title: Department for Education staff
 ---
 
 The goal for ECF 2 is that the application will be self-sustainable. That means

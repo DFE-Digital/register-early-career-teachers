@@ -1,5 +1,5 @@
 ---
-title: Lead provider user
+title: Lead providers
 ---
 
 ### Find schools delivering ECF-based training in a given cohort and view details of a specific school
