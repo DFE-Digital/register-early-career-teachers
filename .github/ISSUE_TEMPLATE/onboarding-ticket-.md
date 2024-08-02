@@ -34,7 +34,7 @@ assignees: ''
 
 These are documents or websites to have a read through to learn more about early career teaching, Teaching CPD and Teacher Services. You can take a look at: 
 - [ ]  The [vision and strategy for digital services in Teaching Continued Professional Development](https://educationgovuk.sharepoint.com/:p:/s/TeacherServices/EdAxufgx-PtKtkWLJyvU9AYBUSA_8QKzv72FSB52xamxFw?e=7YB8Se)
-- [ ] The [map for existing digital services related to ECF and what we want to do in future] (https://lucid.app/lucidspark/0a55b682-a699-4e6c-8887-3ca6663d7efa/edit?view_items=g0_U~ZMyWrWz&invitationId=inv_8dcaccc3-f00c-45d9-9bcc-0be3b7c6cdc2)
+- [ ] The [map for existing digital services related to ECF and what we want to do in future](https://lucid.app/lucidspark/0a55b682-a699-4e6c-8887-3ca6663d7efa/edit?view_items=g0_U~ZMyWrWz&invitationId=inv_8dcaccc3-f00c-45d9-9bcc-0be3b7c6cdc2)
 - [ ] Service [staging for all user types](https://lucid.app/lucidspark/0a55b682-a699-4e6c-8887-3ca6663d7efa/edit?view_items=g0_U~ZMyWrWz&invitationId=inv_8dcaccc3-f00c-45d9-9bcc-0be3b7c6cdc2) (details below map)
 - [ ] The [who's who of CPD Digital](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7BFB659643-0C86-5820-9F81-10B8E74A8A61%7D&file=CPD%20-%20Who%27s%20who.pptx&action=edit&mobileredirect=true) and remember to add yourself to it
 - [ ] The [CPD glossary](https://teacher-cpd.design-history.education.gov.uk/glossary/)
