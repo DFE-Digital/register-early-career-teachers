@@ -28,7 +28,6 @@ assignees: ''
 
 - [ ] Create Lucidspark account with DFE details
 - [ ] Create Github account or give existing username in ticket
-- [ ] Add to ECF2 distribution list
 - [ ] Sign up to DFE Slack
 
 ## Reading
