@@ -11,17 +11,19 @@ assignees: ''
 
 ## For delivery manager
 
-- [ ] Github
-- [ ]  Lucidspark
-- [ ]  JIRA (optional)
-- [ ]  Read-only Zendesk
-- [ ]  Slack
-- [ ]  Slack channels (ECF 2, Support, CPD)
-- [ ]  Looker studio dashboards
-- [ ]  GovUK Notify (optional)
-- [ ]  ECF1 admin console (optional)
-- [ ]  ECF 2 Sharepoint
-- [ ]  Invites for team meetings and ceremonies
+- [ ] GitHub
+  - [ ] First request they're invited to the [DfE Digital organisation](https://dfe.service-now.com.mcas.ms/serviceportal?id=sc_cat_item&sys_id=0aacf3a81ba52110b192ec69b04bcb14) on ServiceNow
+  - [ ] Once they're in, add them to the [ecf2-cpd team](https://github.com/orgs/DFE-Digital/teams/ecf2-cpd)
+- [ ] Lucidspark
+- [ ] JIRA (optional)
+- [ ] Read-only Zendesk
+- [ ] Slack
+- [ ] Slack channels (ECF 2, Support, CPD)
+- [ ] Looker studio dashboards
+- [ ] GovUK Notify (optional)
+- [ ] ECF1 admin console (optional)
+- [ ] ECF 2 Sharepoint
+- [ ] Invites for team meetings and ceremonies
 - [ ] Add to ECF2 distribution list
 
 ## For new starter
