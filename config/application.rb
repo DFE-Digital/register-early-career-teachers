@@ -18,5 +18,15 @@ module Ecf2
     config.assets.paths << Rails.root.join('node_modules/govuk-frontend/dist/govuk/assets')
     config.exceptions_app = routes
     config.active_record.belongs_to_required_by_default = false
+
+    config.generators do |g|
+      g.helper(false)
+      g.factory_bot(suffix: "factory")
+      g.test_framework(:rspec,
+                       fixtures: false,
+                       view_specs: false,
+                       controller_specs: false,
+                       helper_specs: false)
+    end
   end
 end
