@@ -15,6 +15,8 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 gem "govuk-components"
 gem "govuk_design_system_formbuilder"
 
+gem "mail-notify"
+
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "factory_bot_rails"
