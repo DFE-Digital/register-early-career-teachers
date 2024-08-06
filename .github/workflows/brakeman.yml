@@ -6,12 +6,9 @@ env:
   BRAKEMAN_VERSION: "6.0.1"
 
 on:
-  workflow_call:
-    inputs:
-      ruby-version:
-        description: Ruby version to test against
-        type: string
-        required: true
+  pull_request:
+    branches:
+      - main
 
 jobs:
   brakeman-scan:

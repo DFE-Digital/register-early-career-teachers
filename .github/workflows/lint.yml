@@ -1,18 +1,8 @@
 name: "Lint"
 on:
-  workflow_call:
-    inputs:
-      ruby-version:
-        description: Ruby version
-        type: string
-        required: false
-        default: "3.2.4"
-      node-version:
-        description: Node version
-        type: string
-        required: false
-        default: "18.18.x"
-
+  pull_request:
+    branches:
+      - main
 jobs:
   ruby_linting:
     name: "Lint ruby"
@@ -51,12 +41,12 @@ jobs:
           node-version: ${{ inputs.node-version }}
           cache: "yarn"
 
-      - name: Yarn install
-        run: npm i -g yarn && yarn
+      - name: Lint install
+        run: npm i -g lint && lint init
 
       - name: Lint JS
         run: |-
-          yarn lint
+          lint
 
   scss_linting:
     name: "Lint SCSS"
