@@ -11,4 +11,6 @@ assignees: ''
 
 ## What?
 
+## Out of scope
+
 ## Helpful links or other information
