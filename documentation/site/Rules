@@ -21,7 +21,7 @@ end
 
 compile '/**/*.adoc' do
   filter(:asciidoctor)
-  layout('/default.*')
+  layout('/policy.*')
   write(item.identifier.without_ext + '/index.html')
 end
 
