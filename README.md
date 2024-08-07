@@ -5,3 +5,4 @@ ECF is a framework of standards to help early career teachers succeed at the sta
 ## Documentation
 
 * [Glossary](./documentation/glossary.md)
+* [Setup guide](./documentation/setup.md)
