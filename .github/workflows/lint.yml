@@ -1,0 +1,93 @@
+name: "Lint"
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  ruby_linting:
+    name: "Lint ruby"
+    env:
+      GOVUK_NOTIFY_API_KEY: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout Code
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1.190.0
+        with:
+          ruby-version: ${{ inputs.ruby-version }}
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Lint Ruby
+        run: bundle exec rubocop
+
+  js_linting:
+    name: "Lint JS"
+    env:
+      GOVUK_NOTIFY_API_KEY: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout Code
+
+      - name: Set up Node
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Lint install
+        run: npm i -g standard
+
+      - name: Lint JS
+        run: |-
+          npm run lint:js
+
+  scss_linting:
+    name: "Lint SCSS"
+    env:
+      GOVUK_NOTIFY_API_KEY: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout Code
+
+      - name: Set up Node
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Style lint install
+        run: npm i -g stylelint stylelint-config-gds
+
+      - name: Lint SCSS
+        run: |-
+          npm run lint:scss
+
+  erb_linting:
+    name: "Lint ERB"
+    env:
+      GOVUK_NOTIFY_API_KEY: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout Code
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1.190.0
+        with:
+          ruby-version: ${{ inputs.ruby-version }}
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Lint ERB Templates
+        if: false
+        run: |-
+          bundle exec erblint --lint-all

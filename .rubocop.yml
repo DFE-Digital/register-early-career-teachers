@@ -19,10 +19,10 @@ Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: no_comma
 
 Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: no_comma
+  Enabled: false
 
 Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: no_comma
+  Enabled: false
 
 Style/EmptyCaseCondition:
   Enabled: false
