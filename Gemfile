@@ -14,6 +14,7 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 
 gem "govuk-components"
 gem "govuk_design_system_formbuilder"
+gem "govuk_markdown"
 
 gem "mail-notify"
 
@@ -28,4 +29,9 @@ end
 
 group :test do
   gem "capybara"
+end
+
+group :documentation, optional: true do
+  gem "asciidoctor"
+  gem "nanoc"
 end
