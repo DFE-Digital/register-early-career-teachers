@@ -39,14 +39,13 @@ jobs:
         uses: actions/setup-node@v4.0.3
         with:
           node-version: ${{ inputs.node-version }}
-          cache: "yarn"
 
       - name: Lint install
-        run: npm i -g lint && lint init
+        run: npm i -g standard
 
       - name: Lint JS
         run: |-
-          lint
+          npm run lint:js
 
   scss_linting:
     name: "Lint SCSS"
@@ -58,17 +57,17 @@ jobs:
       - uses: actions/checkout@v3
         name: Checkout Code
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1.190.0
+      - name: Set up Node
+        uses: actions/setup-node@v4.0.3
         with:
-          ruby-version: ${{ inputs.ruby-version }}
+          node-version: ${{ inputs.node-version }}
 
-      - name: Install dependencies
-        run: bundle install
+      - name: Style lint install
+        run: npm i -g stylelint stylelint-config-gds
 
       - name: Lint SCSS
         run: |-
-          bundle exec rake lint:scss
+          npm run lint:scss
 
   erb_linting:
     name: "Lint ERB"
