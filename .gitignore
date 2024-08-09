@@ -8,6 +8,10 @@
 .vscode
 
 documentation/**/*.html
+!documentation/site/**/*.html
+documentation/site/output
+documentation/site/tmp
+documentation/site/crash.log
 
 config/master.key
 db/*.sqlite3

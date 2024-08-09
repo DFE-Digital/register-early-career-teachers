@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+compile '/**/*.html.erb' do
+  layout '/default.*'
+  filter(:erb)
+
+  write(item.identifier.without_ext)
+end
+
+compile '/service-rules/*.md' do
+  filter(:govuk_markdown)
+  layout('/service-rules.*')
+  write(item.identifier.without_ext + '/index.html')
+end
+
+compile '/**/*.md' do
+  filter(:govuk_markdown)
+  layout('/default.*')
+  write(item.identifier.without_ext + '/index.html')
+end
+
+compile '/**/*.adoc' do
+  filter(:asciidoctor)
+  layout('/policy.*')
+  write(item.identifier.without_ext + '/index.html')
+end
+
+postprocess do
+  print "Rebuilding SCSS"
+  `npx sass --quiet content/stylesheet.scss output/stylesheet.css`
+  puts " ✅"
+
+  print "Copying JavaScript"
+  `mkdir output/javascript`
+  `cp ../../node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js output/javascript`
+  puts " ✅"
+
+  print "Copying fonts"
+  `cp -R ../../node_modules/govuk-frontend/dist/govuk/assets/fonts output/fonts`
+  puts " ✅"
+
+  print "Copying images"
+  `cp -R ../../node_modules/govuk-frontend/dist/govuk/assets/images output/images`
+  puts " ✅"
+end
+
+passthrough '/**/*'
+
+layout '/**/*', :erb

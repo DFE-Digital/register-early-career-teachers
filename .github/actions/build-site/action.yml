@@ -1,0 +1,25 @@
+name: Build site
+description: Builds the final HTML using Nanoc build
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+        cache-version: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: npm
+
+    - name: Install dependencies
+      shell: bash
+      run: npm ci
+
+    - name: Build
+      shell: bash
+      run: make build-documentation-site

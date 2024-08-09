@@ -77,6 +77,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    asciidoctor (2.0.23)
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.8)
@@ -92,12 +93,17 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    coderay (1.1.3)
+    colored (1.2)
     concurrent-ruby (1.3.3)
     connection_pool (2.4.1)
     crass (1.0.6)
+    cri (2.15.12)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
     date (3.3.4)
+    ddmetrics (1.1.0)
+    ddplugin (1.0.3)
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
@@ -122,10 +128,16 @@ GEM
       activemodel (>= 6.1)
       activesupport (>= 6.1)
       html-attributes-utils (~> 1)
+    govuk_markdown (2.0.2)
+      activesupport
+      redcarpet
     html-attributes-utils (1.0.2)
       activesupport (>= 6.1.4.4)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
+    immutable-ruby (0.2.0)
+      concurrent-ruby (~> 1.1)
+      sorted_set (~> 1.0)
     io-console (0.7.2)
     irb (1.14.0)
       rdoc (>= 4.0.0)
@@ -133,6 +145,7 @@ GEM
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
     json (2.7.2)
+    json_schema (0.21.0)
     jwt (2.8.2)
       base64
     language_server-protocol (3.17.0.3)
@@ -153,11 +166,47 @@ GEM
       rack (>= 2.1.4.1)
     marcel (1.0.4)
     matrix (0.4.2)
+    memo_wise (1.9.0)
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.24.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
+    nanoc (4.13.0)
+      addressable (~> 2.5)
+      colored (~> 1.2)
+      nanoc-checking (~> 1.0, >= 1.0.2)
+      nanoc-cli (= 4.13.0)
+      nanoc-core (= 4.13.0)
+      nanoc-deploying (~> 1.0)
+      parallel (~> 1.12)
+      tty-command (~> 0.8)
+      tty-which (~> 0.4)
+    nanoc-checking (1.0.5)
+      nanoc-cli (~> 4.12, >= 4.12.5)
+      nanoc-core (~> 4.12, >= 4.12.5)
+    nanoc-cli (4.13.0)
+      cri (~> 2.15)
+      diff-lcs (~> 1.3)
+      nanoc-core (= 4.13.0)
+      pry
+      zeitwerk (~> 2.1)
+    nanoc-core (4.13.0)
+      base64 (~> 0.2)
+      concurrent-ruby (~> 1.1)
+      ddmetrics (~> 1.0)
+      ddplugin (~> 1.0)
+      immutable-ruby (~> 0.1)
+      json_schema (~> 0.19)
+      memo_wise (~> 1.5)
+      psych (>= 4.0, < 6.0)
+      slow_enumerator_tools (~> 1.0)
+      tty-platform (~> 0.2)
+      zeitwerk (~> 2.1)
+    nanoc-deploying (1.0.2)
+      nanoc-checking (~> 1.0)
+      nanoc-cli (~> 4.11, >= 4.11.15)
+      nanoc-core (~> 4.11, >= 4.11.15)
     net-imap (0.4.14)
       date
       net-protocol
@@ -187,12 +236,17 @@ GEM
     parser (3.3.4.0)
       ast (~> 2.4.1)
       racc
+    pastel (0.8.0)
+      tty-color (~> 0.5)
     pg (1.5.7)
     propshaft (0.9.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     psych (5.1.2)
       stringio
     public_suffix (6.0.0)
@@ -238,8 +292,10 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
+    rbtree (0.4.6)
     rdoc (6.7.0)
       psych (>= 4.0.0)
+    redcarpet (3.6.0)
     regexp_parser (2.9.2)
     reline (0.5.9)
       io-console (~> 0.5)
@@ -298,10 +354,20 @@ GEM
     rubocop-rspec (3.0.1)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
+    set (1.1.0)
+    slow_enumerator_tools (1.1.0)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
     stringio (3.1.1)
     strscan (3.1.0)
     thor (1.3.1)
     timeout (0.4.1)
+    tty-color (0.6.0)
+    tty-command (0.10.1)
+      pastel (~> 0.8)
+    tty-platform (0.3.0)
+    tty-which (0.5.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
@@ -326,6 +392,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  asciidoctor
   bootsnap
   capybara
   cssbundling-rails
@@ -334,8 +401,10 @@ DEPENDENCIES
   faker
   govuk-components
   govuk_design_system_formbuilder
+  govuk_markdown
   jsbundling-rails
   mail-notify
+  nanoc
   pg (~> 1.5)
   propshaft
   puma (>= 5.0)

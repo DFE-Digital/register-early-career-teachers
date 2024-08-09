@@ -1,4 +1,6 @@
-# Service rules for school admins
+---
+title: School admins
+---
 
 This document currently covers the service rules for school admins.
 
@@ -7,17 +9,6 @@ School admins are also known as:
 * school users
 * school induction tutors (SITs)
 * school induction coordinators
-
-## Key
-
-| Emoji | Meaning                       |
-| ----- | -------                       |
-| 🙋    | user need                     |
-| 📜    | policy (explicit or intended) |
-| 📚    | contracts & funding           |
-| 💻    | digital service               |
-| 📊    | data                          |
-| 🔒    | security / GDPR               |
 
 ## Request access to the Manage ECTs service via school GIAS email
 

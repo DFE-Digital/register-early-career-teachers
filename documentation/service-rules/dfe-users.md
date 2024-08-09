@@ -1,4 +1,6 @@
-# Department for Education users
+---
+title: Department for Education staff
+---
 
 The goal for ECF 2 is that the application will be self-sustainable. That means
 developers shouldn't be needed in the everyday operation of the application.
@@ -28,17 +30,6 @@ made available via the admin interface in ECF 2:
 - Assigning participants to a cohort temporarily or permanently
 - Setting or updating participant statuses
 - Calculating grant funding
-
-## Key
-
-| Emoji | Meaning                       |
-| ----- | -------                       |
-| 🙋    | user need                     |
-| 📜    | policy (explicit or intended) |
-| 📚    | contracts & funding           |
-| 💻    | digital service               |
-| 📊    | data                          |
-| 🔒    | security / GDPR               |
 
 ## Calculating payments for providers
 
@@ -226,5 +217,3 @@ in error and declarations are voided, rather than DfE expecting LPs to
 pay the money back in a separate process - we deduct the amount due from
 the amount to be paid on the financial statement. Clawbacks cover the
 different declaration types (e.g. started, retained 1 etc) and uplift.
-
-

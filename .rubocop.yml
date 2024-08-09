@@ -35,3 +35,6 @@ Style/AsciiComments:
 
 Style/SignalException:
   Enabled: false
+
+Style/StringConcatenation:
+  Enabled: false

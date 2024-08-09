@@ -1,16 +1,7 @@
-# Lead provider user
-
-## Key
-
-| Emoji | Meaning                       |
-| ----- | -------                       |
-| 🙋    | user need                     |
-| 📜    | policy (explicit or intended) |
-| 📚    | contracts & funding           |
-| 💻    | digital service               |
-| 📊    | data                          |
-| 🔒    | security / GDPR               |
 ---
+title: Lead providers
+---
+
 ### Find schools delivering ECF-based training in a given cohort and view details of a specific school
 
 Context:
@@ -391,4 +382,3 @@ User can view details of updates to the API.
 
 * 🙋 This is to ensure LPs are informed of any changes that happen
 with how the API works.
-
