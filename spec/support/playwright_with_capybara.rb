@@ -17,7 +17,6 @@ RSpec.configure do |config|
     base_url = Capybara.current_session.server.base_url
 
     Playwright.create(playwright_cli_executable_path: './node_modules/.bin/playwright') do |playwright|
-      # pass any option for Playwright#launch and Browser#new_page as you prefer.
       playwright.chromium.launch(headless: true) do |browser|
         @playwright_page = browser.new_page(baseURL: base_url)
         example.run
