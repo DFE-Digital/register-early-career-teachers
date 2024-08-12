@@ -9,9 +9,11 @@
       <main class="govuk-main-wrapper" id="main-content">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <span class="govuk-caption-xl">Policy documentation</span>
-            <h1 class="govuk-heading-xl"><%= item[:title] %></h1>
-            <%= yield %>
+            <article class="policy-document">
+              <span class="govuk-caption-xl">Policy documentation</span>
+              <h1 class="govuk-heading-xl"><%= item[:title] %></h1>
+              <%= yield %>
+            </article>
           </div>
         </div>
       </main>
