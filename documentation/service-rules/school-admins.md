@@ -369,6 +369,14 @@ ask schools to choose a 'default' which is used for any new ECTs
 rather than asking the user to select the same thing for each of
 their ECTs individually.
 
+---
+
+School must enter TRN and DoB:
+- TRN must be a 7 digit number
+- ECT must be between 18 and 100 years old
+
+---
+
 Identify the teacher in TRA using their TRN and DOB and confirm the
 match by comparing their name. If there are no matches try
 re-matching with the inclusion of National Insurance Number.
