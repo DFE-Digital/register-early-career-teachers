@@ -3,3 +3,44 @@ $govuk-new-link-styles: true;
 $govuk-assets-path: "/";
 
 @import "../../../node_modules/govuk-frontend/dist/govuk/all";
+
+.policy-document {
+    h2 {
+        @extend %govuk-heading-l;
+    }
+
+    h3 {
+        @extend %govuk-heading-m;
+    }
+
+    h4 {
+        @extend %govuk-heading-s;
+    }
+
+    ol {
+        @extend %govuk-list;
+        @extend %govuk-list--number;
+    }
+
+    ul {
+        @extend %govuk-list;
+        @extend %govuk-list--bullet;
+    }
+
+    table {
+        th {
+            @include govuk-font($size: 19, $weight: bold);
+        }
+
+        th, td {
+            padding: govuk-spacing(2) govuk-spacing(4) govuk-spacing(2) 0;
+            border-bottom: 1px solid $govuk-border-colour;
+            text-align: left;
+            vertical-align: top;
+        }
+    }
+    
+    .footnote {
+        @include govuk-font($size: 19);
+    }
+}
