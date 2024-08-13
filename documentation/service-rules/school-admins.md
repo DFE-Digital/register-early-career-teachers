@@ -359,7 +359,7 @@ of schools with multiple ECTs will be doing the same programme.
 Context: Schools must appoint an appropriate body (outside of the Manage
 ECTs service) for their ECTs. We ask SITs to report their AB choice(s)
 to DfE via the Manage ECTs service. It is not a statutory need to report
-within the service -- in fact it needs to be reported outside of the service. Use
+within the service -- in fact it needs to be reported outside of the service. We use
 the info to play the details back to the ABs -- to cross reference check
 where schools have registered ECTs for training without registering for
 induction. On their records they can also see the other way round --
@@ -368,24 +368,7 @@ all.
 
 ---
 
-SITs can report who they have appointed as their AB for an academic
-year, but they don't have to.
-
-📜 Schools that will deliver any form of ECF-based training (FIP,
-CIP or DIY) must appoint an AB for each of their ECTs. Schools can
-choose whether to appoint one appropriate body for all of their ECTs,
-or different ones.
-
-📚 Schools should report to DfE who the AB is for each of their
-ECTs from a defined list of organisations that can act as an AB for
-each cohort. This is to enable ABs to cross check that ECTs have been
-registered for both induction and training.
-
----
-
-The list of ABs that can be appointed is updated each year. Some ABs can no longer be appointed going forwards or be used for existing
-cohorts / participants (see [2024
-changes](https://educationgovuk.sharepoint.com/:w:/r/sites/TeacherServices/Shared%20Documents/Teacher%20Continuing%20Professional%20Development/Teacher%20CPD%20Team/11.%20Provider%20Engagement%20%26%20Policy/ECF/2024%20cohort/AB%20list%20for%202024/AB%20changes%20to%20reflect%20before%202024%20registration%20opens.docx?d=w201a5f2247b541b3a401112eba53c099&csf=1&web=1&e=yrSkid)).
+SITs must report who they have appointed as their AB for their ECTs from a set list of ABs, which is updated each year and provided by the policy team. Currently:
 
 All schools can appoint a teaching school hub from the hardcoded list in the service.
 
@@ -404,6 +387,9 @@ so policy give us the exact names.
 📊 Presenting only the eligible options to different types of
 schools in the service aims to improve data accuracy ([design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/improving-how-we-capture-appropriate-body-information/)).
+
+* 📚 Reporting the AB to DfE enables ABs to cross check that ECTs have been
+registered for both induction and training.
 
 ---
 
