@@ -520,11 +520,12 @@ manual checks.
 
 Name and email address is also provided when an ECT is added. Note, we may decide to pull these details from DQT rather than asking schools for them.
 
+There is a uniqueness validation on email addresses -- identities
+have a unique constraint and users have a unique constraint.
+
 🙋 This is to pass the details onto the LPs for onboarding to their
 learning platform & invitations to training events. We also pass this
 over for external evaluations (this is in the privacy policy).
-There is a uniqueness validation on email addresses -- identities
-have a unique constraint and users have a unique constraint.
 
 💻 The uniqueness validation is to avoid the same email address
 being used for different people.
@@ -808,20 +809,9 @@ history](https://teacher-cpd.design-history.education.gov.uk/manage-training/sor
 Context: All ECTs must be assigned a mentor as part of their statutory
 induction. Mentors must be registered and assigned in the Manage ECTs
 service for schools to get funding for mentor time off timetable and to
-provide mentors access to their ECT's materials. FIP mentors are also
+provide mentors access to their ECT's materials. FIP / provider-led mentors are also
 entitled to mentor training and associated funding for schools and
 providers.
-
----
-
-Schools must have selected a default programme choice for an academic
-year to be able to add a mentor for that year.
-
-🙋 Most schools choose the same programme for all their participants
-in a particular year (with exceptions for things like transfers), so
-we ask schools to choose a 'default' which is used for any new
-mentors rather than asking the user to select the same thing for each
-of their mentors individually.
 
 ---
 
@@ -836,6 +826,20 @@ below).
 
 ---
 
+School must enter the mentor's TRN and DoB, so we can match them in DQT:
+- TRN must be a 7 digit number
+- Mentor must be between 18 and 100 years old
+
+Note, in the future TRS API, we might be able to use name and date of birth.
+
+* 📜 We need to match mentors with their DQT record to ensure only real teachers are registered for mentoring and/or mentor training, and so DfE to check eligibility for funding. 
+* 🙋 Schools enter these details on behalf of ECTs as this caused
+confusion and delays when previously entered by the ECTs themselves
+(see [design
+history](https://teacher-cpd.design-history.education.gov.uk/manage-training/validation-information/)).
+
+---
+
 Identify the teacher in TRA using their TRN and DOB and confirm the
 match by comparing their name. If there are no matches try
 re-matching with the inclusion of National Insurance Number.
@@ -844,11 +848,6 @@ re-matching with the inclusion of National Insurance Number.
 mentor does not have any prohibitions, sanctions or restrictions on
 their record, and to check eligibility for funding (see section
 below).
-
-🙋 SIT enters these details on behalf of mentors as this caused
-confusion and delays when previously entered by the mentors
-themselves (see [design
-history](https://teacher-cpd.design-history.education.gov.uk/manage-training/validation-information/)).
 
 ---
 
@@ -870,10 +869,24 @@ different name until there is a match.
 mentor does not have any prohibitions, sanctions or restrictions on
 their record, and to check eligibility for funding (see section
 below).
-There is a uniqueness validation on email addresses.
+
+---
+
+Name and email address is also provided when an ECT is added. Note, we may decide to pull these details from DQT rather than asking schools for them. 
+
+There is uniqueness validation on email addresses.
+
+* 🙋 For FIP mentors, this is so we can pass the details onto the LPs for onboarding to their learning platform and invitations to training events.  
+
+* 🔒 We are required to send a privacy policy to registered mentors. 
+
+* 📜 We also pass these details over for external evaluations (this is in the privacy policy).  
 
 💻 The uniqueness validation is to avoid the same email address
 being used for different people.
+
+---
+
 A SIT can add themselves as a mentor using the same journey.
 
 📜 [DfE
@@ -884,42 +897,37 @@ history](https://teacher-cpd.design-history.education.gov.uk/manage-training/cha
 
 ---
 
-If school has a default provider recorded, we ask SIT to confirm the
-mentor's provider for mentor training.
-
-📚 Triggered if school has more than one LP? In 2023 there
-were ~1100 cases where because the mentor was set to the default
-provider, they were training with a different provider to their ECT
-(where there were different providers for different cohorts). We had
-to check this was correct via providers.
-
----
-
-Mentors for an academic year can be added once registrations open for
-that academic year, and then anytime throughout the year afterwards.
-
-📚 Participants must be added to a cohort, and can't be registered
-until that cohort is set up in the service. This is so they can be
-associated with a contract / funding pot.
-
-🙋 Schools may already know in summer who will be acting as a mentor
-for the following year, and then new mentors may start mentoring at
-any time throughout the academic year.
-
----
-
-An email is sent to the participant informing them they've been
+When mentor details are reported, an email is sent to the participant on confirmation informing them they've been
 registered. This isn't sent if the mentor is also a registered SIT.
 
-🔒 This is to provide participants with the privacy policy, and set
+* 🔒 This is to provide participants with the privacy policy, and set
 expectations about hearing from the provider.
 
 ---
 
-Mentor may or may not be doing mentor training.
+When the teacher is added, we check the following details to confirm their eligibility for mentoring: 
 
-📜 FIP mentors can complete 2 years of funded mentor training.
-Mentors don't have to complete this training.
+**Prohibitions, sanctions or restrictions** on their DQT teacher record: If an ECT does have an active flag, they can be added but won't be eligible to start training yet until they have been reviewed and approved by the policy team. 
+
+📜 Teachers who are barred from teaching are not eligible to mentor ECTs. 
+
+---
+
+If a teacher is eligible for mentoring, we also check the following details to confirm their eligibility for funded mentor training: 
+
+The teacher must not have **already completed mentor training**: If a teacher completed mentor training as part of the Earyl Roll Out, or if they have received a ‘Completed’ declaration, they are not eligible for further funded training. 
+
+📜 Mentors can only complete funded mentor training once. 
+
+The teacher must not have **started mentor training and had 3 years elapsed** without completing the training. 
+
+📜 Mentors are no longer eligible for further funded training if they started but haven’t completed their training within 3 years. This was agreed at the ECF Working Group. 
+
+The mentor must be **appointed for an ECT who is completing provider-led ECTP training**. 
+
+📜 Mentors must be appointed for an ECT to become eligible to start mentor training. Note, they do not have to start paired with that ECT to be allowed to continue training.  
+
+If a mentor passes the above checks, they become eligible to start training. Note, the above details can change, so should be re-checked.  
 
 ## Transfer in a mentor
 
@@ -1088,12 +1096,17 @@ induction.
 
 ---
 
+Schools must report one appointed mentor for each of their ECTs.
+
+📜 All ECTs must be assigned a mentor during their induction (see statutory guidance). ECTs must have a dedicated mentor, but there is no limit on having other additional mentors. 
+
+📚 DfE commercial decision not to pay for time off timetable for additional mentors. 
+
+--- 
+
 User can assign a mentor to an ECT in the ECT registration journey,
 the mentor registration journey or after an ECT and mentor are
 registered in the SIT dashboard.
-
-📜 All ECTs must be assigned a mentor during their induction (see
-[statutory guidance](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)).
 
 🙋 The design aims to encourage users to assign a mentor to any ECTs
 who do not yet have one assigned (see [design
@@ -1110,29 +1123,12 @@ always be at the same school as their assigned ECT.
 
 ---
 
-Any registered mentor at the same school can be assigned to any ECT
-who doesn't already have a mentor assigned. ECT can only be assigned
-one mentor at a time.
-
-📜 ECTs must have a dedicated mentor, but there is no limit on
-having other additional mentors.
-
-📚 DfE commercial decision not to pay for time off timetable for
-additional mentors.
-
----
-
 There is no limit on the number of ECTs a mentor can be assigned to.
 
 📜 Whilst there is no specific limit, [DfE statutory
 guidance](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)
 sets out that mentors should be able to support an ECT, and too many
 pairings would impact a mentor's capacity to do that.
-Mentor may or may not be doing mentor training.
-
-📜 Mentors can complete 2 years of funded mentor training. Mentors
-don't need to be in training or have completed training to be able to
-mentor an ECT.
 
 ---
 
@@ -1151,6 +1147,12 @@ User can change mentorship following the same rules above, and:
 
 - Mentor must not have left the school for the SIT to be able to
   change the ECT they are assigned to or add others.
+
+---
+
+Mentors may or may not be doing mentor training.
+
+📜 Mentors can choose to take up funded mentor training. Mentors don't need to be in training or have completed training to mentor ECTs.
 
 
 ## Report ECT is transferring out
