@@ -110,6 +110,8 @@ GEM
     diff-lcs (1.5.1)
     drb (2.2.1)
     erubi (1.13.0)
+    et-orbi (1.2.11)
+      tzinfo
     factory_bot (6.4.6)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.4.3)
@@ -117,6 +119,9 @@ GEM
       railties (>= 5.0.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
+    fugit (1.11.0)
+      et-orbi (~> 1, >= 1.2.11)
+      raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
     govuk-components (5.4.1)
@@ -252,6 +257,7 @@ GEM
     public_suffix (6.0.0)
     puma (6.4.2)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.8.1)
     rack (3.1.7)
     rack-session (2.0.0)
@@ -356,6 +362,12 @@ GEM
     ruby-progressbar (1.13.0)
     set (1.1.0)
     slow_enumerator_tools (1.1.0)
+    solid_queue (0.4.1)
+      activejob (>= 7.1)
+      activerecord (>= 7.1)
+      concurrent-ruby (>= 1.3.1)
+      fugit (~> 1.11.0)
+      railties (>= 7.1)
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
@@ -412,6 +424,7 @@ DEPENDENCIES
   rspec
   rspec-rails
   rubocop-govuk
+  solid_queue
   tzinfo-data
 
 RUBY VERSION
