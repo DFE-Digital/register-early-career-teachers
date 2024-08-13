@@ -2,6 +2,8 @@
 title: Delivery partners
 ---
 
+This is an intro paragraph.
+
 ## Check data for delivery partners
 
 ### Access to the service

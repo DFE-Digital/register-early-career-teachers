@@ -2,6 +2,9 @@
 title: Lead providers
 ---
 
+This is an intro paragraph.
+
+
 ### Find schools delivering ECF-based training in a given cohort and view details of a specific school
 
 Context:

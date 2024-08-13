@@ -1,10 +1,8 @@
 ---
-title: Induction for early career teachers (England)
+title: The Education (Induction Arrangements for School Teachers) (England) Regulations 2012
 ---
 
 :sectnums!:
-
-== The Education (Induction Arrangements for School Teachers) (England) Regulations 2012
 
 [cols="1,1"]
 |===
