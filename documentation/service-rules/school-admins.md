@@ -18,14 +18,12 @@ and either an eligible establishment type and/or in England. If
 school can't be found in the GIAS list, they can't request a link to
 access the service.
 
-* 📊 The GIAS register is used in order to check that the school is
+📊 The GIAS register is used in order to check that the school is
 real. This is the most up to date list of schools available, with
 most of the details we need to check schools' eligibility to have
 ECTs serve induction.
 
-* 📜 School eligibility requirements for accessing the service come
-  from the [statutory guidance](https://github.com/DFE-Digital/ecf2/blob/main/documentation/policy/induction-for-early-career-teachers.adoc#institutions-in-which-induction-may-be-served)
-  which details the schools where ECTs can serve induction.
+📜 School eligibility requirements for accessing the service come from the [statutory guidance](https://github.com/DFE-Digital/ecf2/blob/main/documentation/policy/induction-for-early-career-teachers.adoc#institutions-in-which-induction-may-be-served) which details the schools where ECTs can serve induction.
 
 School URN and address are shown for the user to confirm the correct
 school.
@@ -96,8 +94,7 @@ nominate a SIT.
 
 Name and email address are provided to nominate the SIT.
 
-💻 The email allows the nominated SIT to sign into the service. We
-  also use their name and email as the contact for DfE comms.
+💻 The email allows the nominated SIT to sign into the service. We also use their name and email as the contact for DfE comms.
 
 There is a uniqueness validation on email address across all profiles
 (SITs, ECTs and mentors). However, if both name and email address
