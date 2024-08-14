@@ -2,14 +2,11 @@
 title: Department for Education staff
 ---
 
-This is an intro paragraph.
+Learn about the roles and responsibilities for staff at the Department for Education, and what staff need to know when calculating payments for ECF providers.
 
+## Software developers
 
-The goal for ECF 2 is that the application will be self-sustainable. That means
-developers shouldn't be needed in the everyday operation of the application.
-
-This list contains the responsibilities developers have now, but should be
-made available via the admin interface in ECF 2:
+Software developers currently have the following responsibilities:
 
 - The DfE has previously advised of the possibility that participants
   may be registered as duplicates with multiple `participant_ids`. Where
@@ -34,12 +31,16 @@ made available via the admin interface in ECF 2:
 - Setting or updating participant statuses
 - Calculating grant funding
 
-## Calculating payments for providers
+However, the Department for Education is redesigning the ECF services so that they can be sustained without so much developer involvement.  
+
+There will be an interface where other staff can carry out the above responsibilities.
+
+## Staff who calculate payments for providers
 
 What is referred to as the 'payment engine' is a piece of code in the
 same ECF application that calculates payments for LPs.
 
-Provider payments are made up of:
+Provider payments are made up of a:
 
 - set-up fee
 - service fee
