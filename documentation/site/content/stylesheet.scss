@@ -1,8 +1,13 @@
 $govuk-global-styles: true;
 $govuk-new-link-styles: true;
 $govuk-assets-path: "/";
+$govuk-font-family: "sans-serif";
 
 @import "../../../node_modules/govuk-frontend/dist/govuk/all";
+
+.govuk-header__container {
+  border-bottom: 10px solid govuk-colour('orange');
+}
 
 .policy-document {
     h2 {
@@ -39,7 +44,7 @@ $govuk-assets-path: "/";
             vertical-align: top;
         }
     }
-    
+
     .footnote {
         @include govuk-font($size: 19);
     }
