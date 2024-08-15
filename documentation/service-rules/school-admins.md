@@ -2,7 +2,7 @@
 title: School admins
 ---
 
-Find out what school admins can do using the early career framework services.
+This document currently covers the service rules for school admins.
 
 School admins are also known as:
 
@@ -261,48 +261,33 @@ training details.
 Context: Each year, the SIT must report / confirm their 'default'
 programme choice for the academic year.
 
-When registrations open, if user says they are expecting ECTs they
-must report a 'default' programme for the new academic year.
+If a school is expecting ECTs, they must report which training programme their ECTs will be completing.
 
-🙋 Most schools choose the same programme for all their ECTs in a
-particular year (with exceptions for things like transfers), so we
-ask schools to choose a 'default' which is used for any new ECTs
-rather than asking the user to select the same thing for each of
-their ECTs individually.
+📚 DfE needs to know which participants have chosen provider-led training, so that we can share the relevant school and participant details with providers and so that we can calculate funding for schools and providers. DfE also needs to know which participants have chosen school-led training, so that we can signpost to materials and so that we can calculate funding for schools.
 
 ---
 
-If a school induction tutor chose FIP and had a partnership reported in the directly
-previous academic year, they are shown the names of the LP and DP
-they were working with and can rollover their previous programme and
-partnership choice.
+Schools will only be able to choose the programme options they are eligible for. If a school is eligible for DfE funded training, they can choose between ‘Provider-led or government-funded training’ and ‘school-led training’ If a school is not eligible for DfE funded training, they can only select school-led training (or CIP or DIY?).
 
-📜 The policy intent is for schools to continue with the FIP
-programme and the same LP/DP where possible.
+📜 Only state-funded schools, colleges, sixth forms, children's centres and nurseries, maintained and non-maintained special schools, and independent schools that receive Section 41 funding are eligible for DfE funded training (see DfE guidance). Other schools can access the service for CIP materials, or self-funded FIP.
 
 ---
 
-If user chose FIP in the previous academic year and LP/DP pairing has
-changed, they must re-select programme choice for the new academic
-year.
+🚧 Schools must set a ‘default’ programme choice. TBC how the default is used when new ECTs & mentors are added.
 
-
-📚 Some LP/DP contracts change year to year which means schools may
-not be able to continue working with the same pairing for the
-following year (see [design
-history](https://teacher-cpd.design-history.education.gov.uk/manage-training/supporting-schools-in-lp-dp-transition/)).
+🙋 This is to reflect how things work on the ground. The majority of schools with multiple ECTs will be doing the same programme, so the ‘default’ can help speed up the journey for adding new participants.
 
 ---
 
-If user chose FIP but didn't have a partnership reported in the
-directly previous academic year, they must re-select programme choice
-for the new academic year.
+If a school chose FIP and had a partnership reported in the previous academic year, they should be able to rollover their previous programme and partnership choice. If a school’s previous LP/DP pairing is no longer available or no partnership was previously reported, there should be no option to rollover.
 
-💻 There is no pairing to rollover.
+📜 The policy intent is for schools to continue with the FIP programme and the same LP/DP where possible.
+
+📚 Some LP/DP contracts change year to year which means schools may not be able to continue working with the same pairing for the following year (see design history).
 
 ---
 
-LP is emailed if school is not able to automatically rollover their
+🚧 LP is emailed if school is not able to automatically rollover their
 previous partnership due to a change in LP/DP pairing.
 
 💻 If school reports that they're doing FIP again, the service
@@ -312,7 +297,7 @@ school with a new DP then they need to let us know which DP.
 
 ---
 
-If user chose CIP, DIY, or didn't have a programme choice in the
+🚧 If user chose CIP, DIY, or didn't have a programme choice in the
 previous academic year, they must select their programme choice for the new
 academic year.
 
@@ -323,7 +308,7 @@ schools rollover.
 
 ---
 
-Once user has submitted their programme choice for an academic year,
+🚧 Once user has submitted their programme choice for an academic year,
 they must contact support to change the choice.
 
 💻 This was not a deliberate rule, there is no strong policy
@@ -333,19 +318,7 @@ this sets the programme choice to FIP for that school.
 
 ---
 
-If school is CIP only, they can only select CIP or DIY options.
-
-📜 Only state-funded schools, colleges, sixth forms, children's
-centres and nurseries, maintained and non-maintained special schools,
-and independent schools that receive Section 41 funding are not
-eligible for DfE funded training (see [DfE
-guidance](https://www.gov.uk/guidance/funding-and-eligibility-for-ecf-based-training)).
-Other schools can access the service for CIP materials, or
-self-funded FIP.
-
----
-
-Once default programme choice is selected for an academic year, new
+🚧 Once default programme choice is selected for an academic year, new
 ECTs and mentors in that year will be set to use this programme when
 registered.
 
@@ -377,6 +350,10 @@ Independent schools only can also appoint [Independent Schools Teacher Induction
 
 British schools overseas only can also appoint Educational Success Partners (ESP).
 
+📜 Schools that will deliver any form of ECF-based training must appoint an AB for each of their ECTs. Schools can
+choose whether to appoint one appropriate body for all of their ECTs,
+or different ones.
+
 📜 [DfE
 guidance](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
 sets out the organisations that can or cannot act as an AB. From September 2024, Teaching school hubs will become the main appropriate
@@ -388,7 +365,7 @@ so policy give us the exact names.
 schools in the service aims to improve data accuracy ([design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/improving-how-we-capture-appropriate-body-information/)).
 
-* 📚 Reporting the AB to DfE enables ABs to cross check that ECTs have been
+📚 Reporting the AB to DfE enables ABs to cross check that ECTs have been
 registered for both induction and training.
 
 ---
@@ -452,7 +429,7 @@ problems and impact declarations when they challenge a partnership.
 
 ---
 
-## Report ECT details
+## Add an ECT
 
 Context: SITs are asked to register any new ECTs each year and provide
 details to enable DfE to check their eligibility for funding and pass
@@ -483,7 +460,7 @@ section below).
 
 ---
 
-If we can identify the participant in TRA, we check first name
+🚧 If we can identify the participant in TRA, we check first name
 matches. If name doesn't match, we ask if they are known by a
 different name until there is a match.
 
@@ -504,7 +481,7 @@ manual checks.
 
 ---
 
-Name and email address is also provided when an ECT is added. Note, we may decide to pull these details from DQT rather than asking schools for them.
+🚧 Name and email address is also provided when an ECT is added. Note, we may decide to pull these details from DQT rather than asking schools for them.
 
 There is a uniqueness validation on email addresses -- identities
 have a unique constraint and users have a unique constraint.
@@ -527,15 +504,15 @@ Once we have successfully matched the participant in DQT, the ECT must pass the 
 
 The teacher must not have an overall induction completion date. The teacher is not eligible for ECTP training if they have already completed induction.
 
-- 📜 Teachers can only complete ECTP training once.
+📜 Teachers can only complete ECTP training once.
 
 The teacher is not eligible for ECTP training if they have an induction status of ‘exempt’ from induction.
 
-- 📜 Teachers may be exempt from completing ECTP training.
+📜 Teachers may be exempt from completing ECTP training.
 
 The teacher must not be currently ECTP mentor training. The teacher cannot receive funding for both ECT training and mentor training at the same time.
 
-- 📜 DfE only fund one set of training at a time, this was agreed at ECF working group.
+📜 DfE only fund one set of training at a time, this was agreed at ECF working group.
 
 ---
 
@@ -818,8 +795,8 @@ School must enter the mentor's TRN and DoB, so we can match them in DQT:
 
 Note, in the future TRS API, we might be able to use name and date of birth.
 
-* 📜 We need to match mentors with their DQT record to ensure only real teachers are registered for mentoring and/or mentor training, and so DfE to check eligibility for funding. 
-* 🙋 Schools enter these details on behalf of ECTs as this caused
+📜 We need to match mentors with their DQT record to ensure only real teachers are registered for mentoring and/or mentor training, and so DfE to check eligibility for funding.
+🙋 Schools enter these details on behalf of ECTs as this caused
 confusion and delays when previously entered by the ECTs themselves
 (see [design
 history](https://teacher-cpd.design-history.education.gov.uk/manage-training/validation-information/)).
@@ -847,7 +824,7 @@ below).
 
 ---
 
-If we can identify the participant in TRA, we check first name
+🚧 If we can identify the participant in TRA, we check first name
 matches. If name doesn't match, we ask if they are known by a
 different name until there is a match.
 
@@ -858,22 +835,22 @@ below).
 
 ---
 
-Name and email address is also provided when an ECT is added. Note, we may decide to pull these details from DQT rather than asking schools for them. 
+🚧 Name and email address is also provided when an ECT is added. Note, we may decide to pull these details from DQT rather than asking schools for them.
 
 There is uniqueness validation on email addresses.
 
-* 🙋 For FIP mentors, this is so we can pass the details onto the LPs for onboarding to their learning platform and invitations to training events.  
+🙋 For FIP mentors, this is so we can pass the details onto the LPs for onboarding to their learning platform and invitations to training events.
 
-* 🔒 We are required to send a privacy policy to registered mentors. 
+🔒 We are required to send a privacy policy to registered mentors.
 
-* 📜 We also pass these details over for external evaluations (this is in the privacy policy).  
+📜 We also pass these details over for external evaluations (this is in the privacy policy).
 
 💻 The uniqueness validation is to avoid the same email address
 being used for different people.
 
 ---
 
-A SIT can add themselves as a mentor using the same journey.
+🚧 A SIT can add themselves as a mentor using the same journey.
 
 📜 [DfE
 guidance](https://www.gov.uk/guidance/how-to-set-up-training-for-early-career-teachers#nominate-an-induction-tutor)
@@ -886,51 +863,40 @@ history](https://teacher-cpd.design-history.education.gov.uk/manage-training/cha
 When mentor details are reported, an email is sent to the participant on confirmation informing them they've been
 registered. This isn't sent if the mentor is also a registered SIT.
 
-* 🔒 This is to provide participants with the privacy policy, and set
+🔒 This is to provide participants with the privacy policy, and set
 expectations about hearing from the provider.
 
 ---
 
-When the teacher is added, we check the following details to confirm their eligibility for mentoring: 
+When the teacher is added, we check the following details to confirm their eligibility for mentoring:
 
-**Prohibitions, sanctions or restrictions** on their DQT teacher record: If an ECT does have an active flag, they can be added but won't be eligible to start training yet until they have been reviewed and approved by the policy team. 
+**Prohibitions, sanctions or restrictions** on their DQT teacher record: If an ECT does have an active flag, they can be added but won't be eligible to start training yet until they have been reviewed and approved by the policy team.
 
-📜 Teachers who are barred from teaching are not eligible to mentor ECTs. 
+📜 Teachers who are barred from teaching are not eligible to mentor ECTs.
 
 ---
 
-If a teacher is eligible for mentoring, we also check the following details to confirm their eligibility for funded mentor training: 
+If a teacher is eligible for mentoring, we also check the following details to confirm their eligibility for funded mentor training:
 
-The teacher must not have **already completed mentor training**: If a teacher completed mentor training as part of the Earyl Roll Out, or if they have received a ‘Completed’ declaration, they are not eligible for further funded training. 
+The teacher must not have **already completed mentor training**: If a teacher completed mentor training as part of the Earyl Roll Out, or if they have received a ‘Completed’ declaration, they are not eligible for further funded training.
 
-📜 Mentors can only complete funded mentor training once. 
+📜 Mentors can only complete funded mentor training once.
 
-The teacher must not have **started mentor training and had 3 years elapsed** without completing the training. 
+The teacher must not have **started mentor training and had 3 years elapsed** without completing the training.
 
-📜 Mentors are no longer eligible for further funded training if they started but haven’t completed their training within 3 years. This was agreed at the ECF Working Group. 
+📜 Mentors are no longer eligible for further funded training if they started but haven’t completed their training within 3 years. This was agreed at the ECF Working Group.
 
-The mentor must be **appointed for an ECT who is completing provider-led ECTP training**. 
+The mentor must be **appointed for an ECT who is completing provider-led ECTP training**.
 
-📜 Mentors must be appointed for an ECT to become eligible to start mentor training. Note, they do not have to start paired with that ECT to be allowed to continue training.  
+📜 Mentors must be appointed for an ECT to become eligible to start mentor training. Note, they do not have to start paired with that ECT to be allowed to continue training.
 
-If a mentor passes the above checks, they become eligible to start training. Note, the above details can change, so should be re-checked.  
+If a mentor passes the above checks, they become eligible to start training. Note, the above details can change, so should be re-checked.
 
 ## Transfer in a mentor
 
 Context: Some mentors transfer schools each year. We ask SITs to reflect
 these changes in the Manage ECTs service to ensure the correct payments
 are made.
-
----
-
-Schools must have selected a default programme choice for an academic
-year to be able to transfer in a mentor for that year.
-
-🙋 Most schools choose the same programme for all their participants
-in a particular year (with exceptions for things like transfers), so
-we ask schools to choose a 'default' which is used for any new
-mentors rather than asking the user to select the same thing for each
-of their mentors individually.
 
 ---
 
@@ -1083,14 +1049,13 @@ induction.
 ---
 
 Schools must report one appointed mentor for each of their ECTs.
+📜 All ECTs must be assigned a mentor during their induction (see statutory guidance). ECTs must have a dedicated mentor, but there is no limit on having other additional mentors.
 
-📜 All ECTs must be assigned a mentor during their induction (see statutory guidance). ECTs must have a dedicated mentor, but there is no limit on having other additional mentors. 
+📚 DfE commercial decision not to pay for time off timetable for additional mentors.
 
-📚 DfE commercial decision not to pay for time off timetable for additional mentors. 
+---
 
---- 
-
-User can assign a mentor to an ECT in the ECT registration journey,
+🚧 User can assign a mentor to an ECT in the ECT registration journey,
 the mentor registration journey or after an ECT and mentor are
 registered in the SIT dashboard.
 
@@ -1100,7 +1065,7 @@ history](https://teacher-cpd.design-history.education.gov.uk/manage-training/ass
 
 ---
 
-Mentor must be registered in the service in the same school as the
+🚧 Mentor must be registered in the service in the same school as the
 ECT to be available as a mentor for an ECT. Note, mentors may be in
 the mentor pool at more than one school.
 
