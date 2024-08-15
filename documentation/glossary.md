@@ -46,6 +46,13 @@ You can read more about what schools can do in the service in our guidance: [Gui
 
 [Support for early career teachers](https://support-for-early-career-teachers.education.gov.uk/) is the online service schools use to access the DfE-accredited training materials if they wish to deliver these themselves. 
 
+## Replacement mentors
+
+A new mentor joining the ECF mentor training programme to replace an existing mentor. These have different schedules on CPD currently that are submitted by lead providers. However, it's been suggested to change this to a boolean field instead. This mentor needs new funding allocated to them for their training. But they do not count towards a lead provider's key performance indicators for training. Only the first mentor for the early career teacher is counted.
+
+## Replacing mentors
+
+A mentor who is already on the ECF mentor training programme who starts to support an ECT (new or existing). This mentor does not need new funding as they have already had this allocated. 
 
 ## Qualifying nursery provision within maintained schools 
 
