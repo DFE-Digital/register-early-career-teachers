@@ -1,7 +1,6 @@
 $govuk-global-styles: true;
 $govuk-new-link-styles: true;
 $govuk-assets-path: "/";
-$govuk-font-family: "sans-serif";
 
 @import "../../../node_modules/govuk-frontend/dist/govuk/all";
 
@@ -47,5 +46,11 @@ $govuk-font-family: "sans-serif";
 
     .footnote {
         @include govuk-font($size: 19);
+    }
+}
+
+.service-rules {
+    > p:first-of-type {
+        @include govuk-font($size: 24);
     }
 }
