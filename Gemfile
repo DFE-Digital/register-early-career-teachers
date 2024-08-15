@@ -18,6 +18,8 @@ gem "govuk_markdown"
 
 gem "mail-notify"
 
+gem "solid_queue"
+
 group :development, :test do
   gem "brakeman"
   gem "debug", platforms: %i[mri windows]

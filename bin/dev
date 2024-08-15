@@ -9,3 +9,5 @@ fi
 export PORT="${PORT:-3000}"
 
 exec foreman start -f Procfile.dev "$@"
+
+bundle exec rake solid_queue:start
