@@ -33,7 +33,8 @@ group :test do
   gem "capybara"
 end
 
-group :documentation do
+group :nanoc do
   gem "asciidoctor"
   gem "nanoc"
+  gem "nanoc-live"
 end

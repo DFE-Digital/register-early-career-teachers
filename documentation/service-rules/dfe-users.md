@@ -36,7 +36,7 @@ made available via the admin interface in ECF 2:
 What is referred to as the 'payment engine' is a piece of code in the
 same ECF application that calculates payments for LPs.
 
-[Provider payments are made up of a]([Provider payments are made up of](https://educationgovuk.sharepoint.com/:w:/s/TeacherServices/ERtdlODXiLBFlEVBMLPSL6cBJno1HDIK-Zfdn9bS1ZuE-g?e=ORWQ3p):
+Provider payments are made up of:
 
 - set-up fee
 - service fee
