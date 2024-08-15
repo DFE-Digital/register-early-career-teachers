@@ -2,6 +2,9 @@
 title: Grant funding summary
 ---
 
+This is an intro paragraph.
+
+
 ## Grant funding for training and induction
 
 There are 2 types of grant funding - for training and for induction.
@@ -258,4 +261,3 @@ Mentor training will be only 1 year. So backfill mentor grant funding payment wi
 #### Timing of payments
 
 In 2024 the payments will be done in November instead of August to match up with the time LPs have to (under contract) finalize their declarations
-

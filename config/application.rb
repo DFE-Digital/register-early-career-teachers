@@ -18,6 +18,7 @@ module Ecf2
     config.assets.paths << Rails.root.join('node_modules/govuk-frontend/dist/govuk/assets')
     config.exceptions_app = routes
     config.active_record.belongs_to_required_by_default = false
+    config.generators.system_tests = nil
 
     config.generators do |g|
       g.helper(false)
