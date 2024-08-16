@@ -2,14 +2,6 @@
 title: Appropriate bodies
 ---
 
-Learn about the services appropriate bodies use, and how the services allow appropriate bodies to carry out their duties. Services include the ‘appropriate body portal’ and the ‘check data for appropriate bodies’ service.  
-
-## Contents
-
-[Appropriate body portal](#appropriate-body-portal)
-
-[Check data for appropriate bodies](#check-data-for-appropriate-bodies)
-
 ## Appropriate body portal
 
 ### Get access to the TRA's appropriate body sign in
@@ -30,42 +22,6 @@ appropriate bodies. Policy outlining who can be an appropriate body:
 [Appropriate bodies guidance - section
 3:1](https://assets.publishing.service.gov.uk/media/661d459fac3dae9a53bd3de6/Appropriate_bodies_guidance_induction_and_the_early_career_framework.pdf)
 
-### View records for early career teachers that are already registered
-
-They (Appropriate Bodies) can view historical records for ECTs they have claimed in a list on their Appropriate body account homepage.
-
-They can also view their appropriate body ID. This is referred to later as an employer ID.
-
-### Individually claim an ECT for their induction status with the TRA
-
-The process of 'claiming' an ECT refers to an AB telling the TRA which ECTs they are quality assuring the induction of. 
-
-The appropriate body needs to enter both the date of birth and the TRN number for the ECT record to show up and be claimed.
-
-🔒 The AB needs both the TRN and DOB as a data privacy measure to ensure that the AB is only searching for ECTs they already have links with. This search locates the record in the database of qualified teachers (DQT).
-
-If there is no TRN and DOB match, then an error message appears. The AB would then liaise with our induction data collections team or the teacher themselves
-
-The record will still show but have a blank field in the QTS date section if they don't have QTS yet.
-
-If the ECT has previously failed induction, they cannot do induction again.
-
-📜 This is due to policy restricting those who have failed from reapplying to practice teaching. [AB
-guidance details this here.](https://assets.publishing.service.gov.uk/media/6629237f3b0122a378a7e6ef/Induction_for_early_career_teachers__England__statutory_guidance_.pdf)
-
-If an early career teacher did their initial teacher training (ITT) through an accredited ITT provider who is also an AB, the school cannot appoint that appropriate body for that teacher.
-
-ECTs may be serving their induction at an AB. For example, they may work at a teaching school hub that is also an AB. If this is the case, the school cannot appoint that AB for that teacher.
-
-📜 [Find out more in section 2 of the statutory guidance on induction for early career teachers.](https://www.gov.uk/government/publications/induction-for-early-career-teachers-england?)
-
-If an AB tries to claim an ECT who is exempt from the web UI, or via a
-bulk upload, it gives a message saying they are exempt.
-
-📜 Those who are exempt cannot be claimed as they don't need to be inducted
-in order to teach
-
-When the portal pulls up the record for the ECT, it would show:
 
 #### Status
 
@@ -147,96 +103,6 @@ another appropriate body, they would not be able to do this.
 
 🙋 This allows the TRA to keep track of where an ECT currently is or
 how many ECTs under an AB without overlaps in data.
-
-### Claiming an induction that is already claimed by another appropriate body
-
-When an appropriate body user tries to view an ECT record to claim them,
-if the ECT is already claimed by another appropriate body, it would
-state they were 'in progress' and the appropriate body they were in
-progress with.
-
-💻 They are unable to change this on the service so the appropriate
-body user would have to reach out to the other appropriate body or the
-TRA induction support team to get them to release the ECT.
-
-📜 Sometimes, these appropriate bodies (particularly local
-authorities due to policy changes) no longer exist so the induction
-support team would help the ABs to navigate this.
-
-### Claiming an ECT
-
-When they are claiming an ECT, the appropriate body user needs to state:
-
-1.  When the induction began for that ECT with that appropriate body
-
-2.  What type of induction programme they are doing (FIP, CIP, DIY)
-
-On 1, there is validation that makes sure the date given isn't
-before the date QTS was recorded. This is because induction should only
-start after they received QTS.
-
-There are some discrepancies in the rules on the portal. Future dates
-aren't allowed in the web update, but can get through the bulk
-import upload.
-
-The end date of an induction period must be after the start date for an induction period.
-
-When this data is submitted, the appropriate body user would see the
-employer ID and employer address. This is the same as the appropriate
-body ID, and should show the appropriate body address.
-
-### Release an ECT so another school can claim them or because the ECT dropped out of teaching
-
-An appropriate body user can record an induction outcome of not yet
-completed when they click to update induction details. 'Not yet
-completed' means they did not finish their induction but are no longer
-with that appropriate body.
-
-When they do this, they must:
-
-- Confirm or update the induction start date for the ECT with their appropriate body -- this is auto populated from what they previously gave when first claiming the ECT but can be edited if needed
-- Give the induction end date for when the ECT stopped induction with their appropriate body
-- Give the number of terms served as a whole number. The number of terms can only be given at the point an outcome so this part isn't auto-populated and would need to be input
-- Confirm or update the induction programme type -- this is populated from what they previously gave
-
-They would submit that and then it would update DQT.
-
-'Not yet completed' is the only status option for an ECT leaving an AB
-regardless of the circumstances.
-
-If an ECT drops out of teaching, the appropriate body does not update
-the ECT's record any differently to when they would release an ECT who
-had changed appropriate body for their induction. The record just
-remains as 'not yet completed'.
-
-Sometimes, ECTs will potentially come back and finish induction
-much later therefore keeping their record as not yet completed
-regardless of reasons for leaving allows their record to be picked up
-from where it was last updated.
-
-### Pass or fail an ECT's induction 
-
-This would be under where AB users 5ecord an induction outcome.
-
-The following data points are given, updated or confirmed for this:
-
--   Dates of when induction started and ended
-
--   Number of terms completed
-
--   Induction programme type
-
-📊📜 This is the data that's needed by the DQT to be on the record when giving
-an ECT an outcome
-
-There is validation to not allow future dates or induction end date before the induction start date.
-
-This is not the case when done in a mass upload as the DQT processes
-mass upload data overnight.
-
-💻 This is because the system can't correct errors with validation
-rules as it's done on a template and will simply bounce them back a day
-after the upload once processed.
 
 ### Extend an ECT's induction
 
