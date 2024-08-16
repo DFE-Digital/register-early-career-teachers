@@ -11,6 +11,7 @@
       <%= header.with_navigation_item(text: "Navigation item 1", href: "#", active: true) %>
       <%= header.with_navigation_item(text: "Navigation item 2", href: "#") %>
       <%= header.with_navigation_item(text: "Navigation item 3", href: "#") %>
+      <%= header.with_navigation_item(text: "Sign out", href: sign_out_path) if authenticated? %>
     <% end %>
 
     <div class="govuk-width-container">

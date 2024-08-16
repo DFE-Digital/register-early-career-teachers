@@ -297,6 +297,16 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.index ["provider_partnership_id"], name: "index_training_periods_on_provider_partnership_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "otp_secret"
+    t.datetime "otp_verified_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
   add_foreign_key "ect_at_school_periods", "schools"
   add_foreign_key "ect_at_school_periods", "teachers"
   add_foreign_key "induction_periods", "appropriate_bodies"
