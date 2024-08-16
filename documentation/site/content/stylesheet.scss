@@ -49,8 +49,12 @@ $govuk-assets-path: "/";
     }
 }
 
-.service-rules {
-    > p:first-of-type {
-        @include govuk-font($size: 24);
-    }
+// .service-rules {
+//     > p:first-of-type {
+//         @include govuk-font($size: 24);
+//     }
+// }
+
+.govuk-list ul {
+    padding-left: 20px; /* Adjust as necessary for desired indentation */
 }
