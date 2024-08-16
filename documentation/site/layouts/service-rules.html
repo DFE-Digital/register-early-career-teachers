@@ -9,18 +9,31 @@
       <main class="govuk-main-wrapper" id="main-content">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <span class="govuk-caption-xl">Service rules</span>
+            <span class="govuk-caption-xl">Appropriate bodies</span>
             <h1 class="govuk-heading-xl"><%= item[:title] %></h1>
           </div>
         </div>
         <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <ul class="govuk-list">
+              <li><strong>What different users can do using the ECT services</strong></li>
+              <li>
+                <%= link_to "Appropriate bodies", "/service-rules/appropriate-body-users/" %>
+                <ul class="govuk-list">
+                  <li><%= link_to "View ECT records", "/service-rules/view-ect-records/" %></li>
+                  <li><%= link_to "Check their ID", "/service-rules/view-appropriate-body-id/" %></li>
+                  <li><%= link_to "Claim an ECT", "/service-rules/claim-an-ect/" %></li></li>
+                  <li><%= link_to "Release an ECT", "/service-rules/release-an-ect/" %></li></li>
+                  <li><%= link_to "Pass or fail an ECT's induction", "/service-rules/pass-or-fail-induction/" %></li></li>
+                </ul>
+              </li>
+            </ul>
+            <%= render '/partials/key.*' %>
+          </div>
           <div class="govuk-grid-column-two-thirds">
             <article class="service-rules">
               <%= yield %>
             </article>
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <%= render '/partials/key.*' %>
           </div>
         </div>
       </main>
