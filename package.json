@@ -12,7 +12,7 @@
   },
   "optionalDependencies": {
     "@esbuild/dawin-arm64": "^0.23.0",
-    "@esbuild/linux-x64": "^0.23.0"
+    "@esbuild/linux-x64": "^0.23.1"
   },
   "scripts": {
     "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules --quiet-deps",
