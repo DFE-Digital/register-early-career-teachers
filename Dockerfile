@@ -40,6 +40,7 @@ COPY . .
 
 # Precompile assets
 RUN RAILS_ENV=production SECRET_KEY_BASE=required-to-run-but-not-used \
+    GOVUK_NOTIFY_API_KEY=TestKey \
     bundle exec rails assets:precompile
 
 # Cleanup to save space in the production image
@@ -53,6 +54,9 @@ RUN rm -rf node_modules log/* tmp/* /tmp && \
 
 # Build runtime image
 FROM ruby:3.3.4-alpine as production
+
+# Use rails production environment when deployed using docker
+ENV RAILS_ENV=production
 
 # The application runs from /app
 WORKDIR /app
@@ -69,5 +73,8 @@ RUN apk add --no-cache libpq
 COPY --from=builder /app /app
 COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
 
-CMD bundle exec rails db:migrate && \
-    bundle exec rails server -b 0.0.0.0
+ENV PORT=8080
+EXPOSE ${PORT}
+
+CMD bundle exec rails db:prepare && \
+    bundle exec rails server -b 0.0.0.0 -p ${PORT}
