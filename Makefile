@@ -28,6 +28,10 @@ review: test-cluster ## Specify review AKS environment
 	$(eval export TF_VAR_environment=${ENVIRONMENT})
 	$(eval include config/global_config/review.sh)
 
+.PHONY: staging
+staging: test-cluster
+	$(eval include config/global_config/staging.sh)
+
 composed-variables:
 	$(eval RESOURCE_GROUP_NAME=${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-rg)
 	$(eval KEYVAULT_NAMES='("${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-app-kv", "${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-inf-kv")')
