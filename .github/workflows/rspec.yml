@@ -1,8 +1,12 @@
 name: "RSpec"
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      ruby-version:
+        description: Ruby version
+        type: string
+        required: false
+        default: "3.3.4"
 jobs:
   backend-tests:
     name: Run rspec
