@@ -1,0 +1,45 @@
+name: "Deploy"
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  merge_group:
+
+jobs:
+  lint:
+    name: Lint
+    uses: ./.github/workflows/lint.yml
+
+  rspec:
+    name: RSpec
+    uses: ./.github/workflows/rspec.yml
+
+  all-checks-passed:
+    name: All checks passed
+    needs: [lint, rspec]
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo 'Linting and tests passed, this branch is ready to be merged'"
+
+  docker:
+    name: Build and push Docker image
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]' && github.event_name != 'merge_group'
+    outputs:
+      docker-image: ${{ steps.build-docker-image.outputs.image }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DFE-Digital/github-actions/build-docker-image@master
+        id: build-docker-image
+        with:
+          docker-repository: ghcr.io/dfe-digital/ecf2
+          github-token: ${{ secrets.GITHUB_TOKEN }}
