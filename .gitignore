@@ -30,3 +30,9 @@ tmp/*
 tmp/pids/*
 !tmp/pids/
 !tmp/pids/.keep
+
+# Terraform
+.terraform
+config/terraform/application/vendor
+terraform.tfstate*
+bin/terrafile

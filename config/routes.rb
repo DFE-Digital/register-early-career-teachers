@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  get "up" => "rails/health#show", as: :rails_health_check
+  get "healthcheck" => "rails/health#show", as: :rails_health_check
 
   scope via: :all do
     get '/404', to: 'errors#not_found'
