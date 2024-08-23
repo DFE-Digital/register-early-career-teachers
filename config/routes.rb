@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   root to: 'pages#home'
   get "healthcheck" => "rails/health#show", as: :rails_health_check
 
@@ -9,5 +10,5 @@ Rails.application.routes.draw do
     get '/500', to: 'errors#internal_server_error'
   end
 
-  resources :countries, only: :index
+  resources :countries, only: %i[index create show]
 end

@@ -19,6 +19,10 @@ describe 'autocomplete' do
       page.keyboard.press('Enter')
 
       expect(autocomplete.input_value).to eq("United Kingdom")
+
+      page.get_by_role("button", name: 'Go to country').click
+      expect(page.get_by_text("Welcome to United Kingdom")).to be_visible
+      expect(page.url).to eq("#{RSpecPlaywright::RAILS_SERVER_URL}/countries/united-kingdom")
     end
   end
 end
