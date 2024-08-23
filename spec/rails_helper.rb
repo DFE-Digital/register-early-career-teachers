@@ -13,6 +13,12 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 
+Capybara.register_driver(:playwright) do |app|
+  Capybara::Playwright::Driver.new(app, browser_type: :chromium, headless: false)
+end
+
+Capybara.javascript_driver = :playwright
+
 RSpec.configure do |config|
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')

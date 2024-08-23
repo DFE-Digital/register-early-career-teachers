@@ -3,3 +3,4 @@ $govuk-new-link-styles: true;
 $govuk-assets-path: "/";
 
 @import "govuk-frontend/dist/govuk/all";
+@import "accessible-autocomplete/src/autocomplete";

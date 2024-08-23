@@ -3,12 +3,14 @@
   "dependencies": {
     "esbuild": "^0.23.0",
     "govuk-frontend": "5.5.0",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "accessible-autocomplete": "^3.0.0"
   },
   "devDependencies": {
     "stylelint": "^16.8.1",
     "stylelint-config-gds": "^2.0.0",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "playwright": "^1.46"
   },
   "optionalDependencies": {
     "@esbuild/dawin-arm64": "^0.23.0",
