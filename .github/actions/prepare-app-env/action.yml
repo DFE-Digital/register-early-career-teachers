@@ -42,6 +42,11 @@ runs:
       run: npm install
       shell: bash
 
+    - name: Install Playwright with Chromium
+      if: ${{ inputs.skip-node == 'false' }}
+      run: npx playwright install chromium
+      shell: bash
+
     - name: Prepare test database
       if: inputs.prepare-test-database == 'true'
       shell: bash
