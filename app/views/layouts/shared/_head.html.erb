@@ -1,5 +1,5 @@
 <head>
-  <title><%= [yield(:page_title).presence, t('service.name')].compact.join(' - ') %></title>
+  <%= tag.title([yield(:page_title).presence, "Service name", "GOV.UK"].compact.join(' - ')) %>
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>

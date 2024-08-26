@@ -17,7 +17,19 @@
       <%= environment_specific_phase_banner %>
 
       <main class="govuk-main-wrapper" id="main-content" role="main">
-        <%= yield %>
+        <div class="govuk-grid-row">
+
+          <div class="govuk-grid-column-two-thirds">
+            <%= yield(:page_header) %>
+
+            <%= yield %>
+          </div>
+          <% if content_for?(:second_column) %>
+            <div class="govuk-grid-column-one-third">
+              <%= yield(:second_column) %>
+            </div>
+          <% end %>
+        </div>
       </main>
     </div>
 
