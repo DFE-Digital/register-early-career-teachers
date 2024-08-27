@@ -44,7 +44,7 @@ jobs:
           docker-repository: ghcr.io/dfe-digital/ecf2
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  deploy_review:
+  deploy-review:
     name: Deploy review
     concurrency: deploy_review_${{ github.event.pull_request.number }}
     if: github.actor != 'dependabot[bot]' && github.event_name == 'pull_request'
@@ -70,3 +70,29 @@ jobs:
         with:
           message: |
             Review app deployed to ${{ steps.deploy.outputs.url }}
+
+  deploy-nonprod:
+    name: Deploy to ${{ matrix.environment }} environment
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    concurrency: deploy_${{ matrix.environment }}
+    needs: [docker, all-checks-passed]
+    strategy:
+      max-parallel: 1
+      matrix:
+        environment: [staging]
+    environment:
+      name: ${{ matrix.environment }}
+      url: ${{ steps.deploy.outputs.environment_url }}
+    outputs:
+      environment_url: ${{ steps.deploy.outputs.environment_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/deploy-environment-to-aks
+        id: deploy
+        with:
+          environment: ${{ matrix.environment }}
+          docker-image: ${{ needs.docker.outputs.docker-image }}
+          azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          current-commit-sha: ${{ github.sha }}
