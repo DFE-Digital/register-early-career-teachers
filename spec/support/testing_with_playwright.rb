@@ -1,18 +1,22 @@
 require_relative 'rspec_playwright'
 
 RSpec.configure do |config|
-  config.add_setting :rails_server_pid
   config.add_setting :playwright_page
 
-  # Start Rails server and Playwright browser
-  config.before(type: :feature) do
-    config.rails_server_pid ||= RSpecPlaywright.start_rails_server
+  # Start Playwright browser
+  config.before(playwright: true) do
+    # Don't use default Capybara driver/browser
+    Capybara.current_driver = :null
     config.playwright_page ||= RSpecPlaywright.start_browser
   end
 
-  # Stop Rails server and close Playwright browser
+  # Use back default Capybara driver/browser
+  config.after(playwright: true) do
+    Capybara.use_default_driver
+  end
+
+  # Close Playwright browser
   config.after(:suite) do
-    RSpecPlaywright.stop_rails_server
     RSpecPlaywright.close_browser
   end
 end

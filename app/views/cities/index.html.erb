@@ -1,0 +1,10 @@
+<%= form_with(url: "cities") do |form| %>
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit "Go to City" %>
+  </div>
+<% end %>

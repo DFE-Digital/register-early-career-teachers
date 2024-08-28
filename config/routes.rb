@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   resources :countries, only: %i[index create show]
+  resources :cities, only: %i[index create show]
 end

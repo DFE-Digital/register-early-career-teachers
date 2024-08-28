@@ -1,4 +1,4 @@
-describe 'autocomplete' do
+describe 'autocomplete', :playwright do
   let(:page) { RSpec.configuration.playwright_page }
 
   5.times do
@@ -22,7 +22,7 @@ describe 'autocomplete' do
 
       page.get_by_role("button", name: 'Go to country').click
       expect(page.get_by_text("Welcome to United Kingdom")).to be_visible
-      expect(page.url).to eq("#{RSpecPlaywright::RAILS_SERVER_URL}/countries/united-kingdom")
+      expect(page.url).to eq("#{Capybara.current_session.server.base_url}/countries/united-kingdom")
     end
   end
 end

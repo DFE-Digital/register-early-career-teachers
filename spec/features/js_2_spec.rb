@@ -1,4 +1,4 @@
-describe 'autocomplete' do
+describe 'autocomplete', :playwright do
   let(:page) { RSpec.configuration.playwright_page }
 
   5.times do

@@ -31,6 +31,11 @@ group :development, :test do
   gem "rubocop-govuk"
 end
 
+group :test do
+  gem "capybara"
+  gem "capybara-playwright-driver"
+end
+
 group :nanoc do
   gem "asciidoctor"
   gem "nanoc"
