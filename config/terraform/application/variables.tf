@@ -2,6 +2,10 @@ variable "command" {
   type = list(string)
   default = []
 }
+variable "pull_request_number" {
+  type    = string
+  default = ""
+}
 variable "cluster" {
   description = "AKS cluster where this app is deployed. Either 'test' or 'production'"
 }

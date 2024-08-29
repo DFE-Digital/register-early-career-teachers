@@ -1,8 +1,11 @@
+locals {
+  environment  = "${var.environment}${var.pull_request_number}"
+}
 module "application_configuration" {
   source = "./vendor/modules/aks//aks/application_configuration"
 
   namespace              = var.namespace
-  environment            = var.environment
+  environment            = local.environment
   azure_resource_prefix  = var.azure_resource_prefix
   service_short          = var.service_short
   config_short           = var.config_short
@@ -13,6 +16,7 @@ module "application_configuration" {
 
   config_variables = {
     ENVIRONMENT_NAME = var.environment
+    RAILS_ENV        = var.environment
     PGSSLMODE        = local.postgres_ssl_mode
   }
   secret_variables = {
@@ -28,7 +32,7 @@ module "web_application" {
   name = "web"
   web_port = 8080
   namespace    = var.namespace
-  environment  = var.environment
+  environment  = local.environment
   service_name = var.service_name
 
   cluster_configuration_map  = module.cluster_data.configuration_map
@@ -51,7 +55,7 @@ module "worker_application" {
 
   name = "worker"
   namespace    = var.namespace
-  environment  = var.environment
+  environment  = local.environment
   service_name = var.service_name
 
   cluster_configuration_map  = module.cluster_data.configuration_map

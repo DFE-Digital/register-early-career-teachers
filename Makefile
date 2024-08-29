@@ -24,9 +24,8 @@ docker-compose-build:
 .PHONY: review
 review: test-cluster ## Specify review AKS environment
 	$(if ${PULL_REQUEST_NUMBER},,$(error Missing PULL_REQUEST_NUMBER))
-	$(eval ENVIRONMENT=review-${PULL_REQUEST_NUMBER})
-	$(eval export TF_VAR_environment=${ENVIRONMENT})
 	$(eval include config/global_config/review.sh)
+	$(eval export TF_VAR_pull_request_number=-$(PULL_REQUEST_NUMBER))
 
 composed-variables:
 	$(eval RESOURCE_GROUP_NAME=${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-rg)
