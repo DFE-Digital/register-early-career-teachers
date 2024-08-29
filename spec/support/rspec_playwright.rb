@@ -5,12 +5,12 @@ module RSpecPlaywright
   PLAYWRIGHT_CLI_EXECUTABLE_PATH = "./node_modules/.bin/playwright".freeze
 
   # rubocop:disable Rails/SaveBang
-  def self.start_browser(js: false)
+  def self.start_browser(javascript_enabled: false)
     browser = Playwright.create(playwright_cli_executable_path: PLAYWRIGHT_CLI_EXECUTABLE_PATH)
                         .playwright
                         .chromium
                         .launch(headless: true)
-    browser.new_page(baseURL: Capybara.current_session.server.base_url, javaScriptEnabled: js)
+    browser.new_page(baseURL: Capybara.current_session.server.base_url, javaScriptEnabled: javascript_enabled)
   end
   # rubocop:enable Rails/SaveBang
 

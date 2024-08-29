@@ -8,10 +8,10 @@ RSpec.configure do |config|
   # Start/Reuse Playwright browser
   config.before(type: :feature) do
     if Capybara.current_driver == :js_enabled
-      config.playwright_page_with_js_enabled ||= RSpecPlaywright.start_browser(js: true)
+      config.playwright_page_with_js_enabled ||= RSpecPlaywright.start_browser(javascript_enabled: true)
       config.playwright_page = config.playwright_page_with_js_enabled
     else
-      config.playwright_page_with_js_disabled ||= RSpecPlaywright.start_browser(js: false)
+      config.playwright_page_with_js_disabled ||= RSpecPlaywright.start_browser(javascript_enabled: false)
       config.playwright_page = config.playwright_page_with_js_disabled
     end
   end
