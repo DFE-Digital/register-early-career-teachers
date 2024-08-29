@@ -32,13 +32,13 @@ class OTPSessionsController < ApplicationController
       clean_up_session
 
       # begin authenticated session
-      OTPSession.begin_session!(session, @otp_form.email)
+      UserSession.begin_session!(session, @otp_form.email, "otp")
 
       if authenticated?
         redirect_to(login_redirect_path)
       else
         session.delete(:requested_path)
-        OTPSession.end_session!(session)
+        UserSession.end_session!(session)
         redirect_to(otp_sign_in_path)
       end
     else

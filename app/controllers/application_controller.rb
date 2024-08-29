@@ -8,13 +8,16 @@ class ApplicationController < ActionController::Base
 private
 
   def sign_in_user
-    # these will build session data via begin_session even though there may not be a user
+    @sign_in_user ||= load_user_session
+  end
+
+  def load_user_session
+    # we build session data via begin_session even though there may not be a user
     # so we test for a user
-    @sign_in_user ||= [
-      PersonaSession.load_from_session(session),
-      OTPSession.load_from_session(session),
-      # load other auth type sessions here
-    ].select { |s| s.try(:user) }.first
+    user_session = UserSession.load_from_session(session)
+    return if user_session.blank?
+    return if user_session.user.blank?
+    user_session
   end
 
   def current_user

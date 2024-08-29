@@ -23,9 +23,12 @@ class OTPSignInForm
 private
 
   def code_is_verified
+    # prevent leaking info when the email doesn't exist
+    errors.delete(:email)
+
     errors.add(:code, "Enter the 6-digit code from the email") and return unless code =~ /\A\d{6}\z/
 
-    errors.add(:code, "The code entered is invalid") unless otp.verify(code:)
+    errors.add(:code, "The code entered is invalid") unless user && otp.verify(code:)
   end
 
   def otp

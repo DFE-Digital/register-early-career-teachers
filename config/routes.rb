@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   # some kind of setting or env var to control it
   get 'personas', to: 'personas#index'
   post 'auth/:provider/callback', to: 'sessions#create'
+
+  get '/admin', to: 'admin#index'
 end

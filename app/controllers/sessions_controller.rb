@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     # OTP auth is handled in OTPSessionsController as not omniauth
     case provider
     when "developer"
-      PersonaSession.begin_session!(session, user_info)
+      UserSession.begin_session!(session, user_info.uid, provider)
     when "dfe"
       raise provider
     else
@@ -24,8 +24,7 @@ class SessionsController < ApplicationController
       redirect_to(login_redirect_path)
     else
       session.delete(:requested_path)
-      OTPSession.end_session!(session)
-      PersonaSession.end_session!(session)
+      UserSession.end_session!(session)
       redirect_to(sign_in_path)
     end
   end
