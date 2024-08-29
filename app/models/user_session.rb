@@ -1,5 +1,5 @@
-# this handles a Persona user session within omniauth authentication
-# primarily lifted/inspired by [Register trainee teachers](https://github.com/DFE-Digital/register-trainee-teachers)
+# this handles a user session and cqn be used by any of the authentication types
+# inspired by [Register trainee teachers](https://github.com/DFE-Digital/register-trainee-teachers)
 class UserSession
   attr_reader :email, :provider
 
