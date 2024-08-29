@@ -35,6 +35,9 @@ staging: test-cluster
 migration: production-cluster
 	$(eval include config/global_config/migration.sh)
 
+sandbox: production-cluster
+	$(eval include config/global_config/sandbox.sh)
+
 composed-variables:
 	$(eval RESOURCE_GROUP_NAME=${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-rg)
 	$(eval KEYVAULT_NAMES='("${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-app-kv", "${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-inf-kv")')
