@@ -17,6 +17,7 @@ private
     user_session = UserSession.load_from_session(session)
     return if user_session.blank?
     return if user_session.user.blank?
+
     user_session
   end
 
