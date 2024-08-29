@@ -8,6 +8,7 @@ RSpec.describe OTPSignInForm, type: :model do
     let(:email) { "bob@example.com" }
     let(:code) { "123456" }
     let(:result) { 987_654 }
+    let!(:user) { FactoryBot.create(:user, email:) }
 
     let(:mock_otp_service) { instance_double(OneTimePassword, user: User.new(email:)) }
     subject(:form) { OTPSignInForm.new(email:, code:) }
@@ -33,6 +34,20 @@ RSpec.describe OTPSignInForm, type: :model do
 
     context "when the code does not verify" do
       let(:result) { nil }
+
+      it "adds an error" do
+        expect(form.valid?(:verify)).to be false
+        expect(form.errors.messages[:code]).to include "The code entered is invalid"
+      end
+    end
+
+    context "when there is no matching user" do
+      let!(:user) { nil }
+
+      it "does not verify the code" do
+        expect(mock_otp_service).not_to receive(:verify)
+        form.valid?(:verify)
+      end
 
       it "adds an error" do
         expect(form.valid?(:verify)).to be false
