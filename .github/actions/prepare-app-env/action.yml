@@ -42,6 +42,23 @@ runs:
       run: npm install
       shell: bash
 
+    - name: Cache Playwright Chromium browser
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-browsers-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+    - name: Install Playwright Chromium and dependencies
+      if: ${{ inputs.skip-node == 'false' && inputs.prepare-test-database == 'true' && steps.playwright-cache.outputs.cache-hit != 'true' }}
+      run: ./node_modules/.bin/playwright install --with-deps chromium
+      shell: bash
+
+    - name: Install dependencies for Playwright Chromium
+      if: ${{ inputs.skip-node == 'false' && inputs.prepare-test-database == 'true' && steps.playwright-cache.outputs.cache-hit == 'true' }}
+      run: ./node_modules/.bin/playwright install-deps chromium
+      shell: bash
+
     - name: Prepare test database
       if: inputs.prepare-test-database == 'true'
       shell: bash
