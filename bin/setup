@@ -20,6 +20,11 @@ FileUtils.chdir APP_ROOT do
   # Install JavaScript dependencies
   system("npm install --nofund")
 
+  # Install Playwright
+  system(%(export PLAYWRIGHT_CLI_VERSION=$(bundle exec ruby -e 'require "playwright"; puts Playwright::COMPATIBLE_PLAYWRIGHT_VERSION.strip') &&
+           npm install playwright@$PLAYWRIGHT_CLI_VERSION || npm install playwright@next &&
+           ./node_modules/.bin/playwright install))
+
   # puts "\n== Copying sample files =="
   # unless File.exist?("config/database.yml")
   #   FileUtils.cp "config/database.yml.sample", "config/database.yml"
