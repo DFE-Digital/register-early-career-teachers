@@ -15,6 +15,10 @@ test:
   <<: *default
   database: ecf2_test
 
+review:
+  <<: *default
+  database: ecf2_review
+
 production:
   <<: *default
   database: ecf2_production
