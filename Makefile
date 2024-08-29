@@ -81,6 +81,26 @@ terraform-unlock: terraform-init
 terraform-destroy: terraform-init
 	terraform -chdir=config/terraform/application destroy -var-file "config/${CONFIG}.tfvars.json" ${AUTO_APPROVE}
 
+set-what-if:
+	$(eval WHAT_IF=--what-if)
+
+arm-deployment: composed-variables set-azure-account
+	$(if ${DISABLE_KEYVAULTS},, $(eval KV_ARG=keyVaultNames=${KEYVAULT_NAMES}))
+	$(if ${ENABLE_KV_DIAGNOSTICS}, $(eval KV_DIAG_ARG=enableDiagnostics=${ENABLE_KV_DIAGNOSTICS} logAnalyticsWorkspaceName=${LOG_ANALYTICS_WORKSPACE_NAME}),)
+
+	az deployment sub create --name "resourcedeploy-tsc-$(shell date +%Y%m%d%H%M%S)" \
+		-l "${REGION}" --template-uri "https://raw.githubusercontent.com/DFE-Digital/tra-shared-services/${ARM_TEMPLATE_TAG}/azure/resourcedeploy.json" \
+		--parameters "resourceGroupName=${RESOURCE_GROUP_NAME}" 'tags=${RG_TAGS}' \
+		"tfStorageAccountName=${STORAGE_ACCOUNT_NAME}" "tfStorageContainerName=terraform-state" \
+		${KV_ARG} \
+		${KV_DIAG_ARG} \
+		"enableKVPurgeProtection=${KV_PURGE_PROTECTION}" \
+		${WHAT_IF}
+
+deploy-arm-resources: arm-deployment ## Validate ARM resource deployment. Usage: make domains validate-arm-resources
+
+validate-arm-resources: set-what-if arm-deployment ## Validate ARM resource deployment. Usage: make domains validate-arm-resources
+
 test-cluster:
 	$(eval CLUSTER_RESOURCE_GROUP_NAME=s189t01-tsc-ts-rg)
 	$(eval CLUSTER_NAME=s189t01-tsc-test-aks)
