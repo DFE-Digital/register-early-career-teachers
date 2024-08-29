@@ -1,17 +1,10 @@
-// NOTE: these should match the colours set in the environment_helper
-$environment-colours: (
-  "development": "pink",
-  "review": "orange",
-  "test": "red",
-  "staging": "purple",
-  "sandbox": "yellow"
-);
+$colours: ("pink", "orange", "red", "purple", "yellow");
 
-@each $environment-name, $environment-colour in $environment-colours {
+@each $colour in $colours {
   .govuk-header {
-    &.app-header--#{$environment-name} {
+    &.app-header--#{$colour} {
       .govuk-header__container.govuk-width-container {
-        border-color: govuk-colour($environment-colour);
+        border-color: govuk-colour($colour);
       }
     }
   }
