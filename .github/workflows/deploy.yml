@@ -95,3 +95,21 @@ jobs:
           docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           statuscake-api-token: ${{ secrets.STATUSCAKE_API_TOKEN }}
+
+  deploy-production:
+    name: Deploy production
+    needs: [deploy-nonprod]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/deploy-environment-to-aks
+        id: deploy
+        with:
+          environment: production
+          docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
+          azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          statuscake-api-token: ${{ secrets.STATUSCAKE_API_TOKEN }}
