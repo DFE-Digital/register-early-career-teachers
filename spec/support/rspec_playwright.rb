@@ -7,7 +7,7 @@ module RSpecPlaywright
   PLAYWRIGHT_CLI_EXECUTABLE_PATH = "./node_modules/.bin/playwright".freeze
   RAILS_SERVER_PROTOCOL = "http".freeze
   RAILS_SERVER_HOST = "localhost".freeze
-  RAILS_SERVER_PORT = 3194
+  RAILS_SERVER_PORT = rand(50_000..65_000)
   RAILS_SERVER_URL = "#{RAILS_SERVER_PROTOCOL}://#{RAILS_SERVER_HOST}:#{RAILS_SERVER_PORT}".freeze
   RAILS_SERVER_BOOT_COMMAND = "exec bin/rails server -e test -p #{RAILS_SERVER_PORT} > tmp/rails_playwright_last_run 2>&1".freeze
   RAILS_SERVER_BOOT_TIMEOUT_SECONDS = 10
