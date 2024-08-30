@@ -45,10 +45,15 @@ We're hoping later to consider:
 - the creation of a lead provider interface, if we build more evidence it's needed
 - how we notify users such as lead providers of changes to data, for example, if an ECT's name changes
 - more investigation in the best places to get data from for ECTs and mentors
-- 
+- adding or making changes to early career teachers or mentors in bulk
+
 ## What's completely out of scope for ECF2
 
-There's not much we've completely descoped yet, but we might add to this as things come up!
+There's not much we've completely descoped yet, but we might add to this as things come up.
+
+So far, we've decided to descope:
+- sending any updates on personal details to the database for qualified teachers
+
 
 
 
