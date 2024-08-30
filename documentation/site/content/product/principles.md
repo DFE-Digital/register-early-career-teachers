@@ -4,9 +4,9 @@
 
 It's very easy to state what you're going to prioritise, but a lot harder to know what to prioritise _less_. 
 
-For example, our service, like many others, will attempt to prioritise meeting the needs of users and saving taxpayer money.
+For example, our service, like many others, will attempt to prioritise meeting the needs of users and saving taxpayers' money.
 
-Given the scale of the minimum viable product for ECF2, we thought it was important to write down some prioritisation principles to inform how we work.
+[Given the scale of the minimum viable product for ECF2](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/initial-release-of-ecf-2/), we thought it was important to write down some prioritisation principles to inform how we work.
 
 These are a work in progress, and will continue to be iterated over time.
 
@@ -40,7 +40,7 @@ For example, we decided to use Github rather than Jira for our sprint planning a
 
 ## Evidenced problems over general improvements
 
-In the discovery for ECF2, we looked at the biggest problems for each of our user groups.
+In the discovery for ECF2, [we looked at the biggest problems for each of our user groups.](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/workshop-process/)
 
 We need to remember to focus on these biggest problems, rather than just generally trying to improve everything when rebuilding the service.
 
