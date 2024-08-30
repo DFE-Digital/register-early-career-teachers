@@ -22,7 +22,7 @@ In this initial release, we're planning to include:
 
 - an easier way for schools to register their early career teachers and mentors with DfE, that also helps them understand their ECF responsibilities​
 - an [improved and simplified data model](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/designing-the-database-first/) that better represents reality
-- an easier way for users to access the service, utilising [DfE Sign in](https://github.com/DFE-Digital/ecf2/discussions/43) and allowing multiple accounts per school
+- an easier way for users to access the service, utilising [DfE Sign in]([https://github.com/DFE-Digital/ecf2/discussions/43](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/exploring-using-dfe-sign-in/)) and allowing multiple accounts per school
 - an API with improved validation rules, surfacing more information lead providers need and simplified where possible
 - improved API documentation, consistent with the NPQ API documentation
 - a way for appropriate bodies to check training data for early career teachers
