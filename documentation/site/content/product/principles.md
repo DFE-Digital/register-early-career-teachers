@@ -4,7 +4,7 @@ title: Our prioritisation principles for ECF2
 
 ## Why we wanted to have principles for how we prioritise in ECF2
 
-It's very easy to state what you're going to prioritise, but a lot harder to know what to prioritise _less_. 
+It's very easy to state what you're going to prioritise, but a lot harder to know what to prioritise _less_.
 
 For example, our service, like many others, will attempt to prioritise meeting the needs of users and saving taxpayers' money.
 
@@ -46,7 +46,7 @@ In the discovery for ECF2, [we looked at the biggest problems for each of our us
 
 We need to remember to focus on these biggest problems, rather than just generally trying to improve everything when rebuilding the service.
 
-For example, we decided to descope notifying users of changes to data till after our initial release. 
+For example, we decided to descope notifying users of changes to data till after our initial release.
 
 This is because it is not something that currently is a massive pain point that is evidenced in user research, feedback surveys or support tickets.
 
@@ -69,5 +69,3 @@ For example, we're currently experimenting with using the name 'Register early c
 - include early career teacher mentors
 
 However, we think it's a good, short name we can use across our services for different user groups with less confusion than the current name.
-
-

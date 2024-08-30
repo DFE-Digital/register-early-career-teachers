@@ -11,6 +11,7 @@ We've detailled what's in scope for our initial minimum viable product release (
 I've also explained what we want to do later, and what is currently entirely out of scope for us.
 
 The objective of setting this out publicly is that we will:
+
 - be transparent across DfE and wider about what we're aiming to build
 - gather feedback and thoughts on what we're planning to include
 - give clarity to our team of what we need to be focusing on now and what can wait till later
@@ -33,15 +34,15 @@ In this initial release, we're planning to include:
 - joined support and finance tooling for DfE users
 - a way to enable grant funding to be worked out more accurately for mentors
 - payment calculations for lead provider training
-- all changes related to contracts for 2025, and backwards compatibility for ECTs and mentors that started before that year  
+- all changes related to contracts for 2025, and backwards compatibility for ECTs and mentors that started before that year
 - a way to easily query and monitor data so DfE has the information it needs and we can reliably monitor the new services' impact
-
 
 ## What's in scope after the release of ECF2
 
 There's some things we know will help better meet the needs of users for DfE, but we need to leave till later.
 
 We're hoping later to consider:
+
 - consolidated registration for schools, so they don't have to register with lead providers, delivery partners or appropriate bodies and DfE separately
 - improving how users that work for multi-academy trusts (MATs) use and access the service
 - the creation of a lead provider interface, if we build more evidence it's needed
@@ -55,8 +56,3 @@ There's not much we've completely descoped yet, but we might add to this as thin
 
 So far, we've decided to descope:
 - sending any updates on personal details to the database for qualified teachers
-
-
-
-
-
