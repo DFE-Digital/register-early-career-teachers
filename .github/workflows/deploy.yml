@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor != 'dependabot[bot]' && github.event_name != 'merge_group'
     outputs:
-      docker-image: ${{ steps.build-docker-image.outputs.image }}
+      docker-image-tag: ${{ steps.build-docker-image.outputs.tag }}
     steps:
       - uses: actions/checkout@v4
 
@@ -59,10 +59,9 @@ jobs:
         id: deploy
         with:
           environment: review
-          docker-image: ${{ needs.docker.outputs.docker-image }}
+          docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           pull-request-number: ${{ github.event.pull_request.number }}
-          current-commit-sha: ${{ github.event.pull_request.head.sha }}
 
       - name: Post sticky pull request comment
         if: github.event_name == 'pull_request'

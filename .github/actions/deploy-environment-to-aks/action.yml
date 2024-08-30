@@ -5,8 +5,8 @@ inputs:
   environment:
     description: The name of the environment
     required: true
-  docker-image:
-    description: The Docker image to deploy
+  docker-image-tag:
+    description: The Docker image tag to deploy
     required: true
   azure-credentials:
     description: JSON object containing a key for the service principal authorised on the Azure subscription
@@ -14,9 +14,6 @@ inputs:
   pull-request-number:
     description: The pull request number which triggered this deploy. If set, this will automatically seed the database.
     required: false
-  current-commit-sha:
-    description: The commit sha for the current commit
-    required: true
   statuscake-api-token:
     description: The Statuscake token
     required: false
@@ -48,7 +45,7 @@ runs:
       env:
         TF_VAR_azure_sp_credentials_json: ${{ inputs.azure-credentials }}
         TF_VAR_statuscake_api_token: ${{ inputs.statuscake-api-token }}
-        DOCKER_IMAGE: ${{ inputs.docker-image }}
+        DOCKER_IMAGE_TAG: ${{ inputs.docker-image-tag }}
         PULL_REQUEST_NUMBER: ${{ inputs.pull-request-number }}
 
     - uses: Azure/login@v1
