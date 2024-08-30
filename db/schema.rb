@@ -61,8 +61,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
   create_table "gias_schools", primary_key: "urn", force: :cascade do |t|
     t.string "name", null: false
     t.integer "local_authority"
-    t.string "school_phase"
-    t.string "school_type"
+    t.string "phase"
+    t.string "establishment_type"
     t.enum "school_status", default: "open", null: false, enum_type: "gias_school_statuses"
     t.string "administrative_district"
     t.string "address_line1"

@@ -35,8 +35,8 @@ class ImportTables < ActiveRecord::Migration[7.2]
     create_table :gias_schools, primary_key: :urn do |t|
       t.string :name, null: false
       t.integer :local_authority
-      t.string :school_phase
-      t.string :school_type
+      t.string :phase
+      t.string :establishment_type
 
       t.enum :school_status, default: "open", null: false, enum_type: :gias_school_statuses
 
