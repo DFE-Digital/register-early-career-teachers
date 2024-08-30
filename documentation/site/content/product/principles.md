@@ -1,4 +1,6 @@
-# Our prioritisation principles for ECF2
+---
+title: Our prioritisation principles for ECF2
+---
 
 ## Why we wanted to have principles for how we prioritise in ECF2
 

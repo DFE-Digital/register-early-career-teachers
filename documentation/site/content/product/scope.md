@@ -1,4 +1,6 @@
-# What's in scope for ECF2
+---
+title: What's in scope for ECF2
+---
 
 We want to improve and rebuild the digital services that facilitate the early career framework (ECF) policy reforms.
 
