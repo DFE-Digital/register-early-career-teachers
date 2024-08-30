@@ -36,7 +36,7 @@ It is part of the service standards to be open. Many services in DfE already do 
 
 For example, we decided to use Github rather than Jira for our sprint planning and documentation to help with this.
 
-We also thought it would help the organisation of our project. [You can read more about this decision in our Github discussion.](https://github.com/DFE-Digital/ecf2/discussions/46)
+[You can read more about this decision in our Github discussion.](https://github.com/DFE-Digital/ecf2/discussions/46)
 
 ## Evidenced problems over general improvements
 
