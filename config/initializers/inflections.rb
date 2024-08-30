@@ -14,4 +14,5 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym "ECT"
   inflect.acronym "API"
+  inflect.acronym "GIAS"
 end
