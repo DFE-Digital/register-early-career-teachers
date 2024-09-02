@@ -1,6 +1,12 @@
+// GOV.UK frontend
 $govuk-global-styles: true;
 $govuk-new-link-styles: true;
 $govuk-assets-path: "/";
 
 @import "govuk-frontend/dist/govuk/all";
+
+// app styles
+@import "header/colour-overrides";
+
+// library styles
 @import "accessible-autocomplete/src/autocomplete";

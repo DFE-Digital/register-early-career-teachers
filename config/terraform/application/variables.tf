@@ -24,6 +24,9 @@ variable "azure_maintenance_window" {
   default = null
 }
 
+variable "config" {
+  description = "Name of the environment configuration, e.g. review, staging, production..."
+}
 variable "config_short" {
   description = "Short name of the environment configuration, e.g. dv, st, pd..."
 }
@@ -101,4 +104,6 @@ variable "postgres_enable_high_availability" {
 variable "enable_logit" { default = false }
 locals {
   postgres_ssl_mode = var.enable_postgres_ssl ? "require" : "disable"
+
+  environment_variables = yamldecode(file("${path.module}/config/${var.config}.yml"))
 }

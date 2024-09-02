@@ -1,0 +1,16 @@
+<head>
+  <%= tag.title([yield(:page_title).presence, "Service name", "GOV.UK"].compact.join(' - ')) %>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= tag :meta, name: 'viewport', content: 'width=device-width, initial-scale=1' %>
+  <%= tag :meta, property: 'og:image', content: asset_path('images/govuk-opengraph-image.png') %>
+  <%= tag :meta, name: 'theme-color', content: '#0b0c0c' %>
+  <%= favicon_link_tag asset_path('images/favicon.ico') %>
+  <%= favicon_link_tag asset_path('images/govuk-icon-mask.svg'), rel: 'mask-icon', type: 'image/svg', color: "#0b1c0c" %>
+  <%= favicon_link_tag asset_path('images/govuk-icon-180.png'), rel: 'apple-touch-icon', type: 'image/png', size: '180x180' %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>

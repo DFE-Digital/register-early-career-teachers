@@ -56,6 +56,7 @@ terraform-init: composed-variables bin/terrafile set-azure-account
 		-backend-config=key=${ENVIRONMENT}_kubernetes.tfstate
 
 	$(eval export TF_VAR_azure_resource_prefix=${AZURE_RESOURCE_PREFIX})
+	$(eval export TF_VAR_config=${CONFIG})
 	$(eval export TF_VAR_config_short=${CONFIG_SHORT})
 	$(eval export TF_VAR_service_name=${SERVICE_NAME})
 	$(eval export TF_VAR_service_short=${SERVICE_SHORT})

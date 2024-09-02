@@ -1,0 +1,11 @@
+$colours: ("pink", "orange", "red", "purple", "yellow");
+
+@each $colour in $colours {
+  .govuk-header {
+    &.app-header--#{$colour} {
+      .govuk-header__container.govuk-width-container {
+        border-color: govuk-colour($colour);
+      }
+    }
+  }
+}

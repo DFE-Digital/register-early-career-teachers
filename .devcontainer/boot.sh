@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Copying example .env file..."
+cp .env.example .env
+
 echo "Setting SSH password for vscode user..."
 sudo usermod --password $(echo vscode | openssl passwd -1 -stdin) vscode
 

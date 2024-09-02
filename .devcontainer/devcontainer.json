@@ -25,6 +25,9 @@
       "installOhMyZsh": true,
       "configureZshAsDefaultShell": true,
       "upgradePackages": true
+    },
+    "ghcr.io/devcontainers-community/features/direnv": {
+      "version": "latest"
     }
   },
   // Configure tool-specific properties.

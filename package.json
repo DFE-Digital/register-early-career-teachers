@@ -17,7 +17,7 @@
     "@esbuild/linux-x64": "^0.23.1"
   },
   "scripts": {
-    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules --quiet-deps",
+    "build:css": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules --quiet-deps",
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "standard 'app/assets/javascripts/**/*.js'",
