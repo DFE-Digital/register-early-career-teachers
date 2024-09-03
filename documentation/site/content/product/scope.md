@@ -38,6 +38,7 @@ In this initial release, we're planning to include:
 - all changes related to contracts for 2025, and backwards compatibility for ECTs and mentors that started before that year
 - a way to easily query and monitor data so DfE has the information it needs and we can reliably monitor the new services' impact
 - at minimum, the same data that ECF1 supplies to DfE now, to sustain the services' core purposes and monitor its success
+- input to and support guidance around ECF and its services
 
 ## What's in scope after the release of ECF2
 
