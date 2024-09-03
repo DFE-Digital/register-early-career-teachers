@@ -34,6 +34,7 @@ For example, we want to try making adding an early career teacher record as easy
 
 We should focus on getting these initial features right, to help save time for users and support and developers, rather than adding new features to address other needs or more generally experiment.
 
+This is also because we want to make sure the core foundations of the service work properly and without much assistance, before we add other new features.
 ## Transparency over process
 
 It is part of the service standards to be open. Many services in DfE already do this through having open source code and using design histories.

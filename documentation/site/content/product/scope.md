@@ -1,6 +1,7 @@
 ---
 title: What's in scope for ECF2
 ---
+## Why we need to define the scope of ECF2
 
 We want to improve and rebuild the digital services that facilitate the early career framework (ECF) policy reforms.
 
@@ -47,9 +48,12 @@ We're hoping later to consider:
 - consolidated registration for schools, so they don't have to register with lead providers, delivery partners or appropriate bodies and DfE separately
 - improving how users that work for multi-academy trusts (MATs) use and access the service
 - the creation of a lead provider interface, if we build more evidence it's needed
+- user permissions for schools, lead providers or appropriate bodies
+- financial information for lead providers to be accessed in the service
 - how we notify users such as lead providers of changes to data, for example, if an ECT's name changes
 - more investigation in the best places to get data from for ECTs and mentors
 - adding or making changes to early career teachers or mentors in bulk
+- if we need to store a preferred name for early career teachers or mentors, different to their legal name stored with their teaching record
 - if we need to store a preferred name for early career teachers or mentors, different to their legal name stored with their teaching record
 
 ## What's completely out of scope for ECF2
