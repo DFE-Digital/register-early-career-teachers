@@ -22,6 +22,8 @@ Sometimes, we might need to take the slightly longer way to do things to ensure 
 
 For example, rather than have a table in our database for each distinct user group, we've decided to use a 'users' table with relationships to other tables. This means if the user groups involved in the services change, it should be easier to make the necessary changes to the data model.
 
+We sometimes might need to spend extra time to organise things nicely rather than taking the quicker option that is potentially less flexible.
+
 ## Self-sustainability over building more
 
 We want to build features that users can use, without having to depend too much on support or even developer assistance.
