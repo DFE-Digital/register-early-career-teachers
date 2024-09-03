@@ -101,3 +101,29 @@ jobs:
         if: false
         run: |-
           bundle exec erblint --lint-all
+
+  terraform_linting:
+    name: Lint Terraform
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout Code
+
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.5
+
+      - name: Check formatting
+        run: terraform fmt -check -recursive -diff
+        working-directory: config/terraform
+
+      - name: Download vendor modules
+        run: make ci staging bin/terrafile
+
+      - name: Validate
+        run: |
+          terraform init -backend=false
+          terraform validate -no-color
+        working-directory: config/terraform/application
