@@ -1,4 +1,9 @@
 class Teacher < ApplicationRecord
-  has_many :ect_at_school_periods
-  has_many :mentor_at_school_periods
+  # Associations
+  has_many :ect_at_school_periods, inverse_of: :teacher
+  has_many :mentor_at_school_periods, inverse_of: :teacher
+
+  # Validations
+  validates :name,
+            presence: true
 end

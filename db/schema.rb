@@ -20,16 +20,17 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
   create_enum "gias_school_statuses", ["open", "closed", "proposed_to_close", "proposed_to_open"]
   create_enum "induction_eligibility_status", ["eligible", "ineligible"]
 
-  create_table "academic_years", force: :cascade do |t|
-    t.integer "year", null: false
+  create_table "academic_years", primary_key: "year", id: :serial, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["year"], name: "index_academic_years_on_year", unique: true
   end
 
   create_table "appropriate_bodies", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_appropriate_bodies_on_name", unique: true
   end
 
   create_table "declarations", force: :cascade do |t|
@@ -41,20 +42,23 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
   end
 
   create_table "delivery_partners", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_delivery_partners_on_name", unique: true
   end
 
   create_table "ect_at_school_periods", force: :cascade do |t|
-    t.bigint "school_id"
-    t.bigint "teacher_id"
+    t.bigint "school_id", null: false
+    t.bigint "teacher_id", null: false
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "school_id, teacher_id, ((finished_on IS NULL))", name: "idx_on_school_id_teacher_id_finished_on_IS_NULL_abe4626dca", unique: true, where: "(finished_on IS NULL)"
+    t.index "teacher_id, ((finished_on IS NULL))", name: "index_ect_at_school_periods_on_teacher_id_finished_on_IS_NULL", unique: true, where: "(finished_on IS NULL)"
+    t.index ["school_id", "teacher_id", "started_on"], name: "index_ect_at_school_periods_on_school_id_teacher_id_started_on", unique: true
     t.index ["school_id"], name: "index_ect_at_school_periods_on_school_id"
+    t.index ["teacher_id", "started_on"], name: "index_ect_at_school_periods_on_teacher_id_started_on", unique: true
     t.index ["teacher_id"], name: "index_ect_at_school_periods_on_teacher_id"
   end
 
@@ -64,6 +68,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
     t.string "phase"
     t.string "establishment_type"
     t.enum "school_status", default: "open", null: false, enum_type: "gias_school_statuses"
+    t.enum "induction_eligibility", null: false, enum_type: "induction_eligibility_status"
+    t.enum "funding_eligibility", null: false, enum_type: "funding_eligibility_status"
     t.string "administrative_district"
     t.string "address_line1"
     t.string "address_line2"
@@ -79,53 +85,60 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
   end
 
   create_table "induction_periods", force: :cascade do |t|
-    t.bigint "ect_at_school_period_id"
-    t.bigint "appropriate_body_id"
+    t.bigint "appropriate_body_id", null: false
+    t.bigint "ect_at_school_period_id", null: false
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_be6c214e9d", unique: true, where: "(finished_on IS NULL)"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
+    t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true
     t.index ["ect_at_school_period_id"], name: "index_induction_periods_on_ect_at_school_period_id"
   end
 
   create_table "lead_providers", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_lead_providers_on_name", unique: true
   end
 
   create_table "mentor_at_school_periods", force: :cascade do |t|
-    t.bigint "school_id"
-    t.bigint "teacher_id"
+    t.bigint "school_id", null: false
+    t.bigint "teacher_id", null: false
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index "school_id, teacher_id, ((finished_on IS NULL))", name: "idx_on_school_id_teacher_id_finished_on_IS_NULL_dd7ee16a28", unique: true, where: "(finished_on IS NULL)"
+    t.index ["school_id", "teacher_id", "started_on"], name: "idx_on_school_id_teacher_id_started_on_17d46e7783", unique: true
     t.index ["school_id"], name: "index_mentor_at_school_periods_on_school_id"
+    t.index ["teacher_id", "started_on"], name: "index_mentor_at_school_periods_on_teacher_id_started_on", unique: true
     t.index ["teacher_id"], name: "index_mentor_at_school_periods_on_teacher_id"
   end
 
   create_table "mentorship_periods", force: :cascade do |t|
-    t.bigint "ect_at_school_period_id"
-    t.bigint "mentor_at_school_period_id"
+    t.bigint "ect_at_school_period_id", null: false
+    t.bigint "mentor_at_school_period_id", null: false
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "ect_at_school_period_id, mentor_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_mentor_at_school_per_482f52b217", unique: true, where: "(finished_on IS NULL)"
+    t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_afd5cf131d", unique: true, where: "(finished_on IS NULL)"
+    t.index ["ect_at_school_period_id", "started_on"], name: "index_mentorship_periods_on_ect_at_school_period_id_started_on", unique: true
     t.index ["ect_at_school_period_id"], name: "index_mentorship_periods_on_ect_at_school_period_id"
+    t.index ["mentor_at_school_period_id", "ect_at_school_period_id", "started_on"], name: "idx_on_mentor_at_school_period_id_ect_at_school_per_d69dffeecc", unique: true
     t.index ["mentor_at_school_period_id"], name: "index_mentorship_periods_on_mentor_at_school_period_id"
   end
 
   create_table "provider_partnerships", force: :cascade do |t|
-    t.bigint "academic_year_id"
-    t.bigint "lead_provider_id"
-    t.bigint "delivery_partner_id"
+    t.bigint "academic_year_id", null: false
+    t.bigint "lead_provider_id", null: false
+    t.bigint "delivery_partner_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["academic_year_id", "lead_provider_id", "delivery_partner_id"], name: "yearly_unique_provider_partnerships", unique: true
     t.index ["academic_year_id"], name: "index_provider_partnerships_on_academic_year_id"
     t.index ["delivery_partner_id"], name: "index_provider_partnerships_on_delivery_partner_id"
     t.index ["lead_provider_id"], name: "index_provider_partnerships_on_lead_provider_id"
@@ -133,10 +146,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
 
   create_table "schools", force: :cascade do |t|
     t.integer "urn", null: false
-    t.enum "induction_eligibility", null: false, enum_type: "induction_eligibility_status"
-    t.enum "funding_eligibility", null: false, enum_type: "funding_eligibility_status"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_schools_on_name", unique: true
     t.index ["urn"], name: "schools_unique_urn", unique: true
   end
 
@@ -262,29 +275,43 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_teachers_on_name"
   end
 
   create_table "training_periods", force: :cascade do |t|
-    t.bigint "provider_partnership_id"
-    t.bigint "ect_at_school_period_id"
-    t.bigint "mentor_at_school_period_id"
+    t.bigint "provider_partnership_id", null: false
+    t.string "trainee_type", null: false
+    t.bigint "trainee_id", null: false
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "ect_at_school_period_id, mentor_at_school_period_id, provider_partnership_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_mentor_at_school_per_442268543c", unique: true, where: "(finished_on IS NULL)"
-    t.index ["ect_at_school_period_id"], name: "index_training_periods_on_ect_at_school_period_id"
-    t.index ["mentor_at_school_period_id"], name: "index_training_periods_on_mentor_at_school_period_id"
+    t.index "trainee_id, trainee_type, ((finished_on IS NULL))", name: "idx_on_trainee_id_trainee_type_finished_on_IS_NULL_37242fff94", unique: true, where: "(finished_on IS NULL)"
+    t.index ["provider_partnership_id", "trainee_id", "trainee_type", "started_on"], name: "provider_partnership_trainings", unique: true
     t.index ["provider_partnership_id"], name: "index_training_periods_on_provider_partnership_id"
+    t.index ["trainee_id", "trainee_type", "started_on"], name: "index_training_periods_on_trainee_id_trainee_type_started_on", unique: true
+    t.index ["trainee_type", "trainee_id"], name: "index_training_periods_on_trainee"
   end
 
+  add_foreign_key "ect_at_school_periods", "schools"
+  add_foreign_key "ect_at_school_periods", "teachers"
+  add_foreign_key "induction_periods", "appropriate_bodies"
+  add_foreign_key "induction_periods", "ect_at_school_periods"
+  add_foreign_key "mentor_at_school_periods", "schools"
+  add_foreign_key "mentor_at_school_periods", "teachers"
+  add_foreign_key "mentorship_periods", "ect_at_school_periods"
+  add_foreign_key "mentorship_periods", "mentor_at_school_periods"
+  add_foreign_key "provider_partnerships", "academic_years", primary_key: "year"
+  add_foreign_key "provider_partnerships", "delivery_partners"
+  add_foreign_key "provider_partnerships", "lead_providers"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_failed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_ready_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_recurring_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_scheduled_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
+  add_foreign_key "training_periods", "provider_partnerships"
 end
