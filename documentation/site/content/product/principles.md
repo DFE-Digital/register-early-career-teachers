@@ -20,7 +20,7 @@ We want our services to be flexible to the changes that might occur to early car
 
 Sometimes, we might need to take the slightly longer way to do things to ensure it can be edited more easily in the future.
 
-For example, rather than have a table in our database for each distinct user group, we've decided to use a 'users' table with relationships to other tables.
+For example, rather than have a table in our database for each distinct user group, we've decided to use a 'users' table with relationships to other tables. This means if the user groups involved in the services change, it should be easier to make the necessary changes to the data model.
 
 ## Self-sustainability over building more
 
@@ -52,7 +52,7 @@ This is because it is not something that currently is a massive pain point that 
 
 We know it will help meet user needs, but less significantly.
 
-Instead, we will prioritise on the top issues that generate lots of support tickets, like when we can't find early career teacher or mentor records in the database for qualified teachers.
+Instead, we will prioritise issues that generate lots of support tickets, like when we can't find early career teacher or mentor records in the database for qualified teachers.
 
 ## Good over perfect
 
