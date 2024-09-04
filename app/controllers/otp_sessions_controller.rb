@@ -4,27 +4,25 @@ class OTPSessionsController < ApplicationController
 
   def new
     clean_up_session
-    @otp_form = OTPSignInForm.new
+    @otp_form = Sessions::OTPSignInForm.new
   end
 
   def create
-    if @otp_form.valid?
-      if @otp_form.user.present?
-        @otp_form.generate_and_email_code_to_user!
+    render :new and return unless @otp_form.valid?
 
-        session["otp_email"] = @otp_form.email
-      end
+    if @otp_form.user.present?
+      @otp_form.generate_and_email_code_to_user!
 
-      # this should probably always redirect here regardless of whether
-      # the email is in our service or not so that we're not leaking info
-      redirect_to otp_sign_in_code_path
-    else
-      render :new
+      session["otp_email"] = @otp_form.email
     end
+
+    # this should probably always redirect here regardless of whether
+    # the email is in our service or not so that we're not leaking info
+    redirect_to otp_sign_in_code_path
   end
 
   def request_code
-    @otp_form = OTPSignInForm.new(email: session["otp_email"])
+    @otp_form = Sessions::OTPSignInForm.new(email: session["otp_email"])
   end
 
   def verify_code
@@ -32,13 +30,12 @@ class OTPSessionsController < ApplicationController
       clean_up_session
 
       # begin authenticated session
-      UserSession.begin_session!(session, @otp_form.email, "otp")
+      session_manager.begin_session!(@otp_form.email, "otp")
 
       if authenticated?
         redirect_to(login_redirect_path)
       else
-        session.delete(:requested_path)
-        UserSession.end_session!(session)
+        session_manager.end_session!
         redirect_to(otp_sign_in_path)
       end
     else
@@ -49,7 +46,7 @@ class OTPSessionsController < ApplicationController
 private
 
   def build_otp_form
-    @otp_form = OTPSignInForm.new(email:, code:)
+    @otp_form = Sessions::OTPSignInForm.new(email:, code:)
   end
 
   def email
@@ -64,12 +61,7 @@ private
     session.delete("otp_email")
   end
 
-  def login_redirect_path
-    # this should return the "home" location for the signed in user first perhaps?
-    session.delete(:requested_path) || root_path
-  end
-
   def permitted_params
-    params.require(:otp_sign_in_form).permit(:email, :code)
+    params.require(:sessions_otp_sign_in_form).permit(:email, :code)
   end
 end

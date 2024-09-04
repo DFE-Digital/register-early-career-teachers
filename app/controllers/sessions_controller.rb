@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     # OTP auth is handled in OTPSessionsController as not omniauth
     case provider
     when "developer"
-      UserSession.begin_session!(session, user_info.uid, provider)
+      session_manager.begin_session!(user_info.uid, provider)
     when "dfe"
       raise provider
     else
@@ -23,21 +23,13 @@ class SessionsController < ApplicationController
     if authenticated?
       redirect_to(login_redirect_path)
     else
-      session.delete(:requested_path)
-      UserSession.end_session!(session)
+      session_manager.end_session!
       redirect_to(sign_in_path)
     end
   end
 
   def destroy
-    session.destroy # rubocop:disable Rails/SaveBang
+    session_manager.end_session!
     redirect_to root_path
-  end
-
-private
-
-  def login_redirect_path
-    # this should return the "home" location for the signed in user first perhaps?
-    session.delete(:requested_path) || root_path
   end
 end

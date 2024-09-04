@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe OTPSignInForm, type: :model do
+RSpec.describe Sessions::OTPSignInForm, type: :model do
   it { is_expected.to validate_presence_of(:email) }
   it { is_expected.to validate_presence_of(:code).on(:verify).with_message("Enter the 6-digit code from the email") }
 
@@ -11,7 +11,7 @@ RSpec.describe OTPSignInForm, type: :model do
     let!(:user) { FactoryBot.create(:user, email:) }
 
     let(:mock_otp_service) { instance_double(OneTimePassword, user: User.new(email:)) }
-    subject(:form) { OTPSignInForm.new(email:, code:) }
+    subject(:form) { Sessions::OTPSignInForm.new(email:, code:) }
 
     before do
       allow(mock_otp_service).to receive(:verify).with(code:).and_return(result)

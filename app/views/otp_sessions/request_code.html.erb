@@ -1,21 +1,15 @@
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
-    <%= form_for @otp_form, url: otp_sign_in_verify_path do |f| %>
-      <%= f.govuk_error_summary %>
+<%# page_data(title: "Enter your code", error: @otp_form.errors.any?) %>
 
-      <h1 class="govuk-heading-l">
-        Check your email
-      </h1>
+<%= form_for @otp_form, url: otp_sign_in_verify_path do |f| %>
+  <%= f.govuk_error_summary %>
 
-      <p class="govuk-body">
-        We’ve sent you an email with a sign in code.
-      </p>
+  <p class="govuk-body">
+  We’ve sent you an email with a sign in code.
+  </p>
 
-      <%= f.govuk_text_field :code, width: 'one-quarter', label: { text: "Sign in code", size: "s" }, inputmode: "numeric", autocomplete:"off" %>
+  <%= f.govuk_text_field :code, width: 'one-quarter', label: { text: "Sign in code", size: "s" }, inputmode: "numeric", autocomplete:"off" %>
 
-      <%= f.govuk_submit "Sign in" %>
-    <% end %>
+  <%= f.govuk_submit "Sign in" %>
+<% end %>
 
-    <%= govuk_link_to("Request a new code", otp_sign_in_path, no_visited_state: true) if @otp_form.errors.any? %>
-  </div>
-</div>
+<%= govuk_link_to("Request a new code", otp_sign_in_path, no_visited_state: true) if @otp_form.errors.any? %>
