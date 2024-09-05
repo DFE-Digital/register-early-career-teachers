@@ -80,7 +80,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        environment: [staging]
+        environment: [staging, migration]
     environment:
       name: ${{ matrix.environment }}
       url: ${{ steps.deploy.outputs.environment_url }}
