@@ -282,7 +282,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "trn", null: false
     t.index ["name"], name: "index_teachers_on_name"
+    t.index ["trn"], name: "index_teachers_on_trn", unique: true
   end
 
   create_table "training_periods", force: :cascade do |t|
