@@ -13,11 +13,13 @@ FactoryBot.define do
     end
 
     trait(:for_ect) do
-      association :trainee, factory: :ect_at_school_period
+      association :ect_at_school_period
+      mentor_at_school_period { nil }
     end
 
     trait(:for_mentor) do
-      association :trainee, factory: :mentor_at_school_period
+      association :mentor_at_school_period
+      ect_at_school_period { nil }
     end
   end
 end

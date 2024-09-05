@@ -6,7 +6,7 @@ class ECTAtSchoolPeriod < ApplicationRecord
   belongs_to :teacher, inverse_of: :ect_at_school_periods
   has_many :induction_periods, inverse_of: :ect_at_school_period
   has_many :mentorship_periods, inverse_of: :mentee
-  has_many :training_periods, as: :trainee
+  has_many :training_periods, inverse_of: :ect_at_school_period
 
   # Validations
   validates :finished_on,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -283,17 +283,18 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
 
   create_table "training_periods", force: :cascade do |t|
     t.bigint "provider_partnership_id", null: false
-    t.string "trainee_type", null: false
-    t.bigint "trainee_id", null: false
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "trainee_id, trainee_type, ((finished_on IS NULL))", name: "idx_on_trainee_id_trainee_type_finished_on_IS_NULL_37242fff94", unique: true, where: "(finished_on IS NULL)"
-    t.index ["provider_partnership_id", "trainee_id", "trainee_type", "started_on"], name: "provider_partnership_trainings", unique: true
+    t.bigint "ect_at_school_period_id"
+    t.bigint "mentor_at_school_period_id"
+    t.index "ect_at_school_period_id, mentor_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_mentor_at_school_per_42bce3bf48", unique: true, where: "(finished_on IS NULL)"
+    t.index ["ect_at_school_period_id", "mentor_at_school_period_id", "started_on"], name: "idx_on_ect_at_school_period_id_mentor_at_school_per_70f2bb1a45", unique: true
+    t.index ["ect_at_school_period_id"], name: "index_training_periods_on_ect_at_school_period_id"
+    t.index ["mentor_at_school_period_id"], name: "index_training_periods_on_mentor_at_school_period_id"
+    t.index ["provider_partnership_id", "ect_at_school_period_id", "mentor_at_school_period_id", "started_on"], name: "provider_partnership_trainings", unique: true
     t.index ["provider_partnership_id"], name: "index_training_periods_on_provider_partnership_id"
-    t.index ["trainee_id", "trainee_type", "started_on"], name: "index_training_periods_on_trainee_id_trainee_type_started_on", unique: true
-    t.index ["trainee_type", "trainee_id"], name: "index_training_periods_on_trainee"
   end
 
   add_foreign_key "ect_at_school_periods", "schools"
@@ -313,5 +314,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_03_163610) do
   add_foreign_key "solid_queue_ready_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_recurring_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_scheduled_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
+  add_foreign_key "training_periods", "ect_at_school_periods"
+  add_foreign_key "training_periods", "mentor_at_school_periods"
   add_foreign_key "training_periods", "provider_partnerships"
 end

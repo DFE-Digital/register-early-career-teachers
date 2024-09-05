@@ -5,7 +5,7 @@ class MentorAtSchoolPeriod < ApplicationRecord
   belongs_to :school, inverse_of: :mentor_at_school_periods
   belongs_to :teacher, inverse_of: :mentor_at_school_periods
   has_many :mentorship_periods, inverse_of: :mentor
-  has_many :training_periods, as: :trainee
+  has_many :training_periods, inverse_of: :mentor_at_school_period
 
   # Validations
   validates :finished_on,
