@@ -26,8 +26,6 @@ class TrainingPeriod < ApplicationRecord
   validates :provider_partnership_id,
             presence: true
 
-  validate :trainee_presence
-  validate :provider_partnership_presence
   validate :trainee_distinct_period
 
   # Scopes
@@ -36,14 +34,6 @@ class TrainingPeriod < ApplicationRecord
   scope :trainee_siblings_of, ->(instance) { for_trainee(instance.trainee_id, instance.trainee_type).where.not(id: instance.id) }
 
 private
-
-  def trainee_presence
-    errors.add(:trainee_id, "Trainee not registered") if trainee.nil?
-  end
-
-  def provider_partnership_presence
-    errors.add(:provider_partnership_id, "Provider partnership not registered") if provider_partnership.nil?
-  end
 
   def trainee_distinct_period
     overlapping_siblings = self.class.trainee_siblings_of(self).overlapping(started_on, finished_on).exists?

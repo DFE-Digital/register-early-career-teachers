@@ -22,34 +22,6 @@ describe InductionPeriod do
     it { is_expected.to validate_presence_of(:appropriate_body_id) }
     it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
 
-    context "appropriate body presence" do
-      context "when the appropriate body does not exist" do
-        subject { build(:induction_period, appropriate_body_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(appropriate_body_id: ["Appropriate body not registered"])
-        end
-      end
-    end
-
-    context "ect_at_school_period presence" do
-      context "when the ect_at_school_period does not exist" do
-        subject { build(:induction_period, ect_at_school_period_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(ect_at_school_period_id: ["ECT period not registered"])
-        end
-      end
-    end
-
     context "teacher distinct period" do
       context "when the period has not finished yet" do
         context "when the ect has a sibling induction period starting later" do

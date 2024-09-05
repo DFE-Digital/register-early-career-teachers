@@ -23,9 +23,7 @@ class ECTAtSchoolPeriod < ApplicationRecord
   validates :teacher_id,
             presence: true
 
-  validate :school_presence
   validate :teacher_distinct_period
-  validate :teacher_presence
 
   # Scopes
   scope :for_teacher, ->(teacher_id) { where(teacher_id:) }
@@ -33,16 +31,8 @@ class ECTAtSchoolPeriod < ApplicationRecord
 
 private
 
-  def school_presence
-    errors.add(:school_id, "School does not exist") if school.nil?
-  end
-
   def teacher_distinct_period
     overlapping_siblings = self.class.siblings_of(self).overlapping(started_on, finished_on).exists?
     errors.add(:base, "Teacher ECT periods cannot overlap") if overlapping_siblings
-  end
-
-  def teacher_presence
-    errors.add(:teacher_id, "Teacher does not exist") if teacher.nil?
   end
 end

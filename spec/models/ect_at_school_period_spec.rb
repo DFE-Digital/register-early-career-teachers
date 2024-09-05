@@ -16,20 +16,6 @@ describe ECTAtSchoolPeriod do
     it { is_expected.to validate_presence_of(:school_id) }
     it { is_expected.to validate_presence_of(:teacher_id) }
 
-    context "school presence" do
-      context "when the school does not exist" do
-        subject { build(:ect_at_school_period, school_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(school_id: ["School does not exist"])
-        end
-      end
-    end
-
     context "teacher distinct period" do
       context "when the period has not finished yet" do
         context "when the teacher has a sibling ect_at_school_period starting later" do
@@ -65,20 +51,6 @@ describe ECTAtSchoolPeriod do
           it "add an error" do
             expect(subject.errors.messages).to include(base: ["Teacher ECT periods cannot overlap"])
           end
-        end
-      end
-    end
-
-    context "teacher presence" do
-      context "when the teacher does not exist" do
-        subject { build(:ect_at_school_period, teacher_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(teacher_id: ["Teacher does not exist"])
         end
       end
     end

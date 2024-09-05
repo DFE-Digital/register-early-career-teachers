@@ -31,48 +31,6 @@ describe ProviderPartnership do
         end
       end
     end
-
-    context "academic_year presence" do
-      context "when the academic_year does not exist" do
-        subject { build(:provider_partnership, academic_year_id: rand(2021..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(academic_year_id: ["Academic year not registered"])
-        end
-      end
-    end
-
-    context "lead provider presence" do
-      context "when the lead provider does not exist" do
-        subject { build(:provider_partnership, lead_provider_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(lead_provider_id: ["Lead provider not registered"])
-        end
-      end
-    end
-
-    context "delivery partner presence" do
-      context "when the delivery partner does not exist" do
-        subject { build(:provider_partnership, delivery_partner_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(delivery_partner_id: ["Delivery partner not registered"])
-        end
-      end
-    end
   end
 
   describe "scopes" do

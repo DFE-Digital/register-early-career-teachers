@@ -29,8 +29,6 @@ class MentorshipPeriod < ApplicationRecord
   validates :mentor_at_school_period_id,
             presence: true
 
-  validate :mentee_presence
-  validate :mentor_presence
   validate :mentee_distinct_period
 
   # Scopes
@@ -39,14 +37,6 @@ class MentorshipPeriod < ApplicationRecord
   scope :mentee_siblings_of, ->(instance) { for_mentee(instance.ect_at_school_period_id).where.not(id: instance.id) }
 
 private
-
-  def mentee_presence
-    errors.add(:ect_at_school_period_id, "Mentee does not exist") if mentee.nil?
-  end
-
-  def mentor_presence
-    errors.add(:mentor_at_school_period_id, "Mentor does not exist") if mentor.nil?
-  end
 
   def mentee_distinct_period
     overlapping_siblings = self.class.mentee_siblings_of(self).overlapping(started_on, finished_on).exists?

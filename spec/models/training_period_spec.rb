@@ -52,34 +52,6 @@ describe TrainingPeriod do
       end
     end
 
-    context "trainee presence" do
-      context "when the trainee does not exist" do
-        subject { build(:training_period, trainee_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(trainee_id: ["Trainee not registered"])
-        end
-      end
-    end
-
-    context "provider partnership presence" do
-      context "when the provicer partnership does not exist" do
-        subject { build(:training_period, provider_partnership_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(provider_partnership_id: ["Provider partnership not registered"])
-        end
-      end
-    end
-
     context "trainee distinct period" do
       context "when the period has not finished yet" do
         context "when the trainee has a sibling training period starting later" do

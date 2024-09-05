@@ -22,8 +22,6 @@ class InductionPeriod < ApplicationRecord
   validates :ect_at_school_period_id,
             presence: true
 
-  validate :appropriate_body_presence
-  validate :ect_at_school_period_presence
   validate :teacher_distinct_period
 
   # Scopes
@@ -32,14 +30,6 @@ class InductionPeriod < ApplicationRecord
   scope :siblings_of, ->(instance) { for_ect(instance.ect_at_school_period_id).where.not(id: instance.id) }
 
 private
-
-  def appropriate_body_presence
-    errors.add(:appropriate_body_id, "Appropriate body not registered") if appropriate_body.nil?
-  end
-
-  def ect_at_school_period_presence
-    errors.add(:ect_at_school_period_id, "ECT period not registered") if ect_at_school_period.nil?
-  end
 
   def teacher_distinct_period
     overlapping_siblings = self.class.siblings_of(self).overlapping(started_on, finished_on).exists?

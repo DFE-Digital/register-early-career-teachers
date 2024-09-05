@@ -22,34 +22,6 @@ describe MentorshipPeriod do
     it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
     it { is_expected.to validate_presence_of(:mentor_at_school_period_id) }
 
-    context "mentee presence" do
-      context "when the mentee does not exist" do
-        subject { build(:mentorship_period, ect_at_school_period_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(ect_at_school_period_id: ["Mentee does not exist"])
-        end
-      end
-    end
-
-    context "mentor presence" do
-      context "when the mentor does not exist" do
-        subject { build(:mentorship_period, mentor_at_school_period_id: rand(1000..9999)) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(mentor_at_school_period_id: ["Mentor does not exist"])
-        end
-      end
-    end
-
     context "mentee distinct period" do
       context "when the period has not finished yet" do
         context "when the mentee has a sibling mentorship periods starting later" do
