@@ -23,8 +23,7 @@ Rails.application.routes.draw do
   get '/otp-sign-in/code', to: 'otp_sessions#request_code'
   post '/otp-sign-in/verify', to: 'otp_sessions#verify_code'
 
-  # we won't want to do this in production but might for review apps/staging so need
-  # some kind of setting or env var to control it
+  # TODO: Add constraint to prevent personas working in production environment
   get 'personas', to: 'personas#index'
   post 'auth/:provider/callback', to: 'sessions#create'
 

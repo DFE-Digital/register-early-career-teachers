@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   default_form_builder(GOVUKDesignSystemFormBuilder::FormBuilder)
 
-  helper_method :current_user, :authenticated?
+  helper_method :current_user, :authenticated?, :session_manager
 
 private
 
@@ -27,7 +27,6 @@ private
   end
 
   def login_redirect_path
-    # this should return the "home" location for the signed in user first perhaps?
     session_manager.requested_path || root_path
   end
 end

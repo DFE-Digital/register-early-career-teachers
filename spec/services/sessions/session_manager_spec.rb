@@ -114,4 +114,40 @@ RSpec.describe Sessions::SessionManager do
       expect(session.keys.map(&:to_s)).not_to include "requested_path"
     end
   end
+
+  describe "#expired?" do
+    context "when the last_active_at was less than the MAX_SESSION_IDLE_TIME ago" do
+      it "returns false" do
+        session["user_session"] = { "last_active_at" => 1.minute.ago }
+        expect(service).not_to be_expired
+      end
+    end
+
+    context "when the last_active_at was greater than the MAX_SESSION_IDLE_TIME ago" do
+      it "returns true" do
+        session["user_session"] = { "last_active_at" => (Sessions::SessionManager::MAX_SESSION_IDLE_TIME + 1.minute).ago }
+        expect(service).to be_expired
+      end
+    end
+
+    context "when no last_active_at time has been recorded" do
+      it "returns true" do
+        expect(service).to be_expired
+      end
+    end
+  end
+
+  describe "#expires_at" do
+    it "returns the time when the session would expire due to inactivity" do
+      last_active_at = 1.minute.ago
+      session["user_session"] = { "last_active_at" => last_active_at }
+      expect(service.expires_at).to eq last_active_at + Sessions::SessionManager::MAX_SESSION_IDLE_TIME
+    end
+
+    context "when no last_active_at time has been recorded" do
+      it "returns nil" do
+        expect(service.expires_at).to be_nil
+      end
+    end
+  end
 end

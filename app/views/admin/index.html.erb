@@ -10,8 +10,8 @@
       rows: [
         { key: { text: "Signed in as:" }, value: { text:  current_user.name } },
         { key: { text: "Email" }, value: { text:  current_user.email } },
-        { key: { text: "Via" }, value: { text:  session["user_session"]["provider"] } },
-        { key: { text: "Session expires" }, value: { text:  session["user_session"]["last_active_at"] + 2.hours } },
+        { key: { text: "Via" }, value: { text:  session_manager.provider } },
+        { key: { text: "Session expires" }, value: { text: session_manager.expires_at.localtime.to_fs(:govuk) } },
       ]
     ) %>
   </div>

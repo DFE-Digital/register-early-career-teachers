@@ -9,7 +9,7 @@ module Sessions
     def generate_and_send_code
       code = generate
 
-      Rails.logger.debug("\n\e[33;1m===>>> OTP code for #{user.email} is: [\e[36m#{code}\e[33m] <<<===\e[0m\n")
+      Rails.logger.debug(Colourize.text("\n===>>> OTP code for #{user.email} is: [#{code}] <<<===\n", :yellow))
 
       OTPMailer.with(recipient_email: user.email,
                      recipient_name: user.name,
@@ -22,10 +22,9 @@ module Sessions
     end
 
     def verify(code:)
-      # 600 = 10 mins validity
       # prevent re-use within window by using the last otp_verified_at
       params = {
-        drift_behind: 600,
+        drift_behind: 10.minutes.in_seconds,
         after: user.otp_verified_at,
       }.compact
 

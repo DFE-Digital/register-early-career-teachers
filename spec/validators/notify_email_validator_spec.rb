@@ -2,10 +2,27 @@ require "rails_helper"
 
 RSpec.describe NotifyEmailValidator do
   # Test cases from https://github.com/alphagov/notifications-utils/blob/2432e1881cf7a5005a8d69c2ddc1597add96acc3/tests/test_recipient_validation.py
+  # This file lifted from ECF1
   # The following valid emails addresses are not accepted: japanese-info@例え.テスト, info@german-financial-services.vermögensberatung
   # This is because we do not transform to punycode
   it "correctly identifies valid email addresses" do
-    valid_email_addresses = %w[email@domain.com email@domain.COM firstname.lastname@domain.com firstname.o\'lastname@domain.com email@subdomain.domain.com firstname+lastname@domain.com 1234567890@domain.com email@domain-one.com _______@domain.com email@domain.name email@domain.superlongtld email@domain.co.jp firstname-lastname@domain.com info@german-financial-services.reallylongarbitrarytldthatiswaytoohugejustincase email@double--hyphen.com]
+    valid_email_addresses = %w[
+      email@domain.com
+      email@domain.COM
+      firstname.lastname@domain.com
+      firstname.o\'lastname@domain.com
+      email@subdomain.domain.com
+      firstname+lastname@domain.com
+      1234567890@domain.com
+      email@domain-one.com
+      _______@domain.com
+      email@domain.name
+      email@domain.superlongtld
+      email@domain.co.jp
+      firstname-lastname@domain.com
+      info@german-financial-services.reallylongarbitrarytldthatiswaytoohugejustincase
+      email@double--hyphen.com
+    ]
     valid_email_addresses.each do |email|
       expect(User.new(name: "Geoff Capes", email:)).to be_valid
     end
