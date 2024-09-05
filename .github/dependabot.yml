@@ -7,6 +7,11 @@ updates:
     open-pull-requests-limit: 5
     labels:
       - Dependencies
+    groups:
+      govuk-frontend-libraries:
+        patterns:
+          - govuk-components
+          - govuk_design_system_formbuilder
   - package-ecosystem: npm
     directory: "/"
     schedule:
