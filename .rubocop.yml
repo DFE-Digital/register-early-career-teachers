@@ -38,3 +38,6 @@ Style/SignalException:
 
 Style/StringConcatenation:
   Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
