@@ -61,4 +61,5 @@ We're hoping later to consider:
 There's not much we've completely descoped yet, but we might add to this as things come up.
 
 So far, we've decided to descope:
+
 - sending any updates on personal details to the database for qualified teachers
