@@ -22,10 +22,9 @@ module Sessions
     end
 
     def verify(code:)
-      # prevent re-use within window by using the last otp_verified_at
       params = {
-        drift_behind: 10.minutes.in_seconds,
-        after: user.otp_verified_at,
+        drift_behind: 10.minutes.in_seconds, # give a 10 minute window to use the OTP code
+        after: user.otp_verified_at,         # prevents re-use of OTP code within the window
       }.compact
 
       tm = totp.verify(code, **params)

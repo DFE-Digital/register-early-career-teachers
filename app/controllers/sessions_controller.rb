@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
   def create
     user_info = request.env['omniauth.auth']
     provider = user_info.fetch(:provider)
-    # we can handle different providers here
-    # OTP auth is handled in OTPSessionsController as not omniauth
+
+    # NOTE: OTP authentication is handled in OTPSessionsController as it is not omniauth
     case provider
     when "developer"
       session_manager.begin_session!(user_info.uid, provider)

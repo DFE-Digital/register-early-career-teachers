@@ -18,10 +18,12 @@ module Colourize
     white: 37,
   }.freeze
 
-  def self.text(text, colour, mode = :bold)
+  def self.text(text, colour, modes = :bold)
+    mode_opts = MODES.values_at(*Array(modes).compact_blank).join(";")
+
     opts = [
-      COLOURS[colour],
-      MODES[mode],
+      COLOURS.fetch(colour),
+      mode_opts,
     ].compact_blank.join(";")
 
     "\e[#{opts}m#{text}\e[0m"

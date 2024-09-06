@@ -1,12 +1,10 @@
+<% page_data(title: "Sign in", error: @otp_form.errors.any?) %>
+
 <%= form_for @otp_form, url: otp_sign_in_path, method: :post do |f| %>
   <%= f.govuk_error_summary %>
 
-  <h1 class="govuk-heading-l">
-    Sign in
-  </h1>
-
   <p class="govuk-body">
-  You need to request an email with a code to sign in.
+    You need to request an email with a code to sign in.
   </p>
 
   <%= f.govuk_text_field :email, type: :email, width: 'two-thirds', label: { text: "Email address", size: "s" } %>

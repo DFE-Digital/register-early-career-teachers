@@ -1,10 +1,10 @@
-<%# page_data(title: "Enter your code", error: @otp_form.errors.any?) %>
+<% page_data(title: "Enter your code", error: @otp_form.errors.any?) %>
 
 <%= form_for @otp_form, url: otp_sign_in_verify_path do |f| %>
   <%= f.govuk_error_summary %>
 
   <p class="govuk-body">
-  We’ve sent you an email with a sign in code.
+    We’ve sent you an email with a sign in code.
   </p>
 
   <%= f.govuk_text_field :code, width: 'one-quarter', label: { text: "Sign in code", size: "s" }, inputmode: "numeric", autocomplete:"off" %>

@@ -6,7 +6,7 @@ module Sessions
 
     attr_accessor :email, :code
 
-    validates :email, presence: true, notify_email: true
+    validates :email, presence: { message: "Enter your email address" }, notify_email: true
     validate :code_is_verified, on: :verify
 
     def attributes
@@ -24,8 +24,7 @@ module Sessions
   private
 
     def code_is_verified
-      # prevent leaking info when the email doesn't exist
-      errors.delete(:email)
+      errors.delete(:email) # prevent leaking info when the email does not match a known User
 
       errors.add(:code, "Enter the 6-digit code from the email") and return unless code =~ /\A\d{6}\z/
 

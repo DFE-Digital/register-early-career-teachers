@@ -16,8 +16,6 @@ class OTPSessionsController < ApplicationController
       session["otp_email"] = @otp_form.email
     end
 
-    # this should probably always redirect here regardless of whether
-    # the email is in our service or not so that we're not leaking info
     redirect_to otp_sign_in_code_path
   end
 
@@ -29,7 +27,6 @@ class OTPSessionsController < ApplicationController
     if @otp_form.valid?(:verify)
       clean_up_session
 
-      # begin authenticated session
       session_manager.begin_session!(@otp_form.email, "otp")
 
       if authenticated?

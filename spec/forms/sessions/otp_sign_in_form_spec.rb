@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Sessions::OTPSignInForm, type: :model do
-  it { is_expected.to validate_presence_of(:email) }
+  it { is_expected.to validate_presence_of(:email).with_message("Enter your email address") }
   it { is_expected.to validate_presence_of(:code).on(:verify).with_message("Enter the 6-digit code from the email") }
 
   describe "#code_is_verified" do
