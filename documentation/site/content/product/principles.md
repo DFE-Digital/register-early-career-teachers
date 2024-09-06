@@ -67,7 +67,10 @@ We need to be happy when we've gone a good way to solving the biggest problems, 
 
 It's important we release something for users sooner rather than later.
 
-For example, we're currently experimenting with using the name 'Register early career teachers'. This follows government design principles, but doesn't:
+For example, we're currently experimenting with using the name 'Register early career teachers'. 
+
+This follows government design principles, but doesn't:
+
 - make clear users need to come back after initial registration if details change
 - include early career teacher mentors
 
