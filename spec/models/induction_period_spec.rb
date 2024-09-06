@@ -5,7 +5,7 @@ describe InductionPeriod do
   end
 
   describe "validations" do
-    subject { create(:induction_period) }
+    subject { FactoryBot.create(:induction_period) }
 
     it {
       is_expected.to validate_uniqueness_of(:finished_on)
@@ -25,11 +25,11 @@ describe InductionPeriod do
     context "teacher distinct period" do
       context "when the period has not finished yet" do
         context "when the ect has a sibling induction period starting later" do
-          let!(:existing_period) { create(:induction_period) }
+          let!(:existing_period) { FactoryBot.create(:induction_period) }
           let(:ect_at_school_period_id) { existing_period.ect_at_school_period_id }
           let(:started_on) { existing_period.started_on - 1.year }
 
-          subject { build(:induction_period, ect_at_school_period_id:, started_on:, finished_on: nil) }
+          subject { FactoryBot.build(:induction_period, ect_at_school_period_id:, started_on:, finished_on: nil) }
 
           before do
             subject.valid?
@@ -43,12 +43,12 @@ describe InductionPeriod do
 
       context "when the period has end date" do
         context "when the ECT has a sibling induction period overlapping" do
-          let!(:existing_period) { create(:induction_period) }
+          let!(:existing_period) { FactoryBot.create(:induction_period) }
           let(:ect_at_school_period_id) { existing_period.ect_at_school_period_id }
           let(:started_on) { existing_period.finished_on - 1.day }
           let(:finished_on) { started_on + 1.day }
 
-          subject { build(:induction_period, ect_at_school_period_id:, started_on:, finished_on:) }
+          subject { FactoryBot.build(:induction_period, ect_at_school_period_id:, started_on:, finished_on:) }
 
           before do
             subject.valid?
@@ -63,12 +63,12 @@ describe InductionPeriod do
   end
 
   describe "scopes" do
-    let!(:ect_at_school_period) { create(:ect_at_school_period) }
-    let!(:appropriate_body) { create(:appropriate_body) }
-    let!(:period_1) { create(:induction_period, ect_at_school_period:, appropriate_body:, started_on: '2023-01-01', finished_on: '2023-06-01') }
-    let!(:period_2) { create(:induction_period, ect_at_school_period:, started_on: "2023-06-01", finished_on: "2024-01-01") }
-    let!(:period_3) { create(:induction_period, ect_at_school_period:, appropriate_body:, started_on: '2024-01-01', finished_on: nil) }
-    let!(:ect_2_period) { create(:induction_period, appropriate_body:, started_on: '2023-02-01', finished_on: '2023-07-01') }
+    let!(:ect_at_school_period) { FactoryBot.create(:ect_at_school_period) }
+    let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
+    let!(:period_1) { FactoryBot.create(:induction_period, ect_at_school_period:, appropriate_body:, started_on: '2023-01-01', finished_on: '2023-06-01') }
+    let!(:period_2) { FactoryBot.create(:induction_period, ect_at_school_period:, started_on: "2023-06-01", finished_on: "2024-01-01") }
+    let!(:period_3) { FactoryBot.create(:induction_period, ect_at_school_period:, appropriate_body:, started_on: '2024-01-01', finished_on: nil) }
+    let!(:ect_2_period) { FactoryBot.create(:induction_period, appropriate_body:, started_on: '2023-02-01', finished_on: '2023-07-01') }
 
     describe ".for_ect" do
       it "returns induction periods only for the specified ect at school period" do
@@ -83,7 +83,7 @@ describe InductionPeriod do
     end
 
     describe ".siblings_of" do
-      let(:induction_period) { build(:induction_period, ect_at_school_period:, appropriate_body:, started_on: "2022-01-01", finished_on: "2023-01-01") }
+      let(:induction_period) { FactoryBot.build(:induction_period, ect_at_school_period:, appropriate_body:, started_on: "2022-01-01", finished_on: "2023-01-01") }
 
       it "returns induction periods only for the specified instance's ect excluding the instance" do
         expect(described_class.siblings_of(induction_period)).to match_array([period_1, period_2, period_3])

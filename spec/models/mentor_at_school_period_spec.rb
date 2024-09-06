@@ -7,7 +7,7 @@ describe MentorAtSchoolPeriod do
   end
 
   describe "validations" do
-    subject { build(:mentor_at_school_period) }
+    subject { FactoryBot.build(:mentor_at_school_period) }
 
     it { is_expected.to validate_presence_of(:started_on) }
     it { is_expected.to validate_presence_of(:school_id) }
@@ -15,13 +15,13 @@ describe MentorAtSchoolPeriod do
 
     context "uniqueness of finished_on scoped to teacher_id and school_id" do
       context "when the period matches the teacher_id, school_id and finished_on values of an existing mentor period" do
-        let!(:existing_period) { create(:mentor_at_school_period) }
+        let!(:existing_period) { FactoryBot.create(:mentor_at_school_period) }
         let(:finished_on) { existing_period.finished_on }
         let(:started_on) { existing_period.finished_on - 1.day }
         let(:school_id) { existing_period.school_id }
         let(:teacher_id) { existing_period.teacher_id }
 
-        subject { build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on:) }
+        subject { FactoryBot.build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on:) }
 
         before do
           subject.valid?
@@ -35,12 +35,12 @@ describe MentorAtSchoolPeriod do
 
     context "uniqueness of started_on scoped to teacher_id and school_id" do
       context "when the period matches the teacher_id, school_id and started_on values of an existing mentor period" do
-        let!(:existing_period) { create(:mentor_at_school_period) }
+        let!(:existing_period) { FactoryBot.create(:mentor_at_school_period) }
         let(:started_on) { existing_period.started_on }
         let(:school_id) { existing_period.school_id }
         let(:teacher_id) { existing_period.teacher_id }
 
-        subject { build(:mentor_at_school_period, teacher_id:, school_id:, started_on:) }
+        subject { FactoryBot.build(:mentor_at_school_period, teacher_id:, school_id:, started_on:) }
 
         before do
           subject.valid?
@@ -55,12 +55,12 @@ describe MentorAtSchoolPeriod do
     context "teacher school distinct period" do
       context "when the period has not finished yet" do
         context "when the teacher has a school sibling mentor_at_school_period starting later" do
-          let!(:existing_period) { create(:mentor_at_school_period) }
+          let!(:existing_period) { FactoryBot.create(:mentor_at_school_period) }
           let(:teacher_id) { existing_period.teacher_id }
           let(:school_id) { existing_period.school_id }
           let(:started_on) { existing_period.started_on - 1.year }
 
-          subject { build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on: nil) }
+          subject { FactoryBot.build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on: nil) }
 
           before do
             subject.valid?
@@ -74,13 +74,13 @@ describe MentorAtSchoolPeriod do
 
       context "when the period has end date" do
         context "when the teacher has a sibling ect_at_school_period overlapping" do
-          let!(:existing_period) { create(:mentor_at_school_period) }
+          let!(:existing_period) { FactoryBot.create(:mentor_at_school_period) }
           let(:teacher_id) { existing_period.teacher_id }
           let(:school_id) { existing_period.school_id }
           let(:started_on) { existing_period.finished_on - 1.day }
           let(:finished_on) { started_on + 1.day }
 
-          subject { build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on:) }
+          subject { FactoryBot.build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on:) }
 
           before do
             subject.valid?
@@ -95,13 +95,13 @@ describe MentorAtSchoolPeriod do
   end
 
   describe "scopes" do
-    let!(:teacher) { create(:teacher) }
-    let!(:school) { create(:school) }
-    let!(:school_2) { create(:school) }
-    let!(:period_1) { create(:mentor_at_school_period, teacher:, school:, started_on: '2023-01-01', finished_on: '2023-06-01') }
-    let!(:period_2) { create(:mentor_at_school_period, teacher:, school: school_2, started_on: "2023-06-01", finished_on: "2024-01-01") }
-    let!(:period_3) { create(:mentor_at_school_period, teacher:, school:, started_on: '2024-01-01', finished_on: nil) }
-    let!(:teacher_2_period) { create(:mentor_at_school_period, school:, started_on: '2023-02-01', finished_on: '2023-07-01') }
+    let!(:teacher) { FactoryBot.create(:teacher) }
+    let!(:school) { FactoryBot.create(:school) }
+    let!(:school_2) { FactoryBot.create(:school) }
+    let!(:period_1) { FactoryBot.create(:mentor_at_school_period, teacher:, school:, started_on: '2023-01-01', finished_on: '2023-06-01') }
+    let!(:period_2) { FactoryBot.create(:mentor_at_school_period, teacher:, school: school_2, started_on: "2023-06-01", finished_on: "2024-01-01") }
+    let!(:period_3) { FactoryBot.create(:mentor_at_school_period, teacher:, school:, started_on: '2024-01-01', finished_on: nil) }
+    let!(:teacher_2_period) { FactoryBot.create(:mentor_at_school_period, school:, started_on: '2023-02-01', finished_on: '2023-07-01') }
 
     describe ".for_school" do
       it "returns mentor periods only for the specified school" do
@@ -116,7 +116,7 @@ describe MentorAtSchoolPeriod do
     end
 
     describe ".siblings_of" do
-      let!(:mentor_at_school_period) { build(:mentor_at_school_period, teacher:, school:, started_on: "2022-01-01", finished_on: "2023-01-01") }
+      let!(:mentor_at_school_period) { FactoryBot.build(:mentor_at_school_period, teacher:, school:, started_on: "2022-01-01", finished_on: "2023-01-01") }
 
       it "returns mentor periods only for the specified instance's teacher excluding the instance" do
         expect(described_class.siblings_of(mentor_at_school_period)).to match_array([period_1, period_2, period_3])
@@ -124,7 +124,7 @@ describe MentorAtSchoolPeriod do
     end
 
     describe ".school_siblings_of" do
-      let!(:mentor_at_school_period) { build(:mentor_at_school_period, teacher:, school: school_2, started_on: "2022-01-01", finished_on: "2023-01-01") }
+      let!(:mentor_at_school_period) { FactoryBot.build(:mentor_at_school_period, teacher:, school: school_2, started_on: "2022-01-01", finished_on: "2023-01-01") }
 
       it "returns mentor periods for the specified instance's teacher and school excluding the instance" do
         expect(described_class.school_siblings_of(mentor_at_school_period)).to match_array([period_2])

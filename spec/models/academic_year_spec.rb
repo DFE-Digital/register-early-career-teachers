@@ -4,7 +4,7 @@ describe AcademicYear do
   end
 
   describe "validations" do
-    subject { build(:academic_year) }
+    subject { FactoryBot.build(:academic_year) }
 
     it { is_expected.to validate_presence_of(:year) }
     it { is_expected.to validate_uniqueness_of(:year) }
