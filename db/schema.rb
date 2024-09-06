@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_06_122532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
   create_enum "funding_eligibility_status", ["eligible_for_fip", "eligible_for_cip", "ineligible"]
   create_enum "gias_school_statuses", ["open", "closed", "proposed_to_close", "proposed_to_open"]
   create_enum "induction_eligibility_status", ["eligible", "ineligible"]
+  create_enum "induction_programme", ["cip", "fip", "diy"]
 
   create_table "academic_years", primary_key: "year", id: :serial, force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -95,6 +96,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.enum "induction_programme", null: false, enum_type: "induction_programme"
+    t.integer "number_of_terms"
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_be6c214e9d", unique: true, where: "(finished_on IS NULL)"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true

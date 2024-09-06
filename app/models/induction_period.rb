@@ -22,6 +22,14 @@ class InductionPeriod < ApplicationRecord
   validates :ect_at_school_period_id,
             presence: true
 
+  validates :number_of_terms,
+            presence: { message: "Enter a number of terms",
+                        if: -> { finished_on.present? } }
+
+  validates :induction_programme,
+            inclusion: { in: %w[fip cip diy],
+                         message: "Choose an induction programme" }
+
   validate :teacher_distinct_period
 
   # Scopes
