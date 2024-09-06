@@ -8,7 +8,7 @@ describe ECTAtSchoolPeriod do
   end
 
   describe "validations" do
-    subject { create(:ect_at_school_period) }
+    subject { FactoryBot.create(:ect_at_school_period) }
 
     it { is_expected.to validate_uniqueness_of(:finished_on).scoped_to(:teacher_id).allow_nil }
     it { is_expected.to validate_presence_of(:started_on) }
@@ -19,11 +19,11 @@ describe ECTAtSchoolPeriod do
     context "teacher distinct period" do
       context "when the period has not finished yet" do
         context "when the teacher has a sibling ect_at_school_period starting later" do
-          let!(:existing_period) { create(:ect_at_school_period) }
+          let!(:existing_period) { FactoryBot.create(:ect_at_school_period) }
           let(:teacher_id) { existing_period.teacher_id }
           let(:started_on) { existing_period.started_on - 1.year }
 
-          subject { build(:ect_at_school_period, teacher_id:, started_on:, finished_on: nil) }
+          subject { FactoryBot.build(:ect_at_school_period, teacher_id:, started_on:, finished_on: nil) }
 
           before do
             subject.valid?
@@ -37,12 +37,12 @@ describe ECTAtSchoolPeriod do
 
       context "when the period has end date" do
         context "when the teacher has a sibling ect_at_school_period overlapping" do
-          let!(:existing_period) { create(:ect_at_school_period) }
+          let!(:existing_period) { FactoryBot.create(:ect_at_school_period) }
           let(:teacher_id) { existing_period.teacher_id }
           let(:started_on) { existing_period.finished_on - 1.day }
           let(:finished_on) { started_on + 1.day }
 
-          subject { build(:ect_at_school_period, teacher_id:, started_on:, finished_on:) }
+          subject { FactoryBot.build(:ect_at_school_period, teacher_id:, started_on:, finished_on:) }
 
           before do
             subject.valid?
@@ -57,12 +57,12 @@ describe ECTAtSchoolPeriod do
   end
 
   describe "scopes" do
-    let!(:teacher) { create(:teacher) }
-    let!(:school) { create(:school) }
-    let!(:period_1) { create(:ect_at_school_period, teacher:, school:, started_on: '2023-01-01', finished_on: '2023-06-01') }
-    let!(:period_2) { create(:ect_at_school_period, teacher:, started_on: "2023-06-01", finished_on: "2024-01-01") }
-    let!(:period_3) { create(:ect_at_school_period, teacher:, school:, started_on: '2024-01-01', finished_on: nil) }
-    let!(:teacher_2_period) { create(:ect_at_school_period, school:, started_on: '2023-02-01', finished_on: '2023-07-01') }
+    let!(:teacher) { FactoryBot.create(:teacher) }
+    let!(:school) { FactoryBot.create(:school) }
+    let!(:period_1) { FactoryBot.create(:ect_at_school_period, teacher:, school:, started_on: '2023-01-01', finished_on: '2023-06-01') }
+    let!(:period_2) { FactoryBot.create(:ect_at_school_period, teacher:, started_on: "2023-06-01", finished_on: "2024-01-01") }
+    let!(:period_3) { FactoryBot.create(:ect_at_school_period, teacher:, school:, started_on: '2024-01-01', finished_on: nil) }
+    let!(:teacher_2_period) { FactoryBot.create(:ect_at_school_period, school:, started_on: '2023-02-01', finished_on: '2023-07-01') }
 
     describe ".for_teacher" do
       it "returns ect periods only for the specified teacher" do
@@ -71,7 +71,7 @@ describe ECTAtSchoolPeriod do
     end
 
     describe ".siblings_of" do
-      let(:ect_at_school_period) { build(:ect_at_school_period, teacher:, school:, started_on: "2022-01-01", finished_on: "2023-01-01") }
+      let(:ect_at_school_period) { FactoryBot.build(:ect_at_school_period, teacher:, school:, started_on: "2022-01-01", finished_on: "2023-01-01") }
 
       it "returns ect periods only for the specified instance's teacher excluding the instance" do
         expect(described_class.siblings_of(ect_at_school_period)).to match_array([period_1, period_2, period_3])

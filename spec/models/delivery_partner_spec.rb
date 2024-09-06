@@ -4,7 +4,7 @@ describe DeliveryPartner do
   end
 
   describe "validations" do
-    subject { build(:delivery_partner) }
+    subject { FactoryBot.build(:delivery_partner) }
 
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }

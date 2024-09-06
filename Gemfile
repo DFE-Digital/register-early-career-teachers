@@ -20,6 +20,15 @@ gem "mail-notify"
 
 gem "solid_queue"
 
+# DfE Sign-In
+gem "omniauth"
+gem 'omniauth_openid_connect'
+gem 'omniauth-rails_csrf_protection'
+
+# OTP Sign-in
+gem "base32"
+gem "rotp"
+
 group :development, :test do
   gem "brakeman"
   gem "debug", platforms: %i[mri windows]

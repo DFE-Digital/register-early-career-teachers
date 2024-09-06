@@ -5,7 +5,7 @@ describe Teacher do
   end
 
   describe "validations" do
-    subject { build(:teacher) }
+    subject { FactoryBot.build(:teacher) }
 
     it { is_expected.to validate_presence_of(:name) }
   end

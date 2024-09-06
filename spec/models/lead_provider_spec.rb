@@ -4,7 +4,7 @@ describe LeadProvider do
   end
 
   describe "validations" do
-    subject { build(:lead_provider) }
+    subject { FactoryBot.build(:lead_provider) }
 
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }

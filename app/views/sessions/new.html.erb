@@ -1,0 +1,6 @@
+<% page_data(title: "Select a sign in method") %>
+
+<%= govuk_list [
+  govuk_link_to("Sign-in with a one time password", otp_sign_in_path, no_visited_state: true),
+  govuk_link_to("Sign-in with a persona", personas_path, no_visited_state: true)
+] %>
