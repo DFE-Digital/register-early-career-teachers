@@ -1,25 +1,16 @@
-<h1 class="govuk-heading-xl">
-  <span class="govuk-caption-xl">
-    Register early career teachers
-  </span>
-  Personas
-</h1>
+<% page_data(title: "Select a persona") %>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <% @personas.each do |persona| %>
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-      <h2 class="govuk-heading-l"><%= persona.name %></h2>
-      <div>
-        <%# describe the persona e.g. what type of user, which org associations etc. %>
-        <p><%= persona.email %></p>
-      </div>
-
-      <%= form_with url: "/auth/developer/callback" do |f| %>
-        <%= hidden_field_tag "email", persona.email %>
-        <%= hidden_field_tag "name", persona.name %>
-        <%= f.submit "Sign-in as #{persona.name}", class: "govuk-button govuk-!-margin-bottom-2" %>
-      <% end %>
-    <% end %>
+<% @personas.each do |persona| %>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  <h2 class="govuk-heading-l"><%= persona.name %></h2>
+  <div>
+    <%# TODO: describe the persona e.g. what type of user, which org associations etc. %>
+    <p><%= persona.email %></p>
   </div>
-</div>
+
+  <%= form_with url: "/auth/developer/callback" do |f| %>
+    <%= hidden_field_tag "email", persona.email %>
+    <%= hidden_field_tag "name", persona.name %>
+    <%= f.submit "Sign-in as #{persona.name}", class: "govuk-button govuk-!-margin-bottom-2" %>
+  <% end %>
+<% end %>
