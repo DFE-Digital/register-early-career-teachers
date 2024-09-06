@@ -29,6 +29,7 @@ group :development, :test do
   gem "rspec"
   gem "rspec-rails"
   gem "rubocop-govuk"
+  gem "shoulda-matchers"
 end
 
 group :nanoc do
