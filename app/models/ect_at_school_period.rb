@@ -32,7 +32,7 @@ class ECTAtSchoolPeriod < ApplicationRecord
 private
 
   def teacher_distinct_period
-    overlapping_siblings = self.class.siblings_of(self).overlapping(started_on, finished_on).exists?
+    overlapping_siblings = ECTAtSchoolPeriod.siblings_of(self).overlapping_with(self).exists?
     errors.add(:base, "Teacher ECT periods cannot overlap") if overlapping_siblings
   end
 end

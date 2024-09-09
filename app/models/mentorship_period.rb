@@ -39,7 +39,7 @@ class MentorshipPeriod < ApplicationRecord
 private
 
   def mentee_distinct_period
-    overlapping_siblings = self.class.mentee_siblings_of(self).overlapping(started_on, finished_on).exists?
+    overlapping_siblings = MentorshipPeriod.mentee_siblings_of(self).overlapping_with(self).exists?
     errors.add(:base, "Mentee periods cannot overlap") if overlapping_siblings
   end
 end
