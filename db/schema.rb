@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
   create_enum "funding_eligibility_status", ["eligible_for_fip", "eligible_for_cip", "ineligible"]
   create_enum "gias_school_statuses", ["open", "closed", "proposed_to_close", "proposed_to_open"]
   create_enum "induction_eligibility_status", ["eligible", "ineligible"]
+  create_enum "induction_programme", ["cip", "fip", "diy"]
 
   create_table "academic_years", primary_key: "year", id: :serial, force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +31,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "local_authority_code", null: false
+    t.integer "establishment_number", null: false
+    t.virtual "establishment_id", type: :string, as: "((((local_authority_code)::character varying)::text || '/'::text) || ((establishment_number)::character varying)::text)", stored: true
+    t.index ["local_authority_code", "establishment_number"], name: "idx_on_local_authority_code_establishment_number_039c79cd09", unique: true
     t.index ["name"], name: "index_appropriate_bodies_on_name", unique: true
   end
 
@@ -91,6 +96,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.enum "induction_programme", null: false, enum_type: "induction_programme"
+    t.integer "number_of_terms"
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_be6c214e9d", unique: true, where: "(finished_on IS NULL)"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true
@@ -130,6 +137,23 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.index ["ect_at_school_period_id"], name: "index_mentorship_periods_on_ect_at_school_period_id"
     t.index ["mentor_at_school_period_id", "ect_at_school_period_id", "started_on"], name: "idx_on_mentor_at_school_period_id_ect_at_school_per_d69dffeecc", unique: true
     t.index ["mentor_at_school_period_id"], name: "index_mentorship_periods_on_mentor_at_school_period_id"
+  end
+
+  create_table "pending_induction_submissions", force: :cascade do |t|
+    t.bigint "appropriate_body_id"
+    t.string "establishment_id", limit: 8
+    t.string "trn", limit: 7, null: false
+    t.string "first_name", limit: 80
+    t.string "last_name", limit: 80
+    t.date "date_of_birth"
+    t.string "induction_status", limit: 16
+    t.enum "induction_programme", null: false, enum_type: "induction_programme"
+    t.date "started_on"
+    t.date "finished_on"
+    t.integer "number_of_terms"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appropriate_body_id"], name: "index_pending_induction_submissions_on_appropriate_body_id"
   end
 
   create_table "provider_partnerships", force: :cascade do |t|
@@ -278,7 +302,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "trn", null: false
     t.index ["name"], name: "index_teachers_on_name"
+    t.index ["trn"], name: "index_teachers_on_trn", unique: true
   end
 
   create_table "training_periods", force: :cascade do |t|
@@ -315,6 +341,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_05_183321) do
   add_foreign_key "mentor_at_school_periods", "teachers"
   add_foreign_key "mentorship_periods", "ect_at_school_periods"
   add_foreign_key "mentorship_periods", "mentor_at_school_periods"
+  add_foreign_key "pending_induction_submissions", "appropriate_bodies"
   add_foreign_key "provider_partnerships", "academic_years", primary_key: "year"
   add_foreign_key "provider_partnerships", "delivery_partners"
   add_foreign_key "provider_partnerships", "lead_providers"

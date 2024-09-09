@@ -22,7 +22,7 @@ describe InductionPeriod do
     it { is_expected.to validate_presence_of(:appropriate_body_id) }
     it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
 
-    context "teacher distinct period" do
+    describe "teacher distinct period" do
       context "when the period has not finished yet" do
         context "when the ect has a sibling induction period starting later" do
           let!(:existing_period) { FactoryBot.create(:induction_period) }
@@ -58,6 +58,20 @@ describe InductionPeriod do
             expect(subject.errors.messages).to include(base: ["Teacher induction periods cannot overlap"])
           end
         end
+      end
+    end
+
+    it { is_expected.to validate_inclusion_of(:induction_programme).in_array(%w[fip cip diy]).with_message("Choose an induction programme") }
+
+    describe "number_of_terms" do
+      context "when finished_on is empty" do
+        subject { FactoryBot.build(:induction_period, finished_on: nil) }
+        it { is_expected.not_to validate_presence_of(:number_of_terms) }
+      end
+
+      context "when finished_on is present" do
+        subject { FactoryBot.build(:induction_period, finished_on: Time.zone.today) }
+        it { is_expected.to validate_presence_of(:number_of_terms).with_message("Enter a number of terms") }
       end
     end
   end

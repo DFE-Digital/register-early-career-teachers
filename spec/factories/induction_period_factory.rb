@@ -7,9 +7,15 @@ FactoryBot.define do
 
     started_on { generate(:base_induction_date) }
     finished_on { started_on + 3.months }
+    number_of_terms { Faker::Number.within(range: 1..6) }
+    induction_programme { "fip" }
 
     trait :active do
       finished_on { nil }
+      number_of_terms { nil }
     end
+
+    trait(:cip) { induction_programme { "cip" } }
+    trait(:diy) { induction_programme { "diy" } }
   end
 end
