@@ -92,6 +92,5 @@ jobs:
         id: deploy
         with:
           environment: ${{ matrix.environment }}
-          docker-image: ${{ needs.docker.outputs.docker-image }}
+          docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
-          current-commit-sha: ${{ github.sha }}
