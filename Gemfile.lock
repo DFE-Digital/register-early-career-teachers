@@ -149,11 +149,11 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    govuk-components (5.5.0)
+    govuk-components (5.6.1)
       html-attributes-utils (~> 1.0.0, >= 1.0.0)
       pagy (>= 6, < 10)
-      view_component (>= 3.9, < 3.14)
-    govuk_design_system_formbuilder (5.5.0)
+      view_component (>= 3.9, < 3.15)
+    govuk_design_system_formbuilder (5.6.0)
       actionview (>= 6.1)
       activemodel (>= 6.1)
       activesupport (>= 6.1)
@@ -485,7 +485,7 @@ GEM
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
       public_suffix
-    view_component (3.13.0)
+    view_component (3.14.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -551,4 +551,4 @@ RUBY VERSION
    ruby 3.3.4p94
 
 BUNDLED WITH
-   2.5.18
+   2.5.17
