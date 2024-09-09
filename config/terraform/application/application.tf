@@ -27,8 +27,8 @@ module "web_application" {
 
   is_web = true
 
-  name = "web"
-  web_port = 8080
+  name         = "web"
+  web_port     = 8080
   namespace    = var.namespace
   environment  = var.environment
   service_name = var.service_name
@@ -38,7 +38,7 @@ module "web_application" {
   kubernetes_secret_name     = module.application_configuration.kubernetes_secret_name
 
   docker_image = var.docker_image
-  command = var.command
+  command      = var.command
 
   replicas   = var.webapp_replicas
   max_memory = var.webapp_memory_max
@@ -51,7 +51,7 @@ module "worker_application" {
 
   is_web = false
 
-  name = "worker"
+  name         = "worker"
   namespace    = var.namespace
   environment  = var.environment
   service_name = var.service_name
