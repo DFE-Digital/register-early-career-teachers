@@ -2,7 +2,7 @@ TERRAFILE_VERSION=0.8
 ARM_TEMPLATE_TAG=1.1.13
 RG_TAGS={"Product" : "Early Careers Framework"}
 REGION=UK South
-SERVICE_NAME=ec2
+SERVICE_NAME=cpd-ec2
 SERVICE_SHORT=cpdec2
 DOCKER_REPOSITORY=ghcr.io/dfe-digital/ecf2
 
