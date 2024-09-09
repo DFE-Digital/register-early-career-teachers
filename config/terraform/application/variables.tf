@@ -1,5 +1,5 @@
 variable "command" {
-  type = list(string)
+  type    = list(string)
   default = []
 }
 variable "cluster" {
@@ -60,7 +60,7 @@ variable "external_url" {
   description = "Healthcheck URL for StatusCake monitoring"
 }
 variable "statuscake_contact_groups" {
-  default     = [291418,282453]
+  default     = [291418, 282453]
   description = "ID of the contact group in statuscake web UI"
 }
 variable "enable_monitoring" {
@@ -74,7 +74,7 @@ variable "webapp_memory_max" {
 }
 
 variable "webapp_replicas" {
-  type = number
+  type    = number
   default = 1
 }
 
@@ -84,12 +84,12 @@ variable "worker_memory_max" {
 }
 
 variable "worker_replicas" {
-  type = number
+  type    = number
   default = 1
 }
 
 variable "postgres_flexible_server_sku" {
-  type = string
+  type    = string
   default = "B_Standard_B1ms"
 }
 
@@ -98,7 +98,7 @@ variable "postgres_snapshot_flexible_server_sku" {
 }
 
 variable "postgres_enable_high_availability" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "enable_logit" { default = false }
