@@ -126,4 +126,3 @@ jobs:
         run: |
           terraform init -backend=false
           terraform validate -no-color
-        working-directory: config/terraform/application
