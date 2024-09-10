@@ -8,8 +8,12 @@ default: &default
   port: "<%= ENV['DB_PORT'] %>"
 
 development:
-  <<: *default
-  database: ecf2_development
+  primary:
+    <<: *default
+    database: ecf2_development
+  ecf1:
+    <<: *default
+    database: early_careers_framework_development
 
 test:
   <<: *default
