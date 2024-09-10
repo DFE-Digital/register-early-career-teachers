@@ -316,7 +316,7 @@ GEM
     playwright-ruby-client (1.46.0)
       concurrent-ruby (>= 1.1.6)
       mime-types (>= 3.0)
-    propshaft (0.9.1)
+    propshaft (1.0.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
@@ -390,7 +390,7 @@ GEM
       psych (>= 4.0.0)
     redcarpet (3.6.0)
     regexp_parser (2.9.2)
-    reline (0.5.9)
+    reline (0.5.10)
       io-console (~> 0.5)
     rexml (3.3.5)
       strscan
