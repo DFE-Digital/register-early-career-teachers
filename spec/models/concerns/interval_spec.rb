@@ -1,3 +1,5 @@
+FakePeriod = Struct.new(:started_on, :finished_on)
+
 describe Interval do
   describe "validations" do
     context "period dates" do
@@ -58,17 +60,17 @@ describe Interval do
       end
     end
 
-    describe ".overlapping" do
+    describe ".overlapping_with" do
       it "returns periods overlapping with the specified date range" do
-        expect(DummyMentor.overlapping('2023-02-01', '2023-10-01')).to match_array([period_1, period_2, teacher_2_period])
+        expect(DummyMentor.overlapping_with(FakePeriod.new('2023-02-01', '2023-10-01'))).to match_array([period_1, period_2, teacher_2_period])
       end
 
       it "returns periods starting after the specified start date if end date is nil" do
-        expect(DummyMentor.overlapping('2024-01-01', nil)).to match_array([period_3])
+        expect(DummyMentor.overlapping_with(FakePeriod.new('2024-01-01', nil))).to match_array([period_3])
       end
 
       it "does not return periods outside the specified date range" do
-        expect(DummyMentor.overlapping('2022-01-01', '2022-12-31')).to be_empty
+        expect(DummyMentor.overlapping_with(FakePeriod.new('2022-01-01', '2022-12-31'))).to be_empty
       end
     end
   end

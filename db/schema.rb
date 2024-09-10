@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_09_141258) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +60,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.index "teacher_id, ((finished_on IS NULL))", name: "index_ect_at_school_periods_on_teacher_id_finished_on_IS_NULL", unique: true, where: "(finished_on IS NULL)"
     t.index ["school_id", "teacher_id", "started_on"], name: "index_ect_at_school_periods_on_school_id_teacher_id_started_on", unique: true
     t.index ["school_id"], name: "index_ect_at_school_periods_on_school_id"
@@ -98,6 +99,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
     t.datetime "updated_at", null: false
     t.enum "induction_programme", null: false, enum_type: "induction_programme"
     t.integer "number_of_terms"
+    t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_be6c214e9d", unique: true, where: "(finished_on IS NULL)"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true
@@ -118,6 +120,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.index "school_id, teacher_id, ((finished_on IS NULL))", name: "idx_on_school_id_teacher_id_finished_on_IS_NULL_dd7ee16a28", unique: true, where: "(finished_on IS NULL)"
     t.index ["school_id", "teacher_id", "started_on"], name: "idx_on_school_id_teacher_id_started_on_17d46e7783", unique: true
     t.index ["school_id"], name: "index_mentor_at_school_periods_on_school_id"
@@ -132,6 +135,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
     t.date "finished_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_afd5cf131d", unique: true, where: "(finished_on IS NULL)"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_mentorship_periods_on_ect_at_school_period_id_started_on", unique: true
     t.index ["ect_at_school_period_id"], name: "index_mentorship_periods_on_ect_at_school_period_id"
@@ -315,6 +319,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_06_140850) do
     t.datetime "updated_at", null: false
     t.bigint "ect_at_school_period_id"
     t.bigint "mentor_at_school_period_id"
+    t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.index "ect_at_school_period_id, mentor_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_mentor_at_school_per_42bce3bf48", unique: true, where: "(finished_on IS NULL)"
     t.index ["ect_at_school_period_id", "mentor_at_school_period_id", "started_on"], name: "idx_on_ect_at_school_period_id_mentor_at_school_per_70f2bb1a45", unique: true
     t.index ["ect_at_school_period_id"], name: "index_training_periods_on_ect_at_school_period_id"

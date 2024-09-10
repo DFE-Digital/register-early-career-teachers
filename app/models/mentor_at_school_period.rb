@@ -39,7 +39,7 @@ private
   end
 
   def teacher_school_distinct_period
-    overlapping_siblings = self.class.school_siblings_of(self).overlapping(started_on, finished_on).exists?
+    overlapping_siblings = MentorAtSchoolPeriod.school_siblings_of(self).overlapping_with(self).exists?
     errors.add(:base, "Teacher School ECT periods cannot overlap") if overlapping_siblings
   end
 end
