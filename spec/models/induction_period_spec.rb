@@ -70,7 +70,7 @@ describe InductionPeriod do
       end
 
       context "when finished_on is present" do
-        subject { FactoryBot.build(:induction_period, finished_on: Time.zone.today) }
+        subject { FactoryBot.build(:induction_period) }
         it { is_expected.to validate_presence_of(:number_of_terms).with_message("Enter a number of terms") }
       end
     end
