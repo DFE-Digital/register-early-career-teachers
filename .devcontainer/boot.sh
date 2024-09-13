@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Copying example .env file..."
-cp .env.example .env
-
 echo "Setting SSH password for vscode user..."
 sudo usermod --password $(echo vscode | openssl passwd -1 -stdin) vscode
 
@@ -10,8 +7,7 @@ echo "Updating RubyGems..."
 gem update --system
 
 echo "Installing dependencies..."
-bundle install
-npm install
+bin/setup
 
 echo "Creating database..."
 bin/rails db:create db:schema:load db:migrate db:seed
