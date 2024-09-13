@@ -30,7 +30,7 @@ LeadProvider.create!(name: 'Best Practice Network')
 LeadProvider.create!(name: 'National Institute of Teaching')
 LeadProvider.create!(name: 'Education Development Trust')
 LeadProvider.create!(name: 'Teach First')
-LeadProvider.create!(
+LeadProvider.create!(name: 'UCL')
 
 DeliveryPartner.create!(name: 'Coventry and Warwickshire Teaching School Hub')
 DeliveryPartner.create!(name: 'Central London Teaching School Hub')
