@@ -24,3 +24,10 @@ AppropriateBody.create!(name: 'Shropshire and Telford Education Partnership', lo
 AppropriateBody.create!(name: 'Bright Futures Teaching School Hub', local_authority_code: 957, establishment_number: 7361)
 AppropriateBody.create!(name: 'One Cumbria Teaching School Hub', local_authority_code: 648, establishment_number: 3986)
 AppropriateBody.create!(name: 'Teach West London', local_authority_code: 832, establishment_number: 6864)
+
+LeadProvider.create!(name: 'Ambition Institute')
+LeadProvider.create!(name: 'Best Practice Network')
+LeadProvider.create!(name: 'National Institute of Teaching')
+LeadProvider.create!(name: 'Education Development Trust')
+LeadProvider.create!(name: 'Teach First')
+LeadProvider.create!(name: 'UCL')
