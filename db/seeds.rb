@@ -10,6 +10,8 @@ Teacher.create!(name: 'Alan Rickman', trn: '2084589')
 Teacher.create!(name: 'Hugh Grant', trn: '3657894')
 Teacher.create!(name: 'Harriet Walter', trn: '2017654')
 Teacher.create!(name: 'Hugh Laurie', trn: '4786654')
+Teacher.create!(name: 'Imogen Stubbs', trn: '6352869')
+Teacher.create!(name: 'Gemma Jones', trn: '9578426')
 
 School.create!(urn: 3_375_958, name: "Ackley Bridge")
 School.create!(urn: 2_472_261, name: "Grange Hill")
