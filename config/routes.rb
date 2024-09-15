@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
     namespace :claim_an_ect, path: 'claim-an-ect' do
       resource :find_ect, only: %i[new create], path: 'find-ect', controller: '/appropriate_bodies/claim_an_ect/find_ect', as: 'find'
+      resources :check_ect, only: %i[edit update], path: 'check-ect', controller: '/appropriate_bodies/claim_an_ect/check_ect', as: 'check'
     end
   end
 end

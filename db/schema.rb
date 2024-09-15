@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_15_102754) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_15_123828) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -157,6 +157,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_15_102754) do
     t.integer "number_of_terms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "confirmed_at"
     t.index ["appropriate_body_id"], name: "index_pending_induction_submissions_on_appropriate_body_id"
   end
 

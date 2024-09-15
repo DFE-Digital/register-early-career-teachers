@@ -6,7 +6,7 @@
 class PendingInductionSubmission < ApplicationRecord
   include Interval
 
-  attr_accessor :confirmed
+  attribute :confirmed
 
   # Associations
   belongs_to :appropriate_body
@@ -37,5 +37,7 @@ class PendingInductionSubmission < ApplicationRecord
                          message: "Terms must be between 0 and 16" },
             on: :record_period
 
-  validates :confirmed, acceptance: true, on: :confirming_ect
+  validates :confirmed,
+            acceptance: { message: "Confirm if these details are correct or try your search again" },
+            on: :confirming_ect
 end

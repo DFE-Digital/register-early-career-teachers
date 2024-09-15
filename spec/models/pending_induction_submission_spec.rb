@@ -53,5 +53,9 @@ describe PendingInductionSubmission do
     describe "number_of_terms" do
       it { is_expected.to validate_inclusion_of(:number_of_terms).in_range(0..16).with_message("Terms must be between 0 and 16").on(:record_period) }
     end
+
+    describe "confirmed" do
+      it { is_expected.to validate_acceptance_of(:confirmed).on(:confirming_ect).with_message("Confirm if these details are correct or try your search again") }
+    end
   end
 end
