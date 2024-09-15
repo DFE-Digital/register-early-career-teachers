@@ -1,0 +1,22 @@
+<% page_data(title: "Find an early career teacher's record", error: @pending_induction_submission.errors.present?) %>
+
+<%= form_with(model: @pending_induction_submission, url: ab_claim_an_ect_find_path) do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%=
+    f.govuk_text_field(
+      :trn,
+      width: 10,
+      label: { text: "What is the teacher's TRN?" }
+    )
+  %>
+
+  <%=
+    f.govuk_date_field(
+      :date_of_birth,
+      legend: { text: "What is the teacher's date of birth?" }
+    )
+  %>
+
+  <%= f.govuk_submit %>
+<% end %>
