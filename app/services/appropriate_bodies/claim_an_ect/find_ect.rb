@@ -17,6 +17,7 @@ module AppropriateBodies
         #       b) as another pending induction submission?
         #       we probably want a guard clause here or to make the if statement
         #       below a case and add different errors to the :base
+        return pending_induction_submission unless pending_induction_submission.valid?
 
         if (response = find_matching_record_in_trs)
           pending_induction_submission.assign_attributes(appropriate_body:, **response)

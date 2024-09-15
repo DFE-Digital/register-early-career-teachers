@@ -9,6 +9,8 @@ describe PendingInductionSubmission do
 
   describe "validation" do
     describe "trn" do
+      it { is_expected.to validate_presence_of(:trn).with_message("Enter a TRN") }
+
       context "when the string contains 7 numeric digits" do
         %w[0000001 9999999].each do |value|
           it { is_expected.to allow_value(value).for(:trn) }
@@ -20,6 +22,12 @@ describe PendingInductionSubmission do
           it { is_expected.not_to allow_value(value).for(:trn) }
         end
       end
+    end
+
+    describe "date_of_birth" do
+      it { is_expected.to validate_presence_of(:date_of_birth).with_message("Enter a date of birth") }
+
+      it { is_expected.to validate_inclusion_of(:date_of_birth).in_range(100.years.ago.to_date..18.years.ago.to_date).with_message("Teacher must be between 18 and 100 years old") }
     end
 
     describe "establishment_id" do
