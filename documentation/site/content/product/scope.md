@@ -55,6 +55,7 @@ We're hoping later to consider:
 - more investigation in the best places to get data from for ECTs and mentors
 - adding or making changes to early career teachers or mentors in bulk
 - if we need to store a preferred name for early career teachers or mentors, different to their legal name stored with their teaching record
+- how to improve the support for early career teacher service which contains learning materials
 
 ## What's completely out of scope for ECF2
 
@@ -63,3 +64,4 @@ There's not much we've completely descoped yet, but we might add to this as thin
 So far, we've decided to descope:
 
 - sending any updates on personal details to the database for qualified teachers
+- sending images of evidence that training is occurring over the API
