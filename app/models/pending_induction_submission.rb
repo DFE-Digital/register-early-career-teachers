@@ -23,7 +23,11 @@ class PendingInductionSubmission < ApplicationRecord
   validates :induction_programme,
             inclusion: { in: %w[fip cip diy],
                          message: "Choose an induction programme" },
-            on: :record_period
+            on: :register_ect
+
+  validates :started_on,
+            presence: { message: "Enter a start date" },
+            on: :register_ect
 
   validates :date_of_birth,
             presence: { message: "Enter a date of birth" },

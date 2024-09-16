@@ -47,7 +47,7 @@ describe PendingInductionSubmission do
     end
 
     describe "induction_programme" do
-      it { is_expected.to validate_inclusion_of(:induction_programme).in_array(%w[fip cip diy]).with_message("Choose an induction programme").on(:record_period) }
+      it { is_expected.to validate_inclusion_of(:induction_programme).in_array(%w[fip cip diy]).with_message("Choose an induction programme").on(:register_ect) }
     end
 
     describe "number_of_terms" do
