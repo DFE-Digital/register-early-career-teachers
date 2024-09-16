@@ -13,6 +13,9 @@ on:
       - main
   merge_group:
 
+permissions:
+  packages: write
+
 jobs:
   lint:
     name: Lint
