@@ -7,15 +7,14 @@
     f.govuk_text_field(
       :trn,
       width: 10,
-      label: { text: "What is the teacher's teacher reference number?", size: "m" },
-      hint: { text: "A teacher reference number is a 7-digit number that uniquely identifies someone in the education sector in England." }
+      label: { text: "Teacher Reference Number (TRN)", size: "m" }
     )
   %>
 
   <%=
     f.govuk_date_field(
       :date_of_birth,
-      legend: { text: "What is the teacher's date of birth?" }
+      legend: { text: "Date of birth" }
     )
   %>
 
