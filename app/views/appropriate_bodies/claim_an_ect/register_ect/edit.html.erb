@@ -1,0 +1,23 @@
+<% page_data(
+  title: "Tell us about #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name}'s induction",
+  error: @pending_induction_submission.errors.present?)
+%>
+
+<%= form_with(model: @pending_induction_submission, url: ab_claim_an_ect_register_path(@pending_induction_submission, method: 'patch')) do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%=
+    f.govuk_date_field :started_on,
+      legend: { text: "When did #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name} start their induction with you?" }
+  %>
+
+  <%=
+    f.govuk_collection_radio_buttons :induction_programme,
+      induction_programme_choices,
+      :identifier,
+      :name,
+      legend: { text: "Which ECF based induction programme type is #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name} doing?" }
+  %>
+
+  <%= f.govuk_submit %>
+<% end %>

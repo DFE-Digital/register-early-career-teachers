@@ -6,11 +6,14 @@
 class PendingInductionSubmission < ApplicationRecord
   include Interval
 
+  attribute :confirmed
+
   # Associations
   belongs_to :appropriate_body
 
   # Validations
   validates :trn,
+            presence: { message: "Enter a TRN" },
             format: { with: Teacher::TRN_FORMAT, message: "TRN must be 7 numeric digits" }
 
   validates :establishment_id,
@@ -19,12 +22,26 @@ class PendingInductionSubmission < ApplicationRecord
 
   validates :induction_programme,
             inclusion: { in: %w[fip cip diy],
-                         message: "Choose an induction programme" }
+                         message: "Choose an induction programme" },
+            on: :register_ect
+
+  validates :started_on,
+            presence: { message: "Enter a start date" },
+            on: :register_ect
 
   validates :date_of_birth,
-            inclusion: { in: 100.years.ago..18.years.ago }
+            presence: { message: "Enter a date of birth" },
+            inclusion: {
+              in: 100.years.ago.to_date..18.years.ago.to_date,
+              message: "Teacher must be between 18 and 100 years old",
+            }
 
   validates :number_of_terms,
             inclusion: { in: 0..16,
-                         message: "Terms must be between 0 and 16" }
+                         message: "Terms must be between 0 and 16" },
+            on: :record_period
+
+  validates :confirmed,
+            acceptance: { message: "Confirm if these details are correct or try your search again" },
+            on: :confirming_ect
 end

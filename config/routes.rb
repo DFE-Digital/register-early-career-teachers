@@ -28,4 +28,12 @@ Rails.application.routes.draw do
   post 'auth/:provider/callback', to: 'sessions#create'
 
   get '/admin', to: 'admin#index'
+
+  resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
+    namespace :claim_an_ect, path: 'claim-an-ect' do
+      resource :find_ect, only: %i[new create], path: 'find-ect', controller: '/appropriate_bodies/claim_an_ect/find_ect', as: 'find'
+      resources :check_ect, only: %i[edit update], path: 'check-ect', controller: '/appropriate_bodies/claim_an_ect/check_ect', as: 'check'
+      resources :register_ect, only: %i[edit update show], path: 'register-ect', controller: '/appropriate_bodies/claim_an_ect/register_ect', as: 'register'
+    end
+  end
 end

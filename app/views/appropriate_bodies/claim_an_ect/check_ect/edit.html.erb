@@ -1,0 +1,45 @@
+<% page_data(
+  title: "Check details for #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name}",
+  header: "Check #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name}'s details",
+  error: @pending_induction_submission.errors.present?)
+%>
+
+<%= form_with(model: @pending_induction_submission, url: ab_claim_an_ect_check_path(@pending_induction_submission, method: 'patch')) do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%=
+    govuk_summary_list do |sl|
+      sl.with_row do |r|
+        r.with_key(text: "First name")
+        r.with_value(text: @pending_induction_submission.first_name)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Last name")
+        r.with_value(text: @pending_induction_submission.last_name)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Date of birth")
+        r.with_value(text: @pending_induction_submission.date_of_birth.to_fs(:govuk))
+      end
+    end
+
+  %>
+
+  <%= f.govuk_check_boxes_fieldset(:confirmed, legend: { text: "Is the above data correct?" }) do %>
+    <%=
+      f.govuk_check_box :confirmed,
+        1,
+        0,
+        multiple: false,
+        link_errors: true,
+        label: { text: "I have checked the information above and it looks accurate" }
+    %>
+  <% end %>
+
+  <div class="govuk-button-group">
+    <%= f.govuk_submit %>
+    <%= govuk_button_link_to("Start again", "#", secondary: true) %>
+  </div>
+<% end %>
