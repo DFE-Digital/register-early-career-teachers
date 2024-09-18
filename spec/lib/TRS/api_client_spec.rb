@@ -17,8 +17,37 @@ RSpec.describe TRS::APIClient do
       it 'returns a TRS::Teacher object' do
         teacher = client.find_teacher(trn:, date_of_birth:)
         expect(teacher).to be_a(TRS::Teacher)
-        expect(teacher.first_name).to eq('John')
-        expect(teacher.trn).to eq(trn)
+        expect(teacher.present).to eq(
+          {
+            alerts: nil,
+            allow_id_sign_in_with_prohibitions: nil,
+            date_of_birth: nil,
+            email_address: nil,
+            eyts_awarded: nil,
+            eyts_certificate_url: nil,
+            eyts_status_description: nil,
+            first_name: "John",
+            higher_education_qualifications: nil,
+            induction_certificate_url: nil,
+            induction_end_date: nil,
+            induction_start_date: nil,
+            induction_status: nil,
+            induction_status_description: nil,
+            initial_teacher_training: nil,
+            last_name: nil,
+            mandatory_qualifications: nil,
+            middle_name: nil,
+            national_insurance_number: nil,
+            npq_qualifications: nil,
+            pending_date_of_birth_change: nil,
+            pending_name_change: nil,
+            previous_names: nil,
+            qts_awarded: nil,
+            qts_certificate_url: nil,
+            qts_status_description: nil,
+            trn: "1234567",
+          }
+        )
       end
     end
 
