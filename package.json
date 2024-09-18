@@ -4,7 +4,7 @@
     "accessible-autocomplete": "^3.0.1",
     "esbuild": "^0.23.1",
     "govuk-frontend": "5.6.0",
-    "sass": "^1.78.0"
+    "sass": "^1.79.1"
   },
   "devDependencies": {
     "playwright": "^1.47.0",
