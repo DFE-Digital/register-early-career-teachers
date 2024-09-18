@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "playwright": "^1.47.0",
-    "standard": "^17.1.0",
+    "standard": "^17.1.2",
     "stylelint": "^16.9.0",
     "stylelint-config-gds": "^2.0.0"
   },
