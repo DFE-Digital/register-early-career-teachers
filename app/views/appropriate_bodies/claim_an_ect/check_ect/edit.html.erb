@@ -15,6 +15,11 @@
       end
 
       sl.with_row do |r|
+        r.with_key(text: "Middle name")
+        r.with_value(text: @pending_induction_submission.middle_name)
+      end
+
+      sl.with_row do |r|
         r.with_key(text: "Last name")
         r.with_value(text: @pending_induction_submission.last_name)
       end
@@ -23,8 +28,117 @@
         r.with_key(text: "Date of birth")
         r.with_value(text: @pending_induction_submission.date_of_birth.to_fs(:govuk))
       end
-    end
 
+      sl.with_row do |r|
+        r.with_key(text: "National Insurance Number")
+        r.with_value(text: @pending_induction_submission.national_insurance_number)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Email address")
+        r.with_value(text: @pending_induction_submission.email_address)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "EYTS awarded")
+        r.with_value(text: @pending_induction_submission.eyts_awarded)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "EYTS certificate URL")
+        r.with_value(text: @pending_induction_submission.eyts_certificate_url)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "EYTS status description")
+        r.with_value(text: @pending_induction_submission.eyts_status_description)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "QTS awarded")
+        r.with_value(text: @pending_induction_submission.qts_awarded)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "QTS certificate URL")
+        r.with_value(text: @pending_induction_submission.qts_certificate_url)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "QTS status description")
+        r.with_value(text: @pending_induction_submission.qts_status_description)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Induction start date")
+        r.with_value(text: @pending_induction_submission.induction_start_date)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Induction end date")
+        r.with_value(text: @pending_induction_submission.induction_end_date)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Induction status")
+        r.with_value(text: @pending_induction_submission.induction_status)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Induction status description")
+        r.with_value(text: @pending_induction_submission.induction_status_description)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Induction certificate URL")
+        r.with_value(text: @pending_induction_submission.induction_certificate_url)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Pending name change")
+        r.with_value(text: @pending_induction_submission.pending_name_change)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Pending date of birth change")
+        r.with_value(text: @pending_induction_submission.pending_date_of_birth_change)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Allow ID sign in with prohibitions")
+        r.with_value(text: @pending_induction_submission.allow_id_sign_in_with_prohibitions)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Initial teacher training")
+        r.with_value(text: @pending_induction_submission.initial_teacher_training)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "NPQ qualifications")
+        r.with_value(text: @pending_induction_submission.npq_qualifications)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Mandatory qualifications")
+        r.with_value(text: @pending_induction_submission.mandatory_qualifications)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Higher education qualifications")
+        r.with_value(text: @pending_induction_submission.higher_education_qualifications)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Previous names")
+        r.with_value(text: @pending_induction_submission.previous_names)
+      end
+
+      sl.with_row do |r|
+        r.with_key(text: "Alerts")
+        r.with_value(text: @pending_induction_submission.alerts)
+      end
+    end
   %>
 
   <%= f.govuk_check_boxes_fieldset(:confirmed, legend: { text: "Is the above data correct?" }) do %>
