@@ -8,4 +8,6 @@ assignees: ''
 
 ## Why are we doing this
 
+## What we're experimenting with
+
 ## Outcomes
