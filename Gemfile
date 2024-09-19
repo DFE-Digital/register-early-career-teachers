@@ -41,6 +41,10 @@ group :development, :test do
   gem "shoulda-matchers"
 end
 
+group :test do
+  gem "capybara"
+end
+
 group :nanoc do
   gem "asciidoctor"
   gem "nanoc"
