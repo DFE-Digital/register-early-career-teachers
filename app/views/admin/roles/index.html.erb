@@ -1,0 +1,21 @@
+<% page_data(title: "Select role type for #{@user.name}") %>
+
+<% if @user.roles.any? %>
+  <h2 class="govuk-heading-m">Current roles for <%= @user.name %></h2>
+
+  <%= govuk_summary_list(
+    rows: @user.roles.map do |role|
+      { key: { text: role.roleable.class.name.underscore.humanize }, value: { text: role.roleable.name } }
+    end
+  ) %>
+<% else %>
+  <p class="govuk-body">No roles assigned</p>
+<% end %>
+
+<%= form_for @roles_form, url: role_type_admin_user_path(@user), method: :get do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%= f.govuk_collection_radio_buttons :role_type, Admin::RolesForm::ROLE_TYPES, :to_s, :humanize, legend: { text: "Choose role type" } %>
+
+  <%= f.govuk_submit "Continue" %>
+<% end %>

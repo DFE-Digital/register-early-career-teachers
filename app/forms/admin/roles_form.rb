@@ -4,7 +4,8 @@ module Admin
 
     ROLE_TYPES = %w[appropriate_body delivery_partner lead_provider school].freeze
 
-    attr_accessor :role_type, :user, :role_ids
+    attr_accessor :role_type, :user
+    attr_writer :role_ids
 
     validates :role_type, inclusion: { in: ROLE_TYPES }
     validates :user, presence: true

@@ -32,6 +32,10 @@ module Authorisable
     :school if school_roles.any?
   end
 
+  def roles
+    appropriate_body_roles + delivery_partner_roles + lead_provider_roles + school_roles
+  end
+
   def dfe_user?
     dfe_roles.any?
   end
