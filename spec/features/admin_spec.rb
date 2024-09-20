@@ -10,8 +10,7 @@ RSpec.describe "Admin" do
   end
 
   def given_i_am_logged_in_as_an_admin
-    @user = FactoryBot.create(:user, email: "user@example.com", name: "Testing User")
-    sign_in_as(@user)
+    sign_in_as_admin
   end
 
   def when_i_visit_the_admin_placeholder_page

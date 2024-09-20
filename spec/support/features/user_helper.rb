@@ -9,6 +9,12 @@ module UserHelper
     page.get_by_role("button", name: 'Sign in').click
   end
 
+  def sign_in_as_admin
+    FactoryBot.create(:user, email: "admin@example.com", name: "Admin User").tap do |user|
+      sign_in_as(user)
+    end
+  end
+
   def sign_out
     page.goto(otp_sign_out_path)
   end
