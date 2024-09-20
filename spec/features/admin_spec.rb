@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Admin" do
+  include UserHelper
   # TODO: This test should be replaced with something meaningful.
   # Just here to prove Playwright is working.
   scenario "visiting the admin placeholder page" do

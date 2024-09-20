@@ -1,3 +1,5 @@
+ROLE_TYPE_CONSTRAINT_RE = Regexp.new(Admin::RolesForm::ROLE_TYPES.join('|'))
+
 Rails.application.routes.draw do
   root to: 'pages#home'
   get "healthcheck" => "rails/health#show", as: :rails_health_check
@@ -28,6 +30,16 @@ Rails.application.routes.draw do
   post 'auth/:provider/callback', to: 'sessions#create'
 
   get '/admin', to: 'admin#index'
+
+  namespace :admin do
+    resources :users, only: %i[index] do
+      member do
+        get '/roles', to: 'roles#index', as: :role_type
+        get '/:role_type', to: 'roles#edit', constraints: { role_type: ROLE_TYPE_CONSTRAINT_RE }, as: :roles
+        put '/:role_type', to: 'roles#update', constraints: { role_type: ROLE_TYPE_CONSTRAINT_RE }
+      end
+    end
+  end
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
     namespace :claim_an_ect, path: 'claim-an-ect' do

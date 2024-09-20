@@ -17,4 +17,5 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym "GIAS"
   inflect.acronym "OTP"
   inflect.acronym "TRN"
+  inflect.acronym "DfE"
 end

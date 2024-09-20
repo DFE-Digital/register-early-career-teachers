@@ -10,7 +10,7 @@ module UserHelper
   end
 
   def sign_in_as_admin
-    FactoryBot.create(:user, email: "admin@example.com", name: "Admin User").tap do |user|
+    FactoryBot.create(:user, :admin, email: "admin@example.com", name: "Admin User").tap do |user|
       sign_in_as(user)
     end
   end

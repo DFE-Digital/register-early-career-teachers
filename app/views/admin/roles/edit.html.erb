@@ -1,0 +1,10 @@
+<% page_data(title: "Assign roles") %>
+
+<%= form_for @roles_form, url: roles_admin_user_path(id: @roles_form.user.id, role_type: @roles_form.role_type), method: :put do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%= f.govuk_collection_check_boxes :role_ids, @roles_form.collection_for_role_type, :id, :name,
+    legend: { text: "Assign #{@roles_form.role_type.humanize.downcase} roles to #{@roles_form.user.name}" } %>
+
+  <%= f.govuk_submit "Save" %>
+<% end %>

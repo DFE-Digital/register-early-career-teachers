@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include Authorisable
+
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true, notify_email: true
 
