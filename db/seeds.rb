@@ -8,13 +8,6 @@ def describe_mentorship_period(mp)
   print_seed_info("#{mp.mentor.teacher.name} mentoring #{mp.mentee.teacher.name} at #{mp.mentor.school.name}", indent: 2)
 end
 
-print_seed_info("Adding persona users")
-
-User.create!(name: "Velma Dinkley", email: "velma@example.com")
-User.create!(name: "Fred Jones", email: "freddy@example.com")
-User.create!(name: "Daphne Blake", email: "daphne@example.com")
-User.create!(name: "Norville Rogers", email: "shaggy@example.com")
-
 print_seed_info("Adding teachers")
 
 emma_thompson = Teacher.create!(name: 'Emma Thompson', trn: '1023456')
@@ -241,3 +234,21 @@ MentorshipPeriod.create!(
   started_on: 1.year.ago,
   finished_on: nil
 ).tap { |mp| describe_mentorship_period(mp) }
+
+print_seed_info("Adding persona users")
+
+User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com").tap do |velma_dinkley|
+  AppropriateBodyRole.create!(appropriate_body: golden_leaf_academy, user: velma_dinkley)
+end
+
+User.create!(name: "Fred Jones (DP)", email: "freddy@example.com").tap do |fred_jones|
+  DeliveryPartnerRole.create!(delivery_partner: grain_teaching_school_hub, user: fred_jones)
+end
+
+User.create!(name: "Daphne Blake (LP)", email: "daphne@example.com").tap do |daphne_blake|
+  LeadProviderRole.create!(lead_provider: national_meadows_institute, user: daphne_blake)
+end
+
+User.create!(name: "Norville Rogers (DfE staff)", email: "shaggy@example.com").tap do |norville_rogers|
+  DfERole.create!(user: norville_rogers)
+end
