@@ -15,12 +15,19 @@ module Authorisable
 
   def can_access?(model)
     return true if dfe_user?
-    return AppropriateBodyRole.where(user: self, appropriate_body: model).exists? if model.is_a?(AppropriateBody)
-    return DeliveryPartnerRole.where(user: self, delivery_partner: model).exists? if model.is_a?(DeliveryPartner)
-    return LeadProviderRole.where(user: self, lead_provider: model).exists? if model.is_a?(LeadProvider)
-    return SchoolRole.where(user: self, school: model).exists? if model.is_a?(School)
 
-    false
+    case model
+    when AppropriateBody
+      AppropriateBodyRole.where(user: self, appropriate_body: model).exists?
+    when DeliveryPartner
+      DeliveryPartnerRole.where(user: self, delivery_partner: model).exists?
+    when LeadProvider
+      LeadProviderRole.where(user: self, lead_provider: model).exists?
+    when School
+      SchoolRole.where(user: self, school: model).exists?
+    else
+      false
+    end
   end
 
   def access_type
