@@ -41,3 +41,10 @@ Style/StringConcatenation:
 
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
+
+Rails/Output:
+  Exclude:
+    - db/seeds*
+
+Naming/MethodParameterName:
+  Enabled: false

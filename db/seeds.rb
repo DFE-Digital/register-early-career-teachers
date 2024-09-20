@@ -1,5 +1,254 @@
 # some sample users/personas to test personas/otp
-User.create!(name: "Velma Dinkley", email: "velma@example.com")
-User.create!(name: "Fred Jones", email: "freddy@example.com")
-User.create!(name: "Daphne Blake", email: "daphne@example.com")
-User.create!(name: "Norville Rogers", email: "shaggy@example.com")
+
+def print_seed_info(text, indent: 0)
+  puts "🌱 " + (" " * indent) + text
+end
+
+def describe_mentorship_period(mp)
+  print_seed_info("#{mp.mentor.teacher.name} mentoring #{mp.mentee.teacher.name} at #{mp.mentor.school.name}", indent: 2)
+end
+
+print_seed_info("Adding teachers")
+
+emma_thompson = Teacher.create!(name: 'Emma Thompson', trn: '1023456')
+kate_winslet = Teacher.create!(name: 'Kate Winslet', trn: '1023457')
+alan_rickman = Teacher.create!(name: 'Alan Rickman', trn: '2084589')
+hugh_grant = Teacher.create!(name: 'Hugh Grant', trn: '3657894')
+Teacher.create!(name: 'Harriet Walter', trn: '2017654')
+hugh_laurie = Teacher.create!(name: 'Hugh Laurie', trn: '4786654')
+Teacher.create!(name: 'Imogen Stubbs', trn: '6352869')
+Teacher.create!(name: 'Gemma Jones', trn: '9578426')
+
+print_seed_info("Adding schools")
+
+ackley_bridge = School.create!(urn: 3_375_958, name: "Ackley Bridge")
+abbey_grove_school = School.create!(urn: 1_759_427, name: "Abbey Grove School")
+School.create!(urn: 2_472_261, name: "Grange Hill")
+School.create!(urn: 3_583_173, name: "Coal Hill School")
+School.create!(urn: 5_279_293, name: "Malory Towers")
+School.create!(urn: 2_921_596, name: "St Clare's School")
+School.create!(urn: 2_976_163, name: "Brookfield School")
+School.create!(urn: 4_594_193, name: "Crunchem Hall Primary School")
+
+print_seed_info("Adding appropriate bodies")
+
+AppropriateBody.create!(name: 'Canvas Teaching School Hub', local_authority_code: 109, establishment_number: 2367)
+AppropriateBody.create!(name: 'South Yorkshire Studio Hub', local_authority_code: 678, establishment_number: 9728)
+AppropriateBody.create!(name: 'Ochre Education Partnership', local_authority_code: 238, establishment_number: 6582)
+umber_teaching_school_hub = AppropriateBody.create!(name: 'Umber Teaching School Hub', local_authority_code: 957, establishment_number: 7361)
+golden_leaf_academy = AppropriateBody.create!(name: 'Golden Leaf Academy', local_authority_code: 648, establishment_number: 3986)
+AppropriateBody.create!(name: 'Frame University London', local_authority_code: 832, establishment_number: 6864)
+AppropriateBody.create!(name: 'Easelcroft Academy', local_authority_code: 573, establishment_number: 9273)
+AppropriateBody.create!(name: 'Vista College', local_authority_code: 418, establishment_number: 3735)
+
+print_seed_info("Adding lead providers")
+
+grove_institute = LeadProvider.create!(name: 'Grove Institute')
+LeadProvider.create!(name: 'Evergreen Network')
+national_meadows_institute = LeadProvider.create!(name: 'National Meadows Institute')
+LeadProvider.create!(name: 'Woodland Education Trust')
+LeadProvider.create!(name: 'Teach Orchard')
+LeadProvider.create!(name: 'Highland College University')
+wildflower_trust = LeadProvider.create!(name: 'Wildflower Trust')
+LeadProvider.create!(name: 'Pine Institute')
+
+print_seed_info("Adding delivery partners")
+
+DeliveryPartner.create!(name: 'Rise Teaching School Hub')
+DeliveryPartner.create!(name: 'Miller Teaching School Hub')
+grain_teaching_school_hub = DeliveryPartner.create!(name: 'Grain Teaching School Hub')
+artisan_education_group = DeliveryPartner.create!(name: 'Artisan Education Group')
+rising_minds = DeliveryPartner.create!(name: 'Rising Minds Network')
+DeliveryPartner.create!(name: 'Proving Potential Teaching School Hub')
+DeliveryPartner.create!(name: 'Harvest Academy')
+
+print_seed_info("Adding academic years")
+
+academic_year_2021 = AcademicYear.create!(year: 2021)
+academic_year_2022 = AcademicYear.create!(year: 2022)
+academic_year_2023 = AcademicYear.create!(year: 2023)
+academic_year_2024 = AcademicYear.create!(year: 2024)
+
+print_seed_info("Adding provider partnerships")
+
+grove_artisan_partnership_2021 = ProviderPartnership.create!(
+  academic_year: academic_year_2021,
+  lead_provider: grove_institute,
+  delivery_partner: artisan_education_group
+)
+
+ProviderPartnership.create!(
+  academic_year: academic_year_2022,
+  lead_provider: grove_institute,
+  delivery_partner: artisan_education_group
+)
+
+grove_artisan_partnership_2023 = ProviderPartnership.create!(
+  academic_year: academic_year_2023,
+  lead_provider: grove_institute,
+  delivery_partner: artisan_education_group
+)
+
+meadow_grain_partnership_2022 = ProviderPartnership.create!(
+  academic_year: academic_year_2022,
+  lead_provider: national_meadows_institute,
+  delivery_partner: grain_teaching_school_hub
+)
+
+_meadow_grain_partnership_2023 = ProviderPartnership.create!(
+  academic_year: academic_year_2023,
+  lead_provider: national_meadows_institute,
+  delivery_partner: grain_teaching_school_hub
+)
+
+_wildflower_rising_partnership_2023 = ProviderPartnership.create!(
+  academic_year: academic_year_2023,
+  lead_provider: wildflower_trust,
+  delivery_partner: rising_minds
+)
+
+_wildflower_rising_partnership_2024 = ProviderPartnership.create!(
+  academic_year: academic_year_2024,
+  lead_provider: wildflower_trust,
+  delivery_partner: rising_minds
+)
+
+print_seed_info("Adding teachers:")
+
+print_seed_info("Emma Thompson (mentor)", indent: 2)
+
+emma_thompson_mentoring_at_abbey_grove = MentorAtSchoolPeriod.create!(
+  teacher: emma_thompson,
+  school: abbey_grove_school,
+  started_on: 3.years.ago
+)
+
+TrainingPeriod.create!(
+  mentor_at_school_period: emma_thompson_mentoring_at_abbey_grove,
+  started_on: 3.years.ago,
+  finished_on: 140.weeks.ago,
+  provider_partnership: grove_artisan_partnership_2021
+)
+
+# 10 week break
+
+TrainingPeriod.create!(
+  mentor_at_school_period: emma_thompson_mentoring_at_abbey_grove,
+  started_on: 130.weeks.ago,
+  finished_on: nil,
+  provider_partnership: grove_artisan_partnership_2021
+)
+
+print_seed_info("Kate Winslett (ECT)", indent: 2)
+
+kate_winslett_ect_at_ackley_bridge = ECTAtSchoolPeriod.create!(
+  teacher: kate_winslet,
+  school: ackley_bridge,
+  started_on: 1.year.ago
+)
+
+TrainingPeriod.create!(
+  ect_at_school_period: kate_winslett_ect_at_ackley_bridge,
+  started_on: 1.year.ago,
+  provider_partnership: grove_artisan_partnership_2023
+)
+
+InductionPeriod.create!(
+  ect_at_school_period: kate_winslett_ect_at_ackley_bridge,
+  started_on: 1.year.ago,
+  appropriate_body: umber_teaching_school_hub,
+  induction_programme: 'fip'
+)
+
+print_seed_info("Hugh Laurie (mentor)", indent: 2)
+
+hugh_laurie_mentoring_at_abbey_grove = MentorAtSchoolPeriod.create!(
+  teacher: hugh_laurie,
+  school: abbey_grove_school,
+  started_on: 2.years.ago
+)
+
+TrainingPeriod.create!(
+  mentor_at_school_period: hugh_laurie_mentoring_at_abbey_grove,
+  started_on: 2.years.ago,
+  provider_partnership: meadow_grain_partnership_2022
+)
+
+print_seed_info("Alan Rickman (ECT)", indent: 2)
+
+alan_rickman_ect_at_ackley_bridge = ECTAtSchoolPeriod.create!(
+  teacher: alan_rickman,
+  school: ackley_bridge,
+  started_on: 2.years.ago
+)
+
+TrainingPeriod.create!(
+  ect_at_school_period: alan_rickman_ect_at_ackley_bridge,
+  started_on: 2.years.ago + 1.month,
+  provider_partnership: meadow_grain_partnership_2022
+)
+
+InductionPeriod.create!(
+  ect_at_school_period: alan_rickman_ect_at_ackley_bridge,
+  appropriate_body: golden_leaf_academy,
+  started_on: 2.years.ago + 2.months,
+  induction_programme: 'fip'
+)
+
+print_seed_info("Hugh Grant (ECT)", indent: 2)
+
+hugh_grant_ect_at_abbey_grove = ECTAtSchoolPeriod.create!(
+  teacher: hugh_grant,
+  school: abbey_grove_school,
+  started_on: 2.years.ago
+)
+
+TrainingPeriod.create!(
+  ect_at_school_period: hugh_grant_ect_at_abbey_grove,
+  started_on: 2.years.ago,
+  finished_on: 1.week.ago,
+  provider_partnership: grove_artisan_partnership_2021
+)
+
+InductionPeriod.create!(
+  ect_at_school_period: hugh_grant_ect_at_abbey_grove,
+  appropriate_body: golden_leaf_academy,
+  started_on: 2.years.ago + 3.days,
+  finished_on: 1.week.ago,
+  induction_programme: 'fip',
+  number_of_terms: 3
+)
+
+print_seed_info("Adding mentorships:")
+
+MentorshipPeriod.create!(
+  mentor: emma_thompson_mentoring_at_abbey_grove,
+  mentee: hugh_grant_ect_at_abbey_grove,
+  started_on: 2.years.ago,
+  finished_on: 1.year.ago
+).tap { |mp| describe_mentorship_period(mp) }
+
+MentorshipPeriod.create!(
+  mentor: hugh_laurie_mentoring_at_abbey_grove,
+  mentee: hugh_grant_ect_at_abbey_grove,
+  started_on: 1.year.ago,
+  finished_on: nil
+).tap { |mp| describe_mentorship_period(mp) }
+
+print_seed_info("Adding persona users")
+
+User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com").tap do |velma_dinkley|
+  AppropriateBodyRole.create!(appropriate_body: golden_leaf_academy, user: velma_dinkley)
+end
+
+User.create!(name: "Fred Jones (DP)", email: "freddy@example.com").tap do |fred_jones|
+  DeliveryPartnerRole.create!(delivery_partner: grain_teaching_school_hub, user: fred_jones)
+end
+
+User.create!(name: "Daphne Blake (LP)", email: "daphne@example.com").tap do |daphne_blake|
+  LeadProviderRole.create!(lead_provider: national_meadows_institute, user: daphne_blake)
+end
+
+User.create!(name: "Norville Rogers (DfE staff)", email: "shaggy@example.com").tap do |norville_rogers|
+  DfERole.create!(user: norville_rogers)
+end
