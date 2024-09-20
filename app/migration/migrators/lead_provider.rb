@@ -1,6 +1,5 @@
 module Migrators
   class LeadProvider < Migrators::Base
-
     def self.record_count
       lead_providers.count
     end

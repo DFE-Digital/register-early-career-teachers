@@ -1,6 +1,5 @@
 module Migrators
   class DeliveryPartner < Migrators::Base
-
     def self.record_count
       delivery_partners.count
     end

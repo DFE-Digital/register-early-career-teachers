@@ -102,7 +102,7 @@ module Migrators
         started_at: Time.zone.now,
         total_count:,
         processed_count: 0,
-        failure_count: 0,
+        failure_count: 0
       )
       log_info("Migration started")
     end
@@ -112,7 +112,7 @@ module Migrators
         "model",
         "worker",
         "processed_count",
-        "total_count",
+        "total_count"
       ).symbolize_keys
       # Rails.logger.info(message, migration_details)
       Rails.logger.info("#{message}: [#{migration_details}]")

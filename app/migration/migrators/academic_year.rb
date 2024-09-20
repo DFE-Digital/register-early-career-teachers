@@ -1,6 +1,5 @@
 module Migrators
   class AcademicYear < Migrators::Base
-
     def self.record_count
       cohorts.count
     end

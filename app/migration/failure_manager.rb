@@ -22,7 +22,6 @@ class FailureManager
   end
 
   def all_failures_hash
-    failures = {}
     data_migration.migration_failures.to_h do |failure|
       [
         failure.item["id"],
@@ -34,7 +33,7 @@ class FailureManager
     end
   end
 
-  private
+private
 
   attr_reader :data_migration
 

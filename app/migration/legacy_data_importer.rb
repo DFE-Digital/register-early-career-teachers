@@ -6,7 +6,7 @@ class LegacyDataImporter
   end
 
   def prepare!
-    migrators.each { |migrator| migrator.prepare! }
+    migrators.each(&:prepare!)
   end
 
   def migrate!
@@ -18,20 +18,18 @@ class LegacyDataImporter
   def reset!
     # FIXME: could cause an issue if there are any jobs in process, plus do
     # we want to do this?
-    DataMigration.all.each(&:destroy!)
+    DataMigration.all.find_each(&:destroy!)
 
-    migrators_in_dependency_order.reverse.each do |migrator|
-      migrator.reset!
-    end
+    migrators_in_dependency_order.reverse.each(&:reset!)
   end
 
 private
 
   def migrators_in_dependency_order
-    graph = migrators.to_h { |migrator| [migrator.model, migrator] }
+    graph = migrators.index_by(&:model)
 
-    each_node = lambda { |&b| graph.each_key(&b) }
-    each_child = lambda { |model, &b| graph[model].dependencies.each(&b) }
+    each_node = ->(&b) { graph.each_key(&b) }
+    each_child = ->(model, &b) { graph[model].dependencies.each(&b) }
 
     TSort.strongly_connected_components(each_node, each_child).flatten.map { |key| graph[key] }
   end

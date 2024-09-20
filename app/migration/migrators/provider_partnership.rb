@@ -1,6 +1,5 @@
 module Migrators
   class ProviderPartnership < Migrators::Base
-
     def self.record_count
       provider_relationships.count
     end
