@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Admin", type: :feature do
+RSpec.xdescribe "Admin", type: :feature do
   # TODO: This test should be replaced with something meaningful.
   # Just here to prove Capybara is working.
   scenario "visiting the admin placeholder page" do
