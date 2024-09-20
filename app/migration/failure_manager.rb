@@ -4,23 +4,10 @@ class FailureManager
       data_migrations.map do |data_migration|
         new(data_migration:).all_failures_hash
       end
-      # data_migrations
-      #   .map { |data_migration| new(data_migration:).all_failures_hash }
-      #   .each_with_object({}) { |failure_hash, hash|
-      #     failure_hash.each do |failure_key, failure_values|
-      #       hash[failure_key] ||= []
-      #       hash[failure_key] += failure_values
-      #     end
-      #   }
-          # .to_json
     end
 
     def purge_failures!(data_migration)
       data_migration.migration_failures.delete_all
-    end
-
-    def migration_failure_key(data_migration)
-      "migration_failure_#{data_migration.model}_#{data_migration.id}"
     end
   end
 

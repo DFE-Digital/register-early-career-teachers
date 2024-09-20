@@ -8,8 +8,6 @@ class DataMigration < ApplicationRecord
   validates :completed_at, comparison: { greater_than: :started_at }, if: ->(m) { m.started_at.present? }, allow_nil: true
   validates :worker, presence: true
 
-  default_scope { order(created_at: :asc) }
-
   scope :complete, -> { where.not(completed_at: nil) }
   scope :incomplete, -> { where(completed_at: nil) }
   scope :queued, -> { where.not(queued_at: nil) }
