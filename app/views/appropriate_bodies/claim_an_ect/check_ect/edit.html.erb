@@ -1,6 +1,6 @@
 <% page_data(
-  title: "Check details for #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name}",
-  header: "Check #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name}'s details",
+  title: "Check details for #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name}",
+  header: "Check #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name}'s details",
   error: @pending_induction_submission.errors.present?)
 %>
 
@@ -11,12 +11,12 @@
     govuk_summary_list do |sl|
       sl.with_row do |r|
         r.with_key(text: "First name")
-        r.with_value(text: @pending_induction_submission.first_name)
+        r.with_value(text: @pending_induction_submission.trs_first_name)
       end
 
       sl.with_row do |r|
         r.with_key(text: "Last name")
-        r.with_value(text: @pending_induction_submission.last_name)
+        r.with_value(text: @pending_induction_submission.trs_last_name)
       end
 
       sl.with_row do |r|
@@ -26,42 +26,42 @@
 
       sl.with_row do |r|
         r.with_key(text: "Email address")
-        r.with_value(text: @pending_induction_submission.email_address)
+        r.with_value(text: @pending_induction_submission.trs_email_address)
       end
 
       sl.with_row do |r|
         r.with_key(text: "QTS awarded")
-        r.with_value(text: @pending_induction_submission.qts_awarded)
+        r.with_value(text: @pending_induction_submission.trs_qts_awarded)
       end
 
       sl.with_row do |r|
         r.with_key(text: "QTS status description")
-        r.with_value(text: @pending_induction_submission.qts_status_description)
+        r.with_value(text: @pending_induction_submission.trs_qts_status_description)
       end
 
       sl.with_row do |r|
         r.with_key(text: "Induction start date")
-        r.with_value(text: @pending_induction_submission.induction_start_date)
+        r.with_value(text: @pending_induction_submission.trs_induction_start_date&.to_fs(:govuk))
       end
 
       sl.with_row do |r|
         r.with_key(text: "Induction status")
-        r.with_value(text: @pending_induction_submission.induction_status)
+        r.with_value(text: @pending_induction_submission.trs_induction_status)
       end
 
       sl.with_row do |r|
         r.with_key(text: "Initial teacher training provider")
-        r.with_value(text: @pending_induction_submission.initial_teacher_training_provider_name)
+        r.with_value(text: @pending_induction_submission.trs_initial_teacher_training_provider_name)
       end
 
       sl.with_row do |r|
         r.with_key(text: "Initial teacher training end date")
-        r.with_value(text: @pending_induction_submission.initial_teacher_training_end_date)
+        r.with_value(text: @pending_induction_submission.trs_initial_teacher_training_end_date&.to_fs(:govuk))
       end
 
       sl.with_row do |r|
         r.with_key(text: "Has alerts")
-        r.with_value(text: @pending_induction_submission.alerts.present? ? "Yes" : "No")
+        r.with_value(text: @pending_induction_submission.trs_alerts.present? ? "Yes" : "No")
       end
     end
   %>

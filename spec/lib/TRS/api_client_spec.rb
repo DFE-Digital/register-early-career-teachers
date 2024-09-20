@@ -19,19 +19,19 @@ RSpec.describe TRS::APIClient do
         expect(teacher).to be_a(TRS::Teacher)
         expect(teacher.present).to eq(
           {
-            alerts: nil,
             date_of_birth: nil,
-            email_address: nil,
-            first_name: "John",
-            induction_start_date: nil,
-            induction_status: nil,
-            induction_status_description: nil,
-            initial_teacher_training_end_date: nil,
-            initial_teacher_training_provider_name: nil,
-            last_name: nil,
-            qts_awarded: nil,
-            qts_status_description: nil,
             trn: "1234567",
+            trs_alerts: nil,
+            trs_email_address: nil,
+            trs_first_name: "John",
+            trs_induction_start_date: nil,
+            trs_induction_status: nil,
+            trs_induction_status_description: nil,
+            trs_initial_teacher_training_end_date: nil,
+            trs_initial_teacher_training_provider_name: nil,
+            trs_last_name: nil,
+            trs_qts_awarded: nil,
+            trs_qts_status_description: nil,
           }
         )
       end

@@ -23,18 +23,18 @@ module TRS
     def present
       {
         trn: @trn,
-        first_name: @first_name,
-        last_name: @last_name,
         date_of_birth: @date_of_birth,
-        email_address: @email_address,
-        alerts: @alerts,
-        induction_start_date: @induction_start_date,
-        induction_status: @induction_status,
-        induction_status_description: @induction_status_description,
-        initial_teacher_training_provider_name: @initial_teacher_training_provider_name,
-        initial_teacher_training_end_date: @initial_teacher_training_end_date,
-        qts_awarded: @qts_awarded,
-        qts_status_description: @qts_status_description,
+        trs_first_name: @first_name,
+        trs_last_name: @last_name,
+        trs_email_address: @email_address,
+        trs_alerts: @alerts,
+        trs_induction_start_date: @induction_start_date,
+        trs_induction_status: @induction_status,
+        trs_induction_status_description: @induction_status_description,
+        trs_initial_teacher_training_provider_name: @initial_teacher_training_provider_name,
+        trs_initial_teacher_training_end_date: @initial_teacher_training_end_date,
+        trs_qts_awarded: @qts_awarded,
+        trs_qts_status_description: @qts_status_description,
       }
     end
   end

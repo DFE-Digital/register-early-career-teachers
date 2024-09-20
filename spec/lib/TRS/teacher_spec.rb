@@ -86,18 +86,18 @@ RSpec.describe TRS::Teacher do
     it 'returns a hash with flattened attributes' do
       expected_hash = {
         trn: '1234567',
-        first_name: 'John',
-        last_name: 'Doe',
         date_of_birth: '1980-01-01',
-        email_address: 'john.doe@example.com',
-        alerts: data['alerts'],
-        induction_start_date: '2024-09-18',
-        induction_status: 'Exempt',
-        induction_status_description: 'Induction Status Description',
-        initial_teacher_training_end_date: "2024-09-18",
-        initial_teacher_training_provider_name: "Provider Name",
-        qts_awarded: '2024-09-18',
-        qts_status_description: 'qts_status',
+        trs_first_name: 'John',
+        trs_last_name: 'Doe',
+        trs_email_address: 'john.doe@example.com',
+        trs_alerts: data['alerts'],
+        trs_induction_start_date: '2024-09-18',
+        trs_induction_status: 'Exempt',
+        trs_induction_status_description: 'Induction Status Description',
+        trs_initial_teacher_training_end_date: "2024-09-18",
+        trs_initial_teacher_training_provider_name: "Provider Name",
+        trs_qts_awarded: '2024-09-18',
+        trs_qts_status_description: 'qts_status',
       }
 
       expect(subject.present).to eq(expected_hash)
