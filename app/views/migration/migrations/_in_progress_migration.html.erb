@@ -8,7 +8,7 @@
     <h3 class="govuk-notification-banner__heading">
       A migration is currently in-progress
     </h3>
-    <p class="govuk-body">It was started <%= tag.strong(time_ago_in_words(migration_started_at(@data_migrations))) %></T=> ago.</p>
+    <p class="govuk-body">It was started <%= tag.strong(time_ago_in_words(migration_started_at(@data_migrations))) %> ago.</p>
     
     <%= 
       govuk_task_list do |task_list|
