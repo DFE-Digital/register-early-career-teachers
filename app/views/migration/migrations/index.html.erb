@@ -1,0 +1,14 @@
+<% page_data(title: "Migrations") %>
+
+<% if @starting_migration || @in_progress_migration %>
+  <%= render(partial: "in_progress_migration") %>
+<% end %>
+
+<p class="govuk-body">You can run the migration from ECF using this migration tool.</p>
+
+<%= button_to "Run migration", { action: :create }, class: "govuk-button govuk-button--warning", disabled: @data_migrations.present? %>
+
+<% if @completed_migration %>
+  <%= render(partial: "completed_migration") %>
+  <%= govuk_button_to "Reset all migration data", { action: :reset }, class: "govuk-button govuk-button--warning" %>
+<% end %>

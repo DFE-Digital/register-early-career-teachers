@@ -11,9 +11,11 @@ development:
   primary:
     <<: *default
     database: ecf2_development
-  ecf1:
-    <<: *default
-    database: early_careers_framework_development
+
+legacy_ecf:
+  <<: *default
+  database: early_careers_framework_development
+  url: "<%= ENV['MIGRATION_DATABASE_URL'] %>"
 
 test:
   <<: *default
