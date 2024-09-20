@@ -87,31 +87,17 @@ RSpec.describe TRS::Teacher do
       expected_hash = {
         trn: '1234567',
         first_name: 'John',
-        middle_name: 'A.',
         last_name: 'Doe',
         date_of_birth: '1980-01-01',
-        national_insurance_number: 'AB123456C',
         email_address: 'john.doe@example.com',
-        eyts_awarded: '2024-09-18',
-        eyts_certificate_url: 'eyts_certificate_url',
-        eyts_status_description: 'eyts_status',
         alerts: data['alerts'],
         induction_start_date: '2024-09-18',
-        induction_end_date: '2024-09-18',
         induction_status: 'Exempt',
         induction_status_description: 'Induction Status Description',
-        induction_certificate_url: 'induction_certificate_url',
-        pending_name_change: true,
-        pending_date_of_birth_change: true,
+        initial_teacher_training_end_date: "2024-09-18",
+        initial_teacher_training_provider_name: "Provider Name",
         qts_awarded: '2024-09-18',
-        qts_certificate_url: 'qts_certificate_url',
         qts_status_description: 'qts_status',
-        initial_teacher_training: data['initialTeacherTraining'],
-        npq_qualifications: data['npqQualifications'],
-        mandatory_qualifications: data['mandatoryQualifications'],
-        higher_education_qualifications: data['higherEducationQualifications'],
-        previous_names: data['previousNames'],
-        allow_id_sign_in_with_prohibitions: true
       }
 
       expect(subject.present).to eq(expected_hash)
