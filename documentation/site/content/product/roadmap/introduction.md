@@ -1,14 +1,11 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id nisi at
-lectus lacinia dictum. Cras metus nunc, dignissim ut malesuada sit amet,
-accumsan eu libero. Quisque vitae neque nunc. Pellentesque luctus ligula vel
-sapien commodo ornare.
+This document explains what we're working on to improve and rebuild the digital services that facilitate the early career framework (ECF) policy reforms.
 
-Fusce a nibh ut libero eleifend congue. Vivamus cursus ex at lacus elementum
-luctus. Duis egestas tellus a ornare tempus. Fusce varius quam elit, eget
-tincidunt nibh consequat accumsan. Vestibulum sed arcu ac diam congue
-semper.
+It sets out what we're working on currently, what will come next, and what we might pursue later. 
 
-Mauris porta, ligula quis lacinia ornare, dui lacus ornare justo, euismod
-sagittis tortor mi id est. Nam vitae convallis metus. Vestibulum sed nulla a
-justo iaculis bibendum nec non ante. Morbi varius velit consectetur placerat
-pharetra.
+By setting this out, we hope to:
+<ul>
+  <li>give direction and vision to our team</li>
+  <li>be transparent about what we're working on and why</li> 
+  <li>prioritise what we need to work on and when</li>
+  <li>gather more feedback about the work we're aiming to do</li>
+</ul>
