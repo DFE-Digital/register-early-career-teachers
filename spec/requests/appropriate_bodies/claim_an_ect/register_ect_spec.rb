@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
-  include AuthHelper
   let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
   let(:page_heading) { "Tell us about" }
   let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }

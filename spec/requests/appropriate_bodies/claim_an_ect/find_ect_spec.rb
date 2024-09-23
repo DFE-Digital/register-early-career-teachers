@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
-  include AuthHelper
   let(:appropriate_body) { user.appropriate_bodies.first }
   let(:page_heading) { "Find an early career teacher" }
 
