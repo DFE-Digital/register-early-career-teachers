@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
-  let(:appropriate_body) { user.appropriate_bodies.first }
+  include_context 'fake_trs_api_client'
+
   let(:page_heading) { "Find an early career teacher" }
 
   describe 'GET /appropriate-body/claim-an-ect/find-ect' do
@@ -45,7 +46,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
       before { allow(AppropriateBodies::ClaimAnECT::FindECT).to receive(:new).with(any_args).and_call_original }
 
       let!(:user) { sign_in_as(:appropriate_body_user) }
-      let(:birth_year_param) { "2001" }
+      let(:appropriate_body) { user.appropriate_bodies.first }
 
       let(:search_params) do
         {
@@ -57,15 +58,17 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
       end
 
       context "when the submission is valid" do
+        let(:birth_year_param) { "2001" }
+
         it 'passes the parameters to the AppropriateBodies::ClaimAnECT::FindECT service and redirects' do
           post(
             '/appropriate-body/claim-an-ect/find-ect',
-            params: { appropriate_body:, pending_induction_submission: search_params }
+            params: { pending_induction_submission: search_params }
           )
 
           expect(AppropriateBodies::ClaimAnECT::FindECT).to have_received(:new).with(
             appropriate_body:,
-            pending_induction_submission_params: ActionController::Parameters.new(**search_params).permit!
+            pending_induction_submission: PendingInductionSubmission.last
           )
 
           expect(response).to be_redirection
@@ -79,7 +82,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         it 'it re-renders the find page' do
           post(
             '/appropriate-body/claim-an-ect/find-ect',
-            params: { appropriate_body:, pending_induction_submission: search_params }
+            params: { pending_induction_submission: search_params }
           )
 
           expect(response).to be_ok

@@ -15,6 +15,12 @@ module UserHelper
     end
   end
 
+  def sign_in_as_appropriate_body_user
+    FactoryBot.create(:user, :appropriate_body_user, email: "appropriate-body@example.com", name: "Appropriate Body").tap do |user|
+      sign_in_as(user)
+    end
+  end
+
   def sign_out
     page.goto(otp_sign_out_path)
   end
