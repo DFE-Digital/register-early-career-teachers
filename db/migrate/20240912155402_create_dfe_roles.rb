@@ -1,4 +1,4 @@
-class CreateDfeRoles < ActiveRecord::Migration[7.2]
+class CreateDfERoles < ActiveRecord::Migration[7.2]
   def change
     create_enum :dfe_role_type, %w[admin super_admin finance]
 
