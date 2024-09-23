@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_15_123828) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_18_160307) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -183,10 +183,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_15_123828) do
     t.bigint "appropriate_body_id"
     t.string "establishment_id", limit: 8
     t.string "trn", limit: 7, null: false
-    t.string "first_name", limit: 80
-    t.string "last_name", limit: 80
+    t.string "trs_first_name", limit: 80
+    t.string "trs_last_name", limit: 80
     t.date "date_of_birth"
-    t.string "induction_status", limit: 16
+    t.string "trs_induction_status", limit: 16
     t.enum "induction_programme", enum_type: "induction_programme"
     t.date "started_on"
     t.date "finished_on"
@@ -194,6 +194,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_15_123828) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "confirmed_at"
+    t.string "trs_email_address"
+    t.jsonb "trs_alerts"
+    t.date "trs_induction_start_date"
+    t.string "trs_induction_status_description"
+    t.boolean "trs_qts_awarded"
+    t.string "trs_qts_status_description"
+    t.date "trs_initial_teacher_training_end_date"
+    t.string "trs_initial_teacher_training_provider_name"
     t.index ["appropriate_body_id"], name: "index_pending_induction_submissions_on_appropriate_body_id"
   end
 

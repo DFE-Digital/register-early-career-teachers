@@ -1,5 +1,5 @@
 <% page_data(
-  title: "Tell us about #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name}'s induction",
+  title: "Tell us about #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name}'s induction",
   error: @pending_induction_submission.errors.present?)
 %>
 
@@ -8,7 +8,7 @@
 
   <%=
     f.govuk_date_field :started_on,
-      legend: { text: "When did #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name} start their induction with you?" }
+      legend: { text: "When did #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name} start their induction with you?" }
   %>
 
   <%=
@@ -16,7 +16,7 @@
       induction_programme_choices,
       :identifier,
       :name,
-      legend: { text: "Which ECF based induction programme type is #{@pending_induction_submission.first_name} #{@pending_induction_submission.last_name} doing?" }
+      legend: { text: "Which ECF based induction programme type is #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name} doing?" }
   %>
 
   <%= f.govuk_submit %>
