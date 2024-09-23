@@ -99,26 +99,47 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
     t.index ["teacher_id"], name: "index_ect_at_school_periods_on_teacher_id"
   end
 
+  create_table "gias_school_links", force: :cascade do |t|
+    t.integer "urn", null: false
+    t.integer "link_urn", null: false
+    t.string "link_type", null: false
+    t.date "link_date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["urn"], name: "index_gias_school_links_on_urn"
+  end
+
   create_table "gias_schools", primary_key: "urn", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "local_authority"
-    t.string "phase"
-    t.string "establishment_type"
-    t.enum "school_status", default: "open", null: false, enum_type: "gias_school_statuses"
+    t.enum "status", default: "open", null: false, enum_type: "gias_school_statuses"
     t.enum "induction_eligibility", null: false, enum_type: "induction_eligibility_status"
     t.enum "funding_eligibility", null: false, enum_type: "funding_eligibility_status"
-    t.string "administrative_district"
     t.string "address_line1"
     t.string "address_line2"
     t.string "address_line3"
     t.string "postcode"
     t.string "primary_contact_email"
     t.string "secondary_contact_email"
-    t.boolean "section_41_approved"
     t.date "opened_on"
     t.date "closed_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "administrative_district_code", null: false
+    t.string "administrative_district_name"
+    t.integer "easting", null: false
+    t.integer "local_authority_code", null: false
+    t.string "local_authority_name"
+    t.integer "northing", null: false
+    t.integer "number", null: false
+    t.integer "phase_code", null: false
+    t.string "phase_name"
+    t.boolean "section_41_approved", null: false
+    t.integer "type_code", null: false
+    t.string "type_name"
+    t.integer "ukprn"
+    t.string "website"
+    t.index ["name"], name: "index_gias_schools_on_name", unique: true
+    t.index ["ukprn"], name: "index_gias_schools_on_ukprn", unique: true
   end
 
   create_table "induction_periods", force: :cascade do |t|
@@ -390,6 +411,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
   add_foreign_key "dfe_roles", "users"
   add_foreign_key "ect_at_school_periods", "schools"
   add_foreign_key "ect_at_school_periods", "teachers"
+  add_foreign_key "gias_school_links", "gias_schools", column: "link_urn", primary_key: "urn"
+  add_foreign_key "gias_school_links", "gias_schools", column: "urn", primary_key: "urn"
   add_foreign_key "induction_periods", "appropriate_bodies"
   add_foreign_key "induction_periods", "ect_at_school_periods"
   add_foreign_key "mentor_at_school_periods", "schools"
