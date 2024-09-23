@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
   include AuthHelper
-  let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
+  let(:appropriate_body) { user.appropriate_bodies.first }
   let(:page_heading) { "Find an early career teacher" }
 
   describe 'GET /appropriate-body/claim-an-ect/find-ect' do
@@ -18,7 +18,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
     context 'when signed in as an appropriate body user' do
       # FIXME: we don't have appropriate body users yet so this is just making
       #        sure they're logged in
-      before { sign_in_as(:appropriate_body_user) }
+      let!(:user) { sign_in_as(:appropriate_body_user) }
 
       it 'instantiates a new PendingInductionSubmission and renders the page' do
         allow(PendingInductionSubmission).to receive(:new).and_call_original
@@ -43,9 +43,9 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
     end
 
     context 'when signed in' do
-      before { sign_in_as(:appropriate_body_user) }
       before { allow(AppropriateBodies::ClaimAnECT::FindECT).to receive(:new).with(any_args).and_call_original }
 
+      let!(:user) { sign_in_as(:appropriate_body_user) }
       let(:birth_year_param) { "2001" }
 
       let(:search_params) do

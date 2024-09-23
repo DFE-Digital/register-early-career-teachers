@@ -6,7 +6,11 @@ class AppropriateBodiesController < ApplicationController
 private
 
   def set_appropriate_body
-    @appropriate_body = current_user.appropriate_bodies.find(params[:id])
+    # FIXME: this should be stored in the session when someone logs
+    #        in, then we can easily switch between ABs if a user is
+    #        linked ot more than one
+
+    @appropriate_body = current_user.appropriate_bodies.first
   end
 
   def authorised?

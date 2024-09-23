@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT' do
   include AuthHelper
-  let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
+  let(:appropriate_body) { user.appropriate_bodies.first }
   let(:page_heading) { "Check details for" }
   let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
   let(:pending_induction_submission_id_param) { pending_induction_submission.id.to_s }
@@ -20,7 +20,7 @@ RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT
     context 'when signed in as an appropriate body user' do
       # FIXME: we don't have appropriate body users yet so this is just making
       #        sure they're logged in
-      before { sign_in_as(:appropriate_body_user) }
+      let!(:user) { sign_in_as(:appropriate_body_user) }
 
       it 'finds the right PendingInductionSubmission record and renders the page' do
         allow(PendingInductionSubmission).to receive(:find).with(pending_induction_submission_id_param).and_call_original
@@ -44,7 +44,7 @@ RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT
     end
 
     context 'when signed in' do
-      before { sign_in_as(:appropriate_body_user) }
+      let!(:user) { sign_in_as(:appropriate_body_user) }
       before { allow(AppropriateBodies::ClaimAnECT::CheckECT).to receive(:new).with(any_args).and_call_original }
 
       context "when the submission is valid" do
