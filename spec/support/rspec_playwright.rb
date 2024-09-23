@@ -6,10 +6,22 @@ module RSpecPlaywright
 
   # rubocop:disable Rails/SaveBang
   def self.start_browser(javascript_enabled: false)
+    headless = ENV.fetch('HEADLESS', true).then do |h|
+      case
+      when h.in?([true, '1', 'yes', 'true'])
+        true
+      when h.in?([false, '0', 'no', 'false'])
+        false
+      else
+        fail(ArgumentError, 'Invalid headless option')
+      end
+    end
+
     browser = Playwright.create(playwright_cli_executable_path: PLAYWRIGHT_CLI_EXECUTABLE_PATH)
                         .playwright
                         .chromium
-                        .launch(headless: true)
+                        .launch(headless:)
+
     browser.new_page(baseURL: Capybara.current_session.server.base_url, javaScriptEnabled: javascript_enabled)
   end
   # rubocop:enable Rails/SaveBang
