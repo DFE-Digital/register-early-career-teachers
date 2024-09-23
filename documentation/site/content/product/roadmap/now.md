@@ -1,4 +1,4 @@
-## Now
+## Now 🏃
 
 * exploring using DfE sign in for school users and allowing multiple accounts, so we can improve their access to the service 
 * improving how an early career teacher or mentor is registered, so we save schools time and improve data accuracy
