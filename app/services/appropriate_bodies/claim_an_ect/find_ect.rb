@@ -3,9 +3,9 @@ module AppropriateBodies
     class FindECT
       attr_reader :appropriate_body, :trn, :date_of_birth, :pending_induction_submission
 
-      def initialize(appropriate_body:, pending_induction_submission_params: {})
+      def initialize(appropriate_body:, pending_induction_submission:)
         @appropriate_body = appropriate_body
-        @pending_induction_submission = PendingInductionSubmission.new(**pending_induction_submission_params)
+        @pending_induction_submission = pending_induction_submission
       end
 
       def import_from_trs
@@ -17,14 +17,10 @@ module AppropriateBodies
         #       below a case and add different errors to the :base
         return pending_induction_submission unless pending_induction_submission.valid?
 
-        begin
-          pending_induction_submission.assign_attributes(
-            appropriate_body:,
-            **find_matching_record_in_trs
-          )
-        rescue TRS::Errors::TeacherNotFound => e
-          pending_induction_submission.errors.add(:base, e.message)
-        end
+        pending_induction_submission.assign_attributes(
+          appropriate_body:,
+          **find_matching_record_in_trs
+        )
 
         pending_induction_submission
       end
