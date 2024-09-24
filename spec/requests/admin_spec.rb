@@ -11,7 +11,7 @@ RSpec.describe "Admin", type: :request do
       let(:session_manager) do
         instance_double(Sessions::SessionManager, provider: "developer", expires_at: 2.hours.from_now)
       end
-      let(:user) { FactoryBot.build(:user) }
+      let(:user) { FactoryBot.create(:user) }
 
       before do
         allow(Sessions::SessionManager).to receive(:new).and_return(session_manager)

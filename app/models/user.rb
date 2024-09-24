@@ -4,4 +4,8 @@ class User < ApplicationRecord
 
   # TODO: we can encrypt the secret in the DB but we need to set up keys first
   # encrypts :otp_secret
+
+  has_many :appropriate_body_roles
+  has_many :appropriate_bodies, through: :appropriate_body_roles
+  has_many :dfe_roles
 end
