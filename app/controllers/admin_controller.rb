@@ -7,6 +7,6 @@ class AdminController < ApplicationController
 private
 
   def authorised?
-    current_user&.dfe_user?
+    Admin::Access.new(current_user).can_access?
   end
 end
