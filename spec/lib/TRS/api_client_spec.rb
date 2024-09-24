@@ -44,9 +44,10 @@ RSpec.describe TRS::APIClient do
         allow(client.instance_variable_get(:@connection)).to receive(:get).and_return(response)
       end
 
-      it 'returns nil' do
-        teacher = client.find_teacher(trn:, date_of_birth:)
-        expect(teacher).to be_nil
+      it 'raises TRS::Errors::TeacherNotFound' do
+        expect {
+          client.find_teacher(trn:, date_of_birth:)
+        }.to raise_error(TRS::Errors::TeacherNotFound, "Teacher with TRN #{trn} not found")
       end
     end
 

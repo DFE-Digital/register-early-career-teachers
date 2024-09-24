@@ -17,10 +17,13 @@ module AppropriateBodies
         #       below a case and add different errors to the :base
         return pending_induction_submission unless pending_induction_submission.valid?
 
-        if (response = find_matching_record_in_trs)
-          pending_induction_submission.assign_attributes(appropriate_body:, **response)
-        else
-          pending_induction_submission.errors.add(:base, "No matching teacher was found")
+        begin
+          pending_induction_submission.assign_attributes(
+            appropriate_body:,
+            **find_matching_record_in_trs
+          )
+        rescue TRS::Errors::TeacherNotFound => e
+          pending_induction_submission.errors.add(:base, e.message)
         end
 
         pending_induction_submission
@@ -32,7 +35,7 @@ module AppropriateBodies
         client = TRS::APIClient.new
         teacher = client.find_teacher(trn: pending_induction_submission.trn, date_of_birth: pending_induction_submission.date_of_birth)
 
-        teacher&.present
+        teacher.present
       end
     end
   end

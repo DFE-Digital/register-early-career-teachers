@@ -10,6 +10,8 @@ module AppropriateBodies
           .new(appropriate_body: @appropriate_body, pending_induction_submission_params:)
           .import_from_trs
 
+        render(:new) and return if @pending_induction_submission.errors.any?
+
         if @pending_induction_submission.save
           redirect_to(edit_ab_claim_an_ect_check_path(@pending_induction_submission))
         else
