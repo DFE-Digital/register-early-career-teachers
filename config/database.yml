@@ -20,7 +20,7 @@ test:
 
 legacy:
   <<: *shared_settings
-  url: "<%= ENV['MIGRATION_DATABASE_URL'] %>"
+  url: "<%= ENV['MIGRATION_DATABASE_URL'] || 'postgres://localhost:5432' %>"
 
 production:
   <<: *default
