@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,10 +40,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
   end
 
   create_table "appropriate_body_roles", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "appropriate_body_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.integer "appropriate_body_id", null: false
     t.index ["appropriate_body_id"], name: "index_appropriate_body_roles_on_appropriate_body_id"
     t.index ["user_id"], name: "index_appropriate_body_roles_on_user_id"
   end
@@ -69,15 +69,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
     t.index ["training_period_id"], name: "index_declarations_on_training_period_id"
   end
 
-  create_table "delivery_partner_roles", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "delivery_partner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["delivery_partner_id"], name: "index_delivery_partner_roles_on_delivery_partner_id"
-    t.index ["user_id"], name: "index_delivery_partner_roles_on_user_id"
-  end
-
   create_table "delivery_partners", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -87,7 +78,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
 
   create_table "dfe_roles", force: :cascade do |t|
     t.enum "role_type", default: "admin", null: false, enum_type: "dfe_role_type"
-    t.bigint "user_id"
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_dfe_roles_on_user_id"
@@ -144,15 +135,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true
     t.index ["ect_at_school_period_id"], name: "index_induction_periods_on_ect_at_school_period_id"
-  end
-
-  create_table "lead_provider_roles", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "lead_provider_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["lead_provider_id"], name: "index_lead_provider_roles_on_lead_provider_id"
-    t.index ["user_id"], name: "index_lead_provider_roles_on_user_id"
   end
 
   create_table "lead_providers", force: :cascade do |t|
@@ -237,15 +219,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
     t.index ["academic_year_id"], name: "index_provider_partnerships_on_academic_year_id"
     t.index ["delivery_partner_id"], name: "index_provider_partnerships_on_delivery_partner_id"
     t.index ["lead_provider_id"], name: "index_provider_partnerships_on_lead_provider_id"
-  end
-
-  create_table "school_roles", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "school_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["school_id"], name: "index_school_roles_on_school_id"
-    t.index ["user_id"], name: "index_school_roles_on_user_id"
   end
 
   create_table "schools", force: :cascade do |t|
@@ -414,17 +387,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "appropriate_body_roles", "appropriate_bodies"
-  add_foreign_key "appropriate_body_roles", "users"
-  add_foreign_key "delivery_partner_roles", "delivery_partners"
-  add_foreign_key "delivery_partner_roles", "users"
   add_foreign_key "dfe_roles", "users"
   add_foreign_key "ect_at_school_periods", "schools"
   add_foreign_key "ect_at_school_periods", "teachers"
   add_foreign_key "induction_periods", "appropriate_bodies"
   add_foreign_key "induction_periods", "ect_at_school_periods"
-  add_foreign_key "lead_provider_roles", "lead_providers"
-  add_foreign_key "lead_provider_roles", "users"
   add_foreign_key "mentor_at_school_periods", "schools"
   add_foreign_key "mentor_at_school_periods", "teachers"
   add_foreign_key "mentorship_periods", "ect_at_school_periods"
@@ -433,8 +400,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
   add_foreign_key "provider_partnerships", "academic_years", primary_key: "year"
   add_foreign_key "provider_partnerships", "delivery_partners"
   add_foreign_key "provider_partnerships", "lead_providers"
-  add_foreign_key "school_roles", "schools"
-  add_foreign_key "school_roles", "users"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_failed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
