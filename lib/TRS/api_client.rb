@@ -15,7 +15,7 @@ module TRS
       if response.success?
         TRS::Teacher.new(JSON.parse(response.body))
       elsif response.status == 404
-        nil
+        raise TRS::Errors::TeacherNotFound, "Teacher with TRN #{trn} not found"
       else
         raise "API request failed: #{response.status} #{response.body}"
       end

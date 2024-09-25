@@ -3,9 +3,9 @@ module AppropriateBodies
     class FindECT
       attr_reader :appropriate_body, :trn, :date_of_birth, :pending_induction_submission
 
-      def initialize(appropriate_body:, pending_induction_submission_params: {})
+      def initialize(appropriate_body:, pending_induction_submission:)
         @appropriate_body = appropriate_body
-        @pending_induction_submission = PendingInductionSubmission.new(**pending_induction_submission_params)
+        @pending_induction_submission = pending_induction_submission
       end
 
       def import_from_trs
@@ -17,11 +17,10 @@ module AppropriateBodies
         #       below a case and add different errors to the :base
         return pending_induction_submission unless pending_induction_submission.valid?
 
-        if (response = find_matching_record_in_trs)
-          pending_induction_submission.assign_attributes(appropriate_body:, **response)
-        else
-          pending_induction_submission.errors.add(:base, "No matching teacher was found")
-        end
+        pending_induction_submission.assign_attributes(
+          appropriate_body:,
+          **find_matching_record_in_trs
+        )
 
         pending_induction_submission
       end
@@ -32,7 +31,7 @@ module AppropriateBodies
         client = TRS::APIClient.new
         teacher = client.find_teacher(trn: pending_induction_submission.trn, date_of_birth: pending_induction_submission.date_of_birth)
 
-        teacher&.present
+        teacher.present
       end
     end
   end
