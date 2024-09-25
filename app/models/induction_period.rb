@@ -6,15 +6,8 @@ class InductionPeriod < ApplicationRecord
   belongs_to :ect_at_school_period, class_name: "ECTAtSchoolPeriod", inverse_of: :induction_periods
 
   # Validations
-  validates :finished_on,
-            uniqueness: { scope: :ect_at_school_period_id,
-                          message: "matches the end date of an existing period for ECT",
-                          allow_nil: true }
-
   validates :started_on,
-            presence: true,
-            uniqueness: { scope: :ect_at_school_period_id,
-                          message: "matches the start date of an existing period for ECT" }
+            presence: true
 
   validates :appropriate_body_id,
             presence: true

@@ -7,51 +7,8 @@ describe TrainingPeriod do
   end
 
   describe "validations" do
-    subject { FactoryBot.create(:training_period) }
-
     it { is_expected.to validate_presence_of(:started_on) }
     it { is_expected.to validate_presence_of(:provider_partnership_id) }
-
-    context "uniqueness of finished_on scoped to trainee ids" do
-      context "when the period matches the ect_at_school_period_id, mentor_at_school_period_id and finished_on values
-               of an existing training period" do
-        let!(:existing_period) { FactoryBot.create(:training_period) }
-        let(:finished_on) { existing_period.finished_on }
-        let(:started_on) { existing_period.finished_on - 1.day }
-        let(:ect_at_school_period_id) { existing_period.ect_at_school_period_id }
-        let(:mentor_at_school_period_id) { existing_period.mentor_at_school_period_id }
-
-        subject { FactoryBot.build(:training_period, ect_at_school_period_id:, mentor_at_school_period_id:, started_on:, finished_on:) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(finished_on: ["matches the end date of an existing period for trainee"])
-        end
-      end
-    end
-
-    context "uniqueness of started_on scoped to trainee ids" do
-      context "when the period matches the ect_at_school_period_id, mentor_at_school_period_id and finished_on values
-               of an existing training period" do
-        let!(:existing_period) { FactoryBot.create(:training_period) }
-        let(:started_on) { existing_period.started_on }
-        let(:ect_at_school_period_id) { existing_period.ect_at_school_period_id }
-        let(:mentor_at_school_period_id) { existing_period.mentor_at_school_period_id }
-
-        subject { FactoryBot.build(:training_period, ect_at_school_period_id:, mentor_at_school_period_id:, started_on:) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(started_on: ["matches the start date of an existing period for trainee"])
-        end
-      end
-    end
 
     context "exactly one id of trainee present" do
       context "when ect_at_school_period_id and mentor_at_school_period_id are all nil" do

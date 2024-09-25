@@ -9,13 +9,8 @@ class ECTAtSchoolPeriod < ApplicationRecord
   has_many :training_periods, inverse_of: :ect_at_school_period
 
   # Validations
-  validates :finished_on,
-            uniqueness: { scope: :teacher_id,
-                          allow_nil: true }
-
   validates :started_on,
-            presence: true,
-            uniqueness: { scope: :teacher_id }
+            presence: true
 
   validates :school_id,
             presence: true

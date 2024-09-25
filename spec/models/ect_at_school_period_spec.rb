@@ -10,9 +10,7 @@ describe ECTAtSchoolPeriod do
   describe "validations" do
     subject { FactoryBot.create(:ect_at_school_period) }
 
-    it { is_expected.to validate_uniqueness_of(:finished_on).scoped_to(:teacher_id).allow_nil }
     it { is_expected.to validate_presence_of(:started_on) }
-    it { is_expected.to validate_uniqueness_of(:started_on).scoped_to(:teacher_id) }
     it { is_expected.to validate_presence_of(:school_id) }
     it { is_expected.to validate_presence_of(:teacher_id) }
 

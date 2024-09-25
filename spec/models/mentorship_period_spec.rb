@@ -7,17 +7,6 @@ describe MentorshipPeriod do
   describe "validations" do
     subject { FactoryBot.create(:mentorship_period) }
 
-    it {
-      is_expected.to validate_uniqueness_of(:finished_on)
-                       .scoped_to(:ect_at_school_period_id)
-                       .allow_nil
-                       .with_message("matches the end date of an existing period for mentee")
-    }
-    it {
-      is_expected.to validate_uniqueness_of(:started_on)
-                       .scoped_to(:ect_at_school_period_id)
-                       .with_message("matches the start date of an existing period for mentee")
-    }
     it { is_expected.to validate_presence_of(:started_on) }
     it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
     it { is_expected.to validate_presence_of(:mentor_at_school_period_id) }

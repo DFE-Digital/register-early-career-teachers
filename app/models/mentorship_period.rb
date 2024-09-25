@@ -13,15 +13,8 @@ class MentorshipPeriod < ApplicationRecord
              inverse_of: :mentorship_periods
 
   # Validations
-  validates :finished_on,
-            uniqueness: { scope: :ect_at_school_period_id,
-                          message: "matches the end date of an existing period for mentee",
-                          allow_nil: true }
-
   validates :started_on,
-            presence: true,
-            uniqueness: { scope: :ect_at_school_period_id,
-                          message: "matches the start date of an existing period for mentee" }
+            presence: true
 
   validates :ect_at_school_period_id,
             presence: true

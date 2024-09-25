@@ -13,45 +13,6 @@ describe MentorAtSchoolPeriod do
     it { is_expected.to validate_presence_of(:school_id) }
     it { is_expected.to validate_presence_of(:teacher_id) }
 
-    context "uniqueness of finished_on scoped to teacher_id and school_id" do
-      context "when the period matches the teacher_id, school_id and finished_on values of an existing mentor period" do
-        let!(:existing_period) { FactoryBot.create(:mentor_at_school_period) }
-        let(:finished_on) { existing_period.finished_on }
-        let(:started_on) { existing_period.finished_on - 1.day }
-        let(:school_id) { existing_period.school_id }
-        let(:teacher_id) { existing_period.teacher_id }
-
-        subject { FactoryBot.build(:mentor_at_school_period, teacher_id:, school_id:, started_on:, finished_on:) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(finished_on: ["matches the end date of an existing period"])
-        end
-      end
-    end
-
-    context "uniqueness of started_on scoped to teacher_id and school_id" do
-      context "when the period matches the teacher_id, school_id and started_on values of an existing mentor period" do
-        let!(:existing_period) { FactoryBot.create(:mentor_at_school_period) }
-        let(:started_on) { existing_period.started_on }
-        let(:school_id) { existing_period.school_id }
-        let(:teacher_id) { existing_period.teacher_id }
-
-        subject { FactoryBot.build(:mentor_at_school_period, teacher_id:, school_id:, started_on:) }
-
-        before do
-          subject.valid?
-        end
-
-        it "add an error" do
-          expect(subject.errors.messages).to include(started_on: ["matches the start date of an existing period"])
-        end
-      end
-    end
-
     context "teacher school distinct period" do
       context "when the period has not finished yet" do
         context "when the teacher has a school sibling mentor_at_school_period starting later" do
