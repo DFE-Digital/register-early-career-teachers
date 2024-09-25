@@ -130,7 +130,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
     t.integer "local_authority_code", null: false
     t.string "local_authority_name"
     t.integer "northing", null: false
-    t.integer "number", null: false
+    t.integer "establishment_number", null: false
     t.integer "phase_code", null: false
     t.string "phase_name"
     t.boolean "section_41_approved", null: false
@@ -244,10 +244,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
 
   create_table "schools", force: :cascade do |t|
     t.integer "urn", null: false
-    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_schools_on_name", unique: true
     t.index ["urn"], name: "schools_unique_urn", unique: true
   end
 
@@ -423,6 +421,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
   add_foreign_key "provider_partnerships", "academic_years", primary_key: "year"
   add_foreign_key "provider_partnerships", "delivery_partners"
   add_foreign_key "provider_partnerships", "lead_providers"
+  add_foreign_key "schools", "gias_schools", column: "urn", primary_key: "urn"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_failed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory(:gias_school, class: GIAS::School) do
-    eligible_for_registration
+    eligible_for_funding
     eligible_for_fip
     induction_eligible
 
@@ -8,13 +8,13 @@ FactoryBot.define do
     local_authority_code { Faker::Number.within(range: 1..999) }
     name { Faker::Educator.primary_school + " (#{urn})" }
     northing { Faker::Number.within(range: 0..1_300_000) }
-    number { Faker::Number.unique.within(range: 1..9_999) }
+    establishment_number { Faker::Number.unique.within(range: 1..9_999) }
     phase_code { Faker::Number.within(range: 0..7) }
     type_name { GIAS::School.type_name_for(type_code) }
     urn { Faker::Number.unique.within(range: 10_000..9_999_999) }
 
     # eligibility to be registered in the service
-    trait(:eligible_for_registration) do
+    trait(:eligible_for_funding) do
       open
       in_england
 

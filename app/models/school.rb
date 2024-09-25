@@ -5,10 +5,6 @@ class School < ApplicationRecord
   has_many :mentor_at_school_periods, inverse_of: :school
 
   # Validations
-  validates :name,
-            presence: true,
-            uniqueness: { case_sensitive: false }
-
   validates :urn,
             presence: true,
             uniqueness: true
