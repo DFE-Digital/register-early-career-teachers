@@ -1,5 +1,7 @@
 module TRS
   class Teacher
+    attr_reader :trn
+
     def initialize(data)
       @trn = data['trn']
       @first_name = data['firstName']
@@ -36,6 +38,20 @@ module TRS
         trs_qts_awarded: @qts_awarded,
         trs_qts_status_description: @qts_status_description,
       }
+    end
+
+    def begin_induction!(start_date)
+      api_client.begin_induction!(trn:, start_date:)
+    end
+
+    def complete_induction!(completion_date:, status:)
+      api_client.complete_induction!(trn:, completion_date:, status:)
+    end
+
+  private
+
+    def api_client
+      @api_client ||= TRS::APIClient.new
     end
   end
 end

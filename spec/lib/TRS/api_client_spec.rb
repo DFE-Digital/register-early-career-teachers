@@ -63,4 +63,23 @@ RSpec.describe TRS::APIClient do
       end
     end
   end
+
+  # FIXME: update this after we implement the API queries
+  describe '#begin_induction!' do
+    context "calls logger" do
+      it "logs the call" do
+        expect(Rails.logger).to receive(:info).with("TRS API: begin_induction(#{trn}, 2021-09-01)")
+        client.begin_induction!(trn:, start_date: '2021-09-01')
+      end
+    end
+  end
+
+  describe '#complete_induction!' do
+    context "calls logger" do
+      it "logs the call" do
+        expect(Rails.logger).to receive(:info).with("TRS API: complete_induction(#{trn}, 2021-09-01, completed)")
+        client.complete_induction!(trn:, completion_date: '2021-09-01', status: 'completed')
+      end
+    end
+  end
 end
