@@ -128,10 +128,10 @@ set-namespace:
 	$(eval NAMESPACE=$(shell jq -r '.namespace' "config/terraform/application/config/${CONFIG}.tfvars.json"))
 
 aks-console: get-cluster-credentials set-namespace
-	kubectl -n ${NAMESPACE} exec -ti --tty deployment/ec2-${ENVIRONMENT}-web -- /bin/sh -c "cd /app && bundle exec rails c"
+	kubectl -n ${NAMESPACE} exec -ti --tty deployment/${SERVICE_NAME}-${ENVIRONMENT}-web -- /bin/sh -c "cd /app && bundle exec rails c"
 
 aks-ssh: get-cluster-credentials set-namespace
-	kubectl -n ${NAMESPACE} exec -ti --tty deployment/ec2-${ENVIRONMENT}-web -- /bin/sh
+	kubectl -n ${NAMESPACE} exec -ti --tty deployment/${SERVICE_NAME}-${ENVIRONMENT}-web -- /bin/sh
 
 action-group-resources: set-azure-account # make env_aks action-group-resources ACTION_GROUP_EMAIL=notificationemail@domain.com . Must be run before setting enable_monitoring=true for each subscription
 	$(if $(ACTION_GROUP_EMAIL), , $(error Please specify a notification email for the action group))

@@ -1,1 +1,4 @@
 ---
+ENVIRONMENT_COLOUR: orange
+ENVIRONMENT_PHASE_BANNER_TAG: Migration
+ENVIRONMENT_PHASE_BANNER_CONTENT: This is the migration environment.
