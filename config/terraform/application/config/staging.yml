@@ -1,1 +1,4 @@
 ---
+ENVIRONMENT_COLOUR: purple
+ENVIRONMENT_PHASE_BANNER_TAG: Staging
+ENVIRONMENT_PHASE_BANNER_CONTENT: This is the staging environment.
