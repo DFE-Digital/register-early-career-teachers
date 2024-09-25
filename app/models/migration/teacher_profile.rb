@@ -1,6 +1,6 @@
 module Migration
   class TeacherProfile < Migration::Base
     belongs_to :user
-    belongs_to :participant_profile
+    has_many :participant_profiles
   end
 end
