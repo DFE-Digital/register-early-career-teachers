@@ -1,7 +1,10 @@
-default: &default
+shared_settings: &shared_settings
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+default: &default
+  <<: *shared_settings
   username: "<%= ENV['DB_USERNAME'] %>"
   password: "<%= ENV['DB_PASSWORD'] %>"
   host: "<%= ENV['DB_HOSTNAME'] %>"
@@ -15,8 +18,12 @@ test:
   <<: *default
   database: ecf2_test
 
+legacy:
+  <<: *shared_settings
+  url: "<%= ENV['MIGRATION_DATABASE_URL'] || 'postgres://localhost:5432' %>"
+
 production:
   <<: *default
   database: ecf2_production
   username: ecf2
-  password: <%= ENV["ECF2_DATABASE_PASSWORD"] %>
+  password: "<%= ENV['ECF2_DATABASE_PASSWORD'] %>"

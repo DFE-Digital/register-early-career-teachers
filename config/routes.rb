@@ -48,4 +48,11 @@ Rails.application.routes.draw do
       resources :register_ect, only: %i[edit update show], path: 'register-ect', controller: '/appropriate_bodies/claim_an_ect/register_ect', as: 'register'
     end
   end
+
+  scope module: "migration" do
+    resources :migrations, only: %i[index create] do
+      get "download_report/:model", on: :collection, action: :download_report, as: :download_report
+      post "reset", on: :collection, action: :reset, as: :reset
+    end
+  end
 end

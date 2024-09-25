@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_18_160307) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_19_120554) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,19 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_18_160307) do
     t.datetime "updated_at", null: false
     t.index ["appropriate_body_id"], name: "index_appropriate_body_roles_on_appropriate_body_id"
     t.index ["user_id"], name: "index_appropriate_body_roles_on_user_id"
+  end
+
+  create_table "data_migrations", force: :cascade do |t|
+    t.string "model", null: false
+    t.integer "processed_count", default: 0, null: false
+    t.integer "failure_count", default: 0, null: false
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.integer "total_count"
+    t.datetime "queued_at"
+    t.integer "worker"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "declarations", force: :cascade do |t|
@@ -177,6 +190,15 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_18_160307) do
     t.index ["ect_at_school_period_id"], name: "index_mentorship_periods_on_ect_at_school_period_id"
     t.index ["mentor_at_school_period_id", "ect_at_school_period_id", "started_on"], name: "idx_on_mentor_at_school_period_id_ect_at_school_per_d69dffeecc", unique: true
     t.index ["mentor_at_school_period_id"], name: "index_mentorship_periods_on_mentor_at_school_period_id"
+  end
+
+  create_table "migration_failures", force: :cascade do |t|
+    t.bigint "data_migration_id", null: false
+    t.json "item", null: false
+    t.string "failure_message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_migration_id"], name: "index_migration_failures_on_data_migration_id"
   end
 
   create_table "pending_induction_submissions", force: :cascade do |t|
