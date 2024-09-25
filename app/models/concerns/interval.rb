@@ -6,8 +6,6 @@ module Interval
     validate :period_dates_validation
 
     # Scopes
-    scope :extending_later_than, ->(date) { where("finished_on IS NULL OR finished_on > ?", date) }
-    scope :starting_earlier_than, ->(date) { where("started_on < ?", date) }
     scope :overlapping_with, ->(period) { where("range && daterange(?, ?)", period.started_on, period.finished_on) }
   end
 
