@@ -29,6 +29,9 @@ class GIAS::School < ApplicationRecord
   has_one :school, foreign_key: :urn, primary_key: :urn, inverse_of: :gias_school
   has_many :gias_school_links, class_name: "GIAS::SchoolLink", foreign_key: :urn, dependent: :destroy, inverse_of: :from_gias_school
 
+  # Callbacks
+  before_validation :compute_funding_eligibility
+
   # Validations
   validates :administrative_district_code,
             presence: true
@@ -106,5 +109,22 @@ class GIAS::School < ApplicationRecord
 
   def open?
     open_status? || proposed_to_close_status?
+  end
+
+  def set_funding_eligibility
+    self.funding_eligibility = compute_funding_eligibility
+  end
+
+private
+
+  def cip_only?
+    cip_only_type?(type_code)
+  end
+
+  def compute_funding_eligibility
+    return :ineligible unless open? && in_england? && (eligible_type?(type_code) || section_41_approved?)
+    return :eligible_for_cip if cip_only?
+
+    :eligible_for_fip
   end
 end

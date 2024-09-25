@@ -90,6 +90,12 @@ module GIAS
       ELIGIBLE_TYPE_CODES.include?(type_code)
     end
 
+    def english_district?(district_code)
+      # expanded to include the 9999 code which seems to have crept in and is preventing a couple of schools onboarding
+      # the establishment codes should filter out any that should not come in that are 9999 district
+      district_code.to_s.match?(/^([Ee]|9999)/)
+    end
+
     class_methods do
       def type_code_for(name)
         ALL_TYPES[name]
