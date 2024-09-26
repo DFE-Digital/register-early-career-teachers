@@ -24,64 +24,33 @@ describe MentorshipPeriod do
     it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
     it { is_expected.to validate_presence_of(:mentor_at_school_period_id) }
 
-    describe '#mentee_distinct_period' do
-      context 'when periods overlap' do
-        context 'when the mentee has a sibling mentorship periods that overlaps' do
-          let(:finished_on) { nil }
-
-          before do
-            subject.dup.save!
-            subject.valid?
-          end
-
-          it 'adds an error' do
-            expect(subject.errors.messages[:base]).to include("Mentee periods cannot overlap")
-          end
-        end
-
-        context 'when a new mentorship period starts on the day a previous one ends' do
-          before do
-            subject.dup.tap do |old_period|
-              old_period.started_on = subject.started_on - 2.months
-              old_period.finished_on = subject.started_on
-              old_period.save!
-            end
-          end
-
-          it 'is valid' do
-            expect(subject).to be_valid
-          end
-        end
-
-        context 'when a new mentorship period starts on the day before a previous one ends' do
-          before do
-            subject.dup.tap do |old_period|
-              old_period.started_on = subject.started_on - 2.months
-              old_period.finished_on = subject.started_on + 1
-              old_period.save!
+    describe 'overlapping periods' do
+      context '#mentee_distinct_period' do
+        PeriodHelpers::PeriodExamples.period_examples.each do |test|
+          context test.description do
+            let(:mentor_at_school_period) do
+              FactoryBot.create(:mentor_at_school_period, started_on: 5.years.ago, finished_on: nil)
             end
 
-            subject.valid?
-          end
-
-          it 'adds an error' do
-            expect(subject.errors.messages[:base]).to include("Mentee periods cannot overlap")
-          end
-        end
-
-        context 'when an existing mentorship period is ongoing' do
-          before do
-            subject.dup.tap do |old_period|
-              old_period.started_on = subject.started_on - 2.months
-              old_period.finished_on = nil
-              old_period.save!
+            let(:ect_at_school_period) do
+              FactoryBot.create(:ect_at_school_period, started_on: 5.years.ago, finished_on: nil)
             end
 
-            subject.valid?
-          end
+            let!(:existing_period) do
+              FactoryBot.create(:mentorship_period, mentee: ect_at_school_period, mentor: mentor_at_school_period, started_on: test.existing_period_range.first, finished_on: test.existing_period_range.last)
+            end
 
-          it 'a new period starting now results in an error' do
-            expect(subject.errors.messages[:base]).to include("Mentee periods cannot overlap")
+            it "is #{test.expected_valid ? 'valid' : 'invalid'}" do
+              mentorship_period = FactoryBot.build(:mentorship_period, mentee: ect_at_school_period, mentor: mentor_at_school_period, started_on: test.new_period_range.first, finished_on: test.new_period_range.last)
+              mentorship_period.valid?
+              message = 'Mentee periods cannot overlap'
+
+              if test.expected_valid
+                expect(mentorship_period.errors.messages[:base]).not_to include(message)
+              else
+                expect(mentorship_period.errors.messages[:base]).to include(message)
+              end
+            end
           end
         end
       end

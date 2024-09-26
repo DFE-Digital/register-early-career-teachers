@@ -15,7 +15,8 @@ class TrainingPeriod < ApplicationRecord
             presence: true
 
   validate :one_id_of_trainee_present
-  validate :trainee_distinct_period
+  validate :trainee_distinct_period, if: -> { ect_at_school_period.present? }
+  validate :mentor_distinct_period, if: -> { mentor_at_school_period.present? }
 
   validate :enveloped_by_ect_at_school_period,
            if: -> { ect_at_school_period.present? && started_on.present? }
@@ -54,6 +55,11 @@ private
   def trainee_distinct_period
     overlapping_siblings = TrainingPeriod.trainee_siblings_of(self).overlapping_with(self).exists?
     errors.add(:base, "Trainee periods cannot overlap") if overlapping_siblings
+  end
+
+  def mentor_distinct_period
+    overlapping_siblings = TrainingPeriod.mentor_siblings_of(self).overlapping_with(self).exists?
+    errors.add(:base, "Mentor periods cannot overlap") if overlapping_siblings
   end
 
   def enveloped_by_ect_at_school_period

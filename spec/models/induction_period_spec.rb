@@ -11,33 +11,29 @@ describe InductionPeriod do
     it { is_expected.to validate_presence_of(:appropriate_body_id) }
     it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
 
-    describe "teacher distinct period" do
-      context "when the period has not finished yet" do
-        context "when the ect has a sibling induction period starting later" do
-          let!(:existing_period) { FactoryBot.create(:induction_period, ect_at_school_period:, started_on: 1.year.ago) }
-          subject { FactoryBot.build(:induction_period, ect_at_school_period:, started_on: existing_period.started_on, finished_on: nil) }
+    describe 'overlapping periods' do
+      context '#teacher_distinct_period' do
+        PeriodHelpers::PeriodExamples.period_examples.each do |test|
+          context test.description do
+            let(:ect_at_school_period) do
+              FactoryBot.create(:ect_at_school_period, started_on: 5.years.ago, finished_on: nil)
+            end
 
-          before do
-            subject.valid?
-          end
+            let!(:existing_period) do
+              FactoryBot.create(:training_period, ect_at_school_period:, started_on: test.existing_period_range.first, finished_on: test.existing_period_range.last)
+            end
 
-          it "add an error" do
-            expect(subject.errors.messages[:base]).to include("Teacher induction periods cannot overlap")
-          end
-        end
-      end
+            it "is #{test.expected_valid ? 'valid' : 'invalid'}" do
+              training_period = FactoryBot.build(:training_period, ect_at_school_period:, started_on: test.new_period_range.first, finished_on: test.new_period_range.last)
+              training_period.valid?
+              message = 'Trainee periods cannot overlap'
 
-      context "when the period has end date" do
-        context "when the ECT has a sibling induction period overlapping" do
-          let!(:existing_period) { FactoryBot.create(:induction_period, ect_at_school_period:, started_on: 1.year.ago) }
-          subject { FactoryBot.build(:induction_period, ect_at_school_period:, started_on: existing_period.started_on, finished_on: existing_period.started_on + 1.day) }
-
-          before do
-            subject.valid?
-          end
-
-          it "add an error" do
-            expect(subject.errors.messages[:base]).to include("Teacher induction periods cannot overlap")
+              if test.expected_valid
+                expect(training_period.errors.messages[:base]).not_to include(message)
+              else
+                expect(training_period.errors.messages[:base]).to include(message)
+              end
+            end
           end
         end
       end

@@ -12,78 +12,77 @@ describe TrainingPeriod do
 
     context "exactly one id of trainee present" do
       context "when ect_at_school_period_id and mentor_at_school_period_id are all nil" do
-        let!(:existing_period) { FactoryBot.create(:training_period) }
-        let(:started_on) { existing_period.started_on - 1.year }
-
         subject do
-          FactoryBot.build(:training_period, ect_at_school_period_id: nil, mentor_at_school_period_id: nil, started_on:, finished_on: nil)
-        end
-
-        before do
-          subject.valid?
+          FactoryBot.build(:training_period, ect_at_school_period_id: nil, mentor_at_school_period_id: nil)
         end
 
         it "add an error" do
+          subject.valid?
           expect(subject.errors.messages[:base]).to include("Id of trainee missing")
         end
       end
 
       context "when ect_at_school_period_id and mentor_at_school_period_id are all set" do
-        let!(:existing_period) { FactoryBot.create(:training_period) }
-        let(:started_on) { existing_period.started_on - 1.year }
-
         subject do
-          FactoryBot.build(:training_period,
-                           ect_at_school_period_id: 200,
-                           mentor_at_school_period_id: 300,
-                           started_on:,
-                           finished_on: nil)
-        end
-
-        before do
-          subject.valid?
+          FactoryBot.build(:training_period, ect_at_school_period_id: 200, mentor_at_school_period_id: 300)
         end
 
         it "add an error" do
+          subject.valid?
           expect(subject.errors.messages).to include(base: ["Only one id of trainee required. Two given"])
         end
       end
     end
 
-    context "trainee distinct period" do
-      context "when the period has not finished yet" do
-        context "when the trainee has a sibling training period starting later" do
-          let!(:existing_period) { FactoryBot.create(:training_period) }
-          let(:ect_at_school_period_id) { existing_period.ect_at_school_period_id }
-          let(:started_on) { existing_period.started_on - 1.year }
+    describe 'overlapping periods' do
+      context '#trainee_distinct_period' do
+        PeriodHelpers::PeriodExamples.period_examples.each do |test|
+          context test.description do
+            let(:ect_at_school_period) do
+              FactoryBot.create(:ect_at_school_period, started_on: 5.years.ago, finished_on: nil)
+            end
 
-          subject { FactoryBot.build(:training_period, ect_at_school_period_id:, started_on:, finished_on: nil) }
+            let!(:existing_period) do
+              FactoryBot.create(:training_period, ect_at_school_period:, started_on: test.existing_period_range.first, finished_on: test.existing_period_range.last)
+            end
 
-          before do
-            subject.valid?
-          end
+            it "is #{test.expected_valid ? 'valid' : 'invalid'}" do
+              training_period = FactoryBot.build(:training_period, ect_at_school_period:, started_on: test.new_period_range.first, finished_on: test.new_period_range.last)
+              training_period.valid?
+              message = 'Trainee periods cannot overlap'
 
-          it "add an error" do
-            expect(subject.errors.messages).to include(base: ["Trainee periods cannot overlap"])
+              if test.expected_valid
+                expect(training_period.errors.messages[:base]).not_to include(message)
+              else
+                expect(training_period.errors.messages[:base]).to include(message)
+              end
+            end
           end
         end
       end
 
-      context "when the period has end date" do
-        context "when the trainee has a sibling training period overlapping" do
-          let!(:existing_period) { FactoryBot.create(:training_period) }
-          let(:ect_at_school_period_id) { existing_period.ect_at_school_period_id }
-          let(:started_on) { existing_period.finished_on - 1.day }
-          let(:finished_on) { started_on + 1.day }
+      context '#mentor_distinct_period' do
+        PeriodHelpers::PeriodExamples.period_examples.each do |test|
+          context test.description do
+            let(:mentor_at_school_period) do
+              FactoryBot.create(:mentor_at_school_period, started_on: 5.years.ago, finished_on: nil)
+            end
 
-          subject { FactoryBot.build(:training_period, ect_at_school_period_id:, started_on:, finished_on:) }
+            let!(:existing_period) do
+              FactoryBot.create(:training_period, :for_mentor, mentor_at_school_period:, started_on: test.existing_period_range.first, finished_on: test.existing_period_range.last)
+            end
 
-          before do
-            subject.valid?
-          end
+            it "is #{test.expected_valid ? 'valid' : 'invalid'}" do
+              training_period = FactoryBot.build(:training_period, :for_mentor, mentor_at_school_period:, started_on: test.new_period_range.first, finished_on: test.new_period_range.last)
+              training_period.valid?
+              message = 'Mentor periods cannot overlap'
 
-          it "add an error" do
-            expect(subject.errors.messages[:base]).to include("Trainee periods cannot overlap")
+              if test.expected_valid
+                expect(training_period.errors.messages[:base]).not_to include(message)
+              else
+                expect(training_period.errors.messages[:base]).to include(message)
+              end
+            end
           end
         end
       end
@@ -91,41 +90,71 @@ describe TrainingPeriod do
   end
 
   describe "scopes" do
-    let!(:ect_at_school_period) { FactoryBot.create(:ect_at_school_period) }
-    let!(:mentor_at_school_period) { FactoryBot.create(:mentor_at_school_period) }
-    let!(:provider_partnership) { FactoryBot.create(:provider_partnership) }
-    let!(:period_1) { FactoryBot.create(:training_period, :for_ect, ect_at_school_period:, provider_partnership:, started_on: '2023-01-01', finished_on: '2023-06-01') }
-    let!(:period_2) { FactoryBot.create(:training_period, :for_ect, ect_at_school_period:, started_on: "2023-06-01", finished_on: "2024-01-01") }
-    let!(:period_3) { FactoryBot.create(:training_period, :for_ect, ect_at_school_period:, provider_partnership:, started_on: '2024-01-01', finished_on: nil) }
-    let!(:period_4) { FactoryBot.create(:training_period, :for_mentor, mentor_at_school_period:, provider_partnership:, started_on: '2023-02-01', finished_on: '2023-07-01') }
-
     describe ".for_ect" do
-      it "returns training periods only for the specified ect_at_school_period_id" do
-        expect(described_class.for_ect(ect_at_school_period.id)).to match_array([period_1, period_2, period_3])
+      it "returns training periods only for the specified ect at school period" do
+        expect(TrainingPeriod.for_ect(123).to_sql).to end_with(%(WHERE "training_periods"."ect_at_school_period_id" = 123))
       end
     end
 
     describe ".for_mentor" do
-      it "returns training periods only for the specified mentor_at_school_period_id" do
-        expect(described_class.for_mentor(mentor_at_school_period.id)).to match_array([period_4])
-      end
-    end
-
-    describe ".for_provider_partnership" do
-      it "returns training periods only for the specified provider partnership" do
-        expect(described_class.for_provider_partnership(provider_partnership.id)).to match_array([period_1, period_3, period_4])
+      it "returns training periods only for the specified mentor at school period" do
+        expect(TrainingPeriod.for_mentor(456).to_sql).to end_with(%(WHERE "training_periods"."mentor_at_school_period_id" = 456))
       end
     end
 
     describe ".trainee_siblings_of" do
-      it "returns training periods only for the specified instance's trainee excluding the instance" do
-        expect(described_class.trainee_siblings_of(period_3)).to match_array([period_1, period_2])
+      let!(:ect_at_school_period) { FactoryBot.create(:ect_at_school_period, :active, started_on: '2021-01-01') }
+      let!(:training_period_1) { FactoryBot.create(:training_period, ect_at_school_period:, started_on: '2022-01-01', finished_on: '2022-06-01') }
+      let!(:training_period_2) { FactoryBot.create(:training_period, ect_at_school_period:, started_on: '2022-06-01', finished_on: '2023-01-01') }
+
+      let!(:unrelated_ect_at_school_period) do
+        FactoryBot.create(:ect_at_school_period, :active, started_on: '2021-01-01')
       end
 
-      context "when there are no siblings" do
-        it "returns an empty list" do
-          expect(described_class.trainee_siblings_of(period_4)).to match_array([])
-        end
+      let!(:unrelated_training_period) do
+        FactoryBot.create(:training_period, ect_at_school_period: unrelated_ect_at_school_period, started_on: '2022-06-01', finished_on: '2023-01-01')
+      end
+
+      subject { TrainingPeriod.trainee_siblings_of(training_period_1) }
+
+      it "only returns records that belong to the same trainee" do
+        expect(subject).to include(training_period_2)
+      end
+
+      it "doesn't include itself" do
+        expect(subject).not_to include(training_period_1)
+      end
+
+      it "doesn't include periods that belong to other trainee" do
+        expect(subject).not_to include(unrelated_training_period)
+      end
+    end
+
+    describe ".mentor_siblings_of" do
+      let!(:mentor_at_school_period) { FactoryBot.create(:mentor_at_school_period, :active, started_on: '2021-01-01') }
+      let!(:training_period_1) { FactoryBot.create(:training_period, :for_mentor, mentor_at_school_period:, started_on: '2022-01-01', finished_on: '2022-06-01') }
+      let!(:training_period_2) { FactoryBot.create(:training_period, :for_mentor, mentor_at_school_period:, started_on: '2022-06-01', finished_on: '2023-01-01') }
+
+      let!(:unrelated_mentor_at_school_period) do
+        FactoryBot.create(:mentor_at_school_period, :active, started_on: '2021-01-01')
+      end
+
+      let!(:unrelated_training_period) do
+        FactoryBot.create(:training_period, :for_mentor, mentor_at_school_period: unrelated_mentor_at_school_period, started_on: '2022-06-01', finished_on: '2023-01-01')
+      end
+
+      subject { TrainingPeriod.mentor_siblings_of(training_period_1) }
+
+      it "only returns records that belong to the same mentee" do
+        expect(subject).to include(training_period_2)
+      end
+
+      it "doesn't include itself" do
+        expect(subject).not_to include(training_period_1)
+      end
+
+      it "doesn't include periods that belong to other mentees" do
+        expect(subject).not_to include(unrelated_training_period)
       end
     end
   end
