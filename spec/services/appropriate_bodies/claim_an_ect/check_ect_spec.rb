@@ -3,9 +3,8 @@ require 'rails_helper'
 RSpec.describe AppropriateBodies::ClaimAnECT::CheckECT do
   let(:appropriate_body) { FactoryBot.build(:appropriate_body) }
   let(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
-  let(:pending_induction_submission_id) { pending_induction_submission.id }
 
-  subject { AppropriateBodies::ClaimAnECT::CheckECT.new(appropriate_body:, pending_induction_submission_id:) }
+  subject { AppropriateBodies::ClaimAnECT::CheckECT.new(appropriate_body:, pending_induction_submission:) }
 
   describe "#initialize" do
     it "assigns the provided appropriate body and pending induction submission params" do

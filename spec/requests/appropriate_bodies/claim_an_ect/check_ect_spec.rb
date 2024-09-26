@@ -62,7 +62,7 @@ RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT
 
           expect(AppropriateBodies::ClaimAnECT::CheckECT).to have_received(:new).with(
             appropriate_body:,
-            pending_induction_submission_id: pending_induction_submission_id_param
+            pending_induction_submission:
           )
 
           expect(response).to be_redirection
