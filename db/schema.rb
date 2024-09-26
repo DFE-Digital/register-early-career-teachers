@@ -382,6 +382,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
     t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
     t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
     t.index ["search"], name: "index_teachers_on_search", using: :gin
+    t.datetime "induction_start_date_submitted_to_trs_at"
     t.index ["trn"], name: "index_teachers_on_trn", unique: true
   end
 
