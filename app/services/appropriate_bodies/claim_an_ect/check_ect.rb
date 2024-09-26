@@ -3,11 +3,9 @@ module AppropriateBodies
     class CheckECT
       attr_reader :appropriate_body, :pending_induction_submission, :confirmed
 
-      def initialize(appropriate_body:, pending_induction_submission_id:)
-        # FIXME: find within the scope of the current AB
-
+      def initialize(appropriate_body:, pending_induction_submission:)
         @appropriate_body = appropriate_body
-        @pending_induction_submission = PendingInductionSubmission.find(pending_induction_submission_id)
+        @pending_induction_submission = pending_induction_submission
       end
 
       def confirm_info_correct(confirmed)

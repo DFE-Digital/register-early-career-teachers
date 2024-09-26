@@ -8,8 +8,11 @@ module AppropriateBodies
       end
 
       def update
-        @pending_induction_submission = AppropriateBodies::ClaimAnECT::CheckECT
-          .new(appropriate_body: @appropriate_body, pending_induction_submission_id: params[:id])
+        # FIXME: find within the scope of the current AB
+        @pending_induction_submission = PendingInductionSubmission.find(params[:id])
+
+        AppropriateBodies::ClaimAnECT::CheckECT
+          .new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
           .confirm_info_correct(confirmed?)
 
         if @pending_induction_submission.save(context: :confirming_ect)

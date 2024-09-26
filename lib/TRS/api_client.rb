@@ -20,5 +20,15 @@ module TRS
         raise "API request failed: #{response.status} #{response.body}"
       end
     end
+
+    # FIXME: Update this method after the API is implemented
+    def begin_induction!(trn:, start_date:)
+      Rails.logger.info("TRS API: begin_induction(#{trn}, #{start_date})")
+    end
+
+    # FIXME: Update this method after the API is implemented
+    def complete_induction!(trn:, completion_date:, status:)
+      Rails.logger.info("TRS API: complete_induction(#{trn}, #{completion_date}, #{status})")
+    end
   end
 end
