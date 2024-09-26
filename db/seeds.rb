@@ -241,12 +241,12 @@ User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com").tap do |vel
   AppropriateBodyRole.create!(appropriate_body: golden_leaf_academy, user: velma_dinkley)
 end
 
-User.create!(name: "Fred Jones (DP)", email: "freddy@example.com").tap do |fred_jones|
-  DeliveryPartnerRole.create!(delivery_partner: grain_teaching_school_hub, user: fred_jones)
+User.create!(name: "Fred Jones (AB)", email: "freddy@example.com").tap do |fred_jones|
+  AppropriateBodyRole.create!(appropriate_body: umber_teaching_school_hub, user: fred_jones)
 end
 
-User.create!(name: "Daphne Blake (LP)", email: "daphne@example.com").tap do |daphne_blake|
-  LeadProviderRole.create!(lead_provider: national_meadows_institute, user: daphne_blake)
+User.create!(name: "Daphne Blake (DfE staff)", email: "daphne@example.com").tap do |daphne_blake|
+  DfERole.create!(user: daphne_blake)
 end
 
 User.create!(name: "Norville Rogers (DfE staff)", email: "shaggy@example.com").tap do |norville_rogers|

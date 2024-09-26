@@ -1,12 +1,17 @@
 require "rails_helper"
-require Rails.root.join "spec/concerns/authorisable"
 
 describe User do
   subject(:user) { FactoryBot.build(:user) }
 
-  it { is_expected.to validate_presence_of(:email) }
-  it { is_expected.to validate_uniqueness_of(:email) }
-  it { is_expected.to validate_presence_of(:name) }
+  describe 'validation' do
+    it { is_expected.to validate_presence_of(:email) }
+    it { is_expected.to validate_uniqueness_of(:email) }
+    it { is_expected.to validate_presence_of(:name) }
+  end
 
-  it_behaves_like "Authorisable"
+  describe 'associations' do
+    it { is_expected.to have_many(:appropriate_body_roles) }
+    it { is_expected.to have_many(:appropriate_bodies).through(:appropriate_body_roles) }
+    it { is_expected.to have_many(:dfe_roles) }
+  end
 end
