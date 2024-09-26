@@ -23,6 +23,8 @@ class MentorshipPeriod < ApplicationRecord
             presence: true
 
   validate :mentee_distinct_period
+  validate :enveloped_by_ect_at_school_period, if: -> { mentee.present? && started_on.present? }
+  validate :enveloped_by_mentor_at_school_period, if: -> { mentor.present? && started_on.present? }
 
   # Scopes
   scope :for_mentee, ->(id) { where(ect_at_school_period_id: id) }
@@ -32,7 +34,20 @@ class MentorshipPeriod < ApplicationRecord
 private
 
   def mentee_distinct_period
-    overlapping_siblings = MentorshipPeriod.mentee_siblings_of(self).overlapping_with(self).exists?
-    errors.add(:base, "Mentee periods cannot overlap") if overlapping_siblings
+    return unless MentorshipPeriod.mentee_siblings_of(self).overlapping_with(self).exists?
+
+    errors.add(:base, "Mentee periods cannot overlap")
+  end
+
+  def enveloped_by_ect_at_school_period
+    return if (mentee.started_on..mentee.finished_on).cover?(started_on..finished_on)
+
+    errors.add(:base, "Date range is not contained by the ECT at school period")
+  end
+
+  def enveloped_by_mentor_at_school_period
+    return if (mentor.started_on..mentor.finished_on).cover?(started_on..finished_on)
+
+    errors.add(:base, "Date range is not contained by the mentor at school period")
   end
 end
