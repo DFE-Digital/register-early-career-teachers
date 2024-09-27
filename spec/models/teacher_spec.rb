@@ -7,7 +7,8 @@ describe Teacher do
   describe "validations" do
     subject { FactoryBot.build(:teacher) }
 
-    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:first_name) }
+    it { is_expected.to validate_presence_of(:last_name) }
     it { is_expected.to validate_uniqueness_of(:trn).with_message('TRN already exists').case_insensitive }
 
     describe "trn" do

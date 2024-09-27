@@ -30,8 +30,8 @@ describe Interval do
   end
 
   describe "scopes" do
-    let!(:teacher_id) { FactoryBot.create(:teacher, name: "Teacher One").id }
-    let!(:teacher_2_id) { FactoryBot.create(:teacher, name: "Teacher Two").id }
+    let!(:teacher_id) { FactoryBot.create(:teacher, first_name: "Teacher", last_name: "One").id }
+    let!(:teacher_2_id) { FactoryBot.create(:teacher, first_name: "Teacher", last_name: "Two").id }
     let!(:school_id) { FactoryBot.create(:school, urn: "1234567").id }
     let!(:period_1) { DummyMentor.create(teacher_id:, school_id:, started_on: '2023-01-01', finished_on: '2023-06-01') }
     let!(:period_2) { DummyMentor.create(teacher_id:, school_id:, started_on: '2023-07-01', finished_on: '2023-12-01') }

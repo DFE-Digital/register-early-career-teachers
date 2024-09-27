@@ -6,7 +6,10 @@ class Teacher < ApplicationRecord
   has_many :mentor_at_school_periods, inverse_of: :teacher
 
   # Validations
-  validates :name,
+  validates :first_name,
+            presence: true
+
+  validates :last_name,
             presence: true
 
   validates :trn,
