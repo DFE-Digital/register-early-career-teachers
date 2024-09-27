@@ -8,21 +8,20 @@ class TrainingPeriod < ApplicationRecord
   has_many :declarations, inverse_of: :training_period
 
   # Validations
-  validates :finished_on,
-            uniqueness: { scope: %i[ect_at_school_period_id mentor_at_school_period_id],
-                          message: "matches the end date of an existing period for trainee",
-                          allow_nil: true }
-
   validates :started_on,
-            presence: true,
-            uniqueness: { scope: %i[ect_at_school_period_id mentor_at_school_period_id],
-                          message: "matches the start date of an existing period for trainee" }
+            presence: true
 
   validates :provider_partnership_id,
             presence: true
 
   validate :one_id_of_trainee_present
-  validate :trainee_distinct_period
+  validate :trainee_distinct_period, if: -> { ect_at_school_period.present? }
+  validate :mentor_distinct_period, if: -> { mentor_at_school_period.present? }
+
+  validate :enveloped_by_ect_at_school_period,
+           if: -> { ect_at_school_period.present? && started_on.present? }
+  validate :enveloped_by_mentor_at_school_period,
+           if: -> { mentor_at_school_period.present? && started_on.present? }
 
   # Scopes
   scope :for_ect, ->(ect_at_school_period_id) { where(ect_at_school_period_id:) }
@@ -56,5 +55,22 @@ private
   def trainee_distinct_period
     overlapping_siblings = TrainingPeriod.trainee_siblings_of(self).overlapping_with(self).exists?
     errors.add(:base, "Trainee periods cannot overlap") if overlapping_siblings
+  end
+
+  def mentor_distinct_period
+    overlapping_siblings = TrainingPeriod.mentor_siblings_of(self).overlapping_with(self).exists?
+    errors.add(:base, "Mentor periods cannot overlap") if overlapping_siblings
+  end
+
+  def enveloped_by_ect_at_school_period
+    return if (ect_at_school_period.started_on..ect_at_school_period.finished_on).cover?(started_on..finished_on)
+
+    errors.add(:base, "Date range is not contained by the ECT at school period")
+  end
+
+  def enveloped_by_mentor_at_school_period
+    return if (mentor_at_school_period.started_on..mentor_at_school_period.finished_on).cover?(started_on..finished_on)
+
+    errors.add(:base, "Date range is not contained by the ECT at school period")
   end
 end

@@ -8,15 +8,8 @@ class MentorAtSchoolPeriod < ApplicationRecord
   has_many :training_periods, inverse_of: :mentor_at_school_period
 
   # Validations
-  validates :finished_on,
-            uniqueness: { scope: %i[teacher_id school_id],
-                          message: "matches the end date of an existing period",
-                          allow_nil: true }
-
   validates :started_on,
-            presence: true,
-            uniqueness: { scope: %i[teacher_id school_id],
-                          message: "matches the start date of an existing period" }
+            presence: true
 
   validates :school_id,
             presence: true

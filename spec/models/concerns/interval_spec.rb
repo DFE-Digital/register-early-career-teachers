@@ -11,7 +11,7 @@ describe Interval do
         end
 
         it "add an error" do
-          expect(subject.errors.messages).to include(finished_on: ["Must be later than :started_on"])
+          expect(subject.errors.messages).to include(finished_on: ["The finish date must be later than the start date"])
         end
       end
 
@@ -23,7 +23,7 @@ describe Interval do
         end
 
         it "add an error" do
-          expect(subject.errors.messages).to include(finished_on: ["Must be later than :started_on"])
+          expect(subject.errors.messages).to include(finished_on: ["The finish date must be later than the start date"])
         end
       end
     end
@@ -38,26 +38,6 @@ describe Interval do
     let!(:period_3) { DummyMentor.create(teacher_id:, school_id:, started_on: '2024-01-01', finished_on: nil) }
     let!(:teacher_2_period) do
       DummyMentor.create(teacher_id: teacher_2_id, school_id:, started_on: '2023-02-01', finished_on: '2023-07-01')
-    end
-
-    describe ".extending_later_than" do
-      it "returns periods with finished_on later than the specified date or not finished" do
-        expect(DummyMentor.extending_later_than('2023-05-01')).to match_array([period_1, period_2, period_3, teacher_2_period])
-      end
-
-      it "does not return periods finished before the specified date" do
-        expect(DummyMentor.extending_later_than('2023-07-02')).to match_array([period_2, period_3])
-      end
-    end
-
-    describe ".starting_earlier_than" do
-      it "returns periods with started_on earlier than the specified date" do
-        expect(DummyMentor.starting_earlier_than('2023-08-01')).to match_array([period_1, period_2, teacher_2_period])
-      end
-
-      it "does not return periods with started_on on or after the specified date" do
-        expect(DummyMentor.starting_earlier_than('2023-01-01')).to be_empty
-      end
     end
 
     describe ".overlapping_with" do

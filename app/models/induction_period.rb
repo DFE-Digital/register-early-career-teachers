@@ -6,15 +6,8 @@ class InductionPeriod < ApplicationRecord
   belongs_to :ect_at_school_period, class_name: "ECTAtSchoolPeriod", inverse_of: :induction_periods
 
   # Validations
-  validates :finished_on,
-            uniqueness: { scope: :ect_at_school_period_id,
-                          message: "matches the end date of an existing period for ECT",
-                          allow_nil: true }
-
   validates :started_on,
-            presence: true,
-            uniqueness: { scope: :ect_at_school_period_id,
-                          message: "matches the start date of an existing period for ECT" }
+            presence: true
 
   validates :appropriate_body_id,
             presence: true
@@ -31,6 +24,8 @@ class InductionPeriod < ApplicationRecord
                          message: "Choose an induction programme" }
 
   validate :teacher_distinct_period
+  validate :enveloped_by_ect_at_school_period,
+           if: -> { ect_at_school_period.present? && started_on.present? }
 
   # Scopes
   scope :for_ect, ->(ect_at_school_period_id) { where(ect_at_school_period_id:) }
@@ -42,5 +37,11 @@ private
   def teacher_distinct_period
     overlapping_siblings = InductionPeriod.siblings_of(self).overlapping_with(self).exists?
     errors.add(:base, "Teacher induction periods cannot overlap") if overlapping_siblings
+  end
+
+  def enveloped_by_ect_at_school_period
+    return if (ect_at_school_period.started_on..ect_at_school_period.finished_on).cover?(started_on..finished_on)
+
+    errors.add(:base, "Date range is not contained by the ECT at school period")
   end
 end
