@@ -7,5 +7,6 @@ module Migration
 
     scope :ect, -> { where(type: "ParticipantProfile::ECT") }
     scope :mentor, -> { where(type: "ParticipantProfile::Mentor") }
+    scope :ect_or_mentor, -> { ect.or(mentor) }
   end
 end
