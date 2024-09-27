@@ -1,5 +1,5 @@
 module Migration
   class LeadProvider < Migration::Base
-    self.table_name = 'lead_providers'
+    has_many :partnerships
   end
 end
