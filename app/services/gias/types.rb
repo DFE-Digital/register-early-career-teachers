@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 module GIAS
-  module Types
-    extend ActiveSupport::Concern
-
+  class Types
     ALL_TYPES = {
       "Community school" => 1,
       "Voluntary aided school" => 2,
@@ -80,30 +78,12 @@ module GIAS
       "Other independent school"
     ).freeze
 
-  private
-
-    def cip_only_type?(type_code)
-      CIP_ONLY_EXCEPT_WELSH_CODES.include?(type_code)
+    def self.type_code_for(name)
+      ALL_TYPES[name]
     end
 
-    def eligible_type?(type_code)
-      ELIGIBLE_TYPE_CODES.include?(type_code)
-    end
-
-    def english_district?(district_code)
-      # expanded to include the 9999 code which seems to have crept in and is preventing a couple of schools onboarding
-      # the establishment codes should filter out any that should not come in that are 9999 district
-      district_code.to_s.match?(/^([Ee]|9999)/)
-    end
-
-    class_methods do
-      def type_code_for(name)
-        ALL_TYPES[name]
-      end
-
-      def type_name_for(code)
-        ALL_TYPES.key(code)
-      end
+    def self.type_name_for(code)
+      ALL_TYPES.key(code)
     end
   end
 end

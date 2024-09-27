@@ -3,7 +3,7 @@ namespace :gias do
   task import: :environment do
     logger = Logger.new($stdout)
     logger.info "Importing GIAS schools data, this may take a couple minutes..."
-    GIAS::Schools::Importer.new.fetch
+    GIAS::Importer.new.fetch
     logger.info "GIAS schools data import complete!"
   end
 end

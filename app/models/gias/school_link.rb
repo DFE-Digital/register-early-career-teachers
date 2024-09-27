@@ -26,9 +26,6 @@ class GIAS::SchoolLink < ApplicationRecord
   belongs_to :to_gias_school, class_name: "GIAS::School", foreign_key: :link_urn, primary_key: :urn
 
   # Validations
-  validates :link_date,
-            presence: true
-
   validates :link_type,
             inclusion: { in: LINK_TYPES }
 

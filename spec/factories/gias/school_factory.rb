@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory(:gias_school, class: GIAS::School) do
-    eligible_for_funding
+    eligible_for_registration
     eligible_for_fip
     induction_eligible
 
@@ -9,12 +9,12 @@ FactoryBot.define do
     name { Faker::Educator.primary_school + " (#{urn})" }
     northing { Faker::Number.within(range: 0..1_300_000) }
     establishment_number { Faker::Number.unique.within(range: 1..9_999) }
-    phase_code { Faker::Number.within(range: 0..7) }
-    type_name { GIAS::School.type_name_for(type_code) }
+    phase_name { "Phase one" }
+    type_name { GIAS::Types.type_name_for(type_code) }
     urn { Faker::Number.unique.within(range: 10_000..9_999_999) }
 
     # eligibility to be registered in the service
-    trait(:eligible_for_funding) do
+    trait(:eligible_for_registration) do
       open
       in_england
 
@@ -44,6 +44,7 @@ FactoryBot.define do
     end
 
     trait(:eligible_for_cip) do
+      cip_only_type_code
       funding_eligibility { "eligible_for_cip" }
     end
 
@@ -53,11 +54,11 @@ FactoryBot.define do
 
     # induction_eligibility
     trait(:induction_eligible) do
-      induction_eligibility { "eligible" }
+      induction_eligibility { true }
     end
 
     trait(:induction_ineligible) do
-      induction_eligibility { "ineligible" }
+      induction_eligibility { false }
     end
 
     # section 41 approved
@@ -80,20 +81,22 @@ FactoryBot.define do
 
     # location
     trait(:in_england) do
-      administrative_district_code { ["E#{Faker::Number.decimal_part(digits: 8)}", "9999"].sample }
+      in_england { true }
+      administrative_district_name { "London" }
     end
 
     trait(:not_in_england) do
-      administrative_district_code { "W06000023" }
+      in_england { false }
+      administrative_district_name { "Cardiff" }
     end
 
     # type code
     trait(:cip_only_type_code) do
-      type_code { GIAS::School::CIP_ONLY_TYPE_CODES.sample }
+      type_code { GIAS::Types::CIP_ONLY_TYPE_CODES.sample }
     end
 
     trait(:not_cip_only_type_code) do
-      type_code { (GIAS::School::ALL_TYPE_CODES - GIAS::School::CIP_ONLY_TYPE_CODES).sample }
+      type_code { (GIAS::Types::ALL_TYPE_CODES - GIAS::Types::CIP_ONLY_TYPE_CODES).sample }
     end
 
     trait(:eligible_type_code) do
@@ -101,7 +104,7 @@ FactoryBot.define do
     end
 
     trait(:not_eligible_type_code) do
-      type_code { (GIAS::School::ALL_TYPE_CODES - GIAS::Types::ELIGIBLE_TYPE_CODES).sample }
+      type_code { (GIAS::Types::ALL_TYPE_CODES - GIAS::Types::ELIGIBLE_TYPE_CODES).sample }
     end
   end
 end

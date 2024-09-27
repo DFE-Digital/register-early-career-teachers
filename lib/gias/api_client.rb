@@ -17,7 +17,7 @@ module GIAS
         :get_extract,
         message: { "tns:Id" => ENV["GIAS_EXTRACT_ID"] },
         wsse_auth: [ENV["GIAS_API_USER"], ENV["GIAS_API_PASSWORD"]],
-        wsse_timestamp: true,
+        wsse_timestamp: true
       )
       parts = parse_body(res.http)
       parts.second.body.to_s
@@ -47,7 +47,7 @@ module GIAS
     def parse_body(http)
       Mail::Part.new(
         headers: http.headers,
-        body: http.body,
+        body: http.body
       ).body.split!(boundary(http)).parts
     end
 
