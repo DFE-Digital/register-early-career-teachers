@@ -5,7 +5,7 @@ def print_seed_info(text, indent: 0)
 end
 
 def describe_mentorship_period(mp)
-  print_seed_info("#{mp.mentor.teacher.name} mentoring #{mp.mentee.teacher.name} at #{mp.mentor.school.name}", indent: 2)
+  print_seed_info("#{mp.mentor.teacher.name} mentoring #{mp.mentee.teacher.name} at #{mp.mentor.school.gias_school.name}", indent: 2)
 end
 
 print_seed_info("Adding teachers")
@@ -21,14 +21,35 @@ Teacher.create!(name: 'Gemma Jones', trn: '9578426')
 
 print_seed_info("Adding schools")
 
-ackley_bridge = School.create!(urn: 3_375_958, name: "Ackley Bridge")
-abbey_grove_school = School.create!(urn: 1_759_427, name: "Abbey Grove School")
-School.create!(urn: 2_472_261, name: "Grange Hill")
-School.create!(urn: 3_583_173, name: "Coal Hill School")
-School.create!(urn: 5_279_293, name: "Malory Towers")
-School.create!(urn: 2_921_596, name: "St Clare's School")
-School.create!(urn: 2_976_163, name: "Brookfield School")
-School.create!(urn: 4_594_193, name: "Crunchem Hall Primary School")
+school_data = [
+  { urn: 3_375_958, name: "Ackley Bridge" },
+  { urn: 1_759_427, name: "Abbey Grove School" },
+  { urn: 2_472_261, name: "Grange Hill" },
+  { urn: 3_583_173, name: "Coal Hill School" },
+  { urn: 5_279_293, name: "Malory Towers" },
+  { urn: 2_921_596, name: "St Clare's School" },
+  { urn: 2_976_163, name: "Brookfield School" },
+  { urn: 4_594_193, name: "Crunchem Hall Primary School" },
+]
+
+school_data.each do |school_args|
+  # FIXME: this is a bit nasty but gets the seeds working again
+  GIAS::School.create!(school_args.merge(funding_eligibility: :eligible_for_fip,
+                                         induction_eligibility: :eligible,
+                                         administrative_district_code: "E123",
+                                         easting: rand(700_000),
+                                         northing: rand(1_300_000),
+                                         local_authority_code: rand(20),
+                                         establishment_number: school_args[:urn],
+                                         phase_code: rand(8),
+                                         type_code: GIAS::Types::ALL_TYPES.values.sample,
+                                         section_41_approved: false))
+
+  School.create!(school_args.except(:name))
+end
+
+ackley_bridge = School.find_by(urn: 3_375_958)
+abbey_grove_school = School.find_by(urn: 1_759_427)
 
 print_seed_info("Adding appropriate bodies")
 
