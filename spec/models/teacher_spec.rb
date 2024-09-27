@@ -25,4 +25,31 @@ describe Teacher do
       end
     end
   end
+
+  describe 'scopes' do
+    describe '#search' do
+      it "searches the 'search' column using a tsquery" do
+        expect(Teacher.search('Joey').to_sql).to end_with(%{WHERE (teachers.search @@ websearch_to_tsquery('Joey'))})
+      end
+
+      describe "matching" do
+        let!(:target) { FactoryBot.create(:teacher, first_name: "Malcolm", last_name: "Wilkerson", corrected_name: nil) }
+        let!(:other) { FactoryBot.create(:teacher, first_name: "Reese", last_name: "Wilkerson", corrected_name: nil) }
+
+        it "returns only the expected result" do
+          results = Teacher.search('Malcolm')
+
+          expect(results).to include(target)
+          expect(results).not_to include(other)
+        end
+
+        it "supports web search syntax" do
+          results = Teacher.search('Wilkerson -Reese')
+
+          expect(results).to include(target)
+          expect(results).not_to include(other)
+        end
+      end
+    end
+  end
 end

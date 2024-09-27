@@ -1,6 +1,8 @@
 class Teacher < ApplicationRecord
   TRN_FORMAT = %r{\A\d{7}\z}
 
+  self.ignored_columns = %i[search]
+
   # Associations
   has_many :ect_at_school_periods, inverse_of: :teacher
   has_many :mentor_at_school_periods, inverse_of: :teacher
@@ -15,4 +17,6 @@ class Teacher < ApplicationRecord
   validates :trn,
             format: { with: TRN_FORMAT, message: "TRN must be 7 numeric digits" },
             uniqueness: { message: 'TRN already exists', case_sensitive: false }
+
+  scope :search, ->(query_string) { where('teachers.search @@ websearch_to_tsquery(?)', query_string) }
 end
