@@ -10,8 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
   # Custom types defined in this database.
@@ -371,11 +372,16 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_24_152526) do
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "corrected_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "trn", null: false
-    t.index ["name"], name: "index_teachers_on_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.virtual "search", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((COALESCE(first_name, ''::character varying))::text || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(corrected_name, ''::character varying))::text))", stored: true
+    t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
+    t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
+    t.index ["search"], name: "index_teachers_on_search", using: :gin
     t.index ["trn"], name: "index_teachers_on_trn", unique: true
   end
 
