@@ -5,19 +5,19 @@ def print_seed_info(text, indent: 0)
 end
 
 def describe_mentorship_period(mp)
-  print_seed_info("#{mp.mentor.teacher.name} mentoring #{mp.mentee.teacher.name} at #{mp.mentor.school.gias_school.name}", indent: 2)
+  print_seed_info("#{mp.mentor.teacher.first_name} #{mp.mentor.teacher.last_name} mentoring #{mp.mentee.teacher.first_name} #{mp.mentee.teacher.last_name} at #{mp.mentor.school.gias_school.name}", indent: 2)
 end
 
 print_seed_info("Adding teachers")
 
-emma_thompson = Teacher.create!(name: 'Emma Thompson', trn: '1023456')
-kate_winslet = Teacher.create!(name: 'Kate Winslet', trn: '1023457')
-alan_rickman = Teacher.create!(name: 'Alan Rickman', trn: '2084589')
-hugh_grant = Teacher.create!(name: 'Hugh Grant', trn: '3657894')
-Teacher.create!(name: 'Harriet Walter', trn: '2017654')
-hugh_laurie = Teacher.create!(name: 'Hugh Laurie', trn: '4786654')
-Teacher.create!(name: 'Imogen Stubbs', trn: '6352869')
-Teacher.create!(name: 'Gemma Jones', trn: '9578426')
+emma_thompson = Teacher.create!(first_name: 'Emma', last_name: 'Thompson', trn: '1023456')
+kate_winslet = Teacher.create!(first_name: 'Kate', last_name: 'Winslet', trn: '1023457')
+alan_rickman = Teacher.create!(first_name: 'Alan', last_name: 'Rickman', trn: '2084589')
+hugh_grant = Teacher.create!(first_name: 'Hugh', last_name: 'Grant', trn: '3657894')
+Teacher.create!(first_name: 'Harriet', last_name: 'Walter', trn: '2017654')
+hugh_laurie = Teacher.create!(first_name: 'Hugh', last_name: 'Laurie', trn: '4786654')
+Teacher.create!(first_name: 'Imogen', last_name: 'Stubbs', trn: '6352869')
+Teacher.create!(first_name: 'Gemma', last_name: 'Jones', trn: '9578426')
 
 print_seed_info("Adding schools")
 
