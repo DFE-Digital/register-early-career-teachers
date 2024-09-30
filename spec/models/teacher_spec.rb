@@ -2,6 +2,7 @@ describe Teacher do
   describe "associations" do
     it { is_expected.to have_many(:ect_at_school_periods) }
     it { is_expected.to have_many(:mentor_at_school_periods) }
+    it { is_expected.to have_many(:induction_periods_reported_by_appropriate_body) }
   end
 
   describe "validations" do

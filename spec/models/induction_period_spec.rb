@@ -2,6 +2,7 @@ describe InductionPeriod do
   describe "associations" do
     it { is_expected.to belong_to(:appropriate_body) }
     it { is_expected.to belong_to(:ect_at_school_period).inverse_of(:induction_periods) }
+    it { is_expected.to belong_to(:teacher) }
   end
 
   describe "validations" do
@@ -9,7 +10,35 @@ describe InductionPeriod do
     subject { FactoryBot.build(:induction_period, ect_at_school_period:) }
 
     it { is_expected.to validate_presence_of(:appropriate_body_id) }
-    it { is_expected.to validate_presence_of(:ect_at_school_period_id) }
+
+    describe 'teacher_id_or_ect_at_school_period_id_present' do
+      context 'when both teacher_id and ect_at_school_period_id are blank' do
+        subject { FactoryBot.build(:induction_period, teacher_id: nil, ect_at_school_period_id: nil) }
+        it { is_expected.not_to be_valid }
+      end
+    end
+
+    describe 'teacher_id_or_ect_at_school_period_id_present' do
+      context 'when teacher_id is present' do
+        subject { FactoryBot.build(:induction_period, appropriate_body: FactoryBot.create(:appropriate_body), teacher_id: 123, ect_at_school_period_id: nil) }
+        it { is_expected.to be_valid }
+      end
+
+      context 'when ect_at_school_period_id is present' do
+        subject { FactoryBot.build(:induction_period, appropriate_body: FactoryBot.create(:appropriate_body), teacher_id: nil, ect_at_school_period_id: 123) }
+        it { is_expected.to be_valid }
+      end
+
+      context 'when both teacher_id and ect_at_school_period_id are present' do
+        subject { FactoryBot.build(:induction_period, appropriate_body: FactoryBot.create(:appropriate_body), teacher_id: 123, ect_at_school_period_id: 123) }
+        it { is_expected.to be_valid }
+      end
+
+      context 'when both teacher_id and ect_at_school_period_id are blank' do
+        subject { FactoryBot.build(:induction_period, appropriate_body: FactoryBot.create(:appropriate_body), teacher_id: nil, ect_at_school_period_id: nil) }
+        it { is_expected.not_to be_valid }
+      end
+    end
 
     describe 'overlapping periods' do
       context '#teacher_distinct_period' do
