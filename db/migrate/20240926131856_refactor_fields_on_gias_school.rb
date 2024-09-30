@@ -5,8 +5,12 @@ class RefactorFieldsOnGIASSchool < ActiveRecord::Migration[7.2]
     change_table :gias_schools do |t|
       t.remove :administrative_district_code, type: :string, null: false
       t.remove :phase_code, type: :integer, null: false
-
+      t.remove :type_code, type: :integer, null: false
       t.remove :induction_eligibility, type: :enum, enum_type: :induction_eligibility_status, null: false
+      t.remove :easting, type: :string, null: false
+      t.remove :northing, type: :string, null: false
+
+      t.change_null(:type_name, false)
       t.boolean :induction_eligibility, null: false
       t.boolean :in_england, null: false
       t.remove_index :name, name: "index_gias_schools_on_name"

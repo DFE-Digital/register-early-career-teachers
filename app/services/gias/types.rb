@@ -2,64 +2,62 @@
 
 module GIAS
   class Types
-    ALL_TYPES = {
-      "Community school" => 1,
-      "Voluntary aided school" => 2,
-      "Voluntary controlled school" => 3,
-      "Foundation school" => 5,
-      "City technology college" => 6,
-      "Community special school" => 7,
-      "Non-maintained special school" => 8,
-      "Other independent special school" => 10,
-      "Other independent school" => 11,
-      "Foundation special school" => 12,
-      "Pupil referral unit" => 14,
-      "Local authority nursery school" => 15,
-      "Further education" => 18,
-      "Secure units" => 24,
-      "Offshore schools" => 25,
-      "Service children's education" => 26,
-      "Miscellaneous" => 27,
-      "Academy sponsor led" => 28,
-      "Higher education institutions" => 29,
-      "Welsh establishment" => 30,
-      "Sixth form centres" => 31,
-      "Special post 16 institution" => 32,
-      "Academy special sponsor led" => 33,
-      "Academy converter" => 34,
-      "Free schools" => 35,
-      "Free schools special" => 36,
-      "British schools overseas" => 37,
-      "Free schools alternative provision" => 38,
-      "Free schools 16 to 19" => 39,
-      "University technical college" => 40,
-      "Studio schools" => 41,
-      "Academy alternative provision converter" => 42,
-      "Academy alternative provision sponsor led" => 43,
-      "Academy special converter" => 44,
-      "Academy 16-19 converter" => 45,
-      "Academy 16 to 19 sponsor led" => 46,
-      "Online provider" => 49,
-      "Institution funded by other government department" => 56,
-      "Academy secure 16 to 19" => 57,
-    }.freeze
+    ALL_TYPES = [
+      "Community school",
+      "Voluntary aided school",
+      "Voluntary controlled school",
+      "Foundation school",
+      "City technology college",
+      "Community special school",
+      "Non-maintained special school",
+      "Other independent special school",
+      "Other independent school",
+      "Foundation special school",
+      "Pupil referral unit",
+      "Local authority nursery school",
+      "Further education",
+      "Secure units",
+      "Offshore schools",
+      "Service children's education",
+      "Miscellaneous",
+      "Academy sponsor led",
+      "Higher education institutions",
+      "Welsh establishment",
+      "Sixth form centres",
+      "Special post 16 institution",
+      "Academy special sponsor led",
+      "Academy converter",
+      "Free schools",
+      "Free schools special",
+      "British schools overseas",
+      "Free schools alternative provision",
+      "Free schools 16 to 19",
+      "University technical college",
+      "Studio schools",
+      "Academy alternative provision converter",
+      "Academy alternative provision sponsor led",
+      "Academy special converter",
+      "Academy 16-19 converter",
+      "Academy 16 to 19 sponsor led",
+      "Online provider",
+      "Institution funded by other government department",
+      "Academy secure 16 to 19",
+    ].freeze
 
-    ALL_TYPE_CODES = ALL_TYPES.values.freeze
-
-    CIP_ONLY_TYPE_CODES = ALL_TYPES.values_at(
+    CIP_ONLY_TYPES = [
       "Other independent special school",
       "Other independent school",
       "Welsh establishment",
       "British schools overseas"
-    ).freeze
+    ].freeze
 
-    CIP_ONLY_EXCEPT_WELSH_CODES = ALL_TYPES.values_at(
+    CIP_ONLY_EXCEPT_WELSH = [
       "Other independent special school",
       "Other independent school",
       "British schools overseas"
-    ).freeze
+    ].freeze
 
-    ELIGIBLE_TYPE_CODES = ALL_TYPES.except(
+    ELIGIBLE_TYPES = ALL_TYPES - [
       "Other independent special school",
       "Other independent school",
       "Secure units",
@@ -71,19 +69,11 @@ module GIAS
       "British schools overseas",
       "Online provider",
       "Institution funded by other government department"
-    ).values.freeze
+    ].freeze
 
-    INDEPENDENT_SCHOOLS_TYPE_CODES = ALL_TYPES.values_at(
+    INDEPENDENT_SCHOOLS_TYPES = [
       "Other independent special school",
       "Other independent school"
-    ).freeze
-
-    def self.type_code_for(name)
-      ALL_TYPES[name]
-    end
-
-    def self.type_name_for(code)
-      ALL_TYPES.key(code)
-    end
+    ].freeze
   end
 end

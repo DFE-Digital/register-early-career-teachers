@@ -22,13 +22,6 @@ class GIAS::School < ApplicationRecord
   has_many :gias_school_links, class_name: "GIAS::SchoolLink", foreign_key: :urn, dependent: :destroy, inverse_of: :from_gias_school
 
   # Validations
-  validates :easting,
-            numericality: {
-              greater_than_or_equal_to: 0,
-              less_than_or_equal_to: 700_000,
-              message: "must be between 0 and 700,000",
-            }
-
   validates :establishment_number,
             numericality: { only_integer: true }
 
@@ -38,20 +31,10 @@ class GIAS::School < ApplicationRecord
   validates :name,
             presence: true
 
-  validates :northing,
-            numericality: {
-              greater_than_or_equal_to: 0,
-              less_than_or_equal_to: 1_300_000,
-              message: "must be between 0 and 1,300,000"
-            }
-
-  validates :type_code,
-            numericality: {
-              only_integer: true,
-            },
+  validates :type_name,
             inclusion: {
-              in: GIAS::Types::ALL_TYPE_CODES,
-              message: "is not a valid school type code",
+              in: GIAS::Types::ALL_TYPES,
+              message: "is not a valid school type",
             }
 
   validates :ukprn,

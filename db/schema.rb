@@ -124,14 +124,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "administrative_district_name"
-    t.integer "easting", null: false
     t.string "local_authority_name"
-    t.integer "northing", null: false
     t.integer "establishment_number", null: false
     t.string "phase_name"
     t.boolean "section_41_approved", null: false
-    t.integer "type_code", null: false
-    t.string "type_name"
+    t.string "type_name", null: false
     t.integer "ukprn"
     t.string "website"
     t.integer "local_authority_code", null: false

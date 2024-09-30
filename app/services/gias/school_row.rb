@@ -18,14 +18,12 @@ module GIAS
         address_line3:,
         administrative_district_name:,
         closed_on:,
-        easting:,
         establishment_number:,
         funding_eligibility:,
         induction_eligibility:,
         in_england:,
         local_authority_code:,
         name:,
-        northing:,
         opened_on:,
         phase_name:,
         postcode:,
@@ -33,7 +31,6 @@ module GIAS
         secondary_contact_email:,
         section_41_approved:,
         status:,
-        type_code:,
         type_name:,
         ukprn:,
         urn:,
@@ -58,25 +55,29 @@ module GIAS
     end
 
     def cip_only_type?
-      @cip_only_type ||= GIAS::Types::CIP_ONLY_EXCEPT_WELSH_CODES.include?(type_code)
+      @cip_only_type ||= GIAS::Types::CIP_ONLY_EXCEPT_WELSH.include?(type_name)
     end
 
     def closed_on
       @closed_on ||= data.fetch("CloseDate")
     end
 
-    def easting
-      @easting ||= data.fetch("Easting").to_i
+    def eligible_for_cip?
+      funding_eligibility == :eligible_for_cip
+    end
+
+    def eligible_for_fip?
+      funding_eligibility == :eligible_for_fip
     end
 
     def eligible_for_registration?
-      @eligible_for_registration ||= in_england? && (eligible_type? || cip_only_type? || section_41_approved?)
+      @eligible_for_registration ||= eligible_for_fip? || eligible_for_cip?
     end
 
     alias_method :induction_eligibility, :eligible_for_registration?
 
     def eligible_type?
-      @eligible_type ||= GIAS::Types::ELIGIBLE_TYPE_CODES.include?(type_code)
+      @eligible_type ||= GIAS::Types::ELIGIBLE_TYPES.include?(type_name)
     end
 
     def establishment_number
@@ -84,10 +85,7 @@ module GIAS
     end
 
     def funding_eligibility
-      return :eligible_for_fip if open? && in_england? && (eligible_type? || section_41_approved?)
-      return :eligible_for_cip if open? && cip_only_type?
-
-      :ineligible
+      @funding_eligibility ||= determine_funding_eligibility
     end
 
     def in_england
@@ -102,10 +100,6 @@ module GIAS
 
     def name
       @name ||= data.fetch("EstablishmentName")
-    end
-
-    def northing
-      @northing ||= data.fetch("Northing").to_i
     end
 
     def opened_on
@@ -142,10 +136,6 @@ module GIAS
       @status ||= data.fetch("EstablishmentStatus (name)").underscore.parameterize(separator: "_").sub("open_but_", "")
     end
 
-    def type_code
-      @type_code ||= data.fetch("TypeOfEstablishment (code)").to_i
-    end
-
     def type_name
       @type_name ||= data.fetch("TypeOfEstablishment (name)")
     end
@@ -160,6 +150,15 @@ module GIAS
 
     def website
       @website ||= data.fetch("SchoolWebsite").presence
+    end
+
+  private
+
+    def determine_funding_eligibility
+      return :eligible_for_fip if open? && in_england? && (eligible_type? || section_41_approved?)
+      return :eligible_for_cip if open? && cip_only_type?
+
+      :ineligible
     end
   end
 end

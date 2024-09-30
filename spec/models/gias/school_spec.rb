@@ -12,7 +12,6 @@ describe GIAS::School do
     it { is_expected.to have_db_column(:administrative_district_name).of_type(:string) }
     it { is_expected.to have_db_column(:closed_on).of_type(:date) }
     it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }
-    it { is_expected.to have_db_column(:easting).of_type(:integer).with_options(null: false) }
     it { is_expected.to have_db_column(:establishment_number).of_type(:integer).with_options(null: false) }
     it { is_expected.to have_db_column(:funding_eligibility).of_type(:enum).with_options(null: false) }
     it { is_expected.to have_db_column(:induction_eligibility).of_type(:boolean).with_options(null: false) }
@@ -20,7 +19,6 @@ describe GIAS::School do
     it { is_expected.to have_db_column(:local_authority_code).of_type(:integer).with_options(null: false) }
     it { is_expected.to have_db_column(:local_authority_name).of_type(:string) }
     it { is_expected.to have_db_column(:name).of_type(:string).with_options(null: false) }
-    it { is_expected.to have_db_column(:northing).of_type(:integer).with_options(null: false) }
     it { is_expected.to have_db_column(:opened_on).of_type(:date) }
     it { is_expected.to have_db_column(:phase_name).of_type(:string) }
     it { is_expected.to have_db_column(:postcode).of_type(:string) }
@@ -28,8 +26,7 @@ describe GIAS::School do
     it { is_expected.to have_db_column(:secondary_contact_email).of_type(:string) }
     it { is_expected.to have_db_column(:section_41_approved).of_type(:boolean).with_options(null: false) }
     it { is_expected.to have_db_column(:status).of_type(:enum).with_options(default: "open", null: false) }
-    it { is_expected.to have_db_column(:type_code).of_type(:integer).with_options(null: false) }
-    it { is_expected.to have_db_column(:type_name).of_type(:string) }
+    it { is_expected.to have_db_column(:type_name).of_type(:string).with_options(null: false) }
     it { is_expected.to have_db_column(:ukprn).of_type(:integer) }
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }
     it { is_expected.to have_db_column(:urn).of_type(:integer).with_options(primary: true) }
@@ -72,31 +69,14 @@ describe GIAS::School do
   describe "validations" do
     subject { FactoryBot.create(:gias_school) }
 
-    it {
-      is_expected.to validate_numericality_of(:easting)
-                       .is_greater_than_or_equal_to(0)
-                       .is_less_than_or_equal_to(700_000)
-                       .with_message("must be between 0 and 700,000")
-    }
-
     it { is_expected.to validate_numericality_of(:local_authority_code).only_integer }
     it { is_expected.to validate_presence_of(:name) }
-
-    it {
-      is_expected.to validate_numericality_of(:northing)
-                       .is_greater_than_or_equal_to(0)
-                       .is_less_than_or_equal_to(1_300_000)
-                       .with_message("must be between 0 and 1,300,000")
-    }
-
     it { is_expected.to validate_numericality_of(:establishment_number).only_integer }
 
-    it { is_expected.to validate_numericality_of(:type_code).only_integer }
-
     it {
-      is_expected.to validate_inclusion_of(:type_code)
-                       .in_array(GIAS::Types::ALL_TYPE_CODES)
-                       .with_message("is not a valid school type code")
+      is_expected.to validate_inclusion_of(:type_name)
+                       .in_array(GIAS::Types::ALL_TYPES)
+                       .with_message("is not a valid school type")
     }
 
     it { is_expected.to validate_numericality_of(:ukprn).only_integer.allow_nil }

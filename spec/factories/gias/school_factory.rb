@@ -4,13 +4,10 @@ FactoryBot.define do
     eligible_for_fip
     induction_eligible
 
-    easting { Faker::Number.within(range: 0..700_000) }
     local_authority_code { Faker::Number.within(range: 1..999) }
     name { Faker::Educator.primary_school + " (#{urn})" }
-    northing { Faker::Number.within(range: 0..1_300_000) }
     establishment_number { Faker::Number.unique.within(range: 1..9_999) }
     phase_name { "Phase one" }
-    type_name { GIAS::Types.type_name_for(type_code) }
     urn { Faker::Number.unique.within(range: 10_000..9_999_999) }
 
     # eligibility to be registered in the service
@@ -19,22 +16,22 @@ FactoryBot.define do
       in_england
 
       if [true, false].sample
-        eligible_type_code
+        eligible_type
         not_section_41
       else
-        not_eligible_type_code
+        not_eligible_type
         section_41
       end
     end
 
     # cip_only
     trait(:cip_only) do
-      cip_only_type_code
+      cip_only_type
       [true, false].sample ? eligible_for_cip : funding_ineligible
     end
 
     trait(:not_cip_only) do
-      not_cip_only_type_code
+      not_cip_only_type
       [true, false].sample ? eligible_for_fip : funding_ineligible
     end
 
@@ -44,7 +41,7 @@ FactoryBot.define do
     end
 
     trait(:eligible_for_cip) do
-      cip_only_type_code
+      cip_only_type
       funding_eligibility { "eligible_for_cip" }
     end
 
@@ -91,20 +88,20 @@ FactoryBot.define do
     end
 
     # type code
-    trait(:cip_only_type_code) do
-      type_code { GIAS::Types::CIP_ONLY_TYPE_CODES.sample }
+    trait(:cip_only_type) do
+      type_name { GIAS::Types::CIP_ONLY_TYPES.sample }
     end
 
-    trait(:not_cip_only_type_code) do
-      type_code { (GIAS::Types::ALL_TYPE_CODES - GIAS::Types::CIP_ONLY_TYPE_CODES).sample }
+    trait(:not_cip_only_type) do
+      type_name { (GIAS::Types::ALL_TYPES - GIAS::Types::CIP_ONLY_TYPES).sample }
     end
 
-    trait(:eligible_type_code) do
-      type_code { GIAS::Types::ELIGIBLE_TYPE_CODES.sample }
+    trait(:eligible_type) do
+      type_name { GIAS::Types::ELIGIBLE_TYPES.sample }
     end
 
-    trait(:not_eligible_type_code) do
-      type_code { (GIAS::Types::ALL_TYPE_CODES - GIAS::Types::ELIGIBLE_TYPE_CODES).sample }
+    trait(:not_eligible_type) do
+      type_name { (GIAS::Types::ALL_TYPES - GIAS::Types::ELIGIBLE_TYPES).sample }
     end
   end
 end
