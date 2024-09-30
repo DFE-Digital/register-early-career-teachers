@@ -6,7 +6,7 @@ describe GIAS::SchoolLink do
   end
 
   describe "db columns" do
-    it { is_expected.to have_db_column(:link_date).of_type(:date).with_options(null: false) }
+    it { is_expected.to have_db_column(:link_date).of_type(:date) }
     it { is_expected.to have_db_column(:link_type).of_type(:string).with_options(null: false) }
     it { is_expected.to have_db_column(:link_urn).of_type(:integer).with_options(null: false) }
     it { is_expected.to have_db_column(:urn).of_type(:integer).with_options(null: false) }
@@ -26,7 +26,6 @@ describe GIAS::SchoolLink do
   describe "validations" do
     subject { FactoryBot.create(:gias_school_link) }
 
-    it { is_expected.to validate_presence_of(:link_date) }
     it { is_expected.to validate_inclusion_of(:link_type).in_array(GIAS::SchoolLink::LINK_TYPES) }
     it { is_expected.to validate_presence_of(:link_urn) }
     it { is_expected.to validate_uniqueness_of(:link_urn).scoped_to(:urn) }

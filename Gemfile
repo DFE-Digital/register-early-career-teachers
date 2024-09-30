@@ -29,6 +29,10 @@ gem 'omniauth-rails_csrf_protection'
 gem "base32"
 gem "rotp"
 
+# Fetching from APIs
+gem "rubyzip"
+gem "savon"
+
 group :development, :test do
   gem "brakeman"
   gem "debug", platforms: %i[mri windows]

@@ -73,16 +73,19 @@ GEM
       tzinfo (~> 2.0, >= 2.0.5)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    adsf (1.5.0)
+    adsf (1.5.2)
       rack (>= 1.0.0, < 4.0.0)
       rackup (~> 2.1)
-    adsf-live (1.5.0)
+    adsf-live (1.5.2)
       adsf (~> 1.3)
       em-websocket (~> 0.5)
       eventmachine (~> 1.2)
       listen (~> 3.0)
-      rack-livereload (~> 0.3)
     aes_key_wrap (1.1.0)
+    akami (1.3.3)
+      base64
+      gyoku (>= 0.4.0)
+      nokogiri
     asciidoctor (2.0.23)
     ast (2.4.2)
     attr_required (1.0.2)
@@ -129,19 +132,20 @@ GEM
     et-orbi (1.2.11)
       tzinfo
     eventmachine (1.2.7)
-    factory_bot (6.4.6)
+    factory_bot (6.5.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
-    faraday (2.10.1)
-      faraday-net_http (>= 2.0, < 3.2)
+    faraday (2.12.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      json
       logger
     faraday-follow_redirects (0.3.0)
       faraday (>= 1, < 3)
-    faraday-net_http (3.1.1)
+    faraday-net_http (3.3.0)
       net-http
     ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-aarch64-linux-musl)
@@ -170,10 +174,18 @@ GEM
     govuk_markdown (2.0.2)
       activesupport
       redcarpet
+    gyoku (1.4.0)
+      builder (>= 2.1.2)
+      rexml (~> 3.0)
     hashie (5.0.0)
     html-attributes-utils (1.0.2)
       activesupport (>= 6.1.4.4)
     http_parser.rb (0.8.0)
+    httpi (4.0.4)
+      base64
+      mutex_m
+      nkf
+      rack (>= 2.0, < 4)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     immutable-ruby (0.2.0)
@@ -194,7 +206,7 @@ GEM
       faraday (~> 2.0)
       faraday-follow_redirects
     json_schema (0.21.0)
-    jwt (2.8.2)
+    jwt (2.9.1)
       base64
     language_server-protocol (3.17.0.3)
     listen (3.9.0)
@@ -218,7 +230,7 @@ GEM
       rack (>= 2.1.4.1)
     marcel (1.0.4)
     matrix (0.4.2)
-    memo_wise (1.9.0)
+    memo_wise (1.10.0)
     method_source (1.1.0)
     mime-types (3.5.2)
       mime-types-data (~> 3.2015)
@@ -226,6 +238,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.25.1)
     msgpack (1.7.2)
+    mutex_m (0.2.0)
     nanoc (4.13.0)
       addressable (~> 2.5)
       colored (~> 1.2)
@@ -268,7 +281,7 @@ GEM
       nanoc-core (~> 4.11, >= 4.11.14)
     net-http (0.4.1)
       uri
-    net-imap (0.4.15)
+    net-imap (0.4.16)
       date
       net-protocol
     net-pop (0.1.2)
@@ -278,6 +291,7 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
+    nkf (0.2.0)
     nokogiri (1.16.7-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.16.7-arm-linux)
@@ -290,6 +304,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
+    nori (2.7.1)
+      bigdecimal
     notifications-ruby-client (6.2.0)
       jwt (>= 1.5, < 3)
     omniauth (2.1.2)
@@ -315,9 +331,9 @@ GEM
       tzinfo
       validate_url
       webfinger (~> 2.0)
-    pagy (9.0.8)
+    pagy (9.0.9)
     parallel (1.26.3)
-    parser (3.3.4.2)
+    parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
     pastel (0.8.0)
@@ -342,8 +358,6 @@ GEM
     raabro (1.4.0)
     racc (1.8.1)
     rack (3.1.7)
-    rack-livereload (0.5.1)
-      rack
     rack-oauth2 (2.2.1)
       activesupport
       attr_required
@@ -402,8 +416,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
-    rexml (3.3.5)
-      strscan
+    rexml (3.3.8)
     rotp (6.3.0)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -411,7 +424,7 @@ GEM
       rspec-mocks (~> 3.13.0)
     rspec-core (3.13.1)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.2)
+    rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-mocks (3.13.1)
@@ -458,12 +471,22 @@ GEM
     rubocop-rspec (3.0.1)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
+    rubyzip (2.3.2)
+    savon (2.15.1)
+      akami (~> 1.2)
+      builder (>= 2.1.2)
+      gyoku (~> 1.2)
+      httpi (>= 4, < 5)
+      mail (~> 2.5)
+      nokogiri (>= 1.8.1)
+      nori (~> 2.4)
+      wasabi (>= 3.7, < 6)
     securerandom (0.3.1)
     set (1.1.0)
     shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
     slow_enumerator_tools (1.1.0)
-    solid_queue (0.7.1)
+    solid_queue (1.0.0)
       activejob (>= 7.1)
       activerecord (>= 7.1)
       concurrent-ruby (>= 1.3.1)
@@ -474,7 +497,6 @@ GEM
       rbtree
       set (~> 1.0)
     stringio (3.1.1)
-    strscan (3.1.0)
     swd (2.0.3)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -489,8 +511,8 @@ GEM
     tty-which (0.5.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.5.0)
-    uri (0.13.0)
+    unicode-display_width (2.6.0)
+    uri (0.13.1)
     useragent (0.16.10)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
@@ -499,6 +521,10 @@ GEM
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
+    wasabi (5.0.3)
+      addressable
+      faraday (>= 1.9, < 3)
+      nokogiri (>= 1.13.9)
     webfinger (2.1.3)
       activesupport
       faraday (~> 2.0)
@@ -556,6 +582,8 @@ DEPENDENCIES
   rspec
   rspec-rails
   rubocop-govuk
+  rubyzip
+  savon
   shoulda-matchers
   solid_queue
   tzinfo-data
