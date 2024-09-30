@@ -19,6 +19,19 @@ class InductionRecordSanitizer
     induction_record_dates_are_sequential!
   end
 
+  def compress!
+    induction_records.uniq do |ir|
+      [ir.induction_programme_id,
+       ir.appropriate_body_id,
+       ir.mentor_profile_id,
+       ir.schedule_id,
+       ir.preferred_identity_id,
+       ir.induction_status,
+       ir.training_status
+      ]
+    end
+  end
+
   def each
     return to_enum(__method__) { induction_records.size } unless block_given?
 

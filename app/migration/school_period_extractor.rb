@@ -1,9 +1,8 @@
 class SchoolPeriodExtractor
   include Enumerable
 
-  def initialize(participant_profile:)
-    @induction_records = InductionRecordSanitizer.new(participant_profile:)
-    @induction_records.validate!
+  def initialize(induction_records:)
+    @induction_records = induction_records
   end
 
   def each
