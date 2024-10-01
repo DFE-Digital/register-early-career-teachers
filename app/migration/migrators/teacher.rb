@@ -9,7 +9,7 @@ module Migrators
     end
 
     def self.teachers
-      ::Migration::TeacherProfile.where(id: ::Migration::ParticipantProfile.ect_or_mentor.select(:teacher_profile_id)).distinct.limit(50)
+      ::Migration::TeacherProfile.where(id: ::Migration::ParticipantProfile.ect_or_mentor.select(:teacher_profile_id).limit(100)).distinct
     end
 
     def self.reset!
@@ -31,8 +31,12 @@ module Migrators
     end
 
     def first_name_of(full_name)
-      # FIXME: handle titles etc here
-      full_name.split(' ').first
+      parts = full_name.split(' ')
+      if parts.count > 2 && parts.first.downcase.in?(%w[mr miss ms mrs dr])
+        parts.second
+      else
+        parts.first
+      end
     end
 
     def last_name_of(full_name)
