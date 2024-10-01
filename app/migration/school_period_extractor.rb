@@ -18,11 +18,10 @@ private
   end
 
   def build_school_periods
-    periods = []
     current_period = {}
     current_school = nil
 
-    @induction_records.each do |induction_record|
+    @induction_records.each_with_object(Array.new) do |induction_record, periods|
       record_school = induction_record.induction_programme.school_cohort.school
 
       if current_school != record_school
@@ -34,7 +33,5 @@ private
         current_period[:end_date] = induction_record.end_date
       end
     end
-
-    periods
   end
 end

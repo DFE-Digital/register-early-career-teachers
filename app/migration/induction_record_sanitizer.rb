@@ -20,15 +20,12 @@ class InductionRecordSanitizer
   end
 
   def compress!
-    induction_records.uniq do |ir|
-      [ir.induction_programme_id,
-       ir.appropriate_body_id,
-       ir.mentor_profile_id,
-       ir.schedule_id,
-       ir.preferred_identity_id,
-       ir.induction_status,
-       ir.training_status
-      ]
+    last_induction_record = nil
+    induction_records.each_with_object(Array.new) do |induction_record, result|
+      if different?(induction_record, last_induction_record)
+        result << induction_record
+        last_induction_record = induction_record
+      end
     end
   end
 
@@ -42,6 +39,13 @@ private
 
   def induction_records
     @induction_records ||= participant_profile.induction_records.includes(induction_programme: [{ school_cohort: [:school] }]).order(start_date: :asc)
+  end
+
+  def different?(ir1, ir2)
+    ignored_attrs = %w[id start_date end_date created_at updated_at].freeze
+
+    return true if ir1.nil? || ir2.nil?
+    ir1.attributes.except(*ignored_attrs) != ir2.attributes.except(*ignored_attrs)
   end
 
   def does_not_have_multiple_blank_end_dates!
