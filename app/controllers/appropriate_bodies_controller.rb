@@ -2,6 +2,7 @@ class AppropriateBodiesController < ApplicationController
   include Authorisation
 
   before_action :set_appropriate_body
+  layout "full", only: :show
 
 private
 
