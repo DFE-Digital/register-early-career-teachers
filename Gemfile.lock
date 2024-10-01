@@ -342,7 +342,7 @@ GEM
     playwright-ruby-client (1.47.0)
       concurrent-ruby (>= 1.1.6)
       mime-types (>= 3.0)
-    propshaft (1.0.1)
+    propshaft (1.1.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
