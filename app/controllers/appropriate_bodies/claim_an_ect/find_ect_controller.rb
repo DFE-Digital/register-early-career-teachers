@@ -6,18 +6,20 @@ module AppropriateBodies
       end
 
       def create
-        @pending_induction_submission = PendingInductionSubmission.new(
-          **pending_induction_submission_params,
-          **pending_induction_submission_attributes
-        )
+        find_ect = AppropriateBodies::ClaimAnECT::FindECT
+          .new(
+            appropriate_body: @appropriate_body,
+            pending_induction_submission: PendingInductionSubmission.new(
+              **pending_induction_submission_params,
+              **pending_induction_submission_attributes
+            )
+          )
 
-        AppropriateBodies::ClaimAnECT::FindECT
-          .new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
-          .import_from_trs
-
-        if @pending_induction_submission.save(context: :find_ect)
-          redirect_to(edit_ab_claim_an_ect_check_path(@pending_induction_submission))
+        if find_ect.import_from_trs!
+          redirect_to(edit_ab_claim_an_ect_check_path(find_ect.pending_induction_submission))
         else
+          @pending_induction_submission = find_ect.pending_induction_submission
+
           render(:new)
         end
       rescue TRS::Errors::TeacherNotFound => e
