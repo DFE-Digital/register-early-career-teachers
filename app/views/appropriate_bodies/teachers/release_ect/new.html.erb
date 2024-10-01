@@ -1,0 +1,23 @@
+<% page_data(title: "Release #{Teachers::Name.new(@teacher).full_name}", error: false) %>
+
+<%= form_with(model: @pending_induction_submission, url: ab_teacher_release_ect_path(@teacher), method: 'post') do |form| %>
+  <%= form.govuk_error_summary %>
+
+  <%=
+    form.govuk_date_field :finished_on,
+      legend: {
+        text: "When did #{Teachers::Name.new(@teacher).full_name} finish their induction with you?"
+      }
+  %>
+
+  <%=
+    form.govuk_number_field :number_of_terms,
+      width: 4,
+      label: {
+        size: 'm',
+        text: "How many terms of induction did #{Teachers::Name.new(@teacher).full_name} spend with you?"
+      }
+    %>
+
+  <%= form.govuk_submit %>
+<% end %>

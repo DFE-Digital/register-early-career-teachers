@@ -36,7 +36,10 @@ Rails.application.routes.draw do
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
     collection do
-      resources :teachers, only: %i[show], controller: 'appropriate_bodies/teachers', as: 'ab_teachers'
+      resources :teachers, only: %i[show], controller: 'appropriate_bodies/teachers', as: 'ab_teachers' do
+        resource :release_ect, only: %i[new create show], path: 'release', controller: 'appropriate_bodies/teachers/release_ect'
+        resource :record_outcome, only: %i[new create show], path: 'record-outcome', controller: 'appropriate_bodies/teachers/release_ect'
+      end
     end
     namespace :claim_an_ect, path: 'claim-an-ect' do
       resource :find_ect, only: %i[new create], path: 'find-ect', controller: '/appropriate_bodies/claim_an_ect/find_ect', as: 'find'
