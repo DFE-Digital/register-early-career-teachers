@@ -36,13 +36,10 @@ school_data.each do |school_args|
   # FIXME: this is a bit nasty but gets the seeds working again
   GIAS::School.create!(school_args.merge(funding_eligibility: :eligible_for_fip,
                                          induction_eligibility: :eligible,
-                                         administrative_district_code: "E123",
-                                         easting: rand(700_000),
-                                         northing: rand(1_300_000),
                                          local_authority_code: rand(20),
                                          establishment_number: school_args[:urn],
-                                         phase_code: rand(8),
-                                         type_code: GIAS::Types::ALL_TYPES.values.sample,
+                                         type_name: GIAS::Types::ALL_TYPES.sample,
+                                         in_england: true,
                                          section_41_approved: false))
 
   School.create!(school_args.except(:name))
