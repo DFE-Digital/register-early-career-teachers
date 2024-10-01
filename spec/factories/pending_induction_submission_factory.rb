@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory(:pending_induction_submission) do
+    association :appropriate_body
     sequence(:trn, 3_000_000)
     date_of_birth { Faker::Date.between(from: 80.years.ago, to: 20.years.ago) }
     trs_first_name { Faker::Name.first_name }

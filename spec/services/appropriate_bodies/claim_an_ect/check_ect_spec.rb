@@ -26,7 +26,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::CheckECT do
       end
 
       it "results in the pending_induction_submission being valid" do
-        expect(subject.pending_induction_submission).to be_valid(:confirming_ect)
+        expect(subject.pending_induction_submission).to be_valid(:check_ect)
       end
     end
 
@@ -42,7 +42,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::CheckECT do
       end
 
       it "results in the pending_induction_submission being invalid" do
-        expect(subject.pending_induction_submission).to be_invalid(:confirming_ect)
+        expect(subject.pending_induction_submission).to be_invalid(:check_ect)
       end
     end
   end

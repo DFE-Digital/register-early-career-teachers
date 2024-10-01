@@ -18,7 +18,7 @@ module AppropriateBodies
         return pending_induction_submission unless pending_induction_submission.valid?
 
         pending_induction_submission.assign_attributes(
-          appropriate_body:,
+          appropriate_body: @appropriate_body,
           **find_matching_record_in_trs
         )
 

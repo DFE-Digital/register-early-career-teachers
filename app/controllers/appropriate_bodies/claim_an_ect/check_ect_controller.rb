@@ -15,7 +15,7 @@ module AppropriateBodies
           .new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
           .confirm_info_correct(confirmed?)
 
-        if @pending_induction_submission.save(context: :confirming_ect)
+        if @pending_induction_submission.save(context: :check_ect)
           redirect_to(edit_ab_claim_an_ect_register_path(@pending_induction_submission))
         else
           render :edit
