@@ -1,3 +1,25 @@
-<% page_data(title: "Some appropriate body", error: false) %>
+<% page_data(title: @appropriate_body.name, error: false) %>
 
-<%= govuk_button_link_to("Register a new early career teacher", new_ab_claim_an_ect_find_path, secondary: true) %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <%= govuk_button_link_to("Register a new early career teacher", new_ab_claim_an_ect_find_path, secondary: true) %>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Search</h2>
+
+    <mark class="govuk-body">Add search and filter stuff here.</mark>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <ul class="govuk-list govuk-list--bullet">
+      <% @teachers.all.each do |teacher| %>
+        <%= tag.li do %>
+          <%= govuk_link_to("#{teacher.first_name} #{teacher.last_name}", ab_teacher_path(teacher)) %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -4,6 +4,12 @@ class AppropriateBodiesController < ApplicationController
   before_action :set_appropriate_body
   layout "full", only: :show
 
+  def show
+    # FIXME: find within the scope of the current AB
+
+    @teachers = Teachers::Search.new(params[:q]).search
+  end
+
 private
 
   def set_appropriate_body
