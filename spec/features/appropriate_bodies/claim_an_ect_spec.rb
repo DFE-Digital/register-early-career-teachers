@@ -19,6 +19,7 @@ RSpec.describe 'Claiming an ECT' do
     and_i_submit_the_form
 
     now_i_should_be_on_the_claim_an_ect_register_page
+
     if_i_submit_with_errors_the_errors_are_reported_to_me(expected_errors: 2)
     when_i_enter_the_start_date
     and_choose_an_induction_programme

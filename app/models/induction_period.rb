@@ -4,15 +4,13 @@ class InductionPeriod < ApplicationRecord
   # Associations
   belongs_to :appropriate_body
   belongs_to :ect_at_school_period, class_name: "ECTAtSchoolPeriod", inverse_of: :induction_periods
+  belongs_to :teacher
 
   # Validations
   validates :started_on,
             presence: true
 
   validates :appropriate_body_id,
-            presence: true
-
-  validates :ect_at_school_period_id,
             presence: true
 
   validates :number_of_terms,
@@ -23,6 +21,7 @@ class InductionPeriod < ApplicationRecord
             inclusion: { in: %w[fip cip diy],
                          message: "Choose an induction programme" }
 
+  validate :teacher_id_or_ect_at_school_period_id_present
   validate :teacher_distinct_period
   validate :enveloped_by_ect_at_school_period,
            if: -> { ect_at_school_period.present? && started_on.present? }
@@ -43,5 +42,11 @@ private
     return if (ect_at_school_period.started_on..ect_at_school_period.finished_on).cover?(started_on..finished_on)
 
     errors.add(:base, "Date range is not contained by the ECT at school period")
+  end
+
+  def teacher_id_or_ect_at_school_period_id_present
+    if teacher_id.blank? && ect_at_school_period_id.blank?
+      errors.add(:base, "Either teacher_id or ect_at_school_period_id must be present")
+    end
   end
 end

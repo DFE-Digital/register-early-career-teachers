@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_27_151728) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -140,7 +140,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
 
   create_table "induction_periods", force: :cascade do |t|
     t.bigint "appropriate_body_id", null: false
-    t.bigint "ect_at_school_period_id", null: false
+    t.bigint "ect_at_school_period_id"
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
@@ -148,10 +148,12 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
     t.enum "induction_programme", null: false, enum_type: "induction_programme"
     t.integer "number_of_terms"
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
+    t.bigint "teacher_id"
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_be6c214e9d", unique: true, where: "(finished_on IS NULL)"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true
     t.index ["ect_at_school_period_id"], name: "index_induction_periods_on_ect_at_school_period_id"
+    t.index ["teacher_id"], name: "index_induction_periods_on_teacher_id"
   end
 
   create_table "lead_providers", force: :cascade do |t|
@@ -374,6 +376,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.virtual "search", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((COALESCE(first_name, ''::character varying))::text || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(corrected_name, ''::character varying))::text))", stored: true
+    t.datetime "induction_start_date_submitted_to_trs_at"
     t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
     t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
     t.index ["search"], name: "index_teachers_on_search", using: :gin
@@ -413,6 +416,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_26_161243) do
   add_foreign_key "gias_school_links", "gias_schools", column: "urn", primary_key: "urn"
   add_foreign_key "induction_periods", "appropriate_bodies"
   add_foreign_key "induction_periods", "ect_at_school_periods"
+  add_foreign_key "induction_periods", "teachers"
   add_foreign_key "mentor_at_school_periods", "schools"
   add_foreign_key "mentor_at_school_periods", "teachers"
   add_foreign_key "mentorship_periods", "ect_at_school_periods"
