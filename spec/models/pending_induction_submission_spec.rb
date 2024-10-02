@@ -9,7 +9,7 @@ describe PendingInductionSubmission do
 
   describe "validation" do
     describe "trn" do
-      it { is_expected.to validate_presence_of(:trn).with_message("Enter a TRN") }
+      it { is_expected.to validate_presence_of(:trn).on(:find_ect).with_message("Enter a TRN") }
 
       context "when the string contains 7 numeric digits" do
         %w[0000001 9999999].each do |value|
@@ -19,15 +19,15 @@ describe PendingInductionSubmission do
 
       context "when the string contains something other than 7 numeric digits" do
         %w[123456 12345678 ONE4567 123456!].each do |value|
-          it { is_expected.not_to allow_value(value).for(:trn) }
+          it { is_expected.not_to allow_value(value).for(:trn).on(:find_ect) }
         end
       end
     end
 
     describe "date_of_birth" do
-      it { is_expected.to validate_presence_of(:date_of_birth).with_message("Enter a date of birth") }
+      it { is_expected.to validate_presence_of(:date_of_birth).with_message("Enter a date of birth").on(:find_ect) }
 
-      it { is_expected.to validate_inclusion_of(:date_of_birth).in_range(100.years.ago.to_date..18.years.ago.to_date).with_message("Teacher must be between 18 and 100 years old") }
+      it { is_expected.to validate_inclusion_of(:date_of_birth).in_range(100.years.ago.to_date..18.years.ago.to_date).on(:find_ect).with_message("Teacher must be between 18 and 100 years old") }
     end
 
     describe "establishment_id" do
@@ -35,13 +35,13 @@ describe PendingInductionSubmission do
 
       describe "valid" do
         ["1111/111", "9999/999"].each do |id|
-          it { is_expected.to allow_value(id).for(:establishment_id) }
+          it { is_expected.to allow_value(id).for(:establishment_id).on(:find_ect) }
         end
       end
 
       describe "invalid" do
         ["111/1111", "AAAA/BBB", "1234/12345"].each do |id|
-          it { is_expected.not_to allow_value(id).for(:establishment_id).with_message("Enter an establishment ID in the format 1234/567") }
+          it { is_expected.not_to allow_value(id).for(:establishment_id).on(:find_ect).with_message("Enter an establishment ID in the format 1234/567") }
         end
       end
     end
@@ -55,7 +55,7 @@ describe PendingInductionSubmission do
     end
 
     describe "confirmed" do
-      it { is_expected.to validate_acceptance_of(:confirmed).on(:confirming_ect).with_message("Confirm if these details are correct or try your search again") }
+      it { is_expected.to validate_acceptance_of(:confirmed).on(:check_ect).with_message("Confirm if these details are correct or try your search again") }
     end
   end
 end
