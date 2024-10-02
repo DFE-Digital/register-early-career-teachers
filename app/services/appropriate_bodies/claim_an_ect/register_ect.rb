@@ -24,15 +24,11 @@ module AppropriateBodies
             first_name: pending_induction_submission.trs_first_name,
             last_name: pending_induction_submission.trs_last_name
           )
-
           InductionPeriod.create!(
             teacher:,
             started_on: pending_induction_submission.started_on,
-            finished_on: pending_induction_submission.finished_on,
             appropriate_body:,
-            induction_programme: pending_induction_submission.induction_programme,
-            # FIXME: where do i get this?
-            number_of_terms: 1
+            induction_programme: pending_induction_submission.induction_programme
           )
           BeginECTInductionJob.perform_later(
             trn: pending_induction_submission.trn,

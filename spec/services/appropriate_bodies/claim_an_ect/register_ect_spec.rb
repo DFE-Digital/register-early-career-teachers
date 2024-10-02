@@ -40,7 +40,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
         induction_period = InductionPeriod.last
         expect(induction_period.teacher).to eq(teacher)
         expect(induction_period.started_on).to eq(Date.new(2023, 5, 3))
-        expect(induction_period.finished_on).to eq(Date.new(2024, 5, 2))
+        expect(induction_period.finished_on).to be_nil
         expect(induction_period.appropriate_body).to eq(appropriate_body)
         expect(induction_period.induction_programme).to eq("fip")
       end
