@@ -88,8 +88,12 @@ module GIAS
       @funding_eligibility ||= determine_funding_eligibility
     end
 
+    def independent_school_type?
+      @independent_school_type ||= GIAS::Types::INDEPENDENT_SCHOOLS_TYPES.include?(type_name)
+    end
+
     def in_england
-      @in_england ||= data.fetch("DistrictAdministrative (code)").to_s.match?(/^([Ee]|9999)/)
+      @in_england ||= GIAS::Types::IN_ENGLAND_TYPES.include?(type_name)
     end
 
     alias_method :in_england?, :in_england
@@ -155,8 +159,8 @@ module GIAS
   private
 
     def determine_funding_eligibility
-      return :eligible_for_fip if open? && in_england? && (eligible_type? || section_41_approved?)
-      return :eligible_for_cip if open? && cip_only_type?
+      return :eligible_for_fip if open? && in_england? && (eligible_type? || (independent_school_type? && section_41_approved?))
+      return :eligible_for_cip if open? && cip_only_type? && !section_41_approved?
 
       :ineligible
     end
