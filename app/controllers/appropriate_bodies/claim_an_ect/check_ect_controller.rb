@@ -11,13 +11,14 @@ module AppropriateBodies
         # FIXME: find within the scope of the current AB
         @pending_induction_submission = PendingInductionSubmission.find(params[:id])
 
-        AppropriateBodies::ClaimAnECT::CheckECT
+        check_ect = AppropriateBodies::ClaimAnECT::CheckECT
           .new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
-          .confirm_info_correct(confirmed?)
 
-        if @pending_induction_submission.save(context: :check_ect)
-          redirect_to(edit_ab_claim_an_ect_register_path(@pending_induction_submission))
+        if check_ect.confirm_info_correct(confirmed?)
+          redirect_to(edit_ab_claim_an_ect_register_path(check_ect.pending_induction_submission))
         else
+          @pending_induction_submission = check_ect.pending_induction_submission
+
           render :edit
         end
       end

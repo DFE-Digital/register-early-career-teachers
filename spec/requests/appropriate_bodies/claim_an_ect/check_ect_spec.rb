@@ -70,7 +70,7 @@ RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT
         end
 
         it 'calls AppropriateBodies::ClaimAnECT::CheckECT#confirm_info_correct' do
-          fake_check_ect = double(AppropriateBodies::ClaimAnECT::CheckECT, confirm_info_correct: pending_induction_submission)
+          fake_check_ect = double(AppropriateBodies::ClaimAnECT::CheckECT, confirm_info_correct: pending_induction_submission, pending_induction_submission:)
           allow(AppropriateBodies::ClaimAnECT::CheckECT).to receive(:new).and_return(fake_check_ect)
 
           patch(
