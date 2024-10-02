@@ -3,6 +3,7 @@ FactoryBot.define do
     eligible_for_registration
     eligible_for_fip
     induction_eligible
+    not_section_41
 
     local_authority_code { Faker::Number.within(range: 1..999) }
     name { Faker::Educator.primary_school + " (#{urn})" }
@@ -17,9 +18,9 @@ FactoryBot.define do
 
       if [true, false].sample
         eligible_type
-        not_section_41
       else
         not_eligible_type
+        independent_school_type
         section_41
       end
     end
@@ -27,6 +28,7 @@ FactoryBot.define do
     # cip_only
     trait(:cip_only) do
       cip_only_type
+      not_section_41
       [true, false].sample ? eligible_for_cip : funding_ineligible
     end
 
@@ -79,12 +81,12 @@ FactoryBot.define do
     # location
     trait(:in_england) do
       in_england { true }
-      administrative_district_name { "London" }
+      type_name { GIAS::Types::IN_ENGLAND_TYPES.sample }
     end
 
     trait(:not_in_england) do
       in_england { false }
-      administrative_district_name { "Cardiff" }
+      type_name { GIAS::Types::NOT_IN_ENGLAND_TYPES.sample }
     end
 
     # type code
@@ -101,7 +103,11 @@ FactoryBot.define do
     end
 
     trait(:not_eligible_type) do
-      type_name { (GIAS::Types::ALL_TYPES - GIAS::Types::ELIGIBLE_TYPES).sample }
+      type_name { GIAS::Types::NOT_ELIGIBLE_TYPES.sample }
+    end
+
+    trait(:independent_school_type) do
+      type_name { GIAS::Types::INDEPENDENT_SCHOOLS_TYPES.sample }
     end
   end
 end
