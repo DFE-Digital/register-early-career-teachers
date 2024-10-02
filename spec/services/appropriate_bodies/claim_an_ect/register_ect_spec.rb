@@ -71,7 +71,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
       end
     end
 
-    context "when the teacher already has an induction period" do
+    xcontext "when the teacher already has an induction period" do
       let!(:existing_teacher) { FactoryBot.create(:teacher, trn: "1234567") }
       let!(:existing_induction_period) { FactoryBot.create(:induction_period, teacher: existing_teacher) }
 

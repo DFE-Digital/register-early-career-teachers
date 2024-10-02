@@ -8,20 +8,22 @@ module AppropriateBodies
       end
 
       def update
-        # FIXME: find within the scope of the current AB
-        @pending_induction_submission = PendingInductionSubmission.find(params[:id])
+        register_ect = AppropriateBodies::ClaimAnECT::RegisterECT
+          .new(
+            appropriate_body: @appropriate_body,
+            # FIXME: find within the scope of the current AB
+            pending_induction_submission: PendingInductionSubmission.find(params[:id])
+          )
 
-        AppropriateBodies::ClaimAnECT::RegisterECT
-          .new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
-          .register(update_params)
-
-        if @pending_induction_submission.save(context: :register_ect)
-          redirect_to(ab_claim_an_ect_register_path(@pending_induction_submission))
+        if register_ect.register(update_params)
+          redirect_to(ab_claim_an_ect_register_path(register_ect.pending_induction_submission))
         else
+          @pending_induction_submission = register_ect.pending_induction_submission
+
           render(:edit)
         end
-      rescue AppropriateBodies::Errors::TeacherAlreadyClaimedError => e
-        @pending_induction_submission.errors.add(:base, e.message)
+        # rescue AppropriateBodies::Errors::TeacherAlreadyClaimedError => e
+        #   @pending_induction_submission.errors.add(:base, e.message)
       end
 
       def show
