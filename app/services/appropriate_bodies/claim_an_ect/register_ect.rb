@@ -49,8 +49,7 @@ module AppropriateBodies
           finished_on: pending_induction_submission.finished_on,
           appropriate_body:,
           induction_programme: pending_induction_submission.induction_programme,
-          # FIXME: where do i get this?
-          number_of_terms: 1
+          number_of_terms: pending_induction_submission.number_of_terms
         )
       end
 

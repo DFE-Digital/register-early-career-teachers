@@ -21,7 +21,8 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
         finished_on: Date.new(2024, 5, 2),
         trn: "1234567",
         trs_first_name: "John",
-        trs_last_name: "Doe"
+        trs_last_name: "Doe",
+        number_of_terms: 3
       }
     end
 
@@ -43,6 +44,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
         expect(induction_period.finished_on).to eq(Date.new(2024, 5, 2))
         expect(induction_period.appropriate_body).to eq(appropriate_body)
         expect(induction_period.induction_programme).to eq("fip")
+        expect(induction_period.number_of_terms).to eq(3)
       end
 
       it "enqueues BeginECTInductionJob" do
