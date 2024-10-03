@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe Sessions::OneTimePassword do
   let(:user) { FactoryBot.create(:user) }
   subject(:service) { Sessions::OneTimePassword.new(user:) }

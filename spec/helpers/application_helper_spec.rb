@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe ApplicationHelper, type: :helper do
   describe "#page_data" do
     it "sets the title to the provided value" do

@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
   describe "#initialize" do
     let(:appropriate_body) { FactoryBot.build(:appropriate_body) }

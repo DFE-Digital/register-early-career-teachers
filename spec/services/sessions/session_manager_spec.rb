@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe Sessions::SessionManager do
   let(:session) { HashWithIndifferentAccess.new }
   let(:email) { "eric@example.com" }

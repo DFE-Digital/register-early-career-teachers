@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe LegacyDataImporter do
   include ActiveJob::TestHelper
 

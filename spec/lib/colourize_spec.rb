@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe Colourize do
   describe ".text" do
     Colourize::COLOURS.each_key do |key|

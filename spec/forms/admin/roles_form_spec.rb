@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe Admin::RolesForm, type: :model do
   let(:user) { FactoryBot.create(:user) }
   let(:appropriate_bodies) { FactoryBot.build_list(:appropriate_body, 3) }

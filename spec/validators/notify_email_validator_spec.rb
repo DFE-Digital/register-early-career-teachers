@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe NotifyEmailValidator do
   # Test cases from https://github.com/alphagov/notifications-utils/blob/2432e1881cf7a5005a8d69c2ddc1597add96acc3/tests/test_recipient_validation.py
   # This file lifted from ECF1

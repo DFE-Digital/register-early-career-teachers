@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
   include_context 'fake_trs_api_client'
 

@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
   let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
   let(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }

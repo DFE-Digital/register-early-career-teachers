@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe TRS::APIClient do
   let(:client) { described_class.new }
   let(:trn) { '1234567' }
