@@ -38,7 +38,7 @@ Rails.application.routes.draw do
     collection do
       resources :teachers, only: %i[show], controller: 'appropriate_bodies/teachers', as: 'ab_teachers' do
         resource :release_ect, only: %i[new create show], path: 'release', controller: 'appropriate_bodies/teachers/release_ect'
-        resource :record_outcome, only: %i[new create show], path: 'record-outcome', controller: 'appropriate_bodies/teachers/release_ect'
+        resource :record_outcome, only: %i[new create show], path: 'record-outcome', controller: 'appropriate_bodies/teachers/record_outcome'
       end
     end
     namespace :claim_an_ect, path: 'claim-an-ect' do
