@@ -31,7 +31,7 @@ jobs:
       run: |
         make ci review terraform-destroy
       env:
-        PR_NUMBER: ${{ github.event.pull_request.number }}
+        PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
 
     - name: Post Pull Request Comment
       if: ${{ github.event_name == 'pull_request' }}
