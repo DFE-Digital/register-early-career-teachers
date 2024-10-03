@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe Teachers::Name do
   describe '#full_name' do
     subject { Teachers::Name.new(teacher) }

@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe BeginECTInductionJob, type: :job do
   let(:teacher) { FactoryBot.create(:teacher) }
   let(:teacher_id) { teacher.id }

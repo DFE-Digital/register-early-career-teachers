@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe PendingInductionSubmission do
   it { is_expected.to be_a_kind_of(Interval) }
 

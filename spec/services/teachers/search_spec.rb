@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe Teachers::Search do
   describe 'dealing with search terms' do
     subject { Teachers::Search.new(query_string) }

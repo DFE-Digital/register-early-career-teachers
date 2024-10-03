@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe ExampleMailer, type: :mailer do
   describe "hello_world" do
     let(:from) { "from@example.com" }

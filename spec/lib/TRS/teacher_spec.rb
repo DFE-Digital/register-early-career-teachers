@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe TRS::Teacher do
   let(:data) do
     {

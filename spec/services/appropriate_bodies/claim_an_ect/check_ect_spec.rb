@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe AppropriateBodies::ClaimAnECT::CheckECT do
   let(:appropriate_body) { FactoryBot.build(:appropriate_body) }
   let(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }

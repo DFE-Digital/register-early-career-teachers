@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe AppropriateBodyHelper, type: 'helper' do
   describe "#induction_programme_choices" do
     it "returns an array of InductionProgrammeChoice" do

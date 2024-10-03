@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe OTPMailer, type: :mailer do
   describe "otp_code_email" do
     let(:from) { "from@example.com" }

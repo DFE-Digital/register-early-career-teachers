@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT' do
   include AuthHelper
   let(:appropriate_body) { user.appropriate_bodies.first }
