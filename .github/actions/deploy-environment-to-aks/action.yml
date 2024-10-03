@@ -57,6 +57,6 @@ runs:
       shell: bash
       run: |
         make ci review get-cluster-credentials
-        kubectl exec -n cpd-development deployment/ec2-review-${{ inputs.pull-request-number }}-web -- sh -c "cd /app && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 RAILS_ENV=${{ inputs.environment }} /usr/local/bin/bundle exec rails db:seed:replant"
+        kubectl exec -n cpd-development deployment/cpd-ec2-review-${{ inputs.pull-request-number }}-web -- sh -c "cd /app && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 RAILS_ENV=${{ inputs.environment }} /usr/local/bin/bundle exec rails db:seed:replant"
       env:
         PULL_REQUEST_NUMBER: ${{ inputs.pull-request-number }}
