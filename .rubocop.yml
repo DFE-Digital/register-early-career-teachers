@@ -46,5 +46,9 @@ Rails/Output:
   Exclude:
     - db/seeds*
 
+Rails/SaveBang:
+  Exclude:
+    - app/services/**/*
+
 Naming/MethodParameterName:
   Enabled: false

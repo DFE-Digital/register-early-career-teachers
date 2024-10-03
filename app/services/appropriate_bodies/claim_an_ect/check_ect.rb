@@ -13,6 +13,8 @@ module AppropriateBodies
           submission.confirmed = confirmed
           submission.confirmed_at = Time.zone.now if confirmed
         end
+
+        pending_induction_submission.save(context: :check_ect)
       end
     end
   end

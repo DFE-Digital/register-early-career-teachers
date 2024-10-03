@@ -78,7 +78,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
         end
 
         it 'calls AppropriateBodies::ClaimAnECT::RegisterECT#register' do
-          fake_register_ect = double(AppropriateBodies::ClaimAnECT::RegisterECT, register: pending_induction_submission)
+          fake_register_ect = double(AppropriateBodies::ClaimAnECT::RegisterECT, register: pending_induction_submission, pending_induction_submission:)
           allow(AppropriateBodies::ClaimAnECT::RegisterECT).to receive(:new).and_return(fake_register_ect)
 
           patch(
