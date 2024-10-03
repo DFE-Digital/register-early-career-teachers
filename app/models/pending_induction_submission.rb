@@ -8,6 +8,8 @@ class PendingInductionSubmission < ApplicationRecord
 
   attribute :confirmed
 
+  enum :outcome, { pass: "pass", fail: "fail" }
+
   # Associations
   belongs_to :appropriate_body
 
@@ -53,4 +55,11 @@ class PendingInductionSubmission < ApplicationRecord
   validates :confirmed,
             acceptance: { message: "Confirm if these details are correct or try your search again" },
             on: :check_ect
+
+  validates :outcome,
+            inclusion: {
+              in: PendingInductionSubmission.outcomes.keys,
+              message: "Outcome must be either 'passed' or 'failed'"
+            },
+            on: :record_outcome
 end
