@@ -13,8 +13,7 @@ module AppropriateBodyHelper
   end
 
   def summary_card_for_teacher(teacher)
-    # FIXME: which induction period should be displayed here?
-    induction_start_date = teacher.induction_periods_reported_by_appropriate_body.last&.started_on&.to_fs(:govuk)
+    induction_start_date = Teachers::InductionPeriod.new(teacher).induction_start_date&.to_fs(:govuk)
 
     govuk_summary_card(title: Teachers::Name.new(teacher).full_name) do |card|
       card.with_action { govuk_link_to("Show", ab_teacher_path(teacher)) }
