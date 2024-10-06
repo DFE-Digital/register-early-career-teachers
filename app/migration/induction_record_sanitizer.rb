@@ -13,10 +13,11 @@ class InductionRecordSanitizer
   end
 
   def validate!
-    # TODO: I imagine there will be a lot of things needed in here to check/report on
-    does_not_have_multiple_blank_end_dates!
-    does_not_have_multiple_active_induction_statuses!
-    induction_record_dates_are_sequential!
+    validate_induction_records!(induction_records:)
+  end
+
+  def compress_and_validate!
+    validate_induction_records!(induction_records: compress!)
   end
 
   def compress!
@@ -41,6 +42,13 @@ private
     @induction_records ||= participant_profile.induction_records.includes(induction_programme: [{ school_cohort: [:school] }]).order(start_date: :asc)
   end
 
+  def validate_induction_records!(induction_records:)
+    # TODO: I imagine there will be a lot of things needed in here to check/report on
+    does_not_have_multiple_blank_end_dates!(induction_records:)
+    does_not_have_multiple_active_induction_statuses!(induction_records:)
+    induction_record_dates_are_sequential!(induction_records:)
+  end
+
   def different?(ir1, ir2)
     ignored_attrs = %w[id start_date end_date created_at updated_at].freeze
 
@@ -48,15 +56,15 @@ private
     ir1.attributes.except(*ignored_attrs) != ir2.attributes.except(*ignored_attrs)
   end
 
-  def does_not_have_multiple_blank_end_dates!
-    raise MultipleBlankEndDateError if induction_records.where(end_date: nil).count > 1
+  def does_not_have_multiple_blank_end_dates!(induction_records:)
+    raise MultipleBlankEndDateError if induction_records.select { |ir| ir.end_date.nil? }.count > 1
   end
 
-  def does_not_have_multiple_active_induction_statuses!
-    raise MultipleActiveStatesError if induction_records.where(induction_status: :active).count > 1
+  def does_not_have_multiple_active_induction_statuses!(induction_records:)
+    raise MultipleActiveStatesError if induction_records.select { |ir| ir.induction_status == "active" }.count > 1
   end
 
-  def induction_record_dates_are_sequential!
+  def induction_record_dates_are_sequential!(induction_records:)
     previous_end_date = induction_records.first.end_date
 
     induction_records.each_with_index do |ir, idx|
