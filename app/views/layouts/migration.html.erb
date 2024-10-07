@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <%= render partial: "layouts/shared/head" %>
+
+  <body class="govuk-template__body">
+    <%= render partial: "layouts/shared/js_enabled" %>
+
+    <%= govuk_skip_link %>
+    <%= govuk_header(full_width_border: true, html_attributes: { class: [environment_specific_header_colour_class] }) %>
+    <%= govuk_service_navigation(service_name: "Register early career teachers") do |service_navigation| %>
+      <%= service_navigation.with_navigation_item(text: "Sign out", href: sign_out_path) if authenticated? %>
+    <% end %>
+
+    <div class="govuk-width-container">
+      <%= environment_specific_phase_banner %>
+
+      <main class="govuk-main-wrapper" id="main-content" role="main">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <%= yield(:backlink) %>
+
+            <%= yield(:page_header) %>
+
+            <%= yield %>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <%= govuk_footer %>
+  </body>
+</html>

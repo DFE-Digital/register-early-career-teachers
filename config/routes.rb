@@ -50,6 +50,7 @@ Rails.application.routes.draw do
 
   scope module: "migration" do
     resources :migrations, only: %i[index create] do
+      get ":model/failures", on: :collection, to: "failures#index", as: :failures
       get "download_report/:model", on: :collection, action: :download_report, as: :download_report
       post "reset", on: :collection, action: :reset, as: :reset
     end

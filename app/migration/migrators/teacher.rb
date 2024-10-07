@@ -9,7 +9,7 @@ module Migrators
     end
 
     def self.teachers
-      ::Migration::TeacherProfile.where(id: ::Migration::ParticipantProfile.ect_or_mentor.select(:teacher_profile_id).limit(100)).distinct
+      ::Migration::TeacherProfile.where(id: ::Migration::ParticipantProfile.ect_or_mentor.select(:teacher_profile_id).distinct)
     end
 
     def self.reset!
