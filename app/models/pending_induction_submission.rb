@@ -37,12 +37,12 @@ class PendingInductionSubmission < ApplicationRecord
 
   validates :finished_on,
             presence: { message: "Enter a finish date" },
-            on: :record_period
+            on: %i[release_ect record_outcome]
 
   validates :number_of_terms,
             inclusion: { in: 0..16,
                          message: "Terms must be between 0 and 16" },
-            on: :record_period
+            on: %i[release_ect record_outcome]
 
   validates :date_of_birth,
             presence: { message: "Enter a date of birth" },

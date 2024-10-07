@@ -48,8 +48,16 @@ describe PendingInductionSubmission do
       it { is_expected.to validate_inclusion_of(:induction_programme).in_array(%w[fip cip diy]).with_message("Choose an induction programme").on(:register_ect) }
     end
 
+    describe "started_on" do
+      it { is_expected.to validate_presence_of(:started_on).with_message("Enter a start date").on(:register_ect) }
+    end
+
+    describe "finished_on" do
+      it { is_expected.to validate_presence_of(:finished_on).with_message("Enter a finish date").on(%i[release_ect record_outcome]) }
+    end
+
     describe "number_of_terms" do
-      it { is_expected.to validate_inclusion_of(:number_of_terms).in_range(0..16).with_message("Terms must be between 0 and 16").on(:record_period) }
+      it { is_expected.to validate_inclusion_of(:number_of_terms).in_range(0..16).with_message("Terms must be between 0 and 16").on(%i[release_ect record_outcome]) }
     end
 
     describe "confirmed" do

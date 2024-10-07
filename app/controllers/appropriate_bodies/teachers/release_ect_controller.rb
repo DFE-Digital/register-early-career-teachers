@@ -17,7 +17,7 @@ module AppropriateBodies
         release_ect = AppropriateBodies::ReleaseECT.new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
 
         PendingInductionSubmission.transaction do
-          if @pending_induction_submission.save(context: :record_period) && release_ect.release!
+          if @pending_induction_submission.save(context: :release_ect) && release_ect.release!
             redirect_to ab_teacher_release_ect_path(@teacher)
           else
             render :new
