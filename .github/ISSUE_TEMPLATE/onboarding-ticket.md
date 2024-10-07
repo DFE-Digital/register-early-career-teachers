@@ -46,6 +46,11 @@ These are documents or websites to have a read through to learn more about early
 - [ ] The existing [API documentation](https://manage-training-for-early-career-teachers.education.gov.uk/api-reference/reference-v3.html#api-v3-partnerships-ecf-id-put-request_body)
 - [ ]  The [retro rota](https://ukgovernmentdfe.slack.com/archives/C06V31R0Z17/p1715776635714569) and mention if you're willing to be added
 - [ ]  The [final presentation for the ECF2 discovery](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B03C73EEB-C2FA-43C4-A864-27A1379CDBF3%7D&file=ECF%20digital%20services%20-%20playback%20deck.pptx&action=edit&mobileredirect=true)
+- [ ]  An [overview of lead providers](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B14A33185-398B-49D8-810B-5A2B8D604CEC%7D&file=ECF%202.0%20-%20Understanding%20our%20users%20-%20Lead%20providers.pptx&action=edit&mobileredirect=true)
+- [ ]  An [overview of appropriate bodies](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B0D2FEA8D-0492-4AF3-98E5-717D7A539706%7D&file=ECF%202.0%20-%20Understanding%20our%20users%20-%20Appropriate%20bodies.pptx&action=edit&mobileredirect=true)
+- [ ]  An [overview of delivery partners](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/Shared%20Documents/Teacher%20Continuing%20Professional%20Development/Teacher%20CPD%20Team/Register%20early%20career%20teachers/Discovery/Outputs/ECF%202.0%20-%20Understanding%20our%20users%20-%20Delivery%20Partners.pptx?d=wb1f0190dcd33444b923ff10c4ddf2ea7&csf=1&web=1&e=Wexold)
+- [ ]  An [overview of school users](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7BB1E279B5-E8CD-411D-B3EE-E9DD87D355C7%7D&file=ECF%202.0%20-%20Understanding%20our%20users%20-%20School%20users%20-%20SITs%2C%20ECTs%20&%20Mentors.pptx=&action=edit&mobileredirect=true)
+- [ ]  An [overview of DfE users](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B88E28D07-9485-4042-95E9-ECFDFE0BF022%7D&file=ECF%202.0%20-%20Understanding%20our%20users%20-%20Internal%20DfE.pptx&action=edit&mobileredirect=true)
 
 
 ## Demos and introchats
@@ -53,7 +58,6 @@ These are documents or websites to have a read through to learn more about early
 Make sure to schedule in:
 - [ ] Meeting  with ECF Support team and ask them to take you through how Zendesk support works
 - [ ] Intro chats with everyone on the team
-- [ ] A demo of Manage training for early career teachers for schools
 - [ ] A demo of Manage training for early career teachers for schools
 - [ ] A demo of the check data services for delivery partners and appropriate bodies
 - [ ] A walkthrough of the TRA's appropriate body portal and why induction data is important to ECF 2.0
