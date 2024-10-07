@@ -74,6 +74,22 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         end
       end
 
+      context "when the submission is valid but no ECT is found" do
+        include_context 'fake trs api client that finds nothing'
+        let(:birth_year_param) { "2001" }
+
+        it 'passes the parameters to the AppropriateBodies::ClaimAnECT::FindECT service and redirects' do
+          post(
+            '/appropriate-body/claim-an-ect/find-ect',
+            params: { pending_induction_submission: search_params }
+          )
+
+          expect(response).to be_ok
+          expect(response.body).to include(page_heading)
+          expect(response.body).to include(/TRN #{search_params.fetch(:trn)} not found/)
+        end
+      end
+
       context "when the submission is invalid" do
         let(:birth_year_param) { (Date.current.year - 2).to_s }
 

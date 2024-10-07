@@ -14,12 +14,11 @@ module AppropriateBodies
               **pending_induction_submission_attributes
             )
           )
+        @pending_induction_submission = find_ect.pending_induction_submission
 
         if find_ect.import_from_trs!
           redirect_to(edit_ab_claim_an_ect_check_path(find_ect.pending_induction_submission))
         else
-          @pending_induction_submission = find_ect.pending_induction_submission
-
           render(:new)
         end
       rescue TRS::Errors::TeacherNotFound => e
