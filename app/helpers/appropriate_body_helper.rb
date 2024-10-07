@@ -1,5 +1,6 @@
 module AppropriateBodyHelper
   InductionProgrammeChoice = Struct.new(:identifier, :name)
+  InductionOutcomeChoice = Struct.new(:identifier, :name)
 
   def induction_programme_choices
     # FIXME: the names here are currently the ones we use internally, they
@@ -9,6 +10,13 @@ module AppropriateBodyHelper
       InductionProgrammeChoice.new(identifier: 'cip', name: 'Core induction programme'),
       InductionProgrammeChoice.new(identifier: 'fip', name: 'Full induction programme'),
       InductionProgrammeChoice.new(identifier: 'diy', name: 'Do it yourself')
+    ]
+  end
+
+  def induction_outcome_choices
+    [
+      InductionProgrammeChoice.new(identifier: 'pass', name: 'Passed'),
+      InductionProgrammeChoice.new(identifier: 'fail', name: 'Failed'),
     ]
   end
 

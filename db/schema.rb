@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_27_151728) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_03_132805) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_27_151728) do
   create_enum "dfe_role_type", ["admin", "super_admin", "finance"]
   create_enum "funding_eligibility_status", ["eligible_for_fip", "eligible_for_cip", "ineligible"]
   create_enum "gias_school_statuses", ["open", "closed", "proposed_to_close", "proposed_to_open"]
+  create_enum "induction_outcomes", ["fail", "pass"]
   create_enum "induction_programme", ["cip", "fip", "diy"]
 
   create_table "academic_years", primary_key: "year", id: :serial, force: :cascade do |t|
@@ -225,6 +226,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_27_151728) do
     t.string "trs_qts_status_description"
     t.date "trs_initial_teacher_training_end_date"
     t.string "trs_initial_teacher_training_provider_name"
+    t.enum "outcome", enum_type: "induction_outcomes"
     t.index ["appropriate_body_id"], name: "index_pending_induction_submissions_on_appropriate_body_id"
   end
 

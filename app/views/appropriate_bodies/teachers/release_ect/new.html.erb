@@ -1,4 +1,4 @@
-<% page_data(title: "Release #{Teachers::Name.new(@teacher).full_name}", error: false) %>
+<% page_data(title: "Release #{Teachers::Name.new(@teacher).full_name}", error: @pending_induction_submission.errors.any?) %>
 
 <%= form_with(model: @pending_induction_submission, url: ab_teacher_release_ect_path(@teacher), method: 'post') do |form| %>
   <%= form.govuk_error_summary %>
@@ -17,7 +17,7 @@
         size: 'm',
         text: "How many terms of induction did #{Teachers::Name.new(@teacher).full_name} spend with you?"
       }
-    %>
+  %>
 
   <%= form.govuk_submit %>
 <% end %>
