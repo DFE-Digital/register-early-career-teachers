@@ -1,5 +1,5 @@
 RSpec.describe 'Claiming an ECT' do
-  include_context 'fake_trs_api_client'
+  include_context 'fake trs api client'
 
   let(:page) { RSpec.configuration.playwright_page }
 

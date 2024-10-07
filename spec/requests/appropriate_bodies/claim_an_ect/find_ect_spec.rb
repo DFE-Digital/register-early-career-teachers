@@ -1,5 +1,5 @@
 RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
-  include_context 'fake_trs_api_client'
+  include_context 'fake trs api client'
 
   let(:page_heading) { "Find an early career teacher" }
 
