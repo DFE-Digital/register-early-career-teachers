@@ -12,3 +12,13 @@
     { key: { text: "Session expires" }, value: { text: session_manager.expires_at.localtime.to_fs(:govuk) } },
   ]
 ) %>
+
+<%= content_for(:sidebar) do %>
+  <%=
+    render Navigation::SubNavigationComponent.new(
+      request.path,
+      structure: admin_sub_navigation_structure
+    )
+  %>
+<% end %>
+

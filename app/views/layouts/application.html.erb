@@ -16,16 +16,16 @@
 
       <main class="govuk-main-wrapper" id="main-content" role="main">
         <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <%= yield(:page_header) %>
-
-            <%= yield %>
-          </div>
           <% if content_for?(:sidebar) %>
             <div class="govuk-grid-column-one-third">
               <%= yield(:sidebar) %>
             </div>
           <% end %>
+          <div class="govuk-grid-column-two-thirds">
+            <%= yield(:page_header) %>
+
+            <%= yield %>
+          </div>
         </div>
       </main>
     </div>
