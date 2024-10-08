@@ -8,6 +8,7 @@
     <%= govuk_skip_link %>
     <%= govuk_header(full_width_border: true, html_attributes: { class: [environment_specific_header_colour_class] }) %>
     <%= govuk_service_navigation(service_name: "Register early career teachers") do |service_navigation| %>
+      <% service_navigation_items(service_navigation, context: :admin) %>
       <%= service_navigation.with_navigation_item(text: "Sign out", href: sign_out_path) if authenticated? %>
     <% end %>
 

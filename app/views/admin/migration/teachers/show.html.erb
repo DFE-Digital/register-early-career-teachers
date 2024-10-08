@@ -1,0 +1,31 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l"><%= @ecf_1_teacher.full_name %></h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m">Time at school</h2>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <%= @ecf_1_teacher.full_name %>
+
+    <%= govuk_list(@ecf_1_induction_records.map(&:start_date), type: :bullet) %>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <%= Teachers::Name.new(@ecf_2_teacher).full_name %>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <%= @ecf_1_teacher.full_name %>
+
+    <%= govuk_list(@ecf_1_induction_records.map(&:start_date), type: :bullet) %>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <%= Teachers::Name.new(@ecf_2_teacher).full_name %>
+  </div>
+</div>

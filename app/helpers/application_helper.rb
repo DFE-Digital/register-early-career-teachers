@@ -16,4 +16,11 @@ module ApplicationHelper
 
     { page_title:, page_header: }
   end
+
+  def service_navigation_items(service_navigation, context: :admin)
+    case context
+    when :admin
+      service_navigation.with_navigation_item(text: "Migration", href: admin_migration_teachers_path)
+    end
+  end
 end

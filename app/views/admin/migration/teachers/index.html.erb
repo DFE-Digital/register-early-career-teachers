@@ -1,0 +1,11 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Teachers</h1>
+
+    <%=
+      govuk_list(@teachers.map do |t|
+        govuk_link_to(Teachers::Name.new(t).full_name, admin_migration_teacher_path(t.trn))
+      end, type: :bullet)
+    %>
+  </div>
+</div>
