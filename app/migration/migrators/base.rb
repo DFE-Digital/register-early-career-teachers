@@ -93,7 +93,8 @@ module Migrators
     end
 
     def limit
-      self.class.records_per_worker
+      # allow us to select a subset for testing if record_count is huge and we limit it
+      [self.class.records_per_worker, self.class.record_count].min
     end
 
     def start_migration!(total_count)

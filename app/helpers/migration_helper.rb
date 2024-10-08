@@ -53,11 +53,35 @@ module MigrationHelper
     govuk_tag(text: "#{avg_percentage.floor}%", colour:)
   end
 
+  def data_migration_failures_link(data_migrations)
+    failure_count = data_migrations.sum(&:failure_count)
+
+    return unless failure_count.positive?
+
+    model = data_migrations.sample.model
+    govuk_link_to("Failures for #{model}", failures_migrations_path(model))
+  end
+
   def data_migration_download_failures_report_link(data_migrations)
     failure_count = data_migrations.sum(&:failure_count)
 
     return unless failure_count.positive?
 
     govuk_link_to("Failures report", download_report_migrations_path(data_migrations.sample.model))
+  end
+
+  def failure_item_json_code(item)
+    "<code>#{JSON.pretty_unparse(item).gsub(/\n/, '<br/>').gsub(/\s/, '&nbsp;')}</code>".html_safe
+  end
+
+  def failure_item_summary_list(item)
+    govuk_summary_list(html_attributes: { class: "govuk-!-font-size-16" }) do |summary_list|
+      item.each do |k, v|
+        summary_list.with_row do |row|
+          row.with_key { k }
+          row.with_value { v }
+        end
+      end
+    end
   end
 end

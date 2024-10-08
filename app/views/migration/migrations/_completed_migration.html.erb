@@ -24,7 +24,7 @@
         row.with_cell(html_attributes: { class: "total-count" }, text: data_migration_total_count_tag(data_migrations))
         row.with_cell(html_attributes: { class: "failure-count" }, text: data_migration_failure_count_tag(data_migrations))
         row.with_cell(html_attributes: { class: "percentage-successfully-migrated" }, text: data_migration_percentage_migrated_successfully_tag(data_migrations))
-        row.with_cell(text: data_migration_download_failures_report_link(data_migrations))
+        row.with_cell(text: data_migration_failures_link(data_migrations))
       end
     end
   end
