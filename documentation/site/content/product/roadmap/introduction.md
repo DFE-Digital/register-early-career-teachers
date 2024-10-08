@@ -4,6 +4,7 @@ This document explains what we're working on to improve and rebuild the digital 
 It sets out what we're working on now, what will come next, and what we might pursue later. 
 
 By sending this out publicly, we hope to:
+
 - give direction and vision to our team
 - be transparent about what we're working on and why
 - prioritise what we need to work on and when
