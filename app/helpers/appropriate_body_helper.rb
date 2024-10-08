@@ -13,6 +13,11 @@ module AppropriateBodyHelper
     ]
   end
 
+  def induction_programme_choice_name(identifier)
+    # FIXME: this is a temporary solution until we have real induction programme data
+    induction_programme_choices.find { |choice| choice.identifier == identifier }&.name
+  end
+
   def induction_outcome_choices
     [
       InductionProgrammeChoice.new(identifier: 'pass', name: 'Passed'),
