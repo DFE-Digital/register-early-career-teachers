@@ -32,6 +32,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, only: %i[index] do
     end
+
+    namespace :migration do
+      resources :schools, except: %i[new update destroy]
+      resources :teachers, except: %i[new update destroy]
+    end
   end
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
