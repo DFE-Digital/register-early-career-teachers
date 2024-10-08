@@ -22,7 +22,7 @@ class InductionRecordSanitizer
 
   def compress!
     last_induction_record = nil
-    induction_records.each_with_object(Array.new) do |induction_record, result|
+    induction_records.each_with_object([]) do |induction_record, result|
       if different?(induction_record, last_induction_record)
         result << induction_record
         last_induction_record = induction_record
@@ -30,10 +30,10 @@ class InductionRecordSanitizer
     end
   end
 
-  def each
+  def each(&block)
     return to_enum(__method__) { induction_records.size } unless block_given?
 
-    induction_records.each { |induction_record| yield induction_record }
+    induction_records.each(&block)
   end
 
 private
@@ -53,6 +53,7 @@ private
     ignored_attrs = %w[id start_date end_date created_at updated_at].freeze
 
     return true if ir1.nil? || ir2.nil?
+
     ir1.attributes.except(*ignored_attrs) != ir2.attributes.except(*ignored_attrs)
   end
 
@@ -73,7 +74,7 @@ private
       next if idx.zero?
 
       raise InvalidDateSequenceError if ir.start_date < previous_end_date
-      
+
       previous_end_date = ir.end_date
     end
   end

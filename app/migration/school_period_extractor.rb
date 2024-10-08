@@ -5,12 +5,12 @@ class SchoolPeriodExtractor
     @induction_records = induction_records
   end
 
-  def each
+  def each(&block)
     return to_enum(__method__) { school_periods.size } unless block_given?
 
-    school_periods.each { |school_period| yield school_period }
+    school_periods.each(&block)
   end
-  
+
 private
 
   def school_periods
@@ -21,7 +21,7 @@ private
     current_period = {}
     current_school = nil
 
-    @induction_records.each_with_object(Array.new) do |induction_record, periods|
+    @induction_records.each_with_object([]) do |induction_record, periods|
       record_school = induction_record.induction_programme.school_cohort.school
 
       if current_school != record_school
