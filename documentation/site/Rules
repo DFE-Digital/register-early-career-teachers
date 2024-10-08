@@ -1,10 +1,25 @@
 #!/usr/bin/env ruby
 
-compile '/**/*.html.erb' do
+compile '/index.html' do
   layout '/default.*'
   filter(:erb)
 
-  write(item.identifier.without_ext)
+  write(item.identifier)
+end
+
+compile '/product/roadmap.html' do
+  layout '/roadmap.*'
+  filter(:erb)
+
+  write(item.identifier.without_ext + '/index.html')
+end
+
+compile 'content/roadmap/*.md' do
+  filter(:govuk_markdown)
+  layout('/default.*')
+
+  # no writing, we'll pull this content in manually
+  # in the roadmap page
 end
 
 compile '/service-rules/*.md' do
