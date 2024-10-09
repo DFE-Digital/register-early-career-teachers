@@ -1,5 +1,3 @@
-require 'debug'
-
 module Navigation
   class SubNavigationComponent < ViewComponent::Base
     attr_accessor :current_path, :current_section, :structure
