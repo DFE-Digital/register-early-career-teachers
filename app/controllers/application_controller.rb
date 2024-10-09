@@ -12,7 +12,7 @@ private
   end
 
   def authenticate
-    return if authenticated? || request.path == root_path
+    return if authenticated?
 
     session_manager.requested_path = request.fullpath
     redirect_to(sign_in_path)
