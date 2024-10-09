@@ -7,7 +7,7 @@
     "sass": "^1.79.4"
   },
   "devDependencies": {
-    "playwright": "^1.47.1",
+    "playwright": "^1.48.0",
     "standard": "^17.1.2",
     "stylelint": "^16.9.0",
     "stylelint-config-gds": "^2.0.0"
