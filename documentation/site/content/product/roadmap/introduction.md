@@ -5,10 +5,10 @@ It sets out what we're working on now, what will come next, and what we might pu
 
 By sending this out publicly, we hope to:
 
-- give direction and vision to our team
-- be transparent about what we're working on and why
-- prioritise what we need to work on and when
-- gather more feedback about the work we're aiming to do
+* give direction and vision to our team
+* be transparent about what we're working on and why
+* prioritise what we need to work on and when
+* gather more feedback about the work we're aiming to do
 
 ## Our objectives
 All of these items of work are related to our objectives as a team. Our objectives are structured to enable us to meet the Teaching CPD vision of services serving their core purposes and being flexible enough to adapt to future change and opportunities.
