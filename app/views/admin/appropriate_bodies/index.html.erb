@@ -1,0 +1,38 @@
+<% page_data(title: "Appropriate bodies") %>
+<%= govuk_button_link_to("Add an appropriate body", "#") %>
+
+<div class="search-box">
+  <%= form_with method: :get, class: "search-box__form" do |f| %>
+    <div class="search-box__input">
+      <%= f.govuk_text_field(
+            "q",
+            value: params[:q],
+            label: { text: "Search for an appropriate body", size: "s" },
+            hint: { text: "Search for an appropriate body by name" },
+          )
+      %>
+    </div>
+
+    <%= f.govuk_submit "Search" %>
+  <% end %>
+</div>
+
+<div>
+  <dl class="govuk-summary-list">
+    <% @appropriate_bodies.each do |appropriate_body| %>
+      <div class="govuk-summary-list__row govuk-!-margin-bottom-2">
+        <dd class="govuk-summary-list__value">
+          <%= govuk_link_to(appropriate_body.name, "#", class: "govuk-heading-s govuk-!-margin-bottom-0") %>
+          <hr class="govuk-section-break">
+          <span class="govuk-!-margin-bottom-0">Users: <%= appropriate_body.users.count %></span>
+          <%# FIXME: retrieve this from appropriate_body %>
+          <% if [true, false, false].sample %>
+            </br>
+            <%= govuk_tag(text: "Deleted", colour: "red", classes: "govuk-!-margin-bottom-1 govuk-!-margin-top-1") %>
+          <% end %>
+        </dd>
+      </div>
+    <% end %>
+  </div>
+  <%= govuk_pagination(pagy: @pagy) %>
+</div>

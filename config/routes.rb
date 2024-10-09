@@ -34,6 +34,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, only: %i[index] do
     end
+
+    resources :appropriate_bodies, only: %i[index], path: 'appropriate-bodies' do
+    end
   end
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
