@@ -253,6 +253,20 @@ MentorshipPeriod.create!(
   finished_on: nil
 ).tap { |mp| describe_mentorship_period(mp) }
 
+print_seed_info("Harriet Walter (mentor)", indent: 2)
+
+PeriodBuilders::InductionPeriodBuilder.new(
+  appropriate_body: umber_teaching_school_hub,
+  teacher: harriet_walter,
+  school: abbey_grove_school
+).build(started_on: 2.years.ago, finished_on: 1.year.ago)
+
+PeriodBuilders::InductionPeriodBuilder.new(
+  appropriate_body: golden_leaf_academy,
+  teacher: harriet_walter,
+  school: abbey_grove_school
+).build(started_on: 1.year.ago)
+
 print_seed_info("Adding persona users")
 
 User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com").tap do |velma_dinkley|

@@ -1,8 +1,7 @@
 <% page_data(title: Teachers::Name.new(@teacher).full_name, error: false) %>
 
 <div class="govuk-button-group">
-  <%= govuk_button_link_to("Release ECT", new_ab_teacher_release_ect_path(@teacher), secondary: true) %>
-  <%= govuk_button_link_to("Record induction outcome", new_ab_teacher_record_outcome_path(@teacher), secondary: true) %>
+  <%= govuk_button_link_to("Record induction outcome", new_ab_teacher_record_outcome_path(@teacher)) %>
 </div>
 
 <h2 class="govuk-heading-m">Early career teacher<h2>
@@ -10,22 +9,54 @@
 <%=
   govuk_summary_list do |sl|
     sl.with_row do |row|
-      row.with_key(text: "Teacher record number")
+      row.with_key(text: "Name")
+      row.with_value(text: Teachers::Name.new(@teacher).full_name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "TRN")
       row.with_value(text: @teacher.trn)
     end
 
     sl.with_row do |row|
-      row.with_key(text: "First name")
-      row.with_value(text: @teacher.first_name)
-    end
+      row.with_key(text: "Induction status")
 
-    sl.with_row do |row|
-      row.with_key(text: "Last name")
-      row.with_value(text: @teacher.last_name)
+      # FIXME: This is a placeholder. The actual status should be displayed here.
+      row.with_value(text: govuk_tag(text: "placeholder", colour: %w[grey green red purple orange yellow].sample))
     end
   end
 %>
 
 <h2 class="govuk-heading-m">Induction history<h2>
 
-<mark class="govuk-body">Add this later.</mark>
+  <%= govuk_summary_list do |sl|
+    sl.with_row do |row|
+      row.with_key(text: "Induction start date")
+      row.with_value(text: Teachers::InductionPeriod.new(@teacher).induction_start_date&.to_fs(:govuk))
+    end
+  end
+
+   govuk_table do |table|
+    table.with_caption(size: 'm', text: '')
+
+    table.with_head do |head|
+      head.with_row do |row|
+        row.with_cell(text: 'Appropriate body')
+        row.with_cell(text: 'Induction programme')
+        row.with_cell(text: 'Start date')
+        row.with_cell(text: 'End date')
+        row.with_cell(text: 'Number of terms', numeric: true)
+      end
+    end
+    table.with_body do |body|
+      @teacher.induction_periods_reported_by_appropriate_body.each do |induction_period |
+        body.with_row do |row|
+          row.with_cell(text: induction_period.appropriate_body.name)
+          row.with_cell(text: induction_programme_choice_name(induction_period.induction_programme))
+          row.with_cell(text: induction_period.started_on.to_fs(:govuk))
+          row.with_cell(text: induction_period.finished_on&.to_fs(:govuk))
+          row.with_cell(text: induction_period.number_of_terms, numeric: true)
+        end
+      end
+    end
+  end %>
