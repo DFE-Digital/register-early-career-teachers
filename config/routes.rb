@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: "start#index"
   get "healthcheck" => "rails/health#show", as: :rails_health_check
 
   scope via: :all do
