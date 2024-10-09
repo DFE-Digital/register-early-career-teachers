@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "start#index"
+  root to: 'pages#home'
   get "healthcheck" => "rails/health#show", as: :rails_health_check
 
   scope via: :all do
@@ -54,5 +54,9 @@ Rails.application.routes.draw do
       get "download_report/:model", on: :collection, action: :download_report, as: :download_report
       post "reset", on: :collection, action: :reset, as: :reset
     end
+  end
+
+  namespace :school do
+    get "/register-ect/start", to: "register_ect#start"
   end
 end
