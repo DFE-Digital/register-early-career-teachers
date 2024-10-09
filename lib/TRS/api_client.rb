@@ -9,7 +9,7 @@ module TRS
       end
     end
 
-    def find_teacher(trn:, date_of_birth: nil)
+    def find_teacher(trn:, date_of_birth:)
       response = @connection.get("/v3/persons/#{trn}", dateOfBirth: date_of_birth)
 
       if response.success?
