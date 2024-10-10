@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get '/otp-sign-in/code', to: 'otp_sessions#request_code'
   post '/otp-sign-in/verify', to: 'otp_sessions#verify_code'
 
-  if Rails.application.config.enable_personas
+  constraints -> { Rails.application.config.enable_personas } do
     get 'personas', to: 'personas#index'
   end
 
