@@ -55,4 +55,8 @@ Rails.application.routes.draw do
       post "reset", on: :collection, action: :reset, as: :reset
     end
   end
+
+  namespace :school do
+    get "/register-ect/start", to: "register_ect#start"
+  end
 end
