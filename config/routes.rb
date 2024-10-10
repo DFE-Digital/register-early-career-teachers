@@ -23,8 +23,10 @@ Rails.application.routes.draw do
   get '/otp-sign-in/code', to: 'otp_sessions#request_code'
   post '/otp-sign-in/verify', to: 'otp_sessions#verify_code'
 
-  # TODO: Add constraint to prevent personas working in production environment
-  get 'personas', to: 'personas#index'
+  if Rails.application.config.enable_personas
+    get 'personas', to: 'personas#index'
+  end
+
   post 'auth/:provider/callback', to: 'sessions#create'
 
   get '/admin', to: 'admin#index'

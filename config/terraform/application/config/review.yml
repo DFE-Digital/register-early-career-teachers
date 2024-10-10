@@ -2,3 +2,4 @@
 ENVIRONMENT_COLOUR: pink
 ENVIRONMENT_PHASE_BANNER_TAG: Review
 ENVIRONMENT_PHASE_BANNER_CONTENT: This is a review application, not a real service
+ENABLE_PERSONAS: true
