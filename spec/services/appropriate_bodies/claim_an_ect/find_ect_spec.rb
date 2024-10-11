@@ -1,6 +1,7 @@
 RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
+  let(:appropriate_body) { FactoryBot.build(:appropriate_body) }
+
   describe "#initialize" do
-    let(:appropriate_body) { FactoryBot.build(:appropriate_body) }
     let(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
 
     it "assigns the provided appropriate body and pending induction submission params" do
@@ -11,7 +12,17 @@ RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
     end
   end
 
-  describe "#import_from_trs" do
+  describe "#import_from_trs!" do
+    context "when the pending_induction_submission is invalid" do
+      let(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, date_of_birth: nil) }
+
+      it "returns nil" do
+        find_ect = AppropriateBodies::ClaimAnECT::FindECT.new(appropriate_body:, pending_induction_submission:)
+
+        expect(find_ect.import_from_trs!).to be_nil
+      end
+    end
+
     context "when there is a match" do
       it "makes a call to the TRS API client with the expected parameters"
       it "assigns the incoming attributes to the pending_induction_submission and returns it"
