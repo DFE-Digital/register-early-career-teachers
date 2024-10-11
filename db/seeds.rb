@@ -14,7 +14,7 @@ emma_thompson = Teacher.create!(first_name: 'Emma', last_name: 'Thompson', trn: 
 kate_winslet = Teacher.create!(first_name: 'Kate', last_name: 'Winslet', trn: '1023457')
 alan_rickman = Teacher.create!(first_name: 'Alan', last_name: 'Rickman', trn: '2084589')
 hugh_grant = Teacher.create!(first_name: 'Hugh', last_name: 'Grant', trn: '3657894')
-Teacher.create!(first_name: 'Harriet', last_name: 'Walter', trn: '2017654')
+harriet_walter = Teacher.create!(first_name: 'Harriet', last_name: 'Walter', trn: '2017654')
 hugh_laurie = Teacher.create!(first_name: 'Hugh', last_name: 'Laurie', trn: '4786654')
 Teacher.create!(first_name: 'Imogen', last_name: 'Stubbs', trn: '6352869')
 Teacher.create!(first_name: 'Gemma', last_name: 'Jones', trn: '9578426')
