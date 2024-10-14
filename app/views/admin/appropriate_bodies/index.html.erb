@@ -18,21 +18,22 @@
 </div>
 
 <div>
-  <dl class="govuk-summary-list">
-    <% @appropriate_bodies.each do |appropriate_body| %>
-      <div class="govuk-summary-list__row govuk-!-margin-bottom-2">
-        <dd class="govuk-summary-list__value">
-          <%= govuk_link_to(appropriate_body.name, "#", class: "govuk-heading-s govuk-!-margin-bottom-0") %>
-          <hr class="govuk-section-break">
-          <span class="govuk-!-margin-bottom-0">Users: <%= appropriate_body.users.count %></span>
-          <%# FIXME: retrieve this from appropriate_body %>
-          <% if [true, false, false].sample %>
-            </br>
-            <%= govuk_tag(text: "Deleted", colour: "red", classes: "govuk-!-margin-bottom-1 govuk-!-margin-top-1") %>
-          <% end %>
-        </dd>
-      </div>
-    <% end %>
-  </div>
+  <%= govuk_summary_list do |summary_list|
+    @appropriate_bodies.each do |appropriate_body|
+      summary_list.with_row do |row|
+        row.with_value do
+          tag.div do
+            govuk_link_to(appropriate_body.name, "#", class: "govuk-heading-s govuk-!-margin-bottom-0") +
+            content_tag(:p, "Users: #{appropriate_body.users.count}", class: "govuk-!-margin-bottom-0") +
+            # FIXME: retrieve this from appropriate_body
+            if [true, false, false].sample
+              govuk_tag(text: "Deleted", colour: "red", classes: "govuk-!-margin-bottom-1 govuk-!-margin-top-1")
+            end
+          end
+        end
+      end
+    end
+  end %>
+
   <%= govuk_pagination(pagy: @pagy) %>
 </div>
