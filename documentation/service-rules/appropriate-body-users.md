@@ -23,7 +23,7 @@ safe from people within organisations that should not have access to
 it.
 
 ABs as an organization are added or removed as needed through liaising
-with the induction data collections team in the TRA (Teaching Regulation Agency) via email.
+with the induction data collections team in the TRA (Teaching Regulation Agency) via email. The TRA teams sends a CVS to DfE sign in with a list of all Appropriate bodies.
 
 🔒 This means organisations can only get access that are legitimately
 appropriate bodies. Policy outlining who can be an appropriate body:
