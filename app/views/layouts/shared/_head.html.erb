@@ -1,5 +1,6 @@
 <head>
-  <%= tag.title([yield(:page_title).presence, "Register early career teachers", "GOV.UK"].compact.join(' - ')) %>
+  <% page_title_parts = [sanitize(yield(:page_title).presence), "Register early career teachers", "GOV.UK"].compact.join(' - ') %>
+  <%= tag.title(page_title_parts) %>
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
