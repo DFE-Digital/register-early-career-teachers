@@ -144,6 +144,11 @@ something on it, it appears someone updated it when we haven't.
 ### Impact
 
 * Causes confusion for lead providers.
+### Status 🙅
+
+We haven't addressed this yet, but we won't be reimplementing [the touch model](https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-touch). We will
+likely maintain a separate field that we can explicitly update when something relevant
+changes.
 
 ### Additional notes
 
