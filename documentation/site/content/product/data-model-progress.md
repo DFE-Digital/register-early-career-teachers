@@ -19,7 +19,7 @@ a relationship.
 
 ### Impact
 
-* This causes confusion for developers and reporting.
+This causes confusion for developers and reporting.
 
 ### Additional notes
 
@@ -50,7 +50,7 @@ should be in the users table as opposed to the teacher profile table.
 ### Additional notes
 
 Most of these problems are linked to email. Participants sometimes have
-multiple email addresses for them because they might change school or they
+multiple email addresses because they might change school or they
 might not have a school email yet.
 
 Primary need for email is to award them?
