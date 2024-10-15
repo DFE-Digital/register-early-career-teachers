@@ -54,7 +54,6 @@ We're hoping later to consider:
 - how we notify users such as lead providers of changes to data, for example, if an ECT's name changes
 - more investigation in the best places to get data from for ECTs and mentors
 - adding or making changes to early career teachers or mentors in bulk
-- if we need to store a preferred name for early career teachers or mentors, different to their legal name stored with their teaching record
 - how to improve the support for early career teacher service which contains learning materials
 
 ## What's completely out of scope for ECF2
