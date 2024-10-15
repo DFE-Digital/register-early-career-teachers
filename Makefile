@@ -6,9 +6,6 @@ SERVICE_NAME=cpd-ec2
 SERVICE_SHORT=cpdec2
 DOCKER_REPOSITORY=ghcr.io/dfe-digital/ecf2
 
-watch-documentation-site:
-	ls documentation/site/content/**/* | entr -s "cd documentation/site && bundle exec nanoc"
-
 serve-documentation-site:
 	cd documentation/site && bundle exec nanoc live --handler webrick --port 8000
 
