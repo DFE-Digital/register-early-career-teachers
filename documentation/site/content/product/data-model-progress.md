@@ -2,6 +2,10 @@
 title: Data model progress
 ---
 
+This document contains a list of problems we encountered with the data model in
+ECF1, their impacts and how we intend to solve, or have solved them in register
+early career teachers.
+
 ## Partnership relationships vs default
 
 Partnerships is a table between the lead provider, the delivery partner and the
