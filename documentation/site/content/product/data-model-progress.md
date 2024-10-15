@@ -143,7 +143,8 @@ something on it, it appears someone updated it when we haven't.
 
 ### Impact
 
-* Causes confusion for lead providers.
+Causes confusion for lead providers.
+
 ### Status 🙅
 
 We haven't addressed this yet, but we won't be reimplementing [the touch model](https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-touch). We will
@@ -256,8 +257,8 @@ service. It's difficult that we can't see when eligibility started and ended.
 
 ### Impact
 
-* Currently, if the ECT's eligibility is set to false, a lead provider can't get
-  historical declarations.
+Currently, if the ECT's eligibility is set to false, a lead provider can't get
+historical declarations.
 
 ### Status 🙅
 
@@ -296,7 +297,7 @@ prevent multiple people records with the same TRN.
 
 ### Impact
 
-* Creation of duplicates and developer time taken.
+Creation of duplicates and developer time taken.
 
 ### Status ✅
 
