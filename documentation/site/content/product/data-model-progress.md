@@ -22,6 +22,11 @@ a relationship.
 The registration process still needs to capture the idea of a default, that is
 contract-specific, to help speed up registration for SITs.
 
+### Status ✅
+
+This has been solved by recording the link between teachers and provider partnerhsips
+rather than schools and provider partnerships, via [training periods](https://github.com/DFE-Digital/register-early-career-teachers/blob/main/app/models/training_period.rb).
+
 ## A person is represented across many tables which introduces unintended duplication and confuses the source of truth
 
 Some fields, e.g. email address, are stored in more than 1 place in the
@@ -48,6 +53,12 @@ Primary need for email is to award them?
 
 Some emails are generic (e.g. `head@`) and this means the identify model might
 get confused by them.
+
+### Status ✅
+
+This has been solved with the introduction of a single [`Teacher`](https://github.com/DFE-Digital/register-early-career-teachers/blob/main/app/models/teacher.rb) model that
+largely replaces `ParticipantProfile`, `ParticipantIdentity` and
+`TeacherProfile`.
 
 ## Chronological timelines are difficult due to using the versions table
 
@@ -77,6 +88,11 @@ error prone.
 * This should match how NPQ contracts are versioned and updated, but there will
   be more to it in ECF.
 
+### Status 🙅
+
+Not addressed yet. Will be tackled when the lead provider API and finance functions
+are built.
+
 ## Determining a cohort for a participant
 
 The cohort lives on the profile, schedule and school cohort, and in induction
@@ -105,6 +121,12 @@ terms
 
 [We have documented cohorts extensively](https://educationgovuk.sharepoint.com/:w:/s/TeacherServices/EbdTeLtClv9PtXD3ZghgLaUB6dWn_AY5cOnmkK01mU22NQ?e=fChpDR).
 
+### Status 🙅
+
+Not fully addressed yet. We are going to stop using the name 'cohort' though and
+instead refer to the academic years. This will be fully addressed when finishing
+the teacher registration journey.
+
 ## Touch model for everything and determining changes for the API
 
 We have `updated_at` timestamps for the API, when something changes, what should
@@ -128,7 +150,6 @@ can change something that needs human processes involved in it. Typically to do
 with who they're working with or providers. We can't action changes (e.g. from
 Zendesk) without checking with other people or teams.
 
-
 ### Impact
 
 * Increases time developers spend
@@ -140,6 +161,10 @@ Zendesk) without checking with other people or teams.
 Service was designed to show the current situation, but found it was necessary
 to see it was important to the full sequential story.
 
+### Status ✅
+
+This should largely be solved by us having a better, normalised data model. That
+makes writing queries for either school or lead provider data faster and easier.
 
 ## Cohorts are linked to many different types of entities, are close to the surface and are tightly linked to financial records.
 
@@ -152,6 +177,10 @@ questions about the data. Policy and financial are confused.
 * Code is difficult for developers to understand.
 * Difficult to understand questions around an ECT's cohort.
 * Payment engine cannot work counts accurately.
+
+### Status ✅
+
+This should largely be solved by us having a better, normalised data model.
 
 ## How schools are managed in the database (GIAS type changes)
 
@@ -177,6 +206,19 @@ back to them too.
 * Confusion for policy teams and takes them time too
 * Means the GIAS data needs to sometimes be manually updated in Manage ECT
 
+### Status ✅
+
+This has been addressed with an improved modelling of schools in relation to
+their GIAS record.
+
+Now we separate the data so a `School` record in our database has a `urn` field
+which links to a `GIAS::School` record. Now, when a school academises, we only
+need to change the `urn` in the `School` record and everything else can
+remain the same.
+
+This lets us keep a full, unmodified set of GIAS data in our database and
+simplifies the updating process greatly.
+
 ## Fields stored in incorrect tables which makes changes difficult
 
 Fields are stored in tables where it doesn't make sense for them to be. It's
@@ -187,6 +229,10 @@ need to check the location of fields/attributes makes sense.
 
 * Increased developer time and confusion.
 * It makes it hard to keep things up to date.
+
+### Status ✅
+
+This should largely be solved by us having a better, normalised data model.
 
 ## We can't handle changes to mentor or ECT eligibility
 
@@ -202,6 +248,13 @@ service. It's difficult that we can't see when eligibility started and ended.
 * Currently, if the ECT's eligibility is set to false, a lead provider can't get
   historical declarations.
 
+### Status 🙅
+
+This hasn't yet been entirely solved but the new data model should make it much
+more straightforward. We've introduced the concept of periods which replace
+the old induction record, and they let us track how long something has been in
+a certain state. If necessary, we can easily take the same approach for eligibility.
+
 ## Finding the active induction record isn't easy
 
 Induction records are stored in a slightly unconventional fasion where any
@@ -214,6 +267,17 @@ standards. This means finding the 'active' one is complicated and slow.
 * The API doesn't perform very well and we need to do extra work in order to
   optimise it (pagination, advanced SQL)
 
+### Status ✅
+
+This is resolved by the swtich from induction records to induction and training
+periods which are backed up by strong validation rules:
+
+* an ECT can have one concurrent induction period
+* an ECT can have one concurrent training period
+* a mentor can have one concurrent training period
+* an ECT can have one concurrent mentorship period (where they're being mentored)
+* a mentor can have many concurrent mentorship periods (where they're mentoring)
+
 ## Lack of validation or uniqueness for fields in the database allows for duplicates to be created
 
 An example is TRN. There should be validation on this field in the database to
@@ -222,6 +286,12 @@ prevent multiple people records with the same TRN.
 ### Impact
 
 * Creation of duplicates and developer time taken.
+
+### Status ✅
+
+This is largely solved by the new data model with extra validation and database
+constraints. For example, TRN is stored directly against the `Teacher` record
+and it's covered by [a unique index](https://github.com/DFE-Digital/register-early-career-teachers/blob/main/db/schema.rb#L385).
 
 ## Statuses (eligibility or otherwise) for participants are calculated on the fly as opposed to being stored
 
@@ -236,3 +306,8 @@ Studio. Logic for statuses has to be applied later and it's very complex.
 * It makes code harder to read and understand, which can slow development work
   e.g. our old eligibility codes for schools.
 * It breaks reporting and makes it hard to quickly find information.
+
+### Status 🙅
+
+We haven't solved this yet but plan to use state machines to manage state
+wherever possible.
