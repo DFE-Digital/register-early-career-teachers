@@ -70,6 +70,8 @@ We don't currently record events that happen, instead we have to look for
 individual records and try to create a timeline. We need to know what happened,
 in what order and why.
 
+### Impact
+
 It means developers have to get involved to work out why records are in the
 state they are.
 
