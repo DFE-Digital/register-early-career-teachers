@@ -1,0 +1,19 @@
+class School::HomeController < ApplicationController
+  layout "full"
+
+  def index
+    ect_service = School::ECTService.new(school[:id])
+    @school_name = school[:name]
+    @relationships = ect_service.fetch_etcs_and_mentors
+  end
+
+private
+
+  def school
+    # This is temporary. 'School' will be set once DfE signin hooked up
+    school_id = 1
+    @school ||= School.joins(:gias_school)
+          .select("schools.id, gias_schools.name")
+          .find(school_id)
+  end
+end

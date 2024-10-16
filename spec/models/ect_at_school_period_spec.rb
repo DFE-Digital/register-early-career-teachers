@@ -5,6 +5,7 @@ describe ECTAtSchoolPeriod do
     it { is_expected.to have_many(:induction_periods).inverse_of(:ect_at_school_period) }
     it { is_expected.to have_many(:mentorship_periods).inverse_of(:mentee) }
     it { is_expected.to have_many(:training_periods) }
+    it { is_expected.to have_many(:mentors).through(:mentorship_periods).source(:mentor) }
   end
 
   describe "validations" do

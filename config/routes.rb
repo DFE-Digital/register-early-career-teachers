@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   end
 
   namespace :school do
-    get "/register-ect/start", to: "register_ect#start"
+    get "/home/ects", to: "home#index", as: :ects_home
+    get "/register-ect/start", to: "register_ect#start", as: :register_ect_start
   end
 end
