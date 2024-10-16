@@ -64,3 +64,4 @@ So far, we've decided to descope:
 
 - sending any updates on personal details to the database for qualified teachers
 - sending images of evidence that training is occurring over the API
+- building something to replace the Check data for delivery partners service
