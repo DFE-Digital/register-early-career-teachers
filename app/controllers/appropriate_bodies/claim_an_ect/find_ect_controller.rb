@@ -22,7 +22,7 @@ module AppropriateBodies
           render(:new)
         end
       rescue TRS::Errors::TeacherNotFound => e
-        @pending_induction_submission.errors.add(:base, e.message)
+        @pending_induction_submission.errors.add(:trn, e.message)
 
         render(:new)
       end

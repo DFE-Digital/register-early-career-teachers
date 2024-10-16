@@ -45,7 +45,10 @@ RSpec.describe TRS::APIClient do
       it 'raises TRS::Errors::TeacherNotFound' do
         expect {
           client.find_teacher(trn:, date_of_birth:)
-        }.to raise_error(TRS::Errors::TeacherNotFound, "Teacher with TRN #{trn} not found")
+        }.to raise_error(
+          TRS::Errors::TeacherNotFound,
+          "No teacher with the provided teacher reference number and date of birth was found"
+        )
       end
     end
 
