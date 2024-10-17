@@ -29,7 +29,14 @@ RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
     end
 
     context "when there is no match" do
-      it "adds an error to the pending_induction_submission base"
+      include_context "fake trs api client that finds nothing"
+
+      it "raises teacher not found error" do
+        pending_induction_submission = FactoryBot.create(:pending_induction_submission)
+        find_ect = AppropriateBodies::ClaimAnECT::FindECT.new(appropriate_body:, pending_induction_submission:)
+
+        expect { find_ect.import_from_trs! }.to raise_error(TRS::Errors::TeacherNotFound)
+      end
     end
   end
 end

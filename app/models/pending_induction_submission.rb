@@ -62,4 +62,23 @@ class PendingInductionSubmission < ApplicationRecord
               message: "Outcome must be either 'passed' or 'failed'"
             },
             on: :record_outcome
+
+  validates :trs_qts_awarded,
+            presence: { message: "QTS has not been awarded" },
+            on: :register_ect
+
+  validate :trs_qts_awarded_before_started_on, on: :register_ect
+
+private
+
+  def trs_qts_awarded_before_started_on
+    return unless started_on && trs_qts_awarded
+
+    if trs_qts_awarded > started_on
+      errors.add(
+        :started_on,
+        "Induction start date cannot be earlier than QTS award date (#{trs_qts_awarded.to_fs(:govuk)})"
+      )
+    end
+  end
 end
