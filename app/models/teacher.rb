@@ -20,8 +20,4 @@ class Teacher < ApplicationRecord
             uniqueness: { message: 'TRN already exists', case_sensitive: false }
 
   scope :search, ->(query_string) { where('teachers.search @@ websearch_to_tsquery(?)', query_string) }
-
-  def full_name
-    "#{first_name} #{last_name}"
-  end
 end
