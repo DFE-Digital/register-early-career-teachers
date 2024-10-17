@@ -47,23 +47,10 @@ jobs:
           docker-repository: ghcr.io/dfe-digital/ecf2
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  add-review-label:
-    name: Add review label to PR
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Apply labels based on file changes
-        uses: actions/labeler@v5
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
   deploy-review:
     name: Deploy review
     concurrency: deploy_review_${{ github.event.pull_request.number }}
-    if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'Review')
-    needs: [add-review-label, docker]
+    needs: docker
     runs-on: ubuntu-latest
     environment:
       name: review

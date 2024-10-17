@@ -12,7 +12,6 @@ jobs:
     name: Delete Review App ${{ github.event.pull_request.number }}
     concurrency: deploy_review_${{ github.event.pull_request.number }}
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'Deploy') }}
     environment: review
     steps:
     - name: Checkout
