@@ -33,19 +33,8 @@ jobs:
     steps:
       - run: "echo 'Linting and tests passed, this branch is ready to be merged'"
 
-  add-review-label:
-    name: Add review label to PR
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Apply labels based on file changes
-        uses: actions/labeler@v5
-
   docker:
     name: Build and push Docker image
-    needs: add-review-label
     runs-on: ubuntu-latest
     outputs:
       docker-image-tag: ${{ steps.build-docker-image.outputs.tag }}
@@ -61,7 +50,6 @@ jobs:
   deploy-review:
     name: Deploy review
     concurrency: deploy_review_${{ github.event.pull_request.number }}
-    if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'Review')
     needs: docker
     runs-on: ubuntu-latest
     environment:
