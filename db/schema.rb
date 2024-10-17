@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_03_132805) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_17_072716) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -222,11 +222,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_03_132805) do
     t.jsonb "trs_alerts"
     t.date "trs_induction_start_date"
     t.string "trs_induction_status_description"
-    t.boolean "trs_qts_awarded"
     t.string "trs_qts_status_description"
     t.date "trs_initial_teacher_training_end_date"
     t.string "trs_initial_teacher_training_provider_name"
     t.enum "outcome", enum_type: "induction_outcomes"
+    t.date "trs_qts_awarded"
     t.index ["appropriate_body_id"], name: "index_pending_induction_submissions_on_appropriate_body_id"
   end
 

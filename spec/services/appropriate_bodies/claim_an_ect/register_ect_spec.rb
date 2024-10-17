@@ -12,20 +12,33 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
   end
 
   describe "#register" do
+    let(:trs_qts_awarded) { Date.new(2023, 5, 2) }
     let(:pending_induction_submission_params) do
       {
         induction_programme: "fip",
-        started_on: Date.new(2023, 5, 3),
-        finished_on: Date.new(2024, 5, 2),
+        started_on: Date.new(2023, 5, 2),
+        finished_on: Date.new(2024, 5, 5),
         trn: "1234567",
         trs_first_name: "John",
         trs_last_name: "Doe",
-        number_of_terms: 3
+        number_of_terms: 3,
+        trs_qts_awarded:
       }
     end
 
+    context "with started_on before trs_qts_awarded" do
+      let(:trs_qts_awarded) { Date.new(2023, 5, 3) }
+
+      it "fails because invalid" do
+        expect(subject.register(pending_induction_submission_params)).to be_falsey
+        expect(subject.pending_induction_submission.errors[:started_on]).to include(
+          "Induction start date cannot be earlier than QTS award date (3 May 2023)"
+        )
+      end
+    end
+
     context "when registering a new teacher" do
-      it "creates a new teacher and induction period" do
+      it "creates a new teacher and induction period", :aggregate_failures do
         expect {
           subject.register(pending_induction_submission_params)
         }.to change(Teacher, :count).by(1)
@@ -38,8 +51,8 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
 
         induction_period = InductionPeriod.last
         expect(induction_period.teacher).to eq(teacher)
-        expect(induction_period.started_on).to eq(Date.new(2023, 5, 3))
-        expect(induction_period.finished_on).to eq(Date.new(2024, 5, 2))
+        expect(induction_period.started_on).to eq(Date.new(2023, 5, 2))
+        expect(induction_period.finished_on).to eq(Date.new(2024, 5, 5))
         expect(induction_period.appropriate_body).to eq(appropriate_body)
         expect(induction_period.induction_programme).to eq("fip")
         expect(induction_period.number_of_terms).to eq(3)
@@ -49,7 +62,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
         expect {
           subject.register(pending_induction_submission_params)
         }.to have_enqueued_job(BeginECTInductionJob)
-          .with(hash_including(trn: "1234567", start_date: "2023-05-03"))
+          .with(hash_including(trn: "1234567", start_date: "2023-05-02"))
       end
     end
 
@@ -86,8 +99,8 @@ RSpec.describe AppropriateBodies::ClaimAnECT::RegisterECT do
       subject.register(pending_induction_submission_params)
 
       expect(subject.pending_induction_submission.induction_programme).to eq("fip")
-      expect(subject.pending_induction_submission.started_on).to eq(Date.new(2023, 5, 3))
-      expect(subject.pending_induction_submission.finished_on).to eq(Date.new(2024, 5, 2))
+      expect(subject.pending_induction_submission.started_on).to eq(Date.new(2023, 5, 2))
+      expect(subject.pending_induction_submission.finished_on).to eq(Date.new(2024, 5, 5))
     end
   end
 end
