@@ -16,6 +16,7 @@ alan_rickman = Teacher.create!(first_name: 'Alan', last_name: 'Rickman', trn: '2
 hugh_grant = Teacher.create!(first_name: 'Hugh', last_name: 'Grant', trn: '3657894')
 harriet_walter = Teacher.create!(first_name: 'Harriet', last_name: 'Walter', trn: '2017654')
 hugh_laurie = Teacher.create!(first_name: 'Hugh', last_name: 'Laurie', trn: '4786654')
+andre_roussimoff = Teacher.create!(first_name: 'André', last_name: 'Roussimoff', trn: '8886654')
 Teacher.create!(first_name: 'Imogen', last_name: 'Stubbs', trn: '6352869')
 Teacher.create!(first_name: 'Gemma', last_name: 'Jones', trn: '9578426')
 
@@ -237,6 +238,20 @@ InductionPeriod.create!(
   number_of_terms: 3
 )
 
+print_seed_info("André Roussimoff ('Mentor')", indent: 2)
+
+andre_roussimoff_mentoring_at_ackley_bridge = MentorAtSchoolPeriod.create!(
+  teacher: andre_roussimoff,
+  school: ackley_bridge,
+  started_on: 1.year.ago
+)
+
+TrainingPeriod.create!(
+  mentor_at_school_period: andre_roussimoff_mentoring_at_ackley_bridge,
+  started_on: 1.year.ago,
+  provider_partnership: meadow_grain_partnership_2022
+)
+
 print_seed_info("Adding mentorships:")
 
 MentorshipPeriod.create!(
@@ -249,6 +264,13 @@ MentorshipPeriod.create!(
 MentorshipPeriod.create!(
   mentor: hugh_laurie_mentoring_at_abbey_grove,
   mentee: hugh_grant_ect_at_abbey_grove,
+  started_on: 1.year.ago,
+  finished_on: nil
+).tap { |mp| describe_mentorship_period(mp) }
+
+MentorshipPeriod.create!(
+  mentor: andre_roussimoff_mentoring_at_ackley_bridge,
+  mentee: kate_winslett_ect_at_ackley_bridge,
   started_on: 1.year.ago,
   finished_on: nil
 ).tap { |mp| describe_mentorship_period(mp) }

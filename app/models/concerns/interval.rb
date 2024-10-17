@@ -7,6 +7,8 @@ module Interval
 
     # Scopes
     scope :overlapping_with, ->(period) { where("range && daterange(?, ?)", period.started_on, period.finished_on) }
+
+    scope :ongoing, -> { where(finished_on: nil) }
   end
 
   def period_dates_validation

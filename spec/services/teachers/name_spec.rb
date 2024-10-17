@@ -2,6 +2,14 @@ describe Teachers::Name do
   describe '#full_name' do
     subject { Teachers::Name.new(teacher) }
 
+    context 'when teacher is missing' do
+      let(:teacher) { nil }
+
+      it 'returns nil' do
+        expect(subject.full_name).to be_nil
+      end
+    end
+
     context 'when a corrected_name is set' do
       let(:teacher) { FactoryBot.build(:teacher) }
 

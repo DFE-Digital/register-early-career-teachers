@@ -53,6 +53,12 @@ describe Interval do
         expect(DummyMentor.overlapping_with(FakePeriod.new('2022-01-01', '2022-12-31'))).to be_empty
       end
     end
+
+    describe '.ongoing' do
+      it 'returns records where the finished_on date is null' do
+        expect(DummyMentor.ongoing.to_sql).to end_with(%("finished_on" IS NULL))
+      end
+    end
   end
 end
 

@@ -8,6 +8,8 @@
     <%= govuk_skip_link %>
     <%= govuk_header(full_width_border: true, html_attributes: { class: [environment_specific_header_colour_class] }) %>
     <%= govuk_service_navigation(service_name: "Register early career teachers") do |service_navigation| %>
+      <%= service_navigation.with_navigation_item(text: "Your ECT\s", href: schools_ects_home_path, current: current_page?(schools_ects_home_path)  )%>
+      <%= service_navigation.with_navigation_item(text: "Your mentors", href: '#') %>
       <%= service_navigation.with_navigation_item(text: "Sign out", href: sign_out_path) if authenticated? %>
     <% end %>
 
@@ -18,6 +20,7 @@
       <main class="govuk-main-wrapper" id="main-content" role="main">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-caption-xl"><%= @school_name %></h3>
             <%= yield(:page_header) %>
           </div>
         </div>

@@ -6,6 +6,8 @@ class Teachers::Name
   end
 
   def full_name
+    return if teacher.blank?
+
     teacher.corrected_name || first_name_plus_last_name
   end
 
