@@ -12,10 +12,11 @@
 
 # These inflection rules are supported but not enabled by default:
 ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.acronym "ECT"
-  inflect.acronym "API"
-  inflect.acronym "GIAS"
-  inflect.acronym "OTP"
-  inflect.acronym "TRN"
-  inflect.acronym "DfE"
+  inflect.acronym "API"  # Application Programming Interface
+  inflect.acronym "DfE"  # Department for Education
+  inflect.acronym "ECT"  # Early Career Teacher
+  inflect.acronym "GIAS" # Get Information About Schools
+  inflect.acronym "OTP"  # One-time Password
+  inflect.acronym "TRN"  # Teacher Reference Number
+  inflect.acronym "TRS"  # Teaching Record System
 end
