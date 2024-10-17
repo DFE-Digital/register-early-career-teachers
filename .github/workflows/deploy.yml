@@ -42,8 +42,6 @@ jobs:
 
       - name: Apply labels based on file changes
         uses: actions/labeler@v5
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
   docker:
     name: Build and push Docker image
