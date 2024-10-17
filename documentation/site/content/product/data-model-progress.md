@@ -53,10 +53,24 @@ Most of these problems are linked to email. Participants sometimes have
 multiple email addresses because they might change school or they
 might not have a school email yet.
 
-Primary need for email is to award them?
-
 Some emails are generic (e.g. `head@`) and this means the identify model might
-get confused by them.
+get confused by them as they could potentially belong to multiple people.
+
+We need the ECT and mentor's email so we can:
+
+* pass it on to the lead provider, who uses it to contact them about training or set up their learning platform accounts
+* send them our privacy policy to let them know we hold their data
+
+We need the SIT email because:
+
+* lead providers need to contact them
+* DfE wants to contact them about their statutory obligations for ECF
+* lead providers sometimes set them up on their learning platforms too
+
+We need the school admin email because:
+
+* they use it to sign in
+* we, or lead providers, might need to contact them
 
 ### Status ✅
 
