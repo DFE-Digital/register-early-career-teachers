@@ -33,20 +33,6 @@ jobs:
     steps:
       - run: "echo 'Linting and tests passed, this branch is ready to be merged'"
 
-  docker:
-    name: Build and push Docker image
-    runs-on: ubuntu-latest
-    outputs:
-      docker-image-tag: ${{ steps.build-docker-image.outputs.tag }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: DFE-Digital/github-actions/build-docker-image@master
-        id: build-docker-image
-        with:
-          docker-repository: ghcr.io/dfe-digital/ecf2
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
   add-review-label:
     name: Add review label to PR
     runs-on: ubuntu-latest
@@ -59,11 +45,26 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
+  docker:
+    name: Build and push Docker image
+    needs: add-review-label
+    runs-on: ubuntu-latest
+    outputs:
+      docker-image-tag: ${{ steps.build-docker-image.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DFE-Digital/github-actions/build-docker-image@master
+        id: build-docker-image
+        with:
+          docker-repository: ghcr.io/dfe-digital/ecf2
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
   deploy-review:
     name: Deploy review
     concurrency: deploy_review_${{ github.event.pull_request.number }}
     if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'Review')
-    needs: [add-review-label, docker]
+    needs: docker
     runs-on: ubuntu-latest
     environment:
       name: review
