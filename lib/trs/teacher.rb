@@ -48,7 +48,7 @@ module TRS
       api_client.complete_induction!(trn:, completion_date:, status:)
     end
 
-    def validate!
+    def check_eligibility!
       raise TRS::Errors::QTSNotAwarded unless qts_awarded?
 
       true

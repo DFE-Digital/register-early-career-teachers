@@ -17,7 +17,7 @@ module AppropriateBodies
         #       below a case and add different errors to the :base
         return unless pending_induction_submission.valid?(:find_ect)
 
-        trs_teacher.validate!
+        trs_teacher.check_eligibility!
 
         pending_induction_submission.assign_attributes(appropriate_body:, **trs_teacher.present)
         pending_induction_submission.save(context: :find_ect)
