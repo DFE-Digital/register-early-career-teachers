@@ -31,7 +31,7 @@
 
       sl.with_row do |r|
         r.with_key(text: "QTS awarded")
-        r.with_value(text: @pending_induction_submission.trs_qts_awarded)
+        r.with_value(text: @pending_induction_submission.trs_qts_awarded.to_fs(:govuk))
       end
 
       sl.with_row do |r|

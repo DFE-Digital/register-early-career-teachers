@@ -48,10 +48,20 @@ module TRS
       api_client.complete_induction!(trn:, completion_date:, status:)
     end
 
+    def check_eligibility!
+      raise TRS::Errors::QTSNotAwarded unless qts_awarded?
+
+      true
+    end
+
   private
 
     def api_client
       @api_client ||= TRS::APIClient.new
+    end
+
+    def qts_awarded?
+      @qts_awarded.present?
     end
   end
 end

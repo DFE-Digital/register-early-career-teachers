@@ -17,17 +17,20 @@ module AppropriateBodies
         #       below a case and add different errors to the :base
         return unless pending_induction_submission.valid?(:find_ect)
 
-        pending_induction_submission.assign_attributes(appropriate_body:, **find_matching_record_in_trs)
+        trs_teacher.check_eligibility!
+
+        pending_induction_submission.assign_attributes(appropriate_body:, **trs_teacher.present)
         pending_induction_submission.save(context: :find_ect)
       end
 
     private
 
-      def find_matching_record_in_trs
-        client = TRS::APIClient.new
-        teacher = client.find_teacher(trn: pending_induction_submission.trn, date_of_birth: pending_induction_submission.date_of_birth)
+      def trs_teacher
+        @trs_teacher ||= api_client.find_teacher(trn: pending_induction_submission.trn, date_of_birth: pending_induction_submission.date_of_birth)
+      end
 
-        teacher.present
+      def api_client
+        @api_client ||= TRS::APIClient.new
       end
     end
   end

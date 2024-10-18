@@ -21,6 +21,10 @@ module AppropriateBodies
         else
           render(:new)
         end
+      rescue TRS::Errors::QTSNotAwarded => e
+        @pending_induction_submission.errors.add(:base, e.message)
+
+        render(:new)
       rescue TRS::Errors::TeacherNotFound => e
         @pending_induction_submission.errors.add(:trn, e.message)
 
