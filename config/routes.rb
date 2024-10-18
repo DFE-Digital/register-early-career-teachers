@@ -62,7 +62,9 @@ Rails.application.routes.draw do
   end
 
   namespace :schools do
+    get "/db", to: "home#index", as: :db
     get "/home/ects", to: "home#index", as: :ects_home
+    get "/no-db", to: "register_ect#start", as: :no_db
     get "/what-you-will-need", to: "register_ect#start", as: :register_ect_start
   end
 end

@@ -73,7 +73,7 @@ jobs:
         id: deploy
         with:
           environment: review
-          docker-image-tag: latest
+          docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           pull-request-number: ${{ github.event.pull_request.number }}
 
