@@ -18,7 +18,10 @@ RSpec.describe AppropriateBodyHelper, type: :helper do
     let(:teacher) { FactoryBot.create(:teacher) }
 
     it "builds a summary card for a teacher" do
-      expect(summary_card_for_teacher(teacher)).to include(teacher.first_name, teacher.last_name)
+      expect(summary_card_for_teacher(teacher)).to include(
+        CGI.escapeHTML(teacher.first_name),
+        CGI.escapeHTML(teacher.last_name)
+      )
     end
 
     context "when the teacher has induction periods" do
