@@ -12,10 +12,9 @@ module Schools
 
     def school
       # This is temporary. 'School' will be set once DfE signin hooked up
-      school_id = 1
       @school ||= School.joins(:gias_school)
                         .select("schools.id, gias_schools.name")
-                        .find(school_id)
+                        .first
     end
   end
 end
