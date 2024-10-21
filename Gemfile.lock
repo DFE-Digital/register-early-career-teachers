@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/DFE-Digital/dfe-wizard.git
+  revision: 6b2f76e4e3f9f1ac14e67066e27fc50964618b3e
+  specs:
+    dfe-wizard (0.1.1)
+      activemodel
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -561,6 +569,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  dfe-wizard!
   factory_bot_rails
   faker
   govuk-components

@@ -1,0 +1,23 @@
+<% page_data(title: "Find an ECT", error: true, backlink_href: schools_register_ect_start_path ) %>
+
+<p class="govuk-body">Enter your ECT's teacher reference number and date of birth to find them.</p>
+
+<%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%= f.govuk_number_field(
+        :trn,
+        label: { text: "Teacher reference number (TRN)", size: "m" },
+        hint: { text: "Enter your ECT's TRN (they are 7 digits long). It's on their pay slip, teaching contract or registration document from the General Teaching Council for England (GTCE).", size: "s" },
+      )
+  %>
+
+  <%= f.govuk_date_field :date_of_birth,
+                         date_of_birth: true,
+                         width: "two-thirds",
+                         legend: { text: 'Date of birth', size: "m", tag: "h3" },
+                         hint: { text: "For example, 31 3 1980"}
+  %>
+
+  <%= f.govuk_submit "Continue" %>
+<% end %>

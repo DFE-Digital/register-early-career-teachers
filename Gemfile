@@ -6,6 +6,7 @@ gem "rails", "~> 7.2.1"
 
 gem "bootsnap", require: false
 gem "cssbundling-rails"
+gem "dfe-wizard", github: "DFE-Digital/dfe-wizard"
 gem "jsbundling-rails"
 gem "pg", "~> 1.5"
 gem "propshaft"

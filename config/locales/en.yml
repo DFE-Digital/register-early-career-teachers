@@ -1,1 +1,7 @@
 en:
+  errors:
+    teacher_reference_number:
+      blank: Enter the teacher reference number (TRN)
+      too_short: Teacher reference number must include at least 5 digits
+      too_long: Teacher reference number cannot include more than 7 digits
+      invalid: Teacher reference number must include at least 5 digits
