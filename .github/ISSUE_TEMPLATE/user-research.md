@@ -1,3 +1,12 @@
+---
+name: 'User research ticket'
+about: To organise and show progress on our UR rounds.
+title: User research round x
+labels: ''
+assignees: ''
+
+---
+
 > ### **Why?**
 
 
