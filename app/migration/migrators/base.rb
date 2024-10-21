@@ -66,7 +66,7 @@ module Migrators
       items.each do |item|
         yield(item)
         DataMigration.update_counters(data_migration.id, processed_count: 1)
-      rescue ActiveRecord::ActiveRecordError => e
+      rescue ActiveRecord::ActiveRecordError, ::InductionRecordSanitizer::InductionRecordError => e
         DataMigration.update_counters(data_migration.id, failure_count: 1, processed_count: 1)
         failure_manager.record_failure(item, e.message)
       end

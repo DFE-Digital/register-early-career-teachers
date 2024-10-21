@@ -17,7 +17,7 @@ module Migrators
     end
 
     def self.reset!
-      if Rails.env.development?
+      if Rails.application.config.enable_migration_testing
         ::ProviderPartnership.connection.execute("TRUNCATE #{::ProviderPartnership.table_name} RESTART IDENTITY CASCADE")
       end
     end
