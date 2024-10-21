@@ -18,6 +18,10 @@ permissions:
   pull-requests: write
 
 jobs:
+  brakeman:
+    name: Brakeman
+    uses: ./.github/workflows/brakeman.yml
+
   lint:
     name: Lint
     uses: ./.github/workflows/lint.yml
@@ -28,10 +32,10 @@ jobs:
 
   all-checks-passed:
     name: All checks passed
-    needs: [lint, rspec]
+    needs: [brakeman, lint, rspec]
     runs-on: ubuntu-latest
     steps:
-      - run: "echo 'Linting and tests passed, this branch is ready to be merged'"
+      - run: "echo 'Security checks, linting tests passed, this branch is ready to be merged'"
 
   docker:
     name: Build and push Docker image
