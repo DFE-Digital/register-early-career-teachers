@@ -1,10 +1,11 @@
 class InductionRecordSanitizer
   include Enumerable
 
-  class MultipleBlankEndDateError < StandardError; end
-  class MultipleActiveStatesError < StandardError; end
-  class StartDateAfterEndDateError < StandardError; end
-  class InvalidDateSequence < StandardError; end
+  class InductionRecordError < StandardError; end
+  class MultipleBlankEndDateError < InductionRecordError; end
+  class MultipleActiveStatesError < InductionRecordError; end
+  class StartDateAfterEndDateError < InductionRecordError; end
+  class InvalidDateSequenceError < InductionRecordError; end
 
   attr_reader :participant_profile
 
