@@ -7,9 +7,11 @@
 
     <%= govuk_skip_link %>
     <%= govuk_header(full_width_border: true, html_attributes: { class: [environment_specific_header_colour_class] }) %>
-    <%= govuk_service_navigation(service_name: "Register early career teachers") do |service_navigation| %>
-      <%= service_navigation.with_navigation_item(text: "Sign out", href: sign_out_path) if authenticated? %>
-    <% end %>
+
+    <%= render Navigation::PrimaryNavigationComponent.new(
+      current_path: request.fullpath,
+      is_authenticated: authenticated?
+    ) %>
 
     <div class="govuk-width-container">
       <%= environment_specific_phase_banner %>
