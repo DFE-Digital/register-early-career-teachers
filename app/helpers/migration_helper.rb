@@ -60,7 +60,7 @@ module MigrationHelper
 
     model = data_migrations.sample.model
     govuk_link_to failures_migrations_path(model) do
-      %Q(Failures<span: class="govuk-visually-hidden"> for #{model.humanize}</span>).html_safe
+      %(Failures<span: class="govuk-visually-hidden"> for #{model.humanize}</span>).html_safe
     end
   end
 

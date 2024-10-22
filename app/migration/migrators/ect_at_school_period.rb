@@ -36,8 +36,8 @@ module Migrators
         school_periods = SchoolPeriodExtractor.new(induction_records:)
         Rails.logger.info("--> migrating #{school_periods.count} school periods")
         school_periods.each do |period|
-          school = School.find_by!(urn: period[:school].urn)
-          ::ECTAtSchoolPeriod.create!(teacher:, school:, started_on: period[:start_date], finished_on: period[:end_date])
+          school = School.find_by!(urn: period.urn)
+          ::ECTAtSchoolPeriod.create!(teacher:, school:, started_on: period.start_date, finished_on: period.end_date)
         end
       end
     end

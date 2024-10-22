@@ -18,8 +18,10 @@ private
   end
 
   def build_school_periods
-    current_period = {}
+    current_period = nil
     current_school = nil
+
+    school_period = Struct.new(:urn, :start_date, :end_date)
 
     @induction_records.each_with_object([]) do |induction_record, periods|
       record_school = induction_record.induction_programme.school_cohort.school
@@ -27,10 +29,12 @@ private
       if current_school != record_school
         current_school = record_school
 
-        current_period = { school: current_school, start_date: induction_record.start_date, end_date: induction_record.end_date }
+        current_period = school_period.new(urn: current_school.urn,
+                                           start_date: induction_record.start_date,
+                                           end_date: induction_record.end_date)
         periods << current_period
       else
-        current_period[:end_date] = induction_record.end_date
+        current_period.end_date = induction_record.end_date
       end
     end
   end
