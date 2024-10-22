@@ -10,8 +10,8 @@ module Navigation
 
     def navigation_items
       [
-        (ab_nav_options if current_path.start_with?("/appropriate-body")),
-        (school_nav_options if current_path.start_with?("/school")),
+        ab_nav_options,
+        school_nav_options,
         ({ text: "Sign out", href: sign_out_path } if is_authenticated),
       ].flatten.compact
     end
@@ -19,14 +19,18 @@ module Navigation
   private
 
     def school_nav_options
-      [
-        { text: "Your ECTs", href: schools_ects_home_path },
-        { text: "Your mentors", href: 'FIXME' }
-      ]
+      if current_path.start_with?("/school")
+        [
+          { text: "Your ECTs", href: schools_ects_home_path },
+          { text: "Your mentors", href: 'FIXME' }
+        ]
+      end
     end
 
     def ab_nav_options
-      []
+      if current_path.start_with?("/appropriate-body")
+        []
+      end
     end
   end
 end
