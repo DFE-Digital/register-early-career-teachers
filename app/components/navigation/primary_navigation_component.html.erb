@@ -1,9 +1,0 @@
-<%= govuk_service_navigation(service_name: "Register early career teachers") do |service_navigation|
-  navigation_items.each do |item|
-    service_navigation.with_navigation_item(
-      text: item[:text],
-      href: item[:href],
-      current: current_page?(item[:href])
-    )
-  end
-end %>
