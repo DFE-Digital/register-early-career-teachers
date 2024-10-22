@@ -1,7 +1,7 @@
 <% page_data(title: "Find an early career teacher's record", error: @pending_induction_submission.errors.present?) %>
 
 <div class="govuk-body">
-  Find your ECT by entering their teacher reference number (TRN) and date of birth. If you can't find them, contact support.
+  Find your ECT by entering their teacher reference number (TRN) and date of birth. If you can't find them, <%= govuk_link_to("contact support", support_path)%>.
 </div>
 
 <%= form_with(model: @pending_induction_submission, url: ab_claim_an_ect_find_path) do |f| %>
