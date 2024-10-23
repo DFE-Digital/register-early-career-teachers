@@ -4,6 +4,7 @@ module Migration
 
     belongs_to :teacher_profile
     has_many :induction_records
+    has_many :school_mentors # only ParticipantProfile::Mentor
 
     scope :ect, -> { where(type: "ParticipantProfile::ECT") }
     scope :mentor, -> { where(type: "ParticipantProfile::Mentor") }
