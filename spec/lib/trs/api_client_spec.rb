@@ -2,37 +2,54 @@ RSpec.describe TRS::APIClient do
   let(:client) { described_class.new }
   let(:trn) { '1234567' }
   let(:date_of_birth) { '1990-01-01' }
+  let(:national_insurance_number) { 'QQ123456A' }
   let(:connection) { client.instance_variable_get(:@connection) }
 
   describe '#find_teacher' do
-    context 'when the API request is successful' do
+    let(:response) { instance_double(Faraday::Response, success?: true, body: response_body) }
+    let(:expected_path) { "v3/persons/1234567" }
+
+    context 'finding a teacher by TRN and date of birth' do
       let(:response_body) { { 'firstName' => 'John', 'trn' => trn }.to_json }
-      let(:response) { instance_double(Faraday::Response, success?: true, body: response_body) }
+      let(:expected_payload) { { dateOfBirth: "1990-01-01" } }
 
       before do
-        allow(connection).to receive(:get).and_return(response)
+        allow(connection).to receive(:get).with(expected_path, expected_payload).and_return(response)
+      end
+
+      it "gets from the persons endpoint with TRN and date of birth" do
+        client.find_teacher(trn:, date_of_birth:)
+
+        expect(connection).to have_received(:get).with(expected_path, expected_payload).once
       end
 
       it 'returns a TRS::Teacher object' do
         teacher = client.find_teacher(trn:, date_of_birth:)
+
         expect(teacher).to be_a(TRS::Teacher)
-        expect(teacher.present).to eq(
-          {
-            date_of_birth: nil,
-            trn: "1234567",
-            trs_alerts: nil,
-            trs_email_address: nil,
-            trs_first_name: "John",
-            trs_induction_start_date: nil,
-            trs_induction_status: nil,
-            trs_induction_status_description: nil,
-            trs_initial_teacher_training_end_date: nil,
-            trs_initial_teacher_training_provider_name: nil,
-            trs_last_name: nil,
-            trs_qts_awarded: nil,
-            trs_qts_status_description: nil,
-          }
-        )
+        expect(teacher.present.compact).to eq({ trn: "1234567", trs_first_name: "John" })
+      end
+    end
+
+    context 'finding a teacher by TRN and national insurance number' do
+      let(:response_body) { { 'firstName' => 'John', 'trn' => trn }.to_json }
+      let(:expected_payload) { { nationalInsuranceNumber: "QQ123456A" } }
+
+      before do
+        allow(connection).to receive(:get).with(expected_path, expected_payload).and_return(response)
+      end
+
+      it "gets from the persons endpoint with TRN and national insurance number" do
+        client.find_teacher(trn:, national_insurance_number:)
+
+        expect(connection).to have_received(:get).with(expected_path, expected_payload).once
+      end
+
+      it 'returns a TRS::Teacher object' do
+        teacher = client.find_teacher(trn:, national_insurance_number:)
+
+        expect(teacher).to be_a(TRS::Teacher)
+        expect(teacher.present.compact).to eq({ trn: "1234567", trs_first_name: "John" })
       end
     end
 
