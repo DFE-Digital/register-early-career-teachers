@@ -11,6 +11,7 @@ jobs:
   delete-review-app:
     name: Delete Review App ${{ github.event.pull_request.number }}
     concurrency: deploy_review_${{ github.event.pull_request.number }}
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'Dependencies') }}
     runs-on: ubuntu-latest
     environment: review
     steps:
