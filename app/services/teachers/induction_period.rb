@@ -9,6 +9,12 @@ class Teachers::InductionPeriod
     first_induction_period&.started_on
   end
 
+  def active_induction_period
+    # FIXME: this works if finished_on cannot be set to a future date
+    # If that becomes possible, this query will need to be updated
+    teacher.induction_periods_reported_by_appropriate_body.find_by(finished_on: nil)
+  end
+
 private
 
   def first_induction_period
