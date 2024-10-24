@@ -29,6 +29,10 @@ module AppropriateBodies
         @pending_induction_submission.errors.add(:trn, e.message)
 
         render(:new)
+      rescue TeacherHasActiveInductionPeriodWithABError
+        render(:error_active_induction_period_with_ab)
+      rescue TeacherHasActiveInductionPeriodWithAnotherABError
+        render(:error_active_induction_period_with_another_ab)
       end
 
     private

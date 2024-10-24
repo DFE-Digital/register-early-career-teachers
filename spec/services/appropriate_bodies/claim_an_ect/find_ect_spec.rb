@@ -28,6 +28,29 @@ RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
       it "assigns the incoming attributes to the pending_induction_submission and returns it"
     end
 
+    context "when there is a match and the teacher has an open induction period" do
+      context "when the induction period is with another appropriate body" do
+        let!(:teacher) { FactoryBot.create(:teacher) }
+        let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
+        let!(:induction_period) do
+          PeriodBuilders::InductionPeriodBuilder.new(
+            appropriate_body: pending_induction_submission.appropriate_body,
+            teacher:,
+            school: FactoryBot.create(:school)
+          ).build(started_on: Date.parse("2 October 2022"))
+        end
+
+        it "raises an error" do
+          find_ect = AppropriateBodies::ClaimAnECT::FindECT.new(appropriate_body:, pending_induction_submission:)
+
+          expect { find_ect.import_from_trs! }.to raise_error(AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherABError)
+        end
+      end
+
+      context "when the induction period is reported by a different appropriate body" do
+      end
+    end
+
     context "when there is no match" do
       include_context "fake trs api client that finds nothing"
 
