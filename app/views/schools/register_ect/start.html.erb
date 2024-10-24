@@ -1,4 +1,4 @@
-<% page_data(title: "What you'll need", error: false) %>
+<% page_data(title: "What you'll need to register a new ECT", error: false) %>
 
 <h2 class="govuk-heading-m">Personal information</h2>
 <p class="govuk-body">You must provide your ECT's:</p>
@@ -18,7 +18,8 @@
   <li>mentor</li>
 </ul>
 
-<p class="govuk-body">If you have not assigned a mentor for your ECT, you can still register them and provide the
+<p class="govuk-body">If you have not assigned a mentor for your ECT, you can still register them by providing the
   mentor's details later.</p>
 
-<button class="govuk-button">Continue</button>
+<%= govuk_button_link_to("Continue", schools_register_ect_find_ect_path) %>
+

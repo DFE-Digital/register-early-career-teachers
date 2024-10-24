@@ -9,6 +9,9 @@ FROM ruby:3.3.4-alpine as builder
 #     apk add --update --no-cache gcc git libc6-compat libc-dev make nodejs \
 #     postgresql13-dev
 
+RUN apk -U upgrade && \
+    apk add --update --no-cache git
+
 WORKDIR /app
 
 # Add the timezone (builder image) as it's not configured by default in Alpine
