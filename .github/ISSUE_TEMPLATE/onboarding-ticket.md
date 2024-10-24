@@ -58,6 +58,7 @@ These are documents or websites to have a read through to learn more about early
 Make sure to schedule in:
 - [ ] Meeting  with ECF Support team and ask them to take you through how Zendesk support works
 - [ ] Intro chats with everyone on the team
+- [ ] Intro chats with programme leads - Mili, Freddie and Ben
 - [ ] A demo of Manage training for early career teachers for schools
 - [ ] A demo of the check data services for delivery partners and appropriate bodies
 - [ ] A walkthrough of the TRA's appropriate body portal and why induction data is important to ECF 2.0
