@@ -1,0 +1,24 @@
+<% page_data(title: "Teachers") %>
+
+<p class="govuk-body"><strong><%= @pagy.count %></strong> teachers</p>
+
+<%= govuk_table do |table|
+  table.with_head do |head|
+    head.with_row(html_attributes: { class: "govuk-!-font_size-16" }) do |row|
+      row.with_cell(text: "Name")
+      row.with_cell(text: "TRN")
+    end
+  end
+
+  table.with_body do |body|
+    @teachers.each_with_index do |teacher, index|
+      body.with_row(html_attributes: { class: "govuk-!-font-size-16" }) do |row|
+        row.with_cell do
+          govuk_link_to "#{teacher.first_name} #{teacher.last_name}", teacher_path(teacher, page: @pagy.page)
+        end
+        row.with_cell(text: teacher.trn)
+      end
+    end
+  end
+end %>
+<%== govuk_pagination pagy: @pagy %>

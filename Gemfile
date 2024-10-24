@@ -16,6 +16,7 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 gem "govuk-components"
 gem "govuk_design_system_formbuilder"
 gem "govuk_markdown"
+gem "pagy", "~> 9.1"
 
 gem "mail-notify"
 

@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   def page_data(title:, header: nil, header_size: "l", error: false, backlink_href: nil)
     page_title = if error
                    "Error: #{title}"

@@ -584,6 +584,7 @@ DEPENDENCIES
   omniauth
   omniauth-rails_csrf_protection
   omniauth_openid_connect
+  pagy (~> 9.1)
   pg (~> 1.5)
   playwright-ruby-client
   propshaft
