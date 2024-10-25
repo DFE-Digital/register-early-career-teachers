@@ -51,14 +51,14 @@ abbey_grove_school = School.find_by(urn: 1_759_427)
 
 print_seed_info("Adding appropriate bodies")
 
-AppropriateBody.create!(name: 'Canvas Teaching School Hub', local_authority_code: 109, establishment_number: 2367)
-AppropriateBody.create!(name: 'South Yorkshire Studio Hub', local_authority_code: 678, establishment_number: 9728)
-AppropriateBody.create!(name: 'Ochre Education Partnership', local_authority_code: 238, establishment_number: 6582)
-umber_teaching_school_hub = AppropriateBody.create!(name: 'Umber Teaching School Hub', local_authority_code: 957, establishment_number: 7361)
-golden_leaf_academy = AppropriateBody.create!(name: 'Golden Leaf Academy', local_authority_code: 648, establishment_number: 3986)
-AppropriateBody.create!(name: 'Frame University London', local_authority_code: 832, establishment_number: 6864)
-AppropriateBody.create!(name: 'Easelcroft Academy', local_authority_code: 573, establishment_number: 9273)
-AppropriateBody.create!(name: 'Vista College', local_authority_code: 418, establishment_number: 3735)
+AppropriateBody.create!(name: 'Canvas Teaching School Hub', local_authority_code: 109, establishment_number: 2367, dfe_sign_in_organisation_id: SecureRandom.uuid)
+AppropriateBody.create!(name: 'South Yorkshire Studio Hub', local_authority_code: 678, establishment_number: 9728, dfe_sign_in_organisation_id: SecureRandom.uuid)
+AppropriateBody.create!(name: 'Ochre Education Partnership', local_authority_code: 238, establishment_number: 6582, dfe_sign_in_organisation_id: SecureRandom.uuid)
+umber_teaching_school_hub = AppropriateBody.create!(name: 'Umber Teaching School Hub', local_authority_code: 957, establishment_number: 7361, dfe_sign_in_organisation_id: SecureRandom.uuid)
+golden_leaf_academy = AppropriateBody.create!(name: 'Golden Leaf Academy', local_authority_code: 648, establishment_number: 3986, dfe_sign_in_organisation_id: SecureRandom.uuid)
+AppropriateBody.create!(name: 'Frame University London', local_authority_code: 832, establishment_number: 6864, dfe_sign_in_organisation_id: SecureRandom.uuid)
+AppropriateBody.create!(name: 'Easelcroft Academy', local_authority_code: 573, establishment_number: 9273, dfe_sign_in_organisation_id: SecureRandom.uuid)
+AppropriateBody.create!(name: 'Vista College', local_authority_code: 418, establishment_number: 3735, dfe_sign_in_organisation_id: SecureRandom.uuid)
 
 print_seed_info("Adding lead providers")
 

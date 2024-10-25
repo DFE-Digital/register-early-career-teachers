@@ -34,9 +34,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_15_110325) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "local_authority_code", null: false
-    t.integer "establishment_number", null: false
-    t.virtual "establishment_id", type: :string, as: "((((local_authority_code)::character varying)::text || '/'::text) || ((establishment_number)::character varying)::text)", stored: true
+    t.integer "local_authority_code"
+    t.integer "establishment_number"
+    t.uuid "dfe_sign_in_organisation_id", null: false
+    t.index ["dfe_sign_in_organisation_id"], name: "index_appropriate_bodies_on_dfe_sign_in_organisation_id", unique: true
     t.index ["local_authority_code", "establishment_number"], name: "idx_on_local_authority_code_establishment_number_039c79cd09", unique: true
     t.index ["name"], name: "index_appropriate_bodies_on_name", unique: true
   end
