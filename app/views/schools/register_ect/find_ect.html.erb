@@ -1,4 +1,4 @@
-<% page_data(title: "Find an ECT", error: true, backlink_href: schools_register_ect_start_path ) %>
+<% page_data(title: "Find an ECT", error: @wizard.current_step.errors.present?, backlink_href: schools_register_ect_start_path) %>
 
 <p class="govuk-body">Enter your ECT's teacher reference number and date of birth to find them.</p>
 
@@ -16,8 +16,10 @@
                          date_of_birth: true,
                          width: "two-thirds",
                          legend: { text: 'Date of birth', size: "m", tag: "h3" },
-                         hint: { text: "For example, 31 3 1980"}
+                         hint: { text: "For example, 31 3 1980" }
   %>
 
   <%= f.govuk_submit "Continue" %>
 <% end %>
+
+<%= render Schools::TestGuidanceComponent.new %>

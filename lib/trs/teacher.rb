@@ -1,6 +1,6 @@
 module TRS
   class Teacher
-    attr_reader :trn
+    attr_reader :trn, :first_name, :last_name, :date_of_birth
 
     def initialize(data)
       @trn = data['trn']

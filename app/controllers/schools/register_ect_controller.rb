@@ -2,7 +2,7 @@
 
 module Schools
   class RegisterECTController < ApplicationController
-    before_action :initialize_wizard
+    before_action :initialize_wizard, only: %i[new create]
 
     FORM_KEY = :register_ect_wizard
     WIZARD_CLASS = Schools::RegisterECT::BaseWizard.freeze
@@ -11,13 +11,13 @@ module Schools
     end
 
     def new
+      @session_data = @wizard.stored_attrs_for("find_ect")
+
       render current_step
     end
 
     def create
-      if @wizard.valid_step?
-        @wizard.save!
-
+      if @wizard.save!
         redirect_to @wizard.next_step_path
       else
         render current_step
