@@ -2,13 +2,13 @@ module AppropriateBodies
   module Teachers
     class RecordOutcomeController < AppropriateBodiesController
       def new
-        @teacher = Teacher.find(params[:ab_teacher_id])
+        @teacher = Teacher.find(params[:teacher_id])
 
         @pending_induction_submission = PendingInductionSubmission.new
       end
 
       def create
-        @teacher = Teacher.find(params[:ab_teacher_id])
+        @teacher = Teacher.find(params[:teacher_id])
         @pending_induction_submission = PendingInductionSubmission.new(
           **pending_induction_submission_params,
           **pending_induction_submission_attributes
@@ -26,7 +26,7 @@ module AppropriateBodies
       end
 
       def show
-        @teacher = Teacher.find(params[:ab_teacher_id])
+        @teacher = Teacher.find(params[:teacher_id])
       end
 
     private
