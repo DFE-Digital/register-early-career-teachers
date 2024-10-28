@@ -51,6 +51,22 @@ describe Teacher do
           expect(results).not_to include(other)
         end
       end
+
+      context "with accented letters" do
+        let(:teacher) { FactoryBot.create(:teacher, first_name: "João", last_name: "Silva", corrected_name: nil) }
+
+        it "finds results searching without accent" do
+          results = Teacher.search('Joao')
+
+          expect(results).to include(teacher)
+        end
+
+        it "finds results searching with accent" do
+          results = Teacher.search('João')
+
+          expect(results).to include(teacher)
+        end
+      end
     end
   end
 end

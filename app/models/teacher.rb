@@ -19,5 +19,5 @@ class Teacher < ApplicationRecord
             format: { with: TRN_FORMAT, message: "TRN must be 7 numeric digits" },
             uniqueness: { message: 'TRN already exists', case_sensitive: false }
 
-  scope :search, ->(query_string) { where('teachers.search @@ websearch_to_tsquery(?)', query_string) }
+  scope :search, ->(query_string) { where('teachers.search @@ websearch_to_tsquery(\'english\', unaccent(?))', query_string) }
 end
