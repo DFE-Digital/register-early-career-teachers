@@ -1,0 +1,36 @@
+<% page_data(title: @appropriate_body.name, error: false) %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <%= govuk_button_link_to("Claim an ECT", new_ab_claim_an_ect_find_path, secondary: true) %>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Your ECTs</></h2>
+    <div class="search-box">
+      <%= form_with method: :get, class: "search-box__form" do |f| %>
+        <div class="search-box__input">
+          <%= f.govuk_text_field(
+                "q",
+                value: params[:q],
+                label: { text: "Search for an ECT", size: "s" },
+                hint: { text: "placeholder" },
+              )
+          %>
+        </div>
+
+        <%= f.govuk_submit "Search" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <ul class="govuk-list govuk-list--bullet">
+      <% @teachers.all.each do |teacher| %>
+        <%= summary_card_for_teacher(teacher) %>
+      <% end %>
+    </ul>
+  </div>
+</div>

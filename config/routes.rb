@@ -46,7 +46,7 @@ Rails.application.routes.draw do
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab'
   namespace :appropriate_bodies, path: 'appropriate-body', as: 'ab' do
-    resources :teachers, only: %i[show], controller: 'teachers', as: 'teachers' do
+    resources :teachers, only: %i[index show], controller: 'teachers', as: 'teachers' do
       resource :release_ect, only: %i[new create show], path: 'release', controller: 'teachers/release_ect'
       resource :record_outcome, only: %i[new create show], path: 'record-outcome', controller: 'teachers/record_outcome'
     end
