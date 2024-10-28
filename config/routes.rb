@@ -44,7 +44,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab'
+  resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab_landing', controller: 'appropriate_bodies/landing'
   namespace :appropriate_bodies, path: 'appropriate-body', as: 'ab' do
     resources :teachers, only: %i[index show], controller: 'teachers', as: 'teachers' do
       resource :release_ect, only: %i[new create show], path: 'release', controller: 'teachers/release_ect'
