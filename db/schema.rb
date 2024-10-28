@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_17_072716) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_28_105436) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   # Custom types defined in this database.
   # Note that some types may not work with other database engines. Be careful if changing database.
@@ -378,7 +379,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_072716) do
     t.datetime "induction_start_date_submitted_to_trs_at"
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.virtual "search", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((COALESCE(first_name, ''::character varying))::text || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(corrected_name, ''::character varying))::text))", stored: true
+    t.virtual "search", type: :tsvector, as: "to_tsvector('unaccented'::regconfig, (((((COALESCE(first_name, ''::character varying))::text || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(corrected_name, ''::character varying))::text))", stored: true
     t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
     t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
     t.index ["search"], name: "index_teachers_on_search", using: :gin

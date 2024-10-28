@@ -59,10 +59,10 @@ describe Teacher do
   describe 'scopes' do
     describe '#search' do
       it "searches the 'search' column using a tsquery" do
-        expect(Teacher.search('Joey').to_sql).to end_with(%{WHERE (teachers.search @@ websearch_to_tsquery('Joey'))})
+        expect(Teacher.search('Joey').to_sql).to end_with(%{WHERE (teachers.search @@ websearch_to_tsquery('unaccented', 'Joey'))})
       end
 
-      describe "matching" do
+      describe 'basic matching' do
         let!(:target) { FactoryBot.create(:teacher, first_name: "Malcolm", last_name: "Wilkerson", corrected_name: nil) }
         let!(:other) { FactoryBot.create(:teacher, first_name: "Reese", last_name: "Wilkerson", corrected_name: nil) }
 
@@ -78,6 +78,22 @@ describe Teacher do
 
           expect(results).to include(target)
           expect(results).not_to include(other)
+        end
+      end
+
+      describe 'matching with accents' do
+        let!(:target) { FactoryBot.create(:teacher, first_name: "Stëvìê", last_name: "Kènårbän", corrected_name: nil) }
+
+        it 'matches when names have accents but search terms do not' do
+          results = Teacher.search('Stevie Kenarban')
+
+          expect(results).to include(target)
+        end
+
+        it 'matches when names and search terms both have accents ' do
+          results = Teacher.search('Stëvìê Kènårbän')
+
+          expect(results).to include(target)
         end
       end
     end
