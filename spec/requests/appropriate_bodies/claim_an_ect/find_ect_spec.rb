@@ -109,7 +109,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
 
           expect(response).to be_ok
           expect(response.body).to include(page_heading)
-          expect(response.body).to include(/Teacher #{teacher.corrected_name} already has an active induction period with another appropriate body/)
+          expect(response.body).to include(/Teacher #{CGI.escapeHTML(teacher.corrected_name)} already has an active induction period with another appropriate body/)
         end
       end
 

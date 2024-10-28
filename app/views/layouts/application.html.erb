@@ -17,6 +17,10 @@
       <%= environment_specific_phase_banner %>
       <%= yield(:backlink_or_breadcrumb) %>
 
+      <% if flash[:notice] %>
+        <%= govuk_notification_banner(title_text: "Important", text: flash[:notice]) %>
+      <% end %>
+
       <main class="govuk-main-wrapper" id="main-content" role="main">
         <div class="govuk-grid-row">
           <% if content_for?(:sidebar) %>
