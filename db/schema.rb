@@ -125,6 +125,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_072716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "administrative_district_name"
+    t.integer "local_authority_code", null: false
     t.string "local_authority_name"
     t.integer "establishment_number", null: false
     t.string "phase_name"
@@ -132,7 +133,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_072716) do
     t.string "type_name", null: false
     t.integer "ukprn"
     t.string "website"
-    t.integer "local_authority_code", null: false
     t.boolean "induction_eligibility", null: false
     t.boolean "in_england", null: false
     t.index ["name"], name: "index_gias_schools_on_name"
@@ -375,10 +375,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_072716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "trn", null: false
+    t.datetime "induction_start_date_submitted_to_trs_at"
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.virtual "search", type: :tsvector, as: "to_tsvector('english'::regconfig, (((((COALESCE(first_name, ''::character varying))::text || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(corrected_name, ''::character varying))::text))", stored: true
-    t.datetime "induction_start_date_submitted_to_trs_at"
     t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
     t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
     t.index ["search"], name: "index_teachers_on_search", using: :gin

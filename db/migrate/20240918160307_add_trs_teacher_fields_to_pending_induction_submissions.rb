@@ -1,4 +1,4 @@
-class AddTrsTeacherFieldsToPendingInductionSubmissions < ActiveRecord::Migration[7.2]
+class AddTRSTeacherFieldsToPendingInductionSubmissions < ActiveRecord::Migration[7.2]
   def change
     change_table :pending_induction_submissions, bulk: true do |t|
       t.string :trs_email_address
