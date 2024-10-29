@@ -1,17 +1,17 @@
 <% page_data(title: "Release #{Teachers::Name.new(@teacher).full_name}", error: @pending_induction_submission.errors.any?) %>
 
-<%= form_with(model: @pending_induction_submission, url: ab_teacher_release_ect_path(@teacher), method: 'post') do |form| %>
-  <%= content_for(:error_summary) { form.govuk_error_summary } %>
+<%= form_with(model: @pending_induction_submission, url: ab_teacher_release_ect_path(@teacher), method: 'post') do |f| %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
 
   <%=
-    form.govuk_date_field :finished_on,
+    f.govuk_date_field :finished_on,
       legend: {
         text: "When did #{Teachers::Name.new(@teacher).full_name} finish their induction with you?"
       }
   %>
 
   <%=
-    form.govuk_number_field :number_of_terms,
+    f.govuk_number_field :number_of_terms,
       width: 4,
       label: {
         size: 'm',
@@ -19,5 +19,5 @@
       }
   %>
 
-  <%= form.govuk_submit %>
+  <%= f.govuk_submit %>
 <% end %>
