@@ -1,7 +1,7 @@
 <% page_data(title: "Release #{Teachers::Name.new(@teacher).full_name}", error: @pending_induction_submission.errors.any?) %>
 
 <%= form_with(model: @pending_induction_submission, url: ab_teacher_release_ect_path(@teacher), method: 'post') do |form| %>
-  <%= form.govuk_error_summary %>
+  <%= content_for(:error_summary) { form.govuk_error_summary } %>
 
   <%=
     form.govuk_date_field :finished_on,

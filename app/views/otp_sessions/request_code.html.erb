@@ -1,7 +1,7 @@
 <% page_data(title: "Enter your code", error: @otp_form.errors.any?) %>
 
 <%= form_for @otp_form, url: otp_sign_in_verify_path do |f| %>
-  <%= f.govuk_error_summary %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
 
   <p class="govuk-body">
     We’ve sent you an email with a sign in code.

@@ -22,6 +22,8 @@
       <% end %>
 
       <main class="govuk-main-wrapper" id="main-content" role="main">
+        <%= yield(:error_summary) %>
+
         <div class="govuk-grid-row">
           <% if content_for?(:sidebar) %>
             <div class="govuk-grid-column-one-third">

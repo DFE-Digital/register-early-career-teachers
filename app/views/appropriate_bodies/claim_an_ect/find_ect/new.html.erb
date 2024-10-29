@@ -5,7 +5,7 @@
 </div>
 
 <%= form_with(model: @pending_induction_submission, url: ab_claim_an_ect_find_path) do |f| %>
-  <%= f.govuk_error_summary %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
 
   <%=
     f.govuk_text_field(
