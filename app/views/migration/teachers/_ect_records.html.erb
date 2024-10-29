@@ -1,0 +1,26 @@
+<% if records.any? %>
+<h3 class="govuk-heading-s">ECT records</h3>
+<% end %>
+<% records.each do |record| %>
+  <div class="migration-row">
+    <div class="migration-column">
+      <% if record[:start_school_period].present? %>
+        <% if record[:end_school_period].present? %>
+          <%= render partial: "school_period", locals: { school_period: record[:start_school_period], matches: [:started_on, :finished_on, :school] } %>
+        <% else %>
+          <%= render partial: "school_period", locals: { school_period: record[:start_school_period], matches: [:started_on, :school] } %>
+        <% end %>
+      <% elsif record[:end_school_period].present? %>
+          <%= render partial: "school_period", locals: { school_period: record[:end_school_period], matches: [:finished_on, :school] } %>
+      <% end %>
+    </div>
+    <div class="migration-column">
+      <% matched = []
+         matched << :start_date if record[:start_school_period].present?
+         matched << :end_date if record[:end_school_period].present?
+         matched << :school unless matched.empty?
+      %>
+      <%= render partial: "induction_record", locals: { induction_record: record[:induction_record], matches: matched } %>
+    </div>
+  </div>
+<% end %>

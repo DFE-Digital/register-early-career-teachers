@@ -1,0 +1,18 @@
+// helpers classes for migration diffs
+
+.migration-row {
+  display: flex;
+  gap: 1em;
+}
+
+.migration-column {
+  flex: 50%;
+}
+
+.matched {
+  background-color: #dafbe2;
+}
+
+.unmatched {
+  background-color: #ffebea;
+}

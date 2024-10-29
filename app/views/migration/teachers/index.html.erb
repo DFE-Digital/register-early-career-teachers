@@ -1,10 +1,26 @@
 <% page_data(title: "Teachers") %>
 
-<p class="govuk-body"><strong><%= @pagy.count %></strong> teachers</p>
+<div class="search-box">
+  <%= form_with method: :get, class: "search-box__form" do |f| %>
+    <div class="search-box__input">
+      <%= f.govuk_text_field(
+        "q",
+        value: params[:q],
+        label: { text: "Search for teacher", size: "s" },
+        hint: { text: "Name or TRN" },
+      )
+    %>
+    </div>
+
+    <%= f.govuk_submit "Search", classes: "search-box__button" %>
+  <% end %>
+</div>
+
+<p class="govuk-body"><strong><%= @pagy.count %></strong> teachers found</p>
 
 <%= govuk_table do |table|
   table.with_head do |head|
-    head.with_row(html_attributes: { class: "govuk-!-font_size-16" }) do |row|
+    head.with_row do |row|
       row.with_cell(text: "Name")
       row.with_cell(text: "TRN")
     end
@@ -12,7 +28,7 @@
 
   table.with_body do |body|
     @teachers.each_with_index do |teacher, index|
-      body.with_row(html_attributes: { class: "govuk-!-font-size-16" }) do |row|
+      body.with_row do |row|
         row.with_cell do
           govuk_link_to "#{teacher.first_name} #{teacher.last_name}", teacher_path(teacher, page: @pagy.page)
         end

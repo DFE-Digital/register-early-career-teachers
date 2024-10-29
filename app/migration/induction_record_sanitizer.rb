@@ -32,10 +32,12 @@ class InductionRecordSanitizer
     end
   end
 
-  def each(&block)
+  def each
     return to_enum(__method__) { induction_records.size } unless block_given?
 
-    induction_records.each(&block)
+    induction_records.each do |induction_record|
+      yield Migration::InductionRecordPresenter.new(induction_record)
+    end
   end
 
 private

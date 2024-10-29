@@ -13,3 +13,9 @@ $govuk-assets-path: "/";
 
 // X-Govuk Prototype
 @import "admin";
+
+// Search box styles
+@import "search_box";
+
+// Migration classes
+@import "migration";

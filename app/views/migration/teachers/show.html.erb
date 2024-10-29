@@ -4,94 +4,14 @@
 
 <% page_data(title: full_name, backlink_href: teachers_path(page: @page)) %>
 
-<table class="govuk-table">
-  <thead>
-    <tr>
-      <th colspan="2">User</th>
-      <th colspan="2">Teacher</th>
-    <tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><%= @user.id %></td>
-      <td>id</td>
-      <td><%= @teacher.id %></td>
-    </tr>
-    <tr>
-      <td>full_name</td>
-      <td><%= @user.full_name %></td>
-      <td>first_name/last_name</td>
-      <td><%= [@teacher.first_name, @teacher.last_name].join(" ") %></td>
-    </tr>
-  </tbody>
-</table>
-<table class="govuk-table">
-  <thead>
-    <tr>
-      <th colspan="2">Induction Records</th>
-      <th colspan="2">ECT at school periods</th>
-    <tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><%= @user.id %></td>
-      <td>id</td>
-      <td><%= @teacher.id %></td>
-    </tr>
-    <tr>
-      <td>full_name</td>
-      <td><%= @user.full_name %></td>
-      <td>first_name/last_name</td>
-      <td><%= [@teacher.first_name, @teacher.last_name].join(" ") %></td>
-    </tr>
-  </tbody>
-</table>
+<div class="migration-row">
+  <div class="migration-column">
+    <%= render partial: "teacher", locals: { teacher: @teacher } %>
+  </div>
+  <div class="migration-column">
+    <%= render partial: "user", locals: { user: @user } %>
+  </div>
+</div>
 
-
-<% @teacher.ect_at_school_periods.order(:started_on).each do |period| %>
-  <%= govuk_summary_card(title: "ECT period") do |card|
-      card.with_summary_list do |list|
-        list.with_row do |row|
-          row.with_key(text: "School name")
-          row.with_value(text: period.school.gias_school.name)
-        end
-        list.with_row do |row|
-          row.with_key(text: "School URN")
-          row.with_value(text: period.school.urn)
-        end
-        list.with_row do |row|
-          row.with_key(text: "From")
-          row.with_value(text: period.started_on)
-        end
-        list.with_row do |row|
-          row.with_key(text: "To")
-          row.with_value(text: period.finished_on || "present")
-        end
-      end
-    end %>
-<% end %>
-
-<% @teacher.mentor_at_school_periods.order(:started_on).each do |period| %>
-  <%= govuk_summary_card(title: "Mentor period") do |card|
-      card.with_summary_list do |list|
-        list.with_row do |row|
-          row.with_key(text: "School name")
-          row.with_value(text: period.school.gias_school.name)
-        end
-        list.with_row do |row|
-          row.with_key(text: "School URN")
-          row.with_value(text: period.school.urn)
-        end
-        list.with_row do |row|
-          row.with_key(text: "From")
-          row.with_value(text: period.started_on)
-        end
-        list.with_row do |row|
-          row.with_key(text: "To")
-          row.with_value(text: period.finished_on || "present")
-        end
-      end
-    end %>
-<% end %>
+<%= render partial: "ect_records", locals: { records: @ect_records } %>
+<%= render partial: "mentor_records", locals: { records: @mentor_records } %>

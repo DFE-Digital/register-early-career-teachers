@@ -2,25 +2,49 @@ class Migration::TeachersController < ::AdminController
   layout "full"
 
   def index
-    @pagy, @teachers = pagy(Teacher.order(last_name: :asc, first_name: :asc, id: :asc))
+    @pagy, @teachers = pagy(Teachers::Search.new(params[:q]).search.where(id: ECTAtSchoolPeriod.select(:teacher_id))
+      .order(:last_name, :first_name, :id))
+    # @pagy, @teachers = pagy(Teacher.where(id: ECTAtSchoolPeriod.select(:teacher_id)).order(last_name: :asc, first_name: :asc, id: :asc))
   end
 
   def show
     @page = params[:page] || 1
     @teacher = Teacher.find(params[:id])
     @user = Migration::User.joins(:teacher_profile).where(teacher_profile: { trn: @teacher.trn }).first
-    if @teacher.ect_at_school_periods.any?
-      @ect_records = InductionRecordSanitizer.new(@user.participant_profiles.ect.first)
-    else
-      @ect_records = []
-    end
+    ect_periods = @teacher.ect_at_school_periods.order(:started_on)
+    @ect_records = if ect_periods.any?
+                     map_induction_records_to_school_periods(@user.teacher_profile.participant_profiles.ect.first,
+                                                             ect_periods)
+                   else
+                     []
+                   end
 
-    if @teacher.mentor_at_school_periods.any?
-      @mentor_records = InductionRecordSanitizer.new(@user.participant_profiles.mentor.first)
-    else
-      @mentor_records = []
+    mentor_periods = @teacher.mentor_at_school_periods.order(:started_on)
+    @mentor_records = if mentor_periods.any?
+                        map_induction_records_to_school_periods(@user.teacher_profile.participant_profiles.mentor.first,
+                                                                mentor_periods)
+                      else
+                        []
+                      end
+  end
+
+private
+
+  def map_induction_records_to_school_periods(participant_profile, school_periods)
+    induction_records = InductionRecordSanitizer.new(participant_profile:)
+
+    induction_records.map do |ir|
+      start_school_period = school_periods.where(started_on: ir.start_date.to_date).first
+      end_school_period = school_periods.where(finished_on: ir.end_date.to_date).first if ir.end_date.present?
+
+      ssp = Migration::SchoolPeriodPresenter.new(start_school_period) if start_school_period.present?
+      esp = Migration::SchoolPeriodPresenter.new(end_school_period) if end_school_period.present?
+
+      {
+        induction_record: ir,
+        start_school_period: ssp,
+        end_school_period: esp,
+      }
     end
-    # user = Struct.new(:id, :full_name)
-    # @user = user.new(id: "123", full_name: "Arthur Trousers")
   end
 end
