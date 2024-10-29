@@ -1,0 +1,5 @@
+<%= yield(:error_summary) %>
+
+<% if flash[:notice] %>
+  <%= govuk_notification_banner(title_text: "Important", text: flash[:notice]) %>
+<% end %>

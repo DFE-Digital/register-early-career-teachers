@@ -22,7 +22,7 @@
       <% end %>
 
       <main class="govuk-main-wrapper" id="main-content" role="main">
-        <%= yield(:error_summary) %>
+        <%= render partial: "layouts/shared/main_preamble" %>
 
         <div class="govuk-grid-row">
           <% if content_for?(:sidebar) %>
