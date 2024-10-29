@@ -9,7 +9,7 @@ class Migration::TeachersController < ::AdminController
 
   def show
     @page = params[:page] || 1
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.find_by(trn: params[:id])
     @user = Migration::User.joins(:teacher_profile).where(teacher_profile: { trn: @teacher.trn }).first
     ect_periods = @teacher.ect_at_school_periods.order(:started_on)
     @ect_records = if ect_periods.any?
