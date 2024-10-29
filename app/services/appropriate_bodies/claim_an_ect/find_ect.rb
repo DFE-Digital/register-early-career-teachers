@@ -9,10 +9,12 @@ module AppropriateBodies
       end
 
       def import_from_trs!
+        check_if_teacher_has_active_induction_period!
+
+        # In this case, the AB attempting to claim the ECT must be able to easily reference details of the AB associated with the open induction period._
+
         # TODO: what do we do if we already have a matching Teacher in
-        #       our database
-        #       a) as a fully registered teacher?
-        #       b) as another pending induction submission?
+        #       our database as a fully registered teacher?
         #       we probably want a guard clause here or to make the if statement
         #       below a case and add different errors to the :base
         return unless pending_induction_submission.valid?(:find_ect)
@@ -31,6 +33,22 @@ module AppropriateBodies
 
       def api_client
         @api_client ||= TRS::APIClient.new
+      end
+
+      def check_if_teacher_has_active_induction_period!
+        existing_teacher = Teacher.find_by(trn: pending_induction_submission.trn)
+
+        return unless existing_teacher
+
+        active_induction_period = ::Teachers::InductionPeriod.new(existing_teacher).active_induction_period
+
+        return unless active_induction_period
+
+        if active_induction_period.appropriate_body == appropriate_body
+          raise AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithCurrentAB, ::Teachers::Name.new(existing_teacher).full_name
+        else
+          raise AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB, ::Teachers::Name.new(existing_teacher).full_name
+        end
       end
     end
   end

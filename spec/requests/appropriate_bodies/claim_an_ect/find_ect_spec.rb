@@ -45,10 +45,12 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
 
       let!(:user) { sign_in_as(:appropriate_body_user) }
       let(:appropriate_body) { user.appropriate_bodies.first }
+      let(:birth_year_param) { "2001" }
+      let(:trn) { "1234567" }
 
       let(:search_params) do
         {
-          trn: "1234567",
+          trn:,
           "date_of_birth(3)" => "3",
           "date_of_birth(2)" => "5",
           "date_of_birth(1)" => birth_year_param,
@@ -56,8 +58,6 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
       end
 
       context "when the submission is valid" do
-        let(:birth_year_param) { "2001" }
-
         it 'passes the parameters to the AppropriateBodies::ClaimAnECT::FindECT service and redirects' do
           post(
             '/appropriate-body/claim-an-ect/find-ect',
@@ -78,7 +78,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         include_context 'fake trs api client that finds teacher without QTS'
         let(:birth_year_param) { "2001" }
 
-        it 'passes the parameters to the AppropriateBodies::ClaimAnECT::FindECT service and redirects' do
+        it 're-renders the find page and displays the relevant error' do
           post(
             '/appropriate-body/claim-an-ect/find-ect',
             params: { pending_induction_submission: search_params }
@@ -90,11 +90,57 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         end
       end
 
+      context "when the submission is valid but ECT has an active induction period with another AB" do
+        let(:teacher) { FactoryBot.create(:teacher, trn:) }
+        let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
+        let!(:induction_period) do
+          PeriodBuilders::InductionPeriodBuilder.new(
+            appropriate_body: FactoryBot.create(:appropriate_body),
+            teacher:,
+            school: FactoryBot.create(:school)
+          ).build(started_on: Date.parse("2 October 2022"))
+        end
+
+        it 're-renders the find page and displays the relevant error' do
+          post(
+            '/appropriate-body/claim-an-ect/find-ect',
+            params: { pending_induction_submission: search_params }
+          )
+
+          expect(response).to be_ok
+          expect(response.body).to include(page_heading)
+          expect(response.body).to include(/Teacher #{CGI.escapeHTML(teacher.corrected_name)} already has an active induction period with another appropriate body/)
+        end
+      end
+
+      context "when the submission is valid but ECT has an active induction period with the current AB" do
+        let(:teacher) { FactoryBot.create(:teacher, trn:) }
+        let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
+        let!(:induction_period) do
+          PeriodBuilders::InductionPeriodBuilder.new(
+            appropriate_body:,
+            teacher:,
+            school: FactoryBot.create(:school)
+          ).build(started_on: Date.parse("2 October 2022"))
+        end
+
+        it 'redirects to the teacher page' do
+          post(
+            '/appropriate-body/claim-an-ect/find-ect',
+            params: { pending_induction_submission: search_params }
+          )
+
+          expect(response).to be_redirection
+          expect(response.redirect_url).to match(%r{/teachers/\d+\z})
+          expect(flash[:notice]).to eq("Teacher #{teacher.corrected_name} already has an active induction period with this appropriate body")
+        end
+      end
+
       context "when the submission is valid but no ECT is found" do
         include_context 'fake trs api client that finds nothing'
         let(:birth_year_param) { "2001" }
 
-        it 'passes the parameters to the AppropriateBodies::ClaimAnECT::FindECT service and redirects' do
+        it 're-renders the find page and displays the relevant error' do
           post(
             '/appropriate-body/claim-an-ect/find-ect',
             params: { pending_induction_submission: search_params }
@@ -109,7 +155,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
       context "when the submission is invalid" do
         let(:birth_year_param) { (Date.current.year - 2).to_s }
 
-        it 'it re-renders the find page' do
+        it 're-renders the find page' do
           post(
             '/appropriate-body/claim-an-ect/find-ect',
             params: { pending_induction_submission: search_params }

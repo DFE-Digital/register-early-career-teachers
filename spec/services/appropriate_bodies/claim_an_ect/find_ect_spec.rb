@@ -28,6 +28,40 @@ RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
       it "assigns the incoming attributes to the pending_induction_submission and returns it"
     end
 
+    context "when there is a match and the teacher has an active induction period" do
+      let(:teacher) { FactoryBot.create(:teacher) }
+      let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
+      let!(:induction_period) do
+        PeriodBuilders::InductionPeriodBuilder.new(
+          appropriate_body:,
+          teacher:,
+          school: FactoryBot.create(:school)
+        ).build(started_on: Date.parse("2 October 2022"))
+      end
+
+      context "when the induction period is with another AB" do
+        let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
+
+        it "raises TeacherHasActiveInductionPeriodWithAnotherAB" do
+          find_ect = AppropriateBodies::ClaimAnECT::FindECT.new(
+            appropriate_body: FactoryBot.create(:appropriate_body), pending_induction_submission:
+          )
+
+          expect { find_ect.import_from_trs! }.to raise_error(AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB)
+        end
+      end
+
+      context "when there's an open induction_period with the same AB" do
+        let(:appropriate_body) { pending_induction_submission.appropriate_body }
+
+        it "raises TeacherHasActiveInductionPeriodWithCurrentAB" do
+          find_ect = AppropriateBodies::ClaimAnECT::FindECT.new(appropriate_body:, pending_induction_submission:)
+
+          expect { find_ect.import_from_trs! }.to raise_error(AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithCurrentAB)
+        end
+      end
+    end
+
     context "when there is no match" do
       include_context "fake trs api client that finds nothing"
 

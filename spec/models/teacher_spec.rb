@@ -3,6 +3,35 @@ describe Teacher do
     it { is_expected.to have_many(:ect_at_school_periods) }
     it { is_expected.to have_many(:mentor_at_school_periods) }
     it { is_expected.to have_many(:induction_periods_reported_by_appropriate_body) }
+
+    context "with many induction_periods_reported_by_appropriate_body" do
+      let(:teacher) { FactoryBot.create(:teacher) }
+
+      let!(:oldest_induction_period) do
+        PeriodBuilders::InductionPeriodBuilder.new(
+          appropriate_body: FactoryBot.create(:appropriate_body),
+          teacher:,
+          school: FactoryBot.create(:school)
+        ).build(
+          started_on: Date.parse("2 October 2022"),
+          finished_on: Date.parse("2 December 2022")
+        )
+      end
+
+      let!(:newest_induction_period) do
+        PeriodBuilders::InductionPeriodBuilder.new(
+          appropriate_body: FactoryBot.create(:appropriate_body),
+          teacher:,
+          school: FactoryBot.create(:school)
+        ).build(
+          started_on: Date.parse("10 January 2023")
+        )
+      end
+
+      it "orders them by started_on" do
+        expect(teacher.induction_periods_reported_by_appropriate_body).to eq([oldest_induction_period, newest_induction_period])
+      end
+    end
   end
 
   describe "validations" do

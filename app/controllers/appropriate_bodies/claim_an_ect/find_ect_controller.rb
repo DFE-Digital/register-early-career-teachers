@@ -21,7 +21,7 @@ module AppropriateBodies
         else
           render(:new)
         end
-      rescue TRS::Errors::QTSNotAwarded => e
+      rescue TRS::Errors::QTSNotAwarded, AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB => e
         @pending_induction_submission.errors.add(:base, e.message)
 
         render(:new)
@@ -29,6 +29,10 @@ module AppropriateBodies
         @pending_induction_submission.errors.add(:trn, e.message)
 
         render(:new)
+      rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithCurrentAB => e
+        teacher_id = Teacher.find_by!(trn: find_ect.pending_induction_submission.trn).id
+
+        redirect_to(ab_teacher_path(teacher_id), notice: e.message)
       end
 
     private
