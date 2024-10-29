@@ -5,8 +5,8 @@
       row.with_value(text: teacher.id)
     end
     list.with_row do |row|
-      row.with_key(text: "First name/last name")
-      row.with_value(text: [teacher.first_name, teacher.last_name].join(" ")) 
+      row.with_key(text: "Full name")
+      row.with_value(text: full_name_of(teacher))
     end
     list.with_row do |row|
       row.with_key(text: "TRN")
@@ -14,4 +14,3 @@
     end
   end
 end %>
-

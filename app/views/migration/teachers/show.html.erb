@@ -1,8 +1,4 @@
-<% full_name = [@teacher.first_name, @teacher.last_name].join(" ") %>
-<% ect = @teacher.ect_at_school_periods.any? %>
-<% mentor = @teacher.mentor_at_school_periods.any? %>
-
-<% page_data(title: full_name, backlink_href: teachers_path(page: @page)) %>
+<% page_data(title: full_name_of(@teacher), backlink_href: teachers_path(page: @page)) %>
 
 <div class="migration-row">
   <div class="migration-column">
