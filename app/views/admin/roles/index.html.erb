@@ -13,7 +13,7 @@
 <% end %>
 
 <%= form_for @roles_form, url: role_type_admin_user_path(@user), method: :get do |f| %>
-  <%= f.govuk_error_summary %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
 
   <%= f.govuk_collection_radio_buttons :role_type, Admin::RolesForm::ROLE_TYPES, :to_s, :humanize, legend: { text: "Choose role type" } %>
 

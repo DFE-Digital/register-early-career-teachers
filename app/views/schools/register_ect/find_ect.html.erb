@@ -3,7 +3,7 @@
 <p class="govuk-body">Enter your ECT's teacher reference number and date of birth to find them.</p>
 
 <%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
-  <%= f.govuk_error_summary %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
 
   <%= f.govuk_number_field(
         :trn,
