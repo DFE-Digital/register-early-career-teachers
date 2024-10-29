@@ -16,6 +16,7 @@ on:
 permissions:
   packages: write
   pull-requests: write
+  security-events: write
 
 jobs:
   brakeman:
