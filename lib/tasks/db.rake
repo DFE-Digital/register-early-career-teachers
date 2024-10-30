@@ -28,3 +28,4 @@ namespace :db do
 end
 
 Rake::Task['db:schema:load'].enhance(['db:setup_search_configuration'])
+Rake::Task['db:prepare'].enhance(['db:setup_search_configuration'])
