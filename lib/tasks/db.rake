@@ -1,6 +1,15 @@
 namespace :db do
   desc 'Add search config'
   task setup_search_configuration: :environment do
+    Rails.logger.info("Checking if full text search unaccented configuration exists")
+    result = ActiveRecord::Base.connection.execute("select count(*) FROM pg_ts_config where cfgname = 'unaccented';")
+
+    if result[0]["count"] == 1
+      Rails.logger.info("Full text search unaccented configuration exists, skipping...")
+
+      next
+    end
+
     Rails.logger.info("Setting up full text search unaccented configuration")
     command = <<~SQL
       create extension if not exists unaccent;
