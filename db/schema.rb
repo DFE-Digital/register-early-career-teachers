@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_28_105436) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -138,6 +138,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_28_105436) do
     t.boolean "in_england", null: false
     t.index ["name"], name: "index_gias_schools_on_name"
     t.index ["ukprn"], name: "index_gias_schools_on_ukprn", unique: true
+  end
+
+  create_table "induction_extensions", force: :cascade do |t|
+    t.bigint "teacher_id", null: false
+    t.decimal "extension_terms", precision: 2, scale: 1, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["teacher_id"], name: "index_induction_extensions_on_teacher_id"
   end
 
   create_table "induction_periods", force: :cascade do |t|
@@ -417,6 +425,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_28_105436) do
   add_foreign_key "ect_at_school_periods", "schools"
   add_foreign_key "ect_at_school_periods", "teachers"
   add_foreign_key "gias_school_links", "gias_schools", column: "urn", primary_key: "urn"
+  add_foreign_key "induction_extensions", "teachers"
   add_foreign_key "induction_periods", "appropriate_bodies"
   add_foreign_key "induction_periods", "ect_at_school_periods"
   add_foreign_key "induction_periods", "teachers"

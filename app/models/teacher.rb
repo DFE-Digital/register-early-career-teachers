@@ -6,6 +6,7 @@ class Teacher < ApplicationRecord
   # Associations
   has_many :ect_at_school_periods, inverse_of: :teacher
   has_many :mentor_at_school_periods, inverse_of: :teacher
+  has_many :induction_extensions, inverse_of: :teacher
   has_many :induction_periods_reported_by_appropriate_body,
            -> { order(started_on: :asc) },
            class_name: 'InductionPeriod',
