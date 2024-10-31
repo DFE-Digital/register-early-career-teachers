@@ -1,15 +1,9 @@
 class Migration::TeachersController < ::AdminController
   layout "full"
 
-  def index
-    @pagy, @teachers = pagy(Teachers::Search.new(params[:q]).search.where(id: ECTAtSchoolPeriod.select(:teacher_id))
-      .order(:last_name, :first_name, :id))
-    # @pagy, @teachers = pagy(Teacher.where(id: ECTAtSchoolPeriod.select(:teacher_id)).order(last_name: :asc, first_name: :asc, id: :asc))
-  end
-
   def show
     @page = params[:page] || 1
-    @teacher = Teacher.find_by(trn: params[:id])
+    @teacher = Teacher.find_by(trn: params[:trn])
     @user = Migration::User.joins(:teacher_profile).where(teacher_profile: { trn: @teacher.trn }).first
     ect_periods = @teacher.ect_at_school_periods.order(:started_on)
     @ect_records = if ect_periods.any?

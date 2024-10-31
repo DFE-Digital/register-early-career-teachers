@@ -30,7 +30,7 @@
     @teachers.each_with_index do |teacher, index|
       body.with_row do |row|
         row.with_cell do
-          govuk_link_to "#{teacher.first_name} #{teacher.last_name}", teacher_path(teacher, page: @pagy.page)
+          govuk_link_to "#{teacher.first_name} #{teacher.last_name}", admin_teacher_path(teacher, page: @pagy.page)
         end
         row.with_cell(text: teacher.trn)
       end

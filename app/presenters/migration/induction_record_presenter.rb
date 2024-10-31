@@ -23,7 +23,7 @@ module Migration
     end
 
     def cip_materials_name
-      induction_programme.core_induction_materials&.name
+      induction_programme.core_induction_programme&.name
     end
 
     def fip?
