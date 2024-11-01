@@ -6,7 +6,7 @@ module Teachers
       @teacher = teacher
     end
 
-    def ECT_training_at
+    def ect_training_at
       teacher.ect_at_school_period.ongoing.first
     end
 

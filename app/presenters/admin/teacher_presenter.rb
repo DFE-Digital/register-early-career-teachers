@@ -17,6 +17,5 @@ module Admin
     def teacher
       __getobj__
     end
-
   end
 end

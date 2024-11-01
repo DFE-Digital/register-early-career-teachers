@@ -1,6 +1,5 @@
 module Admin
   class SchoolPeriodPresenter < SimpleDelegator
-
     def self.wrap(collection)
       collection.map { |item| new(item) }
     end
@@ -15,6 +14,7 @@ module Admin
 
     def formatted_finished_on
       return "" if school_period.finished_on.blank?
+
       school_period.finished_on.to_fs(:govuk)
     end
 
