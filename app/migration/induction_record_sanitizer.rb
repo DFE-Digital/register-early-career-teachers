@@ -6,6 +6,7 @@ class InductionRecordSanitizer
   class MultipleActiveStatesError < InductionRecordError; end
   class StartDateAfterEndDateError < InductionRecordError; end
   class InvalidDateSequenceError < InductionRecordError; end
+  class NoInductionRecordsError < InductionRecordError; end
 
   attr_reader :participant_profile
 
@@ -15,6 +16,7 @@ class InductionRecordSanitizer
 
   def validate!
     # TODO: add more validation checks here as we discover them
+    has_induction_records!
     does_not_have_multiple_blank_end_dates!
     does_not_have_multiple_active_induction_statuses!
     induction_record_dates_are_sequential!
@@ -54,6 +56,10 @@ private
     ir1.attributes.except(*ignored_attrs) != ir2.attributes.except(*ignored_attrs)
   end
 
+  def has_induction_records!
+    raise NoInductionRecordsError if induction_records.empty?
+  end
+
   def does_not_have_multiple_blank_end_dates!
     raise MultipleBlankEndDateError if induction_records.where(end_date: nil).count > 1
   end
@@ -70,7 +76,7 @@ private
 
       next if idx.zero?
 
-      raise InvalidDateSequenceError if ir.start_date < previous_end_date
+      raise InvalidDateSequenceError if previous_end_date.nil? || ir.start_date < previous_end_date
 
       previous_end_date = ir.end_date
     end
