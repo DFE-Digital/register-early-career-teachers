@@ -4,7 +4,6 @@ class ECTAtSchoolPeriod < ApplicationRecord
   # Associations
   belongs_to :school, inverse_of: :ect_at_school_periods
   belongs_to :teacher, inverse_of: :ect_at_school_periods
-  has_many :induction_periods, inverse_of: :ect_at_school_period
   has_many :mentorship_periods, inverse_of: :mentee
   has_many :mentors, through: :mentorship_periods, source: :mentor
   has_many :training_periods, inverse_of: :ect_at_school_period

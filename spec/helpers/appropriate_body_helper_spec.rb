@@ -27,11 +27,12 @@ RSpec.describe AppropriateBodyHelper, type: :helper do
     context "when the teacher has induction periods" do
       let(:expected_date) { "2 October 2022" }
       let!(:induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(
+        FactoryBot.create(
+          :induction_period,
           appropriate_body: FactoryBot.create(:appropriate_body),
           teacher:,
-          school: FactoryBot.create(:school)
-        ).build(started_on: Date.parse(expected_date))
+          started_on: Date.parse(expected_date)
+        )
       end
 
       it "displays the most recent induction start date" do

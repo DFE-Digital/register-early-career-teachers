@@ -158,22 +158,22 @@ TrainingPeriod.create!(
   provider_partnership: grove_artisan_partnership_2021
 )
 
-print_seed_info("Kate Winslett (ECT)", indent: 2)
+print_seed_info("Kate Winslet (ECT)", indent: 2)
 
-kate_winslett_ect_at_ackley_bridge = ECTAtSchoolPeriod.create!(
+kate_winslet_ect_at_ackley_bridge = ECTAtSchoolPeriod.create!(
   teacher: kate_winslet,
   school: ackley_bridge,
   started_on: 1.year.ago
 )
 
 TrainingPeriod.create!(
-  ect_at_school_period: kate_winslett_ect_at_ackley_bridge,
+  ect_at_school_period: kate_winslet_ect_at_ackley_bridge,
   started_on: 1.year.ago,
   provider_partnership: grove_artisan_partnership_2023
 )
 
 InductionPeriod.create!(
-  ect_at_school_period: kate_winslett_ect_at_ackley_bridge,
+  teacher: kate_winslet,
   started_on: 1.year.ago,
   appropriate_body: umber_teaching_school_hub,
   induction_programme: 'fip'
@@ -208,7 +208,7 @@ TrainingPeriod.create!(
 )
 
 InductionPeriod.create!(
-  ect_at_school_period: alan_rickman_ect_at_ackley_bridge,
+  teacher: alan_rickman,
   appropriate_body: golden_leaf_academy,
   started_on: 2.years.ago + 2.months,
   induction_programme: 'fip'
@@ -230,7 +230,7 @@ TrainingPeriod.create!(
 )
 
 InductionPeriod.create!(
-  ect_at_school_period: hugh_grant_ect_at_abbey_grove,
+  teacher: hugh_grant,
   appropriate_body: golden_leaf_academy,
   started_on: 2.years.ago + 3.days,
   finished_on: 1.week.ago,
@@ -270,24 +270,28 @@ MentorshipPeriod.create!(
 
 MentorshipPeriod.create!(
   mentor: andre_roussimoff_mentoring_at_ackley_bridge,
-  mentee: kate_winslett_ect_at_ackley_bridge,
+  mentee: kate_winslet_ect_at_ackley_bridge,
   started_on: 1.year.ago,
   finished_on: nil
 ).tap { |mp| describe_mentorship_period(mp) }
 
 print_seed_info("Harriet Walter (mentor)", indent: 2)
 
-PeriodBuilders::InductionPeriodBuilder.new(
+InductionPeriod.create!(
   appropriate_body: umber_teaching_school_hub,
   teacher: harriet_walter,
-  school: abbey_grove_school
-).build(started_on: 2.years.ago, finished_on: 1.year.ago)
+  started_on: 2.years.ago,
+  finished_on: 1.year.ago,
+  induction_programme: 'fip',
+  number_of_terms: [1, 2, 3].sample
+)
 
-PeriodBuilders::InductionPeriodBuilder.new(
+InductionPeriod.create!(
   appropriate_body: golden_leaf_academy,
   teacher: harriet_walter,
-  school: abbey_grove_school
-).build(started_on: 1.year.ago)
+  started_on: 1.year.ago,
+  induction_programme: 'fip'
+)
 
 print_seed_info("Adding persona users")
 

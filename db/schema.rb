@@ -152,7 +152,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_04_105600) do
 
   create_table "induction_periods", force: :cascade do |t|
     t.bigint "appropriate_body_id", null: false
-    t.bigint "ect_at_school_period_id"
     t.date "started_on", null: false
     t.date "finished_on"
     t.datetime "created_at", null: false
@@ -161,10 +160,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_04_105600) do
     t.integer "number_of_terms"
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.bigint "teacher_id"
-    t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_be6c214e9d", unique: true, where: "(finished_on IS NULL)"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
-    t.index ["ect_at_school_period_id", "started_on"], name: "index_induction_periods_on_ect_at_school_period_id_started_on", unique: true
-    t.index ["ect_at_school_period_id"], name: "index_induction_periods_on_ect_at_school_period_id"
     t.index ["teacher_id"], name: "index_induction_periods_on_teacher_id"
   end
 
@@ -436,7 +432,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_04_105600) do
   add_foreign_key "gias_school_links", "gias_schools", column: "urn", primary_key: "urn"
   add_foreign_key "induction_extensions", "teachers"
   add_foreign_key "induction_periods", "appropriate_bodies"
-  add_foreign_key "induction_periods", "ect_at_school_periods"
   add_foreign_key "induction_periods", "teachers"
   add_foreign_key "mentor_at_school_periods", "schools"
   add_foreign_key "mentor_at_school_periods", "teachers"
