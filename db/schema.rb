@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_04_105600) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -94,6 +94,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
+    t.uuid "legacy_start_id"
+    t.uuid "legacy_end_id"
     t.index "teacher_id, ((finished_on IS NULL))", name: "index_ect_at_school_periods_on_teacher_id_finished_on_IS_NULL", unique: true, where: "(finished_on IS NULL)"
     t.index ["school_id", "teacher_id", "started_on"], name: "index_ect_at_school_periods_on_school_id_teacher_id_started_on", unique: true
     t.index ["school_id"], name: "index_ect_at_school_periods_on_school_id"
@@ -181,6 +183,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
+    t.uuid "legacy_start_id"
+    t.uuid "legacy_end_id"
     t.index "school_id, teacher_id, ((finished_on IS NULL))", name: "idx_on_school_id_teacher_id_finished_on_IS_NULL_dd7ee16a28", unique: true, where: "(finished_on IS NULL)"
     t.index ["school_id", "teacher_id", "started_on"], name: "idx_on_school_id_teacher_id_started_on_17d46e7783", unique: true
     t.index ["school_id"], name: "index_mentor_at_school_periods_on_school_id"
@@ -196,6 +200,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
+    t.uuid "legacy_start_id"
+    t.uuid "legacy_end_id"
     t.index "ect_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_finished_on_IS_NULL_afd5cf131d", unique: true, where: "(finished_on IS NULL)"
     t.index ["ect_at_school_period_id", "started_on"], name: "index_mentorship_periods_on_ect_at_school_period_id_started_on", unique: true
     t.index ["ect_at_school_period_id"], name: "index_mentorship_periods_on_ect_at_school_period_id"
@@ -388,6 +394,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.virtual "search", type: :tsvector, as: "to_tsvector('unaccented'::regconfig, (((((COALESCE(first_name, ''::character varying))::text || ' '::text) || (COALESCE(last_name, ''::character varying))::text) || ' '::text) || (COALESCE(corrected_name, ''::character varying))::text))", stored: true
+    t.uuid "legacy_id"
     t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
     t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
     t.index ["search"], name: "index_teachers_on_search", using: :gin
@@ -403,6 +410,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_30_102310) do
     t.bigint "ect_at_school_period_id"
     t.bigint "mentor_at_school_period_id"
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
+    t.uuid "legacy_start_id"
+    t.uuid "legacy_end_id"
     t.index "ect_at_school_period_id, mentor_at_school_period_id, ((finished_on IS NULL))", name: "idx_on_ect_at_school_period_id_mentor_at_school_per_42bce3bf48", unique: true, where: "(finished_on IS NULL)"
     t.index ["ect_at_school_period_id", "mentor_at_school_period_id", "started_on"], name: "idx_on_ect_at_school_period_id_mentor_at_school_per_70f2bb1a45", unique: true
     t.index ["ect_at_school_period_id"], name: "index_training_periods_on_ect_at_school_period_id"
