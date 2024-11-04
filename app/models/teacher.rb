@@ -7,10 +7,7 @@ class Teacher < ApplicationRecord
   has_many :ect_at_school_periods, inverse_of: :teacher
   has_many :mentor_at_school_periods, inverse_of: :teacher
   has_many :induction_extensions, inverse_of: :teacher
-  has_many :induction_periods_reported_by_appropriate_body,
-           -> { order(started_on: :asc) },
-           class_name: 'InductionPeriod',
-           inverse_of: :teacher
+  has_many :induction_periods, -> { order(started_on: :asc) }
 
   # Validations
   validates :first_name,

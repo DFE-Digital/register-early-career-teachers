@@ -13,15 +13,12 @@ describe Teachers::InductionPeriod do
     context "when the teacher has induction periods" do
       let(:expected_date) { Date.new(2022, 10, 2) }
       let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
-      let(:school) { FactoryBot.create(:school) }
       let!(:first_induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(appropriate_body:, teacher:, school:)
-          .build(started_on: expected_date, finished_on: Date.new(2023, 10, 2))
+        FactoryBot.create(:induction_period, appropriate_body:, teacher:, started_on: expected_date, finished_on: Date.new(2023, 10, 2))
       end
 
       let!(:last_induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(appropriate_body:, teacher:, school:)
-          .build(started_on: Date.new(2023, 10, 3))
+        FactoryBot.create(:induction_period, appropriate_body:, teacher:, started_on: Date.new(2023, 10, 3))
       end
 
       it 'returns the start date of the first induction period' do
@@ -36,11 +33,9 @@ describe Teachers::InductionPeriod do
     let(:teacher) { FactoryBot.create(:teacher) }
 
     before do
-      PeriodBuilders::InductionPeriodBuilder.new(
+      InductionPeriod.new(
         appropriate_body: FactoryBot.create(:appropriate_body),
         teacher:,
-        school: FactoryBot.create(:school)
-      ).build(
         started_on: Date.new(2023, 10, 3),
         finished_on: Date.new(2023, 12, 3)
       )
@@ -54,11 +49,13 @@ describe Teachers::InductionPeriod do
 
     context "when the teacher has an active induction period" do
       let!(:active_induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(
+        FactoryBot.create(
+          :induction_period,
           appropriate_body: FactoryBot.create(:appropriate_body),
           teacher:,
-          school: FactoryBot.create(:school)
-        ).build(started_on: Date.new(2024, 10, 3))
+          started_on: Date.new(2024, 10, 3),
+          finished_on: nil
+        )
       end
 
       it 'returns the active induction period for the teacher' do

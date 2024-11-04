@@ -94,11 +94,13 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         let(:teacher) { FactoryBot.create(:teacher, trn:) }
         let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
         let!(:induction_period) do
-          PeriodBuilders::InductionPeriodBuilder.new(
+          FactoryBot.create(
+            :induction_period,
             appropriate_body: FactoryBot.create(:appropriate_body),
             teacher:,
-            school: FactoryBot.create(:school)
-          ).build(started_on: Date.parse("2 October 2022"))
+            started_on: Date.parse("2 October 2022"),
+            finished_on: nil
+          )
         end
 
         it 're-renders the find page and displays the relevant error' do
@@ -117,11 +119,13 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         let(:teacher) { FactoryBot.create(:teacher, trn:) }
         let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
         let!(:induction_period) do
-          PeriodBuilders::InductionPeriodBuilder.new(
+          FactoryBot.create(
+            :induction_period,
+            :active,
             appropriate_body:,
             teacher:,
-            school: FactoryBot.create(:school)
-          ).build(started_on: Date.parse("2 October 2022"))
+            started_on: Date.parse("2 October 2022")
+          )
         end
 
         it 'redirects to the teacher page' do

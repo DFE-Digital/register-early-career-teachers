@@ -2,35 +2,14 @@ describe Teacher do
   describe "associations" do
     it { is_expected.to have_many(:ect_at_school_periods) }
     it { is_expected.to have_many(:mentor_at_school_periods) }
-    it { is_expected.to have_many(:induction_periods_reported_by_appropriate_body) }
+    it { is_expected.to have_many(:induction_periods) }
     it { is_expected.to have_many(:induction_extensions) }
 
-    context "with many induction_periods_reported_by_appropriate_body" do
+    context "when there are multiple induction records" do
       let(:teacher) { FactoryBot.create(:teacher) }
 
-      let!(:oldest_induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(
-          appropriate_body: FactoryBot.create(:appropriate_body),
-          teacher:,
-          school: FactoryBot.create(:school)
-        ).build(
-          started_on: Date.parse("2 October 2022"),
-          finished_on: Date.parse("2 December 2022")
-        )
-      end
-
-      let!(:newest_induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(
-          appropriate_body: FactoryBot.create(:appropriate_body),
-          teacher:,
-          school: FactoryBot.create(:school)
-        ).build(
-          started_on: Date.parse("10 January 2023")
-        )
-      end
-
-      it "orders them by started_on" do
-        expect(teacher.induction_periods_reported_by_appropriate_body).to eq([oldest_induction_period, newest_induction_period])
+      it 'orders them by started_on, earliest first' do
+        expect(teacher.induction_periods.to_sql).to include(%(ORDER BY "induction_periods"."started_on" ASC))
       end
     end
   end

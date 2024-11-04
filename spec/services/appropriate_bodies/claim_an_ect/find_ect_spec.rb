@@ -32,11 +32,7 @@ RSpec.describe AppropriateBodies::ClaimAnECT::FindECT do
       let(:teacher) { FactoryBot.create(:teacher) }
       let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }
       let!(:induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(
-          appropriate_body:,
-          teacher:,
-          school: FactoryBot.create(:school)
-        ).build(started_on: Date.parse("2 October 2022"))
+        FactoryBot.create(:induction_period, :active, appropriate_body:, teacher:, started_on: Date.parse("2 October 2022"))
       end
 
       context "when the induction period is with another AB" do
