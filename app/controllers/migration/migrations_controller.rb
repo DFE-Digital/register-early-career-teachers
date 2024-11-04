@@ -9,12 +9,12 @@ class Migration::MigrationsController < ::AdminController
     LegacyDataImporter.new.prepare!
     MigrationJob.perform_later
 
-    redirect_to migration_path
+    redirect_to migration_migrations_path
   end
 
   def reset
     LegacyDataImporter.new.reset!
-    redirect_to migration_path
+    redirect_to migration_migrations_path
   end
 
   def download_report
