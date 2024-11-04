@@ -13,7 +13,7 @@ module AppropriateBodies
 
         # FIXME: I think the behaviour here should be to still allow the AB to claim
         #        the ECT, but we shouldn't report the starting of induction to TRS
-        # if teacher.persisted? && teacher.induction_periods_reported_by_appropriate_body.present?
+        # if teacher.persisted? && teacher.induction_periods.present?
         #   raise AppropriateBodies::Errors::TeacherAlreadyClaimedError, "Teacher already claimed"
         # end
 

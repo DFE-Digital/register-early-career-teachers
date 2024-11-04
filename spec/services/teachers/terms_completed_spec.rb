@@ -1,63 +1,48 @@
 describe Teachers::TermsCompleted do
   describe '#number_of_terms' do
-    subject { described_class.new(teacher) }
+    subject { described_class.new(teacher).formatted_terms_completed }
     let(:teacher) { FactoryBot.create(:teacher) }
 
     context 'when the teacher does not have induction periods' do
       it 'returns nil' do
-        expect(subject.number_of_terms).to eq(6)
+        expect(subject).to eq("0 of 6.0")
       end
     end
 
-    context 'when the teacher latest induction period does not have number_of_terms' do
-      before do
-        PeriodBuilders::InductionPeriodBuilder.new(
-          appropriate_body: FactoryBot.create(:appropriate_body),
-          school: FactoryBot.create(:school),
-          teacher:
-        ).build(started_on: Time.zone.today)
-      end
-
+    context 'without extensions' do
       it 'returns the default number of terms' do
-        expect(subject.number_of_terms).to eq(6)
+        expect(subject).to eq("0 of 6.0")
       end
 
       context "with extensions" do
         before do
-          FactoryBot.create(:induction_extension, teacher:, extension_terms: 2)
-          FactoryBot.create(:induction_extension, teacher:, extension_terms: 1.1)
+          FactoryBot.create(:induction_extension, teacher:, number_of_terms: 2)
+          FactoryBot.create(:induction_extension, teacher:, number_of_terms: 1.1)
         end
 
         it 'returns the default number of terms plus the extensions' do
-          expect(subject.number_of_terms).to eq(9.1)
+          expect(subject).to eq("0 of 9.1")
         end
       end
     end
 
-    context 'when the teacher latest induction period has number_of_terms' do
-      let!(:induction_period) do
-        PeriodBuilders::InductionPeriodBuilder.new(
-          appropriate_body: FactoryBot.create(:appropriate_body),
-          school: FactoryBot.create(:school),
-          teacher:
-        ).build(
-          started_on: Time.zone.today - 1.year,
-          finished_on: Time.zone.today - 3.months
-        )
-      end
+    context 'when the teacher has induction periods' do
+      let!(:induction_period) { FactoryBot.create(:induction_period, teacher:, number_of_terms: 2) }
 
-      it 'returns the default number of terms' do
-        expect(subject.number_of_terms).to eq(induction_period.number_of_terms)
-      end
-
-      context "with extensions" do
-        before do
-          FactoryBot.create(:induction_extension, teacher:, extension_terms: 2)
-          FactoryBot.create(:induction_extension, teacher:, extension_terms: 1.1)
+      context 'without extensions' do
+        it 'returns the default number of terms' do
+          expect(subject).to eq("2 of 6.0")
         end
 
-        it 'returns the default number of terms plus the extensions' do
-          expect(subject.number_of_terms).to eq(induction_period.number_of_terms + 3.1)
+        context "with extensions" do
+          before do
+            FactoryBot.create(:induction_extension, teacher:, number_of_terms: 2)
+            FactoryBot.create(:induction_extension, teacher:, number_of_terms: 1.1)
+          end
+
+          it 'returns the default number of terms plus the extensions' do
+            expect(subject).to eq("2 of 9.1")
+          end
         end
       end
     end

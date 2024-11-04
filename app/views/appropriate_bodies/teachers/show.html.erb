@@ -4,7 +4,6 @@
   <%= govuk_button_link_to("Release ECT", new_ab_teacher_release_ect_path(@teacher), secondary: true) %>
   <%= govuk_button_link_to("Record induction outcome", new_ab_teacher_record_outcome_path(@teacher), secondary: true) %>
   <%= govuk_button_link_to("Add an extension", "#", secondary: true) %>
-
 </div>
 
 <h2 class="govuk-heading-m">Early career teacher<h2>
@@ -30,27 +29,25 @@
   end
 %>
 
-<% if @teacher.induction_periods_reported_by_appropriate_body.any? %>
+<% if @teacher.induction_periods.any? %>
   <h2 class="govuk-heading-m">Induction Summary<h2>
-    <%=
-    govuk_summary_list do |sl|
-      sl.with_row do |row|
-        row.with_key(text: "Induction start date")
-        row.with_value(text: @teacher.induction_periods_reported_by_appropriate_body.last.started_on.to_fs(:govuk))
-      end
-
-      sl.with_row do |row|
-        row.with_key(text: "Induction extended")
-        row.with_value(text: @teacher.induction_extensions.any? ? "Yes" : "No")
-      end
-
-      sl.with_row do |row|
-        row.with_key(text: "Terms completed")
-
-        row.with_value(text: Teachers::TermsCompleted.new(@teacher).formatted_terms_completed)
-      end
+  <%= govuk_summary_list do |sl|
+    sl.with_row do |row|
+      row.with_key(text: "Induction start date")
+      row.with_value(text: @teacher.induction_periods.last.started_on.to_fs(:govuk))
     end
-  %>
+
+    sl.with_row do |row|
+      row.with_key(text: "Induction extended")
+      row.with_value(text: Teachers::HasInductionExtensions.new(@teacher).yes_or_no)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Terms completed")
+
+      row.with_value(text: Teachers::TermsCompleted.new(@teacher).formatted_terms_completed)
+    end
+  end %>
 
   <h2 class="govuk-heading-m">Induction periods<h2>
     <%= govuk_table do |table|
@@ -66,7 +63,7 @@
         end
       end
       table.with_body do |body|
-        @teacher.induction_periods_reported_by_appropriate_body.each do |induction_period |
+        @teacher.induction_periods.each do |induction_period |
           body.with_row do |row|
             row.with_cell(text: induction_period.appropriate_body.name)
             row.with_cell(text: induction_programme_choice_name(induction_period.induction_programme))
