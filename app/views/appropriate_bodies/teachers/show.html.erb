@@ -45,9 +45,9 @@
       end
 
       sl.with_row do |row|
-        row.with_key(text: "Expected terms to be completed")
+        row.with_key(text: "Terms completed")
 
-        row.with_value(text: Teachers::TermsToBeCompleted.new(@teacher).number_of_terms)
+        row.with_value(text: Teachers::TermsCompleted.new(@teacher).formatted_terms_completed)
       end
     end
   %>

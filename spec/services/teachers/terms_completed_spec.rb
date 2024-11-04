@@ -1,4 +1,4 @@
-describe Teachers::TermsToBeCompleted do
+describe Teachers::TermsCompleted do
   describe '#number_of_terms' do
     subject { described_class.new(teacher) }
     let(:teacher) { FactoryBot.create(:teacher) }
