@@ -37,6 +37,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_15_110325) do
     t.integer "local_authority_code"
     t.integer "establishment_number"
     t.uuid "dfe_sign_in_organisation_id", null: false
+    t.uuid "legacy_id"
     t.index ["dfe_sign_in_organisation_id"], name: "index_appropriate_bodies_on_dfe_sign_in_organisation_id", unique: true
     t.index ["local_authority_code", "establishment_number"], name: "idx_on_local_authority_code_establishment_number_039c79cd09", unique: true
     t.index ["name"], name: "index_appropriate_bodies_on_name", unique: true

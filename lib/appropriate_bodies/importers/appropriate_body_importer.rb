@@ -32,6 +32,7 @@ module AppropriateBodies::Importers
         #        and they're not in the sample data, so just
         #        random values for now
         dfe_sign_in_organisation_id: SecureRandom.uuid,
+        legacy_id: row['id'],
 
         **extract_local_authority_code_and_establishment_number(row)
       }
