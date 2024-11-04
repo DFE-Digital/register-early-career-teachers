@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate
 
   default_form_builder(GOVUKDesignSystemFormBuilder::FormBuilder)
+  include Pagy::Backend
 
   helper_method :current_user, :authenticated?, :session_manager
 

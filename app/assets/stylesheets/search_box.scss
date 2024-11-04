@@ -1,0 +1,33 @@
+// lifted from ECFv1
+.search-box {
+  background-color: govuk-colour("light-grey");
+  padding: govuk-spacing(4) govuk-spacing(3);
+  margin-bottom: govuk-spacing(3);
+
+  &__button {
+    margin-bottom: 0;
+  }
+
+  &__input {
+    select {
+      width: 100%;
+    }
+  }
+
+  @include govuk-media-query($from: tablet) {
+    &__form {
+      display: flex;
+      gap: govuk-spacing(3);
+      align-items: flex-end;
+    }
+
+    &__input {
+      flex-grow: 1;
+    }
+
+    &__button {
+      flex-grow: 0;
+      transform: translateY(-2px);
+    }
+  }
+}

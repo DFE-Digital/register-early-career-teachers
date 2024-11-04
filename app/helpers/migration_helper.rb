@@ -59,7 +59,7 @@ module MigrationHelper
     return unless failure_count.positive?
 
     model = data_migrations.sample.model
-    govuk_link_to failures_migrations_path(model) do
+    govuk_link_to failures_migration_migrations_path(model) do
       %(Failures<span: class="govuk-visually-hidden"> for #{model.humanize}</span>).html_safe
     end
   end
@@ -69,7 +69,7 @@ module MigrationHelper
 
     return unless failure_count.positive?
 
-    govuk_link_to("Failures report", download_report_migrations_path(data_migrations.sample.model))
+    govuk_link_to("Failures report", download_report_migration_migrations_path(data_migrations.sample.model))
   end
 
   def failure_item_json_code(item)

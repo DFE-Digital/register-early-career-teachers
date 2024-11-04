@@ -1,0 +1,20 @@
+<%= govuk_summary_card(title: "User") do |card|
+  card.with_summary_list(html_attributes: { class: "govuk-!-font-size-14" }) do |list|
+    list.with_row do |row|
+      row.with_key(text: "ID")
+      row.with_value(text: user.id)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Full name")
+      row.with_value(text: user.full_name)
+    end
+    list.with_row do |row|
+      row.with_key(text: "TRN")
+      row.with_value(text: user.teacher_profile.trn)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Email")
+      row.with_value(text: user.email)
+    end
+  end
+end %>

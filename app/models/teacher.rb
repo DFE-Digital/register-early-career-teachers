@@ -21,4 +21,8 @@ class Teacher < ApplicationRecord
             uniqueness: { message: 'TRN already exists', case_sensitive: false }
 
   scope :search, ->(query_string) { where("teachers.search @@ websearch_to_tsquery('unaccented', ?)", query_string) }
+
+  def to_param
+    trn
+  end
 end

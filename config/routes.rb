@@ -38,6 +38,9 @@ Rails.application.routes.draw do
 
     resources :appropriate_bodies, only: %i[index], path: 'appropriate-bodies' do
     end
+
+    resources :teachers, only: %i[index show] do
+    end
   end
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
@@ -54,12 +57,15 @@ Rails.application.routes.draw do
     end
   end
 
-  scope module: "migration" do
-    resources :migrations, only: %i[index create] do
-      get ":model/failures", on: :collection, to: "failures#index", as: :failures
-      get "download_report/:model", on: :collection, action: :download_report, as: :download_report
-      post "reset", on: :collection, action: :reset, as: :reset
+  namespace :migration do
+    resources :migrations, only: %i[index create], path: "/" do
+      collection do
+        get ":model/failures", to: "failures#index", as: :failures
+        get "download_report/:model", action: :download_report, as: :download_report
+        post "reset", action: :reset, as: :reset
+      end
     end
+    get "teachers/:trn", to: "teachers#show", as: :teacher_details
   end
 
   namespace :schools do

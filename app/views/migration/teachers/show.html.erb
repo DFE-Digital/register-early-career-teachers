@@ -1,0 +1,13 @@
+<% page_data(title: full_name_of(@teacher), backlink_href: admin_teacher_path(@teacher, page: @page)) %>
+
+<div class="migration-row">
+  <div class="migration-column">
+    <%= render partial: "teacher", locals: { teacher: @teacher } %>
+  </div>
+  <div class="migration-column">
+    <%= render partial: "user", locals: { user: @user } %>
+  </div>
+</div>
+
+<%= render partial: "ect_records", locals: { records: @ect_records } %>
+<%= render partial: "mentor_records", locals: { records: @mentor_records } %>

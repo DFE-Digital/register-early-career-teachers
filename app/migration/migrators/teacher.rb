@@ -19,20 +19,54 @@ module Migrators
     end
 
     def migrate!
-      Rails.logger.info("Migrating #{self.class.record_count} teachers")
+      migrate(self.class.teachers.eager_load(:user)) do |teacher_profile|
+        migrate_teacher!(teacher_profile:)
+      end
+    end
 
-      migrate(self.class.teachers.includes(:user)) do |teacher_profile|
-        Rails.logger.info("  --> #{teacher_profile.id}")
+    def migrate_teacher!(teacher_profile:)
+      teacher = ::Teacher.create!(trn: teacher_profile.trn,
+                                  first_name: first_name_of(teacher_profile.user.full_name),
+                                  last_name: last_name_of(teacher_profile.user.full_name))
 
-        ::Teacher.create!(trn: teacher_profile.trn,
-                          first_name: first_name_of(teacher_profile.user.full_name),
-                          last_name: last_name_of(teacher_profile.user.full_name))
+      teacher_profile.participant_profiles
+        .ect_or_mentor
+        .eager_load(induction_records: [induction_programme: [school_cohort: :school]])
+        .find_each do |participant_profile|
+          migrate_participant_profile_for!(teacher:, participant_profile:)
+        end
+    end
+
+    def migrate_participant_profile_for!(teacher:, participant_profile:)
+      induction_records = InductionRecordSanitizer.new(participant_profile:)
+      induction_records.validate!
+
+      school_periods = SchoolPeriodExtractor.new(induction_records:)
+      school_periods.each do |period|
+        school = School.find_by!(urn: period.urn)
+        if participant_profile.ect?
+          ::ECTAtSchoolPeriod.create!(teacher:, school:, started_on: period.start_date, finished_on: period.end_date)
+        else
+          ::MentorAtSchoolPeriod.create!(teacher:, school:, started_on: period.start_date, finished_on: period.end_date)
+        end
+      end
+
+      if participant_profile.mentor?
+        participant_profile.school_mentors.each do |school_mentor|
+          school = School.find_by!(urn: school_mentor.school.urn)
+          started_on = school_mentor.created_at
+
+          periods = ::MentorAtSchoolPeriod.where(teacher:, school:)
+          if periods.empty?
+            ::MentorAtSchoolPeriod.create!(teacher:, school:, started_on:)
+          end
+        end
       end
     end
 
     def first_name_of(full_name)
       parts = full_name.split(' ')
-      if parts.count > 2 && parts.first.downcase.in?(%w[mr miss ms mrs dr])
+      if parts.count > 2 && parts.first.downcase.in?(%w[mr mr. miss ms ms. mrs mrs. dr dr.])
         parts.second
       else
         parts.first

@@ -9,8 +9,8 @@ module Navigation
             prefix: "/admin",
             nodes: [
               Node.new(
-                name: "Admin 1.1",
-                href: '#',
+                name: "Teachers",
+                href: admin_teachers_path,
                 prefix: "/admin/1.1"
               ),
               Node.new(
