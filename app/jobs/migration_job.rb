@@ -1,5 +1,5 @@
 class MigrationJob < ApplicationJob
-  queue_as :high_priority
+  queue_as :migration
 
   def perform
     LegacyDataImporter.new.migrate!
