@@ -295,12 +295,12 @@ InductionPeriod.create!(
 
 InductionExtension.create!(
   teacher: harriet_walter,
-  extension_terms: 1.3
+  number_of_terms: 1.3
 )
 
 InductionExtension.create!(
   teacher: harriet_walter,
-  extension_terms: 5
+  number_of_terms: 5
 )
 
 print_seed_info("Adding persona users")
