@@ -293,6 +293,16 @@ InductionPeriod.create!(
   induction_programme: 'fip'
 )
 
+InductionExtension.create!(
+  teacher: harriet_walter,
+  extension_terms: 1.3
+)
+
+InductionExtension.create!(
+  teacher: harriet_walter,
+  extension_terms: 5
+)
+
 print_seed_info("Adding persona users")
 
 User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com").tap do |velma_dinkley|
