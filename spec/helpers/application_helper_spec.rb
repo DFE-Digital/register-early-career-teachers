@@ -22,4 +22,24 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(page_data(title: "Some title", header: "Some header", header_size: "m").fetch(:page_header)).to eq(%(<h1 class="govuk-heading-m">Some header</h1>))
     end
   end
+
+  describe "#page_data_from_front_matter" do
+    let(:front_matter) do
+      <<~FRONT_MATTER
+        ---
+        title: Some title
+        header: Some header
+        ---
+        ignored content
+      FRONT_MATTER
+    end
+
+    it "calls page_data with the provided front matter content" do
+      allow(self).to receive(:page_data)
+
+      page_data_from_front_matter(front_matter)
+
+      expect(self).to have_received(:page_data).with(title: "Some title", header: "Some header")
+    end
+  end
 end
