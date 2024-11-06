@@ -6,4 +6,6 @@ class PagesController < ApplicationController
 
   def support
   end
+
+  def hello = nil
 end

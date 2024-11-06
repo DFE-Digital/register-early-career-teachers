@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   get '/support', to: 'pages#support'
+  get '/hello', to: 'pages#hello'
   get "healthcheck" => "rails/health#show", as: :rails_health_check
 
   scope via: :all do
