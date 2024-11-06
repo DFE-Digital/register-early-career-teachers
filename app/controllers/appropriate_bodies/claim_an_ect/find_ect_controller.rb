@@ -5,6 +5,9 @@ module AppropriateBodies
         @pending_induction_submission = PendingInductionSubmission.new
       end
 
+      def not_found
+      end
+
       def create
         find_ect = AppropriateBodies::ClaimAnECT::FindECT
           .new(

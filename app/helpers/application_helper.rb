@@ -22,4 +22,8 @@ module ApplicationHelper
 
     { page_title:, backlink_or_breadcrumb:, page_header: }
   end
+
+  def page_data_from_front_matter(yaml)
+    page_data(**YAML.load(yaml).symbolize_keys)
+  end
 end
