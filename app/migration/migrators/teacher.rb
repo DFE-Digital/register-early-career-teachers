@@ -27,7 +27,8 @@ module Migrators
     def migrate_teacher!(teacher_profile:)
       teacher = ::Teacher.create!(trn: teacher_profile.trn,
                                   first_name: first_name_of(teacher_profile.user.full_name),
-                                  last_name: last_name_of(teacher_profile.user.full_name))
+                                  last_name: last_name_of(teacher_profile.user.full_name),
+                                  legacy_id: teacher_profile.user.id)
 
       teacher_profile.participant_profiles
         .ect_or_mentor
@@ -44,10 +45,19 @@ module Migrators
       school_periods = SchoolPeriodExtractor.new(induction_records:)
       school_periods.each do |period|
         school = School.find_by!(urn: period.urn)
+        attrs = {
+          teacher:,
+          school:,
+          started_on: period.start_date,
+          finished_on: period.end_date,
+          legacy_start_id: period.start_source_id,
+          legacy_end_id: period.end_source_id,
+        }
+
         if participant_profile.ect?
-          ::ECTAtSchoolPeriod.create!(teacher:, school:, started_on: period.start_date, finished_on: period.end_date)
+          ::ECTAtSchoolPeriod.create!(**attrs)
         else
-          ::MentorAtSchoolPeriod.create!(teacher:, school:, started_on: period.start_date, finished_on: period.end_date)
+          ::MentorAtSchoolPeriod.create!(**attrs)
         end
       end
 
@@ -58,7 +68,8 @@ module Migrators
 
           periods = ::MentorAtSchoolPeriod.where(teacher:, school:)
           if periods.empty?
-            ::MentorAtSchoolPeriod.create!(teacher:, school:, started_on:)
+            # TODO: do we want to have a different model id (SchoolMentor instead of InductionRecord) in the legacy_start_id?
+            ::MentorAtSchoolPeriod.create!(teacher:, school:, started_on:, legacy_start_id: school_mentor.id)
           end
         end
       end
