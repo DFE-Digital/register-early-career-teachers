@@ -2,39 +2,26 @@ require "rails_helper"
 
 RSpec.describe MarkdownRenderer do
   let(:template) { double("template") }
-  let(:test_context) do
-    Class.new do
-      def page_data(title:)
-      end
-
-      def self.evaluate_ruby(code)
-        new.instance_eval(code)
-      end
-    end
-  end
+  let(:erb_handler) { double("erb_handler") }
 
   before do
-    allow(ActionView::Template).to receive(:registered_template_handler).with(:erb).and_return(
-      Class.new do
-        def self.call(_template, source)
-          "\"#{source}\""
-        end
-      end
-    )
+    allow(ActionView::Template).to receive(:registered_template_handler).with(:erb).and_return(erb_handler)
+    allow(erb_handler).to receive(:call).and_return('"processed markdown"')
   end
 
   describe ".call" do
-    it "renders markdown without frontmatter" do
+    it "returns Ruby code string for markdown without frontmatter" do
       source = "# Hello World\n\nThis is a test"
-      rendered = test_context.evaluate_ruby(MarkdownRenderer.call(template, source))
-
-      expect(rendered).to include('class="govuk-heading-xl"')
-      expect(rendered).to include('Hello World')
-      expect(rendered).to include('class="govuk-body-m"')
-      expect(rendered).to include('This is a test')
+      rendered = MarkdownRenderer.call(template, source)
+      expect(rendered).to eq(
+        <<~RUBY
+          page_data_from_front_matter('')
+          MarkdownRenderer.render(begin; "processed markdown"; end)
+        RUBY
+      )
     end
 
-    it "handles frontmatter in markdown" do
+    it "returns Ruby code string for markdown with frontmatter" do
       source = <<~MARKDOWN
         ---
         title: Test Title
@@ -42,33 +29,18 @@ RSpec.describe MarkdownRenderer do
         # Content
       MARKDOWN
 
-      expect_any_instance_of(test_context).to receive(:page_data).with(title: "Test Title")
-      rendered = test_context.evaluate_ruby(MarkdownRenderer.call(template, source))
-
-      expect(rendered).not_to include("title: Test Title")
-      expect(rendered).not_to include("---")
-      expect(rendered).to include('class="govuk-heading-xl"')
-      expect(rendered).to include('Content')
+      rendered = MarkdownRenderer.call(template, source)
+      expect(rendered).to eq(
+        <<~RUBY
+          page_data_from_front_matter('
+          title: Test Title
+          ')
+          MarkdownRenderer.render(begin; "processed markdown"; end)
+        RUBY
+      )
     end
 
-    it "handles markdown without frontmatter title" do
-      source = <<~MARKDOWN
-        ---
-        other_field: some value
-        ---
-        # Content
-      MARKDOWN
-
-      expect_any_instance_of(test_context).not_to receive(:page_data)
-      rendered = test_context.evaluate_ruby(MarkdownRenderer.call(template, source))
-
-      expect(rendered).not_to include("other_field")
-      expect(rendered).not_to include("---")
-      expect(rendered).to include('class="govuk-heading-xl"')
-      expect(rendered).to include('Content')
-    end
-
-    it "handles invalid frontmatter gracefully" do
+    it "returns Ruby code string for markdown with invalid frontmatter" do
       source = <<~MARKDOWN
         ---
         invalid yaml content
@@ -76,12 +48,16 @@ RSpec.describe MarkdownRenderer do
         # Content
       MARKDOWN
 
-      rendered = test_context.evaluate_ruby(MarkdownRenderer.call(template, source))
+      rendered = MarkdownRenderer.call(template, source)
 
-      expect(rendered).not_to include("invalid yaml content")
-      expect(rendered).not_to include("---")
-      expect(rendered).to include('class="govuk-heading-xl"')
-      expect(rendered).to include('Content')
+      expect(rendered).to eq(
+        <<~RUBY
+          page_data_from_front_matter('
+          invalid yaml content
+          ')
+          MarkdownRenderer.render(begin; "processed markdown"; end)
+        RUBY
+      )
     end
   end
 end
