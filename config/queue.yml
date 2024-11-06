@@ -3,7 +3,7 @@
      - polling_interval: 1
        batch_size: 500
    workers:
-     - queues: "*"
+     - queues: [ mailers, migration, "*" ]
        threads: 3
        processes: 3
        polling_interval: 0.1
