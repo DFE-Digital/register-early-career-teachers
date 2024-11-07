@@ -84,9 +84,8 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
             params: { pending_induction_submission: search_params }
           )
 
-          expect(response).to be_ok
-          expect(response.body).to include(page_heading)
-          expect(response.body).to include(/ECT record found, but QTS has not been awarded/)
+          expect(response).to be_redirection
+          expect(response.redirect_url).to match(ab_claim_an_ect_find_error_no_qts_path)
         end
       end
 
@@ -109,9 +108,8 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
             params: { pending_induction_submission: search_params }
           )
 
-          expect(response).to be_ok
-          expect(response.body).to include(page_heading)
-          expect(response.body).to include(/Teacher #{CGI.escapeHTML(teacher.corrected_name)} already has an active induction period with another appropriate body/)
+          expect(response).to be_redirection
+          expect(response.redirect_url).to match(ab_claim_an_ect_find_error_induction_with_another_appropriate_body_path)
         end
       end
 

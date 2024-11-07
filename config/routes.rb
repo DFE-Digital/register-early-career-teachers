@@ -54,7 +54,11 @@ Rails.application.routes.draw do
     namespace :claim_an_ect, path: 'claim-an-ect' do
       resource :find_ect, only: %i[new create], path: 'find-ect', controller: '/appropriate_bodies/claim_an_ect/find_ect', as: 'find' do
         namespace 'error', path: 'errors' do
-          get 'not-found'
+          get 'exempt-from-completing-induction'
+          get 'no-qts'
+          get 'induction-already-completed'
+          get 'induction-with-another-appropriate-body'
+          get 'prohibited-from-teaching'
         end
       end
       resources :check_ect, only: %i[edit update], path: 'check-ect', controller: '/appropriate_bodies/claim_an_ect/check_ect', as: 'check'
