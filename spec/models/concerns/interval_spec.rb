@@ -59,6 +59,21 @@ describe Interval do
         expect(DummyMentor.ongoing.to_sql).to end_with(%("finished_on" IS NULL))
       end
     end
+
+    describe ".containing_period" do
+      it "returns periods that completely contain the specified period" do
+        expect(DummyMentor.containing_period(FakePeriod.new('2023-8-1', '2023-9-1'))).to match_array([period_2])
+      end
+
+      it 'returns periods where the finished_on date is null' do
+        expect(DummyMentor.containing_period(FakePeriod.new('2024-2-1', '2024-4-23'))).to match_array([period_3])
+        expect(DummyMentor.containing_period(FakePeriod.new('2024-5-1', nil))).to match_array([period_3])
+      end
+
+      it "does not return periods that do not completely contain the specified date range" do
+        expect(DummyMentor.containing_period(FakePeriod.new('2021-09-01', '2023-12-31'))).to be_empty
+      end
+    end
   end
 end
 
