@@ -1,16 +1,31 @@
 RSpec.describe 'Registering an ECT' do
-  let(:page) { RSpec.configuration.playwright_page }
+  include_context 'fake trs api client'
 
-  before { sign_in_as_admin }
+  let(:page) { RSpec.configuration.playwright_page }
+  let(:trn) { '9876543' }
+  let(:trs_teacher_stub) do
+    {
+      'firstName' => 'Kate',
+      'lastName' => 'Smith',
+      'trn' => trn,
+      'dateOfBirth' => '2000-12-01',
+    }
+  end
+  let(:trs_client) { instance_double(TRS::APIClient) }
+
+  before do
+    sign_in_as_admin
+  end
 
   scenario 'Happy path' do
     given_i_am_on_the_start_page
     when_i_click_on_the_continue_link
     i_should_be_taken_to_the_find_ect_page
 
-    when_i_fill_in_the_find_ect_form
+    when_i_fill_in_the_find_ect_form(trn:, dob_day: '1', dob_month: '12', dob_year: '2000')
     and_i_click_on_the_continue_button
     then_i_should_be_taken_to_the_review_ect_details_page
+    and_i_should_see_the_ect_details_in_the_review_page
   end
 
   def given_i_am_on_the_start_page
@@ -28,12 +43,12 @@ RSpec.describe 'Registering an ECT' do
     expect(page.url).to end_with(path)
   end
 
-  def when_i_fill_in_the_find_ect_form
-    page.fill('#find-ect-trn-field', '1234567')
+  def when_i_fill_in_the_find_ect_form(trn:, dob_day:, dob_month:, dob_year:)
+    page.fill('#find-ect-trn-field', trn)
 
-    page.fill('#find_ect_date_of_birth_3i', '10')
-    page.fill('#find_ect_date_of_birth_2i', '12')
-    page.fill('#find_ect_date_of_birth_1i', '1990')
+    page.fill('#find_ect_date_of_birth_3i', dob_day)
+    page.fill('#find_ect_date_of_birth_2i', dob_month)
+    page.fill('#find_ect_date_of_birth_1i', dob_year)
   end
 
   def and_i_click_on_the_continue_button
@@ -43,5 +58,11 @@ RSpec.describe 'Registering an ECT' do
   def then_i_should_be_taken_to_the_review_ect_details_page
     path = '/schools/review-ect-details'
     expect(page.url).to end_with(path)
+  end
+
+  def and_i_should_see_the_ect_details_in_the_review_page
+    expect(page.get_by_text(trn)).to be_visible
+    expect(page.get_by_text("Kirk Van Houten")).to be_visible
+    expect(page.get_by_text("1 December 2000")).to be_visible
   end
 end

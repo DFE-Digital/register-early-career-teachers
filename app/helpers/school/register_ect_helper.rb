@@ -1,4 +1,4 @@
-module School::HomeHelper
+module School::RegisterECTHelper
   def link_to_ect(name)
     govuk_link_to(name,
                   '#',
@@ -7,5 +7,9 @@ module School::HomeHelper
 
   def in_progress_status
     govuk_tag(text: 'In progress', colour: 'green')
+  end
+
+  def to_govuk_date(date)
+    date.to_date.to_formatted_s(:govuk)
   end
 end
