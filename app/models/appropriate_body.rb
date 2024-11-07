@@ -2,8 +2,6 @@ class AppropriateBody < ApplicationRecord
   # Associations
   has_many :pending_induction_submissions
   has_many :induction_periods, inverse_of: :appropriate_body
-  has_many :appropriate_body_roles
-  has_many :users, through: :appropriate_body_roles
 
   # Validations
   validates :name,

@@ -17,23 +17,16 @@
   <% end %>
 </div>
 
-<div>
-  <%= govuk_summary_list do |summary_list|
-    @appropriate_bodies.each do |appropriate_body|
-      summary_list.with_row do |row|
-        row.with_value do
-          tag.div do
-            govuk_link_to(appropriate_body.name, "#", class: "govuk-heading-s govuk-!-margin-bottom-0") +
-            content_tag(:p, "Users: #{appropriate_body.users.count}", class: "govuk-!-margin-bottom-0") +
-            # FIXME: retrieve this from appropriate_body
-            if [true, false, false].sample
-              govuk_tag(text: "Deleted", colour: "red", classes: "govuk-!-margin-bottom-1 govuk-!-margin-top-1")
-            end
-          end
+<% @appropriate_bodies.each do |appropriate_body| %>
+  <%=
+    govuk_summary_card(title: govuk_link_to(appropriate_body.name, "#")) do |card|
+
+      card.with_summary_list do |summary_list|
+        summary_list.with_row do |row|
+          row.with_key(text: "Ongoing inductions")
+          row.with_value(text: appropriate_body.induction_periods.ongoing.count)
         end
       end
     end
-  end %>
-
-  <%= govuk_pagination(pagy: @pagy) %>
-</div>
+  %>
+<% end %>

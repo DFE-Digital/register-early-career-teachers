@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_04_140818) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_07_154521) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -39,15 +39,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_04_140818) do
     t.virtual "establishment_id", type: :string, as: "((((local_authority_code)::character varying)::text || '/'::text) || ((establishment_number)::character varying)::text)", stored: true
     t.index ["local_authority_code", "establishment_number"], name: "idx_on_local_authority_code_establishment_number_039c79cd09", unique: true
     t.index ["name"], name: "index_appropriate_bodies_on_name", unique: true
-  end
-
-  create_table "appropriate_body_roles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id", null: false
-    t.integer "appropriate_body_id", null: false
-    t.index ["appropriate_body_id"], name: "index_appropriate_body_roles_on_appropriate_body_id"
-    t.index ["user_id"], name: "index_appropriate_body_roles_on_user_id"
   end
 
   create_table "data_migrations", force: :cascade do |t|
