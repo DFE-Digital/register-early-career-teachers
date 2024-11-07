@@ -33,6 +33,7 @@ module Ecf2
 
     config.enable_personas = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_PERSONAS', false))
     config.enable_migration_testing = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_MIGRATION_TESTING', false))
+    config.enable_schools_interface = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_SCHOOLS_INTERFACE', false))
 
     config.after_initialize do
       ActionView::Base.default_form_builder = GOVUKDesignSystemFormBuilder::FormBuilder
