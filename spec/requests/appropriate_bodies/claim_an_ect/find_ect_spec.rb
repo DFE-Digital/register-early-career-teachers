@@ -44,7 +44,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
       before { allow(AppropriateBodies::ClaimAnECT::FindECT).to receive(:new).with(any_args).and_call_original }
 
       let!(:user) { sign_in_as(:appropriate_body_user) }
-      let(:appropriate_body) { user.appropriate_bodies.first }
+      let(:appropriate_body) { AppropriateBody.find(session[:appropriate_body_id]) }
       let(:birth_year_param) { "2001" }
       let(:trn) { "1234567" }
 

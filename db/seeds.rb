@@ -305,13 +305,8 @@ InductionExtension.create!(
 
 print_seed_info("Adding persona users")
 
-User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com").tap do |velma_dinkley|
-  AppropriateBodyRole.create!(appropriate_body: golden_leaf_academy, user: velma_dinkley)
-end
-
-User.create!(name: "Fred Jones (AB)", email: "freddy@example.com").tap do |fred_jones|
-  AppropriateBodyRole.create!(appropriate_body: umber_teaching_school_hub, user: fred_jones)
-end
+User.create!(name: "Velma Dinkley (AB)", email: "velma@example.com")
+User.create!(name: "Fred Jones (AB)", email: "freddy@example.com")
 
 User.create!(name: "Daphne Blake (DfE staff)", email: "daphne@example.com").tap do |daphne_blake|
   DfERole.create!(user: daphne_blake)

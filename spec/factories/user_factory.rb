@@ -9,14 +9,6 @@ FactoryBot.define do
       end
     end
 
-    trait :appropriate_body_user do
-      after(:create) do |user|
-        FactoryBot.create(
-          :appropriate_body_role,
-          user:,
-          appropriate_body: FactoryBot.create(:appropriate_body)
-        )
-      end
-    end
+    trait(:appropriate_body_user) {} # FIXME: remove this eventually
   end
 end

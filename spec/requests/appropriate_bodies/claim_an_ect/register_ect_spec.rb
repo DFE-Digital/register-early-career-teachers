@@ -1,5 +1,5 @@
 RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
-  let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
+  let(:appropriate_body) { AppropriateBody.find(session[:appropriate_body_id]) }
   let(:page_heading) { "Tell us about" }
   let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
   let(:pending_induction_submission_id_param) { pending_induction_submission.id.to_s }
@@ -42,7 +42,6 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
 
     context 'when signed in' do
       let!(:user) { sign_in_as(:appropriate_body_user) }
-      let(:appropriate_body) { user.appropriate_bodies.first }
       before { allow(AppropriateBodies::ClaimAnECT::CheckECT).to receive(:new).with(any_args).and_call_original }
       before { allow(AppropriateBodies::ClaimAnECT::RegisterECT).to receive(:new).with(any_args).and_call_original }
 
