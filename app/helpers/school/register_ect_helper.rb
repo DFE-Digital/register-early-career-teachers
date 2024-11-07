@@ -8,8 +8,4 @@ module School::RegisterECTHelper
   def in_progress_status
     govuk_tag(text: 'In progress', colour: 'green')
   end
-
-  def to_govuk_date(date)
-    date.to_date.to_formatted_s(:govuk)
-  end
 end

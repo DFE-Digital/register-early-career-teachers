@@ -3,8 +3,6 @@
 module Schools
   module RegisterECT
     class FindECTStep < StoredStep
-      include ActiveRecord::AttributeAssignment
-
       attr_accessor :trn, :date_of_birth
 
       validates :trn, presence: true, format: { with: /\A\d{7}\z/, message: "The TRN must be exactly 7 digits" }

@@ -11,7 +11,7 @@ module Schools
     end
 
     def new
-      @session_data = @wizard.stored_attrs_for("find_ect")
+      @ect = Schools::ECTPresenter.new(**@wizard.stored_attrs)
 
       render current_step
     end

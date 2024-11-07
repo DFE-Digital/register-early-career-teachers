@@ -2,12 +2,8 @@
 
 module Schools
   module RegisterECT
-    class ReviewECTDetailsStep < StoredStep
+    class CheckAnswersStep < StoredStep
       def self.permitted_params
-      end
-
-      def next_step
-        :email_address
       end
     end
   end

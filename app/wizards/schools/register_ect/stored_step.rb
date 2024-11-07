@@ -3,19 +3,23 @@
 module Schools
   module RegisterECT
     class StoredStep < DfE::Wizard::Step
+      include ActiveRecord::AttributeAssignment
+
       delegate :valid_step?, to: :wizard
       def save!
         return false unless valid_step?
 
         if wizard.current_step_name == :find_ect
           store.store_attrs(key, trs_teacher)
+        elsif wizard.current_step_name == :review_ect_details
+          true
         else
           store.store_attrs(key, step_params)
         end
       end
 
-      def stored_attrs_for(key)
-        store.attrs_for(key)
+      def stored_attrs
+        store
       end
 
     private

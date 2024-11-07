@@ -81,6 +81,11 @@ Rails.application.routes.draw do
     post "/find-ect", to: "register_ect#create"
 
     get "/review-ect-details", to: "register_ect#new", as: :register_ect_review_ect_details
-    post "/review_ect_details", to: "register_ect#create"
+    post "/review-ect-details", to: "register_ect#create"
+
+    get "/email-address", to: "register_ect#new", as: :register_ect_email_address
+    post "/email-address", to: "register_ect#create"
+
+    get "/check-answers", to: "register_ect#new", as: :register_ect_check_answers
   end
 end
