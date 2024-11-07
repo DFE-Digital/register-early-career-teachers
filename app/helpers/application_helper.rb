@@ -24,6 +24,10 @@ module ApplicationHelper
   end
 
   def page_data_from_front_matter(yaml)
-    page_data(**YAML.load(yaml).symbolize_keys)
+    parsed_yaml = YAML.load(yaml)&.symbolize_keys
+
+    return unless parsed_yaml
+
+    page_data(**parsed_yaml)
   end
 end

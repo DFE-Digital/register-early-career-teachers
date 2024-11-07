@@ -24,22 +24,36 @@ RSpec.describe ApplicationHelper, type: :helper do
   end
 
   describe "#page_data_from_front_matter" do
-    let(:front_matter) do
-      <<~FRONT_MATTER
-        ---
-        title: Some title
-        header: Some header
-        ---
-        ignored content
-      FRONT_MATTER
+    context "with yaml content" do
+      let(:front_matter) do
+        <<~FRONT_MATTER
+          ---
+          title: Some title
+          header: Some header
+          ---
+          ignored content
+        FRONT_MATTER
+      end
+
+      it "calls page_data with the provided front matter content" do
+        allow(self).to receive(:page_data)
+
+        page_data_from_front_matter(front_matter)
+
+        expect(self).to have_received(:page_data).with(title: "Some title", header: "Some header")
+      end
     end
 
-    it "calls page_data with the provided front matter content" do
-      allow(self).to receive(:page_data)
+    context "handles empty content" do
+      let(:front_matter) { "" }
 
-      page_data_from_front_matter(front_matter)
+      it "returns nil" do
+        allow(self).to receive(:page_data)
 
-      expect(self).to have_received(:page_data).with(title: "Some title", header: "Some header")
+        page_data_from_front_matter(front_matter)
+
+        expect(self).not_to have_received(:page_data)
+      end
     end
   end
 end
