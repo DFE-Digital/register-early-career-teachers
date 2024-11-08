@@ -13,14 +13,12 @@ class AppropriateBodiesController < ApplicationController
 private
 
   def set_appropriate_body
-    # FIXME: this should be stored in the session when someone logs
-    #        in, then we can easily switch between ABs if a user is
-    #        linked ot more than one
-
-    @appropriate_body = current_user.appropriate_bodies.first
+    @appropriate_body = AppropriateBody.find(session[:appropriate_body_id])
   end
 
   def authorised?
-    current_user.appropriate_bodies.any?
+    # FIXME: make this work with DfE Sign-in
+
+    current_user
   end
 end

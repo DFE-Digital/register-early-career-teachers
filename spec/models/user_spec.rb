@@ -8,8 +8,6 @@ describe User do
   end
 
   describe 'associations' do
-    it { is_expected.to have_many(:appropriate_body_roles) }
-    it { is_expected.to have_many(:appropriate_bodies).through(:appropriate_body_roles) }
     it { is_expected.to have_many(:dfe_roles) }
   end
 end

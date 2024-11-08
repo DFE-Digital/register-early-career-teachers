@@ -3,7 +3,7 @@ module AppropriateBodies
     def show
       # FIXME: find within the scope of the current AB
 
-      @teacher = Teacher.find(params[:id])
+      @teacher = Teacher.find_by!(trn: params[:trn])
     end
   end
 end

@@ -1,6 +1,6 @@
 RSpec.describe 'Appropriate body claiming an ECT: checking we have the right ECT' do
   include AuthHelper
-  let(:appropriate_body) { user.appropriate_bodies.first }
+  let(:appropriate_body) { AppropriateBody.find(session[:appropriate_body_id]) }
   let(:page_heading) { "Check details for" }
   let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
   let(:pending_induction_submission_id_param) { pending_induction_submission.id.to_s }

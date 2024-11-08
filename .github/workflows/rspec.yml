@@ -47,4 +47,6 @@ jobs:
           prepare-assets: "true"
 
       - name: Run tests
+        env:
+          ENABLE_PERSONAS: true
         run: bundle exec rspec

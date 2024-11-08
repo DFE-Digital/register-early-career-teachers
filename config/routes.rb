@@ -26,7 +26,11 @@ Rails.application.routes.draw do
   post '/otp-sign-in/verify', to: 'otp_sessions#verify_code'
 
   constraints -> { Rails.application.config.enable_personas } do
-    get 'personas', to: 'personas#index'
+    resources 'personas', only: %i[index] do
+      collection do
+        resource :appropriate_body_sessions, only: %i[show update], controller: 'personas/appropriate_body_sessions', path: 'appropriate-body-sessions'
+      end
+    end
   end
 
   post 'auth/:provider/callback', to: 'sessions#create'
@@ -46,7 +50,7 @@ Rails.application.routes.draw do
 
   resource :appropriate_bodies, only: %i[show], path: 'appropriate-body', as: 'ab' do
     collection do
-      resources :teachers, only: %i[show], controller: 'appropriate_bodies/teachers', as: 'ab_teachers' do
+      resources :teachers, only: %i[show], controller: 'appropriate_bodies/teachers', as: 'ab_teachers', param: 'trn' do
         resource :release_ect, only: %i[new create show], path: 'release', controller: 'appropriate_bodies/teachers/release_ect'
         resource :record_outcome, only: %i[new create show], path: 'record-outcome', controller: 'appropriate_bodies/teachers/record_outcome'
       end
