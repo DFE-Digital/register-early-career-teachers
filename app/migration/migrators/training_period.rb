@@ -36,7 +36,7 @@ module Migrators
 
         provider_partnership = ::ProviderPartnership.where(lead_provider: ::LeadProvider.find_by!(name: period.lead_provider),
                                                            delivery_partner: ::DeliveryPartner.find_by!(name: period.delivery_partner),
-                                                           academic_year_id: period.cohort_start_year).first
+                                                           academic_year_id: period.cohort_year).first
 
         ect_at_school_period = mentor_at_school_period = nil
 

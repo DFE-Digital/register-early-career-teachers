@@ -4,5 +4,6 @@ module Migration
     belongs_to :induction_programme
     belongs_to :appropriate_body
     belongs_to :mentor_profile, class_name: "Migration::ParticipantProfile"
+    belongs_to :schedule
   end
 end
