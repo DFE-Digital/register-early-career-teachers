@@ -35,6 +35,9 @@ gem "rotp"
 gem "rubyzip"
 gem "savon"
 
+group :development do
+  gem "localhost"
+end
 
 group :test do
   gem "capybara"
