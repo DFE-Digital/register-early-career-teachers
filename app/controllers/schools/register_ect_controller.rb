@@ -11,7 +11,7 @@ module Schools
     end
 
     def new
-      @ect = Schools::ECTPresenter.new(**@wizard.stored_attrs)
+      @ect = Schools::TeacherPresenter.new(**@wizard.stored_attrs)
 
       render current_step
     end

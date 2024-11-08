@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Schools::ECTPresenter, type: :presenter do
+describe Schools::TeacherPresenter, type: :presenter do
   let(:attributes) do
     {
       "find_ect" => {
