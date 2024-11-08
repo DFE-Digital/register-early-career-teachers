@@ -9,12 +9,13 @@ module Schools
       def save!
         return false unless valid_step?
 
-        if wizard.current_step_name == :find_ect
-          store.store_attrs(key, trs_teacher)
-        elsif wizard.current_step_name == :review_ect_details
-          true
+        case wizard.current_step_name
+        when :find_ect
+          handle_find_ect
+        when :review_ect_details
+          handle_review_ect_details
         else
-          store.store_attrs(key, step_params)
+          handle_default_step
         end
       end
 
@@ -23,6 +24,21 @@ module Schools
       end
 
     private
+
+      def handle_find_ect
+        # get the teacher details from the TRS API and store in session
+        store.store_attrs(key, trs_teacher)
+      end
+
+      def handle_default_step
+        # store form data in the session
+        store.store_attrs(key, step_params)
+      end
+
+      def handle_review_ect_details
+        # no saving required so do nothing
+        true
+      end
 
       def key
         model_name.param_key

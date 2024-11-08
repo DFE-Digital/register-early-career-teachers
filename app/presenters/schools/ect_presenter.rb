@@ -7,8 +7,8 @@ module Schools
       flattened_attributes = flatten_hash(attributes)
       flattened_attributes.each do |key, value|
         instance_variable_set("@#{key}", value)
-        # attr_readers are dynamically generated with the pattern [wizard_step]_[attribute]
-        # e.g find_ect_trn
+        # attr_readers are dynamically generated with the pattern
+        # "#{wizard_step}_#{attribute}" e.g find_ect_trn
         self.class.attr_reader(key) unless self.class.method_defined?(key)
         @dynamic_attr_readers << key
       end
