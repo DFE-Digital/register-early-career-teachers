@@ -12,6 +12,10 @@ class SessionsController < ApplicationController
     # NOTE: OTP authentication is handled in OTPSessionsController as it is not omniauth
     case provider
     when "developer"
+      if params["appropriate_body_id"]
+        session["appropriate_body_id"] = params["appropriate_body_id"]
+      end
+
       session_manager.begin_session!(user_info.uid, provider)
     when "dfe"
       raise provider
