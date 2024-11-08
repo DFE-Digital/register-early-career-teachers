@@ -22,3 +22,10 @@
     row.with_value(text: @ect.email)
   end
 end %>
+
+<%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%= f.govuk_submit "Confirm details", "data-testid": "submit" %>
+<% end %>
+

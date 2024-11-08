@@ -87,5 +87,8 @@ Rails.application.routes.draw do
     post "/email-address", to: "register_ect#create"
 
     get "/check-answers", to: "register_ect#new", as: :register_ect_check_answers
+    post "/check-answers", to: "register_ect#create"
+
+    get "/confirmation", to: "register_ect#new", as: :register_ect_confirmation
   end
 end

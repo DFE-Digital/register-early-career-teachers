@@ -11,7 +11,8 @@ module Schools
             find_ect: FindECTStep,
             review_ect_details: ReviewECTDetailsStep,
             email_address: EmailAddressStep,
-            check_answers: CheckAnswersStep
+            check_answers: CheckAnswersStep,
+            confirmation: ConfirmationStep,
           }
         ]
       end

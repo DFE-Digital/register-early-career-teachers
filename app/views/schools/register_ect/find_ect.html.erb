@@ -19,7 +19,7 @@
                          hint: { text: "For example, 31 3 1980" }
   %>
 
-  <%= f.govuk_submit "Continue" %>
+  <%= f.govuk_submit "Continue", "data-testid": "submit" %>
 <% end %>
 
 <%= render Schools::TestGuidanceComponent.new %>
