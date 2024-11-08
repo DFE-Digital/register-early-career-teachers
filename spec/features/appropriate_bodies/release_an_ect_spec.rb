@@ -7,10 +7,6 @@ RSpec.describe 'Releasing an ECT' do
 
   before do
     sign_in_as_appropriate_body_user
-    allow_any_instance_of(AppropriateBodies::ReleaseECT).to receive(:release!).and_call_original
-
-    @fake_release_ect = instance_double(AppropriateBodies::ReleaseECT, release!: true)
-    allow(AppropriateBodies::ReleaseECT).to receive(:new).and_return(@fake_release_ect)
   end
 
   let!(:induction_period) { FactoryBot.create(:induction_period, :active, teacher:, appropriate_body: @appropriate_body) }
@@ -20,13 +16,17 @@ RSpec.describe 'Releasing an ECT' do
     when_i_click_link('Release ECT')
     then_i_should_be_on_the_release_ect_page(trn)
 
+    when_i_submit_the_form_without_filling_anything_in
+    then_i_should_see_an_error_summary
+    and_the_page_title_should_start_with_error
+
     when_i_enter_the_finish_date
     and_i_enter_a_terms_value_of(number_of_completed_terms)
     and_i_click_continue
 
     then_i_should_be_on_the_success_page
-    and_the_pending_induction_submission_record_should_have_the_right_data_in_it
     and_the_release_ect_service_should_have_been_called
+    and_the_pending_induction_submission_should_have_been_deleted
   end
 
 private
@@ -43,6 +43,18 @@ private
 
   def then_i_should_be_on_the_release_ect_page(trn)
     expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/release/new")
+  end
+
+  def when_i_submit_the_form_without_filling_anything_in
+    and_i_click_continue
+  end
+
+  def then_i_should_see_an_error_summary
+    expect(page.locator('.govuk-error-summary')).to be_present
+  end
+
+  def and_the_page_title_should_start_with_error
+    expect(page.title).to start_with('Error:')
   end
 
   def when_i_enter_the_finish_date
@@ -66,14 +78,13 @@ private
     expect(page.locator('.govuk-panel')).to be_present
   end
 
-  def and_the_pending_induction_submission_record_should_have_the_right_data_in_it
-    pending_induction_submission = PendingInductionSubmission.find_by(trn:, appropriate_body: @appropriate_body)
-
-    expect(pending_induction_submission.number_of_terms).to eql(number_of_completed_terms)
-    expect(pending_induction_submission.finished_on).to eql(today)
+  def and_the_pending_induction_submission_should_have_been_deleted
+    expect(PendingInductionSubmission.find_by(trn:, appropriate_body: @appropriate_body)).to be_nil
   end
 
   def and_the_release_ect_service_should_have_been_called
-    expect(@fake_release_ect).to have_received(:release!).once
+    induction_period.reload
+    expect(induction_period.number_of_terms).to eql(number_of_completed_terms)
+    expect(induction_period.finished_on).to eql(today)
   end
 end
