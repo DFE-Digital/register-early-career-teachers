@@ -1,7 +1,6 @@
 module Processors
   module ECT
     class SchoolPeriods
-
       attr_reader :teacher, :induction_records
 
       def initialize(teacher:, induction_records:)

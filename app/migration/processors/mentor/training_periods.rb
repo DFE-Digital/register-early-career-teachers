@@ -1,7 +1,6 @@
 module Processors
   module Mentor
     class TrainingPeriods
-
       attr_reader :teacher, :induction_records
 
       def initialize(teacher:, induction_records:)
@@ -21,13 +20,13 @@ module Processors
           period_dates = OpenStruct.new(started_on: period.start_date, finished_on: period.end_date)
           mentor_at_school_period = teacher.mentor_at_school_periods.containing_period(period_dates).first
 
-          tp = ::TrainingPeriod.create!(provider_partnership:,
-                                        mentor_at_school_period:,
-                                        started_on: period.start_date,
-                                        finished_on: period.end_date,
-                                        legacy_start_id: period.start_source_id,
-                                        legacy_end_id: period.end_source_id)
-
+          ::TrainingPeriod.create!(provider_partnership:,
+                                   mentor_at_school_period:,
+                                   started_on: period.start_date,
+                                   finished_on: period.end_date,
+                                   legacy_start_id: period.start_source_id,
+                                   legacy_end_id: period.end_source_id)
+        end
       end
     end
   end

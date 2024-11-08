@@ -1,6 +1,5 @@
 module Processors
   class Teacher
-
     attr_reader :trn, :full_name, :participant_profiles
 
     def initialize(trn:, full_name:, participant_profiles:)

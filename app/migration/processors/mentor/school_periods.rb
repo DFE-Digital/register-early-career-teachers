@@ -1,7 +1,6 @@
 module Processors
   module Mentor
     class SchoolPeriods
-
       attr_reader :teacher, :induction_record, :school_mentors
 
       def initialize(teacher:, induction_records:, school_mentors:)
