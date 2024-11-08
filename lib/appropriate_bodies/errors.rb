@@ -10,8 +10,8 @@ module AppropriateBodies
     class TeacherHasActiveInductionPeriodWithAnotherAB < StandardError
       include Rails.application.routes.url_helpers
 
-      def landing_page_path
-        ab_claim_an_ect_find_error_induction_with_another_appropriate_body_path
+      def template
+        :induction_with_another_appropriate_body
       end
     end
   end

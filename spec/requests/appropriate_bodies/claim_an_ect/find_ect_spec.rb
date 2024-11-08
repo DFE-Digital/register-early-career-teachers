@@ -84,8 +84,8 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
             params: { pending_induction_submission: search_params }
           )
 
-          expect(response).to be_redirection
-          expect(response.redirect_url).to match(ab_claim_an_ect_find_error_no_qts_path)
+          expect(response).to be_ok
+          expect(response.body).to include("Kirk Van Houten QTS has not been awarded.")
         end
       end
 
@@ -108,8 +108,9 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
             params: { pending_induction_submission: search_params }
           )
 
-          expect(response).to be_redirection
-          expect(response.redirect_url).to match(ab_claim_an_ect_find_error_induction_with_another_appropriate_body_path)
+          expect(response).to be_ok
+          expect(response.body).to include("You cannot claim Kirk Van Houten")
+          expect(response.body).to include("Our records show Kirk Van Houten is not eligible to be claimed for induction.")
         end
       end
 

@@ -9,8 +9,8 @@ module TRS
     class QTSNotAwarded < StandardError
       include Rails.application.routes.url_helpers
 
-      def landing_page_path
-        ab_claim_an_ect_find_error_no_qts_path
+      def template
+        :no_qts
       end
     end
   end

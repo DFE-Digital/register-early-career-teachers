@@ -25,7 +25,7 @@ module AppropriateBodies
           render(:new)
         end
       rescue TRS::Errors::QTSNotAwarded, AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB => e
-        redirect_to(e.landing_page_path)
+        render(e.template)
       rescue TRS::Errors::TeacherNotFound => e
         @pending_induction_submission.errors.add(:trn, e.message)
 

@@ -9,8 +9,6 @@ module AppropriateBodies
       end
 
       def import_from_trs!
-        check_if_teacher_has_active_induction_period!
-
         # In this case, the AB attempting to claim the ECT must be able to easily reference details of the AB associated with the open induction period._
 
         # TODO: what do we do if we already have a matching Teacher in
@@ -19,9 +17,11 @@ module AppropriateBodies
         #       below a case and add different errors to the :base
         return unless pending_induction_submission.valid?(:find_ect)
 
+        pending_induction_submission.assign_attributes(appropriate_body:, **trs_teacher.present)
+
+        check_if_teacher_has_active_induction_period!
         trs_teacher.check_eligibility!
 
-        pending_induction_submission.assign_attributes(appropriate_body:, **trs_teacher.present)
         pending_induction_submission.save(context: :find_ect)
       end
 
