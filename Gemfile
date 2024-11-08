@@ -35,20 +35,21 @@ gem "rotp"
 gem "rubyzip"
 gem "savon"
 
+
+group :test do
+  gem "capybara"
+  gem "playwright-ruby-client"
+  gem "rspec"
+  gem "rspec-rails"
+  gem "shoulda-matchers"
+end
+
 group :development, :test do
   gem "brakeman"
   gem "debug", platforms: %i[mri windows]
   gem "factory_bot_rails"
   gem "faker"
-  gem "playwright-ruby-client"
-  gem "rspec"
-  gem "rspec-rails"
   gem "rubocop-govuk"
-  gem "shoulda-matchers"
-end
-
-group :test do
-  gem "capybara"
 end
 
 group :nanoc do
