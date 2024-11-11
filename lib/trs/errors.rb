@@ -7,8 +7,10 @@ module TRS
     end
 
     class QTSNotAwarded < StandardError
-      def initialize(msg = "ECT record found, but QTS has not been awarded")
-        super
+      include Rails.application.routes.url_helpers
+
+      def template
+        :no_qts
       end
     end
   end

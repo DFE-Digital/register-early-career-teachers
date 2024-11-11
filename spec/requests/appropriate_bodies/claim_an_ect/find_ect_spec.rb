@@ -85,8 +85,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
           )
 
           expect(response).to be_ok
-          expect(response.body).to include(page_heading)
-          expect(response.body).to include(/ECT record found, but QTS has not been awarded/)
+          expect(response.body).to include("Kirk Van Houten QTS has not been awarded.")
         end
       end
 
@@ -110,8 +109,8 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
           )
 
           expect(response).to be_ok
-          expect(response.body).to include(page_heading)
-          expect(response.body).to include(/Teacher #{CGI.escapeHTML(teacher.corrected_name)} already has an active induction period with another appropriate body/)
+          expect(response.body).to include("You cannot claim Kirk Van Houten")
+          expect(response.body).to include("Our records show Kirk Van Houten is not eligible to be claimed for induction.")
         end
       end
 

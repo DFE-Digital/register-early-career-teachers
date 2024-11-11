@@ -8,9 +8,10 @@ module AppropriateBodies
     end
 
     class TeacherHasActiveInductionPeriodWithAnotherAB < StandardError
-      def initialize(full_name)
-        msg = "Teacher #{full_name} already has an active induction period with another appropriate body"
-        super(msg)
+      include Rails.application.routes.url_helpers
+
+      def template
+        :induction_with_another_appropriate_body
       end
     end
   end
