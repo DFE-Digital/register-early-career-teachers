@@ -26,6 +26,13 @@ RSpec.describe 'Registering an ECT' do
     and_i_click_on_the_continue_button
     then_i_should_be_taken_to_the_review_ect_details_page
     and_i_should_see_the_ect_details_in_the_review_page
+
+    when_i_click_on_the_confirm_and_continue_button
+    then_i_should_be_taken_to_the_email_address_page
+    when_i_enter_the_ect_email_address
+    and_i_click_on_the_continue_button
+    then_i_should_be_taken_to_the_check_answers_page
+    and_i_should_see_all_the_ect_data_on_the_page
   end
 
   def given_i_am_on_the_start_page
@@ -45,7 +52,6 @@ RSpec.describe 'Registering an ECT' do
 
   def when_i_fill_in_the_find_ect_form(trn:, dob_day:, dob_month:, dob_year:)
     page.fill('#find-ect-trn-field', trn)
-
     page.fill('#find_ect_date_of_birth_3i', dob_day)
     page.fill('#find_ect_date_of_birth_2i', dob_month)
     page.fill('#find_ect_date_of_birth_1i', dob_year)
@@ -64,5 +70,30 @@ RSpec.describe 'Registering an ECT' do
     expect(page.get_by_text(trn)).to be_visible
     expect(page.get_by_text("Kirk Van Houten")).to be_visible
     expect(page.get_by_text("1 December 2000")).to be_visible
+  end
+
+  def when_i_click_on_the_confirm_and_continue_button
+    page.click('text=Confirm and continue')
+  end
+
+  def then_i_should_be_taken_to_the_email_address_page
+    path = '/schools/email-address'
+    expect(page.url).to end_with(path)
+  end
+
+  def when_i_enter_the_ect_email_address
+    page.fill('#email-address-email-field', 'example@example.com')
+  end
+
+  def then_i_should_be_taken_to_the_check_answers_page
+    path = '/schools/check-answers'
+    expect(page.url).to end_with(path)
+  end
+
+  def and_i_should_see_all_the_ect_data_on_the_page
+    expect(page.get_by_text(trn)).to be_visible
+    expect(page.get_by_text("Kirk Van Houten")).to be_visible
+    expect(page.get_by_text("1 December 2000")).to be_visible
+    expect(page.get_by_text('example@example.com')).to be_visible
   end
 end

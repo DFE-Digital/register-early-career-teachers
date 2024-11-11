@@ -9,13 +9,15 @@ module Schools
         [
           {
             find_ect: FindECTStep,
-            review_ect_details: ReviewECTDetailsStep
+            review_ect_details: ReviewECTDetailsStep,
+            email_address: EmailAddressStep,
+            check_answers: CheckAnswersStep
           }
         ]
       end
 
       delegate :save!, to: :current_step
-      delegate :stored_attrs_for, to: :current_step
+      delegate :stored_attrs, to: :store
     end
   end
 end

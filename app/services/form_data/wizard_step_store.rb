@@ -9,5 +9,9 @@ module FormData
     def attrs_for(step)
       get(step) || {}
     end
+
+    def stored_attrs
+      store
+    end
   end
 end
