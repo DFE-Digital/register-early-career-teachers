@@ -1,15 +1,14 @@
 module Processors
   module ECT
     class SchoolPeriods
-      attr_reader :teacher, :induction_records
+      attr_reader :teacher, :school_periods
 
-      def initialize(teacher:, induction_records:)
+      def initialize(teacher:, school_periods:)
         @teacher = teacher
-        @induction_records = induction_records
+        @school_periods = school_periods
       end
 
       def process!
-        school_periods = SchoolPeriodExtractor.new(induction_records:)
         school_periods.each do |period|
           school = School.find_by!(urn: period.urn)
           ::ECTAtSchoolPeriod.create!(teacher:,
@@ -19,22 +18,6 @@ module Processors
                                       legacy_start_id: period.start_source_id,
                                       legacy_end_id: period.end_source_id)
         end
-      end
-
-    private
-
-      def first_name
-        parts = full_name.split(' ')
-        if parts.count > 2 && parts.first.downcase.in?(%w[mr mr. miss ms ms. mrs mrs. dr dr.])
-          parts.second
-        else
-          parts.first
-        end
-      end
-
-      def last_name
-        # FIXME: check for suffix titles perhaps e.g. Esq.
-        full_name.split(' ').last
       end
     end
   end

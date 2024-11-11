@@ -35,16 +35,19 @@ module Migrators
         .ect_or_mentor
         .eager_load(induction_records: [induction_programme: [school_cohort: :school]])
         .find_each do |participant_profile|
-          induction_records = InductionRecordSanitizer.new(induction_records: participant_profile.induction_records)
+          induction_records = InductionRecordSanitizer.new(participant_profile:)
           induction_records.validate!
 
+          school_periods = SchoolPeriodExtractor.new(induction_records:)
+          training_periods = TrainingPeriodExtractor.new(induction_records:)
+
           if participant_profile.ect?
-            Processors::ECT::SchoolPeriods.new(teacher:, induction_records:).process!
-            Processors::ECT::TrainingPeriods.new(teacher:, induction_records:).process!
+            Processors::ECT::SchoolPeriods.new(teacher:, school_periods:).process!
+            Processors::ECT::TrainingPeriods.new(teacher:, training_periods:).process!
           else
-            school_mentors = paricipant_profile.school_mentors
-            Processors::Mentor::SchoolPeriods.new(teacher:, induction_records:, school_mentors:).process!
-            Processors::Mentor::TrainingPeriods.new(teacher:, induction_records:).process!
+            school_mentors = participant_profile.school_mentors
+            Processors::Mentor::SchoolPeriods.new(teacher:, school_periods:, school_mentors:).process!
+            Processors::Mentor::TrainingPeriods.new(teacher:, training_periods:).process!
           end
         end
     end

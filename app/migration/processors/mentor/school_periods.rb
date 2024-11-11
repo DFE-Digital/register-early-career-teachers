@@ -1,11 +1,11 @@
 module Processors
   module Mentor
     class SchoolPeriods
-      attr_reader :teacher, :induction_record, :school_mentors
+      attr_reader :teacher, :school_periods, :school_mentors
 
-      def initialize(teacher:, induction_records:, school_mentors:)
+      def initialize(teacher:, school_periods:, school_mentors:)
         @teacher = teacher
-        @induction_records = induction_records
+        @school_periods = school_periods
         @school_mentors = school_mentors
       end
 
@@ -17,7 +17,6 @@ module Processors
     private
 
       def process_school_periods!
-        school_periods = SchoolPeriodExtractor.new(induction_records:)
         school_periods.each do |period|
           school = School.find_by!(urn: period.urn)
           ::MentorAtSchoolPeriod.create!(teacher:,

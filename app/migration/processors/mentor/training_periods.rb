@@ -1,15 +1,14 @@
 module Processors
   module Mentor
     class TrainingPeriods
-      attr_reader :teacher, :induction_records
+      attr_reader :teacher, :training_periods
 
-      def initialize(teacher:, induction_records:)
+      def initialize(teacher:, training_periods:)
         @teacher = teacher
-        @induction_records = induction_records
+        @training_periods = training_periods
       end
 
       def process!
-        training_periods = TrainingPeriodExtractor.new(induction_records:)
         training_periods.each do |period|
           next unless period.training_programme == "full_induction_programme"
 

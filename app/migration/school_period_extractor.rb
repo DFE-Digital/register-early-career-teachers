@@ -1,6 +1,8 @@
 class SchoolPeriodExtractor
   include Enumerable
 
+  attr_reader :induction_records
+
   def initialize(induction_records:)
     @induction_records = induction_records
   end
@@ -23,7 +25,7 @@ private
 
     school_period = Struct.new(:urn, :start_date, :end_date, :start_source_id, :end_source_id)
 
-    @induction_records.each_with_object([]) do |induction_record, periods|
+    induction_records.each_with_object([]) do |induction_record, periods|
       record_school = induction_record.induction_programme.school_cohort.school
 
       if current_school != record_school
