@@ -18,6 +18,7 @@ module Schools
       end
 
       delegate :save!, to: :current_step
+      delegate :destroy_session, to: :current_step
       delegate :stored_attrs, to: :store
     end
   end
