@@ -3,6 +3,7 @@
 module Schools
   class RegisterECTController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]
+    before_action :reset_session, only: :new
 
     FORM_KEY = :register_ect_wizard
     WIZARD_CLASS = Schools::RegisterECT::BaseWizard.freeze
@@ -53,6 +54,12 @@ module Schools
 
     def default_params
       ActionController::Parameters.new({ current_step => params })
+    end
+
+    def reset_session
+      return if current_step != :find_ect
+
+      @wizard.destroy_session
     end
   end
 end

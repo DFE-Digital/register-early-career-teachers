@@ -13,5 +13,9 @@ module FormData
     def stored_attrs
       store
     end
+
+    def destroy_session
+      destroy
+    end
   end
 end

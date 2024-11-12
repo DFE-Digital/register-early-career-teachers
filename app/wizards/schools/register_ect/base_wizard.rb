@@ -11,12 +11,14 @@ module Schools
             find_ect: FindECTStep,
             review_ect_details: ReviewECTDetailsStep,
             email_address: EmailAddressStep,
-            check_answers: CheckAnswersStep
+            check_answers: CheckAnswersStep,
+            confirmation: ConfirmationStep,
           }
         ]
       end
 
       delegate :save!, to: :current_step
+      delegate :destroy_session, to: :current_step
       delegate :stored_attrs, to: :store
     end
   end

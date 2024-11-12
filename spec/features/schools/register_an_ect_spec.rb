@@ -3,14 +3,6 @@ RSpec.describe 'Registering an ECT' do
 
   let(:page) { RSpec.configuration.playwright_page }
   let(:trn) { '9876543' }
-  let(:trs_teacher_stub) do
-    {
-      'firstName' => 'Kate',
-      'lastName' => 'Smith',
-      'trn' => trn,
-      'dateOfBirth' => '2000-12-01',
-    }
-  end
   let(:trs_client) { instance_double(TRS::APIClient) }
 
   before do
@@ -18,31 +10,40 @@ RSpec.describe 'Registering an ECT' do
   end
 
   scenario 'Happy path' do
-    given_i_am_on_the_start_page
-    when_i_click_on_the_continue_link
+    # Temporary: We need to have a school in the db so that when the user
+    # returned to /schools/ects/home we can attempt to fetch and display ects / mentors from the db
+    given_there_is_a_school
+    and_i_am_on_the_start_page
+    when_i_click_continue
     i_should_be_taken_to_the_find_ect_page
 
     when_i_fill_in_the_find_ect_form(trn:, dob_day: '1', dob_month: '12', dob_year: '2000')
-    and_i_click_on_the_continue_button
+    and_i_click_continue
     then_i_should_be_taken_to_the_review_ect_details_page
     and_i_should_see_the_ect_details_in_the_review_page
 
-    when_i_click_on_the_confirm_and_continue_button
+    when_i_click_confirm_and_continue
     then_i_should_be_taken_to_the_email_address_page
     when_i_enter_the_ect_email_address
-    and_i_click_on_the_continue_button
+    and_i_click_continue
     then_i_should_be_taken_to_the_check_answers_page
     and_i_should_see_all_the_ect_data_on_the_page
+
+    when_i_click_confirm_details
+    then_i_should_be_taken_to_the_confirmation_page
+
+    when_i_click_on_back_to_your_ects
+    then_i_should_be_taken_to_the_ects_page
   end
 
-  def given_i_am_on_the_start_page
+  def given_there_is_a_school
+    FactoryBot.create(:school, urn: "1234567")
+  end
+
+  def and_i_am_on_the_start_page
     path = '/schools/what-you-will-need'
     page.goto path
     expect(page.url).to end_with(path)
-  end
-
-  def when_i_click_on_the_continue_link
-    page.click('text=Continue')
   end
 
   def i_should_be_taken_to_the_find_ect_page
@@ -57,8 +58,20 @@ RSpec.describe 'Registering an ECT' do
     page.fill('#find_ect_date_of_birth_1i', dob_year)
   end
 
-  def and_i_click_on_the_continue_button
-    page.click('text=Continue')
+  def when_i_click_continue
+    continue_click
+  end
+
+  def and_i_click_continue
+    continue_click
+  end
+
+  def when_i_click_confirm_details
+    page.click("text=Confirm details")
+  end
+
+  def when_i_click_confirm_and_continue
+    page.click("text=Confirm and continue")
   end
 
   def then_i_should_be_taken_to_the_review_ect_details_page
@@ -70,10 +83,6 @@ RSpec.describe 'Registering an ECT' do
     expect(page.get_by_text(trn)).to be_visible
     expect(page.get_by_text("Kirk Van Houten")).to be_visible
     expect(page.get_by_text("1 December 2000")).to be_visible
-  end
-
-  def when_i_click_on_the_confirm_and_continue_button
-    page.click('text=Confirm and continue')
   end
 
   def then_i_should_be_taken_to_the_email_address_page
@@ -95,5 +104,23 @@ RSpec.describe 'Registering an ECT' do
     expect(page.get_by_text("Kirk Van Houten")).to be_visible
     expect(page.get_by_text("1 December 2000")).to be_visible
     expect(page.get_by_text('example@example.com')).to be_visible
+  end
+
+  def then_i_should_be_taken_to_the_confirmation_page
+    path = '/schools/confirmation'
+    expect(page.url).to end_with(path)
+  end
+
+  def when_i_click_on_back_to_your_ects
+    page.click("text=Back to your ECTs")
+  end
+
+  def then_i_should_be_taken_to_the_ects_page
+    path = '/schools/home/ects'
+    expect(page.url).to end_with(path)
+  end
+
+  def continue_click
+    page.click('text=Continue')
   end
 end

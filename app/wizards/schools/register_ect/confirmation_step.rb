@@ -2,12 +2,8 @@
 
 module Schools
   module RegisterECT
-    class CheckAnswersStep < StoredStep
+    class ConfirmationStep < StoredStep
       def self.permitted_params
-      end
-
-      def next_step
-        :confirmation
       end
     end
   end
