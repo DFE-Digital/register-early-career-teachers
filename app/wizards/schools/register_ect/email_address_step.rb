@@ -5,7 +5,7 @@ module Schools
     class EmailAddressStep < StoredStep
       attr_accessor :email
 
-      validates :email, presence: true
+      validates :email, presence: { message: "Enter your email address" }, notify_email: true
 
       def self.permitted_params
         %i[email]
