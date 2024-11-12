@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Schools::TestGuidanceComponent, type: :component do
+describe TestGuidanceComponent, type: :component do
   it "renders when TEST_GUIDANCE is true" do
     with_env_var("TEST_GUIDANCE", "true") do
       render_inline(described_class.new) { "some content" }
@@ -25,9 +25,7 @@ describe Schools::TestGuidanceComponent, type: :component do
   describe 'TRS example details' do
     it 'contains a table with TRNs and dates of birth' do
       with_env_var("TEST_GUIDANCE", "true") do
-        render_inline(described_class.new) do |component|
-          component.with_trs_example_teacher_details
-        end
+        render_inline(described_class.new, &:with_trs_example_teacher_details)
 
         expect(rendered_content).to include('Information to review this journey')
       end
