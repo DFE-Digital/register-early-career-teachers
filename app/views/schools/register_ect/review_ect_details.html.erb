@@ -20,7 +20,7 @@ end %>
 <%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
   <%= f.govuk_error_summary %>
 
-  <%= f.govuk_submit "Confirm and continue", "data-testid": "submit" %>
+  <%= f.govuk_submit "Confirm and continue" %>
 <% end %>
 
 <div class="govuk-inset-text">
