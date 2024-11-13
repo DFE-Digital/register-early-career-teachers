@@ -13,6 +13,15 @@ describe DateOfBirthValidator do
   subject { test_class.new(date_of_birth:) }
 
   context "when date_of_birth is invalid" do
+    context "when date of birth is missing" do
+      let(:date_of_birth) {}
+
+      it "adds an error" do
+        subject.valid?
+        expect(subject.errors[:date_of_birth]).to include("Enter a date of birth")
+      end
+    end
+
     context "when date is in an invalid format" do
       let(:date_of_birth) { { 1 => "invalid", 2 => "02", 3 => "30" } }
 

@@ -5,3 +5,8 @@ en:
       too_short: Teacher reference number must include at least 5 digits
       too_long: Teacher reference number cannot include more than 7 digits
       invalid: Teacher reference number must include at least 5 digits
+    date_of_birth:
+      blank: "Enter a date of birth"
+      invalid: "Enter the date of birth in the correct format, for example 12 03 1998"
+      too_old: "The teacher cannot be more than 100 years old"
+      too_young: "The teacher cannot be less than 18 years old"

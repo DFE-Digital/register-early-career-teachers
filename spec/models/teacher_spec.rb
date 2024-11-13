@@ -28,8 +28,8 @@ describe Teacher do
         end
       end
 
-      context "when the string contains something other than 7 numeric digits" do
-        %w[123456 12345678 ONE4567 123456!].each do |value|
+      context "when the string contains less than 5 numeric digits or more than 7 numeric digits" do
+        %w[1234 12345678 ONE4567 1234!].each do |value|
           it { is_expected.not_to allow_value(value).for(:trn) }
         end
       end
