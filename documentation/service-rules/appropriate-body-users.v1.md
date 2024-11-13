@@ -2,7 +2,7 @@
 title: Appropriate bodies
 ---
 
-Learn about the services appropriate bodies use, and how the services allow appropriate bodies to carry out their duties. Services include the ‘appropriate body portal’ and the ‘check data for appropriate bodies’ service.  
+Learn about the services appropriate bodies use, and how the services allow appropriate bodies to carry out their duties. Services include the ‘appropriate body portal’ and the ‘check data for appropriate bodies’ service.
 
 ## Contents
 
@@ -38,7 +38,7 @@ They can also view their appropriate body ID. This is referred to later as an em
 
 ### Individually claim an ECT for their induction status with the TRA
 
-The process of 'claiming' an ECT refers to an AB telling the TRA which ECTs they are quality assuring the induction of. 
+The process of 'claiming' an ECT refers to an AB telling the TRA which ECTs they are quality assuring the induction of.
 
 The appropriate body needs to enter both the date of birth and the TRN number for the ECT record to show up and be claimed.
 
@@ -71,9 +71,9 @@ When the portal pulls up the record for the ECT, it would show:
 
 - Alerts
 - The date they achieved QTS
-- Induction, which is the current status of their induction. 
+- Induction, which is the current status of their induction.
 
-This status would be one of the following: in progress, pass, fail, extended, not yet completed (when they have stopped induction with 
+This status would be one of the following: in progress, pass, fail, extended, not yet completed (when they have stopped induction with
 their current appropriate body but not finished their induction)
 
 #### Teacher details
@@ -214,7 +214,7 @@ much later therefore keeping their record as not yet completed
 regardless of reasons for leaving allows their record to be picked up
 from where it was last updated.
 
-### Pass or fail an ECT's induction 
+### Pass or fail an ECT's induction
 
 This would be under where AB users 5ecord an induction outcome.
 
@@ -297,7 +297,7 @@ be a GDPR breach to show this to users that do not require access.
 this data. This is why it is escalated to policy teams, not just support
 teams. Appropriate bodies are often delivery partners too. The Appropriate
 bodies and regulation team gives information to the policy team on who
-is serving as an appropriate body. 
+is serving as an appropriate body.
 
 Those users will then receive an email notification that they can sign
 in.
