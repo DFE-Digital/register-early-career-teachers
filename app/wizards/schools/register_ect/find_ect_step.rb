@@ -5,9 +5,8 @@ module Schools
     class FindECTStep < StoredStep
       attr_accessor :trn, :date_of_birth
 
-      validates :trn, presence: {
-        message: "Enter a teacher reference number"
-      }, format: { with: /\A\d{1,7}\z/, message: "Teacher reference number cannot include more than 7 digits" }
+      validates :trn, presence: { message: "Enter a teacher reference number" },
+                      teacher_reference_number: true
 
       validates :date_of_birth,
                 presence: { message: "Please enter date of birth" },
