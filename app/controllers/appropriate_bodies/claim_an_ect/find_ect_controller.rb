@@ -24,8 +24,15 @@ module AppropriateBodies
         else
           render(:new)
         end
-      rescue TRS::Errors::QTSNotAwarded, AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB => e
-        render(e.template)
+      rescue TRS::Errors::QTSNotAwarded
+        # FIXME: I'm not especially fond of saving these throwaway pending induction
+        #        submissions, can we not make the error pages generic and flash the
+        #        details through instead?
+        @pending_induction_submission.save!
+        redirect_to ab_claim_an_ect_errors_no_qts_path(@pending_induction_submission)
+      rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB
+        @pending_induction_submission.save!
+        redirect_to ab_claim_an_ect_errors_another_ab_path(@pending_induction_submission)
       rescue TRS::Errors::TeacherNotFound => e
         @pending_induction_submission.errors.add(:trn, e.message)
 
