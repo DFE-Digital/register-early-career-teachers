@@ -3,7 +3,6 @@ RSpec.describe 'Registering an ECT' do
 
   let(:page) { RSpec.configuration.playwright_page }
   let(:trn) { '9876543' }
-  let(:trs_client) { instance_double(TRS::APIClient) }
 
   before do
     sign_in_as_admin

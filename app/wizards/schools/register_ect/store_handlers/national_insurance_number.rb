@@ -12,8 +12,8 @@ module Schools
           ect = Schools::TeacherPresenter.new(**wizard.stored_attrs)
           trn = ect.trn
           national_insurance_number = wizard.current_step.national_insurance_number
-
           trs_teacher = ::TRS::APIClient.new.find_teacher(trn:, national_insurance_number:)
+
           store.store_attrs(:find_ect, trs_teacher)
         end
 

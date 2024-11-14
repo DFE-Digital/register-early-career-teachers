@@ -6,13 +6,13 @@ module TRS
       @prohibited_from_teaching = prohibited_from_teaching
     end
 
-    def find_teacher(trn:, date_of_birth:)
+    def find_teacher(trn:, date_of_birth: nil, national_insurance_number: nil)
       raise(TRS::Errors::TeacherNotFound, "Teacher with TRN #{trn} not found") if @raise_not_found
 
-      Rails.logger.info("TRSFakeAPIClient pretending to find teacher with TRN=#{trn} and Date of birth=#{date_of_birth}")
+      Rails.logger.info("TRSFakeAPIClient pretending to find teacher with TRN=#{trn} and Date of birth=#{date_of_birth} and National Insurance Number=#{national_insurance_number}")
 
       TRS::Teacher.new(
-        teacher_params(trn:, date_of_birth:)
+        teacher_params(trn:, date_of_birth:, national_insurance_number:)
           .merge(qts)
           .merge(prohibited_from_teaching)
       )
@@ -20,12 +20,13 @@ module TRS
 
   private
 
-    def teacher_params(trn:, date_of_birth:)
+    def teacher_params(trn:, date_of_birth:, national_insurance_number:)
       {
         'trn' => trn,
         'firstName' => 'Kirk',
         'lastName' => 'Van Houten',
         'dateOfBirth' => date_of_birth,
+        'nationalInsuranceNumber' => national_insurance_number,
       }
     end
 
