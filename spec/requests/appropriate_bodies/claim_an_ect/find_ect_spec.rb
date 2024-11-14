@@ -76,7 +76,6 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
 
       context "when the submission is valid but ECT does not have QTS awarded" do
         include_context 'fake trs api client that finds teacher without QTS'
-        let(:birth_year_param) { "2001" }
 
         it 're-renders the find page and displays the relevant error' do
           post(
@@ -85,6 +84,19 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
           )
 
           expect(response.redirect_url).to match(%r{/appropriate-body/claim-an-ect/errors/no-qts/\d+\z})
+        end
+      end
+
+      context "when the submission is valid but ECT was prohibited from teaching" do
+        include_context 'fake trs api client that finds teacher prohibited from teaching'
+
+        it 're-renders the find page and displays the relevant error' do
+          post(
+            '/appropriate-body/claim-an-ect/find-ect',
+            params: { pending_induction_submission: search_params }
+          )
+
+          expect(response.redirect_url).to match(%r{/appropriate-body/claim-an-ect/errors/prohibited-from-teaching/\d+\z})
         end
       end
 

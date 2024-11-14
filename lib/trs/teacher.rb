@@ -1,5 +1,7 @@
 module TRS
   class Teacher
+    PROHIBITED_FROM_TEACHING_CATEGORY_ID = 'b2b19019-b165-47a3-8745-3297ff152581'.freeze
+
     attr_reader :trn, :first_name, :last_name, :date_of_birth
 
     def initialize(data)
@@ -50,6 +52,7 @@ module TRS
 
     def check_eligibility!
       raise TRS::Errors::QTSNotAwarded unless qts_awarded?
+      raise TRS::Errors::ProhibitedFromTeaching if prohibited_from_teaching?
 
       true
     end
@@ -62,6 +65,10 @@ module TRS
 
     def qts_awarded?
       @qts_awarded.present?
+    end
+
+    def prohibited_from_teaching?
+      @alerts&.any? { |alert| alert.dig('alertType', 'alertCategory', 'alertCategoryId') == PROHIBITED_FROM_TEACHING_CATEGORY_ID }
     end
   end
 end

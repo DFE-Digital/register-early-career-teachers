@@ -101,4 +101,31 @@ RSpec.describe TRS::Teacher do
       expect(subject.present).to eq(expected_hash)
     end
   end
+
+  describe "#check_eligibility!" do
+    context "when the teacher has not been awarded QTS" do
+      let(:data) { { 'qts' => { 'awarded' => nil } } }
+
+      it "raises TRS::Errors::QTSNotAwarded" do
+        expect { subject.check_eligibility! }.to raise_error(TRS::Errors::QTSNotAwarded)
+      end
+    end
+
+    context "when the teacher is prohibited from teaching" do
+      let(:data) do
+        {
+          'qts' => { 'awarded' => '2024-09-18', 'certificateUrl' => 'qts_certificate_url', 'statusDescription' => 'qts_status' },
+          'alerts' => [
+            {
+              'alertType' => { 'alertCategory' => { 'alertCategoryId' => 'b2b19019-b165-47a3-8745-3297ff152581' } },
+            }
+          ],
+        }
+      end
+
+      it "raises TRS::Errors::ProhibitedFromTeaching" do
+        expect { subject.check_eligibility! }.to raise_error(TRS::Errors::ProhibitedFromTeaching)
+      end
+    end
+  end
 end

@@ -15,3 +15,9 @@ shared_context 'fake trs api client that finds teacher without QTS' do
     allow(TRS::APIClient).to receive(:new).and_return(TRS::FakeAPIClient.new(include_qts: false))
   end
 end
+
+shared_context 'fake trs api client that finds teacher prohibited from teaching' do
+  before do
+    allow(TRS::APIClient).to receive(:new).and_return(TRS::FakeAPIClient.new(prohibited_from_teaching: true))
+  end
+end
