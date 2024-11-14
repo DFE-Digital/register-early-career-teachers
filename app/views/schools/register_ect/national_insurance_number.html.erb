@@ -1,0 +1,17 @@
+<% page_data(title: "We cannot find your ECT's details", backlink_href: schools_register_ect_find_ect_path) %>
+
+<p class="govuk-body">We cannot find a match with the details you've given. You'll need to provide more information about your ECT to help us locate them.</p>
+
+<%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
+
+  <%= f.govuk_number_field(
+        :trn,
+        label: { text: "National Insurance Number", size: "m" },
+        hint: { text: "Enter your ECT's National Insurance number. It's on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 D'.", size: "s" },
+        )
+  %>
+
+  <%= f.govuk_submit "Continue" %>
+<% end %>
+

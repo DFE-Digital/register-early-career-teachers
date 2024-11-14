@@ -88,6 +88,9 @@ Rails.application.routes.draw do
     get "/find-ect", to: "register_ect#new", as: :register_ect_find_ect
     post "/find-ect", to: "register_ect#create"
 
+    get "/national-insurance-number", to: "register_ect#new", as: :register_ect_national_insurance_number
+    post "/national-insurance-number", to: "register_ect#create"
+
     get "/review-ect-details", to: "register_ect#new", as: :register_ect_review_ect_details
     post "/review-ect-details", to: "register_ect#create"
 
