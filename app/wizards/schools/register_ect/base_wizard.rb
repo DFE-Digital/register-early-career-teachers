@@ -3,7 +3,7 @@
 module Schools
   module RegisterECT
     class BaseWizard < DfE::Wizard::Base
-      attr_accessor :store, :trn, :date_of_birth, :first_name, :last_name
+      attr_accessor :store, :trn, :date_of_birth, :first_name, :last_name, :national_insurance_number
 
       steps do
         [
@@ -13,6 +13,7 @@ module Schools
             email_address: EmailAddressStep,
             check_answers: CheckAnswersStep,
             confirmation: ConfirmationStep,
+            national_insurance_number: NationalInsuranceNumberStep,
           }
         ]
       end
