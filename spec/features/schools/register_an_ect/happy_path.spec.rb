@@ -9,7 +9,7 @@ RSpec.describe 'Registering an ECT' do
     sign_in_as_admin
   end
 
-  scenario 'Happy path' do
+  scenario 'happy path' do
     # Temporary: We need to have a school in the db so that when the user
     # returned to /schools/ects/home we can attempt to fetch and display ects / mentors from the db
     given_there_is_a_school
