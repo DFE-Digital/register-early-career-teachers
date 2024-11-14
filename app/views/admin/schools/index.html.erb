@@ -1,0 +1,42 @@
+<% page_data(title: "Schools") %>
+
+<div class="search-box">
+  <%= form_with method: :get, class: "search-box__form" do |f| %>
+    <div class="search-box__input">
+      <%= f.govuk_text_field(
+            "q",
+            value: @q,
+            label: { text: "Search for school", size: "s" },
+            hint: { text: "Name or URN or Postcode or Contact email address" },
+            )
+      %>
+    </div>
+
+    <%= f.govuk_submit "Search", classes: "search-box__button" %>
+  <% end %>
+</div>
+
+<p class="govuk-body"><strong><%= @pagy.count %></strong> schools found</p>
+
+<%= govuk_table do |table|
+  table.with_head do |head|
+    head.with_row do |row|
+      row.with_cell(text: "Name")
+      row.with_cell(text: "URN")
+      row.with_cell(text: "Postcode")
+    end
+  end
+
+  table.with_body do |body|
+    @schools.each do |school|
+      body.with_row do |row|
+        row.with_cell do
+          govuk_link_to(school.name, admin_school_path(school, page: @page, q: @q))
+        end
+        row.with_cell(text: school.urn)
+        row.with_cell(text: school.postcode)
+      end
+    end
+  end
+end %>
+<%== govuk_pagination pagy: @pagy %>

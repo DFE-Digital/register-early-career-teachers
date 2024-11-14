@@ -1,5 +1,6 @@
 class GIAS::School < ApplicationRecord
   self.table_name = "gias_schools"
+  self.ignored_columns = %i[search]
 
   # Enums
   enum :funding_eligibility,

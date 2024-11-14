@@ -10,7 +10,7 @@
 
     <%= render Navigation::PrimaryNavigationComponent.new(
       current_path: request.fullpath,
-      is_authenticated: authenticated?
+      current_user:,
     ) %>
 
     <div class="govuk-width-container">

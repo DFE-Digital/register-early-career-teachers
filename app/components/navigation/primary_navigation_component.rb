@@ -1,10 +1,10 @@
 module Navigation
   class PrimaryNavigationComponent < ViewComponent::Base
-    attr_accessor :current_path, :is_authenticated
+    attr_accessor :current_path, :current_user
 
-    def initialize(current_path:, is_authenticated:)
+    def initialize(current_path:, current_user:)
       super
-      @is_authenticated = is_authenticated
+      @current_user = current_user
       @current_path = current_path
     end
 
@@ -22,11 +22,26 @@ module Navigation
 
   private
 
+    def ab_nav_options
+      if current_path.start_with?("/appropriate-body")
+        []
+      end
+    end
+
+    def dfe_nav_options
+      if Admin::Access.new(current_user).can_access?
+        [
+          { text: "Schools", href: admin_schools_path },
+        ]
+      end
+    end
+
     def navigation_items
       [
         ab_nav_options,
+        dfe_nav_options,
         school_nav_options,
-        ({ text: "Sign out", href: sign_out_path } if is_authenticated),
+        ({ text: "Sign out", href: sign_out_path } if current_user),
       ].flatten.compact
     end
 
@@ -36,12 +51,6 @@ module Navigation
           { text: "Your ECTs", href: schools_ects_home_path },
           { text: "Your mentors", href: 'FIXME' }
         ]
-      end
-    end
-
-    def ab_nav_options
-      if current_path.start_with?("/appropriate-body")
-        []
       end
     end
   end

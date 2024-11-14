@@ -129,7 +129,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_15_110325) do
     t.string "website"
     t.boolean "induction_eligibility", null: false
     t.boolean "in_england", null: false
+    t.virtual "search", type: :tsvector, as: "to_tsvector('unaccented'::regconfig, ((((COALESCE((name)::text, ''::text) || ' '::text) || COALESCE((postcode)::text, ''::text)) || ' '::text) || COALESCE((urn)::text, ''::text)))", stored: true
     t.index ["name"], name: "index_gias_schools_on_name"
+    t.index ["search"], name: "index_gias_schools_on_search", using: :gin
     t.index ["ukprn"], name: "index_gias_schools_on_ukprn", unique: true
   end
 
