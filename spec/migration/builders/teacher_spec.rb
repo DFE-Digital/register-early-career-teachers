@@ -1,4 +1,4 @@
-describe Processors::Teacher do
+describe Builders::Teacher do
   let(:trn) { "1234567" }
   let(:full_name) { "Chester Thompson" }
 

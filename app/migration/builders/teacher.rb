@@ -1,4 +1,4 @@
-module Processors
+module Builders
   class Teacher
     attr_reader :trn, :full_name
 

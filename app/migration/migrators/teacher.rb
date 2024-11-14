@@ -28,7 +28,7 @@ module Migrators
       trn = teacher_profile.trn
       full_name = teacher_profile.user.full_name
 
-      teacher = Processors::Teacher.new(trn:, full_name:).process!
+      teacher = Builders::Teacher.new(trn:, full_name:).process!
 
       teacher_profile
         .participant_profiles
@@ -39,15 +39,14 @@ module Migrators
           induction_records.validate!
 
           school_periods = SchoolPeriodExtractor.new(induction_records:)
-          training_periods = TrainingPeriodExtractor.new(induction_records:)
+          training_period_data = TrainingPeriodExtractor.new(induction_records:)
 
           if participant_profile.ect?
-            Processors::ECT::SchoolPeriods.new(teacher:, school_periods:).process!
-            Processors::ECT::TrainingPeriods.new(teacher:, training_periods:).process!
+            Builders::ECT::SchoolPeriods.new(teacher:, school_periods:).process!
+            Builders::ECT::TrainingPeriods.new(teacher:, training_period_data:).process!
           else
-            school_mentors = participant_profile.school_mentors
-            Processors::Mentor::SchoolPeriods.new(teacher:, school_periods:, school_mentors:).process!
-            Processors::Mentor::TrainingPeriods.new(teacher:, training_periods:).process!
+            Builders::Mentor::SchoolPeriods.new(teacher:, school_periods:).process!
+            Builders::Mentor::TrainingPeriods.new(teacher:, training_period_data:).process!
           end
         end
     end

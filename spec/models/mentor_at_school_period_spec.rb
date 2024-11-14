@@ -28,7 +28,7 @@ describe MentorAtSchoolPeriod do
           end
 
           it "add an error" do
-            expect(subject.errors.messages).to include(base: ["Teacher School ECT periods cannot overlap"])
+            expect(subject.errors.messages).to include(base: ["Teacher School Mentor periods cannot overlap"])
           end
         end
       end
@@ -48,7 +48,7 @@ describe MentorAtSchoolPeriod do
           end
 
           it "add an error" do
-            expect(subject.errors.messages).to include(base: ["Teacher School ECT periods cannot overlap"])
+            expect(subject.errors.messages).to include(base: ["Teacher School Mentor periods cannot overlap"])
           end
         end
       end

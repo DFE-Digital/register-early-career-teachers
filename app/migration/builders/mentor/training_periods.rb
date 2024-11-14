@@ -1,15 +1,15 @@
-module Processors
+module Builders
   module Mentor
     class TrainingPeriods
-      attr_reader :teacher, :training_periods
+      attr_reader :teacher, :training_period_data
 
-      def initialize(teacher:, training_periods:)
+      def initialize(teacher:, training_period_data:)
         @teacher = teacher
-        @training_periods = training_periods
+        @training_period_data = training_period_data
       end
 
       def process!
-        training_periods.each do |period|
+        training_period_data.each do |period|
           next unless period.training_programme == "full_induction_programme"
 
           provider_partnership = ::ProviderPartnership.where(lead_provider: ::LeadProvider.find_by!(name: period.lead_provider),

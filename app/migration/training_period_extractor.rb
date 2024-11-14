@@ -21,8 +21,6 @@ private
     current_period = nil
     current_programme = nil
 
-    training_period = Struct.new(:training_programme, :lead_provider, :delivery_partner, :core_materials, :cohort_year, :start_date, :end_date, :start_source_id, :end_source_id)
-
     @induction_records.each_with_object([]) do |induction_record, periods|
       record_programme = induction_record.induction_programme
 
@@ -34,15 +32,15 @@ private
         core_materials = current_programme.core_induction_programme&.name
 
         # might want to filter out FIP without partnership or CIP without materials?
-        current_period = training_period.new(training_programme: current_programme.training_programme,
-                                             lead_provider:,
-                                             delivery_partner:,
-                                             core_materials:,
-                                             cohort_year: induction_record.schedule.cohort.start_year,
-                                             start_date: induction_record.start_date,
-                                             end_date: induction_record.end_date,
-                                             start_source_id: induction_record.id,
-                                             end_source_id: induction_record.id)
+        current_period = Migration::TrainingPeriodData.new(training_programme: current_programme.training_programme,
+                                                           lead_provider:,
+                                                           delivery_partner:,
+                                                           core_materials:,
+                                                           cohort_year: induction_record.schedule.cohort.start_year,
+                                                           start_date: induction_record.start_date,
+                                                           end_date: induction_record.end_date,
+                                                           start_source_id: induction_record.id,
+                                                           end_source_id: induction_record.id)
         periods << current_period
       else
         current_period.end_date = induction_record.end_date

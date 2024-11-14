@@ -1,4 +1,4 @@
-module Processors
+module Builders
   module ECT
     class SchoolPeriods
       attr_reader :teacher, :school_periods
