@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'debug'
-
 module Schools
   class RegisterECTController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]
@@ -19,16 +17,20 @@ module Schools
     end
 
     def create
-        if @wizard.save!
-          redirect_to @wizard.next_step_path
-        else
-          render current_step
-        end
+      if @wizard.save!
+        redirect_to @wizard.next_step_path
+      else
+        render current_step
+      end
     rescue TRS::Errors::TeacherNotFound
-          redirect_to schools_register_ect_national_insurance_number_path
+      if current_step == :find_ect
+        redirect_to schools_register_ect_national_insurance_number_path
+      else
+        redirect_to schools_register_ect_not_found_path
+      end
     end
 
-  private
+    private
 
     def initialize_wizard
       @wizard = WIZARD_CLASS.new(

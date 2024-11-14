@@ -1,7 +1,7 @@
 module Schools
   module RegisterECT
     class StepStoreHandlerFactory
-      def self.create(step_name:, wizard:, store:, key:)
+      def self.create!(step_name:, wizard:, store:, key:)
         case step_name
         when :find_ect
           StoreHandlers::FindECT.new(wizard, store)
