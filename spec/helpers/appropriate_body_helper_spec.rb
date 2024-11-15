@@ -40,4 +40,17 @@ RSpec.describe AppropriateBodyHelper, type: :helper do
       end
     end
   end
+
+  describe "#pending_induction_submission_full_name" do
+    let(:pending_induction_submission) { FactoryBot.build(:pending_induction_submission) }
+    let(:fake_name) { double(PendingInductionSubmissions::Name, full_name: "Joey") }
+
+    before do
+      allow(PendingInductionSubmissions::Name).to receive(:new).with(pending_induction_submission).and_return(fake_name)
+    end
+
+    it 'calls the name service with the provided pending_induction_submission' do
+      expect(pending_induction_submission_full_name(pending_induction_submission)).to eql("Joey")
+    end
+  end
 end
