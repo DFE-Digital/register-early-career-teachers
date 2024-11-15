@@ -1,5 +1,3 @@
-require 'debug'
-
 module Schools
   module RegisterECT
     module StoreHandlers
