@@ -36,7 +36,7 @@ module AppropriateBodies::Importers
       @csv = csv || CSV.read(filename, headers: true)
 
       data = @csv.map do |row|
-        logger.debug("attempting to import row: #{row.to_h}")
+        logger.debug("attempting to import row: #{row.to_hash}")
 
         unless (appropriate_body_id = appropriate_bodies[row['appropriate_body_id']])
           logger.warn("No AB found for ID #{row['appropriate_body_id']}")
@@ -60,7 +60,7 @@ module AppropriateBodies::Importers
     def import
       count = 0
 
-      group_sort_and_dedupe.each do |trn, rows|
+      periods_by_trn.each do |trn, rows|
         logger.debug("adding rows for #{trn}")
         teacher_id = teachers[trn]
 
@@ -75,15 +75,7 @@ module AppropriateBodies::Importers
       [count, @csv.count]
     end
 
-  private
-
-    def logger
-      @logger ||= Logger.new(LOGFILE).tap do |l|
-        l.level = Logger::Severity::DEBUG
-      end
-    end
-
-    def group_sort_and_dedupe
+    def periods_by_trn
       @data
         .reject { |ip| ip.finished_on && ip.started_on >= ip.finished_on } # FIXME: log these
         .group_by(&:trn)
@@ -164,6 +156,18 @@ module AppropriateBodies::Importers
 
           h[trn] = keep
         end
+    end
+
+    def periods_as_hashes_by_trn
+      periods_by_trn.transform_values { |v| v.map(&:to_hash) }
+    end
+
+  private
+
+    def logger
+      @logger ||= Logger.new(LOGFILE).tap do |l|
+        l.level = Logger::Severity::DEBUG
+      end
     end
 
     def appropriate_bodies
