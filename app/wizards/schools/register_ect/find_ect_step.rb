@@ -5,12 +5,8 @@ module Schools
     class FindECTStep < StoredStep
       attr_accessor :trn, :date_of_birth
 
-      validates :trn, presence: true, format: { with: /\A\d{7}\z/, message: "The TRN must be exactly 7 digits" }
-
-      validates :date_of_birth,
-                presence: {
-                  message: "Please enter date of birth"
-                }
+      validates :trn, teacher_reference_number: true
+      validates :date_of_birth, date_of_birth: true
 
       def self.permitted_params
         %i[trn date_of_birth]

@@ -3,6 +3,7 @@
 module Schools
   class RegisterECTController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]
+    before_action :initialize_ect, only: %i[new create]
     before_action :reset_session, only: :new
 
     FORM_KEY = :register_ect_wizard
@@ -12,8 +13,6 @@ module Schools
     end
 
     def new
-      @ect = Schools::TeacherPresenter.new(**@wizard.stored_attrs)
-
       render current_step
     end
 
@@ -33,6 +32,10 @@ module Schools
         step_params:,
         store:
       )
+    end
+
+    def initialize_ect
+      @ect = Schools::TeacherPresenter.new(**@wizard.stored_attrs)
     end
 
     def store

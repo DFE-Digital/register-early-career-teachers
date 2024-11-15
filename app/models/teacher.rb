@@ -17,8 +17,8 @@ class Teacher < ApplicationRecord
             presence: true
 
   validates :trn,
-            format: { with: TRN_FORMAT, message: "TRN must be 7 numeric digits" },
-            uniqueness: { message: 'TRN already exists', case_sensitive: false }
+            uniqueness: { message: 'TRN already exists', case_sensitive: false },
+            teacher_reference_number: true
 
   scope :search, ->(query_string) { where("teachers.search @@ websearch_to_tsquery('unaccented', ?)", query_string) }
 
