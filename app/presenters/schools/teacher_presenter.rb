@@ -28,7 +28,7 @@ module Schools
     end
 
     def email
-      attributes.dig(EMAIL_STEP, 'trs_email_address')
+      attributes.dig(EMAIL_STEP, 'email')
     end
 
     def national_insurance_number
