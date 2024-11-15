@@ -12,6 +12,10 @@ module Migrators
       ::Migration::TeacherProfile.where(id: ::Migration::ParticipantProfile.ect_or_mentor.select(:teacher_profile_id).distinct)
     end
 
+    def self.dependencies
+      %i[provider_partnership]
+    end
+
     def self.reset!
       if Rails.application.config.enable_migration_testing
         ::Teacher.connection.execute("TRUNCATE #{::Teacher.table_name} RESTART IDENTITY CASCADE")
@@ -28,7 +32,7 @@ module Migrators
       trn = teacher_profile.trn
       full_name = teacher_profile.user.full_name
 
-      teacher = Builders::Teacher.new(trn:, full_name:).process!
+      teacher = Builders::Teacher.new(trn:, full_name:, legacy_id: teacher_profile.user_id).process!
 
       teacher_profile
         .participant_profiles
@@ -44,9 +48,11 @@ module Migrators
           if participant_profile.ect?
             Builders::ECT::SchoolPeriods.new(teacher:, school_periods:).process!
             Builders::ECT::TrainingPeriods.new(teacher:, training_period_data:).process!
+            teacher.update!(legacy_ect_id: participant_profile.id)
           else
             Builders::Mentor::SchoolPeriods.new(teacher:, school_periods:).process!
             Builders::Mentor::TrainingPeriods.new(teacher:, training_period_data:).process!
+            teacher.update!(legacy_mentor_id: participant_profile.id)
           end
         end
     end
