@@ -26,6 +26,15 @@ describe Builders::Teacher do
       expect(teacher.last_name).to eq "Thompson"
     end
 
+    context "when a legacy_id is supplied" do
+      let(:legacy_id) { SecureRandom.uuid }
+
+      it "stores the legacy_id" do
+        teacher = described_class.new(trn:, full_name:, legacy_id:).process!
+        expect(teacher.legacy_id).to eq legacy_id
+      end
+    end
+
     context "when a teacher with the same TRN already exists" do
       before do
         FactoryBot.create(:teacher, trn:)
