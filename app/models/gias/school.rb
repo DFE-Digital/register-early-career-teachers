@@ -53,6 +53,9 @@ class GIAS::School < ApplicationRecord
             },
             uniqueness: true
 
+  # Scopes
+  scope :search, ->(q) { where("gias_schools.search @@ websearch_to_tsquery('unaccented', ?)", q) }
+
   # Instance Methods
   def closed?
     !open?

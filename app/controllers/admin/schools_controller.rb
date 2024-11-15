@@ -16,11 +16,11 @@ module Admin
   private
 
     def schools_params
-      params.permit(:q, :page)
+      params.permit(:page, :q, :urn)
     end
 
     def school_params
-      params.permit(:urn, :page)
+      params.permit(:page, :q, :urn)
     end
 
     def config_search
