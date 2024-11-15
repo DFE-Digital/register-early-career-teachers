@@ -30,7 +30,7 @@ module Schools
       end
     end
 
-    private
+  private
 
     def initialize_wizard
       @wizard = WIZARD_CLASS.new(

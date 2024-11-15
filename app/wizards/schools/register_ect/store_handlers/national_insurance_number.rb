@@ -1,3 +1,5 @@
+require 'debug'
+
 module Schools
   module RegisterECT
     module StoreHandlers
@@ -14,10 +16,10 @@ module Schools
           national_insurance_number = wizard.current_step.national_insurance_number
           trs_teacher = ::TRS::APIClient.new.find_teacher(trn:, national_insurance_number:)
 
-          store.store_attrs(:find_ect, trs_teacher)
+          store.store_attrs(:find_ect, trs_teacher.present)
         end
 
-        private
+      private
 
         attr_reader :wizard, :store
       end

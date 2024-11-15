@@ -13,7 +13,7 @@ module Schools
           store.store_attrs(key, step_params)
         end
 
-        private
+      private
 
         attr_reader :wizard, :store, :key
 

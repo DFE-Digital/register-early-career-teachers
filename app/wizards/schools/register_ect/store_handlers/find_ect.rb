@@ -13,10 +13,10 @@ module Schools
           store.store_attrs(:find_ect, { trn: })
 
           trs_teacher = ::TRS::APIClient.new.find_teacher(trn:, date_of_birth:)
-          store.store_attrs(:find_ect, trs_teacher)
+          store.store_attrs(:find_ect, trs_teacher.present)
         end
 
-        private
+      private
 
         attr_reader :wizard, :store
 
