@@ -12,6 +12,10 @@ module Migrators
       ::Migration::TeacherProfile.where(id: ::Migration::ParticipantProfile.ect_or_mentor.select(:teacher_profile_id).distinct)
     end
 
+    def self.dependencies
+      %i[provider_partnership]
+    end
+
     def self.reset!
       if Rails.application.config.enable_migration_testing
         ::Teacher.connection.execute("TRUNCATE #{::Teacher.table_name} RESTART IDENTITY CASCADE")
