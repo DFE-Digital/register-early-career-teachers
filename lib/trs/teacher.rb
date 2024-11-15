@@ -10,6 +10,7 @@ module TRS
       @last_name = data['lastName']
       @date_of_birth = data['dateOfBirth']
       @email_address = data['emailAddress']
+      @national_insurance_number = data['nationalInsuranceNumber']
 
       @alerts = data['alerts']
       @induction_start_date = data.dig('induction', 'startDate')
@@ -28,6 +29,7 @@ module TRS
       {
         trn: @trn,
         date_of_birth: @date_of_birth,
+        trs_national_insurance_number: @national_insurance_number,
         trs_first_name: @first_name,
         trs_last_name: @last_name,
         trs_email_address: @email_address,
