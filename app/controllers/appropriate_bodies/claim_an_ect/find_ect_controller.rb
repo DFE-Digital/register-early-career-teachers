@@ -33,6 +33,12 @@ module AppropriateBodies
       rescue TRS::Errors::ProhibitedFromTeaching
         @pending_induction_submission.save!
         redirect_to ab_claim_an_ect_errors_prohibited_path(@pending_induction_submission)
+      rescue TRS::Errors::Exempt
+        @pending_induction_submission.save!
+        redirect_to ab_claim_an_ect_errors_exempt_path(@pending_induction_submission)
+      rescue TRS::Errors::Completed
+        @pending_induction_submission.save!
+        redirect_to ab_claim_an_ect_errors_completed_path(@pending_induction_submission)
       rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB
         @pending_induction_submission.save!
         redirect_to ab_claim_an_ect_errors_another_ab_path(@pending_induction_submission)

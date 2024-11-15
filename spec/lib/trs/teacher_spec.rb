@@ -114,7 +114,7 @@ RSpec.describe TRS::Teacher do
     context "when the teacher is prohibited from teaching" do
       let(:data) do
         {
-          'qts' => { 'awarded' => '2024-09-18', 'certificateUrl' => 'qts_certificate_url', 'statusDescription' => 'qts_status' },
+          'qts' => { 'awarded' => '2024-09-18' },
           'alerts' => [
             {
               'alertType' => { 'alertCategory' => { 'alertCategoryId' => 'b2b19019-b165-47a3-8745-3297ff152581' } },
@@ -125,6 +125,33 @@ RSpec.describe TRS::Teacher do
 
       it "raises TRS::Errors::ProhibitedFromTeaching" do
         expect { subject.check_eligibility! }.to raise_error(TRS::Errors::ProhibitedFromTeaching)
+      end
+    end
+
+    context "when the teacher is exempt from induction" do
+      let(:data) do
+        {
+          'induction' => { 'status' => 'Exempt' },
+          'qts' => { 'awarded' => '2024-09-18' },
+        }
+      end
+      it "raises TRS::Errors::Exempt" do
+        expect { subject.check_eligibility! }.to raise_error(TRS::Errors::Exempt)
+      end
+    end
+
+    %w[Pass Fail PassedinWales FailedinWales].each do |status|
+      context "when the teacher has an induction status of #{status}" do
+        let(:data) do
+          {
+            'induction' => { 'status' => status },
+            'qts' => { 'awarded' => '2024-09-18' },
+          }
+        end
+
+        it "raises TRS::Errors::Completed" do
+          expect { subject.check_eligibility! }.to raise_error(TRS::Errors::Completed)
+        end
       end
     end
   end

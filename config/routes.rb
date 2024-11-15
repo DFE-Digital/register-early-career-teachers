@@ -62,10 +62,11 @@ Rails.application.routes.draw do
 
       namespace :errors do
         get 'induction-already-completed/:id', to: '/appropriate_bodies/claim_an_ect/errors#induction_already_completed', as: 'already_complete'
-        get 'exempt-from-completing-induction/:id', to: '/appropriate_bodies/claim_an_ect/errors#exempt_from_completing_induction', as: 'exempt'
         get 'induction-with-another-appropriate-body/:id', to: '/appropriate_bodies/claim_an_ect/errors#induction_with_another_appropriate_body', as: 'another_ab'
         get 'no-qts/:id', to: '/appropriate_bodies/claim_an_ect/errors#no_qts', as: 'no_qts'
         get 'prohibited-from-teaching/:id', to: '/appropriate_bodies/claim_an_ect/errors#prohibited_from_teaching', as: 'prohibited'
+        get 'exempt/:id', to: '/appropriate_bodies/claim_an_ect/errors#exempt', as: 'exempt'
+        get 'completed/:id', to: '/appropriate_bodies/claim_an_ect/errors#completed', as: 'completed'
       end
     end
   end
