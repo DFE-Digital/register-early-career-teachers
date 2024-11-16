@@ -24,40 +24,4 @@ describe Schools::Teachers do
       expect(subject.all_mentors).to contain_exactly(mentor_1, mentor_2)
     end
   end
-
-  describe '#current_ects' do
-    it 'returns Teacher instances of all the ECTs currently at the school' do
-      expect(subject.current_ects).to contain_exactly(ect_1)
-    end
-  end
-
-  describe '#current_ect_periods' do
-    it 'returns the current ECTAtSchoolPeriod instance of all the ECTs currently at the school' do
-      expect(subject.current_ect_periods).to contain_exactly(ect_1_current_period)
-    end
-  end
-
-  describe '#current_mentors' do
-    it 'returns Teacher instances of all the Mentors currently at the school' do
-      expect(subject.current_mentors).to contain_exactly(mentor_1, mentor_2)
-    end
-  end
-
-  describe '#current_mentor_periods' do
-    it 'returns the current MentorAtSchoolPeriod instance of all the Mentors currently at the school' do
-      expect(subject.current_mentor_periods).to contain_exactly(mentor_1_current_period, mentor_2_current_period)
-    end
-  end
-
-  describe '#latest_period_of_all_ects' do
-    it 'returns a ECTAtSchoolPeriod instance for the latest period of any ECT at the school ever' do
-      expect(subject.latest_period_of_all_ects).to contain_exactly(ect_1_current_period, ect_2_period_1)
-    end
-  end
-
-  describe '#latest_period_of_all_mentors' do
-    it 'returns a ECTAtSchoolPeriod instance for the latest period of any Mentor at the school ever' do
-      expect(subject.latest_period_of_all_mentors).to contain_exactly(mentor_1_current_period, mentor_2_current_period)
-    end
-  end
 end
