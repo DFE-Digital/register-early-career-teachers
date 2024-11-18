@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_15_110325) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_18_124145) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -139,7 +139,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_15_110325) do
 
   create_table "induction_extensions", force: :cascade do |t|
     t.bigint "teacher_id", null: false
-    t.decimal "number_of_terms", precision: 2, scale: 1, null: false
+    t.decimal "number_of_terms", precision: 3, scale: 1, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["teacher_id"], name: "index_induction_extensions_on_teacher_id"
