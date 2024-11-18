@@ -93,15 +93,13 @@ variable "postgres_flexible_server_sku" {
   default = "B_Standard_B1ms"
 }
 
-variable "postgres_snapshot_flexible_server_sku" {
-  default = "B_Standard_B2ms"
-}
-
 variable "postgres_enable_high_availability" {
   type    = bool
   default = false
 }
+
 variable "enable_logit" { default = false }
+
 locals {
   postgres_ssl_mode = var.enable_postgres_ssl ? "require" : "disable"
 
