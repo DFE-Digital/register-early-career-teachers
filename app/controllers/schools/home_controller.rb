@@ -3,6 +3,7 @@ module Schools
     layout "full"
 
     def index
+      throw new Error("Something blew up")
 
       ab = AppropriateBody.find(999999999)
       teacher_service = Schools::Teacher.new(school[:id])
