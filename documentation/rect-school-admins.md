@@ -1,0 +1,67 @@
+---
+title: School admins in Register early career teachers
+---
+
+This document  covers the service rules for school admins in Register early career teachers (ECTs).
+
+These are the rules we have determined so far for the new service. We'll continue to add to this over time.
+
+School admins are also known as:
+
+* school users
+* school induction tutors (SITs)
+* school induction coordinators
+
+## Getting access to the service
+
+For a school admin to get access to the service, they will need to use [DfE Sign in](https://services.signin.education.gov.uk/).
+
+DfE Sign-in is how schools and other education organisations access DfE online services. We've decided to use it for Register ECTs because:
+- schools use it for other services, and were getting confused in ECF1
+- in research, most school users had an understanding of DfE Sign in
+- access to the service historically worked through using info from Get information about schools, but many schools weren't aware of this
+- it still makes sure the person accessing the service actually works for the school by going through an approval process
+
+You can read more about why we chose to do this in [our design history](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/exploring-using-dfe-sign-in/).
+
+To get access to the service, a school will need to request for approval. This is checked and actioned by whoever at their school has approval permissions. Once this is done, they will be able to sign into the service and view the records for their school.
+
+## Accessing the service
+
+We will not limit the number of users per school. This means multiple people can get access, unlike in ECF1.
+
+You can read more about [why we made this decision in our design history](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/allowing-multiple-school-accounts/). 
+
+## Registering an ECT
+
+### Finding an ECT's record in the Teaching Record System
+
+To find an ECT's teacher record, we need to check the Teaching Record System (TRS) API. The ECT needs a TRN and a teacher record to be eligible for training.
+
+To do this, we ask for the ECT's TRN and date of birth. 
+
+We should always ask for two fields of personal information before registering an ECT's record. This is because we need to make sure the person registering the ECT actually knows that ECT. If we just ask for TRN, they could be entering a random number.
+
+If we can't find a matching TRN that exists, we tell the user the ECT's teacher record cannot be found.
+
+If we can't find the ECT's record in the Teaching Record System API, but the TRN does exist, we ask for that ECT's national insurance number instead. We do this because potentially the date of birth stored on the teacher's record in the TRS is incorrect, or the one the school holds might be. It makes it more likely for the user to find the ECT's teacher record and confirm they know them.
+
+If we still cannot confirm the user knows both the TRN and either national insurance number or date of birth, we tell them the record cannot be found.
+
+Neither date of birth or national insurance number should be stored longer-term. It is just used for the initial finding and checking of an ECT's record in the TRS. You can read more [about our reasoning for this here](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/no-longer-storing-date-of-birth/).
+
+### Confirming or correcting an ECT's name
+
+
+### Checking the ECT is eligible for training
+
+When we check the TRS for the existence of the ECT's record, we also need to make sure:
+- the ECT has not completed induction already
+- the ECT is not exempt from induction
+
+We also check if an ECT has QTS, but they can be registered without it.
+
+### Confirming or correcting an ECT's name
+
+
+
