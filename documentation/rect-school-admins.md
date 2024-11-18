@@ -2,7 +2,12 @@
 title: School admins in Register early career teachers
 ---
 
-This document  covers the service rules for school admins in Register early career teachers (ECTs).
+This document covers the service rules for school admins in Register early career teachers (ECTs).
+
+In the service, we ask schools for information about ECTs and their mentors so DfE can:
+- make sure they're trained, so they improve as a teacher or a mentor
+- send funding to schools to give them time off timetable for training or mentoring
+- publish statistics on how early career teaching programmes are performing
 
 These are the rules we have determined so far for the new service. We'll continue to add to this over time.
 
