@@ -61,7 +61,7 @@ module TRS
       true
     end
 
-    private
+  private
 
     def induction_status_completed?
       %w[
