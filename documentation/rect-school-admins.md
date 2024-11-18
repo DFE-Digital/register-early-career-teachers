@@ -52,17 +52,63 @@ Neither date of birth or national insurance number should be stored longer-term.
 
 ### Checking the ECT is eligible to be registered for training
 
-When an ECT is registered for training, we should check if their record already exists in CPD. ADD MORE DETAIL HERE CLAIRE
+When an ECT is registered for training, we should check if their record already exists in CPD.
+
+If the ECT being registered already exists as a mentor, we should not let them progress with registration. This is because a mentor undergoing ECT training is highly unlikely and it's probably a mistake.
+
+If the ECT being registered already exists as an 'in progress' or 'completed' ECT at their school, we should not let them progress with registration. This is because the ECT record already exists and we do not want duplicates. If the ECT has 'left' their school, we should still let them progress with registration, as the ECT may have returned.
 
 At this stage, when we check the TRS for the existence of the ECT's record, we also need to make sure:
 - the ECT has not completed induction already
 - the ECT is not exempt from induction
 
-Whilst an ECT needs qualified teaching status in order to be eligible for funding for training, we do allow them to be registered in advance without it.
+Whilst an ECT needs qualified teaching status in order to be eligible for funding for training, we do allow them to be registered in advance without it. 
 
 This is because we know schools might want to register an ECT before they actually start working in a school. This might mean that ECT doesn't always have QTS before they are registered for training.
 
+### Transferring in an early career teacher
+
+We still need to define what happens here more clearly.
+
+For now, we know when an ECT is registered by a new school to the school they're already registered with, and that ECT is 'in progress', we should start the transfers journey.
+
 ### Confirming or correcting an ECT's name
 
+Once we've decided the ECT is eligible to be registered for training, we play back the name from the TRA's Teaching Record System to the user. This is so we can show them it's linked to their teacher record and that they must be intending to register that person.
+
+We give users the option to either:
+- confirm the name is correct and continue
+- correct the name and continue
+
+We did this because:
+- we know the name held in the TRS is often out of date
+- we want lead providers to have correct contact details for ECTs
+- we don't want to block schools from registering someone because the name of the ECT may have been updated
+
+If the name is corrected, we will continue to show the corrected name in the service from this point. We will continue to store the name from the TRS, so we can monitor if this feature is being used correctly, and it's not being overwritten with names that are completely different.
+
+You can read more about why we chose to change how an ECT's name is gathered [in the design history entry here](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/correcting-names/).
+
+### Giving an ECT's email address
+
+The school user is asked for that ECT's email address.
+
+We tell them they can update the email at a later point. This is because we know sometimes school users register ECTs in advance, when their school email address might not be ready yet.
+
+We check the email address given and make sure it doesn't exist for an ECT record with a different TRN. This is because we shouldn't have email addresses that are the same for entirely different people. 
+
+### Giving the school start date for an ECT
+
+The school user is asked for the date when the ECT will start or started as an early career teacher.
+
+We ask this question so we can get a better understanding of when the ECT is starting before we have the induction start date.
+
+The school start date is important because:
+- it changes what appropriate body the ECT can be supported by
+- it changes what lead provider and delivery partner combination the ECT can be trained by
+- it informs lead providers of when the training should start for the ECT
+- it alters what funding the ECT might be eligible for
+
+You can read more about why we chose to add this question [in the design history entry here](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/ects-start-date/).
 
 
