@@ -50,16 +50,15 @@ If we still cannot confirm the user knows both the TRN and either national insur
 
 Neither date of birth or national insurance number should be stored longer-term. It is just used for the initial finding and checking of an ECT's record in the TRS. You can read more [about our reasoning for this here](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/no-longer-storing-date-of-birth/).
 
-### Confirming or correcting an ECT's name
+### Checking the ECT is eligible to be registered for training
 
-
-### Checking the ECT is eligible for training
-
-When we check the TRS for the existence of the ECT's record, we also need to make sure:
+At this stage, when we check the TRS for the existence of the ECT's record, we also need to make sure:
 - the ECT has not completed induction already
 - the ECT is not exempt from induction
 
-We also check if an ECT has QTS, but they can be registered without it.
+Whilst an ECT needs qualified teaching status in order to be eligible for funding for training, we do allow them to be registered in advance without it.
+
+This is because we know schools might want to register an ECT before they actually start working in a school. This might mean that ECT doesn't always have QTS before they are registered for training.
 
 ### Confirming or correcting an ECT's name
 
