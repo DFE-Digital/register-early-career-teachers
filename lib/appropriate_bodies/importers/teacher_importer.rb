@@ -15,7 +15,13 @@ module AppropriateBodies::Importers
 
           next if row.values_at('trn', 'first_name', 'last_name').any?(&:blank?)
 
-          Teacher.create!(**(build(row)))
+          Teacher.create!(**(build(row))).tap do |teacher|
+            if (induction_extension_terms = convert_extension(row)) && induction_extension_terms.positive?
+              Rails.logger.warn("Importing extension: #{induction_extension_terms}")
+              teacher.induction_extensions.create!(number_of_terms: induction_extension_terms)
+            end
+          end
+
           count += 1
         end
       end
@@ -30,7 +36,6 @@ module AppropriateBodies::Importers
         trn: row['trn'],
         first_name: row['first_name'].strip,
         last_name: row['last_name'].strip,
-        induction_extension_terms: convert_extension(row)
       }
     end
 
