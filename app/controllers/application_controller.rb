@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
 
 private
 
-  def current_user
-    @current_user ||= session_manager.load_from_session
+  def ab_home_path
+    ab_path if session[:appropriate_body_id].present?
+  end
+
+  def admin_home_path
+    admin_path if current_user&.dfe?
   end
 
   def authenticate
@@ -23,11 +27,15 @@ private
     current_user.present?
   end
 
-  def session_manager
-    @session_manager ||= Sessions::SessionManager.new(session)
+  def current_user
+    @current_user ||= session_manager.load_from_session
   end
 
   def login_redirect_path
-    session_manager.requested_path || root_path
+    session_manager.requested_path || admin_home_path || ab_home_path || root_path
+  end
+
+  def session_manager
+    @session_manager ||= Sessions::SessionManager.new(session)
   end
 end

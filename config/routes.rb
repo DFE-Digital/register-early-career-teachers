@@ -44,6 +44,9 @@ Rails.application.routes.draw do
     resources :appropriate_bodies, only: %i[index], path: 'appropriate-bodies' do
     end
 
+    resources :schools, only: %i[index show], param: :urn do
+    end
+
     resources :teachers, only: %i[index show] do
     end
   end

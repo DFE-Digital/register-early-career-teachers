@@ -1,0 +1,169 @@
+<% page_data(title: @school.name, backlink_href: admin_schools_path(page: @page, q: @q)) %>
+
+<%=
+  govuk_summary_list do |sl|
+    sl.with_row do |row|
+      row.with_key(text: "Name")
+      row.with_value(text: @school.name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "URN")
+      row.with_value(text: @school.urn)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Type Name")
+      row.with_value(text: @school.type_name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Status")
+      row.with_value(text: @school.status)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Opened On")
+      row.with_value(text: @school.opened_on)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Closed On")
+      row.with_value(text: @school.closed_on)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Address Line 1")
+      row.with_value(text: @school.address_line1)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Address Line 2")
+      row.with_value(text: @school.address_line2)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Address Line 3")
+      row.with_value(text: @school.address_line3)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Postcode")
+      row.with_value(text: @school.postcode)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Primary Contact Email")
+      row.with_value(text: @school.primary_contact_email)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Secondary Contact Email")
+      row.with_value(text: @school.secondary_contact_email)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Administrative District Name")
+      row.with_value(text: @school.administrative_district_name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Administrative District Name")
+      row.with_value(text: @school.administrative_district_name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Establishment Number")
+      row.with_value(text: @school.establishment_number)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Local Authority Code")
+      row.with_value(text: @school.local_authority_code)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Local Authority Name")
+      row.with_value(text: @school.local_authority_name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Phase Name")
+      row.with_value(text: @school.phase_name)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Funding Eligibility")
+      row.with_value(text: @school.funding_eligibility)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Induction Eligibility")
+      row.with_value(text: @school.induction_eligibility)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "In England")
+      row.with_value(text: @school.in_england)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Section 41 Approved")
+      row.with_value(text: @school.section_41_approved)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "UKPRN")
+      row.with_value(text: @school.ukprn)
+    end
+
+    sl.with_row do |row|
+      row.with_key(text: "Website")
+      row.with_value(text: @school.website)
+    end
+  end
+%>
+
+<h2 class="govuk-heading-m">Early Career Teachers</h2>
+
+<%= govuk_table do |table|
+  table.with_head do |head|
+    head.with_row do |row|
+      row.with_cell(text: "Name")
+      row.with_cell(text: "TRN")
+    end
+  end
+
+  table.with_body do |body|
+    @participants.all_ects.each do |teacher|
+      body.with_row do |row|
+        row.with_cell do
+          govuk_link_to Teachers::Name.new(teacher).full_name, admin_teacher_path(teacher)
+        end
+        row.with_cell(text: teacher.trn)
+      end
+    end
+  end
+end %>
+
+<h2 class="govuk-heading-m">Mentors</h2>
+
+<%= govuk_table do |table|
+  table.with_head do |head|
+    head.with_row do |row|
+      row.with_cell(text: "Name")
+      row.with_cell(text: "TRN")
+    end
+  end
+
+  table.with_body do |body|
+    @participants.all_mentors.each do |teacher|
+      body.with_row do |row|
+        row.with_cell do
+          govuk_link_to Teachers::Name.new(teacher).full_name, admin_teacher_path(teacher)
+        end
+        row.with_cell(text: teacher.trn)
+      end
+    end
+  end
+end %>
