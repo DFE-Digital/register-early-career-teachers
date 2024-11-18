@@ -1,3 +1,5 @@
+require "ostruct"
+
 module Builders
   module ECT
     class TrainingPeriods
@@ -16,7 +18,7 @@ module Builders
                                                              delivery_partner: ::DeliveryPartner.find_by!(name: period.delivery_partner),
                                                              academic_year_id: period.cohort_year).first
 
-          period_dates = OpenStruct.new(started_on: period.start_date, finished_on: period.end_date)
+          period_dates = ::OpenStruct.new(started_on: period.start_date, finished_on: period.end_date)
           ect_at_school_period = teacher.ect_at_school_periods.containing_period(period_dates).first
 
           ::TrainingPeriod.create!(provider_partnership:,
