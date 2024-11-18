@@ -130,7 +130,6 @@
   table.with_head do |head|
     head.with_row do |row|
       row.with_cell(text: "Name")
-      row.with_cell(text: "Corrected Name")
       row.with_cell(text: "TRN")
     end
   end
@@ -139,9 +138,8 @@
     @participants.all_ects.each do |teacher|
       body.with_row do |row|
         row.with_cell do
-          govuk_link_to "#{teacher.first_name} #{teacher.last_name}", admin_teacher_path(teacher)
+          govuk_link_to Teachers::Name.new(teacher).full_name, admin_teacher_path(teacher)
         end
-        row.with_cell(text: teacher.corrected_name)
         row.with_cell(text: teacher.trn)
       end
     end
@@ -154,7 +152,6 @@ end %>
   table.with_head do |head|
     head.with_row do |row|
       row.with_cell(text: "Name")
-      row.with_cell(text: "Corrected Name")
       row.with_cell(text: "TRN")
     end
   end
@@ -163,9 +160,8 @@ end %>
     @participants.all_mentors.each do |teacher|
       body.with_row do |row|
         row.with_cell do
-          govuk_link_to "#{teacher.first_name} #{teacher.last_name}", admin_teacher_path(teacher)
+          govuk_link_to Teachers::Name.new(teacher).full_name, admin_teacher_path(teacher)
         end
-        row.with_cell(text: teacher.corrected_name)
         row.with_cell(text: teacher.trn)
       end
     end
