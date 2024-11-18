@@ -3,6 +3,8 @@ module Schools
     layout "full"
 
     def index
+
+      ab = AppropriateBody.find(999999999)
       teacher_service = Schools::Teacher.new(school[:id])
       @school_name = school[:name]
       @relationships = teacher_service.fetch_etcs_and_mentors
