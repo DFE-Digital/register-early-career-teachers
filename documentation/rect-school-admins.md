@@ -52,6 +52,8 @@ Neither date of birth or national insurance number should be stored longer-term.
 
 ### Checking the ECT is eligible to be registered for training
 
+When an ECT is registered for training, we should check if their record already exists in CPD. ADD MORE DETAIL HERE CLAIRE
+
 At this stage, when we check the TRS for the existence of the ECT's record, we also need to make sure:
 - the ECT has not completed induction already
 - the ECT is not exempt from induction
