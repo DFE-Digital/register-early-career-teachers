@@ -87,25 +87,28 @@ Rails.application.routes.draw do
 
   namespace :schools do
     get "/home/ects", to: "home#index", as: :ects_home
-    get "/what-you-will-need", to: "register_ect#start", as: :register_ect_start
 
-    get "/find-ect", to: "register_ect#new", as: :register_ect_find_ect
-    post "/find-ect", to: "register_ect#create"
+    namespace :register_ect, path: "register-ect" do
+      get "what-you-will-need", as: :start, action: :start
 
-    get "/national-insurance-number", to: "register_ect#new", as: :register_ect_national_insurance_number
-    post "/national-insurance-number", to: "register_ect#create"
+      get "find-ect", action: :new
+      post "find-ect", action: :create
 
-    get "/not-found", to: "register_ect#new", as: :register_ect_not_found
+      get "national-insurance-number", action: :new
+      post "national-insurance-number", action: :create
 
-    get "/review-ect-details", to: "register_ect#new", as: :register_ect_review_ect_details
-    post "/review-ect-details", to: "register_ect#create"
+      get "not-found", action: :new
 
-    get "/email-address", to: "register_ect#new", as: :register_ect_email_address
-    post "/email-address", to: "register_ect#create"
+      get "review-ect-details", action: :new
+      post "review-ect-details", action: :create
 
-    get "/check-answers", to: "register_ect#new", as: :register_ect_check_answers
-    post "/check-answers", to: "register_ect#create"
+      get "email-address", action: :new
+      post "email-address", action: :create
 
-    get "/confirmation", to: "register_ect#new", as: :register_ect_confirmation
+      get "check-answers", action: :new
+      post "check-answers", action: :create
+
+      get "confirmation", action: :new
+    end
   end
 end
