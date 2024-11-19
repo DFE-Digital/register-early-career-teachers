@@ -59,4 +59,5 @@ group :nanoc do
   gem "asciidoctor"
   gem "nanoc"
   gem "nanoc-live"
+  gem "webrick"
 end
