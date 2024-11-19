@@ -22,10 +22,11 @@ School admins are also known as:
 For a school admin to get access to the service, they will need to use [DfE Sign in](https://services.signin.education.gov.uk/).
 
 DfE Sign-in is how schools and other education organisations access DfE online services. We've decided to use it for Register ECTs because:
-- schools use it for other services, and were getting confused in ECF1
-- in research, most school users had an understanding of DfE Sign in
-- access to the service historically worked through using info from Get information about schools, but many schools weren't aware of this
-- it still makes sure the person accessing the service actually works for the school by going through an approval process
+
+* schools use it for other services, and were getting confused in ECF1
+* in research, most school users had an understanding of DfE Sign in
+* access to the service historically worked through using info from Get information about schools, but many schools weren't aware of this
+* it still makes sure the person accessing the service actually works for the school by going through an approval process
 
 You can read more about why we chose to do this in [our design history](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/exploring-using-dfe-sign-in/).
 
@@ -66,8 +67,9 @@ If the ECT being registered already exists as a mentor, we should not let them p
 If the ECT being registered already exists as an 'in progress' or 'completed' ECT at their school, we should not let them progress with registration. This is because the ECT record already exists and we do not want duplicates. If the ECT has 'left' their school, we should still let them progress with registration, as the ECT may have returned.
 
 At this stage, when we check the TRS for the existence of the ECT's record, we also need to make sure:
-- the ECT has not completed induction already
-- the ECT is not exempt from induction
+
+* the ECT has not completed induction already
+* the ECT is not exempt from induction
 
 Whilst an ECT needs qualified teaching status in order to be eligible for funding for training, we do allow them to be registered in advance without it. 
 
@@ -84,13 +86,15 @@ For now, we know when an ECT is registered by a new school to the school they're
 Once we've decided the ECT can be added to the service, we play back the name from the TRA's Teaching Record System to the user. This is so we can show them it's linked to their teacher record and that they must be intending to register that person.
 
 We give users the option to either:
-- confirm the name is correct and continue
-- correct the name and continue
+
+* confirm the name is correct and continue
+* correct the name and continue
 
 We did this because:
-- we know the name held in the TRS is often out of date
-- we want lead providers to have correct contact details for ECTs
-- we don't want to block schools from registering someone because the name of the ECT may have been updated
+
+* we know the name held in the TRS is often out of date
+* we want lead providers to have correct contact details for ECTs
+* we don't want to block schools from registering someone because the name of the ECT may have been updated
 
 If the name is corrected, we will continue to show the corrected name in the service from this point. We will continue to store the name from the TRS, so we can monitor if this feature is being used correctly, and it's not being overwritten with names that are completely different.
 
@@ -111,10 +115,11 @@ The school user is asked for the date when the ECT will start or started as an e
 We ask this question so we can get a better understanding of when the ECT is starting before we have the induction start date.
 
 The school start date is important because:
-- it changes what appropriate body the ECT can be supported by
-- it changes what lead provider and delivery partner combination the ECT can be trained by
-- it informs lead providers of when the training should start for the ECT
-- it alters what funding the ECT might be eligible for
+
+* it changes what appropriate body the ECT can be supported by
+* it changes what lead provider and delivery partner combination the ECT can be trained by
+* it informs lead providers of when the training should start for the ECT
+* it alters what funding the ECT might be eligible for
 
 You can read more about why we chose to add this question [in the design history entry here](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/ects-start-date/).
 
