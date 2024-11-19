@@ -29,7 +29,13 @@ module Migrators
     end
 
     def migrate_mentorships!(teacher:)
-    end
+      participant_profile = Migration::ParticipantProfile.find(teacher.legacy_ect_id)
+      irs = InductionRecordSanitizer.new(participant_profile:)
+      irs.validate!
 
+      mentorship_periods = MentorshipPeriodExtractor.new(induction_records:)
+
+      Builders::MentorshipPeriod.new(teacher:, mentorship_periods:).process!
+    end
   end
 end
