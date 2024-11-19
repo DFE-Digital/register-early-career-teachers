@@ -125,6 +125,7 @@ GEM
     cri (2.15.12)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
+    csv (3.3.0)
     date (3.3.4)
     ddmetrics (1.1.0)
     ddplugin (1.0.3)
@@ -567,6 +568,7 @@ DEPENDENCIES
   brakeman
   capybara
   cssbundling-rails
+  csv
   debug
   dfe-wizard!
   factory_bot_rails

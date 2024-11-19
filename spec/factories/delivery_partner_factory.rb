@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory(:delivery_partner) do
-    name { "#{Faker::Lorem.word.capitalize} DP (#{rand(100..999)})" }
+    sequence(:name) { |n| "Delivery Partner #{n}" }
   end
 end
