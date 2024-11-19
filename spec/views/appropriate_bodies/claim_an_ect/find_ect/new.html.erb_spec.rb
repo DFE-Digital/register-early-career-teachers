@@ -15,7 +15,7 @@ RSpec.describe "appropriate_bodies/claim_an_ect/find_ect/new.html.erb" do
 
     render
 
-    expect(view.content_for(:backlink_or_breadcrumb)).to have_link('Back', href: '/appropriate-body')
+    expect(view.content_for(:backlink_or_breadcrumb)).to have_link('Back', href: '/appropriate-body/teachers')
   end
 
   it "prefixes the page with 'Error:' when the pending induction submission isn't valid" do

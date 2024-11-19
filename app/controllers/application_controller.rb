@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 private
 
   def ab_home_path
-    ab_path if session[:appropriate_body_id].present?
+    ab_teachers_path if session[:appropriate_body_id].present?
   end
 
   def admin_home_path
