@@ -28,37 +28,37 @@
       sl.with_row do |r|
         r.with_key(text: "Email address")
         r.with_value(text: @pending_induction_submission.trs_email_address)
-      end
+      end if @pending_induction_submission.trs_email_address.present?
 
       sl.with_row do |r|
         r.with_key(text: "QTS awarded")
         r.with_value(text: @pending_induction_submission.trs_qts_awarded.to_fs(:govuk))
-      end
+      end if @pending_induction_submission.trs_qts_awarded.present?
 
       sl.with_row do |r|
         r.with_key(text: "QTS status description")
         r.with_value(text: @pending_induction_submission.trs_qts_status_description)
-      end
+      end if @pending_induction_submission.trs_qts_status_description.present?
 
       sl.with_row do |r|
         r.with_key(text: "Induction start date")
         r.with_value(text: @pending_induction_submission.trs_induction_start_date&.to_fs(:govuk))
-      end
+      end if @pending_induction_submission.trs_induction_start_date.present?
 
       sl.with_row do |r|
         r.with_key(text: "Induction status")
         r.with_value(text: @pending_induction_submission.trs_induction_status)
-      end
+      end if @pending_induction_submission.trs_induction_status.present?
 
       sl.with_row do |r|
         r.with_key(text: "Initial teacher training provider")
         r.with_value(text: @pending_induction_submission.trs_initial_teacher_training_provider_name)
-      end
+      end if @pending_induction_submission.trs_initial_teacher_training_provider_name.present?
 
       sl.with_row do |r|
         r.with_key(text: "Initial teacher training end date")
         r.with_value(text: @pending_induction_submission.trs_initial_teacher_training_end_date&.to_fs(:govuk))
-      end
+      end if @pending_induction_submission.trs_initial_teacher_training_end_date.present?
 
       sl.with_row do |r|
         r.with_key(text: "Has alerts")
@@ -77,6 +77,8 @@
         label: { text: "I have checked the information above and it looks accurate" }
     %>
   <% end %>
+
+  <p>If the information above does not look accurate please check ECT details. If problems persist contact support.</p>
 
   <div class="govuk-button-group">
     <%= f.govuk_submit %>
