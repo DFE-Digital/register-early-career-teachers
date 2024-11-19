@@ -96,6 +96,7 @@ RSpec.describe TRS::Teacher do
         trs_initial_teacher_training_provider_name: "Provider Name",
         trs_qts_awarded: '2024-09-18',
         trs_qts_status_description: 'qts_status',
+        trs_national_insurance_number: "AB123456C",
       }
 
       expect(subject.present).to eq(expected_hash)

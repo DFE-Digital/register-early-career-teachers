@@ -12,8 +12,8 @@ module Schools
     end
 
     def full_name
-      first_name = attributes.dig(FIND_ECT_STEP, 'first_name')
-      last_name = attributes.dig(FIND_ECT_STEP, 'last_name')
+      first_name = attributes.dig(FIND_ECT_STEP, 'trs_first_name')
+      last_name = attributes.dig(FIND_ECT_STEP, 'trs_last_name')
 
       "#{first_name} #{last_name}".strip
     end
@@ -29,6 +29,10 @@ module Schools
 
     def email
       attributes.dig(EMAIL_STEP, 'email')
+    end
+
+    def national_insurance_number
+      attributes.dig(FIND_ECT_STEP, 'trs_national_insurance_number')
     end
   end
 end

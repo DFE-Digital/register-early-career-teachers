@@ -22,6 +22,12 @@ module Schools
       else
         render current_step
       end
+    rescue TRS::Errors::TeacherNotFound
+      if current_step == :find_ect
+        redirect_to schools_register_ect_national_insurance_number_path
+      else
+        redirect_to schools_register_ect_not_found_path
+      end
     end
 
   private

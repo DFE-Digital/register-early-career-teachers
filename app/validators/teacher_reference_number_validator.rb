@@ -4,8 +4,7 @@ class TeacherReferenceNumberValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     teacher_ref_number = Schools::Validation::TeacherReferenceNumber.new(value)
     unless teacher_ref_number.valid?
-      message_scope = "errors.teacher_reference_number"
-      record.errors.add(attribute, I18n.t(teacher_ref_number.format_error, scope: message_scope))
+      record.errors.add(attribute, teacher_ref_number.format_error)
     end
   end
 end

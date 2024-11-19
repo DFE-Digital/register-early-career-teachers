@@ -2,14 +2,13 @@
 
 module Schools
   module RegisterECT
-    class FindECTStep < StoredStep
+    class NationalInsuranceNumberStep < StoredStep
       attr_accessor :trn, :date_of_birth, :national_insurance_number
 
-      validates :trn, teacher_reference_number: true
-      validates :date_of_birth, date_of_birth: true
+      validates :national_insurance_number, national_insurance_number: true
 
       def self.permitted_params
-        %i[trn date_of_birth]
+        %i[national_insurance_number]
       end
 
       def next_step
