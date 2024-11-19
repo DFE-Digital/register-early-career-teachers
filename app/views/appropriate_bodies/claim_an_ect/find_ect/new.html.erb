@@ -1,4 +1,8 @@
-<% page_data(title: "Find an early career teacher's record", error: @pending_induction_submission.errors.present?) %>
+<% page_data(
+  title: "Find an early career teacher's record",
+  error: @pending_induction_submission.errors.present?,
+  backlink_href: ab_path)
+%>
 
 <div class="govuk-body">
   Find your ECT by entering their teacher reference number (TRN) and date of birth. If you can't find them, <%= govuk_link_to("contact support", support_path)%>.

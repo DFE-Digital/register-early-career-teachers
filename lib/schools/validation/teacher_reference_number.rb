@@ -24,14 +24,14 @@ module Schools
     private
 
       def extract_trn_value
-        @format_error = :blank and return if trn.blank?
+        @format_error = "Enter the teacher reference number (TRN)" and return if trn.blank?
 
         # remove any characters that are not digits
         only_digits = trn.to_s.gsub(/[^\d]/, "")
 
-        @format_error = :invalid and return if only_digits.blank?
-        @format_error = :too_short and return if only_digits.length < MIN_UNPADDED_TRN_LENGTH
-        @format_error = :too_long and return if only_digits.length > PADDED_TRN_LENGTH
+        @format_error = "Teacher reference number must include at least 5 digits" and return if only_digits.blank?
+        @format_error = "Teacher reference number must include at least 5 digits" and return if only_digits.length < MIN_UNPADDED_TRN_LENGTH
+        @format_error = "Teacher reference number cannot include more than 7 digits" and return if only_digits.length > PADDED_TRN_LENGTH
 
         only_digits.rjust(PADDED_TRN_LENGTH, "0")
       end

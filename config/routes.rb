@@ -44,6 +44,9 @@ Rails.application.routes.draw do
     resources :appropriate_bodies, only: %i[index], path: 'appropriate-bodies' do
     end
 
+    resources :schools, only: %i[index show], param: :urn do
+    end
+
     resources :teachers, only: %i[index show] do
     end
   end
@@ -62,10 +65,11 @@ Rails.application.routes.draw do
 
       namespace :errors do
         get 'induction-already-completed/:id', to: '/appropriate_bodies/claim_an_ect/errors#induction_already_completed', as: 'already_complete'
-        get 'exempt-from-completing-induction/:id', to: '/appropriate_bodies/claim_an_ect/errors#exempt_from_completing_induction', as: 'exempt'
         get 'induction-with-another-appropriate-body/:id', to: '/appropriate_bodies/claim_an_ect/errors#induction_with_another_appropriate_body', as: 'another_ab'
         get 'no-qts/:id', to: '/appropriate_bodies/claim_an_ect/errors#no_qts', as: 'no_qts'
         get 'prohibited-from-teaching/:id', to: '/appropriate_bodies/claim_an_ect/errors#prohibited_from_teaching', as: 'prohibited'
+        get 'exempt/:id', to: '/appropriate_bodies/claim_an_ect/errors#exempt', as: 'exempt'
+        get 'completed/:id', to: '/appropriate_bodies/claim_an_ect/errors#completed', as: 'completed'
       end
     end
   end
@@ -87,6 +91,11 @@ Rails.application.routes.draw do
 
     get "/find-ect", to: "register_ect#new", as: :register_ect_find_ect
     post "/find-ect", to: "register_ect#create"
+
+    get "/national-insurance-number", to: "register_ect#new", as: :register_ect_national_insurance_number
+    post "/national-insurance-number", to: "register_ect#create"
+
+    get "/not-found", to: "register_ect#new", as: :register_ect_not_found
 
     get "/review-ect-details", to: "register_ect#new", as: :register_ect_review_ect_details
     post "/review-ect-details", to: "register_ect#create"

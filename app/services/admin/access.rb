@@ -7,7 +7,7 @@ module Admin
     end
 
     def can_access?
-      user.dfe_roles.any?
+      user&.dfe?
     end
   end
 end

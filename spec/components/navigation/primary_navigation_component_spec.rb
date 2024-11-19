@@ -2,9 +2,9 @@ require "rails_helper"
 
 RSpec.describe Navigation::PrimaryNavigationComponent, type: :component do
   describe "a nested navigation structure with two levels" do
-    let(:is_authenticated) { true }
+    let(:current_user) { FactoryBot.build(:user) }
 
-    subject { described_class.new(current_path:, is_authenticated:) }
+    subject { described_class.new(current_path:, current_user:) }
 
     def validate_navigation_options(options)
       options.each do |option|
@@ -27,7 +27,7 @@ RSpec.describe Navigation::PrimaryNavigationComponent, type: :component do
       end
 
       context "when not authenticated" do
-        let(:is_authenticated) { false }
+        let(:current_user) { nil }
 
         it "does not render the sign out option" do
           render_inline(subject)
@@ -54,13 +54,34 @@ RSpec.describe Navigation::PrimaryNavigationComponent, type: :component do
       end
 
       context "when not authenticated" do
-        let(:is_authenticated) { false }
+        let(:current_user) { nil }
 
         it "does not render the sign out option" do
           render_inline(subject)
 
           expect(rendered_content).not_to have_css("a.govuk-service-navigation__link", text: "Sign out")
         end
+      end
+    end
+
+    context "when a dfe user is signed in" do
+      let(:current_user) { FactoryBot.create(:user) }
+      let(:current_path) { "/admin" }
+      let(:expected_dfe_nav_options) do
+        [
+          { text: "Schools", href: '/admin/schools' },
+          { text: "Sign out", href: "/sign-out" }
+        ]
+      end
+
+      before do
+        current_user.dfe_roles.create!
+      end
+
+      it "renders dfe admin options" do
+        render_inline(subject)
+
+        validate_navigation_options(expected_dfe_nav_options)
       end
     end
 
@@ -77,7 +98,7 @@ RSpec.describe Navigation::PrimaryNavigationComponent, type: :component do
       end
 
       context "when not authenticated" do
-        let(:is_authenticated) { false }
+        let(:current_user) { nil }
 
         it "does not render the sign out option" do
           render_inline(subject)

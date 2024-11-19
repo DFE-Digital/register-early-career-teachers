@@ -33,11 +33,17 @@ module AppropriateBodies
       rescue TRS::Errors::ProhibitedFromTeaching
         @pending_induction_submission.save!
         redirect_to ab_claim_an_ect_errors_prohibited_path(@pending_induction_submission)
+      rescue TRS::Errors::Exempt
+        @pending_induction_submission.save!
+        redirect_to ab_claim_an_ect_errors_exempt_path(@pending_induction_submission)
+      rescue TRS::Errors::Completed
+        @pending_induction_submission.save!
+        redirect_to ab_claim_an_ect_errors_completed_path(@pending_induction_submission)
       rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB
         @pending_induction_submission.save!
         redirect_to ab_claim_an_ect_errors_another_ab_path(@pending_induction_submission)
-      rescue TRS::Errors::TeacherNotFound => e
-        @pending_induction_submission.errors.add(:trn, e.message)
+      rescue TRS::Errors::TeacherNotFound
+        @pending_induction_submission.errors.add(:base, "No teacher with this TRN and date of birth was found")
 
         render(:new)
       rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithCurrentAB => e

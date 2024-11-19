@@ -1,0 +1,7 @@
+---
+title: You cannot claim <%= PendingInductionSubmissions::Name.new(@pending_induction_submission).full_name %>
+---
+
+Our records show <%= PendingInductionSubmissions::Name.new(@pending_induction_submission).full_name %> is exempt from having to serve induction so you cannot claim their induction.
+
+Claim another teacher's [induction](<%= new_ab_claim_an_ect_find_path %>)

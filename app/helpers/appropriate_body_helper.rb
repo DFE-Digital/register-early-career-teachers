@@ -47,4 +47,8 @@ module AppropriateBodyHelper
       )
     end
   end
+
+  def pending_induction_submission_full_name(pending_induction_submission)
+    PendingInductionSubmissions::Name.new(pending_induction_submission).full_name
+  end
 end

@@ -7,9 +7,10 @@ describe Schools::TeacherPresenter, type: :presenter do
     {
       "find_ect" => {
         "trn" => "3002586",
-        "first_name" => "Dusty",
-        "last_name" => "Rhodes",
-        "date_of_birth" => "1945-10-11"
+        "trs_first_name" => "Dusty",
+        "trs_last_name" => "Rhodes",
+        "date_of_birth" => "1945-10-11",
+        "trs_national_insurance_number" => "OWAD23455",
       },
       "email_address" => { "email" => "dusty@rhodes.com" }
     }
@@ -32,6 +33,12 @@ describe Schools::TeacherPresenter, type: :presenter do
   describe '#trn' do
     it 'returns the trn' do
       expect(presenter.trn).to eq("3002586")
+    end
+  end
+
+  describe '#national_insurance_number' do
+    it 'returns the national insurance number' do
+      expect(presenter.national_insurance_number).to eq("OWAD23455")
     end
   end
 

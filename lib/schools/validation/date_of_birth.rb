@@ -22,10 +22,10 @@ module Schools
       attr_reader :date_of_birth_as_hash
 
       def validate
-        return @format_error = :blank if date_missing?
-        return @format_error = :invalid if invalid_date?
-        return @format_error = :too_old if date_of_birth_too_old?
-        return @format_error = :too_young if date_of_birth_too_young?
+        return @format_error = "Enter a date of birth" if date_missing?
+        return @format_error = "Enter the date of birth in the correct format, for example 12 03 1998" if invalid_date?
+        return @format_error = "The teacher cannot be more than 100 years old" if date_of_birth_too_old?
+        return @format_error = "The teacher cannot be less than 18 years old" if date_of_birth_too_young?
 
         true
       end

@@ -10,8 +10,8 @@ module Schools
     def fetch_etcs_and_mentors
       ects_and_mentors.map do |ect|
         {
-          ect: Teachers::Name.new(ect.teacher).full_name,
-          mentor: Teachers::Name.new(ect.mentors.last&.teacher).full_name,
+          ect: ::Teachers::Name.new(ect.teacher).full_name,
+          mentor: ::Teachers::Name.new(ect.mentors.last&.teacher).full_name,
           status: ect_status(ect.teacher.id)
         }
       end
@@ -23,13 +23,17 @@ module Schools
 
     def ects_and_mentors
       ECTAtSchoolPeriod
-        .where(school: School.first)
+        .where(school:)
         .eager_load(:teacher, mentors: :teacher)
         .merge(MentorshipPeriod.ongoing)
     end
 
     def ect_status(ect_id)
       ect_id.present? ? IN_PROGRESS : UNKNOWN
+    end
+
+    def school
+      @school ||= School.find_by(id: school_id) || School.first
     end
   end
 end

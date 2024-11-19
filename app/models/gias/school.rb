@@ -1,5 +1,6 @@
 class GIAS::School < ApplicationRecord
   self.table_name = "gias_schools"
+  self.ignored_columns = %i[search]
 
   # Enums
   enum :funding_eligibility,
@@ -51,6 +52,9 @@ class GIAS::School < ApplicationRecord
               only_integer: true,
             },
             uniqueness: true
+
+  # Scopes
+  scope :search, ->(q) { where("gias_schools.search @@ websearch_to_tsquery('unaccented', ?)", q) }
 
   # Instance Methods
   def closed?

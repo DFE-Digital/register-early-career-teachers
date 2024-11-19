@@ -3,7 +3,7 @@
 module Schools
   module RegisterECT
     class FindECTStep < StoredStep
-      attr_accessor :trn, :date_of_birth
+      attr_accessor :trn, :date_of_birth, :national_insurance_number
 
       validates :trn, teacher_reference_number: true
       validates :date_of_birth, date_of_birth: true
