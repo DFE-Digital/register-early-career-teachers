@@ -5,9 +5,10 @@ title: School admins in Register early career teachers
 This document covers how the new Register early career teachers service will work for school admins.
 
 In the service, we ask schools for information about ECTs and their mentors so DfE can:
-- make sure they're trained, so they improve as a teacher or a mentor
-- send funding to schools to give them time off timetable for training or mentoring
-- publish statistics on how early career teaching programmes are performing
+
+* make sure they're trained, so they improve as a teacher or a mentor
+* send funding to schools to give them time off timetable for training or mentoring
+* publish statistics on how early career teaching programmes are performing
 
 These are the rules of how the service will work that we have determined so far. We'll continue to add to this over time.
 
