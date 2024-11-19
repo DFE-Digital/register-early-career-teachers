@@ -1,7 +1,8 @@
 <% page_data(
-  title: "Check details for #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name}",
-  header: "Check #{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name}'s details",
-  error: @pending_induction_submission.errors.present?)
+  title: "Check details for #{pending_induction_submission_full_name(@pending_induction_submission)}",
+  header: "Check #{pending_induction_submission_full_name(@pending_induction_submission)}'s details",
+  error: @pending_induction_submission.errors.present?,
+  backlink_href: new_ab_claim_an_ect_find_path)
 %>
 
 <%= form_with(model: @pending_induction_submission, url: ab_claim_an_ect_check_path(@pending_induction_submission, method: 'patch')) do |f| %>
@@ -79,6 +80,6 @@
 
   <div class="govuk-button-group">
     <%= f.govuk_submit %>
-    <%= govuk_button_link_to("Start again", "#", secondary: true) %>
+    <%= govuk_button_link_to("Start again", new_ab_claim_an_ect_find_path, secondary: true) %>
   </div>
 <% end %>

@@ -36,8 +36,8 @@ module AppropriateBodies
       rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithAnotherAB
         @pending_induction_submission.save!
         redirect_to ab_claim_an_ect_errors_another_ab_path(@pending_induction_submission)
-      rescue TRS::Errors::TeacherNotFound => e
-        @pending_induction_submission.errors.add(:trn, e.message)
+      rescue TRS::Errors::TeacherNotFound
+        @pending_induction_submission.errors.add(:base, "No teacher with this TRN and date of birth was found")
 
         render(:new)
       rescue AppropriateBodies::Errors::TeacherHasActiveInductionPeriodWithCurrentAB => e

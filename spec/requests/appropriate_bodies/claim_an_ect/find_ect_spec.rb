@@ -160,7 +160,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
 
           expect(response).to be_ok
           expect(response.body).to include(page_heading)
-          expect(response.body).to include(/TRN #{search_params.fetch(:trn)} not found/)
+          expect(response.body).to include(/No teacher with this TRN and date of birth was found/)
         end
       end
 

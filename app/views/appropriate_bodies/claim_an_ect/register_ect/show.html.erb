@@ -1,5 +1,5 @@
 <% page_data(
-  title: "#{@pending_induction_submission.trs_first_name} #{@pending_induction_submission.trs_last_name} is registered",
+  title: "#{pending_induction_submission_full_name(@pending_induction_submission)} is registered",
   header: false)
 %>
 
@@ -9,6 +9,6 @@
 %>
 
 <div class="govuk-button-group">
-  <%= govuk_button_link_to("Register another ECT", "#", secondary: true) %>
-  <%= govuk_button_link_to("Return to the homepage", "#", secondary: true) %>
+  <%= govuk_button_link_to("Register another ECT", new_ab_claim_an_ect_find_path, secondary: true) %>
+  <%= govuk_button_link_to("Return to the homepage", ab_path, secondary: true) %>
 </div>
