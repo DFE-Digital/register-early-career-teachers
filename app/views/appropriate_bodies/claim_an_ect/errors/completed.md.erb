@@ -1,0 +1,7 @@
+---
+title: You cannot claim <%= PendingInductionSubmissions::Name.new(@pending_induction_submission).full_name %>
+---
+
+Our records show <%= PendingInductionSubmissions::Name.new(@pending_induction_submission).full_name %> has already completed their induction.
+
+Claim another teacher's [induction](<%= new_ab_claim_an_ect_find_path %>)

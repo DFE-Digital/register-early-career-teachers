@@ -100,6 +100,34 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
         end
       end
 
+      context "when the submission is valid but ECT is exempt" do
+        include_context 'fake trs api client that finds teacher with invalid induction status', 'Exempt'
+
+        it 'redirects to exempt error page' do
+          post(
+            '/appropriate-body/claim-an-ect/find-ect',
+            params: { pending_induction_submission: search_params }
+          )
+
+          expect(response.redirect_url).to match(%r{/appropriate-body/claim-an-ect/errors/exempt/\d+\z})
+        end
+      end
+
+      %w[Pass Fail PassedinWales FailedinWales].each do |status|
+        context "when the submission is valid but ECT is #{status}" do
+          include_context 'fake trs api client that finds teacher with invalid induction status', status
+
+          it 'redirects to completed error page' do
+            post(
+              '/appropriate-body/claim-an-ect/find-ect',
+              params: { pending_induction_submission: search_params }
+            )
+
+            expect(response.redirect_url).to match(%r{/appropriate-body/claim-an-ect/errors/completed/\d+\z})
+          end
+        end
+      end
+
       context "when the submission is valid but ECT has an active induction period with another AB" do
         let(:teacher) { FactoryBot.create(:teacher, trn:) }
         let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, trn: teacher.trn) }

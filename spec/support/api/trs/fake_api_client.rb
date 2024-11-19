@@ -1,9 +1,10 @@
 module TRS
   class FakeAPIClient
-    def initialize(raise_not_found: false, include_qts: true, prohibited_from_teaching: false)
+    def initialize(raise_not_found: false, include_qts: true, prohibited_from_teaching: false, induction_status: nil)
       @raise_not_found = raise_not_found
       @include_qts = include_qts
       @prohibited_from_teaching = prohibited_from_teaching
+      @induction_status = induction_status
     end
 
     def find_teacher(trn:, date_of_birth: nil, national_insurance_number: nil)
@@ -15,6 +16,7 @@ module TRS
         teacher_params(trn:, date_of_birth:, national_insurance_number:)
           .merge(qts)
           .merge(prohibited_from_teaching)
+          .merge(induction_status)
       )
     end
 
@@ -47,6 +49,14 @@ module TRS
 
       {
         'alerts' => [{ 'alertType' => { 'alertCategory' => { 'alertCategoryId' => 'b2b19019-b165-47a3-8745-3297ff152581' } } }],
+      }
+    end
+
+    def induction_status
+      return {} unless @induction_status
+
+      {
+        'induction' => { 'status' => @induction_status },
       }
     end
   end
