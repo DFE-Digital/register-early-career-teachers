@@ -33,13 +33,15 @@ To get access to the service, a school will need to request for approval. This i
 
 ## Accessing the service
 
-We will not limit the number of users per school. This means multiple people can get access, unlike in ECF1.
+We will not limit the number of users per school. This means multiple people can get access, unlike in ECF1. Schools will manage the users who can access the service for their school themselves via DfE Sign In.
 
 You can read more about [why we made this decision in our design history](https://teacher-cpd.design-history.education.gov.uk/ecf-v2/allowing-multiple-school-accounts/). 
 
 ## Registering an ECT
 
 ### Finding an ECT's record in the Teaching Record System
+
+When a school registers an ECT, we need to find the ECT's TRS record so that we can check they are a real person and so that we can determine their eligibility for training. 
 
 To find an ECT's teacher record, we need to check the Teaching Record System (TRS) API. The ECT needs a TRN and a teacher record to be eligible for training.
 
@@ -79,7 +81,7 @@ For now, we know when an ECT is registered by a new school to the school they're
 
 ### Confirming or correcting an ECT's name
 
-Once we've decided the ECT is eligible to be registered for training, we play back the name from the TRA's Teaching Record System to the user. This is so we can show them it's linked to their teacher record and that they must be intending to register that person.
+Once we've decided the ECT can be added to the service, we play back the name from the TRA's Teaching Record System to the user. This is so we can show them it's linked to their teacher record and that they must be intending to register that person.
 
 We give users the option to either:
 - confirm the name is correct and continue
