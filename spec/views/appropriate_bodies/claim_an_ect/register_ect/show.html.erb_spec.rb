@@ -15,7 +15,7 @@ RSpec.describe "appropriate_bodies/claim_an_ect/register_ect/show.html.erb" do
 
     render
 
-    expect(rendered).to have_link('Return to the homepage', href: '/appropriate-body')
+    expect(rendered).to have_link('Return to the homepage', href: '/appropriate-body/teachers')
     expect(rendered).to have_link('Register another ECT', href: '/appropriate-body/claim-an-ect/find-ect/new')
   end
 end
