@@ -35,7 +35,7 @@ module Migrators
 
       mentorship_periods = MentorshipPeriodExtractor.new(induction_records:)
 
-      Builders::MentorshipPeriod.new(teacher:, mentorship_periods:).process!
+      Builders::MentorshipPeriods.new(teacher:, mentorship_periods:).process!
     end
   end
 end
