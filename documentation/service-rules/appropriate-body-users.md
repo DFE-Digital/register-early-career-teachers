@@ -2,7 +2,9 @@
 title: Appropriate bodies
 ---
 
-Appropriate bodies [assure the quality of statutory teacher induction](https://www.gov.uk/government/publications/statutory-teacher-induction-appropriate-bodies/find-an-appropriate-body#role-of-appropriate-bodies). They assure that:
+Appropriate bodies [assure the quality of statutory teacher induction](https://www.gov.uk/government/publications/statutory-teacher-induction-appropriate-bodies/find-an-appropriate-body#role-of-appropriate-bodies).
+
+They assure that:
 
 * relevant people know of their responsibilities for monitoring support and assessment during teacher induction, and are capable of meeting them
 * monitoring, support, assessment and guidance procedures in place are fair and appropriate
@@ -22,26 +24,29 @@ The users, accounts, credentials and links to organisations are managed by DfE S
 
 ### How signing-in works
 
-1. a user visits the service and when they try to access a restricted page (i.e., by clicking the 'Start now' button) they are redirected to the DfE Sign-in login page.
+1. a user visits the service and when they try to access a restricted page (i.e., by clicking the 'Start now' button) they are redirected to the DfE Sign-in login page
 2. they enter their username and password and are then redirected back to the application with an [ID token param](https://jwt.io/) on the URL
-3. we decode this token and it contains information on who the person is and which organsiation they're associated with, which looks something like:
-   ```json
-   {
-     "sub": "aaaaaaaa-aaaa-aaaa-1111-111111111111",
-     "organisation": {
-       "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
-       "name": "Some appropriate body"
-     },
-     "given_name": "Clarissa",
-     "family_name": "Darling",
-     "email": "clarissa@nickelodeon.com"
-   }
-   ```
+3. we decode this token and it contains information on who the person is and which organsiation they're associated with, which looks something like the example below
 4. we check our list of appropriate bodies for an `dfe_sign_in_organisation_id` that matches the `organisation->id`
 5. we then call the [DfE Sign-in API](https://github.com/DFE-Digital/login.dfe.public-api?tab=readme-ov-file#get-roles-for-service) to ensure that the person has the role:
     * name: `Register ECTs`
     * code: `registerECTsAccess`
 6. if they do, we've confirmed they are belong to the appropriate body and have the right access level, create a user session and redirect them to the appropriate body home page
+
+Example user info returned by DfE Sign-in:
+
+```json
+{
+  "sub": "aaaaaaaa-aaaa-aaaa-1111-111111111111",
+  "organisation": {
+    "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+    "name": "Some appropriate body"
+  },
+  "given_name": "Clarissa",
+  "family_name": "Darling",
+  "email": "clarissa@nickelodeon.com"
+}
+```
 
 #### When users aren't linked to an organisation
 #### When users are linked to an organisation but don't have the right role
