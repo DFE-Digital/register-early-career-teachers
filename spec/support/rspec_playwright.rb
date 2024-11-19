@@ -2,6 +2,7 @@ require 'capybara'
 require 'playwright'
 
 module RSpecPlaywright
+  DEFAULT_TIMEOUT = 3_000
   PLAYWRIGHT_CLI_EXECUTABLE_PATH = "./node_modules/.bin/playwright".freeze
 
   # rubocop:disable Rails/SaveBang
@@ -22,7 +23,9 @@ module RSpecPlaywright
                         .chromium
                         .launch(headless:)
 
-    browser.new_page(baseURL: Capybara.current_session.server.base_url, javaScriptEnabled: javascript_enabled)
+    browser.new_page(baseURL: Capybara.current_session.server.base_url, javaScriptEnabled: javascript_enabled).tap do |page|
+      page.set_default_timeout(DEFAULT_TIMEOUT)
+    end
   end
   # rubocop:enable Rails/SaveBang
 
