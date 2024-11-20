@@ -1,0 +1,8 @@
+<% page_data(title: "Success") %>
+
+<%= govuk_panel(
+  title_text: "Success",
+  text: "You have recorded a passing outcome for #{Teachers::Name.new(@teacher).full_name}"
+) %>
+
+<%= govuk_button_link_to("Return to the homepage", ab_teachers_path, secondary: true) %>

@@ -1,4 +1,4 @@
-RSpec.describe "Recording an ECT's outcome" do
+RSpec.describe "Recording a passed outcome for an ECT" do
   let(:page) { RSpec.configuration.playwright_page }
   let(:teacher) { FactoryBot.create(:teacher) }
   let(:trn) { teacher.trn }
@@ -7,9 +7,9 @@ RSpec.describe "Recording an ECT's outcome" do
 
   before do
     sign_in_as_appropriate_body_user
-    allow_any_instance_of(AppropriateBodies::RecordOutcome).to receive(:record_outcome!).and_call_original
+    allow_any_instance_of(AppropriateBodies::RecordOutcome).to receive(:pass!).and_call_original
 
-    @fake_record_outcome = instance_double(AppropriateBodies::RecordOutcome, record_outcome!: true)
+    @fake_record_outcome = instance_double(AppropriateBodies::RecordOutcome, pass!: true)
     allow(AppropriateBodies::RecordOutcome).to receive(:new).and_return(@fake_record_outcome)
   end
 
@@ -17,13 +17,12 @@ RSpec.describe "Recording an ECT's outcome" do
 
   scenario 'Happy path' do
     given_i_am_on_the_ect_page(trn)
-    when_i_click_link('Record induction outcome')
+    when_i_click_link('Record passed outcome')
     then_i_should_be_on_the_record_outcome_page(trn)
 
     when_i_enter_the_finish_date
     and_i_enter_a_terms_value_of(number_of_completed_terms)
-    and_i_record_the_outcome_as('Passed')
-    and_i_click_continue
+    and_i_click_submit
 
     then_i_should_be_on_the_success_page
     and_the_pending_induction_submission_record_should_have_the_right_data_in_it
@@ -43,31 +42,29 @@ private
   end
 
   def then_i_should_be_on_the_record_outcome_page(trn)
-    expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/record-outcome/new")
+    expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/record-passed-outcome/new")
   end
 
   def when_i_enter_the_finish_date
-    page.get_by_label('Day').fill(today.day.to_s)
-    page.get_by_label('Month').fill(today.month.to_s)
-    page.get_by_label('Year').fill(today.year.to_s)
+    page.get_by_label('Day', exact: true).fill(today.day.to_s)
+    page.get_by_label('Month', exact: true).fill(today.month.to_s)
+    page.get_by_label('Year', exact: true).fill(today.year.to_s)
   end
 
   def and_i_enter_a_terms_value_of(number)
-    label = /How many terms/
+    teacher_name = Teachers::Name.new(teacher).full_name
+    label = "How many terms of induction did #{teacher_name} spend with you?"
 
     page.get_by_label(label).fill(number.to_s)
   end
 
-  def and_i_record_the_outcome_as(outcome)
-    page.get_by_role('radio', name: outcome).click
-  end
-
-  def and_i_click_continue
-    page.get_by_role('button', name: 'Continue').click
+  def and_i_click_submit
+    teacher_name = Teachers::Name.new(teacher).full_name
+    page.get_by_role('button', name: "Record passing outcome for #{teacher_name}").click
   end
 
   def then_i_should_be_on_the_success_page
-    expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/record-outcome")
+    expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/record-passed-outcome")
     expect(page.locator('.govuk-panel')).to be_present
   end
 
@@ -76,9 +73,10 @@ private
 
     expect(pending_induction_submission.number_of_terms).to eql(number_of_completed_terms)
     expect(pending_induction_submission.finished_on).to eql(today)
+    expect(pending_induction_submission.outcome).to eql('pass')
   end
 
   def and_the_record_outcome_service_should_have_been_called
-    expect(@fake_record_outcome).to have_received(:record_outcome!).once
+    expect(@fake_record_outcome).to have_received(:pass!).once
   end
 end

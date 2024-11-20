@@ -55,7 +55,8 @@ Rails.application.routes.draw do
   namespace :appropriate_bodies, path: 'appropriate-body', as: 'ab' do
     resources :teachers, only: %i[show index], controller: 'teachers', param: 'trn' do
       resource :release_ect, only: %i[new create show], path: 'release', controller: 'teachers/release_ect'
-      resource :record_outcome, only: %i[new create show], path: 'record-outcome', controller: 'teachers/record_outcome'
+      resource :record_passed_outcome, only: %i[new create show], path: 'record-passed-outcome', controller: 'teachers/record_passed_outcome'
+      resource :record_failed_outcome, only: %i[new create show], path: 'record-failed-outcome', controller: 'teachers/record_failed_outcome'
     end
 
     namespace :claim_an_ect, path: 'claim-an-ect' do
