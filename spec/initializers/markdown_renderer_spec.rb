@@ -14,12 +14,7 @@ RSpec.describe MarkdownRenderer do
       allow(erb_handler).to receive(:call).with(template, source).and_return('"processed markdown"')
 
       rendered = MarkdownRenderer.call(template, source)
-      expect(rendered).to eq(
-        <<~RUBY
-          page_data_from_front_matter(begin; nil; end)
-          MarkdownRenderer.render(begin; "processed markdown"; end)
-        RUBY
-      )
+      expect(rendered).to eq(%{MarkdownRenderer.render(begin; "processed markdown"; end)})
     end
 
     it "processes ERB in both frontmatter and content" do
@@ -44,6 +39,9 @@ RSpec.describe MarkdownRenderer do
       expect(rendered).to eq(
         <<~RUBY
           page_data_from_front_matter(begin; "processed frontmatter"; end)
+
+          @output_buffer = ActionView::OutputBuffer.new;
+
           MarkdownRenderer.render(begin; "processed content"; end)
         RUBY
       )
@@ -69,6 +67,9 @@ RSpec.describe MarkdownRenderer do
       expect(rendered).to eq(
         <<~RUBY
           page_data_from_front_matter(begin; "processed invalid frontmatter"; end)
+
+          @output_buffer = ActionView::OutputBuffer.new;
+
           MarkdownRenderer.render(begin; "processed content"; end)
         RUBY
       )
@@ -81,12 +82,7 @@ RSpec.describe MarkdownRenderer do
         .and_return('"processed content with variables"')
 
       rendered = MarkdownRenderer.call(template, source)
-      expect(rendered).to eq(
-        <<~RUBY
-          page_data_from_front_matter(begin; nil; end)
-          MarkdownRenderer.render(begin; "processed content with variables"; end)
-        RUBY
-      )
+      expect(rendered).to eq(%{MarkdownRenderer.render(begin; "processed content with variables"; end)})
     end
   end
 end
