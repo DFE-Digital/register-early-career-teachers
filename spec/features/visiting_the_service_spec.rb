@@ -38,6 +38,6 @@ private
 
   def then_i_see_the_school_landing_page
     expect(current_path).to eql('/')
-    expect(page.title).to include('Home')
+    expect(page.title).to include('Register early career teachers')
   end
 end
