@@ -39,6 +39,9 @@ production: production-cluster
 	$(if $(or ${SKIP_CONFIRM}, ${CONFIRM_PRODUCTION}), , $(error Missing CONFIRM_PRODUCTION=yes))
 	$(eval include config/global_config/production.sh)
 
+domains:
+	$(eval include config/global_config/domains.sh)
+
 composed-variables:
 	$(eval RESOURCE_GROUP_NAME=${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-rg)
 	$(eval KEYVAULT_NAMES='("${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-app-kv", "${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-inf-kv")')
@@ -135,3 +138,31 @@ action-group-resources: set-azure-account # make env_aks action-group-resources 
 	echo ${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-mn-rg
 	az group create -l uksouth -g ${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-mn-rg --tags "Product=Early Careers Framework" "Environment=Test" "Service Offering=Teacher services cloud"
 	az monitor action-group create -n ${AZURE_RESOURCE_PREFIX}-ecf2 -g ${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-mn-rg --short-name ${AZURE_RESOURCE_PREFIX}-ecf2 --action email ${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-email ${ACTION_GROUP_EMAIL}
+
+domains-infra-init: bin/terrafile domains composed-variables set-azure-account
+	./bin/terrafile -p config/terraform/domains/infrastructure/vendor/modules -f config/terraform/domains/infrastructure/config/zones_Terrafile
+
+	terraform -chdir=config/terraform/domains/infrastructure init -reconfigure -upgrade \
+		-backend-config=resource_group_name=${RESOURCE_GROUP_NAME} \
+		-backend-config=storage_account_name=${STORAGE_ACCOUNT_NAME} \
+		-backend-config=key=domains_infrastructure.tfstate
+
+domains-infra-plan: domains domains-infra-init  ## Terraform plan for DNS infrastructure (DNS zone and front door). Usage: make domains-infra-plan
+	terraform -chdir=config/terraform/domains/infrastructure plan -var-file config/zones.tfvars.json
+
+domains-infra-apply: domains domains-infra-init  ## Terraform apply for DNS infrastructure (DNS zone and front door). Usage: make domains-infra-apply
+	terraform -chdir=config/terraform/domains/infrastructure apply -var-file config/zones.tfvars.json ${AUTO_APPROVE}
+
+domains-init: bin/terrafile domains composed-variables set-azure-account
+	./bin/terrafile -p config/terraform/domains/environment_domains/vendor/modules -f config/terraform/domains/environment_domains/config/${CONFIG}_Terrafile
+
+	terraform -chdir=config/terraform/domains/environment_domains init -upgrade -reconfigure \
+		-backend-config=resource_group_name=${RESOURCE_GROUP_NAME} \
+		-backend-config=storage_account_name=${STORAGE_ACCOUNT_NAME} \
+		-backend-config=key=${ENVIRONMENT}.tfstate
+
+domains-plan: domains-init  ## Terraform plan for DNS environment domains. Usage: make development domains-plan
+	terraform -chdir=config/terraform/domains/environment_domains plan -var-file config/${CONFIG}.tfvars.json
+
+domains-apply: domains-init ## Terraform apply for DNS environment domains. Usage: make development domains-apply
+	terraform -chdir=config/terraform/domains/environment_domains apply -var-file config/${CONFIG}.tfvars.json ${AUTO_APPROVE}
