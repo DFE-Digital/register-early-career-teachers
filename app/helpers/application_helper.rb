@@ -30,4 +30,10 @@ module ApplicationHelper
 
     page_data(**parsed_yaml)
   end
+
+  def support_mailto_link
+    address = 'continuing-professional-development@digital.education.gov.uk'
+
+    govuk_link_to(address, 'mailto:' + address)
+  end
 end
