@@ -1,4 +1,6 @@
 RSpec.describe ApplicationHelper, type: :helper do
+  include GovukVisuallyHiddenHelper
+  include GovukLinkHelper
   describe "#page_data" do
     it "sets the title to the provided value" do
       expect(page_data(title: "Some title").fetch(:page_title)).to eq('Some title')
@@ -54,6 +56,15 @@ RSpec.describe ApplicationHelper, type: :helper do
 
         expect(self).not_to have_received(:page_data)
       end
+    end
+  end
+
+  describe '#support_mailto_link' do
+    it 'returns a govuk styled link to the CPD support email address' do
+      expect(support_mailto_link).to have_css(
+        %(a[href='mailto:continuing-professional-development@digital.education.gov.uk'][class='govuk-link']),
+        text: 'continuing-professional-development@digital.education.gov.uk'
+      )
     end
   end
 end
