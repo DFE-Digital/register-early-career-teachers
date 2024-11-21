@@ -5,14 +5,15 @@ require 'rails_helper'
 describe Schools::TeacherPresenter, type: :presenter do
   let(:attributes) do
     {
-      "find_ect" => {
+      "trn" => "3002586",
+      "trs_teacher" => {
         "trn" => "3002586",
         "trs_first_name" => "Dusty",
         "trs_last_name" => "Rhodes",
         "date_of_birth" => "1945-10-11",
         "trs_national_insurance_number" => "OWAD23455",
       },
-      "email_address" => { "email" => "dusty@rhodes.com" }
+      "email" => "dusty@rhodes.com",
     }
   end
 

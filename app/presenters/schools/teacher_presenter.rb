@@ -21,11 +21,11 @@ module Schools
     end
 
     def trn
-      attributes.dig('trn')
+      attributes['trn']
     end
 
     def email
-      attributes.dig('email')
+      attributes['email']
     end
 
     def national_insurance_number

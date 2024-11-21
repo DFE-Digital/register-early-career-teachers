@@ -8,7 +8,8 @@ module Schools
       delegate :valid_step?, to: :wizard
       delegate :destroy_session, to: :store
 
-      def next_step; end
+      def next_step
+      end
 
       def save!
         return false unless valid_step?
