@@ -2,28 +2,27 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <%= govuk_button_link_to("Claim an ECT", new_ab_claim_an_ect_find_path, secondary: true) %>
+    <%= govuk_button_link_to("Claim an ECT", new_ab_claim_an_ect_find_path) %>
+    <hr class="govuk-section-break--l">
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Your ECTs</></h2>
-    <div class="search-box">
-      <%= form_with method: :get, class: "search-box__form" do |f| %>
-        <div class="search-box__input">
-          <%= f.govuk_text_field(
-                "q",
-                value: params[:q],
-                label: { text: "Search for an ECT", size: "s" },
-                hint: { text: "placeholder" },
-              )
-          %>
-        </div>
+    <%= form_with method: :get do |f| %>
+      <%= f.govuk_text_field(
+            "q",
+            value: params[:q],
+            label: { text: "Search your ECTs", size: "s" },
+            hint: { text: "Search by name or TRN" },
+          )
+      %>
 
-        <%= f.govuk_submit "Search" %>
-      <% end %>
-    </div>
+      <div class="govuk-button-group">
+        <%= f.govuk_submit("Search") %>
+        <button type="reset" class="govuk-button govuk-button--secondary">Reset</button>
+      </div>
+    <% end %>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
