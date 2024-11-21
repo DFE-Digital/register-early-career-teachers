@@ -40,13 +40,13 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def and_i_am_on_the_start_page
-    path = '/schools/what-you-will-need'
+    path = '/schools/register-ect/what-you-will-need'
     page.goto path
     expect(page.url).to end_with(path)
   end
 
   def i_should_be_taken_to_the_find_ect_page
-    path = '/schools/find-ect'
+    path = '/schools/register-ect/find-ect'
     expect(page.url).to end_with(path)
   end
 
@@ -74,7 +74,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def then_i_should_be_taken_to_the_review_ect_details_page
-    path = '/schools/review-ect-details'
+    path = '/schools/register-ect/review-ect-details'
     expect(page.url).to end_with(path)
   end
 
@@ -85,7 +85,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def then_i_should_be_taken_to_the_email_address_page
-    path = '/schools/email-address'
+    path = '/schools/register-ect/email-address'
     expect(page.url).to end_with(path)
   end
 
@@ -94,7 +94,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def then_i_should_be_taken_to_the_check_answers_page
-    path = '/schools/check-answers'
+    path = '/schools/register-ect/check-answers'
     expect(page.url).to end_with(path)
   end
 
@@ -106,7 +106,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def then_i_should_be_taken_to_the_confirmation_page
-    path = '/schools/confirmation'
+    path = '/schools/register-ect/confirmation'
     expect(page.url).to end_with(path)
   end
 

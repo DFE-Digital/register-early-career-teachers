@@ -17,7 +17,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def given_i_am_on_the_find_ect_step_page
-    path = '/schools/find-ect'
+    path = '/schools/register-ect/find-ect'
     page.goto path
     expect(page.url).to end_with(path)
   end
@@ -31,7 +31,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def then_i_should_be_taken_to_the_national_insurance_number_step
-    path = '/schools/national-insurance-number'
+    path = '/schools/register-ect/national-insurance-number'
     page.goto path
     expect(page.url).to end_with(path)
   end
@@ -43,7 +43,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def then_i_should_be_taken_to_the_teacher_not_found_error_page
-    path = '/schools/not-found'
+    path = '/schools/register-ect/not-found'
     expect(page.url).to end_with(path)
   end
 end
