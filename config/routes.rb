@@ -88,22 +88,27 @@ Rails.application.routes.draw do
   namespace :schools do
     get "/home/ects", to: "home#index", as: :ects_home
 
-    resource :register_ect, path: "register-ect", only: %i[] do
-      collection do
-        get "what-you-will-need", action: :start, as: :start
-        get "find-ect", action: :new
-        post "find-ect", action: :create
-        get "national-insurance-number", action: :new
-        post "national-insurance-number", action: :create
-        get "not-found", action: :new
-        get "review-ect-details", action: :new
-        post "review-ect-details", action: :create
-        get "email-address", action: :new
-        post "email-address", action: :create
-        get "check-answers", action: :new
-        post "check-answers", action: :create
-        get "confirmation", action: :new
-      end
+    namespace :register_ect, path: "register-ect" do
+      get "what-you-will-need", as: :start, action: :start
+
+      get "find-ect", action: :new
+      post "find-ect", action: :create
+
+      get "national-insurance-number", action: :new
+      post "national-insurance-number", action: :create
+
+      get "not-found", action: :new
+
+      get "review-ect-details", action: :new
+      post "review-ect-details", action: :create
+
+      get "email-address", action: :new
+      post "email-address", action: :create
+
+      get "check-answers", action: :new
+      post "check-answers", action: :create
+
+      get "confirmation", action: :new
     end
   end
 end
