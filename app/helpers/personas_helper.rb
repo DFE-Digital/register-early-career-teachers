@@ -19,10 +19,14 @@ module PersonasHelper
 
   def persona_image(name, height: '150px')
     case
-    when name.start_with?('Velma') then image_tag('personas/velma.png', height:)
-    when name.start_with?('Fred') then image_tag('personas/fred.png', height:)
-    when name.start_with?('Daphne') then image_tag('personas/daphne.png', height:)
-    when name.start_with?('Norville') then image_tag('personas/shaggy.png', height:)
+    when name.start_with?('Velma')
+      image_tag('personas/velma.png', height:, alt: 'Velma from Scooby Doo wearing an orange turtleneck jumper.')
+    when name.start_with?('Fred')
+      image_tag('personas/fred.png', height:, alt: 'Fred from Scooby Doo. He is shrugging and wearing a white top with a red cravat.')
+    when name.start_with?('Daphne')
+      image_tag('personas/daphne.png', height:, alt: 'Daphne from Scooby Doo looking quizical in a purple dress.')
+    when name.start_with?('Norville')
+      image_tag('personas/shaggy.png', height:, alt: 'Shaggy from Scooby Doo, wearing a green shirt looking directly forwards.')
     end
   end
 
