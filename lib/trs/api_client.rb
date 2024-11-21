@@ -12,18 +12,12 @@ module TRS
 
     def find_teacher(trn:, date_of_birth: nil, national_insurance_number: nil)
       params = { dateOfBirth: date_of_birth, nationalInsuranceNumber: national_insurance_number }.compact
-
-      fail(ArugmentError, "either date_of_birth or national_insurance_number is required") if params.empty?
-
       response = @connection.get(persons_path(trn), params)
 
-      if response.success?
-        TRS::Teacher.new(JSON.parse(response.body))
-      elsif response.status == 404
-        raise TRS::Errors::TeacherNotFound
-      else
-        raise "API request failed: #{response.status} #{response.body}"
-      end
+      return TRS::Teacher.new(JSON.parse(response.body)) if response.success?
+      return if response.status == 404
+
+      raise "API request failed: #{response.status} #{response.body}"
     end
 
     def begin_induction!(trn:, start_date:)
