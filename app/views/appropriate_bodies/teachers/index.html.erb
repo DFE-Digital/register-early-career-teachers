@@ -27,7 +27,7 @@
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <ul class="govuk-list govuk-list--bullet">
+    <ul class="govuk-list">
       <% @teachers.all.each do |teacher| %>
         <%= summary_card_for_teacher(teacher) %>
       <% end %>
