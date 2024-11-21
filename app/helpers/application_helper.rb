@@ -1,7 +1,7 @@
 module ApplicationHelper
   include Pagy::Frontend
 
-  def page_data(title:, header: nil, header_size: "l", error: false, backlink_href: nil)
+  def page_data(title:, header: nil, header_size: "l", error: false, backlink_href: nil, caption: nil, caption_size: 'm')
     page_title = if error
                    "Error: #{title}"
                  else
@@ -20,7 +20,11 @@ module ApplicationHelper
 
     content_for(:page_header) { page_header }
 
-    { page_title:, backlink_or_breadcrumb:, page_header: }
+    page_caption = tag.span(caption, class: "govuk-caption-#{caption_size}")
+
+    content_for(:page_caption) { page_caption } unless caption.nil?
+
+    { page_title:, backlink_or_breadcrumb:, page_header:, page_caption: }
   end
 
   def page_data_from_front_matter(yaml)
