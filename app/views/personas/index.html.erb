@@ -1,17 +1,32 @@
 <% page_data(title: "Select a persona") %>
 
-<% @personas.each do |persona| %>
-  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-  <h2 class="govuk-heading-m"><%= persona.name %></h2>
-  <div>
-    <%# TODO: describe the persona e.g. what type of user, which org associations etc. %>
-    <p><%= persona.email %></p>
-  </div>
+<div class="govuk-width-container">
+  <% @personas.each_with_index do |persona, i| %>
 
-  <%= form_with url: "/auth/developer/callback" do |f| %>
-    <%= hidden_field_tag "email", persona.email %>
-    <%= hidden_field_tag "name", persona.name %>
-    <%= hidden_field_tag "appropriate_body_id", appropriate_body_id_from_user_name(persona.name) %>
-    <%= f.submit "Sign-in as #{persona.name}", class: "govuk-button govuk-!-margin-bottom-2" %>
+    <% if i > 0 %>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <% end %>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third app-persona-image">
+        <%= persona_image(persona.name) %>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">
+          <%= persona_name(persona) %>
+          (<%= persona.email %>)
+        </h2>
+        <div>
+          <%= tag.p(persona_organisation(persona)) %>
+        </div>
+
+        <%= form_with url: "/auth/developer/callback" do |f| %>
+          <%= hidden_field_tag "email", persona.email %>
+          <%= hidden_field_tag "name", persona.name %>
+          <%= hidden_field_tag "appropriate_body_id", appropriate_body_id_from_user_name(persona.name) %>
+          <%= f.submit "Sign-in as #{persona_name(persona)}", class: "govuk-button govuk-!-margin-bottom-2" %>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-<% end %>
+</div>

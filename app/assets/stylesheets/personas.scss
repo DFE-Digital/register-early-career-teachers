@@ -1,0 +1,9 @@
+.app {
+  &-persona-image {
+    text-align: center;
+
+    @include govuk-media-query($until: tablet) {
+      display: none;
+    }
+  }
+}
