@@ -33,7 +33,7 @@ private
 
   def i_am_redirected_to_the_ab_landing_page
     expect(current_path).to eql('/appropriate-body')
-    expect(page.title).to include('Register early career teachers as an appropriate body')
+    expect(page.title).to include('Record induction as an appropriate body')
   end
 
   def then_i_see_the_school_landing_page
