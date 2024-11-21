@@ -8,12 +8,13 @@ module Schools
       steps do
         [
           {
-            find_ect: FindECTStep,
-            review_ect_details: ReviewECTDetailsStep,
-            email_address: EmailAddressStep,
             check_answers: CheckAnswersStep,
             confirmation: ConfirmationStep,
+            email_address: EmailAddressStep,
+            find_ect: FindECTStep,
             national_insurance_number: NationalInsuranceNumberStep,
+            not_found: NotFoundStep,
+            review_ect_details: ReviewECTDetailsStep,
           }
         ]
       end
