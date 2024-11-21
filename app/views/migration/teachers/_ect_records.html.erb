@@ -1,21 +1,21 @@
 <% if profile.present? %>
   <h3 class="govuk-heading-s">ECT records</h3>
-<% end %>
-<% profile.induction_records.each do |record| %>
-  <div class="migration-row">
-    <div class="migration-column">
-      <%= render Migration::InductionRecordComponent.new(induction_record: record) %>
+  <% profile.induction_records.each do |record| %>
+    <div class="migration-row">
+      <div class="migration-column">
+        <%= render Migration::InductionRecordComponent.new(induction_record: record) %>
+      </div>
+      <div class="migration-column">
+        <% record.ect_school_periods.each do |period| %>
+          <%= render Migration::SchoolPeriodComponent.new(school_period: Migration::SchoolPeriodPresenter.new(period)) %>
+        <% end %>
+        <% record.training_periods.each do |period| %>
+          <%= render Migration::TrainingPeriodComponent.new(training_period: period) %>
+        <% end %>
+        <% record.mentorship_periods.each do |period| %>
+          <%= render Migration::MentorshipPeriodComponent.new(mentorship_period: period) %>
+        <% end %>
+      </div>
     </div>
-    <div class="migration-column">
-      <% record.ect_school_periods.each do |period| %>
-        <%= render Migration::SchoolPeriodComponent.new(school_period: Migration::SchoolPeriodPresenter.new(period)) %>
-      <% end %>
-      <% record.training_periods.each do |period| %>
-        <%= render Migration::TrainingPeriodComponent.new(training_period: period) %>
-      <% end %>
-      <% record.mentorship_periods.each do |period| %>
-        <%#= render Migration::SchoolPeriodComponent.new(school_period: record) %>
-      <% end %>
-    </div>
-  </div>
+  <% end %>
 <% end %>

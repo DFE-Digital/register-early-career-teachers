@@ -4,9 +4,15 @@
   <% profile.induction_records.each do |record| %>
     <div class="migration-row">
       <div class="migration-column">
-        <%= render Migration::SchoolPeriodComponent.new(school_period: record) %>
+        <%= render Migration::InductionRecordComponent.new(induction_record: record) %>
       </div>
       <div class="migration-column">
+        <% record.mentor_school_periods.each do |period| %>
+          <%= render Migration::SchoolPeriodComponent.new(school_period: Migration::SchoolPeriodPresenter.new(period)) %>
+        <% end %>
+        <% record.training_periods.each do |period| %>
+          <%= render Migration::TrainingPeriodComponent.new(training_period: period) %>
+        <% end %>
       </div>
     </div>
   <% end %>

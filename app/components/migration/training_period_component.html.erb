@@ -1,6 +1,8 @@
 <div class="govuk-body govuk-!-font-size-14 migration-period">
-  <div class="migration-period-title" style="font-weight: bold; font-size: 1.1em; background-color: #f0f0f0; padding: 0.5em; margin-bottom: 0.5em;">Training period (<%= training_period.id %>)</div>
-  <div class="migration-period-body" style="line-height: 1.4em; padding: 0.5em;">
+  <div class="migration-period-title">
+    Training period<span class="migration-object-id">(<%= training_period.id %>)</span>
+  </div>
+  <div class="migration-period-body">
     <%= lead_provider_name %></br>
     <%= delivery_partner_name %></br>
     <%= training_period.started_on %> - <%= training_period.finished_on || "" %>

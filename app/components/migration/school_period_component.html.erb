@@ -1,31 +1,9 @@
 <div class="govuk-body govuk-!-font-size-14 migration-period">
-  <div class="migration-period-title" style="font-weight: bold; font-size: 1.1em; background-color: #f0f0f0; padding: 0.5em; margin-bottom: 0.5em;">School period (<%= school_period.id %>)</div>
+  <div class="migration-period-title">
+    School period<span class="migration-object-id">(<%= school_period.id %>)</span>
+  </div>
   <div class="migration-period-body" style="line-height: 1.4em; padding: 0.5em;">
     <%= school_period.school_name_and_urn %></br>
     <%= school_period.started_on %> - <%= school_period.finished_on || "" %>
   </div>
 </div>
-<%#= govuk_summary_card(title: "School period") do |card|
-  card.with_summary_list(html_attributes: { class: "govuk-!-font-size-14" }) do |list|
-    list.with_row do |row|
-      row.with_key(text: "ID")
-      row.with_value(text: school_period.id)
-    end
-
-    # TODO: we should check that this actually still matches
-    list.with_row(**attributes_for(:school)) do |row|
-      row.with_key(text: "School")
-      row.with_value(text: school_period.school_name_and_urn)
-    end
-
-    list.with_row(**attributes_for(:started_on)) do |row|
-      row.with_key(text: "Started on")
-      row.with_value(text: school_period.started_on)
-    end
-
-    list.with_row(**attributes_for(:finished_on)) do |row|
-      row.with_key(text: "Finished on")
-      row.with_value(text: "#{school_period.finished_on || ''}")
-    end
-  end
-end %>
