@@ -23,6 +23,16 @@ RSpec.describe ApplicationHelper, type: :helper do
     it "allows the title size to be overridden" do
       expect(page_data(title: "Some title", header: "Some header", header_size: "m").fetch(:page_header)).to eq(%(<h1 class="govuk-heading-m">Some header</h1>))
     end
+
+    it 'sets the heading caption to the provided value with the default size m' do
+      expect(page_data(title: "Some title", caption: 'Some caption').fetch(:page_caption)).to eq('<span class="govuk-caption-m">Some caption</span>')
+    end
+
+    context 'when the caption size is overridden' do
+      it 'sets the heading caption to the provided value with the provided size' do
+        expect(page_data(title: "Some title", caption: 'Some caption', caption_size: 'l').fetch(:page_caption)).to eq('<span class="govuk-caption-l">Some caption</span>')
+      end
+    end
   end
 
   describe "#page_data_from_front_matter" do
