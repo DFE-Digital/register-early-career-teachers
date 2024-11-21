@@ -3,42 +3,57 @@ class Migration::TeachersController < ::AdminController
 
   def show
     @page = params[:page] || 1
-    @teacher = Teacher.find_by(trn: params[:trn])
-    @user = Migration::User.joins(:teacher_profile).where(teacher_profile: { trn: @teacher.trn }).first
-    ect_periods = @teacher.ect_at_school_periods.order(:started_on)
-    @ect_records = if ect_periods.any?
-                     map_induction_records_to_school_periods(@user.teacher_profile.participant_profiles.ect.first,
-                                                             ect_periods)
-                   else
-                     []
-                   end
-
-    mentor_periods = @teacher.mentor_at_school_periods.order(:started_on)
-    @mentor_records = if mentor_periods.any?
-                        map_induction_records_to_school_periods(@user.teacher_profile.participant_profiles.mentor.first,
-                                                                mentor_periods)
-                      else
-                        []
-                      end
+    fetch_teacher_data
   end
 
 private
 
-  def map_induction_records_to_school_periods(participant_profile, school_periods)
-    induction_records = InductionRecordSanitizer.new(participant_profile:)
+  def fetch_teacher_data
+    teacher
+    user
+    ect_profile
+    mentor_profile
+    ect_school_periods
+    mentor_school_periods
+  end
 
-    induction_records.map do |ir|
-      start_school_period = school_periods.where(started_on: ir.start_date.to_date).first
-      end_school_period = school_periods.where(finished_on: ir.end_date.to_date).first if ir.end_date.present?
+  def ect_school_periods
+    @ect_periods = Migration::SchoolPeriodPresenter.wrap(
+      teacher.ect_at_school_periods.order(:started_on)
+    )
+  end
 
-      ssp = Migration::SchoolPeriodPresenter.new(start_school_period) if start_school_period.present?
-      esp = Migration::SchoolPeriodPresenter.new(end_school_period) if end_school_period.present?
+  def mentor_school_periods
+    @mentor_periods = Migration::SchoolPeriodPresenter.wrap(
+      teacher.mentor_at_school_periods.order(:started_on)
+    )
+  end
 
-      {
-        induction_record: ir,
-        start_school_period: ssp,
-        end_school_period: esp,
-      }
-    end
+  def ect_profile
+    @ect_profile = if teacher.legacy_ect_id.present?
+                     Migration::ParticipantProfilePresenter.new(
+                       Migration::ParticipantProfile.find(teacher.legacy_ect_id)
+                     )
+                   else
+                     nil
+                   end
+  end
+
+  def mentor_profile
+    @mentor_profile = if teacher.legacy_mentor_id.present?
+                        Migration::ParticipantProfilePresenter.new(
+                          Migration::ParticipantProfile.find(teacher.legacy_mentor_id)
+                        )
+                      else
+                        nil
+                      end
+  end
+
+  def user
+    @user ||= Migration::User.find(teacher.legacy_id)
+  end
+
+  def teacher
+    @teacher ||= Teacher.find_by(trn: params[:trn])
   end
 end

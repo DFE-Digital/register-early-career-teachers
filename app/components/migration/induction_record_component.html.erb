@@ -1,0 +1,55 @@
+<%= govuk_summary_card(title: "Induction record (#{induction_record.participant_type})") do |card|
+  card.with_summary_list(html_attributes: { class: "govuk-!-font-size-14" }) do |list|
+    list.with_row do |row|
+      row.with_key(text: "ID")
+      row.with_value(text: induction_record.id)
+    end
+    list.with_row(**attributes_for(:start_date)) do |row|
+      row.with_key(text: "Start date")
+      row.with_value(text: induction_record.pretty_start_date)
+    end
+    list.with_row(**attributes_for(:end_date)) do |row|
+      row.with_key(text: "End date")
+      row.with_value(text: induction_record.pretty_end_date)
+    end
+    list.with_row(**attributes_for(:school)) do |row|
+      row.with_key(text: "School")
+      row.with_value(text: induction_record.school_name_and_urn)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Training type")
+      row.with_value(text: induction_record.training_type)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Appropriate body")
+      row.with_value(text: induction_record.appropriate_body_name)
+    end
+    if induction_record.fip?
+      list.with_row do |row|
+        row.with_key(text: "Lead provider")
+        row.with_value(text: induction_record.lead_provider_name)
+      end
+      list.with_row do |row|
+        row.with_key(text: "Delivery partner")
+        row.with_value(text: induction_record.delivery_partner_name)
+      end
+    elsif induction_record.cip?
+      list.with_row do |row|
+        row.with_key(text: "Core materials provider")
+        row.with_value(text: induction_record.cip_materials_name)
+      end
+    end
+    list.with_row do |row|
+      row.with_key(text: "Mentor")
+      row.with_value(text: induction_record.mentor_name)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Record status")
+      row.with_value(text: induction_record.induction_status)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Training status")
+      row.with_value(text: induction_record.training_status)
+    end
+  end
+end %>

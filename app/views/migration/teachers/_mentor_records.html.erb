@@ -1,22 +1,13 @@
-<% if records.any? %>
+<% if profile.present? %>
   <h3 class="govuk-heading-s">Mentor records</h3>
-<% end %>
-<% records.each do |record| %>
-  <div class="migration-row">
-    <div class="migration-column">
-      <% if record[:start_school_period].present? %>
-        <%= render partial: "school_period", locals: { school_period: record[:start_school_period], matches: [:started_on, :school] } %>
-      <% elsif record[:end_school_period].present? %>
-          <%= render partial: "school_period", locals: { school_period: record[:end_school_period], matches: [:finished_on, :school] } %>
-      <% end %>
+
+  <% profile.induction_records.each do |record| %>
+    <div class="migration-row">
+      <div class="migration-column">
+        <%= render Migration::SchoolPeriodComponent.new(school_period: record) %>
+      </div>
+      <div class="migration-column">
+      </div>
     </div>
-    <div class="migration-column">
-      <% matched = []
-         matched << :start_date if record[:start_school_period].present?
-         matched << :end_date if record[:end_school_period].present?
-         matched << :school unless matched.empty?
-      %>
-      <%= render partial: "induction_record", locals: { induction_record: record[:induction_record], matches: matched } %>
-    </div>
-  </div>
+  <% end %>
 <% end %>

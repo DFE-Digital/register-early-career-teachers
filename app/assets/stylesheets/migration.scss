@@ -16,3 +16,20 @@
 .unmatched {
   background-color: #ffebea;
 }
+
+.migration-period {
+  border: black solid 1px;
+  padding: 0;
+
+  &.migration-period-title {
+    background-color: #f0f0f0;
+    font-size: larger;
+    font-weight: 800;
+    padding: 0.5em;
+  }
+
+  &.migration-period-body {
+    line-height: 1.4em;
+    padding: 0.5rem;
+  }
+}

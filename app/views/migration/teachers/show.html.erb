@@ -2,12 +2,12 @@
 
 <div class="migration-row">
   <div class="migration-column">
-    <%= render partial: "teacher", locals: { teacher: @teacher } %>
+    <%= render partial: "user", locals: { user: @user } %>
   </div>
   <div class="migration-column">
-    <%= render partial: "user", locals: { user: @user } %>
+    <%= render partial: "teacher", locals: { teacher: @teacher } %>
   </div>
 </div>
 
-<%= render partial: "ect_records", locals: { records: @ect_records } %>
-<%= render partial: "mentor_records", locals: { records: @mentor_records } %>
+<%= render partial: "ect_records", locals: { profile: @ect_profile } %>
+<%= render partial: "mentor_records", locals: { profile: @mentor_profile } %>
