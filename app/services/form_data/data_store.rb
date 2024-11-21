@@ -11,11 +11,11 @@ class FormData::DataStore
   end
 
   def set(key, value)
-    store[key.to_sym] = value
+    store[key.to_s] = value.is_a?(Hash) ? value.deep_stringify_keys : value
   end
 
   def get(key)
-    store[key]
+    store[key.to_s]
   end
 
   def clean
