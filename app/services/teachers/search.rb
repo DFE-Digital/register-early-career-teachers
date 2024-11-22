@@ -1,6 +1,12 @@
 module Teachers
   class Search
-    def initialize(query_string, filters: {})
+    def initialize(query_string, appropriate_body: nil, filters: {})
+      @scope = if appropriate_body.present?
+                 AppropriateBodies::CurrentTeachers.new(appropriate_body).current
+               else
+                 Teacher
+               end
+
       @query_string = query_string
 
       # TODO: no filters yet
@@ -10,11 +16,11 @@ module Teachers
     def search
       case
       when @query_string.blank?
-        Teacher.all
+        @scope.all
       when trns.any?
-        Teacher.where(trn: trns)
+        @scope.where(trn: trns)
       else
-        Teacher.search(@query_string)
+        @scope.search(@query_string)
       end
     end
 

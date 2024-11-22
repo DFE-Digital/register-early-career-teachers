@@ -3,15 +3,11 @@ module AppropriateBodies
     layout "full", only: :index
 
     def index
-      # FIXME: find within the scope of the current AB
-
-      @teachers = ::Teachers::Search.new(params[:q]).search
+      @teachers = ::Teachers::Search.new(params[:q], appropriate_body: @appropriate_body).search
     end
 
     def show
-      # FIXME: find within the scope of the current AB
-
-      @teacher = Teacher.find_by!(trn: params[:trn])
+      @teacher = AppropriateBodies::CurrentTeachers.new(@appropriate_body).current.find_by!(trn: params[:trn])
     end
   end
 end

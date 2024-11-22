@@ -19,6 +19,12 @@ RSpec.describe "Appropriate Body teacher index page", type: :request do
       let!(:emma) { FactoryBot.create(:teacher, first_name: 'Emma') }
       let!(:john) { FactoryBot.create(:teacher, first_name: 'John') }
 
+      before do
+        [emma, john].each do |teacher|
+          FactoryBot.create(:induction_period, :active, teacher:, appropriate_body:)
+        end
+      end
+
       it 'finds the right PendingInductionSubmission record and renders the page' do
         get("/appropriate-body/teachers")
 
