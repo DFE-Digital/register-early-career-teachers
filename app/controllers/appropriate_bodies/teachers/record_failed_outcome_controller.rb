@@ -1,6 +1,6 @@
 module AppropriateBodies
   module Teachers
-    class RecordOutcomeController < AppropriateBodiesController
+    class RecordFailedOutcomeController < AppropriateBodiesController
       def new
         @teacher = Teacher.find_by(trn: params[:teacher_trn])
 
@@ -14,11 +14,15 @@ module AppropriateBodies
           **pending_induction_submission_attributes
         )
 
-        record_outcome = AppropriateBodies::RecordOutcome.new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
+        record_outcome = AppropriateBodies::RecordOutcome.new(
+          appropriate_body: @appropriate_body,
+          pending_induction_submission: @pending_induction_submission,
+          teacher: @teacher
+        )
 
         PendingInductionSubmission.transaction do
-          if @pending_induction_submission.save(context: :record_outcome) && record_outcome.record_outcome!
-            redirect_to ab_teacher_record_outcome_path(@teacher)
+          if @pending_induction_submission.save(context: :record_outcome) && record_outcome.fail!
+            redirect_to ab_teacher_record_failed_outcome_path(@teacher)
           else
             render :new
           end
@@ -36,7 +40,7 @@ module AppropriateBodies
       end
 
       def pending_induction_submission_attributes
-        { appropriate_body_id: @appropriate_body.id, trn: @teacher.trn }
+        { appropriate_body_id: @appropriate_body.id, trn: @teacher.trn, outcome: "fail" }
       end
     end
   end

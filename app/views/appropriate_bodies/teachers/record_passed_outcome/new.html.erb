@@ -1,0 +1,23 @@
+<% page_data(title: "Record passed outcome for #{Teachers::Name.new(@teacher).full_name}", error: @pending_induction_submission.errors.any?) %>
+
+<%= form_with(model: @pending_induction_submission, url: ab_teacher_record_passed_outcome_path(@teacher), method: 'post') do |f| %>
+  <%= content_for(:error_summary) { f.govuk_error_summary } %>
+
+  <%=
+    f.govuk_date_field :finished_on,
+      legend: {
+        text: "When did #{Teachers::Name.new(@teacher).full_name} finish their induction with you?"
+      }
+  %>
+
+  <%=
+    f.govuk_number_field :number_of_terms,
+      width: 4,
+      label: {
+        size: 'm',
+        text: "How many terms of induction did #{Teachers::Name.new(@teacher).full_name} spend with you?"
+      }
+  %>
+
+  <%= f.govuk_submit "Record passing outcome for #{Teachers::Name.new(@teacher).full_name}" %>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_18_124145) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_20_163657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -155,6 +155,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_18_124145) do
     t.integer "number_of_terms"
     t.virtual "range", type: :daterange, as: "daterange(started_on, finished_on)", stored: true
     t.bigint "teacher_id"
+    t.enum "outcome", enum_type: "induction_outcomes"
     t.index ["appropriate_body_id"], name: "index_induction_periods_on_appropriate_body_id"
     t.index ["teacher_id"], name: "index_induction_periods_on_teacher_id"
   end
@@ -388,6 +389,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_18_124145) do
     t.uuid "legacy_id"
     t.uuid "legacy_ect_id"
     t.uuid "legacy_mentor_id"
+    t.datetime "induction_completion_submitted_to_trs_at"
     t.index ["corrected_name"], name: "index_teachers_on_corrected_name"
     t.index ["first_name", "last_name", "corrected_name"], name: "index_teachers_on_first_name_and_last_name_and_corrected_name", opclass: :gin_trgm_ops, using: :gin
     t.index ["search"], name: "index_teachers_on_search", using: :gin
