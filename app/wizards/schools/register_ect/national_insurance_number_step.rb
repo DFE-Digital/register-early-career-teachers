@@ -18,21 +18,23 @@ module Schools
       end
 
       def perform
-        store.set("trs_teacher", trs_teacher&.present)
+        store.set("trs_teacher", trs_teacher.presence&.present)
       end
 
     private
 
       def stored_trs_teacher
-        @stored_trs_teacher ||= store.get("trs_teacher")
+        @stored_trs_teacher ||= store.get("trs_teacher").presence
       end
 
       def trn
-        stored_trs_teacher&.dig("trn")
+        store.get("trn")
       end
 
       def trs_teacher
-        @trs_teacher ||= ::TRS::APIClient.new.find_teacher(trn:, national_insurance_number:)
+        @trs_teacher ||= ::TRS::APIClient.new.find_teacher(trn:)
+      rescue TRS::Errors::TeacherNotFound
+        {}
       end
     end
   end

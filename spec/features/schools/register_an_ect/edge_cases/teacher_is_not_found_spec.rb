@@ -1,5 +1,5 @@
 RSpec.describe 'Registering an ECT' do
-  include_context 'fake trs api client that finds nothing'
+  include_context 'fake trs api client returns 200 then 400'
 
   let(:page) { RSpec.configuration.playwright_page }
 

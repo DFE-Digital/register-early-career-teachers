@@ -15,6 +15,7 @@ module Schools
         return false unless valid_step?
 
         perform
+        true
       end
 
       def stored_attrs
@@ -26,10 +27,6 @@ module Schools
       end
 
     private
-
-      def key
-        model_name.param_key.to_sym
-      end
 
       def perform
         step_params.each { |key, value| store.set(key, value) }

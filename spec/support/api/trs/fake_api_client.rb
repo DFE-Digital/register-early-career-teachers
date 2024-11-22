@@ -7,7 +7,7 @@ module TRS
       @induction_status = induction_status
     end
 
-    def find_teacher(trn:, date_of_birth: nil, national_insurance_number: nil)
+    def find_teacher(trn:, date_of_birth: "2000-12-01", national_insurance_number: nil)
       raise(TRS::Errors::TeacherNotFound, "Teacher with TRN #{trn} not found") if @raise_not_found
 
       Rails.logger.info("TRSFakeAPIClient pretending to find teacher with TRN=#{trn} and Date of birth=#{date_of_birth} and National Insurance Number=#{national_insurance_number}")

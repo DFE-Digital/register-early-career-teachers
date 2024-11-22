@@ -22,7 +22,7 @@ module Schools
       def perform
         store.set("trn", trn)
         store.set("date_of_birth", format_date(date_of_birth))
-        store.set("trs_teacher", trs_teacher&.present)
+        store.set("trs_teacher", trs_teacher.presence&.present)
       end
 
     private
@@ -42,7 +42,7 @@ module Schools
       end
 
       def stored_trs_teacher
-        @stored_trs_teacher ||= store.get("trs_teacher")
+        @stored_trs_teacher ||= store.get("trs_teacher").presence
       end
 
       def trs_date_of_birth
@@ -51,6 +51,8 @@ module Schools
 
       def trs_teacher
         @trs_teacher ||= ::TRS::APIClient.new.find_teacher(trn:)
+      rescue TRS::Errors::TeacherNotFound
+        {}
       end
     end
   end

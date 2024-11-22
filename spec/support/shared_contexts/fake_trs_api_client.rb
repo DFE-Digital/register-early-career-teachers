@@ -10,11 +10,11 @@ shared_context 'fake trs api client that finds nothing' do
   end
 end
 
-shared_context 'fake trs api client returns 404 then 200' do
+shared_context 'fake trs api client returns 200 then 400' do
   before do
     allow(TRS::APIClient).to receive(:new).and_return(
-      TRS::FakeAPIClient.new(raise_not_found: true),
-      TRS::FakeAPIClient.new
+      TRS::FakeAPIClient.new,
+      TRS::FakeAPIClient.new(raise_not_found: true)
     )
   end
 end

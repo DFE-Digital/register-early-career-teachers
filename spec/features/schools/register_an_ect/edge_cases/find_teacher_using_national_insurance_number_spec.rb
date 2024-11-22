@@ -1,5 +1,5 @@
 RSpec.describe 'Registering an ECT' do
-  include_context 'fake trs api client returns 404 then 200'
+  include_context 'fake trs api client'
 
   let(:page) { RSpec.configuration.playwright_page }
 
@@ -50,10 +50,10 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def when_i_submit_a_trn_and_a_date_of_birth_that_does_not_match
-    page.fill('#find-ect-trn-field', '9876543')
-    page.fill('#find_ect_date_of_birth_3i', "1")
-    page.fill('#find_ect_date_of_birth_2i', "2")
-    page.fill('#find_ect_date_of_birth_1i', "1980")
+    page.get_by_label('trn').fill('9876543')
+    page.get_by_label('day').fill('1')
+    page.get_by_label('month').fill('2')
+    page.get_by_label('year').fill('1980')
     page.get_by_role('button', name: 'Continue').click
   end
 
