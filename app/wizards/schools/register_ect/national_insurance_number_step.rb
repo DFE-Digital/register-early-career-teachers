@@ -18,11 +18,11 @@ module Schools
       end
 
       def persist
-        store.set("national_insurance_number", national_insurance_number)
-        store.set("trs_national_insurance_number", trs_teacher.national_insurance_number)
-        store.set("trs_date_of_birth", trs_teacher.date_of_birth)
-        store.set("trs_first_name", trs_teacher.first_name)
-        store.set("trs_last_name", trs_teacher.last_name)
+        store.set(:national_insurance_number, national_insurance_number)
+        store.set(:trs_national_insurance_number, trs_teacher.national_insurance_number)
+        store.set(:trs_date_of_birth, trs_teacher.date_of_birth)
+        store.set(:trs_first_name, trs_teacher.first_name)
+        store.set(:trs_last_name, trs_teacher.last_name)
       end
 
     private

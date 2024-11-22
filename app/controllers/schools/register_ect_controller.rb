@@ -3,7 +3,6 @@
 module Schools
   class RegisterECTController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]
-    before_action :initialize_ect, only: %i[new create]
     before_action :reset_session, only: :new
 
     FORM_KEY = :register_ect_wizard
@@ -32,15 +31,12 @@ module Schools
         step_params: params,
         store: SessionRepository.new(session:, form_key: FORM_KEY)
       )
-    end
-
-    def initialize_ect
-      @ect = Schools::TeacherPresenter.new(@wizard.store)
+      @ect = @wizard.ect
     end
 
     def current_step
       request.path.split("/").last.underscore.to_sym.tap do |step_from_path|
-        return :not_found if WIZARD_CLASS.steps.first.keys.exclude?(step_from_path)
+        return :not_found unless WIZARD_CLASS.step?(step_from_path)
       end
     end
 

@@ -19,8 +19,16 @@ module Schools
         ]
       end
 
+      def self.step?(step_name)
+        Array(steps).find { |config| config[step_name] }
+      end
+
       delegate :save!, to: :current_step
       delegate :destroy_session, to: :current_step
+
+      def ect
+        @ect ||= ECT.new(store)
+      end
     end
   end
 end

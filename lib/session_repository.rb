@@ -29,7 +29,7 @@ private
     get(name)
   end
 
-  def respond_to_missing?
+  def respond_to_missing?(_, _)
     true
   end
 

@@ -1,9 +1,7 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
-describe Schools::TeacherPresenter, type: :presenter do
-  let(:attributes) do
+describe Schools::RegisterECT::ECT, type: :presenter do
+  let(:store) do
     OpenStruct.new({
       "trn" => "3002586",
       "trs_first_name" => "Dusty",
@@ -14,7 +12,7 @@ describe Schools::TeacherPresenter, type: :presenter do
     })
   end
 
-  subject(:presenter) { described_class.new(attributes) }
+  subject(:presenter) { described_class.new(store) }
 
   describe '#full_name' do
     it 'returns the full name of the ECT' do
