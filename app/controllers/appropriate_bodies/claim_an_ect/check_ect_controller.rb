@@ -2,14 +2,11 @@ module AppropriateBodies
   module ClaimAnECT
     class CheckECTController < AppropriateBodiesController
       def edit
-        # FIXME: find within the scope of the current AB
-
-        @pending_induction_submission = PendingInductionSubmission.find(params[:id])
+        @pending_induction_submission = find_pending_induction_submission
       end
 
       def update
-        # FIXME: find within the scope of the current AB
-        @pending_induction_submission = PendingInductionSubmission.find(params[:id])
+        @pending_induction_submission = find_pending_induction_submission
 
         check_ect = AppropriateBodies::ClaimAnECT::CheckECT
           .new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
@@ -29,6 +26,10 @@ module AppropriateBodies
         confirmed_param = params.require("pending_induction_submission").fetch("confirmed")
 
         ActiveModel::Type::Boolean.new.cast(confirmed_param)
+      end
+
+      def find_pending_induction_submission
+        PendingInductionSubmissions::Search.new(appropriate_body: @appropriate_body).pending_induction_submissions.find(params[:id])
       end
     end
   end
