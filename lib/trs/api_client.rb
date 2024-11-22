@@ -7,6 +7,7 @@ module TRS
         faraday.headers['X-Api-Version'] = 'Next'
         faraday.headers['Content-Type'] = 'application/json'
         faraday.adapter Faraday.default_adapter
+        faraday.response :logger if Rails.env.development?
       end
     end
 

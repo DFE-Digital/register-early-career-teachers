@@ -2,7 +2,7 @@
 
 module Schools
   module RegisterECT
-    class ReviewECTDetailsStep < StoredStep
+    class ReviewECTDetailsStep < Step
       def next_step
         :email_address
       end

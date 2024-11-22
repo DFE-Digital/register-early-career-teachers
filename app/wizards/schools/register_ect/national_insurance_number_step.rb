@@ -2,7 +2,7 @@
 
 module Schools
   module RegisterECT
-    class NationalInsuranceNumberStep < StoredStep
+    class NationalInsuranceNumberStep < Step
       attr_accessor :national_insurance_number
 
       validates :national_insurance_number, national_insurance_number: true
@@ -12,29 +12,25 @@ module Schools
       end
 
       def next_step
-        return :not_found unless stored_trs_teacher
+        return :not_found unless trs_teacher.first_name
 
         :review_ect_details
       end
 
-      def perform
-        store.set("trs_teacher", trs_teacher.presence&.present)
+      def persist
+        store.set("national_insurance_number", national_insurance_number)
+        store.set("trs_national_insurance_number", trs_teacher.national_insurance_number)
+        store.set("trs_date_of_birth", trs_teacher.date_of_birth)
+        store.set("trs_first_name", trs_teacher.first_name)
+        store.set("trs_last_name", trs_teacher.last_name)
       end
 
     private
 
-      def stored_trs_teacher
-        @stored_trs_teacher ||= store.get("trs_teacher").presence
-      end
-
-      def trn
-        store.get("trn")
-      end
+      delegate :trn, to: :store, private: true
 
       def trs_teacher
-        @trs_teacher ||= ::TRS::APIClient.new.find_teacher(trn:)
-      rescue TRS::Errors::TeacherNotFound
-        {}
+        @trs_teacher ||= fetch_trs_teacher(trn:, national_insurance_number:)
       end
     end
   end

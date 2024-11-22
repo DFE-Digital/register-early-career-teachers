@@ -2,7 +2,7 @@
 
 module Schools
   module RegisterECT
-    class StoredStep < DfE::Wizard::Step
+    class Step < DfE::Wizard::Step
       include ActiveRecord::AttributeAssignment
 
       delegate :valid_step?, to: :wizard
@@ -14,12 +14,8 @@ module Schools
       def save!
         return false unless valid_step?
 
-        perform
+        persist
         true
-      end
-
-      def stored_attrs
-        store
       end
 
       def self.permitted_params
@@ -28,7 +24,13 @@ module Schools
 
     private
 
-      def perform
+      def fetch_trs_teacher(**args)
+        ::TRS::APIClient.new.find_teacher(**args)
+      rescue TRS::Errors::TeacherNotFound
+        TRS::Teacher.new({})
+      end
+
+      def persist
         step_params.each { |key, value| store.set(key, value) }
       end
 

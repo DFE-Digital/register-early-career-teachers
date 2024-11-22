@@ -1,6 +1,6 @@
 module Schools
   module RegisterECT
-    class NotFoundStep < StoredStep
+    class NotFoundStep < Step
     end
   end
 end

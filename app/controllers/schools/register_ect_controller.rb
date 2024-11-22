@@ -7,7 +7,7 @@ module Schools
     before_action :reset_session, only: :new
 
     FORM_KEY = :register_ect_wizard
-    WIZARD_CLASS = Schools::RegisterECT::BaseWizard.freeze
+    WIZARD_CLASS = Schools::RegisterECT::Wizard.freeze
 
     def start
     end
@@ -29,40 +29,23 @@ module Schools
     def initialize_wizard
       @wizard = WIZARD_CLASS.new(
         current_step:,
-        step_params:,
-        store:
+        step_params: params,
+        store: SessionRepository.new(session:, form_key: FORM_KEY)
       )
     end
 
     def initialize_ect
-      @ect = Schools::TeacherPresenter.new(**@wizard.stored_attrs)
-    end
-
-    def store
-      @store ||= FormData::WizardStepStore.new(session:, form_key: FORM_KEY)
+      @ect = Schools::TeacherPresenter.new(@wizard.store)
     end
 
     def current_step
-      step_from_path = request.path.split("/").last.underscore.to_sym
-      return :not_found if WIZARD_CLASS.steps.first.keys.exclude?(step_from_path)
-
-      step_from_path
-    end
-
-    def step_params
-      return default_params if params[current_step].blank?
-
-      params
-    end
-
-    def default_params
-      ActionController::Parameters.new({ current_step => params })
+      request.path.split("/").last.underscore.to_sym.tap do |step_from_path|
+        return :not_found if WIZARD_CLASS.steps.first.keys.exclude?(step_from_path)
+      end
     end
 
     def reset_session
-      return if current_step != :find_ect
-
-      @wizard.destroy_session
+      @wizard.destroy_session if current_step == :find_ect
     end
   end
 end

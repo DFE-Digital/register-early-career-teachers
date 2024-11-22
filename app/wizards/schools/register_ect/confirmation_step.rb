@@ -1,6 +1,6 @@
 module Schools
   module RegisterECT
-    class ConfirmationStep < StoredStep
+    class ConfirmationStep < Step
     end
   end
 end

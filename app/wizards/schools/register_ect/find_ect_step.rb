@@ -2,7 +2,7 @@
 
 module Schools
   module RegisterECT
-    class FindECTStep < StoredStep
+    class FindECTStep < Step
       attr_accessor :trn, :date_of_birth
 
       validates :trn, teacher_reference_number: true
@@ -13,46 +13,35 @@ module Schools
       end
 
       def next_step
-        return :not_found unless stored_trs_teacher
+        return :not_found unless trs_teacher.trn
         return :national_insurance_number unless birth_date_matches?
 
         :review_ect_details
       end
 
-      def perform
+      def persist
         store.set("trn", trn)
-        store.set("date_of_birth", format_date(date_of_birth))
-        store.set("trs_teacher", trs_teacher.presence&.present)
+        store.set("date_of_birth", date_of_birth_string)
+        store.set("trs_national_insurance_number", trs_teacher.national_insurance_number)
+        store.set("trs_date_of_birth", trs_teacher.date_of_birth)
+        store.set("trs_first_name", trs_teacher.first_name)
+        store.set("trs_last_name", trs_teacher.last_name)
       end
 
     private
 
       def birth_date_matches?
-        return false unless trs_date_of_birth && provided_date_of_birth
+        return false unless trs_teacher.date_of_birth
 
-        Date.parse(trs_date_of_birth) == Date.parse(provided_date_of_birth)
+        trs_teacher.date_of_birth.to_date == date_of_birth_string.to_date
       end
 
-      def format_date(date_of_birth)
-        "#{date_of_birth[1]}/#{date_of_birth[2]}/#{date_of_birth[3]}"
-      end
-
-      def provided_date_of_birth
-        @provided_date_of_birth ||= store.get("date_of_birth")
-      end
-
-      def stored_trs_teacher
-        @stored_trs_teacher ||= store.get("trs_teacher").presence
-      end
-
-      def trs_date_of_birth
-        @trs_date_of_birth ||= stored_trs_teacher&.dig("date_of_birth")
+      def date_of_birth_string
+        @date_of_birth_string ||= date_of_birth.values.join("-")
       end
 
       def trs_teacher
-        @trs_teacher ||= ::TRS::APIClient.new.find_teacher(trn:)
-      rescue TRS::Errors::TeacherNotFound
-        {}
+        @trs_teacher ||= fetch_trs_teacher(trn:)
       end
     end
   end

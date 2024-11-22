@@ -1,6 +1,6 @@
 module Schools
   module RegisterECT
-    class CheckAnswersStep < StoredStep
+    class CheckAnswersStep < Step
       def next_step
         :confirmation
       end

@@ -2,34 +2,27 @@
 
 module Schools
   class TeacherPresenter
-    private attr_reader :attributes
-
-    def initialize(attributes = {})
-      @attributes = attributes
+    def initialize(store)
+      @store = store
     end
 
-    def full_name
-      first_name = attributes.dig('trs_teacher', 'trs_first_name')
-      last_name = attributes.dig('trs_teacher', 'trs_last_name')
+    delegate :trn, :email, to: :@store
 
-      "#{first_name} #{last_name}".strip
+    def full_name
+      "#{trs_first_name} #{trs_last_name}".strip
     end
 
     def govuk_date_of_birth
-      dob = attributes.dig('trs_teacher', 'date_of_birth')
-      dob&.to_date&.to_formatted_s(:govuk)
-    end
-
-    def trn
-      attributes['trn']
-    end
-
-    def email
-      attributes['email']
+      trs_date_of_birth.to_date&.to_formatted_s(:govuk)
     end
 
     def national_insurance_number
-      attributes.dig('trs_teacher', 'trs_national_insurance_number')
+      trs_national_insurance_number
     end
+
+    delegate :trs_date_of_birth, to: :@store, private: true
+    delegate :trs_national_insurance_number, to: :@store, private: true
+    delegate :trs_first_name, to: :@store, private: true
+    delegate :trs_last_name, to: :@store, private: true
   end
 end

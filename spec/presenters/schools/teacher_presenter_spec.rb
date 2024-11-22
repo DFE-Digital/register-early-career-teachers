@@ -4,17 +4,14 @@ require 'rails_helper'
 
 describe Schools::TeacherPresenter, type: :presenter do
   let(:attributes) do
-    {
+    OpenStruct.new({
       "trn" => "3002586",
-      "trs_teacher" => {
-        "trn" => "3002586",
-        "trs_first_name" => "Dusty",
-        "trs_last_name" => "Rhodes",
-        "date_of_birth" => "1945-10-11",
-        "trs_national_insurance_number" => "OWAD23455",
-      },
+      "trs_first_name" => "Dusty",
+      "trs_last_name" => "Rhodes",
+      "trs_date_of_birth" => "1945-10-11",
+      "trs_national_insurance_number" => "OWAD23455",
       "email" => "dusty@rhodes.com",
-    }
+    })
   end
 
   subject(:presenter) { described_class.new(attributes) }
