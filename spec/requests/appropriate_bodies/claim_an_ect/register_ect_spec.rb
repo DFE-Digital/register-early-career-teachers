@@ -1,7 +1,7 @@
 RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
-  let(:appropriate_body) { AppropriateBody.find(session[:appropriate_body_id]) }
-  let(:page_heading) { "Tell us about" }
+  let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
   let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
+  let(:page_heading) { "Tell us about" }
   let(:pending_induction_submission_id_param) { pending_induction_submission.id.to_s }
 
   describe 'GET /appropriate-body/claim-an-ect/register-ect/:id/edit' do
@@ -17,7 +17,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
     context 'when signed in as an appropriate body user' do
       # FIXME: we don't have appropriate body users yet so this is just making
       #        sure they're logged in
-      before { sign_in_as(:appropriate_body_user) }
+      before { sign_in_as(:appropriate_body_user, appropriate_body:) }
 
       it 'finds the right PendingInductionSubmission record and renders the page' do
         allow(PendingInductionSubmission).to receive(:find).with(pending_induction_submission_id_param).and_call_original
@@ -41,7 +41,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
     end
 
     context 'when signed in' do
-      let!(:user) { sign_in_as(:appropriate_body_user) }
+      let!(:user) { sign_in_as(:appropriate_body_user, appropriate_body:) }
       before { allow(AppropriateBodies::ClaimAnECT::CheckECT).to receive(:new).with(any_args).and_call_original }
       before { allow(AppropriateBodies::ClaimAnECT::RegisterECT).to receive(:new).with(any_args).and_call_original }
 
@@ -115,7 +115,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
     end
 
     context 'when signed in' do
-      before { sign_in_as(:appropriate_body_user) }
+      before { sign_in_as(:appropriate_body_user, appropriate_body:) }
 
       it 'finds the right PendingInductionSubmission record and renders the page' do
         allow(PendingInductionSubmission).to receive(:find).with(pending_induction_submission_id_param).and_call_original
