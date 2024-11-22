@@ -44,6 +44,7 @@ These are documents or websites to have a read through to learn more about early
 - [ ] The [policy for early career teaching](https://www.gov.uk/government/collections/induction-training-and-support-for-early-career-teachers-ects)
 - [ ] The [other services in Teacher Services](https://becoming-a-teacher.design-history.education.gov.uk/service-map/)
 - [ ] The existing [API documentation](https://manage-training-for-early-career-teachers.education.gov.uk/api-reference/reference-v3.html#api-v3-partnerships-ecf-id-put-request_body)
+- [ ] The [service manual for Register ECTs](https://ecf-service-manual.education.gov.uk/), which includes the roadmap and rules so far for how the services work
 - [ ]  The [retro rota](https://ukgovernmentdfe.slack.com/archives/C06V31R0Z17/p1715776635714569) and mention if you're willing to be added
 - [ ]  The [final presentation for the ECF2 discovery](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B03C73EEB-C2FA-43C4-A864-27A1379CDBF3%7D&file=ECF%20digital%20services%20-%20playback%20deck.pptx&action=edit&mobileredirect=true)
 - [ ]  An [overview of lead providers](https://educationgovuk.sharepoint.com/:p:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7B14A33185-398B-49D8-810B-5A2B8D604CEC%7D&file=ECF%202.0%20-%20Understanding%20our%20users%20-%20Lead%20providers.pptx&action=edit&mobileredirect=true)
@@ -62,5 +63,5 @@ Make sure to schedule in:
 - [ ] A demo of Manage training for early career teachers for schools
 - [ ] A demo of the check data services for delivery partners and appropriate bodies
 - [ ] A walkthrough of the TRA's appropriate body portal and why induction data is important to ECF 2.0
-- [ ] Time with the PM to [take you through the roadmap](https://educationgovuk.sharepoint.com/:x:/r/sites/TeacherServices/_layouts/15/Doc.aspx?sourcedoc=%7BB829B66E-9374-44EC-9680-F22BC93BF29B%7D&file=Book.xlsx&action=default&mobileredirect=true) and the current sprint goals (on the project board)
+- [ ] Time with the PM to [take you through the roadmap](https://ecf-service-manual.education.gov.uk/product/roadmap/) and the current delivery plan and sprint goals (on the sprint planning and retro board)
 - [ ] Time with the PM to take you through the [wider CPD programme roadmap](https://lucid.app/lucidspark/b66f71c3-c524-4e79-aa36-a60b00b4b823/edit?shared=true&page=0_0)
