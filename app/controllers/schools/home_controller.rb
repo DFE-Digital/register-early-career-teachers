@@ -1,7 +1,5 @@
 module Schools
   class HomeController < ApplicationController
-    layout "full"
-
     def index
       teacher_service = Schools::Teacher.new(school[:id])
       @school_name = school[:name]

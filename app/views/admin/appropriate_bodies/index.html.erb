@@ -1,32 +1,36 @@
-<% page_data(title: "Appropriate bodies") %>
-<%= govuk_button_link_to("Add an appropriate body", "#") %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <% page_data(title: "Appropriate bodies") %>
+    <%= govuk_button_link_to("Add an appropriate body", "#") %>
 
-<div class="search-box">
-  <%= form_with method: :get, class: "search-box__form" do |f| %>
-    <div class="search-box__input">
-      <%= f.govuk_text_field(
-            "q",
-            value: params[:q],
-            label: { text: "Search for an appropriate body", size: "s" },
-            hint: { text: "Search for an appropriate body by name" },
-          )
+    <hr class="govuk-section-break--l">
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <%= form_with method: :get do |f| %>
+      <%=
+        f.govuk_text_field(
+          "q",
+          value: params[:q],
+          label: { text: "Search for an appropriate body", size: "s" }
+        )
       %>
-    </div>
 
-    <%= f.govuk_submit "Search" %>
-  <% end %>
-</div>
+      <%= f.govuk_submit "Search" %>
+    <% end %>
 
-<% @appropriate_bodies.each do |appropriate_body| %>
-  <%=
-    govuk_summary_card(title: govuk_link_to(appropriate_body.name, "#")) do |card|
+    <% @appropriate_bodies.each do |appropriate_body| %>
+      <%=
+        govuk_summary_card(title: govuk_link_to(appropriate_body.name, "#")) do |card|
 
-      card.with_summary_list do |summary_list|
-        summary_list.with_row do |row|
-          row.with_key(text: "Ongoing inductions")
-          row.with_value(text: appropriate_body.induction_periods.ongoing.count)
+          card.with_summary_list do |summary_list|
+            summary_list.with_row do |row|
+              row.with_key(text: "Ongoing inductions")
+              row.with_value(text: appropriate_body.induction_periods.ongoing.count)
+            end
+          end
         end
-      end
-    end
-  %>
-<% end %>
+      %>
+    <% end %>
+  </div>
+</div>
