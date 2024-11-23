@@ -1,10 +1,12 @@
 class SessionRepository
-  def set(key, value)
-    store[key.to_s] = value.is_a?(Hash) ? value.deep_stringify_keys : value
-  end
-
   def reset
     @session.delete(@form_key)
+  end
+
+  def update(args = {})
+    args.each do |key, value|
+      store[key.to_s] = value.is_a?(Hash) ? value.deep_stringify_keys : value
+    end
   end
 
 private

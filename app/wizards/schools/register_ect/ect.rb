@@ -9,8 +9,14 @@ module Schools
         trs_date_of_birth.to_date&.to_formatted_s(:govuk)
       end
 
-      def national_insurance_number
-        trs_national_insurance_number
+      def in_trs?
+        trs_first_name.present?
+      end
+
+      def matches_trs_dob?
+        return false unless trs_date_of_birth.present?
+
+        trs_date_of_birth.to_date == date_of_birth.to_date
       end
     end
   end

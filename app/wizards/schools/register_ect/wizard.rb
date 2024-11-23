@@ -20,11 +20,11 @@ module Schools
       end
 
       def self.step?(step_name)
-        Array(steps).find { |config| config[step_name] }
+        Array(steps).first[step_name].present?
       end
 
       delegate :save!, to: :current_step
-      delegate :reset, to: :store
+      delegate :reset, to: :ect
 
       def ect
         @ect ||= ECT.new(store)

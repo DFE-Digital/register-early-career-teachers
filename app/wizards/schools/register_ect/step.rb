@@ -5,7 +5,7 @@ module Schools
     class Step < DfE::Wizard::Step
       include ActiveRecord::AttributeAssignment
 
-      delegate :valid_step?, to: :wizard
+      delegate :ect, :valid_step?, to: :wizard
 
       def next_step
       end
@@ -30,7 +30,7 @@ module Schools
       end
 
       def persist
-        step_params.each { |key, value| store.set(key, value) }
+        ect.update(step_params)
       end
 
       def step_params

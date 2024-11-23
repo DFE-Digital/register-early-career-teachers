@@ -32,9 +32,9 @@ describe Schools::RegisterECT::ECT, type: :presenter do
     end
   end
 
-  describe '#national_insurance_number' do
-    it 'returns the national insurance number' do
-      expect(presenter.national_insurance_number).to eq("OWAD23455")
+  describe '#trs_national_insurance_number' do
+    it 'returns the national insurance number in trs' do
+      expect(presenter.trs_national_insurance_number).to eq("OWAD23455")
     end
   end
 
