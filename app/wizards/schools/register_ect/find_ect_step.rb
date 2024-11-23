@@ -19,6 +19,8 @@ module Schools
         :review_ect_details
       end
 
+    private
+
       def persist
         ect.update(trn:,
                    date_of_birth: date_of_birth.values.join("-"),
@@ -27,8 +29,6 @@ module Schools
                    trs_first_name: trs_teacher.first_name,
                    trs_last_name: trs_teacher.last_name)
       end
-
-    private
 
       def trs_teacher
         @trs_teacher ||= fetch_trs_teacher(trn:)

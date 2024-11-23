@@ -7,6 +7,8 @@ class SessionRepository
     args.each do |key, value|
       store[key.to_s] = value.is_a?(Hash) ? value.deep_stringify_keys : value
     end
+
+    true
   end
 
 private

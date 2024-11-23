@@ -14,7 +14,7 @@ module Schools
       end
 
       def matches_trs_dob?
-        return false unless trs_date_of_birth.present?
+        return false if [date_of_birth, trs_date_of_birth].any?(&:blank?)
 
         trs_date_of_birth.to_date == date_of_birth.to_date
       end

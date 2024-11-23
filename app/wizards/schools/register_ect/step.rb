@@ -11,10 +11,7 @@ module Schools
       end
 
       def save!
-        return false unless valid_step?
-
-        persist
-        true
+        persist if valid_step?
       end
 
       def self.permitted_params
