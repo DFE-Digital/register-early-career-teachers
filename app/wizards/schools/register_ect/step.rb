@@ -6,7 +6,6 @@ module Schools
       include ActiveRecord::AttributeAssignment
 
       delegate :valid_step?, to: :wizard
-      delegate :destroy_session, to: :store
 
       def next_step
       end
