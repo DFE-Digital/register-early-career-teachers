@@ -1,6 +1,6 @@
 RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
   let!(:appropriate_body) { FactoryBot.create(:appropriate_body) }
-  let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission) }
+  let!(:pending_induction_submission) { FactoryBot.create(:pending_induction_submission, appropriate_body:) }
   let(:page_heading) { "Tell us about" }
   let(:pending_induction_submission_id_param) { pending_induction_submission.id.to_s }
 
@@ -15,16 +15,17 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
     end
 
     context 'when signed in as an appropriate body user' do
-      # FIXME: we don't have appropriate body users yet so this is just making
-      #        sure they're logged in
       before { sign_in_as(:appropriate_body_user, appropriate_body:) }
 
-      it 'finds the right PendingInductionSubmission record and renders the page' do
-        allow(PendingInductionSubmission).to receive(:find).with(pending_induction_submission_id_param).and_call_original
-
+      it 'searches within the scope of the current appropriate body' do
+        allow(PendingInductionSubmissions::Search).to receive(:new).with(appropriate_body:).and_call_original
         get("/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}/edit")
+        expect(PendingInductionSubmissions::Search).to have_received(:new).with(appropriate_body:).once
+      end
 
-        expect(PendingInductionSubmission).to have_received(:find).with(pending_induction_submission_id_param).once
+      it 'finds the right PendingInductionSubmission record and renders the page' do
+        get("/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}/edit")
+        expect(response.body).to include(%(<form action="/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}?method=patch"))
         expect(response).to be_successful
       end
     end
@@ -57,6 +58,15 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
 
         before do
           allow_any_instance_of(AppropriateBodies::ClaimAnECT::RegisterECT).to receive(:register).and_call_original
+        end
+
+        it 'searches within the scope of the current appropriate body' do
+          allow(PendingInductionSubmissions::Search).to receive(:new).with(appropriate_body:).and_call_original
+          patch(
+            "/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}",
+            params: { appropriate_body:, pending_induction_submission: registration_params }
+          )
+          expect(PendingInductionSubmissions::Search).to have_received(:new).with(appropriate_body:).once
         end
 
         it 'passes the parameters to the AppropriateBodies::ClaimAnECT::RegisterECT service and redirects' do
@@ -117,12 +127,18 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
     context 'when signed in' do
       before { sign_in_as(:appropriate_body_user, appropriate_body:) }
 
-      it 'finds the right PendingInductionSubmission record and renders the page' do
-        allow(PendingInductionSubmission).to receive(:find).with(pending_induction_submission_id_param).and_call_original
+      it 'searches within the scope of the current appropriate body' do
+        allow(PendingInductionSubmissions::Search).to receive(:new).with(appropriate_body:).and_call_original
+        get("/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}/")
+        expect(PendingInductionSubmissions::Search).to have_received(:new).with(appropriate_body:).once
+      end
 
+      it 'finds the right PendingInductionSubmission record and renders the page' do
         get("/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}/")
 
-        expect(PendingInductionSubmission).to have_received(:find).with(pending_induction_submission_id_param).once
+        expected_content = "#{pending_induction_submission.trs_first_name} #{pending_induction_submission.trs_last_name} has been registered with #{appropriate_body.name}"
+
+        expect(response.body).to include(expected_content)
         expect(response).to be_successful
       end
     end

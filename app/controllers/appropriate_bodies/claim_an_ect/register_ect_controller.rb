@@ -2,17 +2,14 @@ module AppropriateBodies
   module ClaimAnECT
     class RegisterECTController < AppropriateBodiesController
       def edit
-        # FIXME: find within the scope of the current AB
-
-        @pending_induction_submission = PendingInductionSubmission.find(params[:id])
+        @pending_induction_submission = find_pending_induction_submission
       end
 
       def update
         register_ect = AppropriateBodies::ClaimAnECT::RegisterECT
           .new(
             appropriate_body: @appropriate_body,
-            # FIXME: find within the scope of the current AB
-            pending_induction_submission: PendingInductionSubmission.find(params[:id])
+            pending_induction_submission: find_pending_induction_submission
           )
 
         if register_ect.register(update_params)
@@ -27,15 +24,17 @@ module AppropriateBodies
       end
 
       def show
-        # FIXME: find within the scope of the current AB
-
-        @pending_induction_submission = PendingInductionSubmission.find(params[:id])
+        @pending_induction_submission = find_pending_induction_submission
       end
 
     private
 
       def update_params
         params.require(:pending_induction_submission).permit(:started_on, :induction_programme)
+      end
+
+      def find_pending_induction_submission
+        PendingInductionSubmissions::Search.new(appropriate_body: @appropriate_body).pending_induction_submissions.find(params[:id])
       end
     end
   end

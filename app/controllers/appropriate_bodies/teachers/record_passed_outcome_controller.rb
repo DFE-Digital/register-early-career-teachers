@@ -2,13 +2,13 @@ module AppropriateBodies
   module Teachers
     class RecordPassedOutcomeController < AppropriateBodiesController
       def new
-        @teacher = Teacher.find_by(trn: params[:teacher_trn])
+        @teacher = find_teacher
 
         @pending_induction_submission = PendingInductionSubmission.new
       end
 
       def create
-        @teacher = Teacher.find_by(trn: params[:teacher_trn])
+        @teacher = find_teacher
         @pending_induction_submission = PendingInductionSubmission.new(
           **pending_induction_submission_params,
           **pending_induction_submission_attributes
@@ -29,7 +29,7 @@ module AppropriateBodies
       end
 
       def show
-        @teacher = Teacher.find_by(trn: params[:teacher_trn])
+        @teacher = find_teacher
       end
 
     private
@@ -40,6 +40,10 @@ module AppropriateBodies
 
       def pending_induction_submission_attributes
         { appropriate_body_id: @appropriate_body.id, trn: @teacher.trn, outcome: "pass" }
+      end
+
+      def find_teacher
+        AppropriateBodies::CurrentTeachers.new(@appropriate_body).current.find_by!(trn: params[:teacher_trn])
       end
     end
   end
