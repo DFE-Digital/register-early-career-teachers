@@ -18,6 +18,10 @@ module Schools
 
         trs_date_of_birth.to_date == date_of_birth.to_date
       end
+
+      def induction_completed?
+        trs_induction_completed?
+      end
     end
   end
 end

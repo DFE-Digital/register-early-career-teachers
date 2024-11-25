@@ -102,6 +102,8 @@ Rails.application.routes.draw do
 
       get "not-found", action: :new
 
+      get "induction-completed", action: :new
+
       get "review-ect-details", action: :new
       post "review-ect-details", action: :create
 

@@ -11,7 +11,7 @@ RSpec.describe TRS::APIClient do
 
     context 'finding a teacher by TRN and date of birth' do
       let(:response_body) { { 'firstName' => 'John', 'trn' => trn }.to_json }
-      let(:expected_payload) { { dateOfBirth: "1990-01-01" } }
+      let(:expected_payload) { { dateOfBirth: "1990-01-01", include: "Induction" } }
 
       before do
         allow(connection).to receive(:get).with(expected_path, expected_payload).and_return(response)
@@ -33,7 +33,7 @@ RSpec.describe TRS::APIClient do
 
     context 'finding a teacher by TRN and national insurance number' do
       let(:response_body) { { 'firstName' => 'John', 'trn' => trn }.to_json }
-      let(:expected_payload) { { nationalInsuranceNumber: "QQ123456A" } }
+      let(:expected_payload) { { nationalInsuranceNumber: "QQ123456A", include: "Induction" } }
 
       before do
         allow(connection).to receive(:get).with(expected_path, expected_payload).and_return(response)
