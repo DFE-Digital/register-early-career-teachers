@@ -13,9 +13,8 @@ module Schools
       end
 
       def next_step
-        return :trn_not_found unless ect.matches_trs_trn
+        return :trn_not_found unless ect.in_trs?
         return :national_insurance_number unless ect.matches_trs_dob?
-        return :not_found unless ect.in_trs?
 
         :review_ect_details
       end

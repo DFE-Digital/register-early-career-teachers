@@ -18,12 +18,6 @@ module Schools
 
         trs_date_of_birth.to_date == date_of_birth.to_date
       end
-
-      def matches_trs_trn
-        return false if [trn, trs_trn].any?(&:blank?)
-
-        trn == trs_trn
-      end
     end
   end
 end
