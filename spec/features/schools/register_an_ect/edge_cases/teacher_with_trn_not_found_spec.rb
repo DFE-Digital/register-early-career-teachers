@@ -11,6 +11,9 @@ RSpec.describe 'Registering an ECT' do
     given_i_am_on_the_find_ect_step_page
     and_i_submit_a_date_of_birth_and_unknown_trn
     then_i_should_be_taken_to_the_teacher_not_found_error_page
+
+    when_i_click_try_again
+    then_i_should_be_taken_to_the_find_ect_step_page
   end
 
   def given_i_am_on_the_find_ect_step_page
@@ -29,6 +32,15 @@ RSpec.describe 'Registering an ECT' do
 
   def then_i_should_be_taken_to_the_teacher_not_found_error_page
     path = '/schools/register-ect/trn-not-found'
+    expect(page.url).to end_with(path)
+  end
+
+  def when_i_click_try_again
+    page.get_by_role('link', name: 'Try again').click
+  end
+
+  def then_i_should_be_taken_to_the_find_ect_step_page
+    path = '/schools/register-ect/find-ect'
     expect(page.url).to end_with(path)
   end
 end
