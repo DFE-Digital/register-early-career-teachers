@@ -26,11 +26,25 @@ class TestGuidanceComponent < ViewComponent::Base
       ]
     end
 
+    def rows_with_buttons
+      rows.map do |row|
+        trn, dob, national_insurance_number = row
+        row + [populate_button(trn, dob, national_insurance_number)]
+      end
+    end
+
+    def populate_button(trn, dob, national_insurance_number)
+      tag.button 'Select',
+                 class: 'govuk-button govuk-button--secondary govuk-button--small populate-find-ect-form-button',
+                 type: 'button',
+                 data: { trn:, dob:, nationalNationalInsuranceNumber: national_insurance_number }
+    end
+
     def call
       safe_join([
         tag.h3('Information to review this journey', class: 'govuk-heading-m'),
         tag.p('To successfully locate an ECT from the TRS API, use credentials from the table below:'),
-        govuk_table(head:, rows:)
+        govuk_table(head:, rows: rows_with_buttons)
       ])
     end
   end
