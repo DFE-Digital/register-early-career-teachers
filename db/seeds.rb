@@ -238,6 +238,35 @@ InductionPeriod.create!(
   number_of_terms: 3
 )
 
+print_seed_info("Harriet Walter (mentor)", indent: 2)
+
+InductionPeriod.create!(
+  appropriate_body: umber_teaching_school_hub,
+  teacher: harriet_walter,
+  started_on: 2.years.ago,
+  finished_on: 1.year.ago,
+  induction_programme: 'fip',
+  number_of_terms: [1, 2, 3].sample
+)
+
+InductionPeriod.create!(
+  appropriate_body: golden_leaf_academy,
+  teacher: harriet_walter,
+  started_on: 1.year.ago,
+  induction_programme: 'fip'
+)
+
+InductionExtension.create!(
+  teacher: harriet_walter,
+  number_of_terms: 1.3
+)
+
+InductionExtension.create!(
+  teacher: harriet_walter,
+  number_of_terms: 5
+)
+
+
 print_seed_info("André Roussimoff ('Mentor')", indent: 2)
 
 andre_roussimoff_mentoring_at_ackley_bridge = MentorAtSchoolPeriod.create!(
@@ -274,34 +303,6 @@ MentorshipPeriod.create!(
   started_on: 1.year.ago,
   finished_on: nil
 ).tap { |mp| describe_mentorship_period(mp) }
-
-print_seed_info("Harriet Walter (mentor)", indent: 2)
-
-InductionPeriod.create!(
-  appropriate_body: umber_teaching_school_hub,
-  teacher: harriet_walter,
-  started_on: 2.years.ago,
-  finished_on: 1.year.ago,
-  induction_programme: 'fip',
-  number_of_terms: [1, 2, 3].sample
-)
-
-InductionPeriod.create!(
-  appropriate_body: golden_leaf_academy,
-  teacher: harriet_walter,
-  started_on: 1.year.ago,
-  induction_programme: 'fip'
-)
-
-InductionExtension.create!(
-  teacher: harriet_walter,
-  number_of_terms: 1.3
-)
-
-InductionExtension.create!(
-  teacher: harriet_walter,
-  number_of_terms: 5
-)
 
 print_seed_info("Adding persona users")
 
