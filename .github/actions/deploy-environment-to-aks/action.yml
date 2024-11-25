@@ -29,7 +29,7 @@ runs:
   steps:
     - uses: hashicorp/setup-terraform@v1
       with:
-        terraform_version: 1.9.8
+        terraform_version: 1.9.5
         terraform_wrapper: false
 
     - uses: DFE-Digital/github-actions/set-kubelogin-environment@master
