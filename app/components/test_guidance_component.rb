@@ -37,7 +37,7 @@ class TestGuidanceComponent < ViewComponent::Base
       tag.button 'Select',
                  class: 'govuk-button govuk-button--secondary govuk-button--small populate-find-ect-form-button',
                  type: 'button',
-                 data: { trn:, dob:, nationalNationalInsuranceNumber: national_insurance_number }
+                 data: { trn:, dob:, national_insurance_number: }
     end
 
     def call
