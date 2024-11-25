@@ -52,3 +52,6 @@ Rails/SaveBang:
 
 Naming/MethodParameterName:
   Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false

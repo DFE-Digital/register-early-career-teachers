@@ -57,10 +57,34 @@ module Migration
       induction_record.participant_profile.type.split("::").last
     end
 
+    def ect_school_periods
+      Migration::SchoolPeriodPresenter.wrap(
+        fetch_migrated_periods_by_type(ECTAtSchoolPeriod)
+      )
+    end
+
+    def mentor_school_periods
+      Migration::SchoolPeriodPresenter.wrap(
+        fetch_migrated_periods_by_type(MentorAtSchoolPeriod)
+      )
+    end
+
+    def training_periods
+      fetch_migrated_periods_by_type(TrainingPeriod)
+    end
+
+    def mentorship_periods
+      fetch_migrated_periods_by_type(MentorshipPeriod)
+    end
+
   private
 
     def induction_record
       __getobj__
+    end
+
+    def fetch_migrated_periods_by_type(klass)
+      klass.where(legacy_start_id: id).or(klass.where(legacy_end_id: id)).order(:started_on)
     end
 
     def induction_programme
