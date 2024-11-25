@@ -1,9 +1,9 @@
 <div class="govuk-body govuk-!-font-size-14 migration-period">
   <div class="migration-period-title">
-    School period<span class="migration-object-id">(<%= school_period.id %>)</span>
+    School period<span class="migration-object-id">(<%= object_id %>)</span>
   </div>
-  <div class="migration-period-body" style="line-height: 1.4em; padding: 0.5em;">
-    <%= school_period.school_name_and_urn %></br>
-    <%= school_period.started_on %> - <%= school_period.finished_on || "" %>
+  <div class="migration-period-body">
+    <%= school_name_and_urn %></br>
+    <%= period_dates %>
   </div>
 </div>

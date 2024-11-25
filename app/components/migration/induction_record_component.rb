@@ -6,7 +6,7 @@ module Migration
       @induction_record = induction_record
     end
 
-    def attributes_for(attr)
+    def attributes_for(_attr)
       {}
     end
   end

@@ -6,12 +6,20 @@ module Migration
       @training_period = training_period
     end
 
+    def object_id
+      training_period.id
+    end
+
     def lead_provider_name
       training_period.provider_partnership.lead_provider.name
     end
 
     def delivery_partner_name
       training_period.provider_partnership.delivery_partner.name
+    end
+
+    def period_dates
+      [training_period.started_on, training_period.finished_on || "ongoing"].join(" - ")
     end
 
     def attributes_for(attr)

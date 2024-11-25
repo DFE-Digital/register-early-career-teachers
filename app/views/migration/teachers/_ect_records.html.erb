@@ -6,15 +6,9 @@
         <%= render Migration::InductionRecordComponent.new(induction_record: record) %>
       </div>
       <div class="migration-column">
-        <% record.ect_school_periods.each do |period| %>
-          <%= render Migration::SchoolPeriodComponent.new(school_period: Migration::SchoolPeriodPresenter.new(period)) %>
-        <% end %>
-        <% record.training_periods.each do |period| %>
-          <%= render Migration::TrainingPeriodComponent.new(training_period: period) %>
-        <% end %>
-        <% record.mentorship_periods.each do |period| %>
-          <%= render Migration::MentorshipPeriodComponent.new(mentorship_period: period) %>
-        <% end %>
+        <%= render Migration::SchoolPeriodComponent.with_collection(record.ect_school_periods) %>
+        <%= render Migration::TrainingPeriodComponent.with_collection(record.training_periods) %>
+        <%= render Migration::MentorshipPeriodComponent.with_collection(record.mentorship_periods) %>
       </div>
     </div>
   <% end %>

@@ -58,11 +58,15 @@ module Migration
     end
 
     def ect_school_periods
-      fetch_migrated_periods_by_type(ECTAtSchoolPeriod)
+      Migration::SchoolPeriodPresenter.wrap(
+        fetch_migrated_periods_by_type(ECTAtSchoolPeriod)
+      )
     end
 
     def mentor_school_periods
-      fetch_migrated_periods_by_type(MentorAtSchoolPeriod)
+      Migration::SchoolPeriodPresenter.wrap(
+        fetch_migrated_periods_by_type(MentorAtSchoolPeriod)
+      )
     end
 
     def training_periods

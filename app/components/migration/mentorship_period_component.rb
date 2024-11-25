@@ -6,8 +6,16 @@ module Migration
       @mentorship_period = mentorship_period
     end
 
+    def object_id
+      mentorship_period.id
+    end
+
     def mentor_name
       @mentor_name ||= Teachers::Name.new(mentorship_period.mentor.teacher).full_name
+    end
+
+    def period_dates
+      [mentorship_period.started_on, mentorship_period.finished_on || "ongoing"].join(" - ")
     end
 
     def attributes_for(attr)

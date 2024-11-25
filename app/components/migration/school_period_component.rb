@@ -2,10 +2,19 @@ module Migration
   class SchoolPeriodComponent < ViewComponent::Base
     attr_reader :school_period
 
+    delegate :school_name_and_urn, to: :school_period
+
     def initialize(school_period:)
       @school_period = school_period
     end
 
+    def object_id
+      school_period.id
+    end
+
+    def period_dates
+      [school_period.started_on, school_period.finished_on || "ongoing"].join(" - ")
+    end
 
     def attributes_for(attr)
       attrs = {}

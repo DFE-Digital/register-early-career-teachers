@@ -34,8 +34,6 @@ private
                      Migration::ParticipantProfilePresenter.new(
                        Migration::ParticipantProfile.find(teacher.legacy_ect_id)
                      )
-                   else
-                     nil
                    end
   end
 
@@ -44,8 +42,6 @@ private
                         Migration::ParticipantProfilePresenter.new(
                           Migration::ParticipantProfile.find(teacher.legacy_mentor_id)
                         )
-                      else
-                        nil
                       end
   end
 

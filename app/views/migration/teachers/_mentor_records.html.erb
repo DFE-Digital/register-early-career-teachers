@@ -8,7 +8,7 @@
       </div>
       <div class="migration-column">
         <% record.mentor_school_periods.each do |period| %>
-          <%= render Migration::SchoolPeriodComponent.new(school_period: Migration::SchoolPeriodPresenter.new(period)) %>
+          <%= render Migration::SchoolPeriodComponent.new(school_period: period) %>
         <% end %>
         <% record.training_periods.each do |period| %>
           <%= render Migration::TrainingPeriodComponent.new(training_period: period) %>
