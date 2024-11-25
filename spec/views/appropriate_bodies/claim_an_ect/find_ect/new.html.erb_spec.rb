@@ -1,7 +1,7 @@
 RSpec.describe "appropriate_bodies/claim_an_ect/find_ect/new.html.erb" do
   let(:pending_induction_submission) { FactoryBot.build(:pending_induction_submission) }
 
-  expected_title = "Find an early career teacher's record"
+  expected_title = "Find an early career teacher's (ECT) record"
   it "sets the page title to '#{expected_title}'" do
     assign(:pending_induction_submission, pending_induction_submission)
 
