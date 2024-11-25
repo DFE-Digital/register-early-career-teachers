@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Appropriate Body teacher index page", type: :request do
   include AuthHelper
-  let(:appropriate_body) { user.appropriate_bodies.first }
+  let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
 
   describe 'GET /appropriate-body/teachers' do
     context 'when not signed in' do
@@ -15,7 +15,7 @@ RSpec.describe "Appropriate Body teacher index page", type: :request do
     end
 
     context 'when signed in as an appropriate body user' do
-      let!(:user) { sign_in_as(:appropriate_body_user) }
+      let!(:user) { sign_in_as(:appropriate_body_user, appropriate_body:) }
       let!(:emma) { FactoryBot.create(:teacher, first_name: 'Emma') }
       let!(:john) { FactoryBot.create(:teacher, first_name: 'John') }
 

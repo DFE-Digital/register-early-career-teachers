@@ -1,5 +1,6 @@
 RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
   include_context 'fake trs api client'
+  let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
 
   let(:page_heading) { "Find an early career teacher" }
 
@@ -14,9 +15,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
     end
 
     context 'when signed in as an appropriate body user' do
-      # FIXME: we don't have appropriate body users yet so this is just making
-      #        sure they're logged in
-      let!(:user) { sign_in_as(:appropriate_body_user) }
+      let!(:user) { sign_in_as(:appropriate_body_user, appropriate_body:) }
 
       it 'instantiates a new PendingInductionSubmission and renders the page' do
         allow(PendingInductionSubmission).to receive(:new).and_call_original
@@ -43,8 +42,7 @@ RSpec.describe 'Appropriate body claiming an ECT: finding the ECT' do
     context 'when signed in' do
       before { allow(AppropriateBodies::ClaimAnECT::FindECT).to receive(:new).with(any_args).and_call_original }
 
-      let!(:user) { sign_in_as(:appropriate_body_user) }
-      let(:appropriate_body) { AppropriateBody.find(session[:appropriate_body_id]) }
+      let!(:user) { sign_in_as(:appropriate_body_user, appropriate_body:) }
       let(:birth_year_param) { "2001" }
       let(:trn) { "1234567" }
 
