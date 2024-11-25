@@ -7,7 +7,7 @@ RSpec.describe 'Registering an ECT' do
     sign_in_as_admin
   end
 
-  scenario 'Teacher is not found' do
+  scenario 'Teacher with national insurance number is not found' do
     given_there_is_a_school_in_the_service
     and_i_am_on_the_schools_landing_page
     when_i_start_adding_an_ect

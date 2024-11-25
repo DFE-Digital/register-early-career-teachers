@@ -15,6 +15,7 @@ module Schools
             national_insurance_number: NationalInsuranceNumberStep,
             not_found: NotFoundStep,
             review_ect_details: ReviewECTDetailsStep,
+            trn_not_found: TRNNotFoundStep,
           }
         ]
       end

@@ -13,8 +13,9 @@ module Schools
       end
 
       def next_step
-        return :not_found unless ect.in_trs?
+        return :trn_not_found unless ect.matches_trs_trn
         return :national_insurance_number unless ect.matches_trs_dob?
+        return :not_found unless ect.in_trs?
 
         :review_ect_details
       end
@@ -26,6 +27,7 @@ module Schools
                    date_of_birth: date_of_birth.values.join("-"),
                    trs_national_insurance_number: trs_teacher.national_insurance_number,
                    trs_date_of_birth: trs_teacher.date_of_birth,
+                   trs_trn: trs_teacher.trn,
                    trs_first_name: trs_teacher.first_name,
                    trs_last_name: trs_teacher.last_name)
       end
