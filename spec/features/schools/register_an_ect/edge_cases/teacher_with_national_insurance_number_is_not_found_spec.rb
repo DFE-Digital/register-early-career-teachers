@@ -7,7 +7,7 @@ RSpec.describe 'Registering an ECT' do
     sign_in_as_admin
   end
 
-  scenario 'Teacher is not found' do
+  scenario 'Teacher with national insurance number is not found' do
     given_there_is_a_school_in_the_service
     and_i_am_on_the_schools_landing_page
     when_i_start_adding_an_ect
@@ -21,6 +21,9 @@ RSpec.describe 'Registering an ECT' do
 
     when_i_enter_a_national_insurance_number_that_does_not_match
     then_i_should_be_taken_to_the_teacher_not_found_error_page
+
+    when_i_click_try_again
+    then_i_should_be_taken_to_the_find_ect_step_page
   end
 
   def given_there_is_a_school_in_the_service
@@ -68,5 +71,14 @@ RSpec.describe 'Registering an ECT' do
 
   def then_i_should_be_taken_to_the_teacher_not_found_error_page
     expect(page.url).to end_with('/schools/register-ect/not-found')
+  end
+
+  def when_i_click_try_again
+    page.get_by_role('link', name: 'Try again').click
+  end
+
+  def then_i_should_be_taken_to_the_find_ect_step_page
+    path = '/schools/register-ect/find-ect'
+    expect(page.url).to end_with(path)
   end
 end
