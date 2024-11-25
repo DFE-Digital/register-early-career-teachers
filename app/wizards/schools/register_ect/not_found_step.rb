@@ -1,6 +1,6 @@
 module Schools
   module RegisterECT
-    class ConfirmationStep < Step
+    class NotFoundStep < Step
     end
   end
 end

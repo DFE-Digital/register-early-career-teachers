@@ -2,10 +2,7 @@
 
 module Schools
   module RegisterECT
-    class ReviewECTDetailsStep < StoredStep
-      def self.permitted_params
-      end
-
+    class ReviewECTDetailsStep < Step
       def next_step
         :email_address
       end

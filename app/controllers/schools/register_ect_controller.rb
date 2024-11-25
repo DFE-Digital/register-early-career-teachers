@@ -3,11 +3,10 @@
 module Schools
   class RegisterECTController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]
-    before_action :initialize_ect, only: %i[new create]
-    before_action :reset_session, only: :new
+    before_action :reset_wizard, only: :new
 
     FORM_KEY = :register_ect_wizard
-    WIZARD_CLASS = Schools::RegisterECT::BaseWizard.freeze
+    WIZARD_CLASS = Schools::RegisterECT::Wizard.freeze
 
     def start
     end
@@ -22,12 +21,6 @@ module Schools
       else
         render current_step
       end
-    rescue TRS::Errors::TeacherNotFound
-      if current_step == :find_ect
-        redirect_to schools_register_ect_national_insurance_number_path
-      else
-        redirect_to schools_register_ect_not_found_path
-      end
     end
 
   private
@@ -35,40 +28,20 @@ module Schools
     def initialize_wizard
       @wizard = WIZARD_CLASS.new(
         current_step:,
-        step_params:,
-        store:
+        step_params: params,
+        store: SessionRepository.new(session:, form_key: FORM_KEY)
       )
-    end
-
-    def initialize_ect
-      @ect = Schools::TeacherPresenter.new(**@wizard.stored_attrs)
-    end
-
-    def store
-      @store ||= FormData::WizardStepStore.new(session:, form_key: FORM_KEY)
+      @ect = @wizard.ect
     end
 
     def current_step
-      step_from_path = request.path.split("/").last.underscore.to_sym
-      return :not_found if WIZARD_CLASS.steps.first.keys.exclude?(step_from_path)
-
-      step_from_path
+      request.path.split("/").last.underscore.to_sym.tap do |step_from_path|
+        return :not_found unless WIZARD_CLASS.step?(step_from_path)
+      end
     end
 
-    def step_params
-      return default_params if params[current_step].blank?
-
-      params
-    end
-
-    def default_params
-      ActionController::Parameters.new({ current_step => params })
-    end
-
-    def reset_session
-      return if current_step != :find_ect
-
-      @wizard.destroy_session
+    def reset_wizard
+      @wizard.reset if current_step == :find_ect
     end
   end
 end

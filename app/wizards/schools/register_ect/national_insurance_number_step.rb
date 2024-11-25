@@ -2,8 +2,8 @@
 
 module Schools
   module RegisterECT
-    class NationalInsuranceNumberStep < StoredStep
-      attr_accessor :trn, :date_of_birth, :national_insurance_number
+    class NationalInsuranceNumberStep < Step
+      attr_accessor :national_insurance_number
 
       validates :national_insurance_number, national_insurance_number: true
 
@@ -12,7 +12,23 @@ module Schools
       end
 
       def next_step
+        return :not_found unless ect.in_trs?
+
         :review_ect_details
+      end
+
+    private
+
+      def persist
+        ect.update(national_insurance_number:,
+                   trs_national_insurance_number: trs_teacher.national_insurance_number,
+                   trs_date_of_birth: trs_teacher.date_of_birth,
+                   trs_first_name: trs_teacher.first_name,
+                   trs_last_name: trs_teacher.last_name)
+      end
+
+      def trs_teacher
+        @trs_teacher ||= fetch_trs_teacher(trn: ect.trn, national_insurance_number:)
       end
     end
   end

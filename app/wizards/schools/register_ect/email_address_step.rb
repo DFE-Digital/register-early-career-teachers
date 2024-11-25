@@ -2,7 +2,7 @@
 
 module Schools
   module RegisterECT
-    class EmailAddressStep < StoredStep
+    class EmailAddressStep < Step
       attr_accessor :email
 
       validates :email, presence: { message: "Enter the email address" }, notify_email: true

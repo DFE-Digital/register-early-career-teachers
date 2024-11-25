@@ -7,14 +7,12 @@ module TRS
         faraday.headers['X-Api-Version'] = 'Next'
         faraday.headers['Content-Type'] = 'application/json'
         faraday.adapter Faraday.default_adapter
+        faraday.response :logger if Rails.env.development?
       end
     end
 
     def find_teacher(trn:, date_of_birth: nil, national_insurance_number: nil)
       params = { dateOfBirth: date_of_birth, nationalInsuranceNumber: national_insurance_number }.compact
-
-      fail(ArugmentError, "either date_of_birth or national_insurance_number is required") if params.empty?
-
       response = @connection.get(persons_path(trn), params)
 
       if response.success?

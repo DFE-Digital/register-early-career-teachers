@@ -3,7 +3,7 @@ module TRS
     PROHIBITED_FROM_TEACHING_CATEGORY_ID = 'b2b19019-b165-47a3-8745-3297ff152581'.freeze
     INVALID_INDUCTION_STATUSES = %w[Exempt Pass Fail PassedinWales FailedinWales].freeze
 
-    attr_reader :trn, :first_name, :last_name, :date_of_birth, :induction_status
+    attr_reader :trn, :first_name, :last_name, :date_of_birth, :induction_status, :national_insurance_number
 
     def initialize(data)
       @trn = data['trn']
