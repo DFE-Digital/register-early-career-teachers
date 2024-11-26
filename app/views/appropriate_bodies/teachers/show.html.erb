@@ -50,28 +50,39 @@
   <% end %>
 
   <h2 class="govuk-heading-m">Induction periods</h2>
-    <%= govuk_table do |table|
-      table.with_caption(size: 'm', text: '')
 
-      table.with_head do |head|
-        head.with_row do |row|
-          row.with_cell(text: 'Appropriate body')
-          row.with_cell(text: 'Induction programme')
-          row.with_cell(text: 'Start date')
-          row.with_cell(text: 'End date')
-          row.with_cell(text: 'Number of terms', numeric: true)
+  <% @teacher.induction_periods.each.with_index(1).reverse_each do |induction_period, i| %>
+    <%=
+      govuk_summary_list(card: { title: "Induction period #{i}", actions: [govuk_link_to("Edit", "#")] }) do |sl|
+        sl.with_row do |row|
+          row.with_key(text: "Appropriate body")
+          row.with_value(text: induction_period.appropriate_body.name)
         end
-      end
-      table.with_body do |body|
-        @teacher.induction_periods.each do |induction_period |
-          body.with_row do |row|
-            row.with_cell(text: induction_period.appropriate_body.name)
-            row.with_cell(text: induction_programme_choice_name(induction_period.induction_programme))
-            row.with_cell(text: induction_period.started_on.to_fs(:govuk_short))
-            row.with_cell(text: induction_period.finished_on&.to_fs(:govuk_short))
-            row.with_cell(text: induction_period.number_of_terms, numeric: true)
+
+        sl.with_row do |row|
+          row.with_key(text: "Induction programme")
+          row.with_value(text: induction_programme_choice_name(induction_period.induction_programme))
+        end
+
+        if induction_period.number_of_terms.present?
+          sl.with_row do |row|
+            row.with_key(text: "Number of terms")
+            row.with_value(text: induction_period.number_of_terms)
+          end
+        end
+
+        sl.with_row do |row|
+          row.with_key(text: "Start date")
+          row.with_value(text: induction_period.started_on.to_fs(:govuk))
+        end
+
+        if induction_period.finished_on.present?
+          sl.with_row do |row|
+            row.with_key(text: "End date")
+            row.with_value(text: induction_period.finished_on.to_fs(:govuk))
           end
         end
       end
-    end %>
+    %>
+  <% end %>
 <% end %>
