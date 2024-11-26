@@ -74,6 +74,7 @@ hugh_laurie = Teacher.create!(first_name: 'Hugh', last_name: 'Laurie', trn: '478
 andre_roussimoff = Teacher.create!(first_name: 'André', last_name: 'Roussimoff', trn: '8886654')
 imogen_stubbs = Teacher.create!(first_name: 'Imogen', last_name: 'Stubbs', trn: '6352869')
 gemma_jones = Teacher.create!(first_name: 'Gemma', last_name: 'Jones', trn: '9578426')
+anthony_hopkins = Teacher.create!(first_name: 'Anthony', last_name: 'Hopkins', trn: '6228282')
 
 print_seed_info("Adding schools")
 
@@ -106,6 +107,7 @@ schools_indexed_by_urn = schools.index_by(&:urn)
 ackley_bridge = schools_indexed_by_urn.fetch(3_375_958)
 abbey_grove_school = schools_indexed_by_urn.fetch(1_759_427)
 mallory_towers = schools_indexed_by_urn.fetch(5_279_293)
+brookfield_school = schools_indexed_by_urn.fetch(2_976_163)
 
 print_seed_info("Adding appropriate bodies")
 
@@ -390,6 +392,20 @@ TrainingPeriod.create!(
   started_on: 1.year.ago,
   provider_partnership: meadow_grain_partnership_2022
 ).tap { |tp| describe_training_period(tp) }
+
+print_seed_info("Anthony Hopkins (ECT)", indent: 2)
+
+anthony_hopkins_ect_at_brookfield_school = ECTAtSchoolPeriod.create!(
+  teacher: anthony_hopkins,
+  school: brookfield_school,
+  started_on: 2.years.ago
+)
+
+TrainingPeriod.create!(
+  ect_at_school_period: anthony_hopkins_ect_at_brookfield_school,
+  started_on: 2.years.ago,
+  provider_partnership: meadow_grain_partnership_2022
+)
 
 print_seed_info("Adding mentorships:")
 
