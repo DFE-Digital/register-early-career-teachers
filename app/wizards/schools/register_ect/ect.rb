@@ -28,6 +28,10 @@ module Schools
       def induction_completed?
         trs_induction_completed?
       end
+
+      def induction_exempt?
+        trs_induction_exempt?
+      end
     end
   end
 end

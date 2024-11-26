@@ -104,6 +104,8 @@ Rails.application.routes.draw do
 
       get "induction-completed", action: :new
 
+      get "induction-exempt", action: :new
+
       get "review-ect-details", action: :new
       post "review-ect-details", action: :create
 
