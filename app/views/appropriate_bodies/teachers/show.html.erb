@@ -1,4 +1,12 @@
-<% page_data(title: Teachers::Name.new(@teacher).full_name, caption: "TRN: #{@teacher.trn}", caption_size: 'm', error: false) %>
+<%
+  page_data(
+    title: Teachers::Name.new(@teacher).full_name,
+    caption: "TRN: #{@teacher.trn}",
+    caption_size: 'm',
+    error: false,
+    backlink_href: ab_teachers_path
+  )
+%>
 
 <div class="govuk-button-group">
   <%= govuk_button_link_to("Release ECT", new_ab_teacher_release_ect_path(@teacher), secondary: true) %>
@@ -27,7 +35,7 @@
           <%= Teachers::InductionExtensions.new(@teacher).formatted_number_of_terms %>
         <% end %>
 
-        <%= row.with_action(text: "View", visually_hidden_text: "extensions", href: "#") %>
+        <%= row.with_action(text: "View", visually_hidden_text: "extensions", href: ab_teacher_extensions_path(@teacher)) %>
         <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
       <% else %>
         <% row.with_key do %>
@@ -62,37 +70,6 @@
             row.with_cell(text: induction_period.started_on.to_fs(:govuk_short))
             row.with_cell(text: induction_period.finished_on&.to_fs(:govuk_short))
             row.with_cell(text: induction_period.number_of_terms, numeric: true)
-          end
-        end
-      end
-    end %>
-<% end %>
-
-<% if @teacher.induction_extensions.any? %>
-  <h2 class="govuk-heading-m">Induction extensions</h2>
-    <%= govuk_table do |table|
-      table.with_caption(size: 'm', text: '')
-
-      table.with_head do |head|
-        head.with_row do |row|
-          row.with_cell(text: 'Added on')
-          row.with_cell(text: 'Number of terms')
-          row.with_cell(text: '')
-          row.with_cell(text: '')
-        end
-      end
-      table.with_body do |body|
-        @teacher.induction_extensions.order(created_at: :desc).each_with_index do |induction_extension, index |
-          body.with_row do |row|
-            row.with_cell(text: induction_extension.created_at.to_date.to_fs(:govuk))
-            row.with_cell(text: induction_extension.number_of_terms)
-            if index.zero?
-              row.with_cell(text: govuk_link_to("Update", "#"))
-              row.with_cell(text: govuk_link_to("Remove", "#"))
-            else
-              row.with_cell(text: "")
-              row.with_cell(text: "")
-            end
           end
         end
       end

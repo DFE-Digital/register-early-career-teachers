@@ -57,6 +57,8 @@ Rails.application.routes.draw do
       resource :release_ect, only: %i[new create show], path: 'release', controller: 'teachers/release_ect'
       resource :record_passed_outcome, only: %i[new create show], path: 'record-passed-outcome', controller: 'teachers/record_passed_outcome'
       resource :record_failed_outcome, only: %i[new create show], path: 'record-failed-outcome', controller: 'teachers/record_failed_outcome'
+
+      resources :extensions, controller: 'teachers/extensions', only: :index
     end
 
     namespace :claim_an_ect, path: 'claim-an-ect' do
