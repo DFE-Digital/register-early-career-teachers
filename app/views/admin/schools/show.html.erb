@@ -135,7 +135,7 @@
   end
 
   table.with_body do |body|
-    @participants.all_ects.each do |teacher|
+    @school.ect_teachers.each do |teacher|
       body.with_row do |row|
         row.with_cell do
           govuk_link_to Teachers::Name.new(teacher).full_name, admin_teacher_path(teacher)
@@ -157,7 +157,7 @@ end %>
   end
 
   table.with_body do |body|
-    @participants.all_mentors.each do |teacher|
+    @school.mentor_teachers.each do |teacher|
       body.with_row do |row|
         row.with_cell do
           govuk_link_to Teachers::Name.new(teacher).full_name, admin_teacher_path(teacher)

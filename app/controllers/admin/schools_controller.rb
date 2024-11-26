@@ -10,7 +10,6 @@ module Admin
 
     def show
       @school = School.includes(:gias_school).find_by(urn: school_params[:urn])
-      @participants = Schools::Teachers.new(@school)
     end
 
   private
