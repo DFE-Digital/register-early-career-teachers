@@ -18,6 +18,16 @@ module Schools
 
         trs_date_of_birth.to_date == date_of_birth.to_date
       end
+
+      def matches_trs_national_insurance_number?
+        return false if [national_insurance_number, trs_national_insurance_number].any?(&:blank?)
+
+        trs_national_insurance_number == national_insurance_number
+      end
+
+      def induction_completed?
+        trs_induction_completed?
+      end
     end
   end
 end

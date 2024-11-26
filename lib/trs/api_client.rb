@@ -12,7 +12,7 @@ module TRS
     end
 
     def find_teacher(trn:, date_of_birth: nil, national_insurance_number: nil)
-      params = { dateOfBirth: date_of_birth, nationalInsuranceNumber: national_insurance_number }.compact
+      params = { dateOfBirth: date_of_birth, nationalInsuranceNumber: national_insurance_number, include: 'Induction' }.compact
       response = @connection.get(persons_path(trn), params)
 
       if response.success?

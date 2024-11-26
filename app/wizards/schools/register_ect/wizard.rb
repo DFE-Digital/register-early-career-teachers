@@ -12,6 +12,7 @@ module Schools
             confirmation: ConfirmationStep,
             email_address: EmailAddressStep,
             find_ect: FindECTStep,
+            induction_completed: InductionCompletedStep,
             national_insurance_number: NationalInsuranceNumberStep,
             not_found: NotFoundStep,
             review_ect_details: ReviewECTDetailsStep,
