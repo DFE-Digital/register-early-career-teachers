@@ -42,3 +42,12 @@ shared_context 'fake trs api client that finds teacher that has passed their ind
     allow(TRS::APIClient).to receive(:new).and_return(TRS::FakeAPIClient.new(induction_status: 'Pass'))
   end
 end
+
+shared_context 'fake trs api returns a teacher and then a teacher that has completed their induction' do
+  before do
+    allow(TRS::APIClient).to receive(:new).and_return(
+      TRS::FakeAPIClient.new,
+      TRS::FakeAPIClient.new(induction_status: 'Pass')
+    )
+  end
+end

@@ -16,7 +16,7 @@ RSpec.describe 'Registering an ECT' do
     when_i_click_continue
     then_i_am_on_the_find_ect_step_page
 
-    when_i_submit_a_trn_and_a_date_of_birth_that_does_not_match
+    when_i_submit_a_date_of_birth_that_does_not_match
     then_i_should_be_taken_to_the_national_insurance_number_step
 
     when_i_enter_a_national_insurance_number_that_does_not_match
@@ -52,7 +52,7 @@ RSpec.describe 'Registering an ECT' do
     expect(page.url).to end_with('/schools/register-ect/find-ect')
   end
 
-  def when_i_submit_a_trn_and_a_date_of_birth_that_does_not_match
+  def when_i_submit_a_date_of_birth_that_does_not_match
     page.get_by_label('trn').fill('9876543')
     page.get_by_label('day').fill('1')
     page.get_by_label('month').fill('2')
