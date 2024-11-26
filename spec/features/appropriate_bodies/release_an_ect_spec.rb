@@ -50,7 +50,7 @@ private
   end
 
   def then_i_should_see_an_error_summary
-    expect(page.locator('.govuk-error-summary')).to be_present
+    expect(page.locator('.govuk-error-summary')).to be_visible
   end
 
   def and_the_page_title_should_start_with_error
@@ -75,7 +75,7 @@ private
 
   def then_i_should_be_on_the_success_page
     expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/release")
-    expect(page.locator('.govuk-panel')).to be_present
+    expect(page.locator('.govuk-panel')).to be_visible
   end
 
   def and_the_pending_induction_submission_should_have_been_deleted
