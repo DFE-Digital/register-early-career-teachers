@@ -19,12 +19,6 @@
       row.with_key(text: "Induction extended")
       row.with_value(text: Teachers::HasInductionExtensions.new(@teacher).yes_or_no)
     end
-
-    sl.with_row do |row|
-      row.with_key(text: "Terms completed")
-
-      row.with_value(text: Teachers::TermsCompleted.new(@teacher).formatted_terms_completed)
-    end
   end %>
 
   <h2 class="govuk-heading-m">Induction periods</h2>
