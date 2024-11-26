@@ -76,6 +76,10 @@ private
   def then_i_should_be_on_the_success_page
     expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/release")
     expect(page.locator('.govuk-panel')).to be_visible
+
+    teacher_name = ::Teachers::Name.new(teacher).full_name
+
+    expect(page.locator('.govuk-panel')).to have_text(/#{teacher_name} has been released/)
   end
 
   def and_the_pending_induction_submission_should_have_been_deleted
