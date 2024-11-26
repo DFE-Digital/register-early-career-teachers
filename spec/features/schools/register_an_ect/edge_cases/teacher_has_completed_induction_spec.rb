@@ -25,8 +25,8 @@ RSpec.describe 'Registering an ECT' do
   def and_i_submit_a_date_of_birth_and_trn_of_a_teacher_that_has_completed_their_induction
     page.get_by_label('trn').fill('9876543')
     page.get_by_label('day').fill('1')
-    page.get_by_label('month').fill('2')
-    page.get_by_label('year').fill('1980')
+    page.get_by_label('month').fill('12')
+    page.get_by_label('year').fill('2000')
     page.get_by_role('button', name: 'Continue').click
   end
 
