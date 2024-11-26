@@ -14,12 +14,12 @@ module Schools
       # This is temporary. 'School' will be set once DfE signin hooked up
       # School in the session or first school with ects but no mentors or first school
       @school = (school_from_session || first_school_with_no_mentors_but_ects || first_school).tap do |school|
-        session[:school_id] = school&.id
+        session[:school_urn] = school&.urn
       end
     end
 
     def school_from_session
-      School.joins(:gias_school).find_by_id(session[:school_id])
+      School.joins(:gias_school).find_by_urn(session[:school_urn])
     end
 
     def first_school_with_no_mentors_but_ects
