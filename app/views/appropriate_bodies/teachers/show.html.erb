@@ -4,22 +4,42 @@
   <%= govuk_button_link_to("Release ECT", new_ab_teacher_release_ect_path(@teacher), secondary: true) %>
   <%= govuk_button_link_to("Record passed outcome", new_ab_teacher_record_passed_outcome_path(@teacher), secondary: true) %>
   <%= govuk_button_link_to("Record failed outcome", new_ab_teacher_record_failed_outcome_path(@teacher), secondary: true) %>
-  <%= govuk_button_link_to("Add an extension", "#", secondary: true) %>
 </div>
 
 <% if @teacher.induction_periods.any? %>
   <h2 class="govuk-heading-m">Induction Summary</h2>
-  <%= govuk_summary_list do |sl|
-    sl.with_row do |row|
-      row.with_key(text: "Induction start date")
-      row.with_value(text: @teacher.induction_periods.last.started_on.to_fs(:govuk))
-    end
+  <%= govuk_summary_list do |sl| %>
+    <% sl.with_row do |row| %>
+      <% row.with_key do %>
+        <%= govuk_visually_hidden('Induction') %> Start date
+      <% end %>
 
-    sl.with_row do |row|
-      row.with_key(text: "Induction extended")
-      row.with_value(text: Teachers::HasInductionExtensions.new(@teacher).yes_or_no)
-    end
-  end %>
+      <% row.with_value(text: @teacher.induction_periods.last.started_on.to_fs(:govuk)) %>
+    <% end %>
+
+    <% sl.with_row do |row| %>
+      <% if @teacher.induction_extensions.any? %>
+        <% row.with_key do %>
+          <%= govuk_visually_hidden('Induction') %> Extended by
+        <% end %>
+
+        <% row.with_value do %>
+          <%= Teachers::InductionExtensions.new(@teacher).formatted_number_of_terms %>
+        <% end %>
+
+        <%= row.with_action(text: "View", visually_hidden_text: "extensions", href: "#") %>
+        <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
+      <% else %>
+        <% row.with_key do %>
+          <%= govuk_visually_hidden('Induction') %> Extended
+        <% end %>
+
+        <% row.with_value(text: "No") %>
+
+        <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
+      <% end %>
+    <% end %>
+  <% end %>
 
   <h2 class="govuk-heading-m">Induction periods</h2>
     <%= govuk_table do |table|
