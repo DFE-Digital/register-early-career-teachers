@@ -5,3 +5,4 @@ ENVIRONMENT_PHASE_BANNER_CONTENT: This is a review application, not a real servi
 ENABLE_PERSONAS: true
 ENABLE_SCHOOLS_INTERFACE: true
 TEST_GUIDANCE: true
+SENTRY_ENVIRONMENT: review

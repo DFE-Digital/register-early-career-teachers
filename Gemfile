@@ -20,6 +20,7 @@ gem "govuk_markdown"
 
 gem "mail-notify"
 
+gem "sentry-rails"
 gem "solid_queue"
 
 # DfE Sign-In
