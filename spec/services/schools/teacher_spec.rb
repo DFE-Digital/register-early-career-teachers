@@ -18,8 +18,9 @@ describe Schools::Teacher do
 
       expect(result).to eq([
         {
-          ect: ::Teachers::Name.new(ect).full_name,
-          mentor: ::Teachers::Name.new(mentor).full_name,
+          ect_name: ::Teachers::Name.new(ect).full_name,
+          ect_trn: ect.trn,
+          mentor_name: ::Teachers::Name.new(mentor).full_name,
           status: Schools::Teacher::IN_PROGRESS,
         }
       ])

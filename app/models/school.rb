@@ -4,6 +4,11 @@ class School < ApplicationRecord
   has_many :ect_at_school_periods, inverse_of: :school
   has_many :mentor_at_school_periods, inverse_of: :school
 
+  has_many :current_ect_teachers, -> { distinct.merge(ECTAtSchoolPeriod.ongoing) }, through: :ect_at_school_periods, source: :teacher
+  has_many :current_mentor_teachers, -> { distinct.merge(MentorAtSchoolPeriod.ongoing) }, through: :mentor_at_school_periods, source: :teacher
+  has_many :ect_teachers, -> { distinct }, through: :ect_at_school_periods, source: :teacher
+  has_many :mentor_teachers, -> { distinct }, through: :mentor_at_school_periods, source: :teacher
+
   # Validations
   validates :urn,
             presence: true,

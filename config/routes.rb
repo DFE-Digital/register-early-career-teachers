@@ -116,4 +116,13 @@ Rails.application.routes.draw do
       get "confirmation", action: :new
     end
   end
+
+  namespace :schools, path: :school do
+    namespace :register_mentor, path: "register-mentor" do
+      get "what-you-will-need", as: :start, action: :start
+
+      get "find-mentor", action: :new
+      post "find-mentor", action: :create
+    end
+  end
 end
