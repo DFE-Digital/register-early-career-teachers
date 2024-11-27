@@ -23,11 +23,7 @@ module Migrators
     end
 
     def migrate!
-      Rails.logger.info("Migrating #{self.class.record_count} provider relationships")
-
       migrate(self.class.provider_relationships.includes(:lead_provider, :delivery_partner, :cohort)) do |provider_relationship|
-        Rails.logger.info("  --> #{provider_relationship.id}")
-
         ::ProviderPartnership.create!(lead_provider: ::LeadProvider.find_by!(name: provider_relationship.lead_provider.name),
                                       delivery_partner: ::DeliveryPartner.find_by!(name: provider_relationship.delivery_partner.name),
                                       academic_year: ::AcademicYear.find(provider_relationship.cohort.start_year))

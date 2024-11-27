@@ -19,10 +19,7 @@ module Migrators
     end
 
     def migrate!
-      Rails.logger.info("Migrating #{self.class.record_count} delivery partners")
-
       migrate(self.class.delivery_partners) do |delivery_partner|
-        Rails.logger.info("  --> #{delivery_partner.name}")
         ::DeliveryPartner.create!(name: delivery_partner.name)
       end
     end

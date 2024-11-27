@@ -4,6 +4,10 @@ module Admin
       Teachers::Name.new(teacher).full_name
     end
 
+    def roles
+      Teachers::Role.new(teacher:).to_s
+    end
+
     def ect?
       teacher.ect_at_school_periods.any?
     end

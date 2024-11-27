@@ -1,0 +1,35 @@
+    <h2 class="govuk-heading-m">
+      A migration is currently in-progress
+    </h3>
+    <p class="govuk-body">It was started <%= tag.strong(time_ago_in_words(migration_started_at(@data_migrations))) %> ago.</p>
+
+<%= govuk_table do |table|
+  table.with_head do |head|
+    head.with_row do |row|
+      row.with_cell(text: "Model")
+      row.with_cell(text: "Total records")
+      row.with_cell(text: "Workers queued")
+      row.with_cell(text: "Workers running")
+      row.with_cell(text: "Workers complete")
+      row.with_cell(text: "Number processed")
+      row.with_cell(text: "Number of failures")
+      row.with_cell(text: "Success rate")
+    end
+  end
+
+  table.with_body do |body|
+    @data_migrations.group_by(&:model).each do |model, data_migrations|
+      q = DataMigration.where(model:)
+      body.with_row(html_attributes: { class: "data-migration-#{model.parameterize}" }) do |row|
+        row.with_cell(text: model.humanize)
+        row.with_cell(html_attributes: { class: "total-count" }, text: number_with_delimiter(Migrators::Base.find_by_model(model).record_count))
+        row.with_cell(html_attributes: { class: "queued-workers" }, text: q.where(started_at: nil).count)
+        row.with_cell(html_attributes: { class: "running-workers" }, text: q.where.not(started_at: nil).where(completed_at: nil).count)
+        row.with_cell(html_attributes: { class: "completed-workers" }, text: q.where.not(completed_at: nil).count)
+        row.with_cell(html_attributes: { class: "processed-count" }, text: number_with_delimiter(q.where.not(started_at: nil).sum(:processed_count)))
+        row.with_cell(html_attributes: { class: "failure-count" }, text: data_migration_failure_count_tag(data_migrations))
+        row.with_cell(html_attributes: { class: "percentage-successfully-migrated" }, text: data_migration_percentage_migrated_successfully_tag(data_migrations))
+      end
+    end
+  end
+end %>

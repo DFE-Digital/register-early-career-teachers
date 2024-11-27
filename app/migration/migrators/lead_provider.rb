@@ -19,10 +19,7 @@ module Migrators
     end
 
     def migrate!
-      Rails.logger.info("Migrating #{self.class.record_count} lead providers")
-
       migrate(self.class.lead_providers) do |lead_provider|
-        Rails.logger.info("  --> #{lead_provider.name}")
         ::LeadProvider.create!(name: lead_provider.name)
       end
     end

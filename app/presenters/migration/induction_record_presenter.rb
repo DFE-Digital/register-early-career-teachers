@@ -1,5 +1,10 @@
 module Migration
   class InductionRecordPresenter < SimpleDelegator
+    delegate :ect?, to: :participant_profile
+    delegate :mentor?, to: :participant_profile
+    delegate :name, to: :school, prefix: true
+    delegate :urn, to: :school, prefix: true
+
     def self.wrap(induction_records)
       induction_records.map { |induction_record| new(induction_record) }
     end
@@ -45,9 +50,6 @@ module Migration
     def mentor_name
       induction_record.mentor_profile&.teacher_profile&.user&.full_name || ""
     end
-
-    delegate :name, to: :school, prefix: true
-    delegate :urn, to: :school, prefix: true
 
     def school_name_and_urn
       "#{school_name} (#{school.urn})"
