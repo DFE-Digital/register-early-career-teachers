@@ -26,7 +26,7 @@ module PersonasHelper
   end
 
   def persona_user_type(persona)
-    split_persona_name(persona.name)[:org_type]
+    split_persona_name(persona.name)[:persona_type]
   end
 
   def persona_image(name, height: '150px')
@@ -54,13 +54,13 @@ private
     return nil unless match
 
     org = match[:org]
-    org_type = case org
-               when /School$/i
-                 'School user'
-               when /Associate Body$/i
-                 'Appropriate body user'
-               end
+    persona_type = case org
+                   when /School$/i
+                     'School user'
+                   when /Associate Body$/i
+                     'Appropriate body user'
+                   end
 
-    { name: match[:name], org: org, org_type: org_type }
+    { name: match[:name], org:, persona_type: }
   end
 end
