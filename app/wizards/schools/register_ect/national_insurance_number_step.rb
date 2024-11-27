@@ -27,8 +27,7 @@ module Schools
                    trs_date_of_birth: trs_teacher.date_of_birth,
                    trs_first_name: trs_teacher.first_name,
                    trs_last_name: trs_teacher.last_name,
-                   trs_induction_completed?: trs_teacher.induction_status == 'Pass',
-                   trs_induction_exempt?: trs_teacher.induction_status == 'Exempt')
+                   trs_induction_status: trs_teacher.induction_status)
       end
 
       def trs_teacher
