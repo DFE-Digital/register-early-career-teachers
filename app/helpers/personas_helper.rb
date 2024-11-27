@@ -9,6 +9,14 @@ module PersonasHelper
     appropriate_bodies[appropriate_body_name]
   end
 
+  def school_id_from_user_name(name)
+    fail(PersonasNotAvailableError) unless Rails.application.config.enable_personas
+
+    school_ids = GIAS::School.joins(:school).pluck('gias_schools.name', 'schools.id').to_h
+    name_of_school = school_ids.keys.find { |school_name| Regexp.compile(school_name) =~ name }
+    school_ids[name_of_school]
+  end
+
   def persona_name(persona)
     split_persona_name(persona.name)[:name]
   end
