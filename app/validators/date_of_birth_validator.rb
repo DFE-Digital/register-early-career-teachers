@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DateOfBirthValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     date_of_birth = Schools::Validation::DateOfBirth.new(value)

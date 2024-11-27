@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class NationalInsuranceNumberValidator < ActiveModel::EachValidator
   attr_reader :national_insurance_number
 

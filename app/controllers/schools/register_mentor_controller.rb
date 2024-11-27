@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Schools
   class RegisterMentorController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]

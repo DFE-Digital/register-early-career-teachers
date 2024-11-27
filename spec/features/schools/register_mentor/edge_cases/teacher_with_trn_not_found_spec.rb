@@ -17,7 +17,7 @@ RSpec.describe 'Registering a mentor' do
     when_i_click_continue
     then_i_should_be_taken_to_the_find_mentor_page
 
-    and_i_submit_a_date_of_birth_and_unknown_trn
+    when_i_submit_a_date_of_birth_and_unknown_trn
     then_i_should_be_taken_to_the_teacher_not_found_error_page
 
     when_i_click_try_again
@@ -66,27 +66,7 @@ RSpec.describe 'Registering a mentor' do
   end
 
   def then_i_should_be_taken_to_the_teacher_not_found_error_page
-    path = '/school/register-mentort/trn-not-found'
-    expect(page.url).to end_with(path)
-  end
-
-  def given_i_am_on_the_find_mentor_step_page
-    path = '/school/register-mentor/find-mentor'
-    page.goto path
-    expect(page.url).to end_with(path)
-  end
-
-  def and_i_submit_a_date_of_birth_and_unknown_trn
-    page.get_by_label('trn').fill('9876543')
-    page.get_by_label('day').fill('1')
-    page.get_by_label('month').fill('2')
-    page.get_by_label('year').fill('1980')
-    page.get_by_role('button', name: 'Continue').click
-  end
-
-  def then_i_should_be_taken_to_the_teacher_not_found_error_page
-    path = '/school/register-mentor/trn-not-found'
-    expect(page.url).to end_with(path)
+    expect(page.url).to end_with('/school/register-mentor/trn-not-found')
   end
 
   def when_i_click_try_again
