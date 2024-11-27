@@ -99,11 +99,9 @@ Rails.application.routes.draw do
       post "national-insurance-number", action: :create
 
       get "trn-not-found", action: :new
-
       get "not-found", action: :new
 
       get "induction-completed", action: :new
-
       get "induction-exempt", action: :new
 
       get "review-ect-details", action: :new
