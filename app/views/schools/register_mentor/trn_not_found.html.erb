@@ -1,0 +1,6 @@
+<% page_data(title: "We're unable to match the mentor with the details you provided", error: false) %>
+
+<p class="govuk-body">You can check the mentor's teacher reference number (TRN) is accurate by <%= govuk_link_to('reviewing their teacher record', 'https://check-a-teachers-record.education.gov.uk/check-records/sign-in') %>.</p>
+<p class="govuk-body">Alternatively, you can ask the mentor to check their TRN by using the <%= govuk_link_to('Find a lost TRN service', 'https://find-a-lost-trn.education.gov.uk/start') %>.</p>
+
+<%= govuk_button_link_to("Try again", schools_register_mentor_find_mentor_path) %>
