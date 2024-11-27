@@ -49,6 +49,62 @@ describe InductionPeriod do
         it { is_expected.to validate_presence_of(:number_of_terms).with_message("Enter a number of terms") }
       end
     end
+
+    describe "number_of_terms_for_ongoing_induction_period" do
+      let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
+      let(:teacher) { FactoryBot.create(:teacher) }
+
+      subject do
+        FactoryBot.build(:induction_period,
+                         appropriate_body: appropriate_body,
+                         teacher: teacher,
+                         finished_on: Date.current)
+      end
+
+      context "when finished_on is blank" do
+        before { subject.finished_on = nil }
+        it "is valid" do
+          expect(subject).to be_valid
+        end
+      end
+
+      context "when number_of_terms is blank" do
+        before { subject.number_of_terms = nil }
+        it "is valid" do
+          subject.finished_on = nil
+          expect(subject).to be_valid
+        end
+      end
+
+      context "when number_of_terms is 0" do
+        before { subject.number_of_terms = 0 }
+        it "is valid" do
+          expect(subject).to be_valid
+        end
+      end
+
+      context "when number_of_terms is 1 or greater" do
+        before { subject.number_of_terms = 1 }
+        it "is valid" do
+          expect(subject).to be_valid
+        end
+      end
+
+      context "when number_of_terms is between 0 and 1" do
+        before { subject.number_of_terms = 0.5 }
+
+        it "is invalid" do
+          expect(subject).not_to be_valid
+        end
+
+        it "adds the correct error message" do
+          subject.valid?
+          expect(subject.errors[:number_of_terms]).to include(
+            "Partial terms can only be recorded after completing a full term of induction. If the early career teacher has done less than one full term of induction they cannot record partial terms and the number inputted should be 0."
+          )
+        end
+      end
+    end
   end
 
   describe "scopes" do
