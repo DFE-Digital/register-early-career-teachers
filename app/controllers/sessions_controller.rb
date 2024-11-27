@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
     # NOTE: OTP authentication is handled in OTPSessionsController as it is not omniauth
     case provider
     when "developer"
+      # FIXME: do this using the SessionManager
       if params["appropriate_body_id"]
         session["appropriate_body_id"] = params["appropriate_body_id"]
       end

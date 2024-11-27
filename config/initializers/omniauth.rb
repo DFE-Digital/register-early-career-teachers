@@ -11,21 +11,21 @@ Rails.application.config.middleware.use(OmniAuth::Builder) do
 
   provider(
     :openid_connect,
-    scope: %w[openid profile email organisation],
-    name: :dfe,
-    discovery: true,
-    response_type: :code,
-    path_prefix: '/auth',
     callback_path: '/auth/dfe/callback',
     client_options: {
-      port: dfe_sign_in_issuer_uri&.port,
-      scheme: dfe_sign_in_issuer_uri&.scheme,
       host: dfe_sign_in_issuer_uri&.host,
       identifier: dfe_sign_in_identifier,
-      secret: dfe_sign_in_secret,
+      port: dfe_sign_in_issuer_uri&.port,
       redirect_uri: dfe_sign_in_redirect_uri&.to_s,
+      scheme: dfe_sign_in_issuer_uri&.scheme,
+      secret: dfe_sign_in_secret,
     },
+    discovery: true,
     issuer: ("#{dfe_sign_in_issuer_uri}:#{dfe_sign_in_issuer_uri.port}" if dfe_sign_in_issuer_uri.present?),
+    name: :dfe,
+    path_prefix: '/auth',
+    response_type: :code,
+    scope: %w[openid profile email organisation]
   )
 
   OmniAuth.config.logger = Rails.logger
