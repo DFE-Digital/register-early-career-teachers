@@ -13,5 +13,8 @@ port ENV.fetch("PORT", 3000)
 environment ENV.fetch("RAILS_ENV") { "development" }
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
+# FIXME: add a env var config flag here
+bind 'ssl://localhost:3001'
+
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart

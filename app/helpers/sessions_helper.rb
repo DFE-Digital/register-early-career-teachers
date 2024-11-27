@@ -6,6 +6,8 @@ module SessionsHelper
       options << govuk_link_to("Sign-in with a persona", personas_path, no_visited_state: true)
     end
 
+    options << govuk_link_to("Sign-in with DfE Sign-in", '/auth/dfe', no_visited_state: true)
+
     options
   end
 end
