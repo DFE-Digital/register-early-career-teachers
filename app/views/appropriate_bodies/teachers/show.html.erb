@@ -1,109 +1,88 @@
-<% page_data(title: Teachers::Name.new(@teacher).full_name, error: false) %>
+<%
+  page_data(
+    title: Teachers::Name.new(@teacher).full_name,
+    caption: "TRN: #{@teacher.trn}",
+    caption_size: 'm',
+    error: false,
+    backlink_href: ab_teachers_path
+  )
+%>
 
 <div class="govuk-button-group">
   <%= govuk_button_link_to("Release ECT", new_ab_teacher_release_ect_path(@teacher), secondary: true) %>
   <%= govuk_button_link_to("Record passed outcome", new_ab_teacher_record_passed_outcome_path(@teacher), secondary: true) %>
   <%= govuk_button_link_to("Record failed outcome", new_ab_teacher_record_failed_outcome_path(@teacher), secondary: true) %>
-  <%= govuk_button_link_to("Add an extension", "#", secondary: true) %>
 </div>
 
-<h2 class="govuk-heading-m">Early career teacher<h2>
-
-<%=
-  govuk_summary_list do |sl|
-    sl.with_row do |row|
-      row.with_key(text: "Name")
-      row.with_value(text: Teachers::Name.new(@teacher).full_name)
-    end
-
-    sl.with_row do |row|
-      row.with_key(text: "TRN")
-      row.with_value(text: @teacher.trn)
-    end
-
-    sl.with_row do |row|
-      row.with_key(text: "Induction status")
-
-      # FIXME: This is a placeholder. The actual status should be displayed here.
-      row.with_value(text: govuk_tag(text: "placeholder", colour: %w[grey green red purple orange yellow].sample))
-    end
-  end
-%>
-
 <% if @teacher.induction_periods.any? %>
-  <h2 class="govuk-heading-m">Induction Summary<h2>
-  <%= govuk_summary_list do |sl|
-    sl.with_row do |row|
-      row.with_key(text: "Induction start date")
-      row.with_value(text: @teacher.induction_periods.last.started_on.to_fs(:govuk))
-    end
+  <h2 class="govuk-heading-m">Induction summary</h2>
+  <%= govuk_summary_list do |sl| %>
+    <% sl.with_row do |row| %>
+      <% row.with_key do %>
+        <%= govuk_visually_hidden('Induction') %> Start date
+      <% end %>
 
-    sl.with_row do |row|
-      row.with_key(text: "Induction extended")
-      row.with_value(text: Teachers::HasInductionExtensions.new(@teacher).yes_or_no)
-    end
+      <% row.with_value(text: @teacher.induction_periods.last.started_on.to_fs(:govuk)) %>
+    <% end %>
 
-    sl.with_row do |row|
-      row.with_key(text: "Terms completed")
+    <% sl.with_row do |row| %>
+      <% if @teacher.induction_extensions.any? %>
+        <% row.with_key do %>
+          <%= govuk_visually_hidden('Induction') %> Extended by
+        <% end %>
 
-      row.with_value(text: Teachers::TermsCompleted.new(@teacher).formatted_terms_completed)
-    end
-  end %>
+        <% row.with_value do %>
+          <%= Teachers::InductionExtensions.new(@teacher).formatted_number_of_terms %>
+        <% end %>
 
-  <h2 class="govuk-heading-m">Induction periods<h2>
-    <%= govuk_table do |table|
-      table.with_caption(size: 'm', text: '')
+        <%= row.with_action(text: "View", visually_hidden_text: "extensions", href: ab_teacher_extensions_path(@teacher)) %>
+        <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
+      <% else %>
+        <% row.with_key do %>
+          <%= govuk_visually_hidden('Induction') %> Extended
+        <% end %>
 
-      table.with_head do |head|
-        head.with_row do |row|
-          row.with_cell(text: 'Appropriate body')
-          row.with_cell(text: 'Induction programme')
-          row.with_cell(text: 'Start date')
-          row.with_cell(text: 'End date')
-          row.with_cell(text: 'Number of terms', numeric: true)
+        <% row.with_value(text: "No") %>
+
+        <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <h2 class="govuk-heading-m">Induction periods</h2>
+
+  <% @teacher.induction_periods.each.with_index(1).reverse_each do |induction_period, i| %>
+    <%=
+      govuk_summary_list(card: { title: "Induction period #{i}", actions: [govuk_link_to("Edit", "#")] }) do |sl|
+        sl.with_row do |row|
+          row.with_key(text: "Appropriate body")
+          row.with_value(text: induction_period.appropriate_body.name)
         end
-      end
-      table.with_body do |body|
-        @teacher.induction_periods.each do |induction_period |
-          body.with_row do |row|
-            row.with_cell(text: induction_period.appropriate_body.name)
-            row.with_cell(text: induction_programme_choice_name(induction_period.induction_programme))
-            row.with_cell(text: induction_period.started_on.to_fs(:govuk_short))
-            row.with_cell(text: induction_period.finished_on&.to_fs(:govuk_short))
-            row.with_cell(text: induction_period.number_of_terms, numeric: true)
+
+        sl.with_row do |row|
+          row.with_key(text: "Induction programme")
+          row.with_value(text: induction_programme_choice_name(induction_period.induction_programme))
+        end
+
+        if induction_period.number_of_terms.present?
+          sl.with_row do |row|
+            row.with_key(text: "Number of terms")
+            row.with_value(text: induction_period.number_of_terms)
+          end
+        end
+
+        sl.with_row do |row|
+          row.with_key(text: "Start date")
+          row.with_value(text: induction_period.started_on.to_fs(:govuk))
+        end
+
+        if induction_period.finished_on.present?
+          sl.with_row do |row|
+            row.with_key(text: "End date")
+            row.with_value(text: induction_period.finished_on.to_fs(:govuk))
           end
         end
       end
-    end %>
-<% end %>
-
-<% if @teacher.induction_extensions.any? %>
-  <h2 class="govuk-heading-m">Induction periods<h2>
-    <%= govuk_table do |table|
-      table.with_caption(size: 'm', text: '')
-
-      table.with_head do |head|
-        head.with_row do |row|
-          row.with_cell(text: 'Added on')
-          row.with_cell(text: 'Number of terms')
-          row.with_cell(text: '')
-          row.with_cell(text: '')
-        end
-      end
-      table.with_body do |body|
-        @teacher.induction_extensions.order(created_at: :desc).each_with_index do |induction_extension, index |
-          body.with_row do |row|
-            row.with_cell(text: induction_extension.created_at.to_date.to_fs(:govuk))
-            row.with_cell(text: induction_extension.number_of_terms)
-            if index.zero?
-              row.with_cell(text: govuk_link_to("Update", "#"))
-              row.with_cell(text: govuk_link_to("Remove", "#"))
-            else
-              row.with_cell(text: "")
-              row.with_cell(text: "")
-            end
-          end
-        end
-      end
-    end %>
+    %>
+  <% end %>
 <% end %>
