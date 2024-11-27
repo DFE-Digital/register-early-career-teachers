@@ -17,6 +17,9 @@
           (<%= persona.email %>)
         </h2>
         <div>
+          <h3 class="govuk-heading-s"><%= persona_user_type(persona) %></h3>
+        </div>
+        <div>
           <%= tag.p(persona_organisation(persona)) %>
         </div>
 
