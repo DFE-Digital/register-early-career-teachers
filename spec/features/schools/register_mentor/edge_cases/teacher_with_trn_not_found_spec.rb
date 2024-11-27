@@ -70,9 +70,6 @@ RSpec.describe 'Registering a mentor' do
     expect(page.url).to end_with(path)
   end
 
-
-
-
   def given_i_am_on_the_find_mentor_step_page
     path = '/school/register-mentor/find-mentor'
     page.goto path
