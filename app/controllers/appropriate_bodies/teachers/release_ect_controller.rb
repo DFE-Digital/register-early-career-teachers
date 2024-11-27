@@ -18,7 +18,10 @@ module AppropriateBodies
 
         PendingInductionSubmission.transaction do
           if @pending_induction_submission.save(context: :release_ect) && release_ect.release!
-            redirect_to ab_teacher_release_ect_path(@teacher)
+            redirect_to(
+              ab_teacher_release_ect_path(@teacher),
+              flash: { teacher_name: ::Teachers::Name.new(@teacher).full_name }
+            )
           else
             render :new
           end
@@ -26,7 +29,7 @@ module AppropriateBodies
       end
 
       def show
-        @teacher = find_teacher
+        @teacher_name = flash['teacher_name']
       end
 
     private

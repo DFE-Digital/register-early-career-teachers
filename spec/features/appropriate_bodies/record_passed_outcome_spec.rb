@@ -65,7 +65,7 @@ private
 
   def then_i_should_be_on_the_success_page
     expect(page.url).to end_with("/appropriate-body/teachers/#{trn}/record-passed-outcome")
-    expect(page.locator('.govuk-panel')).to be_present
+    expect(page.locator('.govuk-panel')).to be_visible
   end
 
   def and_the_pending_induction_submission_record_should_have_the_right_data_in_it
