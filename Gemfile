@@ -21,7 +21,9 @@ gem "govuk_markdown"
 gem "mail-notify"
 
 gem "sentry-rails"
+gem "sentry-ruby"
 gem "solid_queue"
+gem "stackprof"
 
 # DfE Sign-In
 gem "omniauth"

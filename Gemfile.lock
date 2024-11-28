@@ -512,6 +512,7 @@ GEM
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
+    stackprof (0.2.26)
     stringio (3.1.2)
     swd (2.0.3)
       activesupport (>= 3)
@@ -603,8 +604,10 @@ DEPENDENCIES
   rubyzip
   savon
   sentry-rails
+  sentry-ruby
   shoulda-matchers
   solid_queue
+  stackprof
   tzinfo-data
 
 RUBY VERSION
