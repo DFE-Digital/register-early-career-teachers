@@ -40,8 +40,6 @@ private
   end
 
   def set_sentry_user
-    return unless current_user
-
-    Sentry.set_user(id: current_user.id)
+    Sentry.set_user(id: @current_user&.id)
   end
 end
