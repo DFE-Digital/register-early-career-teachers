@@ -14,6 +14,7 @@ class TestGuidanceComponent < ViewComponent::Base
     def rows
       [
         ["1000890", "15/01/1997", "JL049125A", "Induction completed"],
+        ["3002564", "05/07/1991", "JK028223B", "Exempt from induction"],
         ["3002586", "03/02/1977", "OA647867D", ""],
         ["3002585", "02/01/1966", "MA251209B", ""],
         ["3002584", "24/11/1955", "RE937588C", ""],

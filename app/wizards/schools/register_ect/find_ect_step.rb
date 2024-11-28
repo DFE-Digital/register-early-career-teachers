@@ -14,8 +14,9 @@ module Schools
 
       def next_step
         return :trn_not_found unless ect.in_trs?
-        return :induction_completed if ect.induction_completed? && ect.matches_trs_dob?
         return :national_insurance_number unless ect.matches_trs_dob?
+        return :induction_completed if ect.induction_completed?
+        return :induction_exempt if ect.induction_exempt?
 
         :review_ect_details
       end
@@ -25,12 +26,11 @@ module Schools
       def persist
         ect.update(trn:,
                    date_of_birth: date_of_birth.values.join("-"),
-                   trs_national_insurance_number: trs_teacher.national_insurance_number,
                    trs_date_of_birth: trs_teacher.date_of_birth,
                    trs_trn: trs_teacher.trn,
                    trs_first_name: trs_teacher.first_name,
                    trs_last_name: trs_teacher.last_name,
-                   trs_induction_completed?: trs_teacher.induction_status == 'Pass')
+                   trs_induction_status: trs_teacher.induction_status)
       end
 
       def trs_teacher
