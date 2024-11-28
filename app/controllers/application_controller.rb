@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate
+  before_action :set_sentry_user
 
   include Pagy::Backend
 
@@ -36,5 +37,9 @@ private
 
   def session_manager
     @session_manager ||= Sessions::SessionManager.new(session)
+  end
+
+  def set_sentry_user
+    Sentry.set_user(id: current_user&.id)
   end
 end
