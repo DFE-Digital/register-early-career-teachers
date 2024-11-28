@@ -16,6 +16,10 @@ class SessionsController < ApplicationController
         session["appropriate_body_id"] = params["appropriate_body_id"]
       end
 
+      if params["school_id"]
+        session["school_id"] = params["school_id"]
+      end
+
       session_manager.begin_session!(user_info.uid, provider)
     when "dfe"
       raise provider
