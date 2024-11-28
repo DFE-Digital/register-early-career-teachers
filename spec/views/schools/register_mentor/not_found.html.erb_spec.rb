@@ -1,4 +1,4 @@
-RSpec.describe "schools/register_mentor/trn_not_found.html.erb" do
+RSpec.describe "schools/register_mentor/not_found.html.erb" do
   let(:find_a_lost_trn_path) { "https://find-a-lost-trn.education.gov.uk/start" }
   let(:review_teacher_record_path) { "https://www.gov.uk/guidance/check-a-teachers-record" }
   let(:try_again_path) { schools_register_mentor_find_mentor_path }

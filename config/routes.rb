@@ -126,7 +126,11 @@ Rails.application.routes.draw do
       get "find-mentor", action: :new
       post "find-mentor", action: :create
 
+      get "national-insurance-number", action: :new
+      post "national-insurance-number", action: :create
+
       get "trn-not-found", action: :new
+      get "not-found", action: :new
 
       get "review-mentor-details", action: :new
       post "review-mentor-details", action: :create

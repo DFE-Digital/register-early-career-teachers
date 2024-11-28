@@ -1,7 +1,6 @@
 RSpec.describe "schools/register_mentor/find_mentor.html.erb" do
   let(:back_path) { schools_register_mentor_start_path }
   let(:continue_path) { schools_register_mentor_find_mentor_path }
-  let(:step) { Schools::RegisterMentor::FindMentorStep.new }
   let(:title) { "Find a mentor" }
   let(:wizard) { Schools::RegisterMentor::Wizard.new(current_step: :find_mentor, store: {}) }
 
