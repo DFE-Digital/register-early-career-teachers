@@ -1,25 +1,27 @@
-<% page_data(title: "Check if this is your ECT", backlink_href: schools_register_ect_find_ect_path) %>
+<% page_data(title: "Check mentor details", backlink_href: schools_register_mentor_find_mentor_path) %>
+
+<p>There is a teacher record that matches the details you have provided.</p>
 
 <%= govuk_summary_list do |summary_list|
   summary_list.with_row do |row|
     row.with_key(text: 'Name')
-    row.with_value(text: @ect.full_name)
+    row.with_value(text: @mentor.full_name)
   end
 
   summary_list.with_row do |row|
     row.with_key(text: 'Teacher Reference Number (TRN)')
-    row.with_value(text: @ect.trn)
+    row.with_value(text: @mentor.trn)
   end
 
-  if @ect.matches_trs_dob?
+  if @mentor.matches_trs_dob?
     summary_list.with_row do |row|
       row.with_key(text: 'Date of birth')
-      row.with_value(text: @ect.govuk_date_of_birth)
+      row.with_value(text: @mentor.govuk_date_of_birth)
     end
   else
     summary_list.with_row do |row|
       row.with_key(text: 'National insurance number')
-      row.with_value(text: @ect.national_insurance_number)
+      row.with_value(text: @mentor.national_insurance_number)
     end
   end
 end %>
@@ -31,6 +33,6 @@ end %>
 <% end %>
 
 <div class="govuk-inset-text">
-  If this is not the person you intended to register as an ECT, go back
-  and <%= govuk_link_to("check details", schools_register_ect_find_ect_path) %>.
+  If this is not the person you intended to register as a mentor, go back
+  and <%= govuk_link_to("check details", schools_register_mentor_find_mentor_path) %>.
 </div>

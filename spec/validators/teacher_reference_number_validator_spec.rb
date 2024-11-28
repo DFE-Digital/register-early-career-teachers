@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-require "rails_helper"
-
 RSpec.describe TeacherReferenceNumberValidator do
   let(:test_class) do
     Class.new do

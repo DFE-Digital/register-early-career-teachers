@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 require "gias/api_client"
 require "csv"
 
 module GIAS
   class Importer
-    SCHOOLS_FILENAME = "ecf_tech.csv"
-    SCHOOL_LINKS_FILENAME = "links.csv"
+    SCHOOLS_FILENAME = "ecf_tech.csv".freeze
+    SCHOOL_LINKS_FILENAME = "links.csv".freeze
 
     def fetch
       import_only? ? fetch_and_import_only : fetch_and_update

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module PageHelper
   def page
     RSpec.configuration.playwright_page

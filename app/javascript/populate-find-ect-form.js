@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  const setInputValue = (name, value) => {
-    const input = document.querySelector(`input[name="${name}"]`);
-    if (input) {
-      input.value = value;
+  const setInputValue = (labelText, value) => {
+    const label = Array.from(document.querySelectorAll('label')).find(lbl => lbl.textContent.trim() === labelText);
+
+    if (label) {
+      document.getElementById(label.htmlFor).value = value;
     }
   };
 
@@ -18,17 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const dob = button.dataset.dob;
       const nationalInsuranceNumber = button.dataset.nationalInsuranceNumber;
 
-      setInputValue('find_ect[trn]', trn);
+      setInputValue('Teacher reference number (TRN)', trn);
 
       if(dob) {
         const [day, month, year] = dob.split('/');
-        setInputValue('find_ect[date_of_birth(3i)]', day);
-        setInputValue('find_ect[date_of_birth(2i)]', month);
-        setInputValue('find_ect[date_of_birth(1i)]', year);
+        setInputValue('Day', day);
+        setInputValue('Month', month);
+        setInputValue('Year', year);
       }
 
       if(nationalInsuranceNumber) {
-        setInputValue('national_insurance_number[national_insurance_number]', nationalInsuranceNumber);
+        setInputValue('National Insurance Number', nationalInsuranceNumber);
       }
     });
   });

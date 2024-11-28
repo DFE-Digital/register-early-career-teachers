@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 module Schools
   class RegisterMentorController < ApplicationController
     before_action :initialize_wizard, only: %i[new create]
     before_action :reset_wizard, only: :new
 
     FORM_KEY = :register_mentor_wizard
-    # WIZARD_CLASS = Schools::RegisterMentor::Wizard.freeze
+    WIZARD_CLASS = Schools::RegisterMentor::Wizard.freeze
 
     def start
       @ect_name = params[:ect_name]

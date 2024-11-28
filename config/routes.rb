@@ -125,6 +125,11 @@ Rails.application.routes.draw do
 
       get "find-mentor", action: :new
       post "find-mentor", action: :create
+
+      get "trn-not-found", action: :new
+
+      get "review-mentor-details", action: :new
+      post "review-mentor-details", action: :create
     end
   end
 end

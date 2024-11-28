@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module UserHelper
   def sign_in_as(user)
     page.goto(otp_sign_in_path)
