@@ -6,7 +6,7 @@ Rails.application.config.middleware.use(OmniAuth::Builder) do
 
   dfe_sign_in_identifier = ENV['DFE_SIGN_IN_CLIENT_ID']
   dfe_sign_in_secret = ENV['DFE_SIGN_IN_SECRET']
-  dfe_sign_in_redirect_uri = 'https://localhost:3001'
+  dfe_sign_in_redirect_uri = 'https://localhost:3001/auth/dfe/callback'
   dfe_sign_in_issuer_uri = ENV['DFE_SIGN_IN_ISSUER'].present? ? URI(ENV['DFE_SIGN_IN_ISSUER']) : nil
 
   provider(

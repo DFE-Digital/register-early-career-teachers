@@ -7,9 +7,11 @@ class SessionsController < ApplicationController
 
   def create
     user_info = request.env['omniauth.auth']
-    provider = user_info.fetch(:provider)
+    provider = user_info.fetch(:provider).to_s
 
     # NOTE: OTP authentication is handled in OTPSessionsController as it is not omniauth
+    # FIXME: invetigate treating all the providers as symbols rather than strings,
+    #        especially 'developer'
     case provider
     when "developer"
       # FIXME: do this using the SessionManager
@@ -17,9 +19,11 @@ class SessionsController < ApplicationController
         session["appropriate_body_id"] = params["appropriate_body_id"]
       end
 
-      session_manager.begin_session!(user_info.uid, provider)
+      session_manager.begin_session!(user_info)
     when "dfe"
-      raise provider
+
+      # session_manager.being_session(user_info.uid, ...)
+      session_manager.begin_session!(user_info)
     else
       # TODO: handle unknown provider
       raise provider
