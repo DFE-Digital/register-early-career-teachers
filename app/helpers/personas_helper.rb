@@ -57,7 +57,7 @@ private
     persona_type = case org
                    when /School$/i
                      'School user'
-                   when /Associate Body$/i
+                   when /Appropriate body$/i
                      'Appropriate body user'
                    end
 
