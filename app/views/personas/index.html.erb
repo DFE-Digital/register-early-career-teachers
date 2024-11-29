@@ -27,7 +27,7 @@
           <%= hidden_field_tag "email", persona.email %>
           <%= hidden_field_tag "name", persona.name %>
           <%= hidden_field_tag "appropriate_body_id", appropriate_body_id_from_user_name(persona.name) %>
-          <%= hidden_field_tag "school_urn", school_urn_from_user_name(persona.name) %>
+          <%= hidden_field_tag "school_urn", school_urn_from_persona(persona) %>
           <%= f.submit "Sign-in as #{persona_name(persona)}", class: "govuk-button govuk-!-margin-bottom-2" %>
         <% end %>
       </div>
