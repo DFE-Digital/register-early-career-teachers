@@ -14,7 +14,10 @@ module AppropriateBodies
           **pending_induction_submission_attributes
         )
 
-        release_ect = AppropriateBodies::ReleaseECT.new(appropriate_body: @appropriate_body, pending_induction_submission: @pending_induction_submission)
+        release_ect = AppropriateBodies::ReleaseECT.new(
+          appropriate_body: @appropriate_body,
+          pending_induction_submission: @pending_induction_submission
+        )
 
         PendingInductionSubmission.transaction do
           if @pending_induction_submission.save(context: :release_ect) && release_ect.release!
@@ -26,6 +29,9 @@ module AppropriateBodies
             render :new
           end
         end
+      rescue ::AppropriateBodies::Errors::ECTHasNoOngoingInductionPeriods => e
+        @pending_induction_submission.errors.add(:base, message: e.message)
+        render :new
       end
 
       def show

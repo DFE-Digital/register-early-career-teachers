@@ -1,4 +1,8 @@
-<% page_data(title: "Release #{Teachers::Name.new(@teacher).full_name}", error: @pending_induction_submission.errors.any?) %>
+<% page_data(
+  title: "Release #{Teachers::Name.new(@teacher).full_name}",
+  error: @pending_induction_submission.errors.any?,
+  backlink_href: ab_teacher_path(@teacher)
+) %>
 
 <%= form_with(model: @pending_induction_submission, url: ab_teacher_release_ect_path(@teacher), method: 'post') do |f| %>
   <%= content_for(:error_summary) { f.govuk_error_summary } %>
@@ -6,7 +10,7 @@
   <%=
     f.govuk_date_field :finished_on,
       legend: {
-        text: "When did #{Teachers::Name.new(@teacher).full_name} finish their induction with you?"
+        text: "Enter the date #{Teachers::Name.new(@teacher).full_name} moved from #{@appropriate_body.name}"
       }
   %>
 
@@ -15,8 +19,9 @@
       width: 4,
       label: {
         size: 'm',
-        text: "How many terms of induction did #{Teachers::Name.new(@teacher).full_name} spend with you?"
-      }
+        text: "How many terms of induction did #{Teachers::Name.new(@teacher).full_name} spend with you?",
+      },
+      hint: { text: "Enter partial terms of induction as a decimal number. For example, one term and a half should be given as 1.5 terms." }
   %>
 
   <%= f.govuk_submit %>

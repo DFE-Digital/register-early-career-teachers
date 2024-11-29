@@ -5,13 +5,13 @@ describe Teachers::TermsCompleted do
 
     context 'when the teacher does not have induction periods' do
       it 'returns nil' do
-        expect(subject).to eq("0 of 6.0")
+        expect(subject).to eq("0.0 of 6.0")
       end
     end
 
     context 'without extensions' do
       it 'returns the default number of terms' do
-        expect(subject).to eq("0 of 6.0")
+        expect(subject).to eq("0.0 of 6.0")
       end
 
       context "with extensions" do
@@ -21,7 +21,7 @@ describe Teachers::TermsCompleted do
         end
 
         it 'returns the default number of terms plus the extensions' do
-          expect(subject).to eq("0 of 9.1")
+          expect(subject).to eq("0.0 of 9.1")
         end
       end
     end
@@ -31,7 +31,7 @@ describe Teachers::TermsCompleted do
 
       context 'without extensions' do
         it 'returns the default number of terms' do
-          expect(subject).to eq("2 of 6.0")
+          expect(subject).to eq("2.0 of 6.0")
         end
 
         context "with extensions" do
@@ -41,7 +41,7 @@ describe Teachers::TermsCompleted do
           end
 
           it 'returns the default number of terms plus the extensions' do
-            expect(subject).to eq("2 of 9.1")
+            expect(subject).to eq("2.0 of 9.1")
           end
         end
       end

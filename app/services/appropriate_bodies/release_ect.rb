@@ -1,7 +1,4 @@
 module AppropriateBodies
-  class ECTHasNoOngoingInductionPeriods < StandardError; end
-  class ECTHasMultipleOngoingInductionPeriods < StandardError; end
-
   class ReleaseECT
     def initialize(appropriate_body:, pending_induction_submission:)
       @appropriate_body = appropriate_body
@@ -26,11 +23,7 @@ module AppropriateBodies
       ongoing_induction_periods = InductionPeriod.ongoing.for_teacher(@teacher)
 
       if ongoing_induction_periods.count.zero?
-        fail(ECTHasNoOngoingInductionPeriods, "TRN: #{@teacher.trn}")
-      end
-
-      if ongoing_induction_periods.count > 1
-        fail(ECTHasMultipleOngoingInductionPeriods, "TRN: #{@teacher.trn}")
+        fail(Errors::ECTHasNoOngoingInductionPeriods)
       end
 
       ongoing_induction_periods.first

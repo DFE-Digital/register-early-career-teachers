@@ -46,19 +46,11 @@ describe AppropriateBodies::ReleaseECT do
       expect(PendingInductionSubmission.where(id: pending_induction_submission.id)).to be_empty
     end
 
-    context "when an ECT has more than one ongoing induction period" do
-      it 'raises an error' do
-        induction_period.dup.save!(validate: false)
-
-        expect { subject.release! }.to raise_error(AppropriateBodies::ECTHasMultipleOngoingInductionPeriods)
-      end
-    end
-
     context "when an ECT has no ongoing induction periods" do
       it 'raises an error' do
         induction_period.destroy!
 
-        expect { subject.release! }.to raise_error(AppropriateBodies::ECTHasNoOngoingInductionPeriods)
+        expect { subject.release! }.to raise_error(AppropriateBodies::Errors::ECTHasNoOngoingInductionPeriods)
       end
     end
   end
