@@ -22,7 +22,7 @@ compile 'content/roadmap/*.md' do
   # in the roadmap page
 end
 
-compile '/service-rules/*.md' do
+compile '/service-rules/ecf1/*.md' do
   filter(:govuk_markdown)
   layout('/service-rules.*')
   write(item.identifier.without_ext + '/index.html')
