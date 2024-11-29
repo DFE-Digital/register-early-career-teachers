@@ -17,7 +17,7 @@ RSpec.describe "Recording a passed outcome for an ECT" do
 
   scenario 'Happy path' do
     given_i_am_on_the_ect_page(trn)
-    when_i_click_link('Record passed outcome')
+    when_i_click_link('Pass induction')
     then_i_should_be_on_the_record_outcome_page(trn)
 
     when_i_enter_the_finish_date
