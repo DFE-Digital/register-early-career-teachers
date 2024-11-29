@@ -9,12 +9,14 @@ module PersonasHelper
     appropriate_bodies[appropriate_body_name]
   end
 
-  def school_id_from_user_name(name)
+  def school_urn_from_user_name(name)
     fail(PersonasNotAvailableError) unless Rails.application.config.enable_personas
 
-    school_ids = GIAS::School.joins(:school).pluck('gias_schools.name', 'schools.id').to_h
-    name_of_school = school_ids.keys.find { |school_name| Regexp.compile(school_name) =~ name }
-    school_ids[name_of_school]
+    schools = GIAS::School.select(:urn, :name).where(name: ["Abbey Grove School", "Brookfield School"])
+    matching_school = schools.find { |school| Regexp.compile(school.name) =~ name }
+    return nil unless matching_school
+
+    matching_school.urn
   end
 
   def persona_name(persona)

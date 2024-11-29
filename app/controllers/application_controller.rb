@@ -12,7 +12,7 @@ private
   end
 
   def school_home_path
-    schools_ects_home_path if session[:school_id].present?
+    schools_ects_home_path if session[:school_urn].present?
   end
 
   def admin_home_path
