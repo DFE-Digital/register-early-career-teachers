@@ -59,6 +59,7 @@ Rails.application.routes.draw do
       resource :record_failed_outcome, only: %i[new create show], path: 'record-failed-outcome', controller: 'teachers/record_failed_outcome'
 
       resources :extensions, controller: 'teachers/extensions', only: :index
+      resources :initial_teacher_training_records, path: 'itt-data', controller: 'teachers/initial_teacher_training_records', only: :index
     end
 
     namespace :claim_an_ect, path: 'claim-an-ect' do

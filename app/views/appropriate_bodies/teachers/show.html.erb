@@ -9,9 +9,8 @@
 %>
 
 <div class="govuk-button-group">
-  <%= govuk_button_link_to("Release ECT", new_ab_teacher_release_ect_path(@teacher), secondary: true) %>
-  <%= govuk_button_link_to("Record passed outcome", new_ab_teacher_record_passed_outcome_path(@teacher), secondary: true) %>
-  <%= govuk_button_link_to("Record failed outcome", new_ab_teacher_record_failed_outcome_path(@teacher), secondary: true) %>
+  <%= govuk_button_link_to("Pass induction", new_ab_teacher_record_passed_outcome_path(@teacher)) %>
+  <%= govuk_link_to("Fail induction", new_ab_teacher_record_failed_outcome_path(@teacher)) %>
 </div>
 
 <% if @teacher.induction_periods.any? %>
@@ -22,8 +21,17 @@
         <%= govuk_visually_hidden('Induction') %> Start date
       <% end %>
 
-      <% row.with_value(text: @teacher.induction_periods.last.started_on.to_fs(:govuk)) %>
+      <% row.with_value(text: @teacher.induction_periods.first.started_on.to_fs(:govuk)) %>
     <% end %>
+
+    <% sl.with_row do |row| %>
+      <% row.with_key do %>
+        <%= govuk_visually_hidden('Induction') %> Status
+      <% end %>
+
+      <% row.with_value(text: govuk_tag(text: "placeholder", colour: %w[grey green red purple orange yellow].sample)) %>
+    <% end %>
+
 
     <% sl.with_row do |row| %>
       <% if @teacher.induction_extensions.any? %>
@@ -35,8 +43,8 @@
           <%= Teachers::InductionExtensions.new(@teacher).formatted_number_of_terms %>
         <% end %>
 
-        <%= row.with_action(text: "View", visually_hidden_text: "extensions", href: ab_teacher_extensions_path(@teacher)) %>
-        <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
+        <%= row.with_action(text: "View", visually_hidden_text: "extensions", href: ab_teacher_extensions_path(@teacher), classes: 'govuk-link--no-visited-state') %>
+        <%# row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#", classes: 'govuk-link--no-visited-state') %>
       <% else %>
         <% row.with_key do %>
           <%= govuk_visually_hidden('Induction') %> Extended
@@ -44,45 +52,69 @@
 
         <% row.with_value(text: "No") %>
 
-        <%= row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
+        <% row.with_action(text: "Add", visually_hidden_text: "an extension", href: "#") %>
       <% end %>
+    <% end %>
+
+    <% sl.with_row do |row| %>
+      <% row.with_key(text: "Initial teacher training records") %>
+
+      <% row.with_value do %>
+        Future Teaching Scholars,<br/>
+        Maths and English, ages 5-11<br/>
+      <% end %>
+
+      <% row.with_action(text: "View", visually_hidden_text: "ITT records", href: ab_teacher_initial_teacher_training_records_path(@teacher), classes: 'govuk-link--no-visited-state') %>
     <% end %>
   <% end %>
 
-  <h2 class="govuk-heading-m">Induction periods</h2>
+  <h2 class="govuk-heading-m">Current induction period</h2>
 
-  <% @teacher.induction_periods.each.with_index(1).reverse_each do |induction_period, i| %>
-    <%=
-      govuk_summary_list(card: { title: "Induction period #{i}", actions: [govuk_link_to("Edit", "#")] }) do |sl|
+  <%=
+    govuk_summary_list(card: { title: @current_induction_period.appropriate_body.name, actions: [govuk_link_to('Release', new_ab_teacher_release_ect_path(@teacher), no_visited_state: true)] }) do |sl|
+      sl.with_row do |row|
+        row.with_key(text: "Induction programme")
+        row.with_value(text: induction_programme_choice_name(@current_induction_period.induction_programme))
+        row.with_action(text: 'Change', href: '#', visually_hidden_text: 'induction programme', classes: 'govuk-link--no-visited-state')
+      end
+
+      sl.with_row do |row|
+        row.with_key(text: "Start date")
+        row.with_value(text: @current_induction_period.started_on.to_fs(:govuk))
+      end
+    end
+  %>
+
+<% end %>
+
+<h2 class="govuk-heading-m">Past induction periods</h2>
+
+<% @past_induction_periods.each.with_index(1).reverse_each do |induction_period, i| %>
+  <%=
+    govuk_summary_list(actions: false, card: { title: induction_period.appropriate_body.name }) do |sl|
+      sl.with_row do |row|
+        row.with_key(text: "Induction programme")
+        row.with_value(text: induction_programme_choice_name(induction_period.induction_programme))
+      end
+
+      sl.with_row do |row|
+        row.with_key(text: "Start date")
+        row.with_value(text: induction_period.started_on.to_fs(:govuk))
+      end
+
+      if induction_period.finished_on.present?
         sl.with_row do |row|
-          row.with_key(text: "Appropriate body")
-          row.with_value(text: induction_period.appropriate_body.name)
-        end
-
-        sl.with_row do |row|
-          row.with_key(text: "Induction programme")
-          row.with_value(text: induction_programme_choice_name(induction_period.induction_programme))
-        end
-
-        if induction_period.number_of_terms.present?
-          sl.with_row do |row|
-            row.with_key(text: "Number of terms")
-            row.with_value(text: induction_period.number_of_terms)
-          end
-        end
-
-        sl.with_row do |row|
-          row.with_key(text: "Start date")
-          row.with_value(text: induction_period.started_on.to_fs(:govuk))
-        end
-
-        if induction_period.finished_on.present?
-          sl.with_row do |row|
-            row.with_key(text: "End date")
-            row.with_value(text: induction_period.finished_on.to_fs(:govuk))
-          end
+          row.with_key(text: "End date")
+          row.with_value(text: induction_period.finished_on.to_fs(:govuk))
         end
       end
-    %>
-  <% end %>
+
+      if induction_period.number_of_terms.present?
+        sl.with_row do |row|
+          row.with_key(text: "Number of terms")
+          row.with_value(text: induction_period.number_of_terms)
+        end
+      end
+    end
+  %>
 <% end %>

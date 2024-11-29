@@ -19,4 +19,5 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym "OTP"  # One-time Password
   inflect.acronym "TRN"  # Teacher Reference Number
   inflect.acronym "TRS"  # Teaching Record System
+  inflect.acronym "ITT"  # Initial teacher training
 end

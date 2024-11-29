@@ -13,7 +13,7 @@ RSpec.describe 'Releasing an ECT' do
 
   scenario 'Happy path' do
     given_i_am_on_the_ect_page(trn)
-    when_i_click_link('Release ECT')
+    when_i_click_link('Release')
     then_i_should_be_on_the_release_ect_page(trn)
 
     when_i_submit_the_form_without_filling_anything_in
