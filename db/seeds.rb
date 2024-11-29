@@ -63,6 +63,12 @@ def describe_mentor_at_school_period(sp)
   print_seed_info("* was a mentor at #{sp.school.name} from #{sp.started_on} #{describe_period_duration(sp)} #{suffix}", indent: 4)
 end
 
+def describe_extension(ext)
+  suffix = "(extension)"
+
+  print_seed_info("* had their induction extended by #{ext.number_of_terms} #{suffix}", indent: 4)
+end
+
 print_seed_info("Adding teachers")
 
 emma_thompson = Teacher.create!(first_name: 'Emma', last_name: 'Thompson', trn: '1023456')
@@ -218,6 +224,11 @@ TrainingPeriod.create!(
   provider_partnership: grove_artisan_partnership_2021
 ).tap { |tp| describe_training_period(tp) }
 
+InductionExtension.create!(
+  teacher: emma_thompson,
+  number_of_terms: 2
+).tap { |ext| describe_extension(ext) }
+
 print_seed_info("Kate Winslet (ECT)", indent: 2, colour: ECT_COLOUR)
 
 kate_winslet_ect_at_ackley_bridge = ECTAtSchoolPeriod.create!(
@@ -239,6 +250,16 @@ InductionPeriod.create!(
   induction_programme: 'fip'
 ).tap { |ip| describe_induction_period(ip) }
 
+InductionExtension.create!(
+  teacher: kate_winslet,
+  number_of_terms: 3
+).tap { |ext| describe_extension(ext) }
+
+InductionExtension.create!(
+  teacher: kate_winslet,
+  number_of_terms: 3
+).tap { |ext| describe_extension(ext) }
+
 print_seed_info("Hugh Laurie (mentor)", indent: 2, colour: MENTOR_COLOUR)
 
 hugh_laurie_mentoring_at_abbey_grove = MentorAtSchoolPeriod.create!(
@@ -252,6 +273,11 @@ TrainingPeriod.create!(
   started_on: 2.years.ago,
   provider_partnership: meadow_grain_partnership_2022
 ).tap { |tp| describe_training_period(tp) }
+
+InductionExtension.create!(
+  teacher: hugh_laurie,
+  number_of_terms: 2
+).tap { |ext| describe_extension(ext) }
 
 print_seed_info("Alan Rickman (ECT)", indent: 2, colour: ECT_COLOUR)
 
@@ -273,6 +299,11 @@ InductionPeriod.create!(
   started_on: 2.years.ago + 2.months,
   induction_programme: 'fip'
 ).tap { |ip| describe_induction_period(ip) }
+
+InductionExtension.create!(
+  teacher: alan_rickman,
+  number_of_terms: 1.5
+).tap { |ext| describe_extension(ext) }
 
 print_seed_info("Hugh Grant (ECT)", indent: 2, colour: ECT_COLOUR)
 
@@ -298,6 +329,16 @@ InductionPeriod.create!(
   number_of_terms: 3
 ).tap { |ip| describe_induction_period(ip) }
 
+InductionExtension.create!(
+  teacher: hugh_grant,
+  number_of_terms: 1.5
+).tap { |ext| describe_extension(ext) }
+
+InductionExtension.create!(
+  teacher: hugh_grant,
+  number_of_terms: 1
+).tap { |ext| describe_extension(ext) }
+
 print_seed_info("Harriet Walter (mentor)", indent: 2, colour: MENTOR_COLOUR)
 
 InductionPeriod.create!(
@@ -319,12 +360,12 @@ InductionPeriod.create!(
 InductionExtension.create!(
   teacher: harriet_walter,
   number_of_terms: 1.3
-)
+).tap { |ext| describe_extension(ext) }
 
 InductionExtension.create!(
   teacher: harriet_walter,
   number_of_terms: 5
-)
+).tap { |ext| describe_extension(ext) }
 
 print_seed_info("Imogen Stubbs (ECT)", indent: 2, colour: ECT_COLOUR)
 
@@ -357,6 +398,11 @@ TrainingPeriod.create!(
   provider_partnership: meadow_grain_partnership_2022
 ).tap { |tp| describe_training_period(tp) }
 
+InductionExtension.create!(
+  teacher: imogen_stubbs,
+  number_of_terms: 1
+).tap { |ext| describe_extension(ext) }
+
 print_seed_info("Gemma Jones (ECT)", indent: 2, colour: ECT_COLOUR)
 
 InductionPeriod.create!(
@@ -378,6 +424,11 @@ TrainingPeriod.create!(
   started_on: 20.months.ago,
   provider_partnership: meadow_grain_partnership_2022
 ).tap { |tp| describe_training_period(tp) }
+
+InductionExtension.create!(
+  teacher: gemma_jones,
+  number_of_terms: 1.5
+).tap { |ext| describe_extension(ext) }
 
 print_seed_info("André Roussimoff (ECT)", indent: 2, colour: ECT_COLOUR)
 
