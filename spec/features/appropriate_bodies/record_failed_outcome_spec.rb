@@ -7,10 +7,6 @@ RSpec.describe "Recording a failed outcome for an ECT" do
 
   before do
     sign_in_as_appropriate_body_user
-    allow_any_instance_of(AppropriateBodies::RecordOutcome).to receive(:fail!).and_call_original
-
-    @fake_record_outcome = instance_double(AppropriateBodies::RecordOutcome, fail!: true)
-    allow(AppropriateBodies::RecordOutcome).to receive(:new).and_return(@fake_record_outcome)
   end
 
   let!(:induction_period) { FactoryBot.create(:induction_period, :active, teacher:, appropriate_body: @appropriate_body) }
@@ -26,7 +22,7 @@ RSpec.describe "Recording a failed outcome for an ECT" do
 
     then_i_should_be_on_the_success_page
     and_the_pending_induction_submission_record_should_have_the_right_data_in_it
-    and_the_record_outcome_service_should_have_been_called
+    and_the_induction_period_should_have_been_closed_with_the_right_data
   end
 
 private
@@ -76,7 +72,11 @@ private
     expect(pending_induction_submission.outcome).to eql('fail')
   end
 
-  def and_the_record_outcome_service_should_have_been_called
-    expect(@fake_record_outcome).to have_received(:fail!).once
+  def and_the_induction_period_should_have_been_closed_with_the_right_data
+    induction_period.reload
+
+    expect(induction_period.outcome).to eql('fail')
+    expect(induction_period.number_of_terms).to eql(number_of_completed_terms)
+    expect(induction_period.finished_on).to eql(today)
   end
 end
