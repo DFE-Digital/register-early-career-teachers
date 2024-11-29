@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Schools
-  class RegisterECTController < ApplicationController
+  class RegisterECTController < SchoolsController
     before_action :initialize_wizard, only: %i[new create]
     before_action :reset_wizard, only: :new
 
