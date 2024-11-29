@@ -22,7 +22,10 @@ module AppropriateBodies
 
         PendingInductionSubmission.transaction do
           if @pending_induction_submission.save(context: :record_outcome) && record_outcome.fail!
-            redirect_to ab_teacher_record_failed_outcome_path(@teacher)
+            redirect_to(
+              ab_teacher_record_failed_outcome_path(@teacher),
+              flash: { teacher_name: ::Teachers::Name.new(@teacher).full_name }
+            )
           else
             render :new
           end
@@ -30,7 +33,7 @@ module AppropriateBodies
       end
 
       def show
-        @teacher = find_teacher
+        @teacher_name = flash['teacher_name']
       end
 
     private
