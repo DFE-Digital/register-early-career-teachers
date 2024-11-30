@@ -1,15 +1,11 @@
-require 'debug'
-
 class SchoolsController < ApplicationController
   include Authorisation
 
   before_action :set_school
 
-  def index
-    @school = first_school_with_no_mentors_but_ects || first_school
-  end
-
 private
+
+  attr_reader :school
 
   def authorised?
     # FIXME: make this work with DfE Sign-in
