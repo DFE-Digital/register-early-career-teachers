@@ -34,9 +34,8 @@
 <%= render TestGuidanceComponent.new do |component| %>
   <% component.with_trs_example_teacher_details %>
 
-  <h2 class="govuk-heading-m">Error preview</h2>
-
   <% if PendingInductionSubmission.last.present? %>
+    <h2 class="govuk-heading-m">Error preview</h2>
     <%=
       govuk_list([
         govuk_link_to('Exempt from completing induction', ab_claim_an_ect_errors_exempt_path(PendingInductionSubmission.last), no_visited_state: true),

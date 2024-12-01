@@ -69,6 +69,12 @@ def describe_extension(ext)
   print_seed_info("* had their induction extended by #{ext.number_of_terms} #{suffix}", indent: 4)
 end
 
+def describe_pending_induction_submission(pending_induction_submission)
+  suffix = "(pending_induction_submission)"
+
+  print_seed_info("* has one pending induction submission from #{pending_induction_submission.appropriate_body.name} #{suffix}", indent: 4)
+end
+
 print_seed_info("Adding teachers")
 
 emma_thompson = Teacher.create!(first_name: 'Emma', last_name: 'Thompson', trn: '1023456')
@@ -304,6 +310,13 @@ InductionExtension.create!(
   teacher: alan_rickman,
   number_of_terms: 1.5
 ).tap { |ext| describe_extension(ext) }
+
+PendingInductionSubmission.create!(
+  appropriate_body: golden_leaf_academy,
+  trn: alan_rickman.trn,
+  date_of_birth: Date.new(1946, 2, 21),
+  started_on: 1.month.ago
+).tap { |is| describe_pending_induction_submission(is) }
 
 print_seed_info("Hugh Grant (ECT)", indent: 2, colour: ECT_COLOUR)
 
