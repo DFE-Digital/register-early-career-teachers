@@ -13,6 +13,19 @@ module UserHelper
     end
   end
 
+  def sign_in_as_persona(user_name)
+    page.goto(personas_path)
+    page.get_by_role("button", name: "Sign-in as #{user_name}").click
+  end
+
+  def sign_in_as_school_user
+    FactoryBot.create(:school, gias_school: FactoryBot.build(:gias_school, name: "Abbey Grove School"))
+
+    FactoryBot.create(:user, email: "bob.belcher@example.com", name: "Bob Belcher (Abbey Grove School)").tap do |_user|
+      sign_in_as_persona('Bob Belcher')
+    end
+  end
+
   def sign_in_as_appropriate_body_user
     @appropriate_body = FactoryBot.create(:appropriate_body)
 
