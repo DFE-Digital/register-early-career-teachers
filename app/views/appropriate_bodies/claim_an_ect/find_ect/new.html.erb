@@ -15,7 +15,7 @@
     f.govuk_text_field(
       :trn,
       width: 10,
-      label: { text: "Teacher Reference Number (TRN)", size: "m" },
+      label: { text: "Teacher reference number (TRN)", size: "m" },
       hint: { text: "Enter your ECT's TRN (they are 7 digits long). It's on their pay slip, teaching contract or registration document from the General Teaching Council for England (GTCE)." },
     )
   %>
@@ -34,9 +34,8 @@
 <%= render TestGuidanceComponent.new do |component| %>
   <% component.with_trs_example_teacher_details %>
 
-  <h2 class="govuk-heading-m">Error preview</h2>
-
   <% if PendingInductionSubmission.last.present? %>
+    <h2 class="govuk-heading-m">Error preview</h2>
     <%=
       govuk_list([
         govuk_link_to('Exempt from completing induction', ab_claim_an_ect_errors_exempt_path(PendingInductionSubmission.last), no_visited_state: true),

@@ -46,7 +46,8 @@ class TestGuidanceComponent < ViewComponent::Base
       safe_join([
         tag.h3('Information to review this journey', class: 'govuk-heading-m'),
         tag.p('To successfully locate an ECT from the TRS API, use credentials from the table below:'),
-        govuk_table(head:, rows: rows_with_buttons)
+        govuk_table(head:, rows: rows_with_buttons),
+        javascript_include_tag('populate-find-ect-form', data: { turbo_track: 'reload' }, defer: true)
       ])
     end
   end
