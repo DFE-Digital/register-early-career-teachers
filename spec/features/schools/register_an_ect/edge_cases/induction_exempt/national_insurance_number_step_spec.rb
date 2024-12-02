@@ -4,7 +4,7 @@ RSpec.describe 'Registering an ECT' do
   let(:page) { RSpec.configuration.playwright_page }
 
   before do
-    sign_in_as_admin
+    sign_in_as_school_user
   end
 
   scenario 'User enters national insurance number but teacher is exempt from induction' do
