@@ -39,6 +39,15 @@ module ECF2
     config.enable_sentry = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_SENTRY', false))
     config.sentry_dsn = ENV['SENTRY_DSN']
 
+    config.dfe_sign_in_client_id = ENV['DFE_SIGN_IN_CLIENT_ID']
+    config.dfe_sign_in_secret = ENV['DFE_SIGN_IN_SECRET']
+    config.dfe_sign_in_redirect_uri = ENV['DFE_SIGN_IN_REDIRECT_URI']
+    config.dfe_sign_in_issuer = ENV['DFE_SIGN_IN_ISSUER']
+    config.dfe_sign_in_enabled = [config.dfe_sign_in_client_id,
+                                  config.dfe_sign_in_secret,
+                                  config.dfe_sign_in_redirect_uri,
+                                  config.dfe_sign_in_issuer].all?
+
     config.after_initialize do
       ActionView::Base.default_form_builder = GOVUKDesignSystemFormBuilder::FormBuilder
     end
