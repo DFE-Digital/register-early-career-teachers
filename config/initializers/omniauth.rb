@@ -22,7 +22,7 @@ Rails.application.config.middleware.use(OmniAuth::Builder) do
     },
     discovery: true,
     issuer: ("#{dfe_sign_in_issuer_uri}:#{dfe_sign_in_issuer_uri.port}" if dfe_sign_in_issuer_uri.present?),
-    name: :dfe,
+    name: 'dfe',
     path_prefix: '/auth',
     response_type: :code,
     scope: %w[openid profile email organisation]
