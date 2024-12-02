@@ -1,6 +1,14 @@
 module Schools
   module RegisterECT
-    class ECT < SimpleDelegator
+    class ECT
+      delegate :reset, :update, :email, :date_of_birth, :trn, :national_insurance_number, :trs_national_insurance_number, :trs_induction_completed?, :trs_first_name, :trs_last_name, :trs_date_of_birth, :trs_induction_status, :date_of_birth, to: :session_repository
+      delegate :create!, to: :teacher_repository
+
+      def initialize(session_repository:, teacher_repository:)
+        @session_repository = session_repository
+        @teacher_repository = teacher_repository
+      end
+
       def full_name
         [trs_first_name, trs_last_name].join(" ").strip
       end
@@ -26,6 +34,14 @@ module Schools
       def induction_exempt?
         trs_induction_status == 'Exempt'
       end
+
+      def create_teacher!
+        create!(trs_first_name:, trs_last_name:, trn:)
+      end
+
+    private
+
+      attr_reader :session_repository, :teacher_repository
     end
   end
 end

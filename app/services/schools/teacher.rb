@@ -18,6 +18,18 @@ module Schools
       end
     end
 
+    def create!(trs_first_name:, trs_last_name:, trn:)
+      ActiveRecord::Base.transaction do
+        teacher = ::Teacher.create!(first_name: trs_first_name, last_name: trs_last_name, trn:)
+
+        ECTAtSchoolPeriod.create(
+          teacher:,
+          school:,
+          started_on: 1.month.ago
+        )
+      end
+    end
+
   private
 
     attr_reader :school_id

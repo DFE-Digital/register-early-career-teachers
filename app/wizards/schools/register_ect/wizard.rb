@@ -3,7 +3,7 @@
 module Schools
   module RegisterECT
     class Wizard < DfE::Wizard::Base
-      attr_accessor :store
+      attr_accessor :store, :teacher_repository
 
       steps do
         [
@@ -30,7 +30,7 @@ module Schools
       delegate :reset, to: :ect
 
       def ect
-        @ect ||= ECT.new(store)
+        @ect ||= ECT.new(session_repository: store, teacher_repository:)
       end
     end
   end

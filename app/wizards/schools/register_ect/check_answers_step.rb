@@ -4,6 +4,12 @@ module Schools
       def next_step
         :confirmation
       end
+
+    private
+
+      def persist
+        ect.create_teacher!
+      end
     end
   end
 end

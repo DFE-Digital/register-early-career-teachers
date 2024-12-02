@@ -29,7 +29,8 @@ module Schools
       @wizard = WIZARD_CLASS.new(
         current_step:,
         step_params: params,
-        store: SessionRepository.new(session:, form_key: FORM_KEY)
+        store: SessionRepository.new(session:, form_key: FORM_KEY),
+        teacher_repository: Schools::Teacher.new(school.id)
       )
       @ect = @wizard.ect
     end
