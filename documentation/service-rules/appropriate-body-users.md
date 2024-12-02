@@ -151,7 +151,7 @@ The release process takes place with the following steps:
 * **Induction start date**
   - must be present
   - must be after the QTS award date
-* **induction period end date**
+* **Induction period end date**
   - must be present
   - must be later than the induction start adte
   - must not overlap with another induction period
