@@ -5,24 +5,24 @@ RSpec.describe Sessions::SessionManager do
 
   subject(:service) { Sessions::SessionManager.new(session) }
 
-  describe "#begin_session!" do
+  describe "#begin_developer_session!" do
     it "creates a user_session hash in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]).to be_present
     end
 
     it "stores the email in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]["email"]).to eq email
     end
 
     it "stores the provider in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]["provider"]).to eq provider
     end
 
     it "stores a last active timestamp in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]["last_active_at"]).to be_within(1.second).of(Time.zone.now)
     end
   end
