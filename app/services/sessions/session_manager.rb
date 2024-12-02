@@ -57,6 +57,18 @@ module Sessions
       current_session&.fetch("provider", nil)
     end
 
+    def appropriate_body_id=(id)
+      Rails.logger.info("Setting session appropriate_body_id to #{id}")
+
+      session["appropriate_body_id"] = id
+    end
+
+    def school_urn=(urn)
+      Rails.logger.info("Setting session school_urn to #{urn}")
+
+      session["school_urn"] = urn
+    end
+
   private
 
     def current_session

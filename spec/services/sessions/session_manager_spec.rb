@@ -148,4 +148,20 @@ RSpec.describe Sessions::SessionManager do
       end
     end
   end
+
+  describe '#set_school_urn' do
+    it 'sets the school_urn in the session to the provided value' do
+      service.school_urn = '1234567'
+
+      expect(session['school_urn']).to eql('1234567')
+    end
+  end
+
+  describe '#set_appropriate_body_id' do
+    it 'sets the set_appropriate_body_id in the session to the provided value' do
+      service.appropriate_body_id = '987'
+
+      expect(session['appropriate_body_id']).to eql('987')
+    end
+  end
 end
