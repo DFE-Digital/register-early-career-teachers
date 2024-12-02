@@ -498,8 +498,11 @@ print_seed_info("Adding persona users")
 
 # The appropriate body names are included in the AB user names as the persona
 # login process matches them and sets the session up correctly.
-User.create!(name: "Velma Dinkley (#{golden_leaf_academy.name} AB)", email: "velma@example.com")
-User.create!(name: "Fred Jones (#{umber_teaching_school_hub.name} AB)", email: "freddy@example.com")
+User.create!(name: "Velma Dinkley (#{golden_leaf_academy.name} Appropriate body)", email: "velma@example.com")
+User.create!(name: "Fred Jones (#{umber_teaching_school_hub.name} Appropriate body)", email: "freddy@example.com")
+
+User.create!(name: "Bob Belcher (#{abbey_grove_school.name})", email: "bob@example.com")
+User.create!(name: "Serena Moon (#{brookfield_school.name})", email: "serena@example.com")
 
 User.create!(name: "Daphne Blake (DfE staff)", email: "daphne@example.com").tap do |daphne_blake|
   DfERole.create!(user: daphne_blake)

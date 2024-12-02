@@ -11,6 +11,10 @@ private
     ab_teachers_path if session[:appropriate_body_id].present?
   end
 
+  def school_home_path
+    schools_ects_home_path if session[:school_urn].present?
+  end
+
   def admin_home_path
     admin_path if current_user&.dfe?
   end
@@ -31,7 +35,7 @@ private
   end
 
   def login_redirect_path
-    session_manager.requested_path || admin_home_path || ab_home_path || root_path
+    session_manager.requested_path || admin_home_path || ab_home_path || school_home_path || root_path
   end
 
   def session_manager

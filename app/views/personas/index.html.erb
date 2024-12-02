@@ -19,6 +19,9 @@
           (<%= persona.email %>)
         </h2>
         <div>
+          <h3 class="govuk-heading-s"><%= persona_user_type(persona) %></h3>
+        </div>
+        <div>
           <%= tag.p(persona_organisation(persona)) %>
         </div>
 
@@ -26,6 +29,7 @@
           <%= hidden_field_tag "email", persona.email %>
           <%= hidden_field_tag "name", persona.name %>
           <%= hidden_field_tag "appropriate_body_id", appropriate_body_id_from_user_name(persona.name) %>
+          <%= hidden_field_tag "school_urn", school_urn_from_persona(persona) %>
           <%= f.submit "Sign-in as #{persona_name(persona)}", class: "govuk-button govuk-!-margin-bottom-2" %>
         <% end %>
       </div>

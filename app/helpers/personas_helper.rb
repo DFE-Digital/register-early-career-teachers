@@ -9,12 +9,23 @@ module PersonasHelper
     appropriate_bodies[appropriate_body_name]
   end
 
+  def school_urn_from_persona(persona)
+    fail(PersonasNotAvailableError) unless Rails.application.config.enable_personas
+
+    school_name = persona_organisation(persona)
+    GIAS::School.find_by_name(school_name)&.urn
+  end
+
   def persona_name(persona)
     split_persona_name(persona.name)[:name]
   end
 
   def persona_organisation(persona)
     split_persona_name(persona.name)[:org]
+  end
+
+  def persona_user_type(persona)
+    split_persona_name(persona.name)[:persona_type]
   end
 
   def persona_image(name, height: '150px')
@@ -24,15 +35,31 @@ module PersonasHelper
     when name.start_with?('Fred')
       image_tag('personas/fred.png', height:, alt: 'Fred from Scooby Doo. He is shrugging and wearing a white top with a red cravat.')
     when name.start_with?('Daphne')
-      image_tag('personas/daphne.png', height:, alt: 'Daphne from Scooby Doo looking quizical in a purple dress.')
+      image_tag('personas/daphne.png', height:, alt: 'Daphne from Scooby Doo looking quizzical in a purple dress.')
     when name.start_with?('Norville')
       image_tag('personas/shaggy.png', height:, alt: 'Shaggy from Scooby Doo, wearing a green shirt looking directly forwards.')
+    when name.start_with?('Bob')
+      image_tag('personas/bob.png', height:, alt: "Bob from Bob's Burgers, holding a hamburger")
+    when name.start_with?('Serena')
+      image_tag('personas/serena.png', height:, alt: 'Serena from Sailor Moon leaping in the air.')
     end
   end
 
 private
 
   def split_persona_name(name)
-    name.match(/(?<name>.*)\ \((?<org>.*)\)/)
+    match = name.match(/(?<name>.*)\ \((?<org>.*)\)/)
+
+    return nil unless match
+
+    org = match[:org]
+    persona_type = case org
+                   when /School$/i
+                     'School user'
+                   when /Appropriate body$/i
+                     'Appropriate body user'
+                   end
+
+    { name: match[:name], org:, persona_type: }
   end
 end
