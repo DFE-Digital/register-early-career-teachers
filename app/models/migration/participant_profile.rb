@@ -3,6 +3,7 @@ module Migration
     self.inheritance_column = nil
 
     belongs_to :teacher_profile
+    belongs_to :school_cohort
     has_many :induction_records
     has_many :school_mentors # only ParticipantProfile::Mentor
 

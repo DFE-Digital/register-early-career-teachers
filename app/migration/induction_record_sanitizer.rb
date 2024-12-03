@@ -1,7 +1,12 @@
 class InductionRecordSanitizer
   include Enumerable
 
-  class InductionRecordError < StandardError; end
+  class InductionRecordError < StandardError
+    def initialize(participant_profile_id)
+      msg = "#{self.class.name}|#{participant_profile_id}"
+      super(msg)
+    end
+  end
   class MultipleBlankEndDateError < InductionRecordError; end
   class MultipleActiveStatesError < InductionRecordError; end
   class StartDateAfterEndDateError < InductionRecordError; end
@@ -57,26 +62,26 @@ private
   end
 
   def has_induction_records!
-    raise NoInductionRecordsError if induction_records.empty?
+    raise NoInductionRecordsError.new(participant_profile.id) if induction_records.empty?
   end
 
   def does_not_have_multiple_blank_end_dates!
-    raise MultipleBlankEndDateError if induction_records.where(end_date: nil).count > 1
+    raise MultipleBlankEndDateError.new(participant_profile.id) if induction_records.where(end_date: nil).count > 1
   end
 
   def does_not_have_multiple_active_induction_statuses!
-    raise MultipleActiveStatesError if induction_records.where(induction_status: "active").count > 1
+    raise MultipleActiveStatesError.new(participant_profile.id) if induction_records.where(induction_status: "active").count > 1
   end
 
   def induction_record_dates_are_sequential!
     previous_end_date = induction_records.first.end_date
 
     induction_records.each_with_index do |ir, idx|
-      raise StartDateAfterEndDateError if ir.end_date.present? && ir.end_date < ir.start_date
+      raise StartDateAfterEndDateError.new(participant_profile.id) if ir.end_date.present? && ir.end_date < ir.start_date
 
       next if idx.zero?
 
-      raise InvalidDateSequenceError if previous_end_date.nil? || ir.start_date < previous_end_date
+      raise InvalidDateSequenceError.new(participant_profile.id) if previous_end_date.nil? || ir.start_date < previous_end_date
 
       previous_end_date = ir.end_date
     end

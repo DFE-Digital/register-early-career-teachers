@@ -1,0 +1,25 @@
+<% if failures.present? %>
+  <%= govuk_warning_text(text: "Some of this teacher's records could not be migrated") %>
+
+  <%= render Migration::MigrationFailureComponent.with_collection(failures) %>
+
+  <%#= govuk_table do |table|
+    table.with_head do |head|
+      head.with_row do |row|
+        row.with_cell(text: "No.")
+        row.with_cell(text: "Source record")
+        row.with_cell(text: "Validation failure")
+      end
+    end
+
+    table.with_body do |body|
+      failures.each do |failure, index|
+        body.with_row(html_attributes: { class: "govuk-!-font-size-16" }) do |row|
+          row.with_cell(text: failure.failure_type)
+          row.with_cell(text: failure_item_json_code(failure.item))
+          row.with_cell(text: failure.failure_message)
+        end
+      end
+    end
+  end %>
+<% end %>
