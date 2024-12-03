@@ -1,4 +1,4 @@
-RSpec.describe "schools/register_mentor/cannot_without_trn.md.erb" do
+RSpec.describe "schools/register_mentor/no_trn.md.erb" do
   let(:find_a_lost_trn_path) { "https://find-a-lost-trn.education.gov.uk/start" }
   let(:request_a_trn_path) { "https://www.gov.uk/guidance/teacher-reference-number-trn#if-youre-a-mentor-for-a-trainee-or-early-career-teacher" }
   let(:school_home_path) { schools_ects_home_path }

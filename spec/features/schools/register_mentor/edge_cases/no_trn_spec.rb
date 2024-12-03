@@ -16,7 +16,7 @@ RSpec.describe 'Registering a mentor' do
     then_i_should_be_taken_to_the_find_mentor_page
 
     when_i_click_they_do_not_have_a_trn
-    then_i_should_be_taken_to_the_you_cannot_register_a_mentor_without_a_trn_page
+    then_i_should_be_taken_to_the_no_trn_page
   end
 
   def given_there_is_a_school_in_the_service
@@ -56,7 +56,7 @@ RSpec.describe 'Registering a mentor' do
     page.get_by_role('link', name: 'They do not have a TRN').click
   end
 
-  def then_i_should_be_taken_to_the_you_cannot_register_a_mentor_without_a_trn_page
-    expect(page.url).to end_with('/school/register-mentor/cannot-without-trn')
+  def then_i_should_be_taken_to_the_no_trn_page
+    expect(page.url).to end_with('/school/register-mentor/no-trn')
   end
 end

@@ -44,6 +44,6 @@ RSpec.describe "schools/register_mentor/find_mentor.html.erb" do
   it "includes a link to 'They do not have a TRN' a TRN" do
     render
 
-    expect(rendered).to have_link('They do not have a TRN', href: schools_register_mentor_cannot_without_trn_path)
+    expect(rendered).to have_link('They do not have a TRN', href: schools_register_mentor_no_trn_path)
   end
 end

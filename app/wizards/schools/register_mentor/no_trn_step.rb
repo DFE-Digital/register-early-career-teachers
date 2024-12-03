@@ -1,6 +1,6 @@
 module Schools
   module RegisterMentor
-    class CannotWithoutTRNStep < Step
+    class NoTRNStep < Step
     end
   end
 end
