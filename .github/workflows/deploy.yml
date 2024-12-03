@@ -101,7 +101,7 @@ jobs:
           environment: ${{ matrix.environment }}
           docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
-          statuscake-api-token: 'FIXME'
+          statuscake-api-token: ${{ secrets.STATUSCAKE_API_TOKEN }}
 
   deploy-production:
     name: Deploy production

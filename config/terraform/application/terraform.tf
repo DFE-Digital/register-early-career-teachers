@@ -42,5 +42,5 @@ provider "kubernetes" {
 }
 
 provider "statuscake" {
-  api_token = var.statuscake_api_token
+  api_token = module.infrastructure_secrets.map.STATUSCAKE-API-TOKEN
 }
