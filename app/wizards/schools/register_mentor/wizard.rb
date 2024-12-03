@@ -6,6 +6,7 @@ module Schools
       steps do
         [
           {
+            cannot_without_trn: CannotWithoutTRNStep,
             find_mentor: FindMentorStep,
             national_insurance_number: NationalInsuranceNumberStep,
             not_found: NotFoundStep,
