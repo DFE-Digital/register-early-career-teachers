@@ -6,7 +6,7 @@ module Migration
       @mentorship_period = mentorship_period
     end
 
-    def object_id
+    def period_id
       mentorship_period.id
     end
 

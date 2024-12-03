@@ -6,7 +6,7 @@ module Migration
       @training_period = training_period
     end
 
-    def object_id
+    def period_id
       training_period.id
     end
 

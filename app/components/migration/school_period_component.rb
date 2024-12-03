@@ -8,7 +8,7 @@ module Migration
       @school_period = school_period
     end
 
-    def object_id
+    def period_id
       school_period.id
     end
 
