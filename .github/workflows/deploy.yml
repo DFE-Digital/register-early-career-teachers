@@ -69,6 +69,7 @@ jobs:
           docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           pull-request-number: ${{ github.event.pull_request.number }}
+          commit-sha: ${{ github.event.pull_request.head.sha }}
 
       - name: Post sticky pull request comment
         if: github.event_name == 'pull_request'
@@ -102,6 +103,7 @@ jobs:
           docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           statuscake-api-token: ${{ secrets.STATUSCAKE_API_TOKEN }}
+          commit-sha: ${{ github.sha }}
 
   deploy-production:
     name: Deploy production
@@ -120,3 +122,4 @@ jobs:
           docker-image-tag: ${{ needs.docker.outputs.docker-image-tag }}
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           statuscake-api-token: ${{ secrets.STATUSCAKE_API_TOKEN }}
+          commit-sha: ${{ github.sha }}

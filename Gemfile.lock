@@ -492,6 +492,12 @@ GEM
       nori (~> 2.4)
       wasabi (>= 3.7, < 6)
     securerandom (0.3.2)
+    sentry-rails (5.21.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.21.0)
+    sentry-ruby (5.21.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     set (1.1.0)
     shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
@@ -506,6 +512,7 @@ GEM
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
+    stackprof (0.2.26)
     stringio (3.1.2)
     swd (2.0.3)
       activesupport (>= 3)
@@ -599,8 +606,11 @@ DEPENDENCIES
   rubocop-govuk
   rubyzip
   savon
+  sentry-rails
+  sentry-ruby
   shoulda-matchers
   solid_queue
+  stackprof
   tzinfo-data
   webrick
 

@@ -17,6 +17,9 @@ inputs:
   statuscake-api-token:
     description: The Statuscake token
     required: false
+  commit-sha:
+    description: The commit sha for the current commit
+    required: true
 
 outputs:
   url:
@@ -47,6 +50,7 @@ runs:
         TF_VAR_statuscake_api_token: ${{ inputs.statuscake-api-token }}
         DOCKER_IMAGE_TAG: ${{ inputs.docker-image-tag }}
         PULL_REQUEST_NUMBER: ${{ inputs.pull-request-number }}
+        COMMIT_SHA: ${{ inputs.current-commit-sha }}
 
     - uses: Azure/login@v1
       with:

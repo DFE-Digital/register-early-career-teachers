@@ -2,3 +2,4 @@
 ENVIRONMENT_COLOUR: yellow
 ENVIRONMENT_PHASE_BANNER_TAG: Sandbox 🏖️
 ENVIRONMENT_PHASE_BANNER_CONTENT: This is the sandbox environment.
+ENABLE_SENTRY: true

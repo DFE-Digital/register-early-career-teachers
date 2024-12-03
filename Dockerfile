@@ -58,8 +58,10 @@ RUN rm -rf node_modules log/* tmp/* /tmp && \
 # Build runtime image
 FROM ruby:3.3.4-alpine as production
 
-# Use rails production environment when deployed using docker
-ENV RAILS_ENV=production
+ARG COMMIT_SHA
+
+ENV RAILS_ENV=production \
+    COMMIT_SHA=${COMMIT_SHA}
 
 # The application runs from /app
 WORKDIR /app
