@@ -15,6 +15,13 @@ private
     mentor_profile
     ect_school_periods
     mentor_school_periods
+    failures
+  end
+
+  def failures
+    @failures = Migration::MigrationFailurePresenter.wrap(
+      MigrationFailure.where(parent_type: "Teacher", parent_id: @teacher.id)
+    )
   end
 
   def ect_school_periods
