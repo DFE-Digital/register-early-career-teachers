@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_25_143641) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_27_121929) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -207,7 +207,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_25_143641) do
     t.string "failure_message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "parent_id"
+    t.string "parent_type"
     t.index ["data_migration_id"], name: "index_migration_failures_on_data_migration_id"
+    t.index ["parent_id"], name: "index_migration_failures_on_parent_id"
   end
 
   create_table "pending_induction_submissions", force: :cascade do |t|

@@ -6,7 +6,7 @@
     end
     list.with_row do |row|
       row.with_key(text: "Full name")
-      row.with_value(text: full_name_of(teacher))
+      row.with_value(text: teacher.full_name)
     end
     list.with_row do |row|
       row.with_key(text: "TRN")

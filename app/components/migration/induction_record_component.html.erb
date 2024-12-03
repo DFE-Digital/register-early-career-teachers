@@ -39,9 +39,11 @@
         row.with_value(text: induction_record.cip_materials_name)
       end
     end
-    list.with_row do |row|
-      row.with_key(text: "Mentor")
-      row.with_value(text: induction_record.mentor_name)
+    if induction_record.ect?
+      list.with_row do |row|
+        row.with_key(text: "Mentor")
+        row.with_value(text: induction_record.mentor_name)
+      end
     end
     list.with_row do |row|
       row.with_key(text: "Record status")

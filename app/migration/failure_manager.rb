@@ -11,6 +11,12 @@ class FailureManager
     end
   end
 
+  def record_child_failure(parent, item, failure_message)
+    return if item.blank?
+
+    write_failure(item, failure_message, parent.id, parent.class.name)
+  end
+
   def record_failure(item, failure_message)
     return if item.blank?
 
@@ -47,7 +53,7 @@ private
     data_migration.migration_failures
   end
 
-  def write_failure(item, failure_message)
-    data_migration.migration_failures.create!(item: item.serializable_hash, failure_message:)
+  def write_failure(item, failure_message, parent_id = nil, parent_type = nil)
+    data_migration.migration_failures.create!(item: item.serializable_hash, failure_message:, parent_id:, parent_type:)
   end
 end

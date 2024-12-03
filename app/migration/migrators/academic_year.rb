@@ -19,10 +19,7 @@ module Migrators
     end
 
     def migrate!
-      Rails.logger.info("Migrating #{Migration::Cohort.count} cohorts")
-
       migrate(self.class.cohorts) do |cohort|
-        Rails.logger.info("  --> #{cohort.start_year}")
         ::AcademicYear.create!(id: cohort.start_year)
       end
     end

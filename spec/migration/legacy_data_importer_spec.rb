@@ -13,7 +13,7 @@ RSpec.describe LegacyDataImporter do
 
   describe "#prepare!" do
     it "calls .prepare! on each migrator" do
-      allow(importer).to receive(:migrators).and_return [migrator1, migrator2]
+      allow(Migrators::Base).to receive(:migrators).and_return [migrator1, migrator2]
       expect([migrator1, migrator2]).to all(receive(:prepare!))
       importer.prepare!
     end
@@ -21,7 +21,7 @@ RSpec.describe LegacyDataImporter do
 
   describe "#migrate!" do
     it "queues the next runnable migrator" do
-      allow(importer).to receive(:migrators_in_dependency_order).and_return [migrator1, migrator2]
+      allow(Migrators::Base).to receive(:migrators_in_dependency_order).and_return [migrator1, migrator2]
 
       allow(migrator1).to receive(:runnable?).and_return(false)
       allow(migrator2).to receive(:runnable?).and_return(true)
@@ -34,7 +34,7 @@ RSpec.describe LegacyDataImporter do
 
   describe "#reset!" do
     before do
-      allow(importer).to receive(:migrators_in_dependency_order).and_return [migrator1, migrator2]
+      allow(Migrators::Base).to receive(:migrators_in_dependency_order).and_return [migrator1, migrator2]
     end
 
     it "destroys any DataMigration records" do

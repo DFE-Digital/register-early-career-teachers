@@ -54,6 +54,8 @@ module Migrators
             Builders::Mentor::TrainingPeriods.new(teacher:, training_period_data:).process!
             teacher.update!(legacy_mentor_id: participant_profile.id)
           end
+        rescue ActiveRecord::ActiveRecordError, ::InductionRecordSanitizer::InductionRecordError => e
+          raise ChildRecordError.new(e.message, teacher)
         end
     end
   end
