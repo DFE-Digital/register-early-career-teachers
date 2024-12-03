@@ -2,7 +2,7 @@
 
 if Rails.application.config.enable_sentry
   Sentry.init do |config|
-    config.dsn = ENV['SENTRY_DSN']
+    config.dsn = Rails.application.config.sentry_dsn
     config.breadcrumbs_logger = %i[active_support_logger http_logger]
     config.release = ENV["COMMIT_SHA"]
 
