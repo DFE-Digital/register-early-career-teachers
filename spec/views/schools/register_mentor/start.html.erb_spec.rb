@@ -4,9 +4,11 @@ RSpec.describe "schools/register_mentor/start.html.erb" do
   let(:ect_name) { 'James Lorie' }
   let(:title) { "What you'll need to add a new mentor for #{ect_name}" }
 
-  it "sets the page title to 'What you'll need to add a new mentor for <ect_name>'" do
+  before do
     assign(:ect_name, ect_name)
+  end
 
+  it "sets the page title to 'What you'll need to add a new mentor for <ect_name>'" do
     render
 
     expect(sanitize(view.content_for(:page_title))).to eql(sanitize(title))
