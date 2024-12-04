@@ -1,9 +1,13 @@
 # add developer persona auth
 Rails.application.config.middleware.use(OmniAuth::Builder) do
-  provider(:developer,
-           name: 'developer',
-           fields: %i[name email],
-           uid_field: :email)
+  if Rails.application.config.enable_personas
+    provider(
+      :developer,
+      name: 'developer',
+      fields: %i[name email],
+      uid_field: :email
+    )
+  end
 
   if Rails.application.config.dfe_sign_in_enabled
     issuer_uri = URI(Rails.application.config.dfe_sign_in_issuer)
