@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
 
 private
 
+  def require_persona_admin
+    # Temporary auth
+    # We need to set the redirect path explicitly otherwise the redirect will go to '/admin/sign-in'
+    redirect_to('/sign-in') unless Admin::Access.new(current_user).can_access?
+  end
+
   def ab_home_path
     ab_teachers_path if session[:appropriate_body_id].present?
   end
