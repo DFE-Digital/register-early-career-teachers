@@ -37,6 +37,7 @@ module ECF2
     config.enable_schools_interface = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_SCHOOLS_INTERFACE', false))
     config.enable_local_tls = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_LOCAL_TLS', false))
     config.enable_sentry = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_SENTRY', false))
+    config.enable_blazer = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_BLAZER', false))
     config.sentry_dsn = ENV['SENTRY_DSN']
 
     config.dfe_sign_in_client_id = ENV['DFE_SIGN_IN_CLIENT_ID']
