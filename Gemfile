@@ -4,8 +4,8 @@ ruby "3.3.4"
 
 gem "rails", "~> 7.2.2"
 
-gem "bootsnap", require: false
 gem "blazer"
+gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "csv"
 gem "dfe-wizard", github: "DFE-Digital/dfe-wizard"
