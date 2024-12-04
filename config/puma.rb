@@ -13,5 +13,9 @@ port ENV.fetch("PORT", 3000)
 environment ENV.fetch("RAILS_ENV") { "development" }
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
+if Rails.application.config.enable_local_tls
+  bind 'ssl://localhost:3001'
+end
+
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart

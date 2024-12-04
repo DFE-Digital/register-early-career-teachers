@@ -5,24 +5,24 @@ RSpec.describe Sessions::SessionManager do
 
   subject(:service) { Sessions::SessionManager.new(session) }
 
-  describe "#begin_session!" do
+  describe "#begin_developer_session!" do
     it "creates a user_session hash in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]).to be_present
     end
 
     it "stores the email in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]["email"]).to eq email
     end
 
     it "stores the provider in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]["provider"]).to eq provider
     end
 
     it "stores a last active timestamp in the session" do
-      service.begin_session!(email, provider)
+      service.begin_developer_session!(email)
       expect(session["user_session"]["last_active_at"]).to be_within(1.second).of(Time.zone.now)
     end
   end
@@ -146,6 +146,22 @@ RSpec.describe Sessions::SessionManager do
       it "returns nil" do
         expect(service.expires_at).to be_nil
       end
+    end
+  end
+
+  describe '#set_school_urn' do
+    it 'sets the school_urn in the session to the provided value' do
+      service.school_urn = '1234567'
+
+      expect(session['school_urn']).to eql('1234567')
+    end
+  end
+
+  describe '#set_appropriate_body_id' do
+    it 'sets the set_appropriate_body_id in the session to the provided value' do
+      service.appropriate_body_id = '987'
+
+      expect(session['appropriate_body_id']).to eql('987')
     end
   end
 end

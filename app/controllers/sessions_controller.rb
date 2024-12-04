@@ -7,22 +7,15 @@ class SessionsController < ApplicationController
 
   def create
     user_info = request.env['omniauth.auth']
-    provider = user_info.fetch(:provider)
 
     # NOTE: OTP authentication is handled in OTPSessionsController as it is not omniauth
-    case provider
+    case user_info.provider
     when "developer"
-      if params["appropriate_body_id"]
-        session["appropriate_body_id"] = params["appropriate_body_id"]
-      end
-
-      if params["school_urn"]
-        session[:school_urn] = params["school_urn"]
-      end
-
-      session_manager.begin_session!(user_info.uid, provider)
-    when "dfe"
-      raise provider
+      session_manager.appropriate_body_id = params["appropriate_body_id"]
+      session_manager.school_urn = params["school_urn"]
+      session_manager.begin_developer_session!(user_info.info.email)
+    when "dfe_sign_in"
+      session_manager.begin_dfe_sign_in_session!(user_info)
     else
       # TODO: handle unknown provider
       raise provider
