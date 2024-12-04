@@ -11,7 +11,7 @@ require "action_view/railtie"
 
 Bundler.require(*Rails.groups)
 
-module Ecf2
+module ECF2
   class Application < Rails::Application
     config.load_defaults 7.1
     config.autoload_lib(ignore: %w[assets tasks])
