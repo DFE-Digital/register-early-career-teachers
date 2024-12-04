@@ -146,6 +146,8 @@ Rails.application.routes.draw do
 
       get "check-answers", action: :new
       post "check-answers", action: :create
+
+      get "confirmation", action: :new
     end
   end
 end

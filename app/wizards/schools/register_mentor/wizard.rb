@@ -7,6 +7,7 @@ module Schools
         [
           {
             check_answers: CheckAnswersStep,
+            confirmation: ConfirmationStep,
             email_address: EmailAddressStep,
             find_mentor: FindMentorStep,
             national_insurance_number: NationalInsuranceNumberStep,
