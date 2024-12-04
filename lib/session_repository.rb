@@ -22,8 +22,11 @@ private
     store[key.to_s]
   end
 
-  def method_missing(name, *_args)
-    get(name)
+  # Every missing methodname ending with '=' will call #update(name: args)
+  # Otherwise call #get(name)
+  def method_missing(name, *args)
+    methodname = name.to_s
+    methodname.ends_with?("=") ? update(methodname[0..-2] => args.first) : get(name)
   end
 
   def respond_to_missing?(_, _)
