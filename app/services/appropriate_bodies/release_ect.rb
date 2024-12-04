@@ -8,7 +8,7 @@ module AppropriateBodies
 
     def release!
       InductionPeriod.transaction do
-        ongoing_induction_period.update(
+        ongoing_induction_period.update!(
           finished_on: @pending_induction_submission.finished_on,
           number_of_terms: @pending_induction_submission.number_of_terms
         )
