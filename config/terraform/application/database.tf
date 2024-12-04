@@ -10,7 +10,7 @@ module "postgres" {
   cluster_configuration_map      = module.cluster_data.configuration_map
   use_azure                      = var.deploy_azure_backing_services
   azure_enable_monitoring        = var.enable_monitoring
-  azure_enable_backup_storage    = var.enable_postgres_backup_storage
+  azure_enable_backup_storage    = var.azure_enable_backup_storage
   server_version                 = "16"
   azure_extensions               = ["btree_gin", "citext", "plpgsql", "pg_trgm", "unaccent"]
   azure_enable_high_availability = var.postgres_enable_high_availability

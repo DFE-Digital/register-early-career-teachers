@@ -48,7 +48,7 @@ variable "enable_postgres_ssl" {
   default     = true
   description = "Enforce SSL connection from the client side"
 }
-variable "enable_postgres_backup_storage" {
+variable "azure_enable_backup_storage" {
   default     = false
   description = "Create a storage account to store database dumps"
 }
