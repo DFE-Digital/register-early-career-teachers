@@ -143,6 +143,9 @@ Rails.application.routes.draw do
 
       get "email-address", action: :new
       post "email-address", action: :create
+
+      get "check-answers", action: :new
+      post "check-answers", action: :create
     end
   end
 end

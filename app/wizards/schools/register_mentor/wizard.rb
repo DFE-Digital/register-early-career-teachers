@@ -6,6 +6,7 @@ module Schools
       steps do
         [
           {
+            check_answers: CheckAnswersStep,
             email_address: EmailAddressStep,
             find_mentor: FindMentorStep,
             national_insurance_number: NationalInsuranceNumberStep,
