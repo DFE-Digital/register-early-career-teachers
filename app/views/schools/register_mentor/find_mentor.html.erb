@@ -23,6 +23,9 @@
   <%= f.govuk_submit "Continue" %>
 <% end %>
 
+<p><%= govuk_link_to("They do not have a TRN", schools_register_mentor_no_trn_path) %></p>
+
+
 <%= render TestGuidanceComponent.new do |component| %>
   <% component.with_trs_example_teacher_details %>
 <% end %>

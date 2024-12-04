@@ -130,6 +130,7 @@ Rails.application.routes.draw do
       get "national-insurance-number", action: :new
       post "national-insurance-number", action: :create
 
+      get "no-trn", action: :new
       get "trn-not-found", action: :new
       get "not-found", action: :new
 

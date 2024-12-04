@@ -9,6 +9,7 @@ module Schools
             find_mentor: FindMentorStep,
             national_insurance_number: NationalInsuranceNumberStep,
             not_found: NotFoundStep,
+            no_trn: NoTRNStep,
             review_mentor_details: ReviewMentorDetailsStep,
             trn_not_found: TRNNotFoundStep,
           }
