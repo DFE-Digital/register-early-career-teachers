@@ -140,6 +140,9 @@ Rails.application.routes.draw do
 
       get "review-mentor-details", action: :new
       post "review-mentor-details", action: :create
+
+      get "email-address", action: :new
+      post "email-address", action: :create
     end
   end
 end
