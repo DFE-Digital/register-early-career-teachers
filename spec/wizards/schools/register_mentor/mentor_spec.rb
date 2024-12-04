@@ -1,11 +1,14 @@
 describe Schools::RegisterMentor::Mentor do
+  let(:school) { FactoryBot.create(:school) }
   let(:store) do
-    OpenStruct.new(trn: "3002586",
-                   date_of_birth: "11-10-1945",
-                   trs_first_name: "Dusty",
-                   trs_last_name: "Rhodes",
-                   trs_date_of_birth: "1945-10-11",
-                   email: "dusty@rhodes.com")
+    FactoryBot.build(:session_repository,
+                     trn: "3002586",
+                     date_of_birth: "11-10-1945",
+                     trs_first_name: "Dusty",
+                     trs_last_name: "Rhodes",
+                     trs_date_of_birth: "1945-10-11",
+                     email: "dusty@rhodes.com",
+                     school_urn: school.urn)
   end
 
   subject(:mentor) { described_class.new(store) }
@@ -81,6 +84,21 @@ describe Schools::RegisterMentor::Mentor do
       it 'returns true' do
         expect(mentor.matches_trs_dob?).to be_truthy
       end
+    end
+  end
+
+  describe '#register!' do
+    let(:teacher) { Teacher.first }
+    let(:mentor_at_school_period) { teacher.mentor_at_school_periods.first }
+
+    it "creates a new teacher registered at the given school" do
+      expect(Teacher.find_by_trn(mentor.trn)).to be_nil
+
+      mentor.register!
+
+      expect(teacher.trn).to eq(mentor.trn)
+      expect(mentor_at_school_period.school_id).to eq(school.id)
+      expect(mentor_at_school_period.started_on).to eq(Date.current)
     end
   end
 
