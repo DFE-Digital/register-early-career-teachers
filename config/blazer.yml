@@ -2,5 +2,5 @@
 
 data_sources:
   main:
-    url: <%= ENV["BLAZER_DATABASE_URL"] %>
+    url: <%= ENV["DATABASE_URL"] %>
 before_action_method: require_persona_admin
