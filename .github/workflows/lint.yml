@@ -116,13 +116,12 @@ jobs:
           terraform_version: 1.9.8
 
       - name: Check formatting
-        run: terraform fmt -check -recursive -diff
-        working-directory: config/terraform
+        run: terraform -chdir=config/terraform/application fmt -check -recursive -diff
 
-      - name: Download vendor modules
-        run: make ci staging bin/terrafile
+      - name: Download terraform modules
+        run: make ci staging vendor-modules
 
       - name: Validate
         run: |
-          terraform init -backend=false
+          terraform -chdir=config/terraform/application init -backend=false
           terraform validate -no-color
