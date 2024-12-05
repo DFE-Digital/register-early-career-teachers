@@ -6,7 +6,7 @@ RSpec.describe "schools/register_mentor/check_answers.html.erb" do
     double(trn: "1234567",
            trs_first_name: "John",
            trs_last_name: "Wayne",
-           email_address: "john.wayne@example.com",
+           email: "john.wayne@example.com",
            for_ect_named: "Michael Dixon")
   end
   let(:wizard) { Schools::RegisterMentor::Wizard.new(current_step: :check_answers, store:) }
