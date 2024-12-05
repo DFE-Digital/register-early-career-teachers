@@ -24,7 +24,7 @@ module Schools
     private
 
       def persist
-        ect.update(trn:,
+        ect.update(trn: formatted_trn,
                    date_of_birth: date_of_birth.values.join("-"),
                    trs_national_insurance_number: trs_teacher.national_insurance_number,
                    trs_date_of_birth: trs_teacher.date_of_birth,
@@ -35,8 +35,11 @@ module Schools
       end
 
       def trs_teacher
-        formatted_trn = Validation::TeacherReferenceNumber.new(trn).formatted_trn
         @trs_teacher ||= fetch_trs_teacher(trn: formatted_trn)
+      end
+
+      def formatted_trn
+        @formatted_trn ||= Validation::TeacherReferenceNumber.new(trn).formatted_trn
       end
     end
   end
