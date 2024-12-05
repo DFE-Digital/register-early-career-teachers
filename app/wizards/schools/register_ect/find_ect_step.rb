@@ -35,7 +35,8 @@ module Schools
       end
 
       def trs_teacher
-        @trs_teacher ||= fetch_trs_teacher(trn:)
+        formatted_trn = Validation::TeacherReferenceNumber.new(trn).formatted_trn
+        @trs_teacher ||= fetch_trs_teacher(trn: formatted_trn)
       end
     end
   end
