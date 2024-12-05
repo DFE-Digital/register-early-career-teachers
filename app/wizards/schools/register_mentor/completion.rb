@@ -1,6 +1,6 @@
 module Schools
   module RegisterMentor
-    class Persistence
+    class Completion
       attr_reader :first_name, :last_name, :school_urn, :started_on, :teacher, :trn
 
       def initialize(first_name:, last_name:, trn:, school_urn:, started_on: Date.current)
@@ -21,17 +21,15 @@ module Schools
     private
 
       def create_teacher!
-        @teacher ||= ::Teacher.create!(first_name:, last_name:, trn:)
+        @teacher = ::Teacher.create!(first_name:, last_name:, trn:)
+      end
+
+      def school
+        @school ||= School.find_by(urn: school_urn)
       end
 
       def start_at_school!
         teacher.mentor_at_school_periods.create!(school:, started_on:)
-      end
-
-    private
-
-      def school
-        @school ||= School.find_by(urn: school_urn)
       end
     end
   end

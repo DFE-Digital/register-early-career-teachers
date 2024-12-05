@@ -1,4 +1,4 @@
-describe Schools::RegisterMentor::Persistence do
+describe Schools::RegisterMentor::Completion do
   let(:first_name) { "Dusty" }
   let(:last_name) { "Rhodes" }
   let(:trn) { "3002586" }

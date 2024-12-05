@@ -1,3 +1,9 @@
+# Steps in the Schools::RegisterMentor wizard will have a Schools::RegisterMentor::Mentor instance
+# available rather than the wizard store directly.
+# The aim of this class is to encapsulate and provide Mentor logic instead of spreading it throught the various steps.
+#
+# This class will depend so much on the multiple data saved in the wizard.store by the steps during the journey
+# that has been built on top of it by inheriting from Ruby SimpleDelegator class.
 module Schools
   module RegisterMentor
     class Mentor < SimpleDelegator
@@ -20,11 +26,11 @@ module Schools
       end
 
       def register!
-        Persistence.new(first_name: trs_first_name,
-                        last_name: trs_last_name,
-                        trn:,
-                        school_urn:)
-                   .call
+        Completion.new(first_name: trs_first_name,
+                       last_name: trs_last_name,
+                       trn:,
+                       school_urn:)
+                  .call
       end
 
     private
