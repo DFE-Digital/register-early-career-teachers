@@ -32,7 +32,7 @@ RSpec.describe "schools/register_mentor/check_answers.html.erb" do
   it 'displays TRN, Name and Email address' do
     render
 
-    expect(rendered).to have_element(:dt, text: "Teacher Reference Number (TRN)")
+    expect(rendered).to have_element(:dt, text: "Teacher reference number (TRN)")
     expect(rendered).to have_element(:dd, text: "1234567")
     expect(rendered).to have_element(:dt, text: "Name")
     expect(rendered).to have_element(:dd, text: "John Wayne")
