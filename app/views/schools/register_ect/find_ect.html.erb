@@ -5,7 +5,7 @@
 <%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
   <%= content_for(:error_summary) { f.govuk_error_summary } %>
 
-  <%= f.govuk_number_field(
+  <%= f.govuk_text_field(
         :trn,
         label: { text: "Teacher reference number (TRN)", size: "m" },
         hint: { text: "Must be 7 digits long", size: "s" },
