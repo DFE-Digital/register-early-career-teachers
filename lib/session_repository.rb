@@ -10,6 +10,7 @@ class SessionRepository
 
     true
   end
+  alias_method :update!, :update
 
 private
 
@@ -26,7 +27,7 @@ private
   # Otherwise call #get(name)
   def method_missing(name, *args)
     methodname = name.to_s
-    methodname.ends_with?("=") ? update(methodname[0..-2] => args.first) : get(name)
+    methodname.ends_with?("=") ? update!(methodname[0..-2] => args.first) : get(name)
   end
 
   def respond_to_missing?(_, _)
