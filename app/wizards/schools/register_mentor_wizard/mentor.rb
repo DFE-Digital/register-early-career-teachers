@@ -26,11 +26,11 @@ module Schools
       end
 
       def register!
-        Completion.new(first_name: trs_first_name,
-                       last_name: trs_last_name,
-                       trn:,
-                       school_urn:)
-                  .call
+        Schools::RegisterMentor.new(first_name: trs_first_name,
+                                    last_name: trs_last_name,
+                                    trn:,
+                                    school_urn:)
+                               .register_mentor!
       end
 
     private
