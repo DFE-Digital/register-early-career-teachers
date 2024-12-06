@@ -45,6 +45,8 @@ jobs:
         with:
           prepare-test-database: "true"
           prepare-assets: "true"
+        env: 
+          ENABLE_PERSONAS: false
 
       - name: Run tests
         env:
