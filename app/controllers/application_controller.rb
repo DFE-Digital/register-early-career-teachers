@@ -8,9 +8,8 @@ class ApplicationController < ActionController::Base
 
 private
 
-  def require_persona_admin
-    # Temporary auth
-    # We need to set the redirect path explicitly otherwise the redirect will go to '/admin/sign-in'
+  def require_admin
+    # This method is used by Blazer to restrict access. See config/blazer.yml
     redirect_to('/sign-in') unless Admin::Access.new(current_user).can_access?
   end
 

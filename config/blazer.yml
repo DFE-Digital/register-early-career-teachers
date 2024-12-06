@@ -3,4 +3,4 @@
 data_sources:
   main:
     url: <%= ENV["DATABASE_URL"] %>
-before_action_method: require_persona_admin
+before_action_method: require_admin
