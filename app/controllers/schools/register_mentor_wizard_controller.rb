@@ -7,7 +7,8 @@ module Schools
     WIZARD_CLASS = Schools::RegisterMentorWizard::Wizard.freeze
 
     def start
-      @ect_name = session[:register_mentor_for_ect_named] = params[:ect_name]
+      @ect_name = params[:ect_name]
+      session[:register_mentor_for_ect_named] = @ect_name
     end
 
     def new
