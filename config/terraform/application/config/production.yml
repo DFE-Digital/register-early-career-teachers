@@ -1,2 +1,3 @@
 ---
 ENABLE_SENTRY: true
+ENABLE_PERSONAS: false

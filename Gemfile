@@ -4,6 +4,7 @@ ruby "3.3.4"
 
 gem "rails", "~> 7.2.2"
 
+gem "blazer"
 gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "csv"

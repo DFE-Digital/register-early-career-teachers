@@ -1,0 +1,6 @@
+# see https://github.com/ankane/blazer for more info
+
+data_sources:
+  main:
+    url: <%= ENV["DATABASE_URL"] %>
+before_action_method: require_admin

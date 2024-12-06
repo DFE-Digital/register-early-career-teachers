@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
 
 private
 
+  def require_admin
+    # This method is used by Blazer to restrict access. See config/blazer.yml
+    redirect_to('/sign-in') unless Admin::Access.new(current_user).can_access?
+  end
+
   def ab_home_path
     ab_teachers_path if session[:appropriate_body_id].present?
   end

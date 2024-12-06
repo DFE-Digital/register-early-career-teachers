@@ -38,6 +38,10 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#index'
 
   namespace :admin do
+    constraints -> { Rails.application.config.enable_blazer } do
+      mount Blazer::Engine, at: "blazer"
+    end
+
     resources :users, only: %i[index] do
     end
 
