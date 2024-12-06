@@ -31,7 +31,7 @@ module ECF2
                        helper_specs: false)
     end
 
-    config.enable_personas = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_PERSONAS', false))
+    config.enable_personas = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_PERSONAS'))
     config.enable_persona_avatars = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_PERSONA_AVATARS', true))
     config.enable_migration_testing = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_MIGRATION_TESTING', false))
     config.enable_schools_interface = ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_SCHOOLS_INTERFACE', false))
