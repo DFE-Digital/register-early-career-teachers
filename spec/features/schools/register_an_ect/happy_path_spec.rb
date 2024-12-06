@@ -5,12 +5,11 @@ RSpec.describe 'Registering an ECT' do
   let(:trn) { '9876543' }
 
   before do
-    sign_in_as_admin
+    sign_in_as_school_user
   end
 
   scenario 'happy path' do
-    given_there_is_a_school_in_the_service
-    and_i_am_on_the_schools_landing_page
+    given_i_am_on_the_schools_landing_page
     when_i_start_adding_an_ect
     then_i_am_in_the_requirements_page
 
@@ -30,17 +29,15 @@ RSpec.describe 'Registering an ECT' do
     and_i_should_see_all_the_ect_data_on_the_page
 
     when_i_click_confirm_details
-    then_i_should_be_taken_to_the_confirmation_page
+    # TODO: This is temporary for now to confirm we are writing to the db
+    then_the_ect_and_induction_period_should_be_stored_in_the_database
+    and_then_i_should_be_taken_to_the_confirmation_page
 
     when_i_click_on_back_to_your_ects
     then_i_should_be_taken_to_the_ects_page
   end
 
-  def given_there_is_a_school_in_the_service
-    FactoryBot.create(:school, urn: "1234567")
-  end
-
-  def and_i_am_on_the_schools_landing_page
+  def given_i_am_on_the_schools_landing_page
     path = '/schools/home/ects'
     page.goto path
     expect(page.url).to end_with(path)
@@ -111,8 +108,18 @@ RSpec.describe 'Registering an ECT' do
     page.get_by_role('button', name: 'Confirm details').click
   end
 
-  def then_i_should_be_taken_to_the_confirmation_page
+  def and_then_i_should_be_taken_to_the_confirmation_page
     expect(page.url).to end_with('/schools/register-ect/confirmation')
+  end
+
+  def then_the_ect_and_induction_period_should_be_stored_in_the_database
+    teacher = Teacher.last
+    expect(teacher.trn).to eq(trn)
+    expect(teacher.first_name).to eq('Kirk')
+    expect(teacher.last_name).to eq('Van Houten')
+
+    ect_period = ECTAtSchoolPeriod.last
+    expect(ect_period.teacher).to eq(teacher)
   end
 
   def when_i_click_on_back_to_your_ects

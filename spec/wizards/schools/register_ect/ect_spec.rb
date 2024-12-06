@@ -11,7 +11,9 @@ describe Schools::RegisterECT::ECT do
                    email: "dusty@rhodes.com")
   end
 
-  subject(:ect) { described_class.new(store) }
+  let(:teacher_repository) { instance_double(Schools::Teacher) }
+
+  subject(:ect) { described_class.new(session_repository: store, teacher_repository:) }
 
   describe '#email' do
     it 'returns the email address' do
@@ -96,6 +98,24 @@ describe Schools::RegisterECT::ECT do
   describe '#trs_national_insurance_number' do
     it 'returns the national insurance number in trs' do
       expect(ect.trs_national_insurance_number).to eq("OWAD23455")
+    end
+  end
+
+  describe '#create!' do
+    it 'creates a teacher and resets the session repository' do
+      allow(teacher_repository).to receive(:create!).with(
+        trs_first_name: "Dusty",
+        trs_last_name: "Rhodes",
+        trn: "3002586"
+      ).and_return(true)
+
+      ect.create_teacher!
+
+      expect(teacher_repository).to have_received(:create!).with(
+        trs_first_name: "Dusty",
+        trs_last_name: "Rhodes",
+        trn: "3002586"
+      )
     end
   end
 end

@@ -26,4 +26,15 @@ describe Schools::Teacher do
       ])
     end
   end
+
+  describe '#create!' do
+    it 'creates a new Teacher and ECTAtSchool period for a given school' do
+      trn = '1234567'
+      trs_first_name = 'John'
+      trs_last_name = 'Smith'
+
+      expect { subject.create!(trn:, trs_first_name:, trs_last_name:) }
+        .to change { ::Teacher.count }.by(1).and change { ECTAtSchoolPeriod.count }.by(1)
+    end
+  end
 end
