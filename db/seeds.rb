@@ -463,13 +463,13 @@ anthony_hopkins_ect_at_brookfield_school = ECTAtSchoolPeriod.create!(
   teacher: anthony_hopkins,
   school: brookfield_school,
   started_on: 2.years.ago
-)
+).tap { |sp| describe_ect_at_school_period(sp) }
 
 TrainingPeriod.create!(
   ect_at_school_period: anthony_hopkins_ect_at_brookfield_school,
   started_on: 2.years.ago,
   provider_partnership: meadow_grain_partnership_2022
-)
+).tap { |tp| describe_training_period(tp) }
 
 print_seed_info("Adding mentorships:")
 

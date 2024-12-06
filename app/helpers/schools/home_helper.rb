@@ -17,7 +17,7 @@ private
     if school.current_mentor_teachers.exists?
       '#' # soon will be who_will_be_mentoring_schools_ect_path(trn: ect_trn) when the functionality is implemented
     else
-      schools_register_mentor_start_path(ect_name: ect_name)
+      schools_register_mentor_wizard_start_path(ect_name: ect_name)
     end
   end
 end

@@ -125,7 +125,7 @@ Rails.application.routes.draw do
   end
 
   namespace :schools, path: :school do
-    namespace :register_mentor, path: "register-mentor" do
+    namespace :register_mentor_wizard, path: "register-mentor" do
       get "what-you-will-need", as: :start, action: :start
 
       get "find-mentor", action: :new
@@ -140,6 +140,14 @@ Rails.application.routes.draw do
 
       get "review-mentor-details", action: :new
       post "review-mentor-details", action: :create
+
+      get "email-address", action: :new
+      post "email-address", action: :create
+
+      get "check-answers", action: :new
+      post "check-answers", action: :create
+
+      get "confirmation", action: :new
     end
   end
 end

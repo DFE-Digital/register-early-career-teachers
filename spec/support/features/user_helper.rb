@@ -13,6 +13,12 @@ module UserHelper
     end
   end
 
+  def sign_in_as_school_user(urn)
+    FactoryBot.create(:user, email: "user@school.com", name: "School User").tap do |user|
+      page.goto("/auth/developer/callback?school_urn=#{urn}&email=#{user.email}")
+    end
+  end
+
   def sign_in_as_appropriate_body_user
     @appropriate_body = FactoryBot.create(:appropriate_body)
 

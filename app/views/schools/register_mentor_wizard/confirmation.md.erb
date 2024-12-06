@@ -1,0 +1,20 @@
+---
+title: You've assigned <%= @mentor.full_name %> as a mentor
+header: false
+---
+
+<%= govuk_panel(title_text: "You've assigned #{@mentor.full_name} as a mentor") do %>
+for
+<br>
+<strong><%= @mentor.for_ect_named %></strong>
+<% end %>
+
+You have successfully registered John Smith for training.
+
+### What happens next
+
+We'll email Samuel Taylor to confirm you have registered them.
+
+They do not need to provide us with any further details.
+
+<%= govuk_link_to "Back to ECTs", schools_ects_home_path %>
