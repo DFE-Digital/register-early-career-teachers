@@ -1,11 +1,11 @@
-# Steps in the Schools::RegisterMentor wizard will have a Schools::RegisterMentor::Mentor instance
+# Steps in Schools::RegisterMentorWizard will have a Schools::RegisterMentor::Mentor instance
 # available rather than the wizard store directly.
-# The aim of this class is to encapsulate and provide Mentor logic instead of spreading it throught the various steps.
+# The aim of this class is to encapsulate and provide Mentor logic instead of spreading it througoutht the various steps.
 #
 # This class will depend so much on the multiple data saved in the wizard.store by the steps during the journey
 # that has been built on top of it by inheriting from Ruby SimpleDelegator class.
 module Schools
-  module RegisterMentor
+  module RegisterMentorWizard
     class Mentor < SimpleDelegator
       def full_name
         [trs_first_name, trs_last_name].join(" ").strip

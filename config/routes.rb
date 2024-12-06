@@ -125,7 +125,7 @@ Rails.application.routes.draw do
   end
 
   namespace :schools, path: :school do
-    namespace :register_mentor, path: "register-mentor" do
+    namespace :register_mentor_wizard, path: "register-mentor" do
       get "what-you-will-need", as: :start, action: :start
 
       get "find-mentor", action: :new
