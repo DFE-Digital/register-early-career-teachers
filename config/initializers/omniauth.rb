@@ -4,6 +4,7 @@ Rails.application.config.middleware.use(OmniAuth::Builder) do
     provider(
       :developer,
       name: 'developer',
+      # FIXME: add appropriate_body_id and school_urn to fields
       fields: %i[name email],
       uid_field: :email
     )
