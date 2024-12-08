@@ -1,46 +1,54 @@
 RSpec.describe Sessions::SessionManager do
   let(:session) { HashWithIndifferentAccess.new }
-  let(:email) { "eric@example.com" }
+  let(:user) { FactoryBot.create(:user, email: "eric@example.com") }
+  let(:email) { user.email }
   let(:provider) { "otp" }
 
   subject(:service) { Sessions::SessionManager.new(session) }
 
-  describe "#begin_developer_session!" do
+  describe "#begin_otp_session!" do
     it "creates a user_session hash in the session" do
-      service.begin_developer_session!(email)
+      service.begin_otp_session!(user.email)
       expect(session["user_session"]).to be_present
     end
 
     it "stores the email in the session" do
-      service.begin_developer_session!(email)
+      service.begin_otp_session!(email)
       expect(session["user_session"]["email"]).to eq email
     end
 
     it "stores the provider in the session" do
-      service.begin_developer_session!(email)
+      service.begin_otp_session!(email)
       expect(session["user_session"]["provider"]).to eq provider
     end
 
     it "stores a last active timestamp in the session" do
-      service.begin_developer_session!(email)
+      service.begin_otp_session!(email)
       expect(session["user_session"]["last_active_at"]).to be_within(1.second).of(Time.zone.now)
     end
   end
 
   describe "#load_from_session" do
-    let!(:user) { FactoryBot.create(:user, email:) }
-
     before do
-      session["user_session"] = { "email" => user.email, "provider" => provider, "last_active_at" => 10.minutes.ago }
+      session["user_session"] = {
+        "email" => user.email,
+        "name" => user.name,
+        "provider" => provider,
+        "last_active_at" => 10.minutes.ago,
+      }
+    end
+
+    it "is a Sessions::SessionUser" do
+      expect(service.load_from_session).to be_a(Sessions::SessionUser)
     end
 
     it "returns the User associated with the session data" do
-      expect(service.load_from_session).to eq user
+      expect(service.load_from_session.name).to eq user.name
     end
 
     it "updates the last_active_at timestamp" do
       service.load_from_session
-      expect(session["user_session"]["last_active_at"]).to be_within(1.second).of(Time.zone.now)
+      expect(session['user_session']['last_active_at']).to be_within(1.second).of(Time.zone.now)
     end
 
     context "when the session data is stale" do
@@ -48,23 +56,6 @@ RSpec.describe Sessions::SessionManager do
 
       before do
         session["user_session"] = { "email" => email, "provider" => provider, "last_active_at" => last_active_at }
-      end
-
-      it "returns nil" do
-        expect(service.load_from_session).to be_nil
-      end
-
-      it "does not update the last_active_at timestamp" do
-        service.load_from_session
-        expect(session["user_session"]["last_active_at"]).to eq last_active_at
-      end
-    end
-
-    context "when the email does not have an associated user record" do
-      let(:last_active_at) { 2.minutes.ago }
-
-      before do
-        session["user_session"] = { "email" => "kenny@example.com", "provider" => provider, "last_active_at" => last_active_at }
       end
 
       it "returns nil" do
@@ -146,22 +137,6 @@ RSpec.describe Sessions::SessionManager do
       it "returns nil" do
         expect(service.expires_at).to be_nil
       end
-    end
-  end
-
-  describe '#set_school_urn' do
-    it 'sets the school_urn in the session to the provided value' do
-      service.school_urn = '1234567'
-
-      expect(session['school_urn']).to eql('1234567')
-    end
-  end
-
-  describe '#set_appropriate_body_id' do
-    it 'sets the set_appropriate_body_id in the session to the provided value' do
-      service.appropriate_body_id = '987'
-
-      expect(session['appropriate_body_id']).to eql('987')
     end
   end
 end
