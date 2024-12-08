@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  class UnredirectableError < StandardError; end
+
   before_action :authenticate
   before_action :set_sentry_user
 
@@ -41,7 +43,7 @@ private
   end
 
   def login_redirect_path
-    session_manager.requested_path || admin_home_path || ab_home_path || school_home_path || root_path
+    session_manager.requested_path || admin_home_path || ab_home_path || school_home_path || fail(UnredirectableError)
   end
 
   def session_manager
