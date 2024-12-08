@@ -16,15 +16,15 @@ private
   end
 
   def ab_home_path
-    ab_teachers_path if session[:appropriate_body_id].present?
+    ab_teachers_path if current_user.appropriate_body_user?
   end
 
   def school_home_path
-    schools_ects_home_path if session[:school_urn].present?
+    schools_ects_home_path if current_user.school_user?
   end
 
   def admin_home_path
-    admin_path if current_user&.dfe?
+    admin_path if current_user&.dfe_user?
   end
 
   def authenticate

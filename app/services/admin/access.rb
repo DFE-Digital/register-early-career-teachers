@@ -7,7 +7,7 @@ module Admin
     end
 
     def can_access?
-      user&.dfe?
+      user&.dfe_user?
     end
   end
 end
