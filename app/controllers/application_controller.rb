@@ -49,6 +49,6 @@ private
   end
 
   def set_sentry_user
-    Sentry.set_user(id: @current_user&.id)
+    Sentry.set_user(email: current_user&.email)
   end
 end
