@@ -23,15 +23,15 @@ private
   end
 
   def sign_in_with_persona(user_type, appropriate_body:)
-    FactoryBot.create(:user, user_type).tap do |user|
-      case user_type
-      when :appropriate_body_user
-        fail(ArgumentError, "appropriate_body missing") unless appropriate_body
+    fake_name = Faker::Name.name
+    fake_email = Faker::Internet.email
 
-        Rails.logger.debug("Signing in with persona as appropriate body user")
-        post("/auth/developer/callback", params: { email: user.email, name: user.name })
-        put("/personas/appropriate-body-sessions", params: { appropriate_body_id: appropriate_body.id })
-      end
+    case user_type
+    when :appropriate_body_user
+      fail(ArgumentError, "appropriate_body missing") unless appropriate_body
+
+      Rails.logger.debug("Signing in with persona as appropriate body user")
+      post("/auth/developer/callback", params: { email: fake_email, name: fake_name, appropriate_body_id: appropriate_body.id })
     end
   end
 end
