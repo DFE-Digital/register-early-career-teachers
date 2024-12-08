@@ -19,14 +19,9 @@ module UserHelper
     end
   end
 
-  def sign_in_as_appropriate_body_user
-    @appropriate_body = FactoryBot.create(:appropriate_body)
-
-    @user = FactoryBot.create(:user, email: "appropriate-body@example.com", name: "Appropriate Body").tap do |user|
-      sign_in_as(user)
-
-      page.goto(appropriate_body_sessions_path)
-      page.get_by_role('button', name: @appropriate_body.name).click
+  def sign_in_as_appropriate_body_user(appropriate_body)
+    FactoryBot.create(:user, email: "user@ab.com", name: "Appropriate body").tap do |user|
+      page.goto("/auth/developer/callback?appropriate_body_id=#{appropriate_body.id}&email=#{user.email}")
     end
   end
 
