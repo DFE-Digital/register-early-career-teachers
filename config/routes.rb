@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :cities, only: %i[index create show]
-  resources :countries, only: %i[index create show]
 
   # omniauth sign-in
   get 'auth/:provider/callback', to: 'sessions#create'
@@ -26,11 +25,7 @@ Rails.application.routes.draw do
   post '/otp-sign-in/verify', to: 'otp_sessions#verify_code'
 
   constraints -> { Rails.application.config.enable_personas } do
-    resources 'personas', only: %i[index] do
-      collection do
-        resource :appropriate_body_sessions, only: %i[show update], controller: 'personas/appropriate_body_sessions', path: 'appropriate-body-sessions'
-      end
-    end
+    resources 'personas', only: %i[index]
   end
 
   post 'auth/:provider/callback', to: 'sessions#create'

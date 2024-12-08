@@ -11,9 +11,12 @@ class SessionsController < ApplicationController
     # NOTE: OTP authentication is handled in OTPSessionsController as it is not omniauth
     case user_info.provider
     when "developer"
-      session_manager.appropriate_body_id = params["appropriate_body_id"]
-      session_manager.school_urn = params["school_urn"]
-      session_manager.begin_developer_session!(user_info.info.email)
+      session_manager.begin_persona_session!(
+        user_info.info.email,
+        name: user_info.info.name,
+        appropriate_body_id: params["appropriate_body_id"]&.to_i,
+        school_urn: params["school_urn"]&.to_i
+      )
     when "dfe_sign_in"
       session_manager.begin_dfe_sign_in_session!(user_info)
     else

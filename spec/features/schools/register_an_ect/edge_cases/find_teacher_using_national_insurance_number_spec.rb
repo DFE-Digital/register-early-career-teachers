@@ -3,12 +3,8 @@ RSpec.describe 'Registering an ECT' do
 
   let(:page) { RSpec.configuration.playwright_page }
 
-  before do
-    sign_in_as_admin
-  end
-
   scenario 'Finding a teacher using national insurance number' do
-    given_there_is_a_school_in_the_service
+    given_i_am_logged_in_as_a_school_user
     and_i_am_on_the_schools_landing_page
     when_i_start_adding_an_ect
     then_i_am_in_the_requirements_page
@@ -23,8 +19,9 @@ RSpec.describe 'Registering an ECT' do
     then_i_should_be_taken_to_the_review_details_step
   end
 
-  def given_there_is_a_school_in_the_service
-    FactoryBot.create(:school, urn: "1234567")
+  def given_i_am_logged_in_as_a_school_user
+    school = FactoryBot.create(:school)
+    sign_in_as_school_user(school.urn)
   end
 
   def and_i_am_on_the_schools_landing_page

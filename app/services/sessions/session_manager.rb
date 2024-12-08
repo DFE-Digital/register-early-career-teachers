@@ -4,50 +4,37 @@ module Sessions
 
     attr_reader :session
 
+    delegate :provider, to: :current_user
+
     def initialize(session)
       @session = session
     end
 
-    def begin_developer_session!(email)
-      session["user_session"] = {
-        "provider" => "otp",
-        "email" => email,
-        **session_defaults
-      }
+    def begin_otp_session!(email)
+      session['user_session'] = SessionUser.from_user_record(email:, provider: 'otp').to_h
+    end
+
+    def begin_persona_session!(email, name: nil, appropriate_body_id: nil, school_urn: nil)
+      session['user_session'] = SessionUser.new(provider: 'developer', email:, name:, appropriate_body_id:, school_urn:).to_h
     end
 
     def begin_dfe_sign_in_session!(user_info)
-      Rails.logger.debug("initializing dfe sign-in session")
-      Rails.logger.debug("  urn: #{user_info.extra.raw_info.organisation.urn}")
-      Rails.logger.debug("  provider: #{user_info.provider}")
-
       session['user_session'] = {
         'email' => user_info.info.email,
         'name' => user_info.info.then { |info| "#{info.first_name} #{info.last_name}" },
         'organisation_id' => user_info.extra.raw_info.organisation.id,
         'provider' => user_info.provider,
         'urn' => user_info.extra.raw_info.organisation.urn,
-        **session_defaults
+        'last_active_at' => Time.zone.now
       }
     end
 
-    def session_defaults
-      { 'last_active_at' => Time.zone.now }
-    end
-
     def load_from_session
-      return if current_session.blank?
+      return if current_user.blank?
 
       return if expired?
 
-      user = User.find_by!(email:)
-
-      current_session["last_active_at"] = Time.zone.now
-
-      user
-    rescue ActiveRecord::RecordNotFound
-      Rails.logger.error("Email was not found: #{email}")
-      nil
+      current_user.record_new_activity!(session:)
     end
 
     def end_session!
@@ -72,34 +59,28 @@ module Sessions
       (last_active_at + MAX_SESSION_IDLE_TIME) if last_active_at
     end
 
-    def provider
-      current_session&.fetch("provider", nil)
-    end
-
-    def appropriate_body_id=(id)
-      Rails.logger.info("Setting session appropriate_body_id to #{id}")
-
-      session["appropriate_body_id"] = id
-    end
-
-    def school_urn=(urn)
-      Rails.logger.info("Setting session school_urn to #{urn}")
-
-      session["school_urn"] = urn
-    end
-
   private
+
+    def current_user
+      return if session['user_session'].blank?
+
+      @current_user ||= Sessions::SessionUser.from_session(session['user_session'])
+    end
 
     def current_session
       @current_session ||= session["user_session"]
     end
 
     def last_active_at
-      current_session&.fetch("last_active_at", nil)
+      return if current_user.blank?
+
+      current_user.last_active_at
     end
 
     def email
-      current_session&.fetch("email", nil)
+      return if current_user.blank?
+
+      current_user.email
     end
   end
 end

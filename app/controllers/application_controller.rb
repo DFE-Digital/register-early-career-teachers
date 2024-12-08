@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  class UnredirectableError < StandardError; end
+
   before_action :authenticate
   before_action :set_sentry_user
 
@@ -14,15 +16,15 @@ private
   end
 
   def ab_home_path
-    ab_teachers_path if session[:appropriate_body_id].present?
+    ab_teachers_path if current_user.appropriate_body_user?
   end
 
   def school_home_path
-    schools_ects_home_path if session[:school_urn].present?
+    schools_ects_home_path if current_user.school_user?
   end
 
   def admin_home_path
-    admin_path if current_user&.dfe?
+    admin_path if current_user&.dfe_user?
   end
 
   def authenticate
@@ -41,7 +43,7 @@ private
   end
 
   def login_redirect_path
-    session_manager.requested_path || admin_home_path || ab_home_path || school_home_path || root_path
+    session_manager.requested_path || admin_home_path || ab_home_path || school_home_path || fail(UnredirectableError)
   end
 
   def session_manager
@@ -49,6 +51,6 @@ private
   end
 
   def set_sentry_user
-    Sentry.set_user(id: @current_user&.id)
+    Sentry.set_user(email: current_user&.email)
   end
 end

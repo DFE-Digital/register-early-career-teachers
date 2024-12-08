@@ -27,7 +27,7 @@ class OTPSessionsController < ApplicationController
     if @otp_form.valid?(:verify)
       clean_up_session
 
-      session_manager.begin_developer_session!(@otp_form.email)
+      session_manager.begin_otp_session!(@otp_form.email)
 
       if authenticated?
         redirect_to(login_redirect_path)

@@ -6,7 +6,7 @@ class AppropriateBodiesController < ApplicationController
 private
 
   def set_appropriate_body
-    @appropriate_body = AppropriateBody.find(session[:appropriate_body_id])
+    @appropriate_body = AppropriateBody.find(current_user.appropriate_body_id)
   end
 
   def authorised?

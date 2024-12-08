@@ -9,7 +9,7 @@ private
 
   def authorised?
     # FIXME: make this work with DfE Sign-in
-    current_user.email == 'admin@example.com' || session[:school_urn].present?
+    current_user.email == 'admin@example.com' || current_user.school_user?
   end
 
   def set_school
@@ -19,7 +19,7 @@ private
   end
 
   def school_from_session
-    School.joins(:gias_school).find_by_urn(session[:school_urn])
+    School.joins(:gias_school).find_by_urn(current_user.school_urn)
   end
 
   def first_school_with_no_mentors_but_ects

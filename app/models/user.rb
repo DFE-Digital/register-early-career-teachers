@@ -10,7 +10,8 @@ class User < ApplicationRecord
   has_many :dfe_roles
 
   # Instance Methods
-  def dfe?
+  # FIXME: delete this, should be handled by Sessions::SessionUser
+  def dfe_user?
     dfe_roles.any?
   end
 end
