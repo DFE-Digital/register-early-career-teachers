@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :cities, only: %i[index create show]
-  resources :countries, only: %i[index create show]
 
   # omniauth sign-in
   get 'auth/:provider/callback', to: 'sessions#create'
