@@ -118,4 +118,47 @@ Teachers who have been prohibited from teaching aren't permitted to receive rece
 
 ## Releasing an early career teacher
 
+When an ECT finishes an induction at an appropriate body before they have fully completed their induction, the appropriate body inform us by releasing them.
+
+The release process takes place with the following steps:
+
+1. Locate the ECT's record from the 'view list of ECT records' page using the following information:
+    * TRN
+    * Date of Birth
+2. Confirming the details returned by the TRS API belong to the person we expect, this page shows the teacher's:
+    * name
+    * date of birth
+    * email address
+    * [QTS](https://www.gov.uk/guidance/qualified-teacher-status-qts) award date
+    * QTS status
+    * induction start date
+    * induction status
+    * [initial teacher training](https://www.gov.uk/government/collections/initial-teacher-training) provider
+    * initial teacher training end date
+    * [alerts](https://www.gov.uk/government/collections/teacher-misconduct)
+3. Release the ECT by entering the following information:
+    * The end date of the induction period
+    * The number of terms carried out during the induction period
+
+### Validation
+
+* **TRN**
+  - must be present
+  - must be 7 numeric digits
+* **Date of birth**
+  - must be present
+  - the teacher must be between 18 and 100 years old
+* **Induction start date**
+  - must be present
+  - must be after the QTS award date
+* **Induction period end date**
+  - must be present
+  - must be later than the induction start adte
+  - must not overlap with another induction period
+  - must not be more than x length in the future
+ * **Number of terms**
+  - must be present
+  - partial terms must be entered as decimals
+  - value must be between 0 and 16 weeks
+    
 ## Recording an early career teacher's induction outcome
