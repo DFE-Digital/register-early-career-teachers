@@ -1,4 +1,4 @@
-RSpec.describe "Admin", type: :request do
+RSpec.describe "Viewing the appropriate bodies index", type: :request do
   describe "GET /admin/appropriate-bodies" do
     it "redirects to sign-in" do
       get "/admin/appropriate-bodies"
