@@ -19,14 +19,7 @@ module Sessions
     end
 
     def begin_dfe_sign_in_session!(user_info)
-      session['user_session'] = {
-        'email' => user_info.info.email,
-        'name' => user_info.info.then { |info| "#{info.first_name} #{info.last_name}" },
-        'organisation_id' => user_info.extra.raw_info.organisation.id,
-        'provider' => user_info.provider,
-        'urn' => user_info.extra.raw_info.organisation.urn,
-        'last_active_at' => Time.zone.now
-      }
+      session['user_session'] = SessionUser.from_dfe_sign_in(user_info).to_h
     end
 
     def load_from_session

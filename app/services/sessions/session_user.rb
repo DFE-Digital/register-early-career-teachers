@@ -2,7 +2,7 @@ module Sessions
   class SessionUser
     attr_reader :provider, :name, :email, :appropriate_body_id, :school_urn, :dfe
 
-    def initialize(provider:, email:, name: nil, appropriate_body_id: nil, school_urn: nil, dfe: false, last_active_at: Time.zone.now)
+    def initialize(provider:, email:, name: nil, appropriate_body_id: nil, school_urn: nil, dfe_sign_in_organisation_id: nil, dfe: false, last_active_at: Time.zone.now)
       @provider = provider
       @name = name
       @email = email
@@ -10,22 +10,12 @@ module Sessions
       @appropriate_body_id = appropriate_body_id
       @school_urn = school_urn
       @dfe = dfe
+      @dfe_sign_in_organisation_id = dfe_sign_in_organisation_id
     end
 
     def last_active_at
       # FIXME: why is this sometimes a string?
       @last_active_at.is_a?(String) ? Time.zone.parse(@last_active_at) : @last_active_at
-    end
-
-    def user_type
-      case
-      when dfe_user?
-        :dfe_user
-      when appropriate_body_user?
-        :appropriate_body_user
-      when school_user?
-        :school_user
-      end
     end
 
     def record_new_activity!(session:, time: Time.zone.now)
@@ -55,6 +45,16 @@ module Sessions
         last_active_at: user_session['last_active_at'],
         school_urn: user_session['school_urn'],
         dfe: user_session['dfe']
+      )
+    end
+
+    def self.from_dfe_sign_in(user_info)
+      new(
+        provider: user_info.provider,
+        name: user_info.info.then { |info| "#{info.first_name} #{info.last_name}" },
+        school_urn: user_info.extra.raw_info.organisation.urn,
+        dfe_sign_in_organisation_id: user_info.extra.raw_info.organisation.id,
+        email: user_info.info.email
       )
     end
 
