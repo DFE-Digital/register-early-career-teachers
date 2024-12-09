@@ -1,7 +1,7 @@
 module Schools
   module RegisterMentorWizard
     class Wizard < DfE::Wizard::Base
-      attr_accessor :store
+      attr_accessor :store, :ect_id
 
       steps do
         [
@@ -25,6 +25,10 @@ module Schools
 
       delegate :save!, to: :current_step
       delegate :reset, to: :mentor
+
+      def ect
+        @ect ||= ECTAtSchoolPeriod.find(ect_id)
+      end
 
       def mentor
         @mentor ||= Mentor.new(store)

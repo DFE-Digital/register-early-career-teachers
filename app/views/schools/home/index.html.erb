@@ -17,10 +17,7 @@
               value: { text: in_progress_status },
             },
             { key: { text: "Mentor" },
-              value: { text: displayed_mentor_for_ect(@school,
-                                                      relationship[:mentor_name],
-                                                      relationship[:ect_trn],
-                                                      relationship[:ect_name]) },
+              value: { text: relationship[:mentor_name] || link_to_assign_mentor(relationship[:ect]) },
             },
           ],
           classes: ["govuk-summary-list--no-border", "govuk-!-margin-bottom-0"])

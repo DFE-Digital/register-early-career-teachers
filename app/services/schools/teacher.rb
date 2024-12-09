@@ -10,6 +10,7 @@ module Schools
     def fetch_etcs_and_mentors
       ects_and_mentors.map do |ect|
         {
+          ect:,
           ect_name: ::Teachers::Name.new(ect.teacher).full_name,
           ect_trn: ect.teacher.trn,
           mentor_name: ::Teachers::Name.new(ect.mentors.last&.teacher).full_name,
@@ -25,7 +26,7 @@ module Schools
     def ects_and_mentors
       ECTAtSchoolPeriod
         .where(school:)
-        .eager_load(:teacher, mentors: :teacher)
+        .eager_load(:teacher, :school, mentors: :teacher)
         .merge(MentorshipPeriod.ongoing)
     end
 

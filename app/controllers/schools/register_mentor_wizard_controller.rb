@@ -7,8 +7,9 @@ module Schools
     WIZARD_CLASS = Schools::RegisterMentorWizard::Wizard.freeze
 
     def start
-      @ect_name = params[:ect_name]
-      session[:register_mentor_for_ect_named] = @ect_name
+      @ect = ECTAtSchoolPeriod.find(params[:ect_id])
+      session[:register_mentor_for_ect_id] = @ect.id
+      @ect_name = Teachers::Name.new(@ect.teacher).full_name
     end
 
     def new
@@ -29,8 +30,10 @@ module Schools
       @wizard = WIZARD_CLASS.new(
         current_step:,
         step_params: params,
+        ect_id: session[:register_mentor_for_ect_id],
         store:
       )
+      @ect_name = Teachers::Name.new(@wizard.ect.teacher).full_name
       @mentor = @wizard.mentor
     end
 
@@ -46,7 +49,7 @@ module Schools
 
     def store
       @store ||= SessionRepository.new(session:, form_key: FORM_KEY).tap do |store|
-        store.update(for_ect_named: session[:register_mentor_for_ect_named],
+        store.update(for_ect_id: session[:register_mentor_for_ect_id],
                      school_urn: @school.urn)
       end
     end
