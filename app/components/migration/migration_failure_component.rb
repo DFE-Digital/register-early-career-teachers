@@ -13,5 +13,9 @@ module Migration
     def participant_profile
       migration_failure.participant_profile
     end
+
+    def induction_records
+      participant_profile&.induction_records || []
+    end
   end
 end
