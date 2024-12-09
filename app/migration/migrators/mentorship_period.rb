@@ -9,7 +9,7 @@ module Migrators
     end
 
     def self.ects
-      ::Teacher.where.associated(:ect_at_school_periods).distinct
+      ::Migration::ParticipantProfile.ect
     end
 
     def self.dependencies
@@ -23,13 +23,13 @@ module Migrators
     end
 
     def migrate!
-      migrate(self.class.ects) do |teacher|
-        migrate_mentorships!(teacher:)
+      migrate(self.class.ects) do |participant_profile|
+        migrate_mentorships!(participant_profile:)
       end
     end
 
-    def migrate_mentorships!(teacher:)
-      participant_profile = Migration::ParticipantProfile.find(teacher.legacy_ect_id)
+    def migrate_mentorships!(participant_profile:)
+      teacher = ::Teacher.find_by!(legacy_ect_id: participant_profile.id)
       induction_records = InductionRecordSanitizer.new(participant_profile:)
       induction_records.validate!
 
