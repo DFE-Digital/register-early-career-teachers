@@ -18,9 +18,7 @@ module Migration
       @school ||= participant_profile.school_cohort.school
     end
 
-    def ect?
-      participant_profile.ect?
-    end
+    delegate :ect?, to: :participant_profile
 
     def attributes_for(_attr)
       {}

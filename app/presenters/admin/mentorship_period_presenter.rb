@@ -47,6 +47,5 @@ module Admin
     def single_line_summary(teacher)
       "#{Teachers::Name.new(teacher).full_name} (#{formatted_started_on} - #{formatted_finished_on})"
     end
-
   end
 end
