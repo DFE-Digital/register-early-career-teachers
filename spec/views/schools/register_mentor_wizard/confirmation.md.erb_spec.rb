@@ -1,16 +1,18 @@
 RSpec.describe "schools/register_mentor_wizard/confirmation.md.erb" do
+  let(:ect_name) { "Michale Dixon" }
   let(:your_ects_path) { schools_ects_home_path }
   let(:mentor) { wizard.mentor }
   let(:title) { "You've assigned #{mentor.full_name} as a mentor" }
-  let(:store) { double(trs_first_name: "John", trs_last_name: "Wayne", for_ect_named: "Michael Dixon") }
+  let(:store) { double(trs_first_name: "John", trs_last_name: "Wayne") }
   let(:wizard) { Schools::RegisterMentorWizard::Wizard.new(current_step: :confirmation, store:) }
 
   before do
     assign(:wizard, wizard)
+    assign(:ect_name, ect_name)
     assign(:mentor, mentor)
   end
 
-  it "sets the page title to 'You've assigned Samuel Taylor as a mentor'" do
+  it "sets the page title to 'You've assigned <mentor name> as a mentor'" do
     render
 
     expect(sanitize(view.content_for(:page_title))).to eql(sanitize(title))

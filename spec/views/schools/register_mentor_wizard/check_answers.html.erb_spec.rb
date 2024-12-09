@@ -1,19 +1,20 @@
 RSpec.describe "schools/register_mentor_wizard/check_answers.html.erb" do
   let(:back_path) { schools_register_mentor_wizard_email_address_path }
   let(:confirm_details_path) { schools_register_mentor_wizard_check_answers_path }
+  let(:ect_name) { "Michael Dixon" }
   let(:title) { "Check your answers and confirm mentor details" }
   let(:store) do
     double(trn: "1234567",
            trs_first_name: "John",
            trs_last_name: "Wayne",
-           email: "john.wayne@example.com",
-           for_ect_named: "Michael Dixon")
+           email: "john.wayne@example.com")
   end
   let(:wizard) { Schools::RegisterMentorWizard::Wizard.new(current_step: :check_answers, store:) }
   let(:mentor) { wizard.mentor }
 
   before do
     assign(:wizard, wizard)
+    assign(:ect_name, ect_name)
     assign(:mentor, mentor)
   end
 

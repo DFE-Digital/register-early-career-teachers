@@ -17,7 +17,7 @@
   end
 end %>
 
-<%= govuk_inset_text(text: "#{@mentor.full_name} will mentor #{@mentor.for_ect_named}") %>
+<%= govuk_inset_text(text: "#{@mentor.full_name} will mentor #{@ect_name}") %>
 
 <%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
   <%= f.govuk_error_summary %>

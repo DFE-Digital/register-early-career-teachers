@@ -13,6 +13,10 @@ module Interval
     scope :containing_period, ->(period) { where("range @> daterange(?, ?)", period.started_on, period.finished_on) }
   end
 
+  def finish!(finished_on = Date.current)
+    update!(finished_on:)
+  end
+
   def period_dates_validation
     return if [started_on, finished_on].any?(&:blank?)
 

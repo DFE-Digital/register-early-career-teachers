@@ -75,10 +75,40 @@ describe Interval do
       end
     end
   end
+
+  describe "#finish!" do
+    subject(:interval) { DummyInterval.new(started_on: 1.week.ago) }
+
+    context "when no finished_on date provided" do
+      it "sets the current date as the end date of the interval" do
+        expect { interval.finish! }.to change(interval, :finished_on).from(nil).to(Date.current)
+      end
+    end
+
+    context "when finished_on date provided" do
+      it "sets it as the end date of the interval" do
+        expect { interval.finish!(Date.yesterday) }.to change(interval, :finished_on).from(nil).to(Date.yesterday)
+      end
+    end
+  end
 end
 
 class DummyMentor < ApplicationRecord
   include Interval
 
   self.table_name = "mentor_at_school_periods"
+end
+
+class DummyInterval < OpenStruct
+  def self.scope(*)
+  end
+
+  def self.validate(*)
+  end
+
+  include Interval
+
+  def update!(**attrs)
+    attrs.each { |key, value| public_send("#{key}=", value) }
+  end
 end
