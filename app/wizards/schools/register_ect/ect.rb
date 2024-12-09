@@ -2,7 +2,7 @@ module Schools
   module RegisterECT
     class ECT < SimpleDelegator
       def full_name
-        [trs_first_name, trs_last_name].join(" ").strip
+        corrected_name || [trs_first_name, trs_last_name].join(" ").strip
       end
 
       def govuk_date_of_birth
