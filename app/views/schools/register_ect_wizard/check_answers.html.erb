@@ -1,0 +1,30 @@
+<% page_data(title: "Check your answers before submitting", backlink_href: schools_register_ect_wizard_email_address_path) %>
+
+<h2 class="govuk-heading-m">Teacher details</h2>
+<%= govuk_summary_list do |summary_list|
+  summary_list.with_row do |row|
+    row.with_key(text: 'Name')
+    row.with_value(text: @ect.full_name)
+  end
+
+  summary_list.with_row do |row|
+    row.with_key(text: 'Teacher Reference Number (TRN)')
+    row.with_value(text: @ect.trn)
+  end
+
+  summary_list.with_row do |row|
+    row.with_key(text: 'Date of birth')
+    row.with_value(text: @ect.govuk_date_of_birth)
+  end
+
+  summary_list.with_row do |row|
+    row.with_key(text: 'Email address')
+    row.with_value(text: @ect.email)
+  end
+end %>
+
+<%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
+  <%= f.govuk_error_summary %>
+
+  <%= f.govuk_submit "Confirm details" %>
+<% end %>

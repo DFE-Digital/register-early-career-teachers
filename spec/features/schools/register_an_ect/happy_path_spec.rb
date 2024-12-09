@@ -26,7 +26,8 @@ RSpec.describe 'Registering an ECT' do
     and_i_should_see_all_the_ect_data_on_the_page
 
     when_i_click_confirm_details
-    then_i_should_be_taken_to_the_confirmation_page
+    then_the_ect_and_induction_period_should_be_stored_in_the_database
+    and_then_i_should_be_taken_to_the_confirmation_page
 
     when_i_click_on_back_to_your_ects
     then_i_should_be_taken_to_the_ects_page
@@ -108,7 +109,17 @@ RSpec.describe 'Registering an ECT' do
     page.get_by_role('button', name: 'Confirm details').click
   end
 
-  def then_i_should_be_taken_to_the_confirmation_page
+  def then_the_ect_and_induction_period_should_be_stored_in_the_database
+    teacher = Teacher.last
+    expect(teacher.trn).to eq(trn)
+    expect(teacher.first_name).to eq('Kirk')
+    expect(teacher.last_name).to eq('Van Houten')
+
+    ect_period = ECTAtSchoolPeriod.last
+    expect(ect_period.teacher).to eq(teacher)
+  end
+
+  def and_then_i_should_be_taken_to_the_confirmation_page
     expect(page.url).to end_with('/schools/register-ect/confirmation')
   end
 

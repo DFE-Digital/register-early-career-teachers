@@ -91,7 +91,7 @@ Rails.application.routes.draw do
   namespace :schools do
     get "/home/ects", to: "home#index", as: :ects_home
 
-    namespace :register_ect, path: "register-ect" do
+    namespace :register_ect_wizard, path: "register-ect" do
       get "what-you-will-need", as: :start, action: :start
 
       get "find-ect", action: :new

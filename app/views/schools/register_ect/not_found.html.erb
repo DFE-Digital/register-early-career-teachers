@@ -1,7 +1,0 @@
-<% page_data(title: "We're unable to match the ECT with the details you provided", error: false) %>
-
-<p class="govuk-body">Check that you've entered their details correctly.</p>
-<p class="govuk-body">You can check their TRN by <%= govuk_link_to('reviewing their teacher record', 'https://check-a-teachers-record.education.gov.uk/check-records/sign-in') %>.</p>
-<p class="govuk-body">Alternatively, you can ask the ECT to check their TRN by using the <%= govuk_link_to('Find a lost TRN service', 'https://find-a-lost-trn.education.gov.uk/start') %>.</p>
-
-<%= govuk_button_link_to("Try again", schools_register_ect_find_ect_path) %>

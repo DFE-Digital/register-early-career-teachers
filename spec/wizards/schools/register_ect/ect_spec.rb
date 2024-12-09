@@ -1,14 +1,17 @@
 require 'rails_helper'
 
-describe Schools::RegisterECT::ECT do
+describe Schools::RegisterECTWizard::ECT do
+  let(:school) { FactoryBot.create(:school) }
   let(:store) do
-    OpenStruct.new(trn: "3002586",
-                   date_of_birth: "11-10-1945",
-                   trs_first_name: "Dusty",
-                   trs_last_name: "Rhodes",
-                   trs_date_of_birth: "1945-10-11",
-                   trs_national_insurance_number: "OWAD23455",
-                   email: "dusty@rhodes.com")
+    FactoryBot.build(:session_repository,
+                     trn: "3002586",
+                     date_of_birth: "11-10-1945",
+                     trs_first_name: "Dusty",
+                     trs_last_name: "Rhodes",
+                     trs_date_of_birth: "1945-10-11",
+                     trs_national_insurance_number: "OWAD23455",
+                     email: "dusty@rhodes.com",
+                     school_urn: school.urn)
   end
 
   subject(:ect) { described_class.new(store) }
@@ -96,6 +99,21 @@ describe Schools::RegisterECT::ECT do
   describe '#trs_national_insurance_number' do
     it 'returns the national insurance number in trs' do
       expect(ect.trs_national_insurance_number).to eq("OWAD23455")
+    end
+  end
+
+  describe '#register!' do
+    let(:teacher) { Teacher.first }
+    let(:ect_at_school_period) { teacher.ect_at_school_periods.first }
+
+    it "creates a new ECT at the given school" do
+      expect(Teacher.find_by_trn(ect.trn)).to be_nil
+
+      ect.register!
+
+      expect(teacher.trn).to eq(ect.trn)
+      expect(ect_at_school_period.school_id).to eq(school.id)
+      expect(ect_at_school_period.started_on).to eq(Date.current)
     end
   end
 end
