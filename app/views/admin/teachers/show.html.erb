@@ -43,15 +43,21 @@
     end
     sl.with_row do |row|
       row.with_key(text: "Mentor")
-      row.with_value(text: school_period.latest_mentorship_period.mentor_name)
+      row.with_value do
+        if school_period.latest_mentorship_period.present?
+          admin_teacher_name_link(school_period.latest_mentorship_period.mentor.teacher)
+        else
+          ""
+        end
+      end
     end
     sl.with_row do |row|
       row.with_key(text: "Lead provider")
-      row.with_value(text: training_period.lead_provider.name)
+      row.with_value(text: training_period&.lead_provider&.name)
     end
     sl.with_row do |row|
       row.with_key(text: "Delivery partner")
-      row.with_value(text: training_period.delivery_partner.name)
+      row.with_value(text: training_period&.delivery_partner&.name)
     end
   end %>
   <hr class="govuk-section-break govuk-section-break--l" />
@@ -80,7 +86,13 @@
     end
     sl.with_row do |row|
       row.with_key(text: "Mentees")
-      row.with_value(text: school_period.mentees.join(", "))
+      row.with_value do
+        if school_period.mentees.any?
+          admin_teachers_list_links(school_period.mentees)
+        else
+          ""
+        end
+      end
     end
     sl.with_row do |row|
       row.with_key(text: "Lead provider")

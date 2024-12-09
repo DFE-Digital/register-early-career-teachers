@@ -10,9 +10,7 @@ module Migration
       migration_failure.failure_type
     end
 
-    def participant_profile
-      migration_failure.participant_profile
-    end
+    delegate :participant_profile, to: :migration_failure
 
     def induction_records
       participant_profile&.induction_records || []

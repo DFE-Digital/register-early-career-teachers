@@ -15,19 +15,19 @@ module Migration
         pfm.last
       elsif parent.present?
         profile_id_from_parent
-      else
-        nil
       end
     end
 
     def participant_profile
       return if participant_profile_id.nil?
+
       @participant_profile ||= Migration::ParticipantProfilePresenter.new(Migration::ParticipantProfile.find(participant_profile_id))
     end
 
     def parent
       return if parent_id.blank?
-      return Teacher.find(parent_id) if parent_type == "Teacher"
+
+      Teacher.find(parent_id) if parent_type == "Teacher"
     end
 
     def related_object_id
@@ -43,13 +43,12 @@ module Migration
     def profile_id_from_parent
       return parent.legacy_ect_id if parent.legacy_ect_id.present?
       return parent.legacy_mentor_id if parent.legacy_mentor_id.present?
+
       if parent.legacy_id
         # NOTE: if they have both ECT and Mentor profiles we don't know which had the issue
         #       and we're only returning the first from the DB but it feels that might be better
         #       than nothing.
         Migration::User.find(parent.legacy_id).teacher_profile.participant_profiles.ect_or_mentor.first&.id
-      else
-        nil
       end
     end
 
