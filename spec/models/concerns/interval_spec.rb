@@ -101,11 +101,9 @@ end
 
 class DummyInterval < OpenStruct
   def self.scope(*)
-    ;
   end
 
   def self.validate(*)
-    ;
   end
 
   include Interval
