@@ -10,7 +10,7 @@ module Schools
       @trn = trn
     end
 
-    def register_mentor!
+    def register!
       ActiveRecord::Base.transaction do
         create_teacher!
         start_at_school!

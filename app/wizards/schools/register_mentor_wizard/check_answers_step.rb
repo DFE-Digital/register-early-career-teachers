@@ -8,7 +8,7 @@ module Schools
     private
 
       def persist
-        mentor.register!
+        AssignMentor.new(ect:, mentor: mentor.register!).assign!
       end
     end
   end

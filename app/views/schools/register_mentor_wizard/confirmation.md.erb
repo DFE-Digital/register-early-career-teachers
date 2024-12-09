@@ -6,14 +6,14 @@ header: false
 <%= govuk_panel(title_text: "You've assigned #{@mentor.full_name} as a mentor") do %>
 for
 <br>
-<strong><%= @mentor.for_ect_named %></strong>
+<strong><%= @ect_name %></strong>
 <% end %>
 
-You have successfully registered John Smith for training.
+You have successfully registered <%= @ect_name %> for training.
 
 ### What happens next
 
-We'll email Samuel Taylor to confirm you have registered them.
+We'll email <%= @mentor.full_name %> to confirm you have registered them.
 
 They do not need to provide us with any further details.
 
