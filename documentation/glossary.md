@@ -1,10 +1,22 @@
 # Glossary
 
+## Appropriate body
+
+Appropriate bodies are responsible for assuring the quality of the statutory induction of ECTs.
+
+## Delivery partner
+
+Delivery partners are responsible for delivering training and events for ECTs and mentors.
+
 ## Early Career Teacher Programme (ECTP)
 
 The training that Early Career Teachers (ECTs) and ECT mentors are entitled to as part of their 2-year induction. From September 2025, this training will be based on the [ITTECF](https://www.gov.uk/government/publications/initial-teacher-training-and-early-career-framework). 
 
 For clarity, avoid referring to ‘induction training’ which could be misconstrued as something wider - i.e. the wider contextual training ECTs should have in schools (and any new staff to that school)
+
+## Lead provider
+
+Lead providers are responsible for creating the materials used for training ECTs and mentors.
 
 ## Providers of the ECTP
 
