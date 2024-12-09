@@ -64,7 +64,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
           allow(PendingInductionSubmissions::Search).to receive(:new).with(appropriate_body:).and_call_original
           patch(
             "/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}",
-            params: { appropriate_body:, pending_induction_submission: registration_params }
+            params: { pending_induction_submission: registration_params }
           )
           expect(PendingInductionSubmissions::Search).to have_received(:new).with(appropriate_body:).once
         end
@@ -72,7 +72,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
         it 'passes the parameters to the AppropriateBodies::ClaimAnECT::RegisterECT service and redirects' do
           patch(
             "/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}",
-            params: { appropriate_body:, pending_induction_submission: registration_params }
+            params: { pending_induction_submission: registration_params }
           )
 
           expect(AppropriateBodies::ClaimAnECT::RegisterECT).to have_received(:new).with(
@@ -90,7 +90,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
 
           patch(
             "/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}",
-            params: { appropriate_body:, pending_induction_submission: registration_params }
+            params: { pending_induction_submission: registration_params }
           )
 
           expect(fake_register_ect).to have_received(:register).with(
@@ -104,7 +104,7 @@ RSpec.describe 'Appropriate body claiming an ECT: registering the ECT' do
         it 'passes the parameters to the AppropriateBodies::ClaimAnECT::RegisterECT but does not redirect and rerenders the form' do
           patch(
             "/appropriate-body/claim-an-ect/register-ect/#{pending_induction_submission.id}",
-            params: { appropriate_body:, pending_induction_submission: registration_params }
+            params: { pending_induction_submission: registration_params }
           )
 
           expect(response).to be_ok

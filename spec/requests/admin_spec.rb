@@ -6,27 +6,23 @@ RSpec.describe "Admin", type: :request do
     end
 
     context "with an authenticated user" do
-      let(:session_manager) do
-        instance_double(Sessions::SessionManager, provider: "developer", expires_at: 2.hours.from_now)
-      end
-      let(:user) { FactoryBot.create(:user) }
+      include_context 'fake session manager for non-DfE user'
 
-      before do
-        allow(Sessions::SessionManager).to receive(:new).and_return(session_manager)
-        allow(session_manager).to receive(:load_from_session).and_return(user)
-      end
+      context "when the user isn't a DfE user" do
+        it "requires authorisation" do
+          get "/admin"
 
-      it "requires authorisation" do
-        get "/admin"
-
-        expect(response.status).to eq(401)
+          expect(response.status).to eq(401)
+        end
       end
 
-      it "allows access to DfE users" do
-        FactoryBot.create(:dfe_role, user:)
+      context 'when the user is a DfE user' do
+        include_context 'fake session manager for DfE user'
 
-        get "/admin"
-        expect(response.status).to eq(200)
+        it "allows access to DfE users" do
+          get "/admin"
+          expect(response.status).to eq(200)
+        end
       end
     end
   end

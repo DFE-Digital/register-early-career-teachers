@@ -1,15 +1,14 @@
 RSpec.describe 'Releasing an ECT' do
+  let(:appropriate_body) { FactoryBot.create(:appropriate_body) }
   let(:page) { RSpec.configuration.playwright_page }
   let(:teacher) { FactoryBot.create(:teacher) }
   let(:trn) { teacher.trn }
   let(:today) { Time.zone.today }
   let(:number_of_completed_terms) { 4 }
 
-  before do
-    sign_in_as_appropriate_body_user
-  end
+  before { sign_in_as_appropriate_body_user(appropriate_body) }
 
-  let!(:induction_period) { FactoryBot.create(:induction_period, :active, teacher:, appropriate_body: @appropriate_body) }
+  let!(:induction_period) { FactoryBot.create(:induction_period, :active, teacher:, appropriate_body: appropriate_body) }
 
   scenario 'Happy path' do
     given_i_am_on_the_ect_page(trn)
@@ -83,7 +82,7 @@ private
   end
 
   def and_the_pending_induction_submission_should_have_been_deleted
-    expect(PendingInductionSubmission.find_by(trn:, appropriate_body: @appropriate_body)).to be_nil
+    expect(PendingInductionSubmission.find_by(trn:, appropriate_body: appropriate_body)).to be_nil
   end
 
   def and_the_release_ect_service_should_have_been_called

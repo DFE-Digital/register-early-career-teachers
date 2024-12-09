@@ -3,12 +3,9 @@ RSpec.describe 'Registering an ECT' do
 
   let(:page) { RSpec.configuration.playwright_page }
 
-  before do
-    sign_in_as_admin
-  end
-
   scenario 'Teacher with TRN is not found' do
-    given_i_am_on_the_find_ect_step_page
+    given_i_am_logged_in_as_a_school_user
+    when_i_am_on_the_find_ect_step_page
     and_i_submit_a_date_of_birth_and_unknown_trn
     then_i_should_be_taken_to_the_teacher_not_found_error_page
 
@@ -16,7 +13,12 @@ RSpec.describe 'Registering an ECT' do
     then_i_should_be_taken_to_the_find_ect_step_page
   end
 
-  def given_i_am_on_the_find_ect_step_page
+  def given_i_am_logged_in_as_a_school_user
+    school = FactoryBot.create(:school)
+    sign_in_as_school_user(school.urn)
+  end
+
+  def when_i_am_on_the_find_ect_step_page
     path = '/schools/register-ect/find-ect'
     page.goto path
     expect(page.url).to end_with(path)
