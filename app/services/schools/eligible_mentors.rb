@@ -1,6 +1,5 @@
 module Schools
   class EligibleMentors
-
     def initialize(school)
       @school = school
     end

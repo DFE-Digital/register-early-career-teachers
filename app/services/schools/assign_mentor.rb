@@ -1,6 +1,5 @@
 module Schools
   class AssignMentor
-
     attr_reader :ect, :mentor, :started_on
 
     def initialize(ect:, mentor:, started_on: Date.current)
@@ -29,7 +28,7 @@ module Schools
     end
 
     def finish_current_mentorship!
-      ect.current_mentorship&.finish!(finished_on: started_on)
+      ect.current_mentorship&.finish!(started_on)
     end
   end
 end

@@ -26,8 +26,8 @@ RSpec.describe 'Registering a mentor' do
   end
 
   def and_there_is_an_ect_with_no_mentor_registered_at_the_school
-    @ect = FactoryBot.create(:ect_at_school_period, school: @school).teacher
-    @ect_name = Teachers::Name.new(@ect).full_name
+    @ect = FactoryBot.create(:ect_at_school_period, :active, school: @school)
+    @ect_name = Teachers::Name.new(@ect.teacher).full_name
   end
 
   def and_i_sign_in_as_that_school_user
@@ -46,7 +46,7 @@ RSpec.describe 'Registering a mentor' do
 
   def then_i_am_in_the_requirements_page
     expect(page.get_by_text("What you'll need to add a new mentor for #{@ect_name}")).to be_visible
-    expect(page.url).to end_with("/school/register-mentor/what-you-will-need?ect_name=#{Rack::Utils.escape(@ect_name)}")
+    expect(page.url).to end_with("/school/register-mentor/what-you-will-need?ect_id=#{Rack::Utils.escape(@ect.id)}")
   end
 
   def when_i_click_continue

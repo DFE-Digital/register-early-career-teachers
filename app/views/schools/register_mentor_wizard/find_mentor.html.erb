@@ -1,4 +1,4 @@
-<% page_data(title: "Find a mentor", error: @wizard.current_step.errors.present?, backlink_href: schools_register_mentor_wizard_start_path) %>
+<% page_data(title: "Find a mentor", error: @wizard.current_step.errors.present?, backlink_href: schools_register_mentor_wizard_start_path(ect_id: @wizard.ect.id)) %>
 
 <p class="govuk-body">Enter the mentor's teacher reference number and date of birth to find them.</p>
 

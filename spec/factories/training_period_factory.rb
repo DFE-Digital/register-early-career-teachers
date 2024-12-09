@@ -1,12 +1,12 @@
 FactoryBot.define do
-  sequence(:base_training_date) { |n| 2.years.ago.to_date + (3 * n).months }
+  sequence(:base_training_date) { |n| 2.years.ago.to_date + (5 * n).days }
 
   factory(:training_period) do
     for_ect
     association :provider_partnership
 
     started_on { generate(:base_training_date) }
-    finished_on { started_on + 3.months }
+    finished_on { started_on + 5.days }
 
     trait :active do
       finished_on { nil }
