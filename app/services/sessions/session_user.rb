@@ -75,8 +75,8 @@ module Sessions
         "email" => email,
         "name" => name,
         "last_active_at" => last_active_at,
-        "appropriate_body_id" => appropriate_body_id&.to_i,
-        "school_urn" => school_urn&.to_i,
+        "appropriate_body_id" => appropriate_body_id.presence,
+        "school_urn" => school_urn.presence,
         "dfe" => dfe,
       }
     end
