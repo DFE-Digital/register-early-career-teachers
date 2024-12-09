@@ -1,4 +1,4 @@
-<% page_data(title: "Check if this is your ECT", backlink_href: schools_register_ect_find_ect_path) %>
+<% page_data(title: "Check if this is your ECT", error: @wizard.current_step.errors.present?, backlink_href: schools_register_ect_find_ect_path) %>
 
 <%= govuk_summary_list do |summary_list|
   summary_list.with_row do |row|
@@ -26,6 +26,19 @@ end %>
 
 <%= form_with(model: @wizard.current_step, url: @wizard.current_step_path) do |f| %>
   <%= f.govuk_error_summary %>
+
+  <%= f.govuk_radio_buttons_fieldset :change_name, legend: { text: "Are these details correct for the ECT?" } do %>
+    <%= f.govuk_radio_button :change_name, :no, label: { text: "Yes" }, link_errors: true %>
+    <%= f.govuk_radio_button :change_name, :yes, label: { text: "No, they changed their name or it's spelt wrong" } do %>
+      <%= f.govuk_text_field :corrected_name,
+                             label: {
+                               text: "Enter the correct full name"
+                             },
+                             hint: {
+                               text: "The name you provide will be used for ECT registration. The ECT can update their name in their teacher record later using the Access your teaching qualification service."
+                             } %>
+    <% end %>
+  <% end %>
 
   <%= f.govuk_submit "Confirm and continue" %>
 <% end %>

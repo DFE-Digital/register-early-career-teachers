@@ -8,7 +8,8 @@ describe Schools::RegisterECT::ECT do
                    trs_last_name: "Rhodes",
                    trs_date_of_birth: "1945-10-11",
                    trs_national_insurance_number: "OWAD23455",
-                   email: "dusty@rhodes.com")
+                   email: "dusty@rhodes.com",
+                   corrected_name: nil)
   end
 
   subject(:ect) { described_class.new(store) }
