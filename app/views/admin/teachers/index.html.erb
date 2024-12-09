@@ -22,6 +22,7 @@
         row.with_cell(text: "Name")
         row.with_cell(text: "Role")
         row.with_cell(text: "TRN")
+        row.with_cell { govuk_visually_hidden("Has migration errors") }
       end
     end
 
@@ -33,6 +34,11 @@
           end
           row.with_cell(text: Teachers::Role.new(teacher:))
           row.with_cell(text: teacher.trn)
+          if teacher.migration_failures.any?
+            row.with_cell { govuk_tag(text: "Error", colour: "red") }
+          else
+            row.with_cell(text: "")
+          end
         end
       end
     end

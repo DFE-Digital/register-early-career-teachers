@@ -5,7 +5,7 @@ module Migration
     end
 
     def participant_type
-      type.split("::").last
+      participant_profile.type.split("::").last
     end
 
     def induction_records

@@ -25,5 +25,9 @@ module Migration
     def attributes_for(_attr)
       {}
     end
+
+    def render?
+      participant_profile.present?
+    end
   end
 end

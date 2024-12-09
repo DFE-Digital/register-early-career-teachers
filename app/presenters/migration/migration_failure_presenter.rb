@@ -13,6 +13,8 @@ module Migration
 
       if pfm.size == 2
         pfm.last
+      elsif parent.present?
+        profile_id_from_parent
       else
         nil
       end
@@ -20,7 +22,7 @@ module Migration
 
     def participant_profile
       return if participant_profile_id.nil?
-      @participant_profile ||= Migration::ParticipantProfile.find(participant_profile_id)
+      @participant_profile ||= Migration::ParticipantProfilePresenter.new(Migration::ParticipantProfile.find(participant_profile_id))
     end
 
     def parent
@@ -36,6 +38,19 @@ module Migration
 
     def migration_failure
       __getobj__
+    end
+
+    def profile_id_from_parent
+      return parent.legacy_ect_id if parent.legacy_ect_id.present?
+      return parent.legacy_mentor_id if parent.legacy_mentor_id.present?
+      if parent.legacy_id
+        # NOTE: if they have both ECT and Mentor profiles we don't know which had the issue
+        #       and we're only returning the first from the DB but it feels that might be better
+        #       than nothing.
+        Migration::User.find(parent.legacy_id).teacher_profile.participant_profiles.ect_or_mentor.first&.id
+      else
+        nil
+      end
     end
 
     def friendly_error_type(error_class)

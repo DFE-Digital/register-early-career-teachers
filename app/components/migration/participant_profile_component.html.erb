@@ -6,11 +6,11 @@
     end
     list.with_row(**attributes_for(:sparsity_uplift)) do |row|
       row.with_key(text: "Sparsity uplift")
-      row.with_value(text: participant_profile.sparsity_uplift)
+      row.with_value(text: participant_profile.sparsity_uplift.to_s)
     end
     list.with_row(**attributes_for(:pupil_premium_uplift)) do |row|
       row.with_key(text: "Pupil premium uplift")
-      row.with_value(text: participant_profile.pupil_premium_uplift)
+      row.with_value(text: participant_profile.pupil_premium_uplift.to_s)
     end
     list.with_row(**attributes_for(:status)) do |row|
       row.with_key(text: "Status")
@@ -49,7 +49,7 @@
     end
     list.with_row do |row|
       row.with_key(text: "Cohort changed after payments frozen")
-      row.with_value(text: participant_profile.cohort_changed_after_payments_frozen)
+      row.with_value(text: participant_profile.cohort_changed_after_payments_frozen.to_s)
     end
   end
 end %>
