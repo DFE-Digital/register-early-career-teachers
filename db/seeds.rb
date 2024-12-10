@@ -75,6 +75,10 @@ def describe_pending_induction_submission(pending_induction_submission)
   print_seed_info("* has one pending induction submission from #{pending_induction_submission.appropriate_body.name} #{suffix}", indent: 4)
 end
 
+def describe_user(user)
+  print_seed_info("Added DfE staff user #{user.name} #{user.email}", indent: 2)
+end
+
 print_seed_info("Adding teachers")
 
 emma_thompson = Teacher.create!(first_name: 'Emma', last_name: 'Thompson', trn: '1023456')
@@ -496,18 +500,8 @@ MentorshipPeriod.create!(
 
 print_seed_info("Adding persona users")
 
-# The appropriate body names are included in the AB user names as the persona
-# login process matches them and sets the session up correctly.
-User.create!(name: "Velma Dinkley (#{golden_leaf_academy.name} Appropriate body)", email: "velma@example.com")
-User.create!(name: "Fred Jones (#{umber_teaching_school_hub.name} Appropriate body)", email: "freddy@example.com")
-
-User.create!(name: "Bob Belcher (#{abbey_grove_school.name})", email: "bob@example.com")
-User.create!(name: "Serena Moon (#{brookfield_school.name})", email: "serena@example.com")
-
-User.create!(name: "Daphne Blake (DfE staff)", email: "daphne@example.com").tap do |daphne_blake|
-  DfERole.create!(user: daphne_blake)
-end
-
-User.create!(name: "Norville Rogers (DfE staff)", email: "shaggy@example.com").tap do |norville_rogers|
-  DfERole.create!(user: norville_rogers)
-end
+YAML
+  .load_file(Rails.root.join('config/personas.yml'))
+  .select { |p| p['type'] == 'DfE staff' }
+  .map { |p| { name: p['name'], email: p['email'] } }
+  .each { |user_params| User.create!(**user_params).tap { |user| describe_user(user) } }
