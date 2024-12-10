@@ -27,6 +27,16 @@ describe Schools::RegisterECTWizard::ECT do
     it 'returns the full name of the ECT' do
       expect(ect.full_name).to eq("Dusty Rhodes")
     end
+
+    context 'when corrected_name is set' do
+      before do
+        store.corrected_name = 'Randy Marsh'
+      end
+
+      it 'returns the corrected_name as the full name' do
+        expect(ect.full_name).to eq('Randy Marsh')
+      end
+    end
   end
 
   describe '#govuk_date_of_birth' do

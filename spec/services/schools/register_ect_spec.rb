@@ -1,6 +1,7 @@
 describe Schools::RegisterECT do
   let(:first_name) { "Dusty" }
   let(:last_name) { "Rhodes" }
+  let(:corrected_name) { "Randy Marsh" }
   let(:trn) { "3002586" }
   let(:school) { FactoryBot.create(:school) }
   let(:started_on) { Date.yesterday }
@@ -10,7 +11,8 @@ describe Schools::RegisterECT do
                         last_name:,
                         trn:,
                         school_urn: school.urn,
-                        started_on:)
+                        started_on:,
+                        corrected_name:)
   end
 
   describe '#register_teacher!' do
@@ -22,6 +24,7 @@ describe Schools::RegisterECT do
       expect(teacher.first_name).to eq(first_name)
       expect(teacher.last_name).to eq(last_name)
       expect(teacher.trn).to eq(trn)
+      expect(teacher.corrected_name).to eq(corrected_name)
     end
 
     it 'creates an associated ECTATSchoolPeriod record' do
@@ -35,7 +38,8 @@ describe Schools::RegisterECT do
         described_class.new(first_name:,
                             last_name:,
                             trn:,
-                            school_urn: school.urn)
+                            school_urn: school.urn,
+                            corrected_name:)
       end
 
       it "current date is assigned" do
