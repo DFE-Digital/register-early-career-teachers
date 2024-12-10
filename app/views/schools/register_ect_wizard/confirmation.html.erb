@@ -1,5 +1,13 @@
-<%= govuk_panel(title_text: "You have registered #{@ect.full_name} as an early career teacher") %>
+<% page_data(title: "You have saved #{@ect.full_name}'s details") %>
 
-<h2 class="govuk-heading-m">What happens next</h2>
-<p class="govuk-body">We’ll let this person know you’ve registered them for ECF-based training at your school. They do not need to provide us with any more information.</p>
-<%= govuk_link_to "Back to your ECTs", schools_ects_home_path %>
+<p class="govuk-body">We'll email them to let them know. They do not need to provide us with any more information.</p>
+
+<h2 class="govuk-heading-m">You still need to assign a mentor</h2>
+<p class="govuk-body">You can either assign a mentor now or return and do it later. You need to do this to complete
+  their registration.</p>
+
+<%= govuk_button_link_to("Assign a mentor", schools_register_mentor_wizard_start_path) %>
+
+<p class="govuk-body">
+  <%= govuk_link_to "Back to your ECTs", schools_ects_home_path %>
+</p>
