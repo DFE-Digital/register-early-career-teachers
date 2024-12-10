@@ -1,0 +1,54 @@
+---
+- name: Velma Dinkley
+  email: velma@example.com
+  appropriate_body: Golden Leaf Teaching School Hub
+  school: Null
+  dfe_staff: No
+  image: personas/velma.png
+  alt: Velma from Scooby Doo wearing an orange turtleneck jumper.
+  type: Appropriate body user
+
+- name: Fred Jones
+  email: freddy@example.com
+  appropriate_body: Umber Teaching School Hub
+  school: Null
+  dfe_staff: No
+  image: personas/fred.png
+  alt: Fred from Scooby Doo. He is shrugging and wearing a white top with a red cravat.
+  type: Appropriate body user
+
+- name: Daphne Blake
+  email: daphne@example.com
+  appropriate_body: Null
+  dfe_staff: Yes
+  school: Null
+  image: personas/daphne.png
+  alt: Daphne from Scooby Doo looking quizzical in a purple dress.
+  type: DfE staff
+
+- name: Norville Rogers
+  email: shaggy@example.com
+  appropriate_body: Null
+  dfe_staff: Yes
+  school: Null
+  image: personas/shaggy.png
+  alt: Shaggy from Scooby Doo, wearing a green shirt looking directly forwards.
+  type: DfE staff
+
+- name: Bob Belcher
+  email: bob@example.com
+  appropriate_body: Null
+  dfe_staff: No
+  school: Abbey Grove School
+  image: personas/bob.png
+  alt: Bob from Bob's Burgers, holding a hamburger.
+  type: School user
+
+- name: Serena Moon
+  email: serena@example.com
+  appropriate_body: Null
+  dfe_staff: No
+  school: Brookfield School
+  image: personas/serena.png
+  alt: Serena from Sailor Moon leaping in the air.
+  type: School user

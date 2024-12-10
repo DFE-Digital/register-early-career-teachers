@@ -75,6 +75,10 @@ def describe_pending_induction_submission(pending_induction_submission)
   print_seed_info("* has one pending induction submission from #{pending_induction_submission.appropriate_body.name} #{suffix}", indent: 4)
 end
 
+def describe_user(user)
+  print_seed_info("Added DfE staff user #{user.name} #{user.email}", indent: 2)
+end
+
 print_seed_info("Adding teachers")
 
 emma_thompson = Teacher.create!(first_name: 'Emma', last_name: 'Thompson', trn: '1023456')
@@ -127,9 +131,9 @@ AppropriateBody.create!(name: 'Canvas Teaching School Hub', local_authority_code
 AppropriateBody.create!(name: 'South Yorkshire Studio Hub', local_authority_code: 678, establishment_number: 9728, dfe_sign_in_organisation_id: SecureRandom.uuid)
 AppropriateBody.create!(name: 'Ochre Education Partnership', local_authority_code: 238, establishment_number: 6582, dfe_sign_in_organisation_id: SecureRandom.uuid)
 umber_teaching_school_hub = AppropriateBody.create!(name: 'Umber Teaching School Hub', local_authority_code: 957, establishment_number: 7361, dfe_sign_in_organisation_id: SecureRandom.uuid)
-golden_leaf_academy = AppropriateBody.create!(name: 'Golden Leaf Academy', local_authority_code: 648, establishment_number: 3986, dfe_sign_in_organisation_id: SecureRandom.uuid)
+golden_leaf_teaching_school_hub = AppropriateBody.create!(name: 'Golden Leaf Teaching School Hub', local_authority_code: 648, establishment_number: 3986, dfe_sign_in_organisation_id: SecureRandom.uuid)
 AppropriateBody.create!(name: 'Frame University London', local_authority_code: 832, establishment_number: 6864, dfe_sign_in_organisation_id: SecureRandom.uuid)
-AppropriateBody.create!(name: 'Easelcroft Academy', local_authority_code: 573, establishment_number: 9273, dfe_sign_in_organisation_id: SecureRandom.uuid)
+AppropriateBody.create!(name: 'Easelcroft Teaching School Hub', local_authority_code: 573, establishment_number: 9273, dfe_sign_in_organisation_id: SecureRandom.uuid)
 AppropriateBody.create!(name: 'Vista College', local_authority_code: 418, establishment_number: 3735, dfe_sign_in_organisation_id: SecureRandom.uuid)
 
 print_seed_info("Adding lead providers")
@@ -301,7 +305,7 @@ TrainingPeriod.create!(
 
 InductionPeriod.create!(
   teacher: alan_rickman,
-  appropriate_body: golden_leaf_academy,
+  appropriate_body: golden_leaf_teaching_school_hub,
   started_on: 2.years.ago + 2.months,
   induction_programme: 'fip'
 ).tap { |ip| describe_induction_period(ip) }
@@ -312,7 +316,7 @@ InductionExtension.create!(
 ).tap { |ext| describe_extension(ext) }
 
 PendingInductionSubmission.create!(
-  appropriate_body: golden_leaf_academy,
+  appropriate_body: golden_leaf_teaching_school_hub,
   trn: alan_rickman.trn,
   date_of_birth: Date.new(1946, 2, 21),
   started_on: 1.month.ago
@@ -335,7 +339,7 @@ TrainingPeriod.create!(
 
 InductionPeriod.create!(
   teacher: hugh_grant,
-  appropriate_body: golden_leaf_academy,
+  appropriate_body: golden_leaf_teaching_school_hub,
   started_on: 2.years.ago + 3.days,
   finished_on: 1.week.ago,
   induction_programme: 'fip',
@@ -364,7 +368,7 @@ InductionPeriod.create!(
 ).tap { |ip| describe_induction_period(ip) }
 
 InductionPeriod.create!(
-  appropriate_body: golden_leaf_academy,
+  appropriate_body: golden_leaf_teaching_school_hub,
   teacher: harriet_walter,
   started_on: 1.year.ago,
   induction_programme: 'fip'
@@ -383,7 +387,7 @@ InductionExtension.create!(
 print_seed_info("Imogen Stubbs (ECT)", indent: 2, colour: ECT_COLOUR)
 
 InductionPeriod.create!(
-  appropriate_body: golden_leaf_academy,
+  appropriate_body: golden_leaf_teaching_school_hub,
   teacher: imogen_stubbs,
   started_on: 18.months.ago,
   finished_on: 14.months.ago,
@@ -392,7 +396,7 @@ InductionPeriod.create!(
 ).tap { |ip| describe_induction_period(ip) }
 
 InductionPeriod.create!(
-  appropriate_body: golden_leaf_academy,
+  appropriate_body: golden_leaf_teaching_school_hub,
   teacher: imogen_stubbs,
   started_on: 14.months.ago,
   finished_on: nil,
@@ -496,18 +500,8 @@ MentorshipPeriod.create!(
 
 print_seed_info("Adding persona users")
 
-# The appropriate body names are included in the AB user names as the persona
-# login process matches them and sets the session up correctly.
-User.create!(name: "Velma Dinkley (#{golden_leaf_academy.name} Appropriate body)", email: "velma@example.com")
-User.create!(name: "Fred Jones (#{umber_teaching_school_hub.name} Appropriate body)", email: "freddy@example.com")
-
-User.create!(name: "Bob Belcher (#{abbey_grove_school.name})", email: "bob@example.com")
-User.create!(name: "Serena Moon (#{brookfield_school.name})", email: "serena@example.com")
-
-User.create!(name: "Daphne Blake (DfE staff)", email: "daphne@example.com").tap do |daphne_blake|
-  DfERole.create!(user: daphne_blake)
-end
-
-User.create!(name: "Norville Rogers (DfE staff)", email: "shaggy@example.com").tap do |norville_rogers|
-  DfERole.create!(user: norville_rogers)
-end
+YAML
+  .load_file(Rails.root.join('config/personas.yml'))
+  .select { |p| p['type'] == 'DfE staff' }
+  .map { |p| { name: p['name'], email: p['email'] } }
+  .each { |user_params| User.create!(**user_params).tap { |user| describe_user(user) } }

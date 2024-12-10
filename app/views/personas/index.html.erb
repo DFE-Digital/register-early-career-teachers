@@ -10,16 +10,16 @@
     <div class="govuk-grid-row">
       <% if Rails.application.config.enable_persona_avatars %>
         <div class="govuk-grid-column-one-third app-persona-image">
-          <%= persona_image(persona.name) %>
+          <%= image_tag(persona.image, height: '150px', alt: persona.alt) %>
         </div>
       <% end %>
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-m">
-          <%= persona_name(persona) %>
+          <%= persona.name %>
           (<%= persona.email %>)
         </h2>
         <div>
-          <h3 class="govuk-heading-s"><%= persona_user_type(persona) %></h3>
+          <h3 class="govuk-heading-s"><%= persona.type %></h3>
         </div>
         <div>
           <%= tag.p(persona_organisation(persona)) %>
@@ -28,9 +28,10 @@
         <%= form_with url: "/auth/developer/callback" do |f| %>
           <%= hidden_field_tag "email", persona.email %>
           <%= hidden_field_tag "name", persona.name %>
-          <%= hidden_field_tag "appropriate_body_id", appropriate_body_id_from_user_name(persona.name) %>
-          <%= hidden_field_tag "school_urn", school_urn_from_persona(persona) %>
-          <%= f.submit "Sign-in as #{persona_name(persona)}", class: "govuk-button govuk-!-margin-bottom-2" %>
+          <%= hidden_field_tag "appropriate_body_id", persona.appropriate_body_id %>
+          <%= hidden_field_tag "school_urn", persona.school_urn %>
+          <%= hidden_field_tag "dfe", persona.dfe_staff %>
+          <%= f.submit "Sign-in as #{persona.name}", class: "govuk-button govuk-!-margin-bottom-2" %>
         <% end %>
       </div>
     </div>
