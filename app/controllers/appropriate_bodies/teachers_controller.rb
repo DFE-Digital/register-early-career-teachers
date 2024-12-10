@@ -3,7 +3,10 @@ module AppropriateBodies
     layout "full", only: :index
 
     def index
-      @teachers = ::Teachers::Search.new(params[:q], appropriate_body: @appropriate_body).search
+      @teachers = ::Teachers::Search.new(
+        query_string: params[:q],
+        appropriate_body: @appropriate_body
+      ).search
     end
 
     def show

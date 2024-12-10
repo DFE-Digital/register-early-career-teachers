@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   post 'auth/:provider/callback', to: 'sessions#create'
 
-  get '/admin', to: 'admin#index'
+  get '/admin', to: 'admin/teachers#index'
 
   namespace :admin do
     constraints -> { Rails.application.config.enable_blazer } do
