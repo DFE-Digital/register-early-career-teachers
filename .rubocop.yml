@@ -18,6 +18,9 @@ Style/EmptyMethod:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: no_comma
 
+Style/TernaryParentheses:
+  Enabled: false
+
 Style/TrailingCommaInHashLiteral:
   Enabled: false
 
