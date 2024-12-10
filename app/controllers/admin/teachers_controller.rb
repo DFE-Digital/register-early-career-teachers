@@ -3,7 +3,13 @@ module Admin
     layout "full"
 
     def index
-      @pagy, @teachers = pagy(Teachers::Search.new(params[:q]).search.order(:last_name, :first_name, :id))
+      @appropriate_bodies = AppropriateBody.order(:name)
+      @pagy, @teachers = pagy(
+        Teachers::Search.new(
+          query_string: params[:q],
+          appropriate_body_ids: params[:appropriate_body_ids]
+        ).search
+      )
     end
 
     def show

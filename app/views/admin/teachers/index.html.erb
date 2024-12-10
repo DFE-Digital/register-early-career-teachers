@@ -1,42 +1,123 @@
-<% page_data(title: "Teachers") %>
+<% page_data(title: "Early career teachers") %>
 
-<%= form_with method: :get do |f| %>
-  <%=
-    f.govuk_text_field(
-      "q",
-      value: params[:q],
-      label: { text: "Search for teacher", size: "s" },
-      hint: { text: "Name or TRN" },
-    )
-  %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#ects">ECTs</a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#change-log">Change log</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l">
+  </div>
+</div>
 
-  <%= f.govuk_submit "Search" %>
-<% end %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <%= form_with method: :get, data: { turbo: false } do |f| %>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Filter by appropriate body
+          </legend>
 
-<p class="govuk-body"><strong><%= @pagy.count %></strong> teachers found</p>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <% @appropriate_bodies.each do |ab| %>
+              <div class="govuk-checkboxes__item">
+                <%= check_box_tag "appropriate_body_ids[]",
+                    ab.id,
+                    params[:appropriate_body_ids]&.include?(ab.id.to_s),
+                    class: "govuk-checkboxes__input"
+                %>
+                <%= label_tag "appropriate_body_ids_#{ab.id}", ab.name, class: "govuk-label govuk-checkboxes__label" %>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
+      </div>
 
-<%=
-  govuk_table do |table|
-    table.with_head do |head|
-      head.with_row do |row|
-        row.with_cell(text: "Name")
-        row.with_cell(text: "Role")
-        row.with_cell(text: "TRN")
-      end
-    end
+      <%# Preserve search query when filtering %>
+      <%= hidden_field_tag :q, params[:q] if params[:q].present? %>
+      <div class="govuk-button-group">
+        <%= f.govuk_submit "Apply filters" %>
+      </div>
+    <% end %>
 
-    table.with_body do |body|
-      @teachers.each_with_index do |teacher, index|
-        body.with_row do |row|
-          row.with_cell do
-            govuk_link_to "#{teacher.first_name} #{teacher.last_name}", admin_teacher_path(teacher, page: @pagy.page)
-          end
-          row.with_cell(text: Teachers::Role.new(teacher:))
-          row.with_cell(text: teacher.trn)
-        end
-      end
-    end
-  end
-%>
+    <%= form_with method: :get, data: { turbo: false } do |f| %>
+      <%= f.govuk_text_field(
+            "q",
+            value: params[:q],
+            label: { text: "Search ECTs", size: "s" },
+            hint: { text: "Search by name or TRN" }
+          )
+      %>
 
-<%= govuk_pagination pagy: @pagy %>
+      <%# Preserve filters when searching %>
+      <% if params[:appropriate_body_ids].present? %>
+        <% Array(params[:appropriate_body_ids]).each do |ab_id| %>
+          <%= hidden_field_tag "appropriate_body_ids[]", ab_id %>
+        <% end %>
+      <% end %>
+
+      <div class="govuk-button-group">
+        <%= f.govuk_submit "Search" %>
+        <button type="reset" class="govuk-button govuk-button--secondary">Reset</button>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <ul class="govuk-list">
+      <% @teachers.each do |teacher| %>
+        <li class="govuk-!-margin-bottom-4">
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title"><%= teacher.first_name %> <%= teacher.last_name %></h2>
+              <div class="govuk-summary-card__actions">
+                <%= link_to "View", admin_teacher_path(teacher), class: "govuk-link" %>
+                <%= link_to "Delete", "#", class: "govuk-link govuk-link--danger" %>
+              </div>
+            </div>
+
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">TRN</dt>
+                  <dd class="govuk-summary-list__value"><%= teacher.trn %></dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">AB</dt>
+                  <dd class="govuk-summary-list__value">
+                    <% current_period = teacher.induction_periods.last %>
+                    <%= current_period&.appropriate_body&.name || "Not assigned" %>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Induction periods recorded</dt>
+                  <dd class="govuk-summary-list__value">
+                    <%= teacher.induction_periods.count %>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Induction status</dt>
+                  <dd class="govuk-summary-list__value">
+                    <% status = teacher.induction_periods.any? ? "in_progress" : "not_started" %>
+                    <strong class="govuk-tag govuk-tag--<%= status == 'in_progress' ? 'blue' : 'grey' %>">
+                      <%= status.humanize %>
+                    </strong>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= govuk_pagination pagy: @pagy %>
+  </div>
+</div>
