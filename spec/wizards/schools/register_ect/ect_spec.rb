@@ -11,7 +11,8 @@ describe Schools::RegisterECTWizard::ECT do
                      trs_date_of_birth: "1945-10-11",
                      trs_national_insurance_number: "OWAD23455",
                      email: "dusty@rhodes.com",
-                     school_urn: school.urn)
+                     school_urn: school.urn,
+                     corrected_name: nil)
   end
 
   subject(:ect) { described_class.new(store) }
