@@ -8,6 +8,8 @@ class ECTAtSchoolPeriod < ApplicationRecord
   has_many :mentors, through: :mentorship_periods, source: :mentor
   has_many :training_periods, inverse_of: :ect_at_school_period
 
+  has_many :mentor_at_school_periods, through: :teacher
+
   # Validations
   validates :started_on,
             presence: true
@@ -23,6 +25,15 @@ class ECTAtSchoolPeriod < ApplicationRecord
   # Scopes
   scope :for_teacher, ->(teacher_id) { where(teacher_id:) }
   scope :siblings_of, ->(instance) { for_teacher(instance.teacher_id).where.not(id: instance.id) }
+
+  # Instance methods
+  def current_mentorship
+    mentorship_periods.ongoing.last
+  end
+
+  def current_mentor
+    current_mentorship&.mentor
+  end
 
 private
 

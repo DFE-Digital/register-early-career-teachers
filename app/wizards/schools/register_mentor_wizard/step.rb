@@ -3,7 +3,7 @@ module Schools
     class Step < DfE::Wizard::Step
       include ActiveRecord::AttributeAssignment
 
-      delegate :mentor, :valid_step?, to: :wizard
+      delegate :ect, :mentor, :valid_step?, to: :wizard
 
       def next_step
       end

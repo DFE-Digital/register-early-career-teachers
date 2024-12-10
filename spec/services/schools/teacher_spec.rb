@@ -18,6 +18,7 @@ describe Schools::Teacher do
 
       expect(result).to eq([
         {
+          ect: ect_period,
           ect_name: ::Teachers::Name.new(ect).full_name,
           ect_trn: ect.trn,
           mentor_name: ::Teachers::Name.new(mentor).full_name,

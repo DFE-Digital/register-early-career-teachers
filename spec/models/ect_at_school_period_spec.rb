@@ -76,4 +76,58 @@ describe ECTAtSchoolPeriod do
       end
     end
   end
+
+  describe "#current_mentorship" do
+    let(:mentee) { FactoryBot.create(:ect_at_school_period, :active, started_on: 2.years.ago) }
+    let(:mentor) { FactoryBot.create(:mentor_at_school_period, :active, started_on: 2.years.ago) }
+
+    context "when the ect has had no mentorships ever" do
+      it "returns nil" do
+        expect(mentee.current_mentorship).to be_nil
+      end
+    end
+
+    context "when the ect has had past mentorships" do
+      let!(:old_mentorship) { FactoryBot.create(:mentorship_period, mentee:, mentor:) }
+
+      it "returns nil" do
+        expect(mentee.current_mentorship).to be_nil
+      end
+    end
+
+    context "when the ect has an ongoing mentorship at a school" do
+      let!(:old_mentorship) { FactoryBot.create(:mentorship_period, mentee:, mentor:) }
+      let!(:ongoing_mentorship) { FactoryBot.create(:mentorship_period, :active, mentee:, mentor:) }
+
+      it "returns the ongoing mentorship period" do
+        expect(mentee.current_mentorship).to eq(ongoing_mentorship)
+      end
+    end
+  end
+
+  describe "#current_mentor" do
+    let(:mentee) { FactoryBot.create(:ect_at_school_period, :active, started_on: 2.years.ago) }
+    let(:mentor) { FactoryBot.create(:mentor_at_school_period, :active, started_on: 2.years.ago) }
+
+    subject { mentee.current_mentorship }
+
+    context "when the ect has had no mentorships ever" do
+      it { is_expected.to be_nil }
+    end
+
+    context "when the ect has had past mentorships" do
+      before do
+        FactoryBot.create(:mentorship_period, mentee:, mentor:)
+      end
+
+      it { is_expected.to be_nil }
+    end
+
+    context "when the ect has an ongoing mentorship at a school" do
+      let!(:old_mentorship) { FactoryBot.create(:mentorship_period, mentee:, mentor:) }
+      let!(:ongoing_mentorship) { FactoryBot.create(:mentorship_period, :active, mentee:, mentor:) }
+
+      it { is_expected.to eq(ongoing_mentorship) }
+    end
+  end
 end

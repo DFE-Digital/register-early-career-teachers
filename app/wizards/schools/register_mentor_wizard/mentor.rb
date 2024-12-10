@@ -8,7 +8,7 @@ module Schools
   module RegisterMentorWizard
     class Mentor < SimpleDelegator
       def full_name
-        [trs_first_name, trs_last_name].join(" ").strip
+        @full_name ||= [trs_first_name, trs_last_name].join(" ").strip
       end
 
       def govuk_date_of_birth
@@ -30,7 +30,7 @@ module Schools
                                     last_name: trs_last_name,
                                     trn:,
                                     school_urn:)
-                               .register_mentor!
+                               .register!
       end
 
     private
