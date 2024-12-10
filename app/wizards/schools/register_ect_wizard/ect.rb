@@ -31,6 +31,7 @@ module Schools
       def register!
         Schools::RegisterECT.new(first_name: trs_first_name,
                                  last_name: trs_last_name,
+                                 corrected_name:,
                                  trn:,
                                  school_urn:)
                                .register_teacher!

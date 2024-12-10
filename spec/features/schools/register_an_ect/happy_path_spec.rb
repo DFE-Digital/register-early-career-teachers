@@ -120,7 +120,7 @@ RSpec.describe 'Registering an ECT' do
   end
 
   def and_i_should_see_the_ect_i_registered
-    expect(page.get_by_role('link', name: 'Kirk Van Houten')).to be_visible
+    expect(page.get_by_role('link', name: 'Kirk Van Damme')).to be_visible
   end
 
   def then_i_should_be_taken_to_the_confirmation_page
