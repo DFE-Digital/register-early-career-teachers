@@ -14,8 +14,8 @@ class SessionsController < ApplicationController
       session_manager.begin_persona_session!(
         user_info.info.email,
         name: user_info.info.name,
-        appropriate_body_id: params["appropriate_body_id"]&.to_i,
-        school_urn: params["school_urn"]&.to_i
+        appropriate_body_id: params["appropriate_body_id"].presence,
+        school_urn: params["school_urn"].presence
       )
     when "dfe_sign_in"
       session_manager.begin_dfe_sign_in_session!(user_info)
