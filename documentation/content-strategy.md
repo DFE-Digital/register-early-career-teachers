@@ -3,8 +3,6 @@
 ## Style guide
 
 This style guide covers style points for content on the Register early career teachers service. It's been designed to be used with the [GOV.UK style guide](https://www.gov.uk/guidance/style-guide) and [DfE style guide](https://design.education.gov.uk/design-system/style-guide).
-
-**appoint an appropriate body** - a school appoints an appropriate body to quality assure an ECT's induction [note: appoint likely to be replaced with nominate in the future] 
  
 **appropriate body** - responsible for assuring the quality of the statutory induction of ECTs, lower case, don't abbreviate, explain why we're asking for this information at the point of collecting it  
  
