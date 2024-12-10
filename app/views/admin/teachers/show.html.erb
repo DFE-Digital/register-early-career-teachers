@@ -1,7 +1,6 @@
 <% page_data(title: @teacher.full_name, backlink_href: admin_teachers_path(page: @page)) %>
 
-<%=
-  govuk_summary_list do |sl|
+<%= govuk_summary_list do |sl|
     sl.with_row do |row|
       row.with_key(text: "Name")
       row.with_value(text: @teacher.full_name)
@@ -18,50 +17,97 @@
       # FIXME: This is a placeholder. The actual status should be displayed here.
       row.with_value(text: govuk_tag(text: "placeholder", colour: %w[grey green red purple orange yellow].sample))
     end
-  end
-%>
+  end %>
+
+<%= govuk_warning_text(text: "Some of this teacher's records could not be migrated") if @teacher.migration_failures.any? %>
+
 <% if @teacher.ect? %>
   <h3 class="govuk-heading-m">Early career teacher</h3>
-  <% @ect_periods.each do |school_period| %>
-    <%= govuk_summary_list do |sl|
-      sl.with_row do |row|
-        row.with_key(text: "School")
-        row.with_value(text: school_period.school_name_and_urn)
-      end
+  <%
+    school_period = @teacher.latest_school_period_as_an_ect
+    training_period = school_period.latest_training_period
+  %>
 
-      sl.with_row do |row|
-        row.with_key(text: "Started on")
-        row.with_value(text: school_period.formatted_started_on)
+  <%= govuk_summary_list do |sl|
+    sl.with_row do |row|
+      row.with_key(text: "School")
+      row.with_value do
+        govuk_link_to(school_period.school_name_and_urn, admin_school_path(school_period.school.urn))
       end
-
-      sl.with_row do |row|
-        row.with_key(text: "Finished on")
-        row.with_value(text: school_period.formatted_finished_on)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Started on")
+      row.with_value(text: school_period.formatted_started_on)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Finished on")
+      row.with_value(text: school_period.formatted_finished_on)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Mentor")
+      row.with_value do
+        if school_period.latest_mentorship_period.present?
+          admin_teacher_name_link(school_period.latest_mentorship_period.mentor.teacher)
+        else
+          ""
+        end
       end
-    end %>
-  <% end %>
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Lead provider")
+      row.with_value(text: training_period&.lead_provider&.name)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Delivery partner")
+      row.with_value(text: training_period&.delivery_partner&.name)
+    end
+  end %>
+  <hr class="govuk-section-break govuk-section-break--l" />
 <% end %>
 
 <% if @teacher.mentor? %>
   <h3 class="govuk-heading-m">Mentor</h3>
-  <% @mentor_periods.each do |school_period| %>
-    <%= govuk_summary_list do |sl|
-      sl.with_row do |row|
-        row.with_key(text: "School")
-        row.with_value(text: school_period.school_name_and_urn)
-      end
+  <%
+    # FIXME: This should probably iterate over all ongoing school periods
+    school_period = @teacher.latest_school_period_as_a_mentor
+    training_period = school_period.latest_training_period
+  %>
 
-      sl.with_row do |row|
-        row.with_key(text: "Started on")
-        row.with_value(text: school_period.formatted_started_on)
+  <%= govuk_summary_list do |sl|
+    sl.with_row do |row|
+      row.with_key(text: "School")
+      row.with_value do
+        govuk_link_to(school_period.school_name_and_urn, admin_school_path(school_period.school.urn))
       end
-
-      sl.with_row do |row|
-        row.with_key(text: "Finished on")
-        row.with_value(text: school_period.formatted_finished_on)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Started on")
+      row.with_value(text: school_period.formatted_started_on)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Finished on")
+      row.with_value(text: school_period.formatted_finished_on)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Mentees")
+      row.with_value do
+        if school_period.mentees.any?
+          admin_teachers_list_links(school_period.mentees)
+        else
+          ""
+        end
       end
-    end %>
-  <% end %>
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Lead provider")
+      row.with_value(text: training_period.lead_provider.name)
+    end
+    sl.with_row do |row|
+      row.with_key(text: "Delivery partner")
+      row.with_value(text: training_period.delivery_partner.name)
+    end
+  end %>
+  <hr class="govuk-section-break govuk-section-break--l" />
 <% end %>
 
 <p class="govuk-body">

@@ -4,6 +4,10 @@ module Migration
       collection.map { |participant_profile| new(participant_profile) }
     end
 
+    def participant_type
+      participant_profile.type.split("::").last
+    end
+
     def induction_records
       @induction_records ||= fetch_induction_records
     end

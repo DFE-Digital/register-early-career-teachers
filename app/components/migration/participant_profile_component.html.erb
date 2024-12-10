@@ -1,0 +1,55 @@
+<%= govuk_summary_card(title: "Participant profile (#{participant_profile.participant_type})") do |card|
+  card.with_summary_list(html_attributes: { class: "govuk-!-font-size-14" }) do |list|
+    list.with_row do |row|
+      row.with_key(text: "ID")
+      row.with_value(text: participant_profile.id)
+    end
+    list.with_row(**attributes_for(:sparsity_uplift)) do |row|
+      row.with_key(text: "Sparsity uplift")
+      row.with_value(text: participant_profile.sparsity_uplift.to_s)
+    end
+    list.with_row(**attributes_for(:pupil_premium_uplift)) do |row|
+      row.with_key(text: "Pupil premium uplift")
+      row.with_value(text: participant_profile.pupil_premium_uplift.to_s)
+    end
+    list.with_row(**attributes_for(:status)) do |row|
+      row.with_key(text: "Status")
+      row.with_value(text: participant_profile.status)
+    end
+    list.with_row(**attributes_for(:training_status)) do |row|
+      row.with_key(text: "Training status")
+      row.with_value(text: participant_profile.training_status)
+    end
+    list.with_row do |row|
+      row.with_key(text: "Cohort")
+      row.with_value(text: school_cohort_year)
+    end
+    list.with_row do |row|
+      row.with_key(text: "School")
+      row.with_value(text: school_name_and_urn)
+    end
+    if ect?
+      list.with_row do |row|
+        row.with_key(text: "Induction start date")
+        row.with_value(text: participant_profile.induction_start_date)
+      end
+      list.with_row do |row|
+        row.with_key(text: "Induction completion date")
+        row.with_value(text: participant_profile.induction_completion_date)
+      end
+    else
+      list.with_row do |row|
+        row.with_key(text: "Mentor completion date")
+        row.with_value(text: participant_profile.mentor_completion_date)
+      end
+      list.with_row do |row|
+        row.with_key(text: "Mentor completion reason")
+        row.with_value(text: participant_profile.mentor_completion_reason)
+      end
+    end
+    list.with_row do |row|
+      row.with_key(text: "Cohort changed after payments frozen")
+      row.with_value(text: participant_profile.cohort_changed_after_payments_frozen.to_s)
+    end
+  end
+end %>

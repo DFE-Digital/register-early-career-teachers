@@ -1,0 +1,11 @@
+<div class="migration-failure">
+  <h3 class="govuk-heading-s"><%= description %></h3>
+  <div class="migration-row">
+    <%= render Migration::ParticipantProfileComponent.new(participant_profile:) %>
+  </div>
+  <% induction_records.each do |induction_record| %>
+    <div class="migration-row">
+      <%= render Migration::InductionRecordComponent.new(induction_record:) %>
+    </div>
+  <% end %>
+</div>

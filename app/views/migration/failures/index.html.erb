@@ -1,23 +1,33 @@
 <% page_data(title: "Migration failures for #{@model}", backlink_href: migration_migrations_path) %>
 
-<p class="govuk-body"><strong><%= @migration_failures.count %></strong> failed records</p>
+<p class="govuk-body"><strong><%= @pagy.count %></strong> failed records</p>
 
+<% if @model == "teacher" %>
 <%= govuk_table do |table|
   table.with_head do |head|
     head.with_row do |row|
-      row.with_cell(text: "No.")
-      row.with_cell(text: "Source record")
-      row.with_cell(text: "Validation failure")
+      row.with_cell(text: "Teacher")
+      row.with_cell(text: "Failure")
     end
   end
 
   table.with_body do |body|
     @migration_failures.each_with_index do |failure, index|
+      parent_link = govuk_link_to(Teachers::Name.new(failure.parent).full_name,
+                                  migration_teacher_details_path(failure.parent)) unless failure.parent.blank?
+
       body.with_row(html_attributes: { class: "govuk-!-font-size-16" }) do |row|
-        row.with_cell(text: index + 1)
-        row.with_cell(text: failure_item_json_code(failure.item))
-        row.with_cell(text: failure.failure_message)
+        if parent_link
+          row.with_cell { parent_link }
+          row.with_cell(text: failure.failure_type)
+        else
+          row.with_cell { govuk_tag(text: "Failed to create teacher", colour:  "red") }
+          row.with_cell(text: failure_item_json_code(failure.item))
+        end
       end
     end
   end
 end %>
+<% end %>
+<%= govuk_pagination pagy: @pagy %>
+
