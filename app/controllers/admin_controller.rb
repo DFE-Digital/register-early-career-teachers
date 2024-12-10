@@ -8,6 +8,6 @@ private
 
   def authorised?
     Admin::Access.new(current_user).can_access?
-    # true
+    true
   end
 end

@@ -1,31 +1,23 @@
 <% page_data(title: "Early career teachers") %>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#ects">ECTs</a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#change-log">Change log</a>
-        </li>
-      </ul>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--l">
-  </div>
-</div>
-
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <%= form_with method: :get, data: { turbo: false } do |f| %>
+
+      <%= f.govuk_text_field(
+            "q",
+            value: params[:q],
+            label: { text: "Search by name or TRN", size: "s" },
+          )
+      %>
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
             Filter by appropriate body
           </legend>
 
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             <% @appropriate_bodies.each do |ab| %>
               <div class="govuk-checkboxes__item">
                 <%= check_box_tag "appropriate_body_ids[]",
@@ -40,31 +32,8 @@
         </fieldset>
       </div>
 
-      <%# Preserve search query when filtering %>
-      <%= hidden_field_tag :q, params[:q] if params[:q].present? %>
       <div class="govuk-button-group">
         <%= f.govuk_submit "Apply filters" %>
-      </div>
-    <% end %>
-
-    <%= form_with method: :get, data: { turbo: false } do |f| %>
-      <%= f.govuk_text_field(
-            "q",
-            value: params[:q],
-            label: { text: "Search ECTs", size: "s" },
-            hint: { text: "Search by name or TRN" }
-          )
-      %>
-
-      <%# Preserve filters when searching %>
-      <% if params[:appropriate_body_ids].present? %>
-        <% Array(params[:appropriate_body_ids]).each do |ab_id| %>
-          <%= hidden_field_tag "appropriate_body_ids[]", ab_id %>
-        <% end %>
-      <% end %>
-
-      <div class="govuk-button-group">
-        <%= f.govuk_submit "Search" %>
         <button type="reset" class="govuk-button govuk-button--secondary">Reset</button>
       </div>
     <% end %>
@@ -79,7 +48,6 @@
               <h2 class="govuk-summary-card__title"><%= teacher.first_name %> <%= teacher.last_name %></h2>
               <div class="govuk-summary-card__actions">
                 <%= link_to "View", admin_teacher_path(teacher), class: "govuk-link" %>
-                <%= link_to "Delete", "#", class: "govuk-link govuk-link--danger" %>
               </div>
             </div>
 
@@ -90,20 +58,14 @@
                   <dd class="govuk-summary-list__value"><%= teacher.trn %></dd>
                 </div>
                 <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">AB</dt>
+                  <dt class="govuk-summary-list__key">Appropriate body</dt>
                   <dd class="govuk-summary-list__value">
                     <% current_period = teacher.induction_periods.last %>
                     <%= current_period&.appropriate_body&.name || "Not assigned" %>
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Induction periods recorded</dt>
-                  <dd class="govuk-summary-list__value">
-                    <%= teacher.induction_periods.count %>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">Induction status</dt>
+                  <dt class="govuk-summary-list__key">Status</dt>
                   <dd class="govuk-summary-list__value">
                     <% status = teacher.induction_periods.any? ? "in_progress" : "not_started" %>
                     <strong class="govuk-tag govuk-tag--<%= status == 'in_progress' ? 'blue' : 'grey' %>">
