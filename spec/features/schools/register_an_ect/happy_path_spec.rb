@@ -30,6 +30,7 @@ RSpec.describe 'Registering an ECT' do
 
     when_i_click_on_back_to_your_ects
     then_i_should_be_taken_to_the_ects_page
+    and_i_should_see_the_ect_i_registered
   end
 
   def given_i_am_logged_in_as_a_school_user
@@ -106,6 +107,10 @@ RSpec.describe 'Registering an ECT' do
 
   def when_i_click_confirm_details
     page.get_by_role('button', name: 'Confirm details').click
+  end
+
+  def and_i_should_see_the_ect_i_registered
+    expect(page.get_by_role('link', name: 'Kirk Van Houten')).to be_visible
   end
 
   def then_i_should_be_taken_to_the_confirmation_page
